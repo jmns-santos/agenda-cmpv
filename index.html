@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agenda Municipal - Povoa de Varzim</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 640px; margin: 3rem auto; padding: 0 1.25rem; color: #1a1a1a; line-height: 1.5; }
+  h1 { font-size: 1.4rem; }
+  .botoes { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1.5rem 0; }
+  a.botao { display: inline-block; padding: 0.7rem 1.1rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  a.principal { background: #0b5fff; color: #fff; }
+  a.secundario { background: #eef1f6; color: #1a1a1a; }
+  code { background: #f2f2f2; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; word-break: break-all; }
+  .nota { font-size: 0.92rem; color: #444; margin-top: 2rem; }
+</style>
+</head>
+<body>
+  <h1>Agenda de eventos - Camara Municipal da Povoa de Varzim</h1>
+  <p>Ficheiro iCalendar (.ics) atualizado automaticamente a partir da agenda de eventos do site.</p>
+
+  <div class="botoes">
+    <a class="botao principal" id="link-subscrever" href="agenda.ics">Subscrever no calendario</a>
+    <a class="botao secundario" id="link-descarregar" href="agenda.ics" download>Descarregar ficheiro .ics</a>
+  </div>
+
+  <p><strong>Para a agenda se manter sempre atualizada no telemovel</strong>, usa "Subscrever no calendario" e nao "Descarregar" - descarregar cria uma copia estatica que nao se atualiza sozinha depois.</p>
+
+  <p class="nota">
+    iPhone: Definicoes &gt; Calendario &gt; Contas &gt; Adicionar Conta &gt; Outra &gt; Adicionar Calendario Subscrito.<br>
+    Android / Google Calendar (via browser): Outros calendarios &gt; Adicionar por URL.<br>
+    Link direto: <code id="link-texto"></code>
+  </p>
+
+  <script>
+    // Constroi o link a partir do proprio URL da pagina, para funcionar
+    // seja qual for o dominio onde isto acabar hospedado (github.io,
+    // dominio proprio, etc).
+    var base = location.href.replace(/index\.html$/, '');
+    var icsUrl = base + 'agenda.ics';
+    var webcalUrl = icsUrl.replace(/^https?:/, 'webcal:');
+    document.getElementById('link-subscrever').href = webcalUrl;
+    document.getElementById('link-descarregar').href = icsUrl;
+    document.getElementById('link-texto').textContent = icsUrl;
+  </script>
+</body>
+</html>
