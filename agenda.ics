@@ -1,0 +1,694 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CMPV//Agenda de Eventos//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Agenda Municipal - Povoa de Varzim
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:North Warriors Championship
+DTSTART:20260919T170000Z
+DTEND:20260919T214500Z
+DTSTAMP:20260916T123859Z
+UID:bm9ydGgtd2FycmlvcnMtY2hhbXBpb25zaGlwfDIwMjYtMDktMTYgMTA6NTU6MDA=@agend
+ a.cm-pvarzim.pt
+DESCRIPTION:O Pavilhão Municipal abre portas\, no próximo sábado\, a pa
+ rtir das 18h00\, para a realização da primeira edição do North Warrior
+ s Championship\, uma gala de kickboxing criado com a ambição de reforça
+ r a oferta competitiva da modalidade na região Norte do país.\n\nMais in
+ formacao: https://www.cm-pvarzim.pt/eventos/north-warriors-championship/
+LAST-MODIFIED:20260916T105501Z
+LOCATION:Pavilhão Municipal
+URL:https://www.cm-pvarzim.pt/eventos/north-warriors-championship/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Santo António\, O Casamenteiro de Lisboa"
+DTSTART:20261025T213000Z
+DTEND:20261025T230000Z
+DTSTAMP:20260916T123859Z
+UID:Y2luZW1hLXNhbnRvLWFudG9uaW8tby1jYXNhbWVudGVpcm8tZGUtbGlzYm9hfDIwMjYtMD
+ ktMTUgMTA6NTQ6NTc=@agenda.cm-pvarzim.pt
+DESCRIPTION:No dia 25 de outubro\, às 21h30\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme Cinema "Santo António\, O Casamenteiro de Lisboa".
+ \n\nMais informacao: https://www.cm-pvarzim.pt/eventos/cinema-santo-antoni
+ o-o-casamenteiro-de-lisboa/
+LAST-MODIFIED:20260915T105533Z
+LOCATION:Cine-Teatro Garrett
+URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-
+ de-lisboa/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "A Ovelha Choné: Trapalhada na Quinta"
+DTSTART:20261025T153000Z
+DTEND:20261025T173000Z
+DTSTAMP:20260916T123859Z
+UID:Y2luZW1hLWEtb3ZlbGhhLWNob25lLXRyYXBhbGhhZGEtbmEtcXVpbnRhfDIwMjYtMDktMT
+ UgMTA6NDY6NDE=@agenda.cm-pvarzim.pt
+DESCRIPTION:No dia 25 de outubro\, às 15h30\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme "A Ovelha Choné: Trapalhada na Quinta".\n\nMais inf
+ ormacao: https://www.cm-pvarzim.pt/eventos/cinema-a-ovelha-chone-trapalhad
+ a-na-quinta/
+LAST-MODIFIED:20260915T104642Z
+LOCATION:Cine-Teatro Garrett
+URL:https://www.cm-pvarzim.pt/eventos/cinema-a-ovelha-chone-trapalhada-na-
+ quinta/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:"Transportes públicos: que futuro?"
+DTSTART:20260921T173000Z
+DTEND:20260921T211500Z
+DTSTAMP:20260916T123859Z
+UID:dHJhbnNwb3J0ZXMtcHVibGljb3MtcXVlLWZ1dHVyb3wyMDI2LTA5LTE0IDE0OjI2OjA4@a
+ genda.cm-pvarzim.pt
+DESCRIPTION:De 16 a 22 de setembro\, a Póvoa de Varzim comemora a Semana 
+ Europeia da Mobilidade.\n\nMais informacao: https://www.cm-pvarzim.pt/even
+ tos/transportes-publicos-que-futuro/
+LAST-MODIFIED:20260914T142609Z
+LOCATION:Praça do Almada
+URL:https://www.cm-pvarzim.pt/eventos/transportes-publicos-que-futuro/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Encerramento da Marginal e Caminhada pela Mobilidade
+DTSTART:20260919T090000Z
+DTEND:20260919T194500Z
+DTSTAMP:20260916T123859Z
+UID:ZW5jZXJyYW1lbnRvLWRhLW1hcmdpbmFsLWUtY2FtaW5oYWRhLXBlbGEtbW9iaWxpZGFkZX
+ wyMDI2LTA5LTE0IDE0OjIyOjUy@agenda.cm-pvarzim.pt
+DESCRIPTION:De 16 a 22 de setembro\, a Póvoa de Varzim comemora a Semana 
+ Europeia da Mobilidade.\n\nMais informacao: https://www.cm-pvarzim.pt/even
+ tos/encerramento-da-marginal-e-caminhada-pela-mobilidade/
+LAST-MODIFIED:20260914T142335Z
+LOCATION:Marginal da Póvoa e Póvoa Arena
+URL:https://www.cm-pvarzim.pt/eventos/encerramento-da-marginal-e-caminhada
+ -pela-mobilidade/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Apresentação do livro "A cidade das terças-feiras"
+DTSTART:20260919T090000Z
+DTEND:20260919T110000Z
+DTSTAMP:20260916T123859Z
+UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLWEtY2lkYWRlLWRhcy10ZXJjYXMtZmVpcmFzfDIwMj
+ YtMDktMTQgMTQ6MTg6MDI=@agenda.cm-pvarzim.pt
+DESCRIPTION:De 16 a 22 de setembro\, a Póvoa de Varzim comemora a Semana 
+ Europeia da Mobilidade.\n\nMais informacao: https://www.cm-pvarzim.pt/even
+ tos/apresentacao-do-livro-a-cidade-das-tercas-feiras/
+LAST-MODIFIED:20260914T141830Z
+LOCATION:Centro Coordenador de Transportes
+URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-a-cidade-das-t
+ ercas-feiras/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sessão "E se o caminho não fosse tão simples?"
+DTSTART:20260917T170000Z
+DTEND:20260917T190000Z
+DTSTAMP:20260916T123859Z
+UID:c2Vzc2FvLWUtc2Utby1jYW1pbmhvLW5hby1mb3NzZS10YW8tc2ltcGxlc3wyMDI2LTA5LT
+ E0IDE0OjEyOjA0@agenda.cm-pvarzim.pt
+DESCRIPTION:De 16 a 22 de setembro\, a Póvoa de Varzim comemora a Semana 
+ Europeia da Mobilidade.\n\nMais informacao: https://www.cm-pvarzim.pt/even
+ tos/sessao-e-se-o-caminho-nao-fosse-tao-simples/
+LAST-MODIFIED:20260914T141935Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+URL:https://www.cm-pvarzim.pt/eventos/sessao-e-se-o-caminho-nao-fosse-tao-
+ simples/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Conferência sobre “O Bilhete Postal na História Local"
+DTSTART:20260924T170000Z
+DTEND:20260924T190000Z
+DTSTAMP:20260916T123859Z
+UID:Y29uZmVyZW5jaWEtc29icmUtby1wb3N0YWwtbmEtaGlzdG9yaWEtbG9jYWx8MjAyNi0wOS
+ 0xNCAxMzoyMDowNg==@agenda.cm-pvarzim.pt
+DESCRIPTION:Para assinalar as Jornadas Europeias do Património\, que ocor
+ rem de 18 a 27 de setembro\, a Biblioteca Municipal pretende organizar\, a
+  24 de setembro\, às 18h\, uma conferência sobre “O Bilhete Postal na 
+ História Local"\, conduzida por Raul Leitão\, presidente da Associação
+  Poveira de Coleccionismo e da Associação Cultural Póvoa Ontem e Hoje\,
+  bibliófilo e colecionador do património iconográfico e documental.\n\n
+ Mais informacao: https://www.cm-pvarzim.pt/eventos/conferencia-sobre-o-pos
+ tal-na-historia-local/
+LAST-MODIFIED:20260915T135934Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+URL:https://www.cm-pvarzim.pt/eventos/conferencia-sobre-o-postal-na-histor
+ ia-local/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lançamento do Livro "Grande é o Homem que Morre no Mar"
+DTSTART:20260925T170000Z
+DTEND:20260925T183000Z
+DTSTAMP:20260916T123859Z
+UID:bGFuY2FtZW50by1kby1saXZyby1ncmFuZGUtZS1vLWhvbWVtLXF1ZS1tb3JyZS1uby1tYX
+ ItMnwyMDI2LTA5LTE0IDExOjQ5OjE3@agenda.cm-pvarzim.pt
+DESCRIPTION:A Fundação Dr. Luís Rainha irá acolher\, no dia 25 de sete
+ mbro\, às 18h00\, o lançamento do livro Grande é o Homem que Morre no M
+ ar\, de Ana Vasco Moyo.\n\nMais informacao: https://www.cm-pvarzim.pt/even
+ tos/lancamento-do-livro-grande-e-o-homem-que-morre-no-mar-2/
+LAST-MODIFIED:20260914T114951Z
+LOCATION:Sede da Fundação Dr. Luís Rainha
+URL:https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-grande-e-o-homem
+ -que-morre-no-mar-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Exposição “Conta-me como era”
+DTSTART:20260916T090000Z
+DTEND:20260916T110000Z
+DTSTAMP:20260916T123859Z
+UID:ZXhwb3NpY2FvLWNvbnRhLW1lLWNvbW8tZXJhfDIwMjYtMDktMTQgMTE6NDE6MDk=@agend
+ a.cm-pvarzim.pt
+DESCRIPTION:De 16 a 22 de setembro\, a Póvoa de Varzim comemora a Semana 
+ Europeia da Mobilidade.\n\nMais informacao: https://www.cm-pvarzim.pt/even
+ tos/exposicao-conta-me-como-era/
+LAST-MODIFIED:20260914T142008Z
+LOCATION:Centro de Atendimento Municipal
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-conta-me-como-era/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mostra de Pintura "ACERVO"
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20261101
+DTSTAMP:20260916T123859Z
+UID:bW9zdHJhLWRlLXBpbnR1cmEtYWNlcnZvfDIwMjYtMDktMTQgMDk6NDI6NDg=@agenda.cm
+ -pvarzim.pt
+DESCRIPTION:Nos meses de setembro e outubro\, o auditório da Biblioteca M
+ unicipal acolhe a primeira Mostra do Ciclo ACERVO - Mostra de Pintura da B
+ iblioteca Municipal Rocha Peixoto.\n\nMais informacao: https://www.cm-pvar
+ zim.pt/eventos/mostra-de-pintura-acervo/
+LAST-MODIFIED:20260915T135707Z
+LOCATION:Auditório da Biblioteca Municipal Rocha Peixoto
+URL:https://www.cm-pvarzim.pt/eventos/mostra-de-pintura-acervo/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sons no Património: Inês Marques Lucas
+DTSTART:20260926T170000Z
+DTEND:20260926T184500Z
+DTSTAMP:20260916T123859Z
+UID:c29ucy1uby1wYXRyaW1vbmlvLWluZXMtbWFycXVlcy1sdWNhc3wyMDI2LTA5LTEwIDEwOj
+ E3OjQw@agenda.cm-pvarzim.pt
+DESCRIPTION:A Póvoa de Varzim volta a associar-se aos “Sons no Patrimó
+ nio”\, uma iniciativa dinamizada pela Área Metropolitana do Porto (AMP)
+  com o apoio dos 17 municípios que a integram.\n\nMais informacao: https:
+ //www.cm-pvarzim.pt/eventos/sons-no-patrimonio-ines-marques-lucas/
+LAST-MODIFIED:20260910T101915Z
+LOCATION:Fortaleza de Nossa Senhora da Conceição
+URL:https://www.cm-pvarzim.pt/eventos/sons-no-patrimonio-ines-marques-luca
+ s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Tradição e Cantares - Póvoa de Varzim e A Guarda de Mãos Dadas
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260920
+DTSTAMP:20260916T123859Z
+UID:dHJhZGljYW8tZS1jYW50YXJlcy1wb3ZvYS1kZS12YXJ6aW0tZS1hLWd1YXJkYS1kZS1tYW
+ 9zLWRhZGFzfDIwMjYtMDktMTAgMDk6MDk6NDY=@agenda.cm-pvarzim.pt
+DESCRIPTION:O Município da Póvoa de Varzim vai acolher\, no próximo dia
+  19 de setembro\, um intercâmbio sociocultural que reforça o acordo de g
+ eminação com a cidade espanhola de A Guarda. O evento será marcado pelo
+  encontro de grupos de cantares tradicionais de participantes seniores\, u
+ ma organização conjunta do Município da Póvoa de Varzim\, do Municípi
+ o de A Guarda e da Associação de Amizade Póvoa de Varzim Cidades Gemina
+ das.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/tradicao-e-cant
+ ares-povoa-de-varzim-e-a-guarda-de-maos-dadas/
+LAST-MODIFIED:20260910T124444Z
+LOCATION:Praça do Almada\, Praça da República\, Largo Dr. David Alves e
+  Largo do Passeio Alegre
+URL:https://www.cm-pvarzim.pt/eventos/tradicao-e-cantares-povoa-de-varzim-
+ e-a-guarda-de-maos-dadas/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia Mundial do Turismo
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20260928
+DTSTAMP:20260916T123859Z
+UID:ZGlhLW11bmRpYWwtZG8tdHVyaXNtb3wyMDI2LTA5LTA4IDA5OjExOjM3@agenda.cm-pva
+ rzim.pt
+DESCRIPTION:O Município da Póvoa de Varzim vai assinalar o Dia Mundial d
+ o Turismo\, que se celebra a 27 de setembro\, com um conjunto de iniciativ
+ as a realizar nesse fim de semana.\n\nMais informacao: https://www.cm-pvar
+ zim.pt/eventos/dia-mundial-do-turismo/
+LAST-MODIFIED:20260908T093038Z
+LOCATION:Fortaleza de Nossa Senhora da Conceição\, Loja Interativa de Tu
+ rismo e Marina e Porto de Pesca
+URL:https://www.cm-pvarzim.pt/eventos/dia-mundial-do-turismo/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
+ pacional de Aver-o-Mar
+DTSTART:20261021T133000Z
+DTEND:20261021T151500Z
+DTSTAMP:20260916T123859Z
+UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1jZW
+ 50cm8tb2N1cGFjaW9uYWwtZGUtYXZlci1vLW1hcnwyMDI2LTA5LTA0IDEzOjMxOjIy@agenda.
+ cm-pvarzim.pt
+DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
+ pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
+ ao público\, com vista à promoção de boas práticas de eficiência ene
+ rgética.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/acao-de-se
+ nsibilizacao-povoa-de-varzim-energy-hub-centro-ocupacional-de-aver-o-mar/
+LAST-MODIFIED:20260904T133301Z
+LOCATION:Centro Ocupacional de Aver-o-Mar
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
+ im-energy-hub-centro-ocupacional-de-aver-o-mar/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Associaç
+ ão Empresarial da Póvoa de Varzim
+DTSTART:20261015T133000Z
+DTEND:20261015T151500Z
+DTSTAMP:20260916T123859Z
+UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1hc3
+ NvY2lhY2FvLWVtcHJlc2FyaWFsLWRhLXBvdm9hLWRlLXZhcnppbXwyMDI2LTA5LTA0IDEzOjI5
+ OjAz@agenda.cm-pvarzim.pt
+DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
+ pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
+ ao público\, com vista à promoção de boas práticas de eficiência ene
+ rgética.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/acao-de-se
+ nsibilizacao-povoa-de-varzim-energy-hub-associacao-empresarial-da-povoa-de
+ -varzim/
+LAST-MODIFIED:20260904T133025Z
+LOCATION:Associação Empresarial da Póvoa de Varzim
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
+ im-energy-hub-associacao-empresarial-da-povoa-de-varzim/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
+ pacional de Balasar
+DTSTART:20261014T133000Z
+DTEND:20261014T151500Z
+DTSTAMP:20260916T123859Z
+UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1jZW
+ 50cm8tb2N1cGFjaW9uYWwtZGUtYmFsYXNhcnwyMDI2LTA5LTA0IDEzOjI0OjQ0@agenda.cm-p
+ varzim.pt
+DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
+ pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
+ ao público\, com vista à promoção de boas práticas de eficiência ene
+ rgética.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/acao-de-se
+ nsibilizacao-povoa-de-varzim-energy-hub-centro-ocupacional-de-balasar/
+LAST-MODIFIED:20260904T132603Z
+LOCATION:Centro Ocupacional de Balasar
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
+ im-energy-hub-centro-ocupacional-de-balasar/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Cooperativ
+ a da Póvoa
+DTSTART:20261009T134500Z
+DTEND:20261009T171500Z
+DTSTAMP:20260916T123859Z
+UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1jb2
+ 9wZXJhdGl2YS1kYS1wb3ZvYXwyMDI2LTA5LTA0IDEzOjE0OjIy@agenda.cm-pvarzim.pt
+DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
+ pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
+ ao público\, com vista à promoção de boas práticas de eficiência ene
+ rgética.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/acao-de-se
+ nsibilizacao-povoa-de-varzim-energy-hub-cooperativa-da-povoa/
+LAST-MODIFIED:20260904T131620Z
+LOCATION:Cooperativa da Póvoa
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
+ im-energy-hub-cooperativa-da-povoa/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
+ pacional de Laúndos
+DTSTART:20261008T134500Z
+DTEND:20261008T171500Z
+DTSTAMP:20260916T123859Z
+UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1jZW
+ 50cm8tb2N1cGFjaW9uYWwtZGUtbGF1bmRvc3wyMDI2LTA5LTA0IDEzOjA4OjAx@agenda.cm-p
+ varzim.pt
+DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
+ pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
+ ao público\, com vista à promoção de boas práticas de eficiência ene
+ rgética.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/acao-de-se
+ nsibilizacao-povoa-de-varzim-energy-hub-centro-ocupacional-de-laundos/
+LAST-MODIFIED:20260904T130910Z
+LOCATION:Centro Ocupacional de Laúndos
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
+ im-energy-hub-centro-ocupacional-de-laundos/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
+ pacional da Estela
+DTSTART:20261006T134500Z
+DTEND:20261006T171500Z
+DTSTAMP:20260916T123859Z
+UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1jZW
+ 50cm8tb2N1cGFjaW9uYWwtZGEtZXN0ZWxhfDIwMjYtMDktMDQgMTM6MDQ6Mjg=@agenda.cm-p
+ varzim.pt
+DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
+ pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
+ ao público\, com vista à promoção de boas práticas de eficiência ene
+ rgética.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/acao-de-se
+ nsibilizacao-povoa-de-varzim-energy-hub-centro-ocupacional-da-estela/
+LAST-MODIFIED:20260904T130605Z
+LOCATION:Centro Ocupacional da Estela
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
+ im-energy-hub-centro-ocupacional-da-estela/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
+ pacional da Lapa
+DTSTART:20260930T133000Z
+DTEND:20260930T151500Z
+DTSTAMP:20260916T123859Z
+UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1jZW
+ 50cm8tb2N1cGFjaW9uYWwtZGEtbGFwYXwyMDI2LTA5LTA0IDExOjM3OjA1@agenda.cm-pvarz
+ im.pt
+DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
+ pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
+ ao público\, com vista à promoção de boas práticas de eficiência ene
+ rgética.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/acao-de-se
+ nsibilizacao-povoa-de-varzim-energy-hub-centro-ocupacional-da-lapa/
+LAST-MODIFIED:20260904T113859Z
+LOCATION:Centro Ocupacional da Lapa
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
+ im-energy-hub-centro-ocupacional-da-lapa/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Horpozim
+DTSTART:20260929T133000Z
+DTEND:20260929T151500Z
+DTSTAMP:20260916T123859Z
+UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1ob3
+ Jwb3ppbXwyMDI2LTA5LTA0IDExOjM0OjIw@agenda.cm-pvarzim.pt
+DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
+ pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
+ ao público\, com vista à promoção de boas práticas de eficiência ene
+ rgética.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/acao-de-se
+ nsibilizacao-povoa-de-varzim-energy-hub-horpozim/
+LAST-MODIFIED:20260904T113622Z
+LOCATION:Horpozim
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
+ im-energy-hub-horpozim/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Pó
+ voa Empresas
+DTSTART:20260928T173000Z
+DTEND:20260928T191500Z
+DTSTAMP:20260916T123859Z
+UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1jZW
+ 50cm8tcG92b2EtZW1wcmVzYXN8MjAyNi0wOS0wNCAxMTozMDoyNg==@agenda.cm-pvarzim.p
+ t
+DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
+ pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
+ ao público\, com vista à promoção de boas práticas de eficiência ene
+ rgética.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/acao-de-se
+ nsibilizacao-povoa-de-varzim-energy-hub-centro-povoa-empresas/
+LAST-MODIFIED:20260904T113312Z
+LOCATION:Centro Póvoa Empresas
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
+ im-energy-hub-centro-povoa-empresas/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Junta de F
+ reguesia de Rates
+DTSTART:20260924T173000Z
+DTEND:20260924T191500Z
+DTSTAMP:20260916T123859Z
+UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1qdW
+ 50YS1kZS1mcmVndWVzaWEtZGUtcmF0ZXN8MjAyNi0wOS0wNCAxMToyMzo1Nw==@agenda.cm-p
+ varzim.pt
+DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
+ pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
+ ao público\, com vista à promoção de boas práticas de eficiência ene
+ rgética.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/acao-de-se
+ nsibilizacao-povoa-de-varzim-energy-hub-junta-de-freguesia-de-rates/
+LAST-MODIFIED:20260904T112850Z
+LOCATION:Junta de Freguesia de Rates
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
+ im-energy-hub-junta-de-freguesia-de-rates/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:II Encontro da Comissão de Integração em Cuidados de Saúde
+DTSTART:20260930T073000Z
+DTEND:20260930T123000Z
+DTSTAMP:20260916T123859Z
+UID:aWktZW5jb250cm8tZGEtY29taXNzYW8tZGUtaW50ZWdyYWNhby1lbS1jdWlkYWRvcy1kZS
+ 1zYXVkZXwyMDI2LTA5LTA0IDEwOjQzOjUx@agenda.cm-pvarzim.pt
+DESCRIPTION:O Diana Bar acolhe\, no dia 30 de setembro\, a partir das 8h30
+ \, a segunda edição do Encontro da Comissão de Integração em Cuidados
+  da Saúde\, promovido pela Unidade Local de Saúde da Póvoa de Varzim/Vi
+ la do Conde (ULSPVVC)\, com o apoio da Câmara Municipal da Póvoa de Varz
+ im.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/ii-encontro-da-c
+ omissao-de-integracao-em-cuidados-de-saude/
+LAST-MODIFIED:20260904T105551Z
+LOCATION:Diana Bar
+URL:https://www.cm-pvarzim.pt/eventos/ii-encontro-da-comissao-de-integraca
+ o-em-cuidados-de-saude/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro "Quando Menos se Espera"
+DTSTART:20261201T213000Z
+DTEND:20261202T233000Z
+DTSTAMP:20260916T123859Z
+UID:dGVhdHJvLXF1YW5kby1tZW5vcy1zZS1lc3BlcmF8MjAyNi0wOS0wNCAwOTozMjowNg==@a
+ genda.cm-pvarzim.pt
+DESCRIPTION:Nos dias 1 e 2 de dezembro\, pelas 21h30\, sobe ao palco do Ci
+ ne-Teatro Garrett a peça "Quando Menos se Espera".\n\nMais informacao: ht
+ tps://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
+LAST-MODIFIED:20260904T093207Z
+LOCATION:Cine-Teatro Garrett
+URL:https://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Um Conto de Duas Cidades"
+DTSTART:20260918T203000Z
+DTEND:20260918T223000Z
+DTSTAMP:20260916T123859Z
+UID:Y2luZW1hLXVtLWNvbnRvLWRlLWR1YXMtY2lkYWRlc3wyMDI2LTA5LTAyIDE1OjI4OjQy@a
+ genda.cm-pvarzim.pt
+DESCRIPTION:No dia 18 de setembro\, às 21h30\, será exibido\, no Cine-Te
+ atro Garrett\, o documentário "Um Conto de Duas Cidades".\n\nMais informa
+ cao: https://www.cm-pvarzim.pt/eventos/cinema-um-conto-de-duas-cidades/
+LAST-MODIFIED:20260915T140656Z
+LOCATION:Cine-Teatro Garrett
+URL:https://www.cm-pvarzim.pt/eventos/cinema-um-conto-de-duas-cidades/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Oficina "Do Plástico fiz Sardinha"
+DTSTART:20261031T103000Z
+DTEND:20261031T123000Z
+DTSTAMP:20260916T123859Z
+UID:b2ZpY2luYS1kby1wbGFzdGljby1maXotc2FyZGluaGF8MjAyNi0wOC0zMSAwOTo1MjoyNg
+ ==@agenda.cm-pvarzim.pt
+DESCRIPTION:No dia 31 de outubro\, pelas 10h30\, o Café-Concerto do Cine-
+ Teatro Garrett vai acolher a Oficina "Do Plástico fiz Sardinha".\n\nMais 
+ informacao: https://www.cm-pvarzim.pt/eventos/oficina-do-plastico-fiz-sard
+ inha/
+LAST-MODIFIED:20260831T105731Z
+LOCATION:Cine-Teatro Garrett - Café-Concerto
+URL:https://www.cm-pvarzim.pt/eventos/oficina-do-plastico-fiz-sardinha/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro para bebés "Monstro de Companhia"
+DTSTART:20261017T100000Z
+DTEND:20261017T113000Z
+DTSTAMP:20260916T123859Z
+UID:dGVhdHJvLXBhcmEtYmViZXMtbW9uc3Ryby1kZS1jb21wYW5oaWF8MjAyNi0wOC0yOCAwOD
+ ozMzoxOA==@agenda.cm-pvarzim.pt
+DESCRIPTION:No dia 17 de outubro\, às 11h00\, há teatro para toda a fam
+ ília\, na sala de ensaios do Cine-Teatro Garrett.\n\nMais informacao: htt
+ ps://www.cm-pvarzim.pt/eventos/teatro-para-bebes-monstro-de-companhia/
+LAST-MODIFIED:20260831T105855Z
+LOCATION:Cine-Teatro Garrett - sala de ensaios
+URL:https://www.cm-pvarzim.pt/eventos/teatro-para-bebes-monstro-de-companh
+ ia/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Opereta "A Morte do Diabo"
+DTSTART:20261018T170000Z
+DTEND:20261018T190000Z
+DTSTAMP:20260916T123859Z
+UID:b3BlcmV0YS1hLW1vcnRlLWRvLWRpYWJvfDIwMjYtMDgtMjcgMTA6MzQ6NDU=@agenda.cm
+ -pvarzim.pt
+DESCRIPTION:A Associação da Banda Musical da Póvoa de Varzim vai aprese
+ ntar o espetáculo musical "A Morte do Diabo – a partir de fragmentos de
+  uma opereta"\, que terá lugar no dia 18 de outubro\, às 18h00\, no Cine
+ -Teatro Garrett.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/ope
+ reta-a-morte-do-diabo/
+LAST-MODIFIED:20260827T103723Z
+LOCATION:Cine-Teatro Garrett
+URL:https://www.cm-pvarzim.pt/eventos/opereta-a-morte-do-diabo/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Um Toque Familiar"
+DTSTART:20260917T204500Z
+DTEND:20260917T223000Z
+DTSTAMP:20260916T123859Z
+UID:Y2luZW1hLXVtLXRvcXVlLWZhbWlsaWFyfDIwMjYtMDgtMjYgMTQ6MDY6NTI=@agenda.cm
+ -pvarzim.pt
+DESCRIPTION:No dia 17 de setembro\, às 21h45\, será exibido\, no Cine-Te
+ atro Garrett\, o filme "Um Toque Familiar".\n\nMais informacao: https://ww
+ w.cm-pvarzim.pt/eventos/cinema-um-toque-familiar/
+LAST-MODIFIED:20260826T140654Z
+LOCATION:Cine-Teatro Garrett
+URL:https://www.cm-pvarzim.pt/eventos/cinema-um-toque-familiar/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto Juliana Linhares "Até Cansar o Cansaço"
+DTSTART:20261031T213000Z
+DTEND:20261031T233000Z
+DTSTAMP:20260916T123859Z
+UID:Y29uY2VydG8tanVsaWFuYS1saW5oYXJlcy1hdGUtY2Fuc2FyLW8tY2Fuc2Fjb3wyMDI2LT
+ A4LTI2IDExOjM1OjQ4@agenda.cm-pvarzim.pt
+DESCRIPTION:No dia 31 de outubro\, às 21h30\, Juliana Linhares vai aprese
+ ntar\, no Cine-Teatro Garrett\, "Até Cansar o Cansaço".\n\nMais informac
+ ao: https://www.cm-pvarzim.pt/eventos/concerto-juliana-linhares-ate-cansar
+ -o-cansaco/
+LAST-MODIFIED:20260826T113610Z
+LOCATION:Cine-Teatro Garrett
+URL:https://www.cm-pvarzim.pt/eventos/concerto-juliana-linhares-ate-cansar
+ -o-cansaco/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Festa dos Bacalhoeiros
+DTSTART:20260926T090000Z
+DTEND:20260926T161500Z
+DTSTAMP:20260916T123859Z
+UID:ZmVzdGEtZG9zLWJhY2FsaG9laXJvc3wyMDI2LTA4LTI2IDExOjI2OjA5@agenda.cm-pva
+ rzim.pt
+DESCRIPTION:No dia 26 de setembro\, a partir das 10h00\, a Câmara Municip
+ al de Ílhavo\, através do Museu Marítimo de Ílhavo\, irá organizar no
+ va edição da Festa dos Bacalhoeiros. \n \n \n À semelhança do que suce
+ deu em edições transatas\, a Câmara Municipal da Póvoa de Varzim\, atr
+ avés do Centro Ocupacional da Lapa\, aceitou o convite para ser entidade 
+ parceira da organização do evento\, proporcionando\, deste modo\, a ex-
+ bacalhoeiros da Póvoa de Varzim interessados a possibilidade de participa
+ rem na atividade. \n Com participação limitada a 230 pessoas de todo o p
+ aís\, o Município garantiu\, assim\, a disponibilidade de um número lim
+ itado de 30 inscrições exclusivamente destinado a ex-bacalhoeiros poveir
+ os e esposas ou viúvas dos mesmos. Os interessados em participar deverão
+  inscrever-se no Centro Ocupacional da Lapa até ao dia 7 de setembro. A i
+ nscrição terá o custo de 30\,00€ por pessoa\, estando o transporte ga
+ rantido gratuitamente pela Câmara Municipal da Póvoa de Varzim. \n O eve
+ nto irá proporcionar uma visita ao Museu Marítimo de Ílhavo\, às 10h00
+ \, uma merenda\, com direito a visita ao Aquário dos Bacalhaus\, às 11h3
+ 0\, um almoço convívio\, a partir das 13h00\, e uma visita ao Navio-Muse
+ u Santo André\, às 15h00.\n\nMais informacao: https://www.cm-pvarzim.pt/
+ eventos/festa-dos-bacalhoeiros/
+LAST-MODIFIED:20260826T112938Z
+LOCATION:Ílhavo
+URL:https://www.cm-pvarzim.pt/eventos/festa-dos-bacalhoeiros/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Famílias no Jardim da Biblioteca
+DTSTART:20260926T143000Z
+DTEND:20260926T160000Z
+DTSTAMP:20260916T123859Z
+UID:ZmFtaWxpYXMtbm8tamFyZGltLWRhLWJpYmxpb3RlY2EtNXwyMDI2LTA4LTI2IDExOjAzOj
+ A5@agenda.cm-pvarzim.pt
+DESCRIPTION:A Luminisca convida todas as famílias para esta sessão espec
+ ial no jardim da Biblioteca Municipal Rocha Peixoto\, um espaço adornado 
+ por majestosas árvores onde adultos e crianças terão a oportunidade de 
+ vivenciar momentos de tranquilidade e descoberta.\n\nMais informacao: http
+ s://www.cm-pvarzim.pt/eventos/familias-no-jardim-da-biblioteca-5/
+LAST-MODIFIED:20260826T110310Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+URL:https://www.cm-pvarzim.pt/eventos/familias-no-jardim-da-biblioteca-5/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Apresentação do livro “Submersas”
+DTSTART:20260919T150000Z
+DTEND:20260919T163000Z
+DTSTAMP:20260916T123859Z
+UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLXN1Ym1lcnNhc3wyMDI2LTA4LTI2IDA5OjQzOjU1@a
+ genda.cm-pvarzim.pt
+DESCRIPTION:No dia 19 de setembro\, às 16h00\, será apresentado\, na Bib
+ lioteca Municipal Rocha Peixoto\, o livro "Submersas" de António Pinhão.
+ \n\nMais informacao: https://www.cm-pvarzim.pt/eventos/apresentacao-do-liv
+ ro-submersas/
+LAST-MODIFIED:20260911T125700Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-submersas/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Apresentação do livro "O Bicho que Picou a Mãe"
+DTSTART:20260919T143000Z
+DTEND:20260919T163000Z
+DTSTAMP:20260916T123859Z
+UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tYmljaG8tcXVlLXBpY291LWEtbWFlfDIwMjYtMD
+ gtMjUgMTQ6MDk6NDE=@agenda.cm-pvarzim.pt
+DESCRIPTION:No dia 19 de setembro\, pelas 15h30\, terá lugar\, na Bibliot
+ eca Municipal\, a apresentação do livro infantil "O Bicho que Picou a M
+ ãe".\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/apresentacao-d
+ o-livro-o-bicho-que-picou-a-mae/
+LAST-MODIFIED:20260825T140942Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-bicho-que-pi
+ cou-a-mae/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto "Disco Voador"
+DTSTART:20261030T213000Z
+DTEND:20261030T233000Z
+DTSTAMP:20260916T123859Z
+UID:Y29uY2VydG8tZGlzY28tdm9hZG9yfDIwMjYtMDgtMTAgMDk6MjQ6NTk=@agenda.cm-pva
+ rzim.pt
+DESCRIPTION:No dia 30 de outubro\, às 21h30\, o Café-Concerto vai acolhe
+ r um concerto com Disco Voador.\n\nMais informacao: https://www.cm-pvarzim
+ .pt/eventos/concerto-disco-voador/
+LAST-MODIFIED:20260810T092500Z
+LOCATION:Cine-Teatro Garrett - Café-Concerto
+URL:https://www.cm-pvarzim.pt/eventos/concerto-disco-voador/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto Pedro Abrunhosa
+DTSTART:20261114T213000Z
+DTEND:20261114T230000Z
+DTSTAMP:20260916T123859Z
+UID:Y29uY2VydG8tcGVkcm8tYWJydW5ob3NhfDIwMjYtMDgtMDcgMTU6MjQ6NTc=@agenda.cm
+ -pvarzim.pt
+DESCRIPTION:No dia 14 de novembro\, às 21h30\, Pedro Abrunhosa vai atuar 
+ no Póvoa Arena.\n\nMais informacao: https://www.cm-pvarzim.pt/eventos/con
+ certo-pedro-abrunhosa/
+LAST-MODIFIED:20260807T152457Z
+LOCATION:Póvoa Arena
+URL:https://www.cm-pvarzim.pt/eventos/concerto-pedro-abrunhosa/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Abba Experience - Tributo a Abba
+DTSTART:20261010T200000Z
+DTEND:20261010T220000Z
+DTSTAMP:20260916T123859Z
+UID:YWJiYS1leHBlcmllbmNlLXRyaWJ1dG8tYS1hYmJhfDIwMjYtMDgtMDcgMTQ6NDQ6Mzk=@a
+ genda.cm-pvarzim.pt
+DESCRIPTION:Os ABBA Experience são uma banda tributo que recria a magia d
+ o grupo sueco com vozes poderosas e um espetáculo vibrante cheio de emoç
+ ão. Atuam pela primeira vez na Póvoa de Varzim no Póvoa Arena.\n\nMais 
+ informacao: https://www.cm-pvarzim.pt/eventos/abba-experience-tributo-a-ab
+ ba/
+LAST-MODIFIED:20260807T150858Z
+LOCATION:Póvoa Arena
+URL:https://www.cm-pvarzim.pt/eventos/abba-experience-tributo-a-abba/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Wine Arena 2026
+DTSTART:20261003T140000Z
+DTEND:20261004T200000Z
+DTSTAMP:20260916T123859Z
+UID:d2luZS1hcmVuYS0yMDI2fDIwMjYtMDgtMDcgMTQ6Mzc6MTY=@agenda.cm-pvarzim.pt
+DESCRIPTION:O Wine Arena 2026 é um evento vínico e gastronómico que re
+ úne produtores de vinho de todo o país\, provas comentadas\, harmonizaç
+ ões e experiências sensoriais únicas no coração da Póvoa de Varzim.
+ \n\nMais informacao: https://www.cm-pvarzim.pt/eventos/wine-arena-2026/
+LAST-MODIFIED:20260807T143900Z
+LOCATION:Póvoa Arena
+URL:https://www.cm-pvarzim.pt/eventos/wine-arena-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:É-Aqui-in-Ócio 2026
+DTSTART:20260923T203000Z
+DTEND:20261003T223000Z
+DTSTAMP:20260916T123859Z
+UID:ZS1hcXVpLWluLW9jaW8tMjAyNnwyMDI2LTA3LTMxIDE0OjE0OjMy@agenda.cm-pvarzim
+ .pt
+DESCRIPTION:Entre 23 de setembro e 3 de outubro\, realiza-se\, na Póvoa d
+ e Varzim\, a 17.ª edição do Festival Internacional de Teatro É-Aqui-in
+ -Ócio\, promovido pela Varazim Teatro\, com o apoio do Município.\n\nMai
+ s informacao: https://www.cm-pvarzim.pt/eventos/e-aqui-in-ocio-2026/
+LAST-MODIFIED:20260915T103936Z
+LOCATION:Cine-Teatro Garrett e outros
+URL:https://www.cm-pvarzim.pt/eventos/e-aqui-in-ocio-2026/
+END:VEVENT
+END:VCALENDAR
