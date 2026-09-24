@@ -79,44 +79,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/informar-para-proteger/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Festas em honra de N.ª Sr.ª das Dores
-DTSTART:20260913T090000Z
-DTEND:20260922T220000Z
-DTSTAMP:20260910T124637Z
-UID:ZmVzdGFzLWVtLWhvbnJhLWRlLW4tYS1zci1hLWRhcy1kb3Jlcy0yfDIwMjYtMDgtMzEgMD
- k6NDM6MzA=@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:De 13 a 22 de setembro\, realizam-se\, na Póvoa de Varzim\, a
- s Festas em honra de N.ª Sr.ª das Dores\, uma organização da Confraria
-  de Nossa Senhora das Dores\, com o apoio do Município.\n\nMais informaç
- ão: https://www.cm-pvarzim.pt/eventos/festas-em-honra-de-n-a-sr-a-das-dor
- es-2/
-LAST-MODIFIED:20260910T124637Z
-LOCATION:-
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/festas-em-honra-de-n-a-sr-a-das-dore
- s-2/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Semana Europeia da Mobilidade
-DTSTART;VALUE=DATE:20260916
-DTEND;VALUE=DATE:20260923
-DTSTAMP:20260911T145815Z
-UID:c2VtYW5hLWV1cm9wZWlhLWRhLW1vYmlsaWRhZGUtNHwyMDI2LTA5LTExIDE0OjU4OjE0@a
- genda.cm-pvarzim.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:Sob o lema "Mobilidade para Todos"\, arranca\, no próximo dia
-  16 de setembro\, a Semana Europeia da Mobilidade\, celebrada anualmente p
- ela União Europeia\, com o objetivo de alertar para a necessidade de muda
- nças de comportamentos em prol de uma mobilidade sustentável.\n\nMais in
- formação: https://www.cm-pvarzim.pt/eventos/semana-europeia-da-mobilidad
- e-4/
-LAST-MODIFIED:20260911T145815Z
-LOCATION:Póvoa de Varzim
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/semana-europeia-da-mobilidade-4/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Exposição "O Império do Medo"
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20261004
@@ -150,22 +112,6 @@ LAST-MODIFIED:20260915T135707Z
 LOCATION:Auditório da Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/mostra-de-pintura-acervo/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:"Transportes públicos: que futuro?"
-DTSTART:20260921T173000Z
-DTEND:20260921T211500Z
-DTSTAMP:20260914T142609Z
-UID:dHJhbnNwb3J0ZXMtcHVibGljb3MtcXVlLWZ1dHVyb3wyMDI2LTA5LTE0IDE0OjI2OjA4@a
- genda.cm-pvarzim.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:De 16 a 22 de setembro\, a Póvoa de Varzim comemora a Semana 
- Europeia da Mobilidade.\n\nMais informação: https://www.cm-pvarzim.pt/ev
- entos/transportes-publicos-que-futuro/
-LAST-MODIFIED:20260914T142609Z
-LOCATION:Praça do Almada
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/transportes-publicos-que-futuro/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:É-Aqui-in-Ócio 2026
@@ -335,7 +281,7 @@ BEGIN:VEVENT
 SUMMARY:Sons no Património: Inês Marques Lucas
 DTSTART:20260926T170000Z
 DTEND:20260926T184500Z
-DTSTAMP:20260910T101915Z
+DTSTAMP:20260922T092926Z
 UID:c29ucy1uby1wYXRyaW1vbmlvLWluZXMtbWFycXVlcy1sdWNhc3wyMDI2LTA5LTEwIDEwOj
  E3OjQw@agenda.cm-pvarzim.pt
 CATEGORIES:Cultura
@@ -343,7 +289,7 @@ DESCRIPTION:A Póvoa de Varzim volta a associar-se aos “Sons no Patrimó
  nio”\, uma iniciativa dinamizada pela Área Metropolitana do Porto (AMP)
   com o apoio dos 17 municípios que a integram.\n\nMais informação: http
  s://www.cm-pvarzim.pt/eventos/sons-no-patrimonio-ines-marques-lucas/
-LAST-MODIFIED:20260910T101915Z
+LAST-MODIFIED:20260922T092926Z
 LOCATION:Fortaleza de Nossa Senhora da Conceição
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/sons-no-patrimonio-ines-marques-luca
@@ -464,6 +410,59 @@ URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
  im-energy-hub-centro-ocupacional-da-lapa/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Dia Mundial da Música
+DTSTART:20261001T080000Z
+DTEND:20261001T160000Z
+DTSTAMP:20260924T150713Z
+UID:ZGlhLW11bmRpYWwtZGEtbXVzaWNhLTV8MjAyNi0wOS0yNCAxNTowNjo0NQ==@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:A Escola de Música da Póvoa de Varzim (EMPV) associa-se às 
+ comemorações do Dia Mundial da Música\, que se assinala no próximo dia
+  1 de outubro\, com um programa que pretende levar a música a diferentes 
+ espaços da comunidade e proporcionar ao público um momento especial de f
+ ruição musical.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/
+ dia-mundial-da-musica-5/
+LAST-MODIFIED:20260924T150713Z
+LOCATION:Escolas do concelho e Auditório Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/dia-mundial-da-musica-5/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Recital de piano de Matilde Pereira Leite
+DTSTART:20261001T173000Z
+DTEND:20261001T193000Z
+DTSTAMP:20260924T144331Z
+UID:cmVjaXRhbC1kZS1waWFuby1kZS1tYXRpbGRlLXBlcmVpcmEtbGVpdGV8MjAyNi0wOS0yNC
+ AxNDoyNzoxMA==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No âmbito das comemorações do Dia Mundial da Música\, o Au
+ ditório Municipal abre portas\, no dia 1 de outubro\, às 18h30\, para um
+  recital de piano com Matilde Pereira Leite.\n\nMais informação: https:/
+ /www.cm-pvarzim.pt/eventos/recital-de-piano-de-matilde-pereira-leite/
+LAST-MODIFIED:20260924T144331Z
+LOCATION:Auditório Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/recital-de-piano-de-matilde-pereira-
+ leite/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Persepolis"
+DTSTART:20261001T204500Z
+DTEND:20261001T223000Z
+DTSTAMP:20260922T100326Z
+UID:Y2luZW1hLXBlcnNlcG9saXN8MjAyNi0wOS0yMiAwOTo1OToyOQ==@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 1 de outubro\, às 21h45\, será exibido\, no Cine-Teat
+ ro Garrett\, o filme "Persepolis".\n\nMais informação: https://www.cm-pv
+ arzim.pt/eventos/cinema-persepolis/
+LAST-MODIFIED:20260922T100326Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-persepolis/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Wine Arena 2026
 DTSTART:20261003T140000Z
 DTEND:20261004T200000Z
@@ -520,6 +519,22 @@ LOCATION:Centro Ocupacional de Laúndos
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
  im-energy-hub-centro-ocupacional-de-laundos/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Cartas Amarelas"
+DTSTART:20261008T204500Z
+DTEND:20261008T224500Z
+DTSTAMP:20260922T100308Z
+UID:Y2luZW1hLWNhcnRhcy1hbWFyZWxhc3wyMDI2LTA5LTIyIDEwOjAzOjAx@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 8 de outubro\, às 21h45\, será exibido\, no Cine-Teat
+ ro Garrett\, o filme "Cartas Amarelas".\n\nMais informação: https://www.
+ cm-pvarzim.pt/eventos/cinema-cartas-amarelas/
+LAST-MODIFIED:20260922T100308Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-cartas-amarelas/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Cooperativ
@@ -603,6 +618,22 @@ URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
  im-energy-hub-associacao-empresarial-da-povoa-de-varzim/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cinema "O Amor que Perdura"
+DTSTART:20261015T204500Z
+DTEND:20261015T223000Z
+DTSTAMP:20260922T100559Z
+UID:Y2luZW1hLW8tYW1vci1xdWUtcGVyZHVyYXwyMDI2LTA5LTIyIDEwOjA1OjU4@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 15 de outubro\, às 21h45\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme "O Amor que Perdura".\n\nMais informação: https://
+ www.cm-pvarzim.pt/eventos/cinema-o-amor-que-perdura/
+LAST-MODIFIED:20260922T100559Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-o-amor-que-perdura/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Teatro para bebés "Monstro de Companhia"
 DTSTART:20261017T100000Z
 DTEND:20261017T113000Z
@@ -660,6 +691,21 @@ URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
  im-energy-hub-centro-ocupacional-de-aver-o-mar/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cinema "O Jacaré"
+DTSTART:20261022T204500Z
+DTEND:20261022T223000Z
+DTSTAMP:20260922T101121Z
+UID:Y2luZW1hLW8tamFjYXJlfDIwMjYtMDktMjIgMTA6MTE6MDk=@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 22 de outubro\, às 21h45\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme "O Jacaré".\n\nMais informação: https://www.cm-pv
+ arzim.pt/eventos/cinema-o-jacare/
+LAST-MODIFIED:20260922T101121Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-o-jacare/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cinema "A Ovelha Choné: Trapalhada na Quinta"
 DTSTART:20261025T153000Z
 DTEND:20261025T173000Z
@@ -694,6 +740,21 @@ LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-
  de-lisboa/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Hope"
+DTSTART:20261029T214500Z
+DTEND:20261029T233000Z
+DTSTAMP:20260922T101310Z
+UID:Y2luZW1hLWhvcGV8MjAyNi0wOS0yMiAxMDoxMzowOQ==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 29 de outubro\, às 21h45\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme "Hope".\n\nMais informação: https://www.cm-pvarzim
+ .pt/eventos/cinema-hope/
+LAST-MODIFIED:20260922T101310Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-hope/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Concerto "Disco Voador"

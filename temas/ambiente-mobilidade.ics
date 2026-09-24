@@ -12,41 +12,6 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/temas/ambiente-
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Semana Europeia da Mobilidade
-DTSTART;VALUE=DATE:20260916
-DTEND;VALUE=DATE:20260923
-DTSTAMP:20260911T145815Z
-UID:c2VtYW5hLWV1cm9wZWlhLWRhLW1vYmlsaWRhZGUtNHwyMDI2LTA5LTExIDE0OjU4OjE0@a
- genda.cm-pvarzim.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:Sob o lema "Mobilidade para Todos"\, arranca\, no próximo dia
-  16 de setembro\, a Semana Europeia da Mobilidade\, celebrada anualmente p
- ela União Europeia\, com o objetivo de alertar para a necessidade de muda
- nças de comportamentos em prol de uma mobilidade sustentável.\n\nMais in
- formação: https://www.cm-pvarzim.pt/eventos/semana-europeia-da-mobilidad
- e-4/
-LAST-MODIFIED:20260911T145815Z
-LOCATION:Póvoa de Varzim
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/semana-europeia-da-mobilidade-4/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:"Transportes públicos: que futuro?"
-DTSTART:20260921T173000Z
-DTEND:20260921T211500Z
-DTSTAMP:20260914T142609Z
-UID:dHJhbnNwb3J0ZXMtcHVibGljb3MtcXVlLWZ1dHVyb3wyMDI2LTA5LTE0IDE0OjI2OjA4@a
- genda.cm-pvarzim.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:De 16 a 22 de setembro\, a Póvoa de Varzim comemora a Semana 
- Europeia da Mobilidade.\n\nMais informação: https://www.cm-pvarzim.pt/ev
- entos/transportes-publicos-que-futuro/
-LAST-MODIFIED:20260914T142609Z
-LOCATION:Praça do Almada
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/transportes-publicos-que-futuro/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Junta de F
  reguesia de Rates
 DTSTART:20260924T173000Z
