@@ -1,0 +1,52 @@
+name: Atualizar agenda
+
+on:
+  schedule:
+    - cron: "17 */4 * * *"   # a cada 4 horas (UTC)
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "gerar_agenda_ics.py"
+      - "modelo_pagina.html"
+      - "requirements.txt"
+      - ".github/workflows/atualizar-agenda.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: atualizar-agenda
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install --no-cache-dir -r requirements.txt
+
+      - name: Gerar calendários e página
+        run: python gerar_agenda_ics.py
+
+      - name: Publicar, se houver alterações
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add agenda.ics temas index.html
+          if git diff --staged --quiet; then
+            echo "Sem alterações na agenda."
+            exit 0
+          fi
+          git commit -m "Atualizar agenda"
+          git pull --rebase
+          git push

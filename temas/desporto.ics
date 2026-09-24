@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Provas, torneios e atividade física.
+NAME:Póvoa de Varzim: Desporto
+X-WR-CALNAME:Póvoa de Varzim: Desporto
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/temas/desporto.
+ ics
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Ratis by Night
+DTSTART:20260926T200000Z
+DTEND:20260926T223000Z
+DTSTAMP:20260916T142500Z
+UID:cmF0aXMtYnktbmlnaHR8MjAyNi0wOS0xNiAxNDoyNTowMA==@agenda.cm-pvarzim.pt
+CATEGORIES:Desporto
+DESCRIPTION:A Junta de Freguesia de Rates\, com o apoio do Município\, co
+ nvida a correr\, caminhar e descobrir S. Pedro de Rates à noite\, no pró
+ ximo dia 26 de setembro\, às 21h00.\n\nMais informação: https://www.cm-
+ pvarzim.pt/eventos/ratis-by-night/
+LAST-MODIFIED:20260916T142500Z
+LOCATION:Parque Verde
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/ratis-by-night/
+END:VEVENT
+END:VCALENDAR
