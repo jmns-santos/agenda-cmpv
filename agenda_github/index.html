@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-1qyztFrTh1XfskKdCZxEtfW87L14WJs7IsBhv06kjG0='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Subscreva a agenda de eventos da Póvoa de Varzim no calendário do telemóvel ou do computador, completa ou por temas.">
+<meta name="theme-color" content="#0f4c6b">
+<title>Agenda municipal da Póvoa de Varzim no seu calendário</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='5' width='26' height='24' rx='4' fill='%230f4c6b'/%3E%3Crect x='3' y='5' width='26' height='7' rx='3' fill='%230a3a52'/%3E%3Cpath d='M7 22c3-3 6-3 9 0s6 3 9 0' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  @font-face {
+    font-family: "CMPV";
+    src: url("fontes/cmpv-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "CMPV";
+    src: url("fontes/cmpv-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --fundo: #ffffff;
+    --espuma: #f1f6f8;
+    --tinta: #14242d;
+    --cinza: #52616a;
+    --linha: #d5dfe5;
+    --mar: #0f4c6b;
+    --mar-forte: #0a3a52;
+    --botao: #0f4c6b;
+    --botao-texto: #ffffff;
+    --foco: #e0a100;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fundo: #0c171d;
+      --espuma: #13232b;
+      --tinta: #e6eef2;
+      --cinza: #a3b4bd;
+      --linha: #274250;
+      --botao: #2b7fa9;
+      --botao-texto: #ffffff;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--tinta);
+    font-family: "CMPV", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.55;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; }
+
+  .largura { max-width: 42rem; margin: 0 auto; padding-left: max(1.25rem, env(safe-area-inset-left)); padding-right: max(1.25rem, env(safe-area-inset-right)); }
+
+  /* Topo */
+  .topo { background: var(--mar); color: #fff; padding-top: max(2.5rem, env(safe-area-inset-top)); }
+  .topo h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 7vw, 3rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    max-width: 14em;
+  }
+  .topo p { margin: 0; max-width: 34em; color: #dbe9f0; }
+  .onda { display: block; width: 100%; height: 36px; margin-top: 2rem; }
+  .onda path { fill: var(--fundo); }
+
+  /* Escolha do calendário */
+  .sis { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+  .seletor {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: var(--fundo);
+    border-bottom: 1px solid var(--linha);
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+    padding-bottom: 0.9rem;
+  }
+  .seletor .pergunta { margin: 0 0 0.5rem; font-weight: 600; }
+  .opcoes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
+  .opcoes label {
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    min-height: 3rem; padding: 0.4rem 0.5rem;
+    border: 1.5px solid var(--linha); border-radius: 10px;
+    font-size: 0.95rem; font-weight: 600; line-height: 1.2;
+    cursor: pointer; user-select: none;
+  }
+  #sis-apple:checked ~ .seletor label[for="sis-apple"],
+  #sis-google:checked ~ .seletor label[for="sis-google"],
+  #sis-outro:checked ~ .seletor label[for="sis-outro"] {
+    background: var(--botao); border-color: var(--botao); color: var(--botao-texto);
+  }
+  #sis-apple:focus-visible ~ .seletor label[for="sis-apple"],
+  #sis-google:focus-visible ~ .seletor label[for="sis-google"],
+  #sis-outro:focus-visible ~ .seletor label[for="sis-outro"] {
+    outline: 3px solid var(--foco); outline-offset: 2px;
+  }
+  .dica { display: none; margin: 0.6rem 0 0; font-size: 0.92rem; color: var(--cinza); }
+  #sis-apple:checked ~ .seletor .dica-apple,
+  #sis-google:checked ~ .seletor .dica-google,
+  #sis-outro:checked ~ .seletor .dica-outro { display: block; }
+
+  /* Botões: só aparece o do calendário escolhido */
+  .so-apple, .so-google, .so-outro { display: none !important; }
+  #sis-apple:checked ~ main .botao.so-apple,
+  #sis-google:checked ~ main .botao.so-google,
+  #sis-outro:checked ~ main .botao.so-outro { display: inline-flex !important; }
+  #sis-outro:checked ~ main .copiar.so-outro { display: flex !important; }
+
+  .acoes { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+  .botao {
+    align-items: center; justify-content: center;
+    min-height: 2.9rem; padding: 0.55rem 1.3rem;
+    background: var(--botao); color: var(--botao-texto);
+    border-radius: 10px; font-weight: 700; text-decoration: none;
+  }
+  .botao:hover { background: var(--mar-forte); }
+  .copiar { flex: 1 1 100%; gap: 0.5rem; flex-wrap: wrap; }
+  .copiar input {
+    flex: 1 1 14rem; min-width: 0; min-height: 2.9rem; padding: 0.5rem 0.7rem;
+    font: inherit; font-size: 0.9rem; color: var(--tinta);
+    background: var(--espuma); border: 1px solid var(--linha); border-radius: 8px;
+  }
+  .botao-copiar {
+    display: none; min-height: 2.9rem; padding: 0.5rem 1rem;
+    font: inherit; font-weight: 600; color: var(--tinta);
+    background: var(--fundo); border: 1.5px solid var(--linha); border-radius: 10px; cursor: pointer;
+  }
+  .js .botao-copiar { display: inline-flex; align-items: center; }
+
+  /* Conteúdo */
+  main { padding-top: 2rem; padding-bottom: 1rem; }
+  section { margin-bottom: 3rem; }
+  h2 { font-size: 1.5rem; line-height: 1.2; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+  h3 { font-size: 1.125rem; line-height: 1.3; margin: 0; }
+  p { margin: 0 0 1rem; }
+  .geral { background: var(--espuma); border-radius: 14px; padding: 1.4rem 1.25rem 1.5rem; }
+  .geral .contagem { margin-bottom: 1.1rem; }
+  .contagem { color: var(--cinza); font-size: 0.92rem; margin: 0.15rem 0 0; }
+  .aviso { color: var(--cinza); font-size: 0.95rem; }
+
+  .temas { list-style: none; margin: 1.5rem 0 1rem; padding: 0; border-top: 1px solid var(--linha); }
+  .tema {
+    display: grid; grid-template-columns: 1fr auto; gap: 0.75rem 1rem; align-items: center;
+    padding: 1rem 0 1rem 1rem;
+    border-bottom: 1px solid var(--linha);
+    box-shadow: inset 4px 0 0 var(--cor-tema);
+  }
+  .tema-texto p { margin: 0.1rem 0 0; }
+  .tema .acoes { justify-content: flex-end; }
+  .tema .copiar { flex-basis: 100%; }
+  @media (max-width: 34rem) {
+    .tema { grid-template-columns: 1fr; }
+    .tema .acoes { justify-content: flex-start; }
+  }
+  #sis-outro:checked ~ main .tema { grid-template-columns: 1fr; }
+  #sis-outro:checked ~ main .tema .acoes { justify-content: flex-start; }
+  .nota { font-size: 0.92rem; color: var(--cinza); }
+
+  details { border-bottom: 1px solid var(--linha); }
+  details:first-of-type { border-top: 1px solid var(--linha); }
+  summary { cursor: pointer; padding: 0.95rem 0; font-weight: 600; }
+  details > div { padding: 0 0 1rem; }
+  details p:last-child { margin-bottom: 0; }
+
+  footer { border-top: 1px solid var(--linha); padding-top: 1.5rem; padding-bottom: max(2.5rem, env(safe-area-inset-bottom)); font-size: 0.92rem; color: var(--cinza); }
+
+  .apenas-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<input type="radio" name="sistema" id="sis-apple" class="sis" checked aria-label="iPhone, iPad ou Mac">
+<input type="radio" name="sistema" id="sis-google" class="sis" aria-label="Android ou Google Calendar">
+<input type="radio" name="sistema" id="sis-outro" class="sis" aria-label="Outlook ou outra aplicação">
+
+<header class="topo">
+  <div class="largura">
+    <h1>Agenda municipal da Póvoa de Varzim no seu calendário</h1>
+    <p>Subscreva uma vez e os eventos do município passam a aparecer no calendário do telemóvel ou do computador. Eventos novos e alterações de horário chegam sozinhos.</p>
+  </div>
+  <svg class="onda" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d="M0 22 C 150 4, 300 4, 450 20 S 750 36, 900 18 S 1100 6, 1200 16 L 1200 36 L 0 36 Z"/>
+  </svg>
+</header>
+
+<div class="seletor">
+  <div class="largura">
+    <p class="pergunta" id="pergunta">Que calendário usa?</p>
+    <div class="opcoes" aria-labelledby="pergunta">
+      <label for="sis-apple">iPhone, iPad ou Mac</label>
+      <label for="sis-google">Android ou Google</label>
+      <label for="sis-outro">Outlook ou outra</label>
+    </div>
+    <p class="dica dica-apple">O botão Subscrever abre a app Calendário, que pede confirmação.</p>
+    <p class="dica dica-google">O botão Subscrever abre o Google Calendar, que pede confirmação. Use a mesma conta Google do telemóvel.</p>
+    <p class="dica dica-outro">No Outlook para computador, basta o botão Subscrever. Noutras aplicações, copie o link e adicione-o como calendário da internet.</p>
+  </div>
+</div>
+
+<main class="largura">
+
+  <section class="geral" aria-labelledby="t-geral">
+    <h2 id="t-geral">Agenda completa</h2>
+    <p class="contagem">Todos os eventos num só calendário. 41 eventos nos próximos meses.</p>
+    <div class="acoes">
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/agenda.ics" aria-label="Subscrever a agenda completa no iPhone, iPad ou Mac">Subscrever</a>
+  <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fagenda.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever a agenda completa no Google Calendar">Subscrever</a>
+  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/agenda.ics" aria-label="Subscrever a agenda completa no Outlook ou noutra aplicação">Subscrever</a>
+  <div class="copiar so-outro">
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/agenda.ics" aria-label="Link de a agenda completa">
+    <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/agenda.ics">Copiar link</button>
+  </div>
+</div>
+  </section>
+
+  <section aria-labelledby="t-temas">
+    <h2 id="t-temas">Por tema</h2>
+    <p>Prefere só alguns tipos de eventos? Subscreva os temas que lhe interessam.</p>
+    <p class="aviso">Se subscrever a agenda completa, não precisa dos temas: os eventos apareceriam repetidos.</p>
+    <ul class="temas">
+<li class="tema" style="--cor-tema: #b03a5b">
+  <div class="tema-texto">
+    <h3>Cultura</h3>
+    <p>Espetáculos, exposições, livros e património</p>
+    <p class="contagem">19 eventos</p>
+  </div>
+  <div class="acoes">
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/cultura.ics" aria-label="Subscrever Cultura no iPhone, iPad ou Mac">Subscrever</a>
+  <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fcultura.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Cultura no Google Calendar">Subscrever</a>
+  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/cultura.ics" aria-label="Subscrever Cultura no Outlook ou noutra aplicação">Subscrever</a>
+  <div class="copiar so-outro">
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/temas/cultura.ics" aria-label="Link de Cultura">
+    <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/temas/cultura.ics">Copiar link</button>
+  </div>
+</div>
+</li>
+<li class="tema" style="--cor-tema: #2e7d4f">
+  <div class="tema-texto">
+    <h3>Desporto</h3>
+    <p>Provas, torneios e atividade física</p>
+    <p class="contagem">1 evento</p>
+  </div>
+  <div class="acoes">
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/desporto.ics" aria-label="Subscrever Desporto no iPhone, iPad ou Mac">Subscrever</a>
+  <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fdesporto.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Desporto no Google Calendar">Subscrever</a>
+  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/desporto.ics" aria-label="Subscrever Desporto no Outlook ou noutra aplicação">Subscrever</a>
+  <div class="copiar so-outro">
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/temas/desporto.ics" aria-label="Link de Desporto">
+    <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/temas/desporto.ics">Copiar link</button>
+  </div>
+</div>
+</li>
+<li class="tema" style="--cor-tema: #1c7fa6">
+  <div class="tema-texto">
+    <h3>Ambiente e mobilidade</h3>
+    <p>Sustentabilidade, energia e transportes</p>
+    <p class="contagem">14 eventos</p>
+  </div>
+  <div class="acoes">
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/ambiente-mobilidade.ics" aria-label="Subscrever Ambiente e mobilidade no iPhone, iPad ou Mac">Subscrever</a>
+  <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fambiente-mobilidade.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Ambiente e mobilidade no Google Calendar">Subscrever</a>
+  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/ambiente-mobilidade.ics" aria-label="Subscrever Ambiente e mobilidade no Outlook ou noutra aplicação">Subscrever</a>
+  <div class="copiar so-outro">
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/temas/ambiente-mobilidade.ics" aria-label="Link de Ambiente e mobilidade">
+    <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/temas/ambiente-mobilidade.ics">Copiar link</button>
+  </div>
+</div>
+</li>
+<li class="tema" style="--cor-tema: #c0532a">
+  <div class="tema-texto">
+    <h3>Turismo e economia</h3>
+    <p>Turismo, gastronomia, feiras e empresas</p>
+    <p class="contagem">2 eventos</p>
+  </div>
+  <div class="acoes">
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/turismo-economia.ics" aria-label="Subscrever Turismo e economia no iPhone, iPad ou Mac">Subscrever</a>
+  <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fturismo-economia.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Turismo e economia no Google Calendar">Subscrever</a>
+  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/turismo-economia.ics" aria-label="Subscrever Turismo e economia no Outlook ou noutra aplicação">Subscrever</a>
+  <div class="copiar so-outro">
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/temas/turismo-economia.ics" aria-label="Link de Turismo e economia">
+    <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/temas/turismo-economia.ics">Copiar link</button>
+  </div>
+</div>
+</li>
+<li class="tema" style="--cor-tema: #5b4b9a">
+  <div class="tema-texto">
+    <h3>Comunidade e cidadania</h3>
+    <p>Saúde, família, ação social e vida municipal</p>
+    <p class="contagem">5 eventos</p>
+  </div>
+  <div class="acoes">
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/comunidade-cidadania.ics" aria-label="Subscrever Comunidade e cidadania no iPhone, iPad ou Mac">Subscrever</a>
+  <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fcomunidade-cidadania.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Comunidade e cidadania no Google Calendar">Subscrever</a>
+  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/comunidade-cidadania.ics" aria-label="Subscrever Comunidade e cidadania no Outlook ou noutra aplicação">Subscrever</a>
+  <div class="copiar so-outro">
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/temas/comunidade-cidadania.ics" aria-label="Link de Comunidade e cidadania">
+    <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/temas/comunidade-cidadania.ics">Copiar link</button>
+  </div>
+</div>
+</li>
+    </ul>
+    <p class="nota">O tema de cada evento é atribuído automaticamente. Todos os eventos estão sempre na agenda completa.</p>
+  </section>
+
+  <section class="ajuda" aria-labelledby="t-ajuda">
+    <h2 id="t-ajuda">Ajuda</h2>
+
+    <details>
+      <summary>iPhone, iPad ou Mac</summary>
+      <div>
+        <p>Escolha «iPhone, iPad ou Mac», toque em Subscrever e confirme no Calendário.</p>
+        <p>Se não abrir, escolha «Outlook ou outra», copie o link e adicione-o em Definições › Calendário › Contas › Adicionar conta › Outra › Adicionar calendário subscrito. Nas versões mais recentes do iOS, o Calendário está em Definições › Apps.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Android ou Google Calendar</summary>
+      <div>
+        <p>Escolha «Android ou Google», toque em Subscrever e confirme. O calendário fica na sua conta Google e aparece no Google Calendar e nas apps ligadas à conta, como o Calendário Samsung.</p>
+        <p>Se não aparecer, abra as definições do Google Calendar, toque no nome do calendário e ative a sincronização.</p>
+        <p>Se o botão não funcionar, use um computador: em calendar.google.com, junto a «Outros calendários», escolha + › «A partir do URL» e cole o link (visível em «Outlook ou outra»).</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Outlook e outras aplicações</summary>
+      <div>
+        <p>No Outlook para Windows ou Mac, o botão Subscrever abre a subscrição. No Outlook na web, use Adicionar calendário › Subscrever a partir da Web e cole o link.</p>
+        <p>Noutras aplicações, procure a opção para adicionar um calendário da internet ou por URL.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Com que frequência é atualizada?</summary>
+      <div>
+        <p>A agenda é verificada no site do município a cada poucas horas. Cada aplicação decide quando atualiza: no iPhone e no Outlook costuma ser em poucas horas; no Google Calendar pode demorar até um dia.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Como deixar de receber</summary>
+      <div>
+        <p>Apague o calendário subscrito nas definições da aplicação. Os eventos desaparecem de imediato.</p>
+      </div>
+    </details>
+  </section>
+
+</main>
+
+<footer class="largura">
+  <p>Os eventos vêm da <a href="https://www.cm-pvarzim.pt/eventos/">agenda publicada em cm-pvarzim.pt</a>. Confirme datas, horários e condições de acesso na página de cada evento (o link está nas notas do evento).</p>
+  <p>Esta página não usa cookies nem estatísticas.</p>
+</footer>
+
+<p class="apenas-leitor" aria-live="polite" id="estado"></p>
+
+<script>
+(function () {
+  document.documentElement.className += ' js';
+
+  var ua = navigator.userAgent || '';
+  var alvo = null;
+  if (/Android/i.test(ua)) alvo = 'sis-google';
+  else if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) alvo = 'sis-apple';
+  else if (/Windows/i.test(ua)) alvo = 'sis-outro';
+  if (alvo) document.getElementById(alvo).checked = true;
+
+  var estado = document.getElementById('estado');
+
+  function selecionar(botao) {
+    var campo = botao.parentNode.querySelector('input');
+    campo.focus();
+    campo.select();
+  }
+
+  document.addEventListener('click', function (e) {
+    var botao = e.target.closest ? e.target.closest('.botao-copiar') : null;
+    if (!botao) return;
+    var link = botao.getAttribute('data-link');
+    function fim(ok) {
+      botao.textContent = ok ? 'Copiado' : 'Copie o link selecionado';
+      estado.textContent = ok ? 'Link copiado.' : 'Link selecionado.';
+      setTimeout(function () { botao.textContent = 'Copiar link'; }, 2500);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(link).then(function () { fim(true); }, function () { selecionar(botao); fim(false); });
+    } else {
+      selecionar(botao);
+      fim(false);
+    }
+  });
+})();
+</script>
+</body>
+</html>

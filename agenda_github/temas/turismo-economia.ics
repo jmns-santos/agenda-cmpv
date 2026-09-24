@@ -1,0 +1,48 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Turismo, gastronomia, feiras e empresas.
+NAME:Póvoa de Varzim: Turismo e economia
+X-WR-CALNAME:Póvoa de Varzim: Turismo e economia
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/temas/turismo-e
+ conomia.ics
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Dia Mundial do Turismo
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20260928
+DTSTAMP:20260908T093038Z
+UID:ZGlhLW11bmRpYWwtZG8tdHVyaXNtb3wyMDI2LTA5LTA4IDA5OjExOjM3@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Turismo e economia
+DESCRIPTION:O Município da Póvoa de Varzim vai assinalar o Dia Mundial d
+ o Turismo\, que se celebra a 27 de setembro\, com um conjunto de iniciativ
+ as a realizar nesse fim de semana.\n\nMais informação: https://www.cm-pv
+ arzim.pt/eventos/dia-mundial-do-turismo/
+LAST-MODIFIED:20260908T093038Z
+LOCATION:Fortaleza de Nossa Senhora da Conceição\, Loja Interativa de Tu
+ rismo e Marina e Porto de Pesca
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/dia-mundial-do-turismo/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Wine Arena 2026
+DTSTART:20261003T140000Z
+DTEND:20261004T200000Z
+DTSTAMP:20260807T143900Z
+UID:d2luZS1hcmVuYS0yMDI2fDIwMjYtMDgtMDcgMTQ6Mzc6MTY=@agenda.cm-pvarzim.pt
+CATEGORIES:Turismo e economia
+DESCRIPTION:O Wine Arena 2026 é um evento vínico e gastronómico que re
+ úne produtores de vinho de todo o país\, provas comentadas\, harmonizaç
+ ões e experiências sensoriais únicas no coração da Póvoa de Varzim.
+ \n\nMais informação: https://www.cm-pvarzim.pt/eventos/wine-arena-2026/
+LAST-MODIFIED:20260807T143900Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/wine-arena-2026/
+END:VEVENT
+END:VCALENDAR
