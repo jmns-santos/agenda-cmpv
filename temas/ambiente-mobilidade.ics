@@ -12,27 +12,6 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/temas/ambiente-
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Junta de F
- reguesia de Rates
-DTSTART:20260924T173000Z
-DTEND:20260924T191500Z
-DTSTAMP:20260904T112850Z
-UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1qdW
- 50YS1kZS1mcmVndWVzaWEtZGUtcmF0ZXN8MjAyNi0wOS0wNCAxMToyMzo1Nw==@agenda.cm-p
- varzim.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
- pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
- ao público\, com vista à promoção de boas práticas de eficiência ene
- rgética.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/acao-de-
- sensibilizacao-povoa-de-varzim-energy-hub-junta-de-freguesia-de-rates/
-LAST-MODIFIED:20260904T112850Z
-LOCATION:Junta de Freguesia de Rates
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
- im-energy-hub-junta-de-freguesia-de-rates/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Póvoa Beach Clean Party
 DTSTART:20260925T160000Z
 DTEND:20260925T190000Z

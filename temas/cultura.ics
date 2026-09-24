@@ -81,28 +81,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/e-aqui-in-ocio-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Conferência sobre “O Bilhete Postal na História Local"
-DTSTART:20260924T170000Z
-DTEND:20260924T190000Z
-DTSTAMP:20260915T135934Z
-UID:Y29uZmVyZW5jaWEtc29icmUtby1wb3N0YWwtbmEtaGlzdG9yaWEtbG9jYWx8MjAyNi0wOS
- 0xNCAxMzoyMDowNg==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:Para assinalar as Jornadas Europeias do Património\, que ocor
- rem de 18 a 27 de setembro\, a Biblioteca Municipal pretende organizar\, a
-  24 de setembro\, às 18h\, uma conferência sobre “O Bilhete Postal na 
- História Local"\, conduzida por Raul Leitão\, presidente da Associação
-  Poveira de Coleccionismo e da Associação Cultural Póvoa Ontem e Hoje\,
-  bibliófilo e colecionador do património iconográfico e documental.\n\n
- Mais informação: https://www.cm-pvarzim.pt/eventos/conferencia-sobre-o-p
- ostal-na-historia-local/
-LAST-MODIFIED:20260915T135934Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/conferencia-sobre-o-postal-na-histor
- ia-local/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Lançamento do Livro "Grande é o Homem que Morre no Mar"
 DTSTART:20260925T170000Z
 DTEND:20260925T183000Z
