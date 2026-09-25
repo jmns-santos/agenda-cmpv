@@ -12,24 +12,6 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/temas/ambiente-
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Póvoa Beach Clean Party
-DTSTART:20260925T160000Z
-DTEND:20260925T190000Z
-DTSTAMP:20260921T094206Z
-UID:cG92b2EtYmVhY2gtY2xlYW4tcGFydHl8MjAyNi0wOS0yMSAwOTo0MjowNQ==@agenda.cm
- -pvarzim.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:Na próxima sexta-feira\, 25 de setembro\, o Município da Pó
- voa de Varzim promove a Póvoa Beach Clean Party\, uma iniciativa que alia
-  a sensibilização ambiental a um momento de convívio\, assinalando a Se
- mana Internacional da Limpeza Costeira.\n\nMais informação: https://www.
- cm-pvarzim.pt/eventos/povoa-beach-clean-party/
-LAST-MODIFIED:20260921T094206Z
-LOCATION:Esplanada do Carvalhido
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/povoa-beach-clean-party/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Pó
  voa Empresas
 DTSTART:20260928T173000Z

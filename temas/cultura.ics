@@ -81,24 +81,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/e-aqui-in-ocio-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lançamento do Livro "Grande é o Homem que Morre no Mar"
-DTSTART:20260925T170000Z
-DTEND:20260925T183000Z
-DTSTAMP:20260914T114951Z
-UID:bGFuY2FtZW50by1kby1saXZyby1ncmFuZGUtZS1vLWhvbWVtLXF1ZS1tb3JyZS1uby1tYX
- ItMnwyMDI2LTA5LTE0IDExOjQ5OjE3@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:A Fundação Dr. Luís Rainha irá acolher\, no dia 25 de sete
- mbro\, às 18h00\, o lançamento do livro Grande é o Homem que Morre no M
- ar\, de Ana Vasco Moyo.\n\nMais informação: https://www.cm-pvarzim.pt/ev
- entos/lancamento-do-livro-grande-e-o-homem-que-morre-no-mar-2/
-LAST-MODIFIED:20260914T114951Z
-LOCATION:Sede da Fundação Dr. Luís Rainha
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-grande-e-o-homem
- -que-morre-no-mar-2/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Festa dos Bacalhoeiros
 DTSTART:20260926T090000Z
 DTEND:20260926T161500Z

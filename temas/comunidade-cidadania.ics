@@ -45,24 +45,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/90-o-aniversario-do-rancho-poveiro/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:"Informar para Proteger"
-DTSTART;VALUE=DATE:20260908
-DTEND;VALUE=DATE:20260926
-DTSTAMP:20260902T082144Z
-UID:aW5mb3JtYXItcGFyYS1wcm90ZWdlcnwyMDI2LTA5LTAyIDA4OjExOjI4@agenda.cm-pva
- rzim.pt
-CATEGORIES:Comunidade e cidadania
-DESCRIPTION:No âmbito do seu plano de atividades\, o Centro de Informaç
- ão Autárquico ao Consumidor (CIAC)\, irá dinamizar um conjunto de sess
- ões de informação destinadas à população sénior do concelho.\n\nMai
- s informação: https://www.cm-pvarzim.pt/eventos/informar-para-proteger/
-LAST-MODIFIED:20260902T082144Z
-LOCATION:Centros Ocupacionais de Laúndos\, Estela\, Balasar\, Aver-o-Mar 
- e Lapa
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/informar-para-proteger/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Famílias no Jardim da Biblioteca
 DTSTART:20260926T143000Z
 DTEND:20260926T160000Z

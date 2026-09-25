@@ -61,24 +61,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-mar-e-gente/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:"Informar para Proteger"
-DTSTART;VALUE=DATE:20260908
-DTEND;VALUE=DATE:20260926
-DTSTAMP:20260902T082144Z
-UID:aW5mb3JtYXItcGFyYS1wcm90ZWdlcnwyMDI2LTA5LTAyIDA4OjExOjI4@agenda.cm-pva
- rzim.pt
-CATEGORIES:Comunidade e cidadania
-DESCRIPTION:No âmbito do seu plano de atividades\, o Centro de Informaç
- ão Autárquico ao Consumidor (CIAC)\, irá dinamizar um conjunto de sess
- ões de informação destinadas à população sénior do concelho.\n\nMai
- s informação: https://www.cm-pvarzim.pt/eventos/informar-para-proteger/
-LAST-MODIFIED:20260902T082144Z
-LOCATION:Centros Ocupacionais de Laúndos\, Estela\, Balasar\, Aver-o-Mar 
- e Lapa
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/informar-para-proteger/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Exposição "O Império do Medo"
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20261004
@@ -129,42 +111,6 @@ LAST-MODIFIED:20260915T103936Z
 LOCATION:Cine-Teatro Garrett e outros
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/e-aqui-in-ocio-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Póvoa Beach Clean Party
-DTSTART:20260925T160000Z
-DTEND:20260925T190000Z
-DTSTAMP:20260921T094206Z
-UID:cG92b2EtYmVhY2gtY2xlYW4tcGFydHl8MjAyNi0wOS0yMSAwOTo0MjowNQ==@agenda.cm
- -pvarzim.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:Na próxima sexta-feira\, 25 de setembro\, o Município da Pó
- voa de Varzim promove a Póvoa Beach Clean Party\, uma iniciativa que alia
-  a sensibilização ambiental a um momento de convívio\, assinalando a Se
- mana Internacional da Limpeza Costeira.\n\nMais informação: https://www.
- cm-pvarzim.pt/eventos/povoa-beach-clean-party/
-LAST-MODIFIED:20260921T094206Z
-LOCATION:Esplanada do Carvalhido
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/povoa-beach-clean-party/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Lançamento do Livro "Grande é o Homem que Morre no Mar"
-DTSTART:20260925T170000Z
-DTEND:20260925T183000Z
-DTSTAMP:20260914T114951Z
-UID:bGFuY2FtZW50by1kby1saXZyby1ncmFuZGUtZS1vLWhvbWVtLXF1ZS1tb3JyZS1uby1tYX
- ItMnwyMDI2LTA5LTE0IDExOjQ5OjE3@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:A Fundação Dr. Luís Rainha irá acolher\, no dia 25 de sete
- mbro\, às 18h00\, o lançamento do livro Grande é o Homem que Morre no M
- ar\, de Ana Vasco Moyo.\n\nMais informação: https://www.cm-pvarzim.pt/ev
- entos/lancamento-do-livro-grande-e-o-homem-que-morre-no-mar-2/
-LAST-MODIFIED:20260914T114951Z
-LOCATION:Sede da Fundação Dr. Luís Rainha
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-grande-e-o-homem
- -que-morre-no-mar-2/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Dia Mundial do Turismo
