@@ -113,24 +113,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/e-aqui-in-ocio-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia Mundial do Turismo
-DTSTART;VALUE=DATE:20260926
-DTEND;VALUE=DATE:20260928
-DTSTAMP:20260908T093038Z
-UID:ZGlhLW11bmRpYWwtZG8tdHVyaXNtb3wyMDI2LTA5LTA4IDA5OjExOjM3@agenda.cm-pva
- rzim.pt
-CATEGORIES:Turismo e economia
-DESCRIPTION:O Município da Póvoa de Varzim vai assinalar o Dia Mundial d
- o Turismo\, que se celebra a 27 de setembro\, com um conjunto de iniciativ
- as a realizar nesse fim de semana.\n\nMais informação: https://www.cm-pv
- arzim.pt/eventos/dia-mundial-do-turismo/
-LAST-MODIFIED:20260908T093038Z
-LOCATION:Fortaleza de Nossa Senhora da Conceição\, Loja Interativa de Tu
- rismo e Marina e Porto de Pesca
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/dia-mundial-do-turismo/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Pó
  voa Empresas
 DTSTART:20260928T173000Z
