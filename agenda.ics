@@ -250,14 +250,14 @@ BEGIN:VEVENT
 SUMMARY:Wine Arena 2026
 DTSTART:20261003T140000Z
 DTEND:20261004T200000Z
-DTSTAMP:20260807T143900Z
+DTSTAMP:20260928T092034Z
 UID:d2luZS1hcmVuYS0yMDI2fDIwMjYtMDgtMDcgMTQ6Mzc6MTY=@agenda.cm-pvarzim.pt
 CATEGORIES:Turismo e economia
 DESCRIPTION:O Wine Arena 2026 é um evento vínico e gastronómico que re
  úne produtores de vinho de todo o país\, provas comentadas\, harmonizaç
  ões e experiências sensoriais únicas no coração da Póvoa de Varzim.
  \n\nMais informação: https://www.cm-pvarzim.pt/eventos/wine-arena-2026/
-LAST-MODIFIED:20260807T143900Z
+LAST-MODIFIED:20260928T092034Z
 LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/wine-arena-2026/
@@ -339,6 +339,22 @@ LOCATION:Cooperativa da Póvoa
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
  im-energy-hub-cooperativa-da-povoa/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto de Carolina Deslandes
+DTSTART:20261009T203000Z
+DTEND:20261011T223000Z
+DTSTAMP:20260928T101234Z
+UID:Y29uY2VydG8tZGUtY2Fyb2xpbmEtZGVzbGFuZGVzfDIwMjYtMDktMjggMTA6MDU6MzY=@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:A 9\, 10 de outubro\, às 21h30\, e domingo\, 11\, pelas 18h00
+ \, Carolina Deslandes atua no Cine-Teatro Garrett.\n\nMais informação: h
+ ttps://www.cm-pvarzim.pt/eventos/concerto-de-carolina-deslandes/
+LAST-MODIFIED:20260928T101234Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-de-carolina-deslandes/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Abba Experience - Tributo a Abba
@@ -526,6 +542,25 @@ URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-
  de-lisboa/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:"O Caso Plimpsesto - Um Mistério no Arquivo"
+DTSTART:20261026T093000Z
+DTEND:20261030T170000Z
+DTSTAMP:20260928T154537Z
+UID:by1jYXNvLXBsaW1wc2VzdG8tdW0tbWlzdGVyaW8tbm8tYXJxdWl2b3wyMDI2LTA5LTI4ID
+ E1OjQzOjQx@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:Durante a semana de 26 a 30 de outubro\, o Arquivo Municipal p
+ romove uma atividade lúdico-pedagógica baseada na lógica do jogo "Clued
+ o"\, adaptada ao contexto de um Arquivo Histórico.\n\nMais informação: 
+ https://www.cm-pvarzim.pt/eventos/o-caso-plimpsesto-um-misterio-no-arquivo
+ /
+LAST-MODIFIED:20260928T154537Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/o-caso-plimpsesto-um-misterio-no-arq
+ uivo/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cinema "Hope"
 DTSTART:20261029T214500Z
 DTEND:20261029T233000Z
@@ -555,6 +590,23 @@ LAST-MODIFIED:20260810T092500Z
 LOCATION:Cine-Teatro Garrett - Café-Concerto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/concerto-disco-voador/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mercado Aberto de Flores 2026
+DTSTART:20261031T060000Z
+DTEND:20261031T130000Z
+DTSTAMP:20260928T130805Z
+UID:bWVyY2Fkby1hYmVydG8tZGUtZmxvcmVzLTIwMjZ8MjAyNi0wOS0yOCAxMzowNDoyNA==@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Turismo e economia
+DESCRIPTION:No dia 31 de outubro\, o Mercado Municipal vai realizar\, mais
+  uma edição do Mercado Aberto de Flores\, entre as 6h00 e as 13h00.\n\nM
+ ais informação: https://www.cm-pvarzim.pt/eventos/mercado-aberto-de-flor
+ es-2026/
+LAST-MODIFIED:20260928T130805Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mercado-aberto-de-flores-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Oficina "Do Plástico fiz Sardinha"

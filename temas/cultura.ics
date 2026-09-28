@@ -150,6 +150,22 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-cartas-amarelas/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Concerto de Carolina Deslandes
+DTSTART:20261009T203000Z
+DTEND:20261011T223000Z
+DTSTAMP:20260928T101234Z
+UID:Y29uY2VydG8tZGUtY2Fyb2xpbmEtZGVzbGFuZGVzfDIwMjYtMDktMjggMTA6MDU6MzY=@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:A 9\, 10 de outubro\, às 21h30\, e domingo\, 11\, pelas 18h00
+ \, Carolina Deslandes atua no Cine-Teatro Garrett.\n\nMais informação: h
+ ttps://www.cm-pvarzim.pt/eventos/concerto-de-carolina-deslandes/
+LAST-MODIFIED:20260928T101234Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-de-carolina-deslandes/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Abba Experience - Tributo a Abba
 DTSTART:20261010T200000Z
 DTEND:20261010T220000Z
@@ -268,6 +284,25 @@ LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-
  de-lisboa/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:"O Caso Plimpsesto - Um Mistério no Arquivo"
+DTSTART:20261026T093000Z
+DTEND:20261030T170000Z
+DTSTAMP:20260928T154537Z
+UID:by1jYXNvLXBsaW1wc2VzdG8tdW0tbWlzdGVyaW8tbm8tYXJxdWl2b3wyMDI2LTA5LTI4ID
+ E1OjQzOjQx@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:Durante a semana de 26 a 30 de outubro\, o Arquivo Municipal p
+ romove uma atividade lúdico-pedagógica baseada na lógica do jogo "Clued
+ o"\, adaptada ao contexto de um Arquivo Histórico.\n\nMais informação: 
+ https://www.cm-pvarzim.pt/eventos/o-caso-plimpsesto-um-misterio-no-arquivo
+ /
+LAST-MODIFIED:20260928T154537Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/o-caso-plimpsesto-um-misterio-no-arq
+ uivo/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cinema "Hope"
