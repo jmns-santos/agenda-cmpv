@@ -242,6 +242,42 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/wine-arena-2026/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Póvoa Conto a Conto
+DTSTART:20261003T143000Z
+DTEND:20261003T160000Z
+DTSTAMP:20260929T165136Z
+UID:cG92b2EtY29udG8tYS1jb250by00fDIwMjYtMDktMjkgMTY6NDk6Mzg=@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:A Ethos\, Pathos\, Logos — Associação e a Biblioteca Munic
+ ipal Rocha Peixoto colaboram novamente em momentos de leitura seguidos de 
+ atividades didáticas\, desta vez numa exploração do património poveiro
+  enquanto força motriz!\n\nMais informação: https://www.cm-pvarzim.pt/e
+ ventos/povoa-conto-a-conto-4/
+LAST-MODIFIED:20260929T165136Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/povoa-conto-a-conto-4/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lançamento do livro "Os Trocado" de José Reina
+DTSTART:20261003T150000Z
+DTEND:20261003T170000Z
+DTSTAMP:20260929T163431Z
+UID:bGFuY2FtZW50by1kby1saXZyby1vcy10cm9jYWRvLWRlLWpvc2UtcmVpbmF8MjAyNi0wOS
+ 0yOSAxNjoyOTo0NA==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 3 de outubro\, às 16h00\, terá lugar\, na Biblioteca 
+ Municipal\, o lançamento do livro "Os Trocado" de José Reina.\n\nMais in
+ formação: https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-os-troca
+ do-de-jose-reina/
+LAST-MODIFIED:20260929T163431Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-os-trocado-de-jo
+ se-reina/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
  pacional da Estela
 DTSTART:20261006T134500Z
@@ -466,6 +502,21 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/opereta-a-morte-do-diabo/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Dia da Menopausa
+DTSTART:20261019T080000Z
+DTEND:20261019T113000Z
+DTSTAMP:20260929T123005Z
+UID:ZGlhLWRhLW1lbm9wYXVzYXwyMDI2LTA5LTI5IDEyOjIzOjE5@agenda.cm-pvarzim.pt
+CATEGORIES:Comunidade e cidadania
+DESCRIPTION:No dia 19 de outubro\, o Estádio Municipal vai acolher uma ma
+ nhã de atividades dedicadas à evocação do Dia da Menopausa.\n\nMais in
+ formação: https://www.cm-pvarzim.pt/eventos/dia-da-menopausa/
+LAST-MODIFIED:20260929T123005Z
+LOCATION:Estádio Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/dia-da-menopausa/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
  pacional de Aver-o-Mar
 DTSTART:20261021T133000Z
@@ -573,6 +624,22 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-hope/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Festa de Halloween
+DTSTART:20261030T193000Z
+DTEND:20261031T000000Z
+DTSTAMP:20260929T150602Z
+UID:ZmVzdGEtZGUtaGFsbG93ZWVufDIwMjYtMDktMjkgMTU6MDY6MDI=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura
+DESCRIPTION:A Casa da Juventude vai transformar-se no cenário ideal para 
+ uma noite de terror no dia 30 de outubro.\n\nMais informação: https://ww
+ w.cm-pvarzim.pt/eventos/festa-de-halloween/
+LAST-MODIFIED:20260929T150602Z
+LOCATION:Casa da Juventude
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/festa-de-halloween/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Concerto "Disco Voador"
 DTSTART:20261030T213000Z
 DTEND:20261030T233000Z
@@ -639,6 +706,23 @@ LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/concerto-juliana-linhares-ate-cansar
  -o-cansaco/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Three Sixty Halloween
+DTSTART:20261031T220000Z
+DTEND:20261101T040000Z
+DTSTAMP:20260929T141531Z
+UID:dGhyZWUtc2l4dHktaGFsbG93ZWVufDIwMjYtMDktMjkgMTE6NTU6NTc=@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:O Three Sixty Halloween é um evento de entretenimento e músi
+ ca comercial\, a realizar no dia 31 de outubro\, no Póvoa Arena\, com uma
+  lotação prevista de até 5.000 pessoas.\n\nMais informação: https://w
+ ww.cm-pvarzim.pt/eventos/three-sixty-halloween/
+LAST-MODIFIED:20260929T141531Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/three-sixty-halloween/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Concerto Pedro Abrunhosa
