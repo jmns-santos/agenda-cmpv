@@ -280,6 +280,22 @@ URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
  im-energy-hub-centro-ocupacional-da-estela/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Artes e Ofícios – Tricotadeira
+DTSTART:20261007T090000Z
+DTEND:20261007T110000Z
+DTSTAMP:20260930T091730Z
+UID:YXJ0ZXMtZS1vZmljaW9zLXRyaWNvdGFkZWlyYXwyMDI2LTA5LTMwIDA5OjE3OjI5@agend
+ a.cm-pvarzim.pt
+CATEGORIES:Comunidade e cidadania
+DESCRIPTION:No dia 7 de outubro\, às 10h00\, terá lugar\, na Biblioteca 
+ Municipal\, uma sessão de Artes e Ofícios com Ana Granado.\n\nMais infor
+ mação: https://www.cm-pvarzim.pt/eventos/artes-e-oficios-tricotadeira/
+LAST-MODIFIED:20260930T091730Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/artes-e-oficios-tricotadeira/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
  pacional de Laúndos
 DTSTART:20261008T134500Z
@@ -353,6 +369,61 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/concerto-de-carolina-deslandes/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Exposição de fotografia "Olhares [in]Comuns"
+DTSTART:20261010T080000Z
+DTEND:20261031T190000Z
+DTSTAMP:20260930T095959Z
+UID:ZXhwb3NpY2FvLWRlLWZvdG9ncmFmaWEtb2xoYXJlcy1pbmNvbXVuc3wyMDI2LTA5LTMwID
+ A5OjU1OjUw@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:Entre 10 e 31 de outubro\, estará patente na Biblioteca Munic
+ ipal\, a exposição de fotografia de Lídia Soares de Moura "Olhares [in]
+ Comuns".\n\nMais informação: https://www.cm-pvarzim.pt/eventos/exposicao
+ -de-fotografia-olhares-incomuns/
+LAST-MODIFIED:20260930T095959Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-olhares-inco
+ muns/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lavorada Mensal
+DTSTART:20261010T133000Z
+DTEND:20261010T170000Z
+DTSTAMP:20260930T101722Z
+UID:bGF2b3JhZGEtbWVuc2FsLTJ8MjAyNi0wOS0zMCAxMDowNjoxOQ==@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Comunidade e cidadania
+DESCRIPTION:Segundo sábado do mês é dia de Lavorada Mensal. Assim\, na 
+ tarde de 10 de outubro\, entre as 14h30 e as 18h00\, a associação promov
+ e encontros com agulhas e malhas\, tricotadas com dois dedos de conversa\,
+  na Biblioteca Municipal Rocha Peixoto.\n\nMais informação: https://www.
+ cm-pvarzim.pt/eventos/lavorada-mensal-2/
+LAST-MODIFIED:20260930T101722Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lavorada-mensal-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábados a Jogar na Biblioteca
+DTSTART:20261010T140000Z
+DTEND:20261010T160000Z
+DTSTAMP:20260930T101511Z
+UID:c2FiYWRvcy1hLWpvZ2FyLW5hLWJpYmxpb3RlY2EtMTl8MjAyNi0wOS0zMCAxMDoxMjowOQ
+ ==@agenda.cm-pvarzim.pt
+CATEGORIES:Comunidade e cidadania
+DESCRIPTION:Os jogos de tabuleiro são\, desde os tempos mais remotos\, um
+ a forma de lazer\, de aplicação de estratégia e de aprendizagem lúdica
+  e/ou pedagógica. A Biblioteca Municipal tem uma secção de jogos de tab
+ uleiro para que as famílias possam usufruir de momentos divertidos na sal
+ a infantil e juvenil.\n\nMais informação: https://www.cm-pvarzim.pt/even
+ tos/sabados-a-jogar-na-biblioteca-19/
+LAST-MODIFIED:20260930T101511Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sabados-a-jogar-na-biblioteca-19/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Abba Experience - Tributo a Abba
 DTSTART:20261010T200000Z
 DTEND:20261010T220000Z
@@ -369,6 +440,82 @@ LAST-MODIFIED:20260807T150858Z
 LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/abba-experience-tributo-a-abba/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mês Internacional da Biblioteca Escolar (MIBE) Bibliotecas\, Lite
+ racia e Inteligência artificial
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261031
+DTSTAMP:20260930T110700Z
+UID:bWVzLWludGVybmFjaW9uYWwtZGEtYmlibGlvdGVjYS1lc2NvbGFyLW1pYmUtYmlibGlvdG
+ VjYXMtbGl0ZXJhY2lhLWUtaW50ZWxpZ2VuY2lhLWFydGlmaWNpYWx8MjAyNi0wOS0zMCAxMTow
+ NjozMg==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:Durante o mês de outubro\, a Biblioteca Municipal Rocha Peixo
+ to associa-se à celebração do Mês Internacional da Biblioteca Escolar
+ \, promovendo um conjunto de três iniciativas que aproximam livros\, leit
+ ores e novas tecnologias. as atividades serão feitas em parceria com as B
+ ibliotecas Escolares do Concelho da Póvoa de Varzim\, dos cinco agrupamen
+ tos de escolas e das escolas secundárias.\n\nMais informação: https://w
+ ww.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-escolar-mibe-bibl
+ iotecas-literacia-e-inteligencia-artificial/
+LAST-MODIFIED:20260930T110700Z
+LOCATION:-
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esco
+ lar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Caminhada pelo Caminho de Santiago
+DTSTART:20261013T133000Z
+DTEND:20261013T163000Z
+DTSTAMP:20260930T114101Z
+UID:Y2FtaW5oYWRhLXBlbG8tY2FtaW5oby1kZS1zYW50aWFnb3wyMDI2LTA5LTMwIDExOjM2Oj
+ U4@agenda.cm-pvarzim.pt
+CATEGORIES:Desporto
+DESCRIPTION:O Centro do Clima\, com o apoio do Município e da Junta de Fr
+ eguesia da Póvoa de Varzim\, vai promover\, no próximo dia 13 de outubro
+ \, Dia do Peregrino\, uma caminhada pelo Caminho de Santiago\, integrada n
+ a iniciativa “Paisagens com História”.\n\nMais informação: https://
+ www.cm-pvarzim.pt/eventos/caminhada-pelo-caminho-de-santiago/
+LAST-MODIFIED:20260930T114101Z
+LOCATION:Rua dos Ferreiros
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/caminhada-pelo-caminho-de-santiago/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cais de Leitura
+DTSTART:20261013T200000Z
+DTEND:20261013T213000Z
+DTSTAMP:20260930T102515Z
+UID:Y2Fpcy1kZS1sZWl0dXJhLTIwfDIwMjYtMDktMzAgMTA6MjQ6MzU=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 13 de outubro\, às 21h00\, a Biblioteca Municipal marc
+ a encontro on-line para falar sobre livros.\n\nMais informação: https://
+ www.cm-pvarzim.pt/eventos/cais-de-leitura-20/
+LAST-MODIFIED:20260930T102515Z
+LOCATION:on-line
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cais-de-leitura-20/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:"No meu tempo\, dou-te um conto"
+DTSTART:20261014T090000Z
+DTEND:20261014T103000Z
+DTSTAMP:20260930T103439Z
+UID:bm8tbWV1LXRlbXBvLWRvdS10ZS11bS1jb250by0yNHwyMDI2LTA5LTMwIDEwOjMzOjMw@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 14 de outubro\, às 10h00\, a Sala Infantil da Bibliote
+ ca Municipal irá acolher a iniciativa “No meu tempo\, dou-te um conto
+ ”\, com a leitura da história "O Leão da Biblioteca"\, de Michelle Knu
+ dsen e ilustração de Kevin Hawkes.\n\nMais informação: https://www.cm-
+ pvarzim.pt/eventos/no-meu-tempo-dou-te-um-conto-24/
+LAST-MODIFIED:20260930T103439Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/no-meu-tempo-dou-te-um-conto-24/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
@@ -533,6 +680,42 @@ LAST-MODIFIED:20260922T101121Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-o-jacare/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ciclo de Tertúlias "Lavorada Gente"
+DTSTART:20261024T140000Z
+DTEND:20261024T160000Z
+DTSTAMP:20260930T104304Z
+UID:Y2ljbG8tZGUtdGVydHVsaWFzLWxhdm9yYWRhLWdlbnRlfDIwMjYtMDktMzAgMTA6NDM6MD
+ M=@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 24 de outubro\, às 15h00\, terá lugar\, na Biblioteca
+  Municipal\, a tertúlia "Malhas e Mares: o tricot nas rotas do bacalhau" 
+ com Rita Quintela e Abel Coentrão.\n\nMais informação: https://www.cm-p
+ varzim.pt/eventos/ciclo-de-tertulias-lavorada-gente/
+LAST-MODIFIED:20260930T104304Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/ciclo-de-tertulias-lavorada-gente/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Histórias com Yoga “À descoberta das emoções”
+DTSTART:20261024T143000Z
+DTEND:20261024T160000Z
+DTSTAMP:20260930T105328Z
+UID:aGlzdG9yaWFzLWNvbS15b2dhLWEtZGVzY29iZXJ0YS1kYXMtZW1vY29lcy02fDIwMjYtMD
+ ktMzAgMTA6NTM6Mjg=@agenda.cm-pvarzim.pt
+CATEGORIES:Desporto
+DESCRIPTION:O Projeto Luminisca e a Biblioteca Municipal Rocha Peixoto col
+ aboram novamente convidando as famílias a embarcarem numa viagem pelo mun
+ do dos livros\, das emoções e do yoga. A próxima sessão será no dia 2
+ 4 de outubro\, sábado\, às 15h30.\n\nMais informação: https://www.cm-p
+ varzim.pt/eventos/historias-com-yoga-a-descoberta-das-emocoes-6/
+LAST-MODIFIED:20260930T105328Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga-a-descoberta-das-
+ emocoes-6/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cinema "A Ovelha Choné: Trapalhada na Quinta"

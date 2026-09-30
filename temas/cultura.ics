@@ -202,6 +202,24 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/concerto-de-carolina-deslandes/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Exposição de fotografia "Olhares [in]Comuns"
+DTSTART:20261010T080000Z
+DTEND:20261031T190000Z
+DTSTAMP:20260930T095959Z
+UID:ZXhwb3NpY2FvLWRlLWZvdG9ncmFmaWEtb2xoYXJlcy1pbmNvbXVuc3wyMDI2LTA5LTMwID
+ A5OjU1OjUw@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:Entre 10 e 31 de outubro\, estará patente na Biblioteca Munic
+ ipal\, a exposição de fotografia de Lídia Soares de Moura "Olhares [in]
+ Comuns".\n\nMais informação: https://www.cm-pvarzim.pt/eventos/exposicao
+ -de-fotografia-olhares-incomuns/
+LAST-MODIFIED:20260930T095959Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-olhares-inco
+ muns/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Abba Experience - Tributo a Abba
 DTSTART:20261010T200000Z
 DTEND:20261010T220000Z
@@ -218,6 +236,64 @@ LAST-MODIFIED:20260807T150858Z
 LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/abba-experience-tributo-a-abba/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mês Internacional da Biblioteca Escolar (MIBE) Bibliotecas\, Lite
+ racia e Inteligência artificial
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261031
+DTSTAMP:20260930T110700Z
+UID:bWVzLWludGVybmFjaW9uYWwtZGEtYmlibGlvdGVjYS1lc2NvbGFyLW1pYmUtYmlibGlvdG
+ VjYXMtbGl0ZXJhY2lhLWUtaW50ZWxpZ2VuY2lhLWFydGlmaWNpYWx8MjAyNi0wOS0zMCAxMTow
+ NjozMg==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:Durante o mês de outubro\, a Biblioteca Municipal Rocha Peixo
+ to associa-se à celebração do Mês Internacional da Biblioteca Escolar
+ \, promovendo um conjunto de três iniciativas que aproximam livros\, leit
+ ores e novas tecnologias. as atividades serão feitas em parceria com as B
+ ibliotecas Escolares do Concelho da Póvoa de Varzim\, dos cinco agrupamen
+ tos de escolas e das escolas secundárias.\n\nMais informação: https://w
+ ww.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-escolar-mibe-bibl
+ iotecas-literacia-e-inteligencia-artificial/
+LAST-MODIFIED:20260930T110700Z
+LOCATION:-
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esco
+ lar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cais de Leitura
+DTSTART:20261013T200000Z
+DTEND:20261013T213000Z
+DTSTAMP:20260930T102515Z
+UID:Y2Fpcy1kZS1sZWl0dXJhLTIwfDIwMjYtMDktMzAgMTA6MjQ6MzU=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 13 de outubro\, às 21h00\, a Biblioteca Municipal marc
+ a encontro on-line para falar sobre livros.\n\nMais informação: https://
+ www.cm-pvarzim.pt/eventos/cais-de-leitura-20/
+LAST-MODIFIED:20260930T102515Z
+LOCATION:on-line
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cais-de-leitura-20/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:"No meu tempo\, dou-te um conto"
+DTSTART:20261014T090000Z
+DTEND:20261014T103000Z
+DTSTAMP:20260930T103439Z
+UID:bm8tbWV1LXRlbXBvLWRvdS10ZS11bS1jb250by0yNHwyMDI2LTA5LTMwIDEwOjMzOjMw@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 14 de outubro\, às 10h00\, a Sala Infantil da Bibliote
+ ca Municipal irá acolher a iniciativa “No meu tempo\, dou-te um conto
+ ”\, com a leitura da história "O Leão da Biblioteca"\, de Michelle Knu
+ dsen e ilustração de Kevin Hawkes.\n\nMais informação: https://www.cm-
+ pvarzim.pt/eventos/no-meu-tempo-dou-te-um-conto-24/
+LAST-MODIFIED:20260930T103439Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/no-meu-tempo-dou-te-um-conto-24/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cinema "O Amor que Perdura"
@@ -302,6 +378,23 @@ LAST-MODIFIED:20260922T101121Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-o-jacare/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ciclo de Tertúlias "Lavorada Gente"
+DTSTART:20261024T140000Z
+DTEND:20261024T160000Z
+DTSTAMP:20260930T104304Z
+UID:Y2ljbG8tZGUtdGVydHVsaWFzLWxhdm9yYWRhLWdlbnRlfDIwMjYtMDktMzAgMTA6NDM6MD
+ M=@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 24 de outubro\, às 15h00\, terá lugar\, na Biblioteca
+  Municipal\, a tertúlia "Malhas e Mares: o tricot nas rotas do bacalhau" 
+ com Rita Quintela e Abel Coentrão.\n\nMais informação: https://www.cm-p
+ varzim.pt/eventos/ciclo-de-tertulias-lavorada-gente/
+LAST-MODIFIED:20260930T104304Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/ciclo-de-tertulias-lavorada-gente/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cinema "A Ovelha Choné: Trapalhada na Quinta"

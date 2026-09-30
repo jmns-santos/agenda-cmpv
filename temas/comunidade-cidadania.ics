@@ -65,6 +65,59 @@ URL:https://www.cm-pvarzim.pt/eventos/ii-encontro-da-comissao-de-integraca
  o-em-cuidados-de-saude/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Artes e Ofícios – Tricotadeira
+DTSTART:20261007T090000Z
+DTEND:20261007T110000Z
+DTSTAMP:20260930T091730Z
+UID:YXJ0ZXMtZS1vZmljaW9zLXRyaWNvdGFkZWlyYXwyMDI2LTA5LTMwIDA5OjE3OjI5@agend
+ a.cm-pvarzim.pt
+CATEGORIES:Comunidade e cidadania
+DESCRIPTION:No dia 7 de outubro\, às 10h00\, terá lugar\, na Biblioteca 
+ Municipal\, uma sessão de Artes e Ofícios com Ana Granado.\n\nMais infor
+ mação: https://www.cm-pvarzim.pt/eventos/artes-e-oficios-tricotadeira/
+LAST-MODIFIED:20260930T091730Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/artes-e-oficios-tricotadeira/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lavorada Mensal
+DTSTART:20261010T133000Z
+DTEND:20261010T170000Z
+DTSTAMP:20260930T101722Z
+UID:bGF2b3JhZGEtbWVuc2FsLTJ8MjAyNi0wOS0zMCAxMDowNjoxOQ==@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Comunidade e cidadania
+DESCRIPTION:Segundo sábado do mês é dia de Lavorada Mensal. Assim\, na 
+ tarde de 10 de outubro\, entre as 14h30 e as 18h00\, a associação promov
+ e encontros com agulhas e malhas\, tricotadas com dois dedos de conversa\,
+  na Biblioteca Municipal Rocha Peixoto.\n\nMais informação: https://www.
+ cm-pvarzim.pt/eventos/lavorada-mensal-2/
+LAST-MODIFIED:20260930T101722Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lavorada-mensal-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábados a Jogar na Biblioteca
+DTSTART:20261010T140000Z
+DTEND:20261010T160000Z
+DTSTAMP:20260930T101511Z
+UID:c2FiYWRvcy1hLWpvZ2FyLW5hLWJpYmxpb3RlY2EtMTl8MjAyNi0wOS0zMCAxMDoxMjowOQ
+ ==@agenda.cm-pvarzim.pt
+CATEGORIES:Comunidade e cidadania
+DESCRIPTION:Os jogos de tabuleiro são\, desde os tempos mais remotos\, um
+ a forma de lazer\, de aplicação de estratégia e de aprendizagem lúdica
+  e/ou pedagógica. A Biblioteca Municipal tem uma secção de jogos de tab
+ uleiro para que as famílias possam usufruir de momentos divertidos na sal
+ a infantil e juvenil.\n\nMais informação: https://www.cm-pvarzim.pt/even
+ tos/sabados-a-jogar-na-biblioteca-19/
+LAST-MODIFIED:20260930T101511Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sabados-a-jogar-na-biblioteca-19/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Dia da Menopausa
 DTSTART:20261019T080000Z
 DTEND:20261019T113000Z
