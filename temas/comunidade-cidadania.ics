@@ -95,4 +95,22 @@ LOCATION:Estádio Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/dia-da-menopausa/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:"Deixem o Pimba em Paz"
+DTSTART:20261204T213000Z
+DTEND:20261204T233000Z
+DTSTAMP:20261001T145442Z
+UID:ZGVpeGVtLW8tcGltYmEtZW0tcGF6LTJ8MjAyNi0xMC0wMSAxNDo0OToxOA==@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Comunidade e cidadania
+DESCRIPTION:Estreado em 2013\, “Deixem o Pimba em Paz” conquistou o p
+ úblico com uma reinterpretação irreverente do repertório pimba\, tendo
+  percorrido Portugal de Norte a Sul\, ilhas incluídas\, e atravessando fr
+ onteiras até aos Estados Unidos da América e Brasil.\n\nMais informaçã
+ o: https://www.cm-pvarzim.pt/eventos/deixem-o-pimba-em-paz-2/
+LAST-MODIFIED:20261001T145442Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/deixem-o-pimba-em-paz-2/
+END:VEVENT
 END:VCALENDAR

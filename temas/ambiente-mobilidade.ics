@@ -117,6 +117,47 @@ URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
  im-energy-hub-associacao-empresarial-da-povoa-de-varzim/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Conversa "Entre o Clima e a Paisagem": “Prescrição da Natureza
+ ”
+DTSTART:20261015T170000Z
+DTEND:20261015T194500Z
+DTSTAMP:20261001T135808Z
+UID:Y29udmVyc2EtZW50cmUtby1jbGltYS1lLWEtcGFpc2FnZW0tcHJlc2NyaWNhby1kYS1uYX
+ R1cmV6YXwyMDI2LTEwLTAxIDEzOjU4OjA3@agenda.cm-pvarzim.pt
+CATEGORIES:Ambiente e mobilidade
+DESCRIPTION:No dia 15 de outubro\, o ciclo “Entre o Clima e a Paisagem
+ ” regressa ao Centro do Clima da Póvoa de Varzim para uma conversa dedi
+ cada à relação entre natureza\, saúde e bem-estar.\n\nMais informaçã
+ o: https://www.cm-pvarzim.pt/eventos/conversa-entre-o-clima-e-a-paisagem-p
+ rescricao-da-natureza/
+LAST-MODIFIED:20261001T135808Z
+LOCATION:Centro do Clima
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/conversa-entre-o-clima-e-a-paisagem-
+ prescricao-da-natureza/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Pó
+ voa Empresas
+DTSTART:20261019T173000Z
+DTEND:20261019T193000Z
+DTSTAMP:20261001T091704Z
+UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1jZW
+ 50cm8tcG92b2EtZW1wcmVzYXMtMnwyMDI2LTEwLTAxIDA5OjE3OjAz@agenda.cm-pvarzim.p
+ t
+CATEGORIES:Ambiente e mobilidade
+DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
+ pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
+ ao público\, com vista à promoção de boas práticas de eficiência ene
+ rgética.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/acao-de-
+ sensibilizacao-povoa-de-varzim-energy-hub-centro-povoa-empresas-2/
+LAST-MODIFIED:20261001T091704Z
+LOCATION:Centro Póvoa Empresas
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
+ im-energy-hub-centro-povoa-empresas-2/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
  pacional de Aver-o-Mar
 DTSTART:20261021T133000Z
