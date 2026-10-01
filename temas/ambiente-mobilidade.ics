@@ -13,27 +13,6 @@ X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
 SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
- pacional da Lapa
-DTSTART:20260930T133000Z
-DTEND:20260930T151500Z
-DTSTAMP:20260904T113859Z
-UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1jZW
- 50cm8tb2N1cGFjaW9uYWwtZGEtbGFwYXwyMDI2LTA5LTA0IDExOjM3OjA1@agenda.cm-pvarz
- im.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
- pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
- ao público\, com vista à promoção de boas práticas de eficiência ene
- rgética.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/acao-de-
- sensibilizacao-povoa-de-varzim-energy-hub-centro-ocupacional-da-lapa/
-LAST-MODIFIED:20260904T113859Z
-LOCATION:Centro Ocupacional da Lapa
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
- im-energy-hub-centro-ocupacional-da-lapa/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
  pacional da Estela
 DTSTART:20261006T134500Z
 DTEND:20261006T171500Z

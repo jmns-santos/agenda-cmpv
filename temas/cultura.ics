@@ -12,23 +12,6 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/temas/cultura.i
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Exposição de fotografia "Mar e Gente"
-DTSTART:20260902T080000Z
-DTEND:20260930T180000Z
-DTSTAMP:20260825T110805Z
-UID:ZXhwb3NpY2FvLWRlLWZvdG9ncmFmaWEtbWFyLWUtZ2VudGV8MjAyNi0wOC0yNSAxMTowMz
- owNQ==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:De 2 a 30 de setembro\, estará patente\, na Biblioteca Munici
- pal\, a exposição de fotografia "MAR e GENTE - A minha EX-janela virada 
- para o mar na minha Terra Natal" de Miguel Louro.\n\nMais informação: ht
- tps://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-mar-e-gente/
-LAST-MODIFIED:20260825T110805Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-mar-e-gente/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Exposição "O Império do Medo"
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20261004

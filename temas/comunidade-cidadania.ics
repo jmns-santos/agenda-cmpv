@@ -12,23 +12,6 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/temas/comunidad
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Biblioteca no Jardim
-DTSTART:20260622T081500Z
-DTEND:20260930T164500Z
-DTSTAMP:20260528T105015Z
-UID:YmlibGlvdGVjYS1uby1qYXJkaW0tNHwyMDI2LTA1LTI4IDEwOjUwOjE0@agenda.cm-pva
- rzim.pt
-CATEGORIES:Comunidade e cidadania
-DESCRIPTION:Este verão\, e pelo sétimo ano consecutivo\, a Biblioteca Mu
- nicipal volta a disponibilizar a Biblioteca no jardim\, um espaço acolhed
- or para estudar\, ler\, ou simplesmente relaxar.\n\nMais informação: htt
- ps://www.cm-pvarzim.pt/eventos/biblioteca-no-jardim-4/
-LAST-MODIFIED:20260528T105015Z
-LOCATION:Jardim da Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/biblioteca-no-jardim-4/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:90.º aniversário do Rancho Poveiro
 DTSTART;VALUE=DATE:20260624
 DTEND;VALUE=DATE:20261018
@@ -43,26 +26,6 @@ LAST-MODIFIED:20260623T135738Z
 LOCATION:Igreja Matriz\, Largo do Passeio Alegre e Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/90-o-aniversario-do-rancho-poveiro/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:II Encontro da Comissão de Integração em Cuidados de Saúde
-DTSTART:20260930T073000Z
-DTEND:20260930T123000Z
-DTSTAMP:20260904T105551Z
-UID:aWktZW5jb250cm8tZGEtY29taXNzYW8tZGUtaW50ZWdyYWNhby1lbS1jdWlkYWRvcy1kZS
- 1zYXVkZXwyMDI2LTA5LTA0IDEwOjQzOjUx@agenda.cm-pvarzim.pt
-CATEGORIES:Comunidade e cidadania
-DESCRIPTION:O Diana Bar acolhe\, no dia 30 de setembro\, a partir das 8h30
- \, a segunda edição do Encontro da Comissão de Integração em Cuidados
-  da Saúde\, promovido pela Unidade Local de Saúde da Póvoa de Varzim/Vi
- la do Conde (ULSPVVC)\, com o apoio da Câmara Municipal da Póvoa de Varz
- im.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/ii-encontro-da
- -comissao-de-integracao-em-cuidados-de-saude/
-LAST-MODIFIED:20260904T105551Z
-LOCATION:Diana Bar
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/ii-encontro-da-comissao-de-integraca
- o-em-cuidados-de-saude/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Artes e Ofícios – Tricotadeira
