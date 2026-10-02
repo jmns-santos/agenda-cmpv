@@ -79,59 +79,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/e-aqui-in-ocio-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia Mundial da Música
-DTSTART:20261001T080000Z
-DTEND:20261001T160000Z
-DTSTAMP:20260924T150713Z
-UID:ZGlhLW11bmRpYWwtZGEtbXVzaWNhLTV8MjAyNi0wOS0yNCAxNTowNjo0NQ==@agenda.cm
- -pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:A Escola de Música da Póvoa de Varzim (EMPV) associa-se às 
- comemorações do Dia Mundial da Música\, que se assinala no próximo dia
-  1 de outubro\, com um programa que pretende levar a música a diferentes 
- espaços da comunidade e proporcionar ao público um momento especial de f
- ruição musical.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/
- dia-mundial-da-musica-5/
-LAST-MODIFIED:20260924T150713Z
-LOCATION:Escolas do concelho e Auditório Municipal
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/dia-mundial-da-musica-5/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Recital de piano de Matilde Pereira Leite
-DTSTART:20261001T173000Z
-DTEND:20261001T193000Z
-DTSTAMP:20260924T144331Z
-UID:cmVjaXRhbC1kZS1waWFuby1kZS1tYXRpbGRlLXBlcmVpcmEtbGVpdGV8MjAyNi0wOS0yNC
- AxNDoyNzoxMA==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:No âmbito das comemorações do Dia Mundial da Música\, o Au
- ditório Municipal abre portas\, no dia 1 de outubro\, às 18h30\, para um
-  recital de piano com Matilde Pereira Leite.\n\nMais informação: https:/
- /www.cm-pvarzim.pt/eventos/recital-de-piano-de-matilde-pereira-leite/
-LAST-MODIFIED:20260924T144331Z
-LOCATION:Auditório Municipal
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/recital-de-piano-de-matilde-pereira-
- leite/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cinema "Persepolis"
-DTSTART:20261001T204500Z
-DTEND:20261001T223000Z
-DTSTAMP:20260922T100326Z
-UID:Y2luZW1hLXBlcnNlcG9saXN8MjAyNi0wOS0yMiAwOTo1OToyOQ==@agenda.cm-pvarzim
- .pt
-CATEGORIES:Cultura
-DESCRIPTION:No dia 1 de outubro\, às 21h45\, será exibido\, no Cine-Teat
- ro Garrett\, o filme "Persepolis".\n\nMais informação: https://www.cm-pv
- arzim.pt/eventos/cinema-persepolis/
-LAST-MODIFIED:20260922T100326Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-persepolis/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Wine Arena 2026
 DTSTART:20261003T140000Z
 DTEND:20261004T200000Z
