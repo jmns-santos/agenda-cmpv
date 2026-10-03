@@ -12,24 +12,6 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/temas/cultura.i
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Exposição "O Império do Medo"
-DTSTART;VALUE=DATE:20260919
-DTEND;VALUE=DATE:20261004
-DTSTAMP:20260917T134608Z
-UID:ZXhwb3NpY2FvLW8taW1wZXJpby1kby1tZWRvfDIwMjYtMDktMTcgMTM6NDE6MDc=@agend
- a.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:Entre 23 de setembro e 3 de outubro\, realiza-se\, na Póvoa d
- e Varzim\, a 17.ª edição do Festival Internacional de Teatro É-Aqui-in
- -Ócio\, promovido pela Varazim Teatro\, com o apoio do Município.\n\nMai
- s informação: https://www.cm-pvarzim.pt/eventos/exposicao-o-imperio-do-m
- edo/
-LAST-MODIFIED:20260917T134608Z
-LOCATION:Museu Municipal e Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/exposicao-o-imperio-do-medo/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Mostra de Pintura "ACERVO"
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20261101
@@ -45,59 +27,6 @@ LAST-MODIFIED:20260915T135707Z
 LOCATION:Auditório da Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/mostra-de-pintura-acervo/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:É-Aqui-in-Ócio 2026
-DTSTART:20260923T203000Z
-DTEND:20261003T223000Z
-DTSTAMP:20260915T103936Z
-UID:ZS1hcXVpLWluLW9jaW8tMjAyNnwyMDI2LTA3LTMxIDE0OjE0OjMy@agenda.cm-pvarzim
- .pt
-CATEGORIES:Cultura
-DESCRIPTION:Entre 23 de setembro e 3 de outubro\, realiza-se\, na Póvoa d
- e Varzim\, a 17.ª edição do Festival Internacional de Teatro É-Aqui-in
- -Ócio\, promovido pela Varazim Teatro\, com o apoio do Município.\n\nMai
- s informação: https://www.cm-pvarzim.pt/eventos/e-aqui-in-ocio-2026/
-LAST-MODIFIED:20260915T103936Z
-LOCATION:Cine-Teatro Garrett e outros
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/e-aqui-in-ocio-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Póvoa Conto a Conto
-DTSTART:20261003T143000Z
-DTEND:20261003T160000Z
-DTSTAMP:20260929T165136Z
-UID:cG92b2EtY29udG8tYS1jb250by00fDIwMjYtMDktMjkgMTY6NDk6Mzg=@agenda.cm-pva
- rzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:A Ethos\, Pathos\, Logos — Associação e a Biblioteca Munic
- ipal Rocha Peixoto colaboram novamente em momentos de leitura seguidos de 
- atividades didáticas\, desta vez numa exploração do património poveiro
-  enquanto força motriz!\n\nMais informação: https://www.cm-pvarzim.pt/e
- ventos/povoa-conto-a-conto-4/
-LAST-MODIFIED:20260929T165136Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/povoa-conto-a-conto-4/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Lançamento do livro "Os Trocado" de José Reina
-DTSTART:20261003T150000Z
-DTEND:20261003T170000Z
-DTSTAMP:20260929T163431Z
-UID:bGFuY2FtZW50by1kby1saXZyby1vcy10cm9jYWRvLWRlLWpvc2UtcmVpbmF8MjAyNi0wOS
- 0yOSAxNjoyOTo0NA==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:No dia 3 de outubro\, às 16h00\, terá lugar\, na Biblioteca 
- Municipal\, o lançamento do livro "Os Trocado" de José Reina.\n\nMais in
- formação: https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-os-troca
- do-de-jose-reina/
-LAST-MODIFIED:20260929T163431Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-os-trocado-de-jo
- se-reina/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cinema "Cartas Amarelas"
