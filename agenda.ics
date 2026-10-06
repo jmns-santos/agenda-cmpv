@@ -175,7 +175,7 @@ BEGIN:VEVENT
 SUMMARY:Lavorada Mensal
 DTSTART:20261010T133000Z
 DTEND:20261010T170000Z
-DTSTAMP:20260930T101722Z
+DTSTAMP:20261006T105156Z
 UID:bGF2b3JhZGEtbWVuc2FsLTJ8MjAyNi0wOS0zMCAxMDowNjoxOQ==@agenda.cm-pvarzim
  .pt
 CATEGORIES:Comunidade e cidadania
@@ -184,7 +184,7 @@ DESCRIPTION:Segundo sábado do mês é dia de Lavorada Mensal. Assim\, na
  e encontros com agulhas e malhas\, tricotadas com dois dedos de conversa\,
   na Biblioteca Municipal Rocha Peixoto.\n\nMais informação: https://www.
  cm-pvarzim.pt/eventos/lavorada-mensal-2/
-LAST-MODIFIED:20260930T101722Z
+LAST-MODIFIED:20261006T105156Z
 LOCATION:Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/lavorada-mensal-2/
@@ -231,7 +231,7 @@ SUMMARY:Mês Internacional da Biblioteca Escolar (MIBE) Bibliotecas\, Lite
  racia e Inteligência artificial
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261031
-DTSTAMP:20260930T110700Z
+DTSTAMP:20261006T100859Z
 UID:bWVzLWludGVybmFjaW9uYWwtZGEtYmlibGlvdGVjYS1lc2NvbGFyLW1pYmUtYmlibGlvdG
  VjYXMtbGl0ZXJhY2lhLWUtaW50ZWxpZ2VuY2lhLWFydGlmaWNpYWx8MjAyNi0wOS0zMCAxMTow
  NjozMg==@agenda.cm-pvarzim.pt
@@ -239,12 +239,12 @@ CATEGORIES:Cultura
 DESCRIPTION:Durante o mês de outubro\, a Biblioteca Municipal Rocha Peixo
  to associa-se à celebração do Mês Internacional da Biblioteca Escolar
  \, promovendo um conjunto de três iniciativas que aproximam livros\, leit
- ores e novas tecnologias. as atividades serão feitas em parceria com as B
+ ores e novas tecnologias. As atividades serão feitas em parceria com as B
  ibliotecas Escolares do Concelho da Póvoa de Varzim\, dos cinco agrupamen
  tos de escolas e das escolas secundárias.\n\nMais informação: https://w
  ww.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-escolar-mibe-bibl
  iotecas-literacia-e-inteligencia-artificial/
-LAST-MODIFIED:20260930T110700Z
+LAST-MODIFIED:20261006T100859Z
 LOCATION:-
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esco
@@ -380,6 +380,23 @@ LAST-MODIFIED:20260922T100559Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-o-amor-que-perdura/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Caminhada pela Paisagem Costeira
+DTSTART:20261017T083000Z
+DTEND:20261017T103000Z
+DTSTAMP:20261006T102510Z
+UID:Y2FtaW5oYWRhLXBlbGEtcGFpc2FnZW0tY29zdGVpcmF8MjAyNi0xMC0wNiAxMDoyNDoyNA
+ ==@agenda.cm-pvarzim.pt
+CATEGORIES:Desporto
+DESCRIPTION:No dia 17 de outubro\, o Centro do Clima convida a descobrir a
+  paisagem costeira de Aguçadoura numa caminhada integrada na iniciativa 
+ «Paisagens com História».\n\nMais informação: https://www.cm-pvarzim.
+ pt/eventos/caminhada-pela-paisagem-costeira/
+LAST-MODIFIED:20261006T102510Z
+LOCATION:Campo de Futebol de Aguçadoura (ponto de encontro)
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/caminhada-pela-paisagem-costeira/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Teatro para bebés "Monstro de Companhia"

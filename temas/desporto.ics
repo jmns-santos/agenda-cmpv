@@ -30,6 +30,23 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/caminhada-pelo-caminho-de-santiago/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Caminhada pela Paisagem Costeira
+DTSTART:20261017T083000Z
+DTEND:20261017T103000Z
+DTSTAMP:20261006T102510Z
+UID:Y2FtaW5oYWRhLXBlbGEtcGFpc2FnZW0tY29zdGVpcmF8MjAyNi0xMC0wNiAxMDoyNDoyNA
+ ==@agenda.cm-pvarzim.pt
+CATEGORIES:Desporto
+DESCRIPTION:No dia 17 de outubro\, o Centro do Clima convida a descobrir a
+  paisagem costeira de Aguçadoura numa caminhada integrada na iniciativa 
+ «Paisagens com História».\n\nMais informação: https://www.cm-pvarzim.
+ pt/eventos/caminhada-pela-paisagem-costeira/
+LAST-MODIFIED:20261006T102510Z
+LOCATION:Campo de Futebol de Aguçadoura (ponto de encontro)
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/caminhada-pela-paisagem-costeira/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Histórias com Yoga “À descoberta das emoções”
 DTSTART:20261024T143000Z
 DTEND:20261024T160000Z
