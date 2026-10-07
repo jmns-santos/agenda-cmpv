@@ -264,6 +264,25 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cais-de-leitura-20/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Sessão de capacitação "Técnicas de Estudo"
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261017
+DTSTAMP:20261007T083226Z
+UID:c2Vzc2FvLWRlLWNhcGFjaXRhY2FvLXRlY25pY2FzLWRlLWVzdHVkb3wyMDI2LTEwLTA3ID
+ A4OjMyOjI1@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No âmbito da Atividade 1 - Envolve-te + Alunos\, inscrita na 
+ Operação “PVPV - Póvoa de Varzim Promove Valores +”\, o Município 
+ irá promover três sessões de capacitação dirigidas a alunos do 10.º 
+ ano de escolaridade.\n\nMais informação: https://www.cm-pvarzim.pt/event
+ os/sessao-de-capacitacao-tecnicas-de-estudo/
+LAST-MODIFIED:20261007T083226Z
+LOCATION:Auditório da Escola Secundária de Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sessao-de-capacitacao-tecnicas-de-es
+ tudo/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"No meu tempo\, dou-te um conto"
 DTSTART:20261014T090000Z
 DTEND:20261014T103000Z
@@ -412,6 +431,23 @@ LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/povoa-a-cantar-90-anos-de-historia-c
  ultura-e-tradicao/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Caminhada Rosa
+DTSTART:20261018T090000Z
+DTEND:20261018T110000Z
+DTSTAMP:20261007T131458Z
+UID:Y2FtaW5oYWRhLXJvc2F8MjAyNi0xMC0wNyAxMzoxNDo1OA==@agenda.cm-pvarzim.pt
+CATEGORIES:Desporto
+DESCRIPTION:O Município da Póvoa de Varzim\, através do Pelouro da Coes
+ ão Social e da sua rede de parceiros\, volta a associar-se à campanha "O
+ utubro Rosa"\, promovida pela Liga Portuguesa Contra o Cancro (LPCC)\, din
+ amizando uma caminhada solidária no dia 18 de outubro\, a partir das 10h0
+ 0.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/caminhada-rosa/
+LAST-MODIFIED:20261007T131458Z
+LOCATION:Varzim Lazer
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/caminhada-rosa/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Opereta "A Morte do Diabo"
@@ -731,14 +767,14 @@ BEGIN:VEVENT
 SUMMARY:Teatro "Quando Menos se Espera"
 DTSTART:20261201T213000Z
 DTEND:20261202T233000Z
-DTSTAMP:20260904T093207Z
+DTSTAMP:20261007T145314Z
 UID:dGVhdHJvLXF1YW5kby1tZW5vcy1zZS1lc3BlcmF8MjAyNi0wOS0wNCAwOTozMjowNg==@a
  genda.cm-pvarzim.pt
 CATEGORIES:Cultura
 DESCRIPTION:Nos dias 1 e 2 de dezembro\, pelas 21h30\, sobe ao palco do Ci
  ne-Teatro Garrett a peça "Quando Menos se Espera".\n\nMais informação: 
  https://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
-LAST-MODIFIED:20260904T093207Z
+LAST-MODIFIED:20261007T145314Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
