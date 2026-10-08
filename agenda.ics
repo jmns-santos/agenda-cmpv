@@ -44,22 +44,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/mostra-de-pintura-acervo/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Artes e Ofícios – Tricotadeira
-DTSTART:20261007T090000Z
-DTEND:20261007T110000Z
-DTSTAMP:20260930T091730Z
-UID:YXJ0ZXMtZS1vZmljaW9zLXRyaWNvdGFkZWlyYXwyMDI2LTA5LTMwIDA5OjE3OjI5@agend
- a.cm-pvarzim.pt
-CATEGORIES:Comunidade e cidadania
-DESCRIPTION:No dia 7 de outubro\, às 10h00\, terá lugar\, na Biblioteca 
- Municipal\, uma sessão de Artes e Ofícios com Ana Granado.\n\nMais infor
- mação: https://www.cm-pvarzim.pt/eventos/artes-e-oficios-tricotadeira/
-LAST-MODIFIED:20260930T091730Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/artes-e-oficios-tricotadeira/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
  pacional de Laúndos
 DTSTART:20261008T134500Z
