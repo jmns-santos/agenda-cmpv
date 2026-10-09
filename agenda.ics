@@ -44,43 +44,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/mostra-de-pintura-acervo/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
- pacional de Laúndos
-DTSTART:20261008T134500Z
-DTEND:20261008T171500Z
-DTSTAMP:20260904T130910Z
-UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1jZW
- 50cm8tb2N1cGFjaW9uYWwtZGUtbGF1bmRvc3wyMDI2LTA5LTA0IDEzOjA4OjAx@agenda.cm-p
- varzim.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
- pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
- ao público\, com vista à promoção de boas práticas de eficiência ene
- rgética.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/acao-de-
- sensibilizacao-povoa-de-varzim-energy-hub-centro-ocupacional-de-laundos/
-LAST-MODIFIED:20260904T130910Z
-LOCATION:Centro Ocupacional de Laúndos
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
- im-energy-hub-centro-ocupacional-de-laundos/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cinema "Cartas Amarelas"
-DTSTART:20261008T204500Z
-DTEND:20261008T224500Z
-DTSTAMP:20260922T100308Z
-UID:Y2luZW1hLWNhcnRhcy1hbWFyZWxhc3wyMDI2LTA5LTIyIDEwOjAzOjAx@agenda.cm-pva
- rzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:No dia 8 de outubro\, às 21h45\, será exibido\, no Cine-Teat
- ro Garrett\, o filme "Cartas Amarelas".\n\nMais informação: https://www.
- cm-pvarzim.pt/eventos/cinema-cartas-amarelas/
-LAST-MODIFIED:20260922T100308Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-cartas-amarelas/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Cooperativ
  a da Póvoa
 DTSTART:20261009T134500Z

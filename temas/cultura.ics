@@ -29,22 +29,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/mostra-de-pintura-acervo/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cinema "Cartas Amarelas"
-DTSTART:20261008T204500Z
-DTEND:20261008T224500Z
-DTSTAMP:20260922T100308Z
-UID:Y2luZW1hLWNhcnRhcy1hbWFyZWxhc3wyMDI2LTA5LTIyIDEwOjAzOjAx@agenda.cm-pva
- rzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:No dia 8 de outubro\, às 21h45\, será exibido\, no Cine-Teat
- ro Garrett\, o filme "Cartas Amarelas".\n\nMais informação: https://www.
- cm-pvarzim.pt/eventos/cinema-cartas-amarelas/
-LAST-MODIFIED:20260922T100308Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-cartas-amarelas/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Concerto de Carolina Deslandes
 DTSTART:20261009T203000Z
 DTEND:20261011T223000Z
