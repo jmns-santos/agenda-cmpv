@@ -44,26 +44,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/mostra-de-pintura-acervo/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Cooperativ
- a da Póvoa
-DTSTART:20261009T134500Z
-DTEND:20261009T171500Z
-DTSTAMP:20260904T131620Z
-UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1jb2
- 9wZXJhdGl2YS1kYS1wb3ZvYXwyMDI2LTA5LTA0IDEzOjE0OjIy@agenda.cm-pvarzim.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
- pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
- ao público\, com vista à promoção de boas práticas de eficiência ene
- rgética.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/acao-de-
- sensibilizacao-povoa-de-varzim-energy-hub-cooperativa-da-povoa/
-LAST-MODIFIED:20260904T131620Z
-LOCATION:Cooperativa da Póvoa
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
- im-energy-hub-cooperativa-da-povoa/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Concerto de Carolina Deslandes
 DTSTART:20261009T203000Z
 DTEND:20261011T223000Z
