@@ -63,24 +63,6 @@ URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-olhares-inco
  muns/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Abba Experience - Tributo a Abba
-DTSTART:20261010T200000Z
-DTEND:20261010T220000Z
-DTSTAMP:20260807T150858Z
-UID:YWJiYS1leHBlcmllbmNlLXRyaWJ1dG8tYS1hYmJhfDIwMjYtMDgtMDcgMTQ6NDQ6Mzk=@a
- genda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:Os ABBA Experience são uma banda tributo que recria a magia d
- o grupo sueco com vozes poderosas e um espetáculo vibrante cheio de emoç
- ão. Atuam pela primeira vez na Póvoa de Varzim no Póvoa Arena.\n\nMais 
- informação: https://www.cm-pvarzim.pt/eventos/abba-experience-tributo-a-
- abba/
-LAST-MODIFIED:20260807T150858Z
-LOCATION:Póvoa Arena
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/abba-experience-tributo-a-abba/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Mês Internacional da Biblioteca Escolar (MIBE) Bibliotecas\, Lite
  racia e Inteligência artificial
 DTSTART;VALUE=DATE:20261012
