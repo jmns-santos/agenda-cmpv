@@ -328,6 +328,25 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/concerto-disco-voador/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Sessão de leitura e Oficina de expressão plástica
+DTSTART:20261031T153000Z
+DTEND:20261031T173000Z
+DTSTAMP:20261012T150549Z
+UID:c2Vzc2FvLWRlLWxlaXR1cmEtZS1vZmljaW5hLWRlLWV4cHJlc3Nhby1wbGFzdGljYXwyMD
+ I2LTEwLTEyIDE1OjA1OjQ4@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 31 de outubro\, a Biblioteca Municipal Rocha Peixoto va
+ i apresentar uma sessão de leitura do conto "O Ladrão de Folhas" de Alic
+ e Hemming e ilustração: Nicola Slater\; seguida de uma oficina de expres
+ são plástica com folhas do jardim.\n\nMais informação: https://www.cm-
+ pvarzim.pt/eventos/sessao-de-leitura-e-oficina-de-expressao-plastica/
+LAST-MODIFIED:20261012T150549Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sessao-de-leitura-e-oficina-de-expre
+ ssao-plastica/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Concerto Juliana Linhares "Até Cansar o Cansaço"
 DTSTART:20261031T213000Z
 DTEND:20261031T233000Z
