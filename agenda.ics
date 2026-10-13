@@ -397,6 +397,25 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-o-jacare/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:FIMPV+
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20270531
+DTSTAMP:20261013T151317Z
+UID:ZmltcHZ8MjAyNi0xMC0xMyAxMzoyMzozMA==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:Ao longo de décadas\, o Festival Internacional de Música da 
+ Póvoa de Varzim afirmou-se como uma das referências maiores da programa
+ ção musical em Portugal\, trazendo à cidade intérpretes de excelência
+  e criando\, edição após edição\, uma relação profunda com o seu p
+ úblico. Essa relação tem crescido de ano para ano: os poveiros enchem a
+ s salas\, procuram a música\, querem ouvir mais e mais vezes.\n\nMais inf
+ ormação: https://www.cm-pvarzim.pt/eventos/fimpv/
+LAST-MODIFIED:20261013T151317Z
+LOCATION:Cine-Teatro Garrett\, Auditório Municipal e Diana Bar
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/fimpv/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Ciclo de Tertúlias "Lavorada Gente"
 DTSTART:20261024T140000Z
 DTEND:20261024T160000Z
@@ -431,6 +450,25 @@ LOCATION:Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga-a-descoberta-das-
  emocoes-6/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto FIMPV+: João Neto Vieira
+DTSTART:20261024T203000Z
+DTEND:20261024T223000Z
+DTSTAMP:20261013T151305Z
+UID:Y29uY2VydG8tZmltcHYtam9hby1uZXRvLXZpZWlyYXwyMDI2LTEwLTEzIDEzOjM3OjEz@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:O jovem pianista poveiro João Neto Vieira\, símbolo de uma n
+ ova geração que cresceu com o Festival Internacional de Música da Póvo
+ a de Varzim\, inaugura\, no dia 24 de outubro\, às 21h30\, no Cine-Teatro
+  Garrett\, uma série de seis encontros do FIMPV+\, evento que mantém a l
+ inha condutora do Festival.\n\nMais informação: https://www.cm-pvarzim.p
+ t/eventos/concerto-fimpv-joao-neto-vieira/
+LAST-MODIFIED:20261013T151305Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-fimpv-joao-neto-vieira/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cinema "A Ovelha Choné: Trapalhada na Quinta"
