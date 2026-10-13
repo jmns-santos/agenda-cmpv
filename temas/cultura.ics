@@ -71,22 +71,6 @@ URL:https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esco
  lar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cais de Leitura
-DTSTART:20261013T200000Z
-DTEND:20261013T213000Z
-DTSTAMP:20260930T102515Z
-UID:Y2Fpcy1kZS1sZWl0dXJhLTIwfDIwMjYtMDktMzAgMTA6MjQ6MzU=@agenda.cm-pvarzim
- .pt
-CATEGORIES:Cultura
-DESCRIPTION:No dia 13 de outubro\, às 21h00\, a Biblioteca Municipal marc
- a encontro on-line para falar sobre livros.\n\nMais informação: https://
- www.cm-pvarzim.pt/eventos/cais-de-leitura-20/
-LAST-MODIFIED:20260930T102515Z
-LOCATION:on-line
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cais-de-leitura-20/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Sessão de capacitação "Técnicas de Estudo"
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261017

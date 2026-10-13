@@ -86,40 +86,6 @@ URL:https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esco
  lar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Caminhada pelo Caminho de Santiago
-DTSTART:20261013T133000Z
-DTEND:20261013T163000Z
-DTSTAMP:20260930T114101Z
-UID:Y2FtaW5oYWRhLXBlbG8tY2FtaW5oby1kZS1zYW50aWFnb3wyMDI2LTA5LTMwIDExOjM2Oj
- U4@agenda.cm-pvarzim.pt
-CATEGORIES:Desporto
-DESCRIPTION:O Centro do Clima\, com o apoio do Município e da Junta de Fr
- eguesia da Póvoa de Varzim\, vai promover\, no próximo dia 13 de outubro
- \, Dia do Peregrino\, uma caminhada pelo Caminho de Santiago\, integrada n
- a iniciativa “Paisagens com História”.\n\nMais informação: https://
- www.cm-pvarzim.pt/eventos/caminhada-pelo-caminho-de-santiago/
-LAST-MODIFIED:20260930T114101Z
-LOCATION:Rua dos Ferreiros
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/caminhada-pelo-caminho-de-santiago/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cais de Leitura
-DTSTART:20261013T200000Z
-DTEND:20261013T213000Z
-DTSTAMP:20260930T102515Z
-UID:Y2Fpcy1kZS1sZWl0dXJhLTIwfDIwMjYtMDktMzAgMTA6MjQ6MzU=@agenda.cm-pvarzim
- .pt
-CATEGORIES:Cultura
-DESCRIPTION:No dia 13 de outubro\, às 21h00\, a Biblioteca Municipal marc
- a encontro on-line para falar sobre livros.\n\nMais informação: https://
- www.cm-pvarzim.pt/eventos/cais-de-leitura-20/
-LAST-MODIFIED:20260930T102515Z
-LOCATION:on-line
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cais-de-leitura-20/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Sessão de capacitação "Técnicas de Estudo"
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261017

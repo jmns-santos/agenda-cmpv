@@ -12,24 +12,6 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/temas/desporto.
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Caminhada pelo Caminho de Santiago
-DTSTART:20261013T133000Z
-DTEND:20261013T163000Z
-DTSTAMP:20260930T114101Z
-UID:Y2FtaW5oYWRhLXBlbG8tY2FtaW5oby1kZS1zYW50aWFnb3wyMDI2LTA5LTMwIDExOjM2Oj
- U4@agenda.cm-pvarzim.pt
-CATEGORIES:Desporto
-DESCRIPTION:O Centro do Clima\, com o apoio do Município e da Junta de Fr
- eguesia da Póvoa de Varzim\, vai promover\, no próximo dia 13 de outubro
- \, Dia do Peregrino\, uma caminhada pelo Caminho de Santiago\, integrada n
- a iniciativa “Paisagens com História”.\n\nMais informação: https://
- www.cm-pvarzim.pt/eventos/caminhada-pelo-caminho-de-santiago/
-LAST-MODIFIED:20260930T114101Z
-LOCATION:Rua dos Ferreiros
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/caminhada-pelo-caminho-de-santiago/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Caminhada pela Paisagem Costeira
 DTSTART:20261017T083000Z
 DTEND:20261017T103000Z
