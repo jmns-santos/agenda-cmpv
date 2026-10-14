@@ -202,6 +202,25 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-o-amor-que-perdura/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Sessão de Capacitação de "Técnicas de Estudo"
+DTSTART:20261016T143000Z
+DTEND:20261016T161500Z
+DTSTAMP:20261014T081558Z
+UID:c2Vzc2FvLWRlLWNhcGFjaXRhY2FvLWRlLXRlY25pY2FzLWRlLWVzdHVkb3wyMDI2LTEwLT
+ E0IDA4OjE1OjU3@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:O Município da Póvoa de Varzim vai dinamizar sessões de cap
+ acitação dirigidas a alunos do 7.º ano de escolaridade\, no âmbito da 
+ Atividade 1 - Envolve-te + Alunos\, inscrita na Operação “PVPV - Póvo
+ a de Varzim Promove Valores +”.\n\nMais informação: https://www.cm-pva
+ rzim.pt/eventos/sessao-de-capacitacao-de-tecnicas-de-estudo/
+LAST-MODIFIED:20261014T081558Z
+LOCATION:Auditório do Agrupamento de Escolas de Campo Aberto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sessao-de-capacitacao-de-tecnicas-de
+ -estudo/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Caminhada pela Paisagem Costeira
 DTSTART:20261017T083000Z
 DTEND:20261017T103000Z
@@ -288,6 +307,24 @@ LAST-MODIFIED:20261006T142411Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/opereta-a-morte-do-diabo/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Projeto Escola da Minha Vida
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20270424
+DTSTAMP:20261014T092233Z
+UID:cHJvamV0by1lc2NvbGEtZGEtbWluaGEtdmlkYS0zfDIwMjYtMTAtMTQgMDk6MjI6MzI=@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Comunidade e cidadania
+DESCRIPTION:O Projeto Escola da Minha Vida (PEMV)\, organizado pela Câmar
+ a Municipal da Póvoa de Varzim\, avança para nova edição\, a partir de
+  19 de outubro.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/pr
+ ojeto-escola-da-minha-vida-3/
+LAST-MODIFIED:20261014T092233Z
+LOCATION:Escolas do concelho\, Diana Bar\, Póvoa Arena\, Parque da Cidade
+  e Casa da Juventude
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Dia da Menopausa

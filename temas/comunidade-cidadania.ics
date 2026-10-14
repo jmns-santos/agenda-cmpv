@@ -28,6 +28,24 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/90-o-aniversario-do-rancho-poveiro/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Projeto Escola da Minha Vida
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20270424
+DTSTAMP:20261014T092233Z
+UID:cHJvamV0by1lc2NvbGEtZGEtbWluaGEtdmlkYS0zfDIwMjYtMTAtMTQgMDk6MjI6MzI=@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Comunidade e cidadania
+DESCRIPTION:O Projeto Escola da Minha Vida (PEMV)\, organizado pela Câmar
+ a Municipal da Póvoa de Varzim\, avança para nova edição\, a partir de
+  19 de outubro.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/pr
+ ojeto-escola-da-minha-vida-3/
+LAST-MODIFIED:20261014T092233Z
+LOCATION:Escolas do concelho\, Diana Bar\, Póvoa Arena\, Parque da Cidade
+  e Casa da Juventude
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Dia da Menopausa
 DTSTART:20261019T080000Z
 DTEND:20261019T113000Z
