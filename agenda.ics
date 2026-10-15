@@ -361,6 +361,23 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-o-jacare/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Seminário Florestas e Clima 2026
+DTSTART:20261023T080000Z
+DTEND:20261023T144500Z
+DTSTAMP:20261015T155541Z
+UID:c2VtaW5hcmlvLWZsb3Jlc3Rhcy1lLWNsaW1hLTIwMjZ8MjAyNi0xMC0xNSAxNTo0NzoxMA
+ ==@agenda.cm-pvarzim.pt
+CATEGORIES:Ambiente e mobilidade
+DESCRIPTION:No dia 23 de outubro\, a Póvoa de Varzim recebe o Seminário 
+ Florestas e Clima 2026 – Paisagem em transformação: conhecer\, gerir e
+  restaurar.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/semina
+ rio-florestas-e-clima-2026/
+LAST-MODIFIED:20261015T155541Z
+LOCATION:Auditório Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/seminario-florestas-e-clima-2026/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:FIMPV+
 DTSTART;VALUE=DATE:20261024
 DTEND;VALUE=DATE:20270531
@@ -640,6 +657,28 @@ LAST-MODIFIED:20261015T093004Z
 LOCATION:Arquivo Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Bicentenário do "Paredão" de D. Maria I (1826) - o simbolismo de
+  uma obra de engenharia
+DTSTART:20261114T150000Z
+DTEND:20261114T173000Z
+DTSTAMP:20261015T133829Z
+UID:YmljZW50ZW5hcmlvLWRvLXBhcmVkYW8tZGUtZC1tYXJpYS1pLTE4MjYtby1zaW1ib2xpc2
+ 1vLWRlLXVtYS1vYnJhLWRlLWVuZ2VuaGFyaWF8MjAyNi0xMC0xNSAxMzozODoyOA==@agenda.
+ cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No ano em que se assinala o bicentenário da conclusão da pri
+ meira intervenção humana na enseada natural da Póvoa de Varzim\, o Muse
+ u Municipal abre portas à comunidade para descobrir a importância centra
+ l da pesca na afirmação política\, socioeconómica e cultural da nossa 
+ cidade.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/bicentenar
+ io-do-paredao-de-d-maria-i-1826-o-simbolismo-de-uma-obra-de-engenharia/
+LAST-MODIFIED:20261015T133829Z
+LOCATION:Museu Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/bicentenario-do-paredao-de-d-maria-i
+ -1826-o-simbolismo-de-uma-obra-de-engenharia/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Concerto Pedro Abrunhosa
