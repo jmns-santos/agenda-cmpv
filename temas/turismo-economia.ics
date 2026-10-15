@@ -28,4 +28,21 @@ LOCATION:Mercado Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/mercado-aberto-de-flores-2026/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Curso de Paleografia
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261129
+DTSTAMP:20261015T093004Z
+UID:Y3Vyc28tZGUtcGFsZW9ncmFmaWF8MjAyNi0xMC0xNSAwOTozMDowMw==@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Turismo e economia
+DESCRIPTION:Todas as sextas-feiras de novembro (6\, 13\, 20 e 27)\, o Arqu
+ ivo Municipal irá dinamizar um curso de paleografia\, destinado a públic
+ o em geral\, professores\, investigadores e estudantes.\n\nMais informaç
+ ão: https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
+LAST-MODIFIED:20261015T093004Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
+END:VEVENT
 END:VCALENDAR
