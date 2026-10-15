@@ -90,22 +90,6 @@ URL:https://www.cm-pvarzim.pt/eventos/sessao-de-capacitacao-tecnicas-de-es
  tudo/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cinema "O Amor que Perdura"
-DTSTART:20261015T204500Z
-DTEND:20261015T223000Z
-DTSTAMP:20260922T100559Z
-UID:Y2luZW1hLW8tYW1vci1xdWUtcGVyZHVyYXwyMDI2LTA5LTIyIDEwOjA1OjU4@agenda.cm
- -pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:No dia 15 de outubro\, às 21h45\, será exibido\, no Cine-Tea
- tro Garrett\, o filme "O Amor que Perdura".\n\nMais informação: https://
- www.cm-pvarzim.pt/eventos/cinema-o-amor-que-perdura/
-LAST-MODIFIED:20260922T100559Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-o-amor-que-perdura/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Sessão de Capacitação de "Técnicas de Estudo"
 DTSTART:20261016T143000Z
 DTEND:20261016T161500Z

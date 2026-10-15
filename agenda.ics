@@ -105,64 +105,6 @@ URL:https://www.cm-pvarzim.pt/eventos/sessao-de-capacitacao-tecnicas-de-es
  tudo/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Associaç
- ão Empresarial da Póvoa de Varzim
-DTSTART:20261015T133000Z
-DTEND:20261015T151500Z
-DTSTAMP:20260904T133025Z
-UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1hc3
- NvY2lhY2FvLWVtcHJlc2FyaWFsLWRhLXBvdm9hLWRlLXZhcnppbXwyMDI2LTA5LTA0IDEzOjI5
- OjAz@agenda.cm-pvarzim.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
- pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
- ao público\, com vista à promoção de boas práticas de eficiência ene
- rgética.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/acao-de-
- sensibilizacao-povoa-de-varzim-energy-hub-associacao-empresarial-da-povoa-
- de-varzim/
-LAST-MODIFIED:20260904T133025Z
-LOCATION:Associação Empresarial da Póvoa de Varzim
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
- im-energy-hub-associacao-empresarial-da-povoa-de-varzim/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Conversa "Entre o Clima e a Paisagem": “Prescrição da Natureza
- ”
-DTSTART:20261015T170000Z
-DTEND:20261015T194500Z
-DTSTAMP:20261001T135808Z
-UID:Y29udmVyc2EtZW50cmUtby1jbGltYS1lLWEtcGFpc2FnZW0tcHJlc2NyaWNhby1kYS1uYX
- R1cmV6YXwyMDI2LTEwLTAxIDEzOjU4OjA3@agenda.cm-pvarzim.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:No dia 15 de outubro\, o ciclo “Entre o Clima e a Paisagem
- ” regressa ao Centro do Clima da Póvoa de Varzim para uma conversa dedi
- cada à relação entre natureza\, saúde e bem-estar.\n\nMais informaçã
- o: https://www.cm-pvarzim.pt/eventos/conversa-entre-o-clima-e-a-paisagem-p
- rescricao-da-natureza/
-LAST-MODIFIED:20261001T135808Z
-LOCATION:Centro do Clima
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/conversa-entre-o-clima-e-a-paisagem-
- prescricao-da-natureza/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cinema "O Amor que Perdura"
-DTSTART:20261015T204500Z
-DTEND:20261015T223000Z
-DTSTAMP:20260922T100559Z
-UID:Y2luZW1hLW8tYW1vci1xdWUtcGVyZHVyYXwyMDI2LTA5LTIyIDEwOjA1OjU4@agenda.cm
- -pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:No dia 15 de outubro\, às 21h45\, será exibido\, no Cine-Tea
- tro Garrett\, o filme "O Amor que Perdura".\n\nMais informação: https://
- www.cm-pvarzim.pt/eventos/cinema-o-amor-que-perdura/
-LAST-MODIFIED:20260922T100559Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-o-amor-que-perdura/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Sessão de Capacitação de "Técnicas de Estudo"
 DTSTART:20261016T143000Z
 DTEND:20261016T161500Z
