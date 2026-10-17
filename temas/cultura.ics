@@ -71,44 +71,6 @@ URL:https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esco
  lar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sessão de capacitação "Técnicas de Estudo"
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261017
-DTSTAMP:20261008T131608Z
-UID:c2Vzc2FvLWRlLWNhcGFjaXRhY2FvLXRlY25pY2FzLWRlLWVzdHVkb3wyMDI2LTEwLTA3ID
- A4OjMyOjI1@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:No âmbito da Atividade 1 - Envolve-te + Alunos\, inscrita na 
- Operação “PVPV - Póvoa de Varzim Promove Valores +”\, o Município 
- irá promover doze sessões de capacitação dirigidas a alunos do 10.º a
- no de escolaridade.\n\nMais informação: https://www.cm-pvarzim.pt/evento
- s/sessao-de-capacitacao-tecnicas-de-estudo/
-LAST-MODIFIED:20261008T131608Z
-LOCATION:Auditório da Escola Secundária de Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/sessao-de-capacitacao-tecnicas-de-es
- tudo/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sessão de Capacitação de "Técnicas de Estudo"
-DTSTART:20261016T143000Z
-DTEND:20261016T161500Z
-DTSTAMP:20261014T081558Z
-UID:c2Vzc2FvLWRlLWNhcGFjaXRhY2FvLWRlLXRlY25pY2FzLWRlLWVzdHVkb3wyMDI2LTEwLT
- E0IDA4OjE1OjU3@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:O Município da Póvoa de Varzim vai dinamizar sessões de cap
- acitação dirigidas a alunos do 7.º ano de escolaridade\, no âmbito da 
- Atividade 1 - Envolve-te + Alunos\, inscrita na Operação “PVPV - Póvo
- a de Varzim Promove Valores +”.\n\nMais informação: https://www.cm-pva
- rzim.pt/eventos/sessao-de-capacitacao-de-tecnicas-de-estudo/
-LAST-MODIFIED:20261014T081558Z
-LOCATION:Auditório do Agrupamento de Escolas de Campo Aberto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/sessao-de-capacitacao-de-tecnicas-de
- -estudo/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Teatro para bebés "Monstro de Companhia"
 DTSTART:20261017T100000Z
 DTEND:20261017T113000Z
