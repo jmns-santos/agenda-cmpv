@@ -12,22 +12,6 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/temas/comunidad
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:90.º aniversário do Rancho Poveiro
-DTSTART;VALUE=DATE:20260624
-DTEND;VALUE=DATE:20261018
-DTSTAMP:20260623T135738Z
-UID:OTAtby1hbml2ZXJzYXJpby1kby1yYW5jaG8tcG92ZWlyb3wyMDI2LTA2LTE5IDEzOjUyOj
- E1@agenda.cm-pvarzim.pt
-CATEGORIES:Comunidade e cidadania
-DESCRIPTION:No âmbito da celebração dos seus 90 anos\, o Rancho Poveiro
-  irá promover três iniciativas culturais.\n\nMais informação: https://
- www.cm-pvarzim.pt/eventos/90-o-aniversario-do-rancho-poveiro/
-LAST-MODIFIED:20260623T135738Z
-LOCATION:Igreja Matriz\, Largo do Passeio Alegre e Póvoa Arena
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/90-o-aniversario-do-rancho-poveiro/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Projeto Escola da Minha Vida
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20270424

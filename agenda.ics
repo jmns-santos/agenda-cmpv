@@ -11,22 +11,6 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/agenda.ics
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:90.º aniversário do Rancho Poveiro
-DTSTART;VALUE=DATE:20260624
-DTEND;VALUE=DATE:20261018
-DTSTAMP:20260623T135738Z
-UID:OTAtby1hbml2ZXJzYXJpby1kby1yYW5jaG8tcG92ZWlyb3wyMDI2LTA2LTE5IDEzOjUyOj
- E1@agenda.cm-pvarzim.pt
-CATEGORIES:Comunidade e cidadania
-DESCRIPTION:No âmbito da celebração dos seus 90 anos\, o Rancho Poveiro
-  irá promover três iniciativas culturais.\n\nMais informação: https://
- www.cm-pvarzim.pt/eventos/90-o-aniversario-do-rancho-poveiro/
-LAST-MODIFIED:20260623T135738Z
-LOCATION:Igreja Matriz\, Largo do Passeio Alegre e Póvoa Arena
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/90-o-aniversario-do-rancho-poveiro/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Mostra de Pintura "ACERVO"
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20261101
@@ -84,59 +68,6 @@ LOCATION:-
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esco
  lar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Caminhada pela Paisagem Costeira
-DTSTART:20261017T083000Z
-DTEND:20261017T103000Z
-DTSTAMP:20261006T102510Z
-UID:Y2FtaW5oYWRhLXBlbGEtcGFpc2FnZW0tY29zdGVpcmF8MjAyNi0xMC0wNiAxMDoyNDoyNA
- ==@agenda.cm-pvarzim.pt
-CATEGORIES:Desporto
-DESCRIPTION:No dia 17 de outubro\, o Centro do Clima convida a descobrir a
-  paisagem costeira de Aguçadoura numa caminhada integrada na iniciativa 
- «Paisagens com História».\n\nMais informação: https://www.cm-pvarzim.
- pt/eventos/caminhada-pela-paisagem-costeira/
-LAST-MODIFIED:20261006T102510Z
-LOCATION:Campo de Futebol de Aguçadoura (ponto de encontro)
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/caminhada-pela-paisagem-costeira/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Teatro para bebés "Monstro de Companhia"
-DTSTART:20261017T100000Z
-DTEND:20261017T113000Z
-DTSTAMP:20260831T105855Z
-UID:dGVhdHJvLXBhcmEtYmViZXMtbW9uc3Ryby1kZS1jb21wYW5oaWF8MjAyNi0wOC0yOCAwOD
- ozMzoxOA==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:No dia 17 de outubro\, às 11h00\, há teatro para toda a fam
- ília\, na sala de ensaios do Cine-Teatro Garrett.\n\nMais informação: h
- ttps://www.cm-pvarzim.pt/eventos/teatro-para-bebes-monstro-de-companhia/
-LAST-MODIFIED:20260831T105855Z
-LOCATION:Cine-Teatro Garrett - sala de ensaios
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/teatro-para-bebes-monstro-de-companh
- ia/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:"Póvoa a Cantar – 90 Anos de História\, Cultura e Tradição"
-DTSTART:20261017T204500Z
-DTEND:20261017T223000Z
-DTSTAMP:20261006T142316Z
-UID:cG92b2EtYS1jYW50YXItOTAtYW5vcy1kZS1oaXN0b3JpYS1jdWx0dXJhLWUtdHJhZGljYW
- 98MjAyNi0wOS0yOSAwOToxOTozNQ==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:No âmbito das comemorações do seu 90.º aniversário\, o Ra
- ncho Poveiro apresenta o espetáculo "Póvoa a Cantar – 90 Anos de Hist
- ória\, Cultura e Tradição"\, a 17 de outubro\, no Póvoa Arena.\n\nMais
-  informação: https://www.cm-pvarzim.pt/eventos/povoa-a-cantar-90-anos-de
- -historia-cultura-e-tradicao/
-LAST-MODIFIED:20261006T142316Z
-LOCATION:Póvoa Arena
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/povoa-a-cantar-90-anos-de-historia-c
- ultura-e-tradicao/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Caminhada Rosa
