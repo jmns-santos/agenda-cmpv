@@ -70,41 +70,6 @@ URL:https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esco
  lar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Caminhada Rosa
-DTSTART:20261018T090000Z
-DTEND:20261018T110000Z
-DTSTAMP:20261007T160243Z
-UID:Y2FtaW5oYWRhLXJvc2F8MjAyNi0xMC0wNyAxMzoxNDo1OA==@agenda.cm-pvarzim.pt
-CATEGORIES:Desporto
-DESCRIPTION:O Município da Póvoa de Varzim\, através do Pelouro da Coes
- ão Social e da sua rede de parceiros\, volta a associar-se à campanha "O
- utubro Rosa"\, promovida pela Liga Portuguesa Contra o Cancro (LPCC)\, din
- amizando uma caminhada solidária no dia 18 de outubro\, a partir das 10h0
- 0.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/caminhada-rosa/
-LAST-MODIFIED:20261007T160243Z
-LOCATION:Varzim Lazer
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/caminhada-rosa/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Opereta "A Morte do Diabo"
-DTSTART:20261018T170000Z
-DTEND:20261018T190000Z
-DTSTAMP:20261006T142411Z
-UID:b3BlcmV0YS1hLW1vcnRlLWRvLWRpYWJvfDIwMjYtMDgtMjcgMTA6MzQ6NDU=@agenda.cm
- -pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:A Associação da Banda Musical da Póvoa de Varzim vai aprese
- ntar o espetáculo musical "A Morte do Diabo – a partir de fragmentos de
-  uma opereta"\, que terá lugar no dia 18 de outubro\, às 18h00\, no Cine
- -Teatro Garrett.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/o
- pereta-a-morte-do-diabo/
-LAST-MODIFIED:20261006T142411Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/opereta-a-morte-do-diabo/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Projeto Escola da Minha Vida
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20270424
