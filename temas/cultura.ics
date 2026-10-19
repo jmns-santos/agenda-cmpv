@@ -214,14 +214,14 @@ BEGIN:VEVENT
 SUMMARY:Festa de Halloween
 DTSTART:20261030T193000Z
 DTEND:20261031T000000Z
-DTSTAMP:20260929T150602Z
+DTSTAMP:20261019T103653Z
 UID:ZmVzdGEtZGUtaGFsbG93ZWVufDIwMjYtMDktMjkgMTU6MDY6MDI=@agenda.cm-pvarzim
  .pt
 CATEGORIES:Cultura
 DESCRIPTION:A Casa da Juventude vai transformar-se no cenário ideal para 
  uma noite de terror no dia 30 de outubro.\n\nMais informação: https://ww
  w.cm-pvarzim.pt/eventos/festa-de-halloween/
-LAST-MODIFIED:20260929T150602Z
+LAST-MODIFIED:20261019T103653Z
 LOCATION:Casa da Juventude
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/festa-de-halloween/
@@ -283,7 +283,7 @@ BEGIN:VEVENT
 SUMMARY:Three Sixty Halloween
 DTSTART:20261031T220000Z
 DTEND:20261101T040000Z
-DTSTAMP:20260929T141531Z
+DTSTAMP:20261019T103529Z
 UID:dGhyZWUtc2l4dHktaGFsbG93ZWVufDIwMjYtMDktMjkgMTE6NTU6NTc=@agenda.cm-pva
  rzim.pt
 CATEGORIES:Cultura
@@ -291,7 +291,7 @@ DESCRIPTION:O Three Sixty Halloween é um evento de entretenimento e músi
  ca comercial\, a realizar no dia 31 de outubro\, no Póvoa Arena\, com uma
   lotação prevista de até 5.000 pessoas.\n\nMais informação: https://w
  ww.cm-pvarzim.pt/eventos/three-sixty-halloween/
-LAST-MODIFIED:20260929T141531Z
+LAST-MODIFIED:20261019T103529Z
 LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/three-sixty-halloween/

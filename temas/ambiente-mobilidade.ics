@@ -72,6 +72,25 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/seminario-florestas-e-clima-2026/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Ação de controlo de chorão
+DTSTART:20261024T090000Z
+DTEND:20261024T110000Z
+DTSTAMP:20261019T103346Z
+UID:YWNhby1kZS1jb250cm9sby1kZS1jaG9yYW8tMnwyMDI2LTEwLTE5IDEwOjMyOjMz@agend
+ a.cm-pvarzim.pt
+CATEGORIES:Ambiente e mobilidade
+DESCRIPTION:No dia 24 de outubro\, às 10h00\, o Centro do Clima\, em parc
+ eria com o Município da Póvoa de Varzim\, promove uma ação de controlo
+  de chorão (Carpobrotus edulis)\, uma espécie de planta invasora que ame
+ aça a vegetação nativa e a biodiversidade das zonas costeiras.\n\nMais 
+ informação: https://www.cm-pvarzim.pt/eventos/acao-de-controlo-de-chorao
+ -2/
+LAST-MODIFIED:20261019T103346Z
+LOCATION:Passadiço junto ao moinho de Aver-o-Mar
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-controlo-de-chorao-2/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Oficina "Do Plástico fiz Sardinha"
 DTSTART:20261031T103000Z
 DTEND:20261031T123000Z
