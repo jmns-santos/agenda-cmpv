@@ -88,42 +88,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia da Menopausa
-DTSTART:20261019T080000Z
-DTEND:20261019T113000Z
-DTSTAMP:20261013T085749Z
-UID:ZGlhLWRhLW1lbm9wYXVzYXwyMDI2LTA5LTI5IDEyOjIzOjE5@agenda.cm-pvarzim.pt
-CATEGORIES:Comunidade e cidadania
-DESCRIPTION:No dia 19 de outubro\, o Estádio Municipal vai acolher uma ma
- nhã de atividades dedicadas à evocação do Dia da Menopausa.\n\nMais in
- formação: https://www.cm-pvarzim.pt/eventos/dia-da-menopausa/
-LAST-MODIFIED:20261013T085749Z
-LOCATION:Estádio Municipal
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/dia-da-menopausa/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Pó
- voa Empresas
-DTSTART:20261019T173000Z
-DTEND:20261019T193000Z
-DTSTAMP:20261001T091704Z
-UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1jZW
- 50cm8tcG92b2EtZW1wcmVzYXMtMnwyMDI2LTEwLTAxIDA5OjE3OjAz@agenda.cm-pvarzim.p
- t
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
- pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
- ao público\, com vista à promoção de boas práticas de eficiência ene
- rgética.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/acao-de-
- sensibilizacao-povoa-de-varzim-energy-hub-centro-povoa-empresas-2/
-LAST-MODIFIED:20261001T091704Z
-LOCATION:Centro Póvoa Empresas
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
- im-energy-hub-centro-povoa-empresas-2/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
  pacional de Aver-o-Mar
 DTSTART:20261021T133000Z
