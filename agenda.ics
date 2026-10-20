@@ -442,6 +442,41 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Concerto de Amizade
+DTSTART:20261107T190000Z
+DTEND:20261107T203000Z
+DTSTAMP:20261020T110316Z
+UID:Y29uY2VydG8tZGUtYW1pemFkZXwyMDI2LTEwLTIwIDExOjAzOjE2@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura
+DESCRIPTION:No âmbito das relações de geminação existentes entre o Mu
+ nicípio da Póvoa de Varzim e a cidade galega de A Guarda (Espanha)\, enc
+ ontra-se programado um intercâmbio sociocultural que promete aproximar as
+  duas comunidades através da música e da arte.\n\nMais informação: htt
+ ps://www.cm-pvarzim.pt/eventos/concerto-de-amizade/
+LAST-MODIFIED:20261020T110316Z
+LOCATION:Igreja da Misericórdia
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-de-amizade/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro "Los Virtuosos"
+DTSTART:20261107T213000Z
+DTEND:20261107T230000Z
+DTSTAMP:20261020T092112Z
+UID:dGVhdHJvLWxvcy12aXJ0dW9zb3N8MjAyNi0xMC0yMCAwOToyMToxMQ==@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No âmbito da Temporada Teatral\, a Varazim Teatro apresenta\,
+  a 7 de novembro\, pelas 21h30\, a peça "Los Virtuosos" pelo Teatro del A
+ stillero\, no Cine-Teatro Garrett.\n\nMais informação: https://www.cm-pv
+ arzim.pt/eventos/teatro-los-virtuosos/
+LAST-MODIFIED:20261020T092112Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-los-virtuosos/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Bicentenário do "Paredão" de D. Maria I (1826) - o simbolismo de
   uma obra de engenharia
 DTSTART:20261114T150000Z
@@ -478,6 +513,24 @@ LAST-MODIFIED:20260807T152457Z
 LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/concerto-pedro-abrunhosa/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto Comentado
+DTSTART:20261119T183000Z
+DTEND:20261119T200000Z
+DTSTAMP:20261020T110828Z
+UID:Y29uY2VydG8tY29tZW50YWRvfDIwMjYtMTAtMjAgMTE6MDg6Mjc=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura
+DESCRIPTION:A Escola de Música da Póvoa de Varzim convida a comunidade a
+  assistir ao Concerto Comentado – Itinerários Internacionais do Repert
+ ório Violetístico\, que terá lugar no dia 19 de novembro\, às 18h30\, 
+ no Auditório Municipal.\n\nMais informação: https://www.cm-pvarzim.pt/e
+ ventos/concerto-comentado/
+LAST-MODIFIED:20261020T110828Z
+LOCATION:Auditório Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-comentado/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Teatro "Quando Menos se Espera"
