@@ -30,6 +30,40 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Lavorada Mensal
+DTSTART:20261114T143000Z
+DTEND:20261114T180000Z
+DTSTAMP:20261021T140720Z
+UID:bGF2b3JhZGEtbWVuc2FsLTN8MjAyNi0xMC0yMSAxNDowNzoxOA==@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Comunidade e cidadania
+DESCRIPTION:Segundo sábado do mês é dia de Lavorada Mensal\, na Bibliot
+ eca Municipal Rocha Peixoto. Assim\, na tarde de 14 de novembro\, entre as
+  14h30 e as 18h00\, a Associação Lavorada ensina a fazer um xaile para o
+ s dias de outono\, por entre castanhas e geropiga.\n\nMais informação: h
+ ttps://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
+LAST-MODIFIED:20261021T140720Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábados a jogar na Biblioteca
+DTSTART:20261114T150000Z
+DTEND:20261114T170000Z
+DTSTAMP:20261021T142911Z
+UID:MzYyMzE1fDIwMjYtMTAtMjEgMTQ6Mjg6NDA=@agenda.cm-pvarzim.pt
+CATEGORIES:Comunidade e cidadania
+DESCRIPTION:No dia 14 de novembro\, a partir das 15h00\, terá lugar\, na 
+ sala infantil e juvenil da Biblioteca Municipal\, mais uma sessão da inic
+ iativa "Sábados a jogar na Biblioteca".\n\nMais informação: https://www
+ .cm-pvarzim.pt/eventos/362315/
+LAST-MODIFIED:20261021T142911Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/362315/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"Deixem o Pimba em Paz"
 DTSTART:20261204T213000Z
 DTEND:20261204T233000Z
@@ -46,5 +80,22 @@ LAST-MODIFIED:20261001T145442Z
 LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/deixem-o-pimba-em-paz-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábados a jogar na Biblioteca
+DTSTART:20261212T150000Z
+DTEND:20261212T170000Z
+DTSTAMP:20261021T143254Z
+UID:c2FiYWRvcy1hLWpvZ2FyLW5hLWJpYmxpb3RlY2EtMjB8MjAyNi0xMC0yMSAxNDozMjowNg
+ ==@agenda.cm-pvarzim.pt
+CATEGORIES:Comunidade e cidadania
+DESCRIPTION:No dia 12 de dezembro\, a partir das 15h00\, terá lugar\, na 
+ sala infantil e juvenil da Biblioteca Municipal\, mais uma sessão da inic
+ iativa "Sábados a jogar na Biblioteca".\n\nMais informação: https://www
+ .cm-pvarzim.pt/eventos/sabados-a-jogar-na-biblioteca-20/
+LAST-MODIFIED:20261021T143254Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sabados-a-jogar-na-biblioteca-20/
 END:VEVENT
 END:VCALENDAR

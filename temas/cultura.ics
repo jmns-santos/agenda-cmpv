@@ -297,6 +297,24 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/three-sixty-halloween/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Exposição de fotografia "Onde eu estiver"
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261129
+DTSTAMP:20261021T134628Z
+UID:ZXhwb3NpY2FvLWRlLWZvdG9ncmFmaWEtb25kZS1ldS1lc3RpdmVyfDIwMjYtMTAtMjEgMT
+ M6NDU6NTI=@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:Entre os dias 4 e 28 de novembro\, estará patente na Bibliote
+ ca Municipal Rocha Peixoto a exposição de fotografia "Onde eu estiver"\,
+  da autoria de Francisca Machado.\n\nMais informação: https://www.cm-pva
+ rzim.pt/eventos/exposicao-de-fotografia-onde-eu-estiver/
+LAST-MODIFIED:20261021T134628Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-onde-eu-esti
+ ver/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cinema "A Saga de Anatahan"
 DTSTART:20261105T214500Z
 DTEND:20261105T234500Z
@@ -311,6 +329,28 @@ LAST-MODIFIED:20261021T081624Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-a-saga-de-anatahan/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Apresentação do livro "O chapéu\, o olho\, a cadeira e a sereia
+ : quatro breves histórias"
+DTSTART:20261107T160000Z
+DTEND:20261206T183000Z
+DTSTAMP:20261021T135603Z
+UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tY2hhcGV1LW8tb2xoby1hLWNhZGVpcmEtZS1hLX
+ NlcmVpYS1xdWF0cm8tYnJldmVzLWhpc3Rvcmlhc3wyMDI2LTEwLTIxIDEzOjU2OjAy@agenda.
+ cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:A Biblioteca Municipal Rocha Peixoto irá acolher\, no dia 7 d
+ e novembro\, às 16h00\, a sessão de apresentação do livro O chapéu\, 
+ o olho\, a cadeira e a sereia: quatro breves histórias\, da autoria de Ja
+ imemorto.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/apresent
+ acao-do-livro-o-chapeu-o-olho-a-cadeira-e-a-sereia-quatro-breves-historias
+ /
+LAST-MODIFIED:20261021T135603Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olh
+ o-a-cadeira-e-a-sereia-quatro-breves-historias/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Concerto de Amizade
@@ -379,6 +419,23 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-verity/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cais de Leitura
+DTSTART:20261110T210000Z
+DTEND:20261110T224500Z
+DTSTAMP:20261021T135838Z
+UID:Y2Fpcy1kZS1sZWl0dXJhLTIxfDIwMjYtMTAtMjEgMTM6NTg6Mzc=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura
+DESCRIPTION:No âmbito da sua programação em ambiente digital\, a Biblio
+ teca Municipal Rocha Peixoto volta a marcar encontro online para falar sob
+ re livros\, no dia 10 de novembro\, às 21h00.\n\nMais informação: https
+ ://www.cm-pvarzim.pt/eventos/cais-de-leitura-21/
+LAST-MODIFIED:20261021T135838Z
+LOCATION:online
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cais-de-leitura-21/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cinema "Naza"
 DTSTART:20261112T214500Z
 DTEND:20261112T233000Z
@@ -414,6 +471,24 @@ LOCATION:Museu Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/bicentenario-do-paredao-de-d-maria-i
  -1826-o-simbolismo-de-uma-obra-de-engenharia/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Clube de Leituras Marítimas "Livros de Marear"
+DTSTART:20261114T150000Z
+DTEND:20261114T164500Z
+DTSTAMP:20261021T142549Z
+UID:Y2x1YmUtZGUtbGVpdHVyYXMtbWFyaXRpbWFzLWxpdnJvcy1kZS1tYXJlYXItNnwyMDI2LT
+ EwLTIxIDE0OjI1OjQ4@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 14 de novembro\, às 15h00\, a Biblioteca Municipal Roc
+ ha Peixoto acolhe mais um encontro do Clube de Leituras Marítimas "Livros
+  de Marear".\n\nMais informação: https://www.cm-pvarzim.pt/eventos/clube
+ -de-leituras-maritimas-livros-de-marear-6/
+LAST-MODIFIED:20261021T142549Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/clube-de-leituras-maritimas-livros-d
+ e-marear-6/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Concerto Pedro Abrunhosa
@@ -548,5 +623,22 @@ LAST-MODIFIED:20261014T135909Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cais de Leitura
+DTSTART:20261215T210000Z
+DTEND:20261215T233000Z
+DTSTAMP:20261021T140206Z
+UID:Y2Fpcy1kZS1sZWl0dXJhLTIyfDIwMjYtMTAtMjEgMTQ6MDE6MDY=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura
+DESCRIPTION:No âmbito da sua programação em ambiente digital\, a Biblio
+ teca Municipal Rocha Peixoto volta a marcar encontro online para falar sob
+ re livros\, no dia 15 de dezembro\, às 21h00.\n\nMais informação: https
+ ://www.cm-pvarzim.pt/eventos/cais-de-leitura-22/
+LAST-MODIFIED:20261021T140206Z
+LOCATION:online
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cais-de-leitura-22/
 END:VEVENT
 END:VCALENDAR
