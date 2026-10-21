@@ -88,28 +88,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ação de Sensibilização Póvoa de Varzim Energy Hub: Centro Ocu
- pacional de Aver-o-Mar
-DTSTART:20261021T133000Z
-DTEND:20261021T151500Z
-DTSTAMP:20260904T133301Z
-UID:YWNhby1kZS1zZW5zaWJpbGl6YWNhby1wb3ZvYS1kZS12YXJ6aW0tZW5lcmd5LWh1Yi1jZW
- 50cm8tb2N1cGFjaW9uYWwtZGUtYXZlci1vLW1hcnwyMDI2LTA5LTA0IDEzOjMxOjIy@agenda.
- cm-pvarzim.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:No âmbito do "Póvoa de Varzim Energy Hub"\, a Câmara Munici
- pal irá dinamizar uma variedade de ações de sensibilização dirigidas 
- ao público\, com vista à promoção de boas práticas de eficiência ene
- rgética.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/acao-de-
- sensibilizacao-povoa-de-varzim-energy-hub-centro-ocupacional-de-aver-o-mar
- /
-LAST-MODIFIED:20260904T133301Z
-LOCATION:Centro Ocupacional de Aver-o-Mar
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/acao-de-sensibilizacao-povoa-de-varz
- im-energy-hub-centro-ocupacional-de-aver-o-mar/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Cinema "O Jacaré"
 DTSTART:20261022T204500Z
 DTEND:20261022T223000Z
