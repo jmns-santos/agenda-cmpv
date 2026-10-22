@@ -684,6 +684,40 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Teatro para bebés “A Árvore das Chupetas”
+DTSTART:20261205T110000Z
+DTEND:20261205T123000Z
+DTSTAMP:20261022T153318Z
+UID:dGVhdHJvLXBhcmEtYmViZXMtYS1hcnZvcmUtZGFzLWNodXBldGFzLTJ8MjAyNi0xMC0yMi
+ AxNTowNjowNA==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 5 de dezembro\, às 11h00\, terá lugar\, no Cine-Teatr
+ o Garrett\, teatro para toda a família.\n\nMais informação: https://www
+ .cm-pvarzim.pt/eventos/teatro-para-bebes-a-arvore-das-chupetas-2/
+LAST-MODIFIED:20261022T153318Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-para-bebes-a-arvore-das-chupe
+ tas-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Musical "Capuchinho Vermelho - o Musical"
+DTSTART:20261212T160000Z
+DTEND:20261212T173000Z
+DTSTAMP:20261022T153239Z
+UID:bXVzaWNhbC1jYXB1Y2hpbmhvLXZlcm1lbGhvLW8tbXVzaWNhbHwyMDI2LTEwLTIyIDE1Oj
+ MyOjM4@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 12 de dezembro\, o Cine-Teatro Garrett vai apresentar "
+ Capuchinho Vermelho - o Musical".\n\nMais informação: https://www.cm-pva
+ rzim.pt/eventos/musical-capuchinho-vermelho-o-musical/
+LAST-MODIFIED:20261022T153239Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/musical-capuchinho-vermelho-o-musica
+ l/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cais de Leitura
 DTSTART:20261215T210000Z
 DTEND:20261215T233000Z
