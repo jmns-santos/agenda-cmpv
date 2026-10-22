@@ -89,21 +89,6 @@ URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-pintura-gesto-de-espera
  nca/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cinema "O Jacaré"
-DTSTART:20261022T204500Z
-DTEND:20261022T223000Z
-DTSTAMP:20260922T101121Z
-UID:Y2luZW1hLW8tamFjYXJlfDIwMjYtMDktMjIgMTA6MTE6MDk=@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:No dia 22 de outubro\, às 21h45\, será exibido\, no Cine-Tea
- tro Garrett\, o filme "O Jacaré".\n\nMais informação: https://www.cm-pv
- arzim.pt/eventos/cinema-o-jacare/
-LAST-MODIFIED:20260922T101121Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-o-jacare/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:FIMPV+
 DTSTART;VALUE=DATE:20261024
 DTEND;VALUE=DATE:20270531
