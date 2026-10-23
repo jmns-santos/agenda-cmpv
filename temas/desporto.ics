@@ -30,4 +30,20 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga-a-descoberta-das-
  emocoes-6/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Gala do Desporto
+DTSTART:20261120T213000Z
+DTEND:20261120T231500Z
+DTSTAMP:20261023T105742Z
+UID:Z2FsYS1kby1kZXNwb3J0by00fDIwMjYtMTAtMjMgMTA6NTc6NDE=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Desporto
+DESCRIPTION:No dia 20 de novembro\, a Câmara Municipal da Póvoa de Varzi
+ m vai realizar mais uma edição da Gala do Desporto\, no Póvoa Arena.\n
+ \nMais informação: https://www.cm-pvarzim.pt/eventos/gala-do-desporto-4/
+LAST-MODIFIED:20261023T105742Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/gala-do-desporto-4/
+END:VEVENT
 END:VCALENDAR

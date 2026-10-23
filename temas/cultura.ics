@@ -584,6 +584,25 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-a-amiga-silenciosa/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Apresentação do livro "O extremo afiado do espelho"
+DTSTART:20261121T160000Z
+DTEND:20261121T180000Z
+DTSTAMP:20261023T091258Z
+UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tZXh0cmVtby1hZmlhZG8tZG8tZXNwZWxob3wyMD
+ I2LTEwLTIzIDA5OjEyOjU3@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:A Biblioteca Municipal Rocha Peixoto irá acolher\, no dia 21 
+ de novembro\, a partir das 16h00\, a sessão de apresentação do livro "O
+  extremo afiado do espelho"\, de Mário Amazan. A apresentação da obra s
+ erá feita pelo escritor Vítor da Rocha.\n\nMais informação: https://ww
+ w.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-extremo-afiado-do-espelho/
+LAST-MODIFIED:20261023T091258Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-extremo-afia
+ do-do-espelho/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Sessão de leitura "A ovelhinha que veio para jantar"
 DTSTART:20261121T160000Z
 DTEND:20261121T174500Z
