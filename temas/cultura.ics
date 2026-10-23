@@ -622,6 +622,23 @@ URL:https://www.cm-pvarzim.pt/eventos/sessao-de-leitura-a-ovelhinha-que-ve
  io-para-jantar/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Espetáculo de dança "AmarAmália"
+DTSTART:20261121T210000Z
+DTEND:20261121T230000Z
+DTSTAMP:20261023T152912Z
+UID:ZXNwZXRhY3Vsby1kZS1kYW5jYS1hbWFyYW1hbGlhfDIwMjYtMTAtMjMgMTU6Mjk6MTE=@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultura
+DESCRIPTION:No dia 21 de novembro\, às 21h00\, sobe ao palco do Cine-Teat
+ ro Garrett\, o espetáculo "AmarAmália"\, pela Companhia Portuguesa de Ba
+ ilado Contemporâneo.\n\nMais informação: https://www.cm-pvarzim.pt/even
+ tos/espetaculo-de-danca-amaramalia/
+LAST-MODIFIED:20261023T152912Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-amaramalia/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cinema "Trapalhões"
 DTSTART:20261122T153000Z
 DTEND:20261122T174500Z
