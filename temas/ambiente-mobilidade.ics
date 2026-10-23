@@ -12,23 +12,6 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/temas/ambiente-
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Seminário Florestas e Clima 2026
-DTSTART:20261023T080000Z
-DTEND:20261023T144500Z
-DTSTAMP:20261015T155541Z
-UID:c2VtaW5hcmlvLWZsb3Jlc3Rhcy1lLWNsaW1hLTIwMjZ8MjAyNi0xMC0xNSAxNTo0NzoxMA
- ==@agenda.cm-pvarzim.pt
-CATEGORIES:Ambiente e mobilidade
-DESCRIPTION:No dia 23 de outubro\, a Póvoa de Varzim recebe o Seminário 
- Florestas e Clima 2026 – Paisagem em transformação: conhecer\, gerir e
-  restaurar.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/semina
- rio-florestas-e-clima-2026/
-LAST-MODIFIED:20261015T155541Z
-LOCATION:Auditório Municipal
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/seminario-florestas-e-clima-2026/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Ação de controlo de chorão
 DTSTART:20261024T090000Z
 DTEND:20261024T110000Z
