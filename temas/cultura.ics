@@ -108,42 +108,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/fimpv/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ciclo de Tertúlias "Lavorada Gente"
-DTSTART:20261024T140000Z
-DTEND:20261024T160000Z
-DTSTAMP:20260930T104304Z
-UID:Y2ljbG8tZGUtdGVydHVsaWFzLWxhdm9yYWRhLWdlbnRlfDIwMjYtMDktMzAgMTA6NDM6MD
- M=@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:No dia 24 de outubro\, às 15h00\, terá lugar\, na Biblioteca
-  Municipal\, a tertúlia "Malhas e Mares: o tricot nas rotas do bacalhau" 
- com Rita Quintela e Abel Coentrão.\n\nMais informação: https://www.cm-p
- varzim.pt/eventos/ciclo-de-tertulias-lavorada-gente/
-LAST-MODIFIED:20260930T104304Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/ciclo-de-tertulias-lavorada-gente/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Concerto FIMPV+: João Neto Vieira
-DTSTART:20261024T203000Z
-DTEND:20261024T223000Z
-DTSTAMP:20261013T151305Z
-UID:Y29uY2VydG8tZmltcHYtam9hby1uZXRvLXZpZWlyYXwyMDI2LTEwLTEzIDEzOjM3OjEz@a
- genda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:O jovem pianista poveiro João Neto Vieira\, símbolo de uma n
- ova geração que cresceu com o Festival Internacional de Música da Póvo
- a de Varzim\, inaugura\, no dia 24 de outubro\, às 21h30\, no Cine-Teatro
-  Garrett\, uma série de seis encontros do FIMPV+\, evento que mantém a l
- inha condutora do Festival.\n\nMais informação: https://www.cm-pvarzim.p
- t/eventos/concerto-fimpv-joao-neto-vieira/
-LAST-MODIFIED:20261013T151305Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/concerto-fimpv-joao-neto-vieira/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Cinema "A Ovelha Choné: Trapalhada na Quinta"
 DTSTART:20261025T153000Z
 DTEND:20261025T173000Z

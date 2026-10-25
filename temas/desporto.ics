@@ -12,25 +12,6 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/temas/desporto.
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Histórias com Yoga “À descoberta das emoções”
-DTSTART:20261024T143000Z
-DTEND:20261024T160000Z
-DTSTAMP:20260930T105328Z
-UID:aGlzdG9yaWFzLWNvbS15b2dhLWEtZGVzY29iZXJ0YS1kYXMtZW1vY29lcy02fDIwMjYtMD
- ktMzAgMTA6NTM6Mjg=@agenda.cm-pvarzim.pt
-CATEGORIES:Desporto
-DESCRIPTION:O Projeto Luminisca e a Biblioteca Municipal Rocha Peixoto col
- aboram novamente convidando as famílias a embarcarem numa viagem pelo mun
- do dos livros\, das emoções e do yoga. A próxima sessão será no dia 2
- 4 de outubro\, sábado\, às 15h30.\n\nMais informação: https://www.cm-p
- varzim.pt/eventos/historias-com-yoga-a-descoberta-das-emocoes-6/
-LAST-MODIFIED:20260930T105328Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga-a-descoberta-das-
- emocoes-6/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Gala do Desporto
 DTSTART:20261120T213000Z
 DTEND:20261120T231500Z
