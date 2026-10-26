@@ -125,42 +125,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/fimpv/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cinema "A Ovelha Choné: Trapalhada na Quinta"
-DTSTART:20261025T153000Z
-DTEND:20261025T173000Z
-DTSTAMP:20260915T104642Z
-UID:Y2luZW1hLWEtb3ZlbGhhLWNob25lLXRyYXBhbGhhZGEtbmEtcXVpbnRhfDIwMjYtMDktMT
- UgMTA6NDY6NDE=@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:No dia 25 de outubro\, às 15h30\, será exibido\, no Cine-Tea
- tro Garrett\, o filme "A Ovelha Choné: Trapalhada na Quinta".\n\nMais inf
- ormação: https://www.cm-pvarzim.pt/eventos/cinema-a-ovelha-chone-trapalh
- ada-na-quinta/
-LAST-MODIFIED:20260915T104642Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-a-ovelha-chone-trapalhada-na-
- quinta/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cinema "Santo António\, O Casamenteiro de Lisboa"
-DTSTART:20261025T213000Z
-DTEND:20261025T230000Z
-DTSTAMP:20260915T105533Z
-UID:Y2luZW1hLXNhbnRvLWFudG9uaW8tby1jYXNhbWVudGVpcm8tZGUtbGlzYm9hfDIwMjYtMD
- ktMTUgMTA6NTQ6NTc=@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura
-DESCRIPTION:No dia 25 de outubro\, às 21h30\, será exibido\, no Cine-Tea
- tro Garrett\, o filme Cinema "Santo António\, O Casamenteiro de Lisboa".
- \n\nMais informação: https://www.cm-pvarzim.pt/eventos/cinema-santo-anto
- nio-o-casamenteiro-de-lisboa/
-LAST-MODIFIED:20260915T105533Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-
- de-lisboa/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:"O Caso Palimpsesto - Um Mistério no Arquivo"
 DTSTART:20261026T093000Z
 DTEND:20261030T170000Z
