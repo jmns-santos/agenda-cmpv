@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-{{HASH_SCRIPT}}'; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="Subscreva a agenda de eventos da Póvoa de Varzim no calendário do telemóvel ou do computador, completa ou por temas.">
+<meta name="description" content="Subscreva a agenda de eventos da Póvoa de Varzim no calendário do telemóvel ou do computador, completa, por tema ou por tipo.">
 <meta name="theme-color" content="#0f4c6b">
 <title>Agenda municipal da Póvoa de Varzim no seu calendário</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='5' width='26' height='24' rx='4' fill='%230f4c6b'/%3E%3Crect x='3' y='5' width='26' height='7' rx='3' fill='%230a3a52'/%3E%3Cpath d='M7 22c3-3 6-3 9 0s6 3 9 0' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -222,12 +222,20 @@
 
   <section aria-labelledby="t-temas">
     <h2 id="t-temas">Por tema</h2>
-    <p>Prefere só alguns tipos de eventos? Subscreva os temas que lhe interessam.</p>
-    <p class="aviso">Se subscrever a agenda completa, não precisa dos temas: os eventos apareceriam repetidos.</p>
+    <p>Subscreva só os assuntos que lhe interessam.</p>
+    <p class="aviso">Escolha só uma destas opções: agenda completa, temas ou tipos. Se as misturar, alguns eventos aparecem repetidos.</p>
     <ul class="temas">
 {{LISTA_TEMAS}}
     </ul>
-    <p class="nota">O tema de cada evento é atribuído automaticamente. Todos os eventos estão sempre na agenda completa.</p>
+  </section>
+
+  <section aria-labelledby="t-tipos">
+    <h2 id="t-tipos">Por tipo</h2>
+    <p>Subscreva só o género de evento que procura: concertos, cinema, exposições e outros.</p>
+    <ul class="temas">
+{{LISTA_TIPOS}}
+    </ul>
+    <p class="nota">O tema e o tipo de cada evento são atribuídos automaticamente. Todos os eventos estão sempre na agenda completa.</p>
   </section>
 
   <section class="ajuda" aria-labelledby="t-ajuda">

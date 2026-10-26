@@ -6,11 +6,13 @@ Lê os eventos publicados na agenda do site www.cm-pvarzim.pt e gera:
 
     agenda.ics              agenda completa
     temas/<tema>.ics        um calendário por tema
+    tipos/<tipo>.ics        um calendário por tipo de evento
     index.html              página pública com os links de subscrição
 
-Cada evento é arrumado num único tema, a partir de palavras-chave no
-título e na descrição (ver TEMAS mais abaixo). Assim, quem subscrever
-vários temas não vê eventos repetidos.
+Cada evento é arrumado num único tema e num único tipo, a partir de
+palavras-chave no título e na descrição (ver TEMAS e TIPOS mais abaixo).
+Assim, quem subscrever vários temas (ou vários tipos) não vê eventos
+repetidos.
 
 Uso:
     python gerar_agenda_ics.py
@@ -127,6 +129,85 @@ TEMA_PADRAO = TEMAS[-1]
 # Em caso de empate na pontuação, ganha o tema que aparece primeiro aqui.
 PRIORIDADE = ["ambiente-mobilidade", "desporto", "cultura", "turismo-economia", "comunidade-cidadania"]
 
+# Tipos de evento (o formato: concerto, exposição, oficina...).
+# Ganha a palavra-chave que aparece mais cedo no título ("Oficina de teatro"
+# é oficina; "Concerto de Natal" é concerto). Sem nada no título, vale a
+# descrição. Sem nada em nenhum, fica em "Outros".
+TIPOS = [
+    Tema("concertos", "Concertos e música", "Concertos, recitais e música ao vivo", [
+        "concerto", "recital", "orquestra", r"bandas?\b", "fado", r"coros?\b", "coral",
+        "tributo", "ensemble", "sons no patrimonio", r"dj\b", "jazz", "fanfarra", r"tunas?\b",
+        "musica", "audicao", r"cantar\b", "cantares", "cantigas", "janeiras", "guitarra",
+        "trompete", "piano", "pifaro",
+    ], "#b03a5b"),
+    Tema("cinema", "Cinema", "Sessões de cinema e documentários", [
+        "cinema", r"filmes?\b", "documentario", "curtas metragens", "cineclube",
+    ], "#7a3e9d"),
+    Tema("teatro-espetaculos", "Teatro e espetáculos", "Teatro, dança, musicais, circo e humor", [
+        "teatro", "danca", r"dance\b", "bailado", "ballet", "hip hop", "espetaculo", r"musical\b",
+        "opera", "opereta", "circo", "stand up", "comedia", "comedy", "humor", "magia",
+        "marionetas", "fantoches", r"galas?\b", "performance", "fashion", "desfile de moda",
+        "miss povoa",
+    ], "#c2185b"),
+    Tema("exposicoes", "Exposições", "Exposições e mostras", [
+        "exposi", r"mostras?\b", "inauguracao da exposi", "instalacao", "mural", "bienal",
+        "residencia artistica",
+    ], "#8d6e00"),
+    Tema("livros-leitura", "Livros e leitura", "Apresentações de livros, leituras e escrita", [
+        "livro", "leitura", "leitores", r"ler\b", "poesia", "poemas", "literari", "escrita",
+        r"contos?\b", "conta contos", r"historias\b", "book club", "boletim cultural",
+    ], "#5d4037"),
+    Tema("oficinas-atividades", "Oficinas e atividades", "Oficinas, workshops, cursos e programas de férias", [
+        "oficina", "workshop", "atelie", "atelier", "curso", "formacao", "capacitacao",
+        "masterclass", r"aulas?\b", "laboratorio", "explicacoes", r"artes (?:e )?oficios",
+        "primeiros socorros", "repair cafe", "lavorada", "crochet", "tricot", r"ferias\b",
+        "acampamento", "programa psicoeducativo", "atividade ludica",
+    ], "#00796b"),
+    Tema("conferencias-sessoes", "Conferências e sessões", "Conferências, palestras, debates e sessões informativas", [
+        "conferencia", "palestra", "coloquio", "seminario", "congresso", "jornadas",
+        "tertulia", "debate", "mesa redonda", "mesa de reflexao", "webinar", "encontro",
+        "forum", "cimeira", "summit", "ciclo aberto", "conversa",
+        r"sess(?:ao|oes) (?:de )?(?:informativ|esclarecimento|sensibilizacao|publica|sobre|com|apresentacao|intercambio)",
+        r"acao de sensibilizacao", r"apresentacao do (?:projeto|pacto|plano|programa|estudo)",
+        "informar para",
+    ], "#1c6fa6"),
+    Tema("provas-desportivas", "Provas e atividade física", "Torneios, corridas, caminhadas e aulas desportivas", [
+        "torneio", "campeonato", "championship", r"taca\b", r"cup\b", r"open\b", "trofeu",
+        "corrida", "maratona", "caminhada", "trail", r"cross\b", "corta mato", "raid", "meeting",
+        "classica", r"provas?\b", "regata", "futebol", "football", "futsal", "andebol", "basquet",
+        "voleibol", "hoquei", "atletismo", r"ppa\b", "natacao", "surf", "bodyboard", "ciclismo",
+        "btt", "padel", "tenis", "squash", "boccia", "xadrez", "ginastica", "aerobica", "fitness",
+        "yoga", "zumba", "pilates", "desport", "atividade fisica", r"sub \d+",
+    ], "#2e7d4f"),
+    Tema("festas-feiras", "Festas, feiras e mercados", "Festas populares, festivais, feiras e mercados", [
+        r"festas?\b", r"fest\b", "festival", "festeja", "arraial", "romaria", "procissao",
+        "peregrinacao", "semana santa", "solenidades", "queima de judas", "trono de sao pedro",
+        "feira", "mercado", "mercadinho", "carnaval", "halloween", r"natal\b", "fim d ano",
+        "passagem de ano", "pascoa", "sardinhada", "magusto", "santos populares", "cortejo",
+        "desfile", "convivio", "by night", "sunset", "noite branca", "mostra gastronom",
+        "gastronom", "cozinha ao vivo", "showcooking", "wine", "vinho", "chocolate", "agrosemana",
+        "burger", "food truck",
+    ], "#c0532a"),
+    Tema("visitas-passeios", "Visitas e passeios", "Visitas guiadas, roteiros e passeios", [
+        "visita", "roteiro", "passeio", r"passear\b", "percurso", r"rotas?\b", "peddy paper",
+        "observacao de aves", "descobrir",
+    ], "#1f7a8c"),
+    Tema("acoes-campanhas", "Ações e campanhas", "Ações ambientais, de saúde e solidárias", [
+        "plantacao", "limpeza", "acao de controlo", "ecocentro", "reciclag", "campanha",
+        "peditorio", "rastreio", "dadiva", "doacao", "recolha", "voluntariado", r"saude primeiro",
+        r"acao (?:de )?(?:promocao|saude)", "outubro rosa", "pelo clima", "restart a heart",
+    ], "#1c7f5a"),
+    Tema("comemoracoes", "Comemorações e cerimónias", "Dias comemorativos, cerimónias e sessões solenes", [
+        "sessao solene", "cerimonia", "tomada de posse", "assembleia municipal", "reuniao publica",
+        "reuniao de camara", "inauguracao", "homenagem", "comemora", "celebracao",
+        r"dia (?:mundial|internacional|nacional|europeu|do|da|dos|das|de)\b", r"semana europeia",
+        "aniversario", "centenario", "bicentenario", "25 de abril", "geminac", "tragedia maritima",
+        "memoria da tragedia", "orcamento participativo",
+    ], "#5b4b9a"),
+    Tema("outros", "Outros", "Restantes eventos", [], "#6b7780"),
+]
+TIPO_PADRAO = TIPOS[-1]
+
 # Campos da API que possam trazer categorias/etiquetas do próprio site.
 # Se existirem, contam tanto como o título na classificação.
 CAMPOS_CATEGORIA = ("categories", "category", "subjects", "subject", "tags", "event_type", "type")
@@ -206,6 +287,7 @@ def _compilar(temas):
 
 
 PADROES = _compilar(TEMAS)
+PADROES_TIPO = _compilar(TIPOS)
 ORDEM_EMPATE = {slug: i for i, slug in enumerate(PRIORIDADE)}
 
 
@@ -243,6 +325,28 @@ def classificar(item):
         ):
             melhor, melhor_pontos = tema, pontos
     return melhor
+
+
+def _primeiro_tipo(texto):
+    """Tipo cuja palavra-chave aparece mais cedo no texto (empate: a mais longa)."""
+    melhor, melhor_chave = None, None
+    for tipo in TIPOS:
+        for padrao in PADROES_TIPO[tipo.slug]:
+            m = padrao.search(texto)
+            if m:
+                chave = (m.start(), -(m.end() - m.start()))
+                if melhor_chave is None or chave < melhor_chave:
+                    melhor, melhor_chave = tipo, chave
+    return melhor
+
+
+def classificar_tipo(item):
+    titulo = normalizar(limpar_texto(item.get("title")))
+    tipo = _primeiro_tipo(titulo)
+    if tipo is None:
+        descricao = normalizar(limpar_texto(item.get("description") or item.get("text")))
+        tipo = _primeiro_tipo(descricao)
+    return tipo or TIPO_PADRAO
 
 
 # ---------------------------------------------------------------------------
@@ -360,7 +464,7 @@ def novo_calendario(nome, descricao, url_fonte):
     return cal
 
 
-def criar_evento(item, tema):
+def criar_evento(item, tema, tipo):
     inicio = parse_iso(item.get("start"))
     fim = parse_iso(item.get("end")) or inicio + timedelta(hours=1)
     if fim < inicio:
@@ -398,7 +502,7 @@ def criar_evento(item, tema):
     if link:
         ev.add("url", link)
 
-    ev.add("categories", [tema.nome])
+    ev.add("categories", [tema.nome, tipo.nome])
     ev.add("transp", "TRANSPARENT")  # não marca a pessoa como "ocupada"
     return ev
 
@@ -408,27 +512,28 @@ def ordenar(itens):
 
 
 def construir_calendarios(itens, url_base):
-    """Devolve {caminho_relativo: bytes} e a contagem de eventos por tema."""
-    temas_todos = TEMAS
+    """Devolve {caminho_relativo: bytes} e a contagem de eventos por tema e por tipo."""
     geral = novo_calendario(NOME_GERAL, "Todos os eventos da agenda municipal.",
                             url_ics(url_base, "agenda.ics"))
-    por_tema = {
-        t.slug: novo_calendario(PREFIXO_TEMA + t.nome, t.resumo + ".",
-                                url_ics(url_base, "temas/{}.ics".format(t.slug)))
-        for t in temas_todos
-    }
-    contagem = {t.slug: 0 for t in temas_todos}
+    grupos = {}
+    for pasta, lista in (("temas", TEMAS), ("tipos", TIPOS)):
+        for g in lista:
+            caminho = "{}/{}.ics".format(pasta, g.slug)
+            grupos[caminho] = novo_calendario(PREFIXO_TEMA + g.nome, g.resumo + ".", url_ics(url_base, caminho))
+    contagem = {"temas": {t.slug: 0 for t in TEMAS}, "tipos": {t.slug: 0 for t in TIPOS}}
 
     for item in ordenar(itens):
-        tema = classificar(item)
-        contagem[tema.slug] += 1
-        geral.add_component(criar_evento(item, tema))
-        por_tema[tema.slug].add_component(criar_evento(item, tema))
-        logging.debug("%-22s %s", tema.slug, limpar_texto(item.get("title")))
+        tema, tipo = classificar(item), classificar_tipo(item)
+        contagem["temas"][tema.slug] += 1
+        contagem["tipos"][tipo.slug] += 1
+        geral.add_component(criar_evento(item, tema, tipo))
+        grupos["temas/{}.ics".format(tema.slug)].add_component(criar_evento(item, tema, tipo))
+        grupos["tipos/{}.ics".format(tipo.slug)].add_component(criar_evento(item, tema, tipo))
+        logging.debug("%-22s %-22s %s", tema.slug, tipo.slug, limpar_texto(item.get("title")))
 
     ficheiros = {"agenda.ics": geral.to_ical()}
-    for slug, cal in por_tema.items():
-        ficheiros["temas/{}.ics".format(slug)] = cal.to_ical()
+    for caminho, cal in grupos.items():
+        ficheiros[caminho] = cal.to_ical()
     return ficheiros, contagem
 
 
@@ -466,11 +571,9 @@ def bloco_subscricao(url_base, caminho, rotulo):
     ).format(r=r, **l)
 
 
-def gerar_pagina(contagem, total, url_base):
-    modelo = MODELO_PAGINA.read_text(encoding="utf-8")
-
+def lista_grupos(grupos, pasta, contagem, url_base):
     linhas = []
-    for tema in TEMAS:
+    for g in grupos:
         linhas.append(
             '<li class="tema" style="--cor-tema: {cor}">\n'
             '  <div class="tema-texto">\n'
@@ -480,13 +583,19 @@ def gerar_pagina(contagem, total, url_base):
             '  </div>\n'
             '  {acoes}\n'
             '</li>'.format(
-                cor=html.escape(tema.cor, quote=True),
-                nome=html.escape(tema.nome),
-                resumo=html.escape(tema.resumo),
-                contagem=texto_contagem(contagem[tema.slug]),
-                acoes=bloco_subscricao(url_base, "temas/{}.ics".format(tema.slug), tema.nome),
+                cor=html.escape(g.cor, quote=True),
+                nome=html.escape(g.nome),
+                resumo=html.escape(g.resumo),
+                contagem=texto_contagem(contagem[g.slug]),
+                acoes=bloco_subscricao(url_base, "{}/{}.ics".format(pasta, g.slug), g.nome),
             )
         )
+    return "\n".join(linhas)
+
+
+
+def gerar_pagina(contagem, total, url_base):
+    modelo = MODELO_PAGINA.read_text(encoding="utf-8")
 
     script = re.search(r"<script>(.*?)</script>", modelo, re.S)
     hash_script = base64.b64encode(hashlib.sha256(script.group(1).encode("utf-8")).digest()).decode() if script else ""
@@ -495,7 +604,8 @@ def gerar_pagina(contagem, total, url_base):
         "{{HASH_SCRIPT}}": hash_script,
         "{{TOTAL}}": texto_contagem(total),
         "{{ACOES_GERAL}}": bloco_subscricao(url_base, "agenda.ics", "a agenda completa"),
-        "{{LISTA_TEMAS}}": "\n".join(linhas),
+        "{{LISTA_TEMAS}}": lista_grupos(TEMAS, "temas", contagem["temas"], url_base),
+        "{{LISTA_TIPOS}}": lista_grupos(TIPOS, "tipos", contagem["tipos"], url_base),
         "{{FONTE_PAGINA}}": html.escape(FONTE_PAGINA, quote=True),
     }
     for chave, valor in substituicoes.items():
@@ -527,10 +637,11 @@ def gerar_saidas(itens, pasta, url_base):
     ficheiros["index.html"] = gerar_pagina(contagem, len(itens), url_base)
     for caminho, conteudo in ficheiros.items():
         escrever_atomico(conteudo, pasta / caminho)
-    atuais = {Path(c).name for c in ficheiros if c.startswith("temas/")}
-    for antigo in (pasta / "temas").glob("*.ics"):
-        if antigo.name not in atuais:
-            antigo.unlink()
+    for sub in ("temas", "tipos"):
+        atuais = {Path(c).name for c in ficheiros if c.startswith(sub + "/")}
+        for antigo in (pasta / sub).glob("*.ics"):
+            if antigo.name not in atuais:
+                antigo.unlink()
     if pasta.resolve() != PASTA_SCRIPT and PASTA_FONTES.is_dir():
         # para a página funcionar também quando é gerada noutra pasta
         (pasta / "fontes").mkdir(exist_ok=True)
@@ -540,11 +651,11 @@ def gerar_saidas(itens, pasta, url_base):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Gera a agenda municipal em .ics (geral e por tema).")
+    parser = argparse.ArgumentParser(description="Gera a agenda municipal em .ics (geral, por tema e por tipo).")
     parser.add_argument("--pasta-saida", type=Path, default=PASTA_SCRIPT)
     parser.add_argument("--url-publica", default=URL_PUBLICA, help="Endereço público dos ficheiros (termina em /)")
     parser.add_argument("--horizonte-meses", type=int, default=18)
-    parser.add_argument("--detalhe", action="store_true", help="Mostra o tema atribuído a cada evento")
+    parser.add_argument("--detalhe", action="store_true", help="Mostra o tema e o tipo atribuídos a cada evento")
     parser.add_argument("--campos", action="store_true", help="Mostra os campos que o site devolve e termina")
     args = parser.parse_args()
 
@@ -579,7 +690,9 @@ def main():
 
     logging.info("Total: %s eventos", len(itens))
     for tema in TEMAS:
-        logging.info("  %-34s %s", tema.nome, contagem[tema.slug])
+        logging.info("  %-34s %s", tema.nome, contagem["temas"][tema.slug])
+    for tipo in TIPOS:
+        logging.info("  %-34s %s", tipo.nome, contagem["tipos"][tipo.slug])
 
 
 if __name__ == "__main__":
