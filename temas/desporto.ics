@@ -18,7 +18,7 @@ DTEND:20261120T231500Z
 DTSTAMP:20261023T105742Z
 UID:Z2FsYS1kby1kZXNwb3J0by00fDIwMjYtMTAtMjMgMTA6NTc6NDE=@agenda.cm-pvarzim
  .pt
-CATEGORIES:Desporto
+CATEGORIES:Desporto,Teatro e espetáculos
 DESCRIPTION:No dia 20 de novembro\, a Câmara Municipal da Póvoa de Varzi
  m vai realizar mais uma edição da Gala do Desporto\, no Póvoa Arena.\n
  \nMais informação: https://www.cm-pvarzim.pt/eventos/gala-do-desporto-4/
@@ -26,5 +26,23 @@ LAST-MODIFIED:20261023T105742Z
 LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/gala-do-desporto-4/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Histórias com Yoga
+DTSTART:20261205T153000Z
+DTEND:20261205T171500Z
+DTSTAMP:20261026T104129Z
+UID:aGlzdG9yaWFzLWNvbS15b2dhfDIwMjYtMTAtMjYgMTA6NDE6Mjg=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Desporto,Livros e leitura
+DESCRIPTION:O Projeto Luminisca e a Biblioteca Municipal Rocha Peixoto vol
+ tam a convidar as famílias a embarcarem numa viagem pelo mundo dos livros
+ \, das emoções e do yoga\, no próximo sábado\, 5 de dezembro\, às 15h
+ 30.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/historias-com-
+ yoga/
+LAST-MODIFIED:20261026T104129Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga/
 END:VEVENT
 END:VCALENDAR

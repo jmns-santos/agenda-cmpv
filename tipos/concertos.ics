@@ -1,0 +1,100 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Concertos, recitais e música ao vivo.
+NAME:Póvoa de Varzim: Concertos e música
+X-WR-CALNAME:Póvoa de Varzim: Concertos e música
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/tipos/concertos
+ .ics
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Concerto "Disco Voador"
+DTSTART:20261030T213000Z
+DTEND:20261030T233000Z
+DTSTAMP:20260810T092500Z
+UID:Y29uY2VydG8tZGlzY28tdm9hZG9yfDIwMjYtMDgtMTAgMDk6MjQ6NTk=@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Cultura,Concertos e música
+DESCRIPTION:No dia 30 de outubro\, às 21h30\, o Café-Concerto vai acolhe
+ r um concerto com Disco Voador.\n\nMais informação: https://www.cm-pvarz
+ im.pt/eventos/concerto-disco-voador/
+LAST-MODIFIED:20260810T092500Z
+LOCATION:Cine-Teatro Garrett - Café-Concerto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-disco-voador/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto Juliana Linhares "Até Cansar o Cansaço"
+DTSTART:20261031T213000Z
+DTEND:20261031T233000Z
+DTSTAMP:20260918T143902Z
+UID:Y29uY2VydG8tanVsaWFuYS1saW5oYXJlcy1hdGUtY2Fuc2FyLW8tY2Fuc2Fjb3wyMDI2LT
+ A4LTI2IDExOjM1OjQ4@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Concertos e música
+DESCRIPTION:No dia 31 de outubro\, às 21h30\, Juliana Linhares vai aprese
+ ntar\, no Cine-Teatro Garrett\, "Até Cansar o Cansaço".\n\nMais informa
+ ção: https://www.cm-pvarzim.pt/eventos/concerto-juliana-linhares-ate-can
+ sar-o-cansaco/
+LAST-MODIFIED:20260918T143902Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-juliana-linhares-ate-cansar
+ -o-cansaco/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto de Amizade
+DTSTART:20261107T190000Z
+DTEND:20261107T203000Z
+DTSTAMP:20261020T110316Z
+UID:Y29uY2VydG8tZGUtYW1pemFkZXwyMDI2LTEwLTIwIDExOjAzOjE2@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura,Concertos e música
+DESCRIPTION:No âmbito das relações de geminação existentes entre o Mu
+ nicípio da Póvoa de Varzim e a cidade galega de A Guarda (Espanha)\, enc
+ ontra-se programado um intercâmbio sociocultural que promete aproximar as
+  duas comunidades através da música e da arte.\n\nMais informação: htt
+ ps://www.cm-pvarzim.pt/eventos/concerto-de-amizade/
+LAST-MODIFIED:20261020T110316Z
+LOCATION:Igreja da Misericórdia
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-de-amizade/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto Pedro Abrunhosa
+DTSTART:20261114T213000Z
+DTEND:20261114T230000Z
+DTSTAMP:20260807T152457Z
+UID:Y29uY2VydG8tcGVkcm8tYWJydW5ob3NhfDIwMjYtMDgtMDcgMTU6MjQ6NTc=@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Cultura,Concertos e música
+DESCRIPTION:No dia 14 de novembro\, às 21h30\, Pedro Abrunhosa vai atuar 
+ no Póvoa Arena.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/c
+ oncerto-pedro-abrunhosa/
+LAST-MODIFIED:20260807T152457Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-pedro-abrunhosa/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto Comentado
+DTSTART:20261119T183000Z
+DTEND:20261119T200000Z
+DTSTAMP:20261020T110828Z
+UID:Y29uY2VydG8tY29tZW50YWRvfDIwMjYtMTAtMjAgMTE6MDg6Mjc=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura,Concertos e música
+DESCRIPTION:A Escola de Música da Póvoa de Varzim convida a comunidade a
+  assistir ao Concerto Comentado – Itinerários Internacionais do Repert
+ ório Violetístico\, que terá lugar no dia 19 de novembro\, às 18h30\, 
+ no Auditório Municipal.\n\nMais informação: https://www.cm-pvarzim.pt/e
+ ventos/concerto-comentado/
+LAST-MODIFIED:20261020T110828Z
+LOCATION:Auditório Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-comentado/
+END:VEVENT
+END:VCALENDAR

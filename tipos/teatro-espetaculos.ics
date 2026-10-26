@@ -1,0 +1,114 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Teatro, dança, musicais, circo e humor.
+NAME:Póvoa de Varzim: Teatro e espetáculos
+X-WR-CALNAME:Póvoa de Varzim: Teatro e espetáculos
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/tipos/teatro-es
+ petaculos.ics
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Teatro "Los Virtuosos"
+DTSTART:20261107T213000Z
+DTEND:20261107T230000Z
+DTSTAMP:20261020T092112Z
+UID:dGVhdHJvLWxvcy12aXJ0dW9zb3N8MjAyNi0xMC0yMCAwOToyMToxMQ==@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Cultura,Teatro e espetáculos
+DESCRIPTION:No âmbito da Temporada Teatral\, a Varazim Teatro apresenta\,
+  a 7 de novembro\, pelas 21h30\, a peça "Los Virtuosos" pelo Teatro del A
+ stillero\, no Cine-Teatro Garrett.\n\nMais informação: https://www.cm-pv
+ arzim.pt/eventos/teatro-los-virtuosos/
+LAST-MODIFIED:20261020T092112Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-los-virtuosos/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Gala do Desporto
+DTSTART:20261120T213000Z
+DTEND:20261120T231500Z
+DTSTAMP:20261023T105742Z
+UID:Z2FsYS1kby1kZXNwb3J0by00fDIwMjYtMTAtMjMgMTA6NTc6NDE=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Desporto,Teatro e espetáculos
+DESCRIPTION:No dia 20 de novembro\, a Câmara Municipal da Póvoa de Varzi
+ m vai realizar mais uma edição da Gala do Desporto\, no Póvoa Arena.\n
+ \nMais informação: https://www.cm-pvarzim.pt/eventos/gala-do-desporto-4/
+LAST-MODIFIED:20261023T105742Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/gala-do-desporto-4/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Espetáculo de dança "AmarAmália"
+DTSTART:20261121T210000Z
+DTEND:20261121T230000Z
+DTSTAMP:20261023T152912Z
+UID:ZXNwZXRhY3Vsby1kZS1kYW5jYS1hbWFyYW1hbGlhfDIwMjYtMTAtMjMgMTU6Mjk6MTE=@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultura,Teatro e espetáculos
+DESCRIPTION:No dia 21 de novembro\, às 21h00\, sobe ao palco do Cine-Teat
+ ro Garrett\, o espetáculo "AmarAmália"\, pela Companhia Portuguesa de Ba
+ ilado Contemporâneo.\n\nMais informação: https://www.cm-pvarzim.pt/even
+ tos/espetaculo-de-danca-amaramalia/
+LAST-MODIFIED:20261023T152912Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-amaramalia/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro "Quando Menos se Espera"
+DTSTART:20261201T213000Z
+DTEND:20261202T233000Z
+DTSTAMP:20261014T135909Z
+UID:dGVhdHJvLXF1YW5kby1tZW5vcy1zZS1lc3BlcmF8MjAyNi0wOS0wNCAwOTozMjowNg==@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultura,Teatro e espetáculos
+DESCRIPTION:Nos dias 1 e 2 de dezembro\, pelas 21h30\, sobe ao palco do Ci
+ ne-Teatro Garrett a peça "Quando Menos se Espera".\n\nMais informação: 
+ https://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
+LAST-MODIFIED:20261014T135909Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro para bebés “A Árvore das Chupetas”
+DTSTART:20261205T110000Z
+DTEND:20261205T123000Z
+DTSTAMP:20261022T153318Z
+UID:dGVhdHJvLXBhcmEtYmViZXMtYS1hcnZvcmUtZGFzLWNodXBldGFzLTJ8MjAyNi0xMC0yMi
+ AxNTowNjowNA==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Teatro e espetáculos
+DESCRIPTION:No dia 5 de dezembro\, às 11h00\, terá lugar\, no Cine-Teatr
+ o Garrett\, teatro para toda a família.\n\nMais informação: https://www
+ .cm-pvarzim.pt/eventos/teatro-para-bebes-a-arvore-das-chupetas-2/
+LAST-MODIFIED:20261022T153318Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-para-bebes-a-arvore-das-chupe
+ tas-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Musical "Capuchinho Vermelho - o Musical"
+DTSTART:20261212T160000Z
+DTEND:20261212T173000Z
+DTSTAMP:20261022T153239Z
+UID:bXVzaWNhbC1jYXB1Y2hpbmhvLXZlcm1lbGhvLW8tbXVzaWNhbHwyMDI2LTEwLTIyIDE1Oj
+ MyOjM4@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Teatro e espetáculos
+DESCRIPTION:No dia 12 de dezembro\, o Cine-Teatro Garrett vai apresentar "
+ Capuchinho Vermelho - o Musical".\n\nMais informação: https://www.cm-pva
+ rzim.pt/eventos/musical-capuchinho-vermelho-o-musical/
+LAST-MODIFIED:20261022T153239Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/musical-capuchinho-vermelho-o-musica
+ l/
+END:VEVENT
+END:VCALENDAR

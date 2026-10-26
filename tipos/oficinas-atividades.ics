@@ -1,0 +1,66 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Oficinas, workshops, cursos e programas de férias.
+NAME:Póvoa de Varzim: Oficinas e atividades
+X-WR-CALNAME:Póvoa de Varzim: Oficinas e atividades
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/tipos/oficinas-
+ atividades.ics
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Oficina "Do Plástico fiz Sardinha"
+DTSTART:20261031T103000Z
+DTEND:20261031T123000Z
+DTSTAMP:20260831T105731Z
+UID:b2ZpY2luYS1kby1wbGFzdGljby1maXotc2FyZGluaGF8MjAyNi0wOC0zMSAwOTo1MjoyNg
+ ==@agenda.cm-pvarzim.pt
+CATEGORIES:Ambiente e mobilidade,Oficinas e atividades
+DESCRIPTION:No dia 31 de outubro\, pelas 10h30\, o Café-Concerto do Cine-
+ Teatro Garrett vai acolher a Oficina "Do Plástico fiz Sardinha".\n\nMais 
+ informação: https://www.cm-pvarzim.pt/eventos/oficina-do-plastico-fiz-sa
+ rdinha/
+LAST-MODIFIED:20260831T105731Z
+LOCATION:Cine-Teatro Garrett - Café-Concerto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/oficina-do-plastico-fiz-sardinha/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Curso de Paleografia
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261129
+DTSTAMP:20261015T093004Z
+UID:Y3Vyc28tZGUtcGFsZW9ncmFmaWF8MjAyNi0xMC0xNSAwOTozMDowMw==@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Turismo e economia,Oficinas e atividades
+DESCRIPTION:Todas as sextas-feiras de novembro (6\, 13\, 20 e 27)\, o Arqu
+ ivo Municipal irá dinamizar um curso de paleografia\, destinado a públic
+ o em geral\, professores\, investigadores e estudantes.\n\nMais informaç
+ ão: https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
+LAST-MODIFIED:20261015T093004Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lavorada Mensal
+DTSTART:20261114T143000Z
+DTEND:20261114T180000Z
+DTSTAMP:20261021T140720Z
+UID:bGF2b3JhZGEtbWVuc2FsLTN8MjAyNi0xMC0yMSAxNDowNzoxOA==@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Comunidade e cidadania,Oficinas e atividades
+DESCRIPTION:Segundo sábado do mês é dia de Lavorada Mensal\, na Bibliot
+ eca Municipal Rocha Peixoto. Assim\, na tarde de 14 de novembro\, entre as
+  14h30 e as 18h00\, a Associação Lavorada ensina a fazer um xaile para o
+ s dias de outono\, por entre castanhas e geropiga.\n\nMais informação: h
+ ttps://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
+LAST-MODIFIED:20261021T140720Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
+END:VEVENT
+END:VCALENDAR

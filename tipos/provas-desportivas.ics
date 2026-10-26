@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Torneios, corridas, caminhadas e aulas desportivas.
+NAME:Póvoa de Varzim: Provas e atividade física
+X-WR-CALNAME:Póvoa de Varzim: Provas e atividade física
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/tipos/provas-de
+ sportivas.ics
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+END:VCALENDAR
