@@ -1,0 +1,1376 @@
+{
+ "ordem": [
+  "pt",
+  "en",
+  "es",
+  "it",
+  "fr",
+  "de",
+  "zh",
+  "ja",
+  "nl",
+  "pl"
+ ],
+ "linguas": {
+  "pt": {
+   "nome": "Português",
+   "bandeira": "pt",
+   "html_lang": "pt-PT",
+   "titulo_pagina": "NEXO/Eventos · Agenda municipal da Póvoa de Varzim",
+   "descricao_meta": "Subscreva a agenda municipal da Póvoa de Varzim no seu calendário: completa, por tema ou por tipo de evento.",
+   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Eventos",
+   "sub_html": "A <strong>agenda</strong> municipal da Póvoa de Varzim no <strong>seu calendário</strong>",
+   "saltar": "Saltar para o conteúdo",
+   "lingua": "Língua",
+   "letra": "Tamanho da letra",
+   "letra_menos": "Diminuir a letra",
+   "letra_mais": "Aumentar a letra",
+   "pergunta": "Que calendário quer utilizar?",
+   "op_google": "Google",
+   "op_outlook": "Outlook",
+   "op_apple": "iPhone, iPad ou Mac",
+   "op_android": "Android",
+   "op_outro": "Outro",
+   "dica_google": "Abre o Google Calendar na sua conta Google e pede confirmação.",
+   "dica_outlook": "Abre o Outlook na web (conta Microsoft 365) e pede confirmação.",
+   "dica_apple": "Abre a app Calendário. Use no próprio iPhone, iPad ou Mac.",
+   "dica_android": "O calendário fica na sua conta Google: aparece no Google Calendar e no Calendário Samsung.",
+   "dica_outro": "Copie o link e adicione-o na sua aplicação como calendário por URL (subscrição).",
+   "subscrever": "Subscrever",
+   "copiar": "Copiar link",
+   "copiado": "Link copiado. Cole-o na sua aplicação de calendário.",
+   "copiar_falhou": "Não foi possível copiar automaticamente. Selecione e copie o link:",
+   "completa_titulo": "Agenda completa",
+   "completa_texto": "Todos os eventos num só calendário ({total}).",
+   "evento_1": "1 evento",
+   "eventos_n": "{n} eventos",
+   "sem_eventos": "Sem eventos de momento",
+   "da_agenda": "{p} da agenda",
+   "por_tema": "Subscrever por tema",
+   "por_tipo": "Subscrever por tipo",
+   "aviso": "Evite subscrever temas e tipos em simultâneo, para não receber eventos repetidos.",
+   "ajuda": "Ajuda",
+   "h_google_t": "Google",
+   "h_google_html": "<p>Toque em Subscrever: abre o Google Calendar na conta Google com sessão iniciada. Confirme para adicionar. O calendário aparece em todos os dispositivos ligados a essa conta.</p>",
+   "h_outlook_t": "Outlook",
+   "h_outlook_html": "<p>Com uma conta Microsoft 365 (profissional ou escolar), Subscrever abre o Outlook na web e pede confirmação.</p><p>Com uma conta pessoal (Outlook.com, Hotmail), escolha «Outro», copie o link e, em outlook.com, adicione um calendário a partir da Web.</p>",
+   "h_apple_t": "iPhone, iPad ou Mac",
+   "h_apple_html": "<p>No próprio iPhone, iPad ou Mac, toque em Subscrever e confirme no Calendário. Num computador Windows este botão não funciona: escolha Google ou Outlook.</p><p>Se nada acontecer (por exemplo, com a página aberta dentro de outra app), abra-a no Safari, ou escolha «Outro», copie o link e adicione-o nas definições do Calendário como calendário subscrito.</p>",
+   "h_android_t": "Android",
+   "h_android_html": "<p>Toque em Subscrever: o calendário fica na sua conta Google e aparece no Google Calendar e no Calendário Samsung. Se não aparecer, abra as definições do Google Calendar, toque no nome do calendário e ative a sincronização.</p>",
+   "h_outro_t": "Outro calendário",
+   "h_outro_html": "<p>Toque em «Copiar link» e cole o link na sua aplicação, na opção de subscrever ou adicionar um calendário por URL (no Thunderbird: novo calendário na rede; no Proton, Yahoo, Nextcloud e outros: calendário a partir de URL).</p>",
+   "h_bilhetes_t": "Onde comprar bilhetes ou fazer a inscrição?",
+   "h_bilhetes_html": "<p>Quando a página do evento indica preço, entrada livre, bilhetes ou inscrição, essa informação aparece nas notas do evento, com o link de compra (por exemplo, BOL) ou de inscrição. Confirme sempre na página do evento.</p>",
+   "h_tema_t": "Como são escolhidos o tema e o tipo?",
+   "h_tema_html": "<p>Automaticamente, a partir do título e da descrição de cada evento. Cada evento tem um só tema e um só tipo e está sempre na agenda completa. Em casos pontuais, a classificação pode não ser a mais adequada.</p>",
+   "h_lingua_t": "Em que língua ficam os eventos?",
+   "h_lingua_html": "<p>A página e os nomes dos calendários e das categorias ficam na língua escolhida. O título e a descrição de cada evento ficam em português, como no site do município.</p>",
+   "h_freq_t": "Com que frequência é atualizada?",
+   "h_freq_html": "<p>A agenda é lida do site do município a cada 4 horas. Cada aplicação decide quando volta a ler o calendário: pode demorar algumas horas e, no Google Calendar, até um dia.</p>",
+   "h_sair_t": "Como deixar de receber",
+   "h_sair_html": "<p>Apague o calendário subscrito nas definições da aplicação. Os eventos desaparecem de imediato.</p>",
+   "rodape_html": "Os eventos vêm da <a href=\"{fonte}\">agenda publicada em cm-pvarzim.pt</a>. Confirme datas, horários e condições de acesso na página de cada evento (o link está nas notas do evento).",
+   "rodape2": "Esta página não usa cookies nem estatísticas.",
+   "ver_em": "Ver esta página em português",
+   "fechar": "Fechar",
+   "cal_geral": "Agenda Municipal da Póvoa de Varzim",
+   "cal_geral_desc": "Todos os eventos da agenda municipal.",
+   "cal_prefixo": "Póvoa de Varzim: ",
+   "bilhetes_titulo": "Bilhetes e inscrições:",
+   "lab_bilhetes": "Bilhetes",
+   "lab_inscricao": "Inscrição",
+   "mais_info": "Mais informação",
+   "nota_lingua": "",
+   "temas": {},
+   "tipos": {}
+  },
+  "en": {
+   "nome": "English",
+   "bandeira": "gb",
+   "html_lang": "en",
+   "titulo_pagina": "NEXO/Events · Póvoa de Varzim municipal events",
+   "descricao_meta": "Subscribe to Póvoa de Varzim municipal events in your calendar: all events, by theme or by type.",
+   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Events",
+   "sub_html": "Póvoa de Varzim municipal <strong>events</strong>, in <strong>your calendar</strong>",
+   "saltar": "Skip to content",
+   "lingua": "Language",
+   "letra": "Text size",
+   "letra_menos": "Smaller text",
+   "letra_mais": "Larger text",
+   "pergunta": "Which calendar do you want to use?",
+   "op_google": "Google",
+   "op_outlook": "Outlook",
+   "op_apple": "iPhone, iPad or Mac",
+   "op_android": "Android",
+   "op_outro": "Other",
+   "dica_google": "Opens Google Calendar in your Google account and asks you to confirm.",
+   "dica_outlook": "Opens Outlook on the web (Microsoft 365 account) and asks you to confirm.",
+   "dica_apple": "Opens the Calendar app. Use it on the iPhone, iPad or Mac itself.",
+   "dica_android": "The calendar is added to your Google account: it shows in Google Calendar and Samsung Calendar.",
+   "dica_outro": "Copy the link and add it to your app as a calendar from URL (subscription).",
+   "subscrever": "Subscribe",
+   "copiar": "Copy link",
+   "copiado": "Link copied. Paste it into your calendar app.",
+   "copiar_falhou": "Could not copy automatically. Select and copy the link:",
+   "completa_titulo": "All events",
+   "completa_texto": "Every event in a single calendar ({total}).",
+   "evento_1": "1 event",
+   "eventos_n": "{n} events",
+   "sem_eventos": "No events at the moment",
+   "da_agenda": "{p} of all events",
+   "por_tema": "Subscribe by theme",
+   "por_tipo": "Subscribe by type",
+   "aviso": "Avoid subscribing to themes and types at the same time, so you don't get duplicate events.",
+   "ajuda": "Help",
+   "h_google_t": "Google",
+   "h_google_html": "<p>Tap Subscribe: Google Calendar opens in the Google account you are signed in to. Confirm to add it. The calendar shows on every device linked to that account.</p>",
+   "h_outlook_t": "Outlook",
+   "h_outlook_html": "<p>With a Microsoft 365 account (work or school), Subscribe opens Outlook on the web and asks you to confirm.</p><p>With a personal account (Outlook.com, Hotmail), choose “Other”, copy the link and, on outlook.com, add a calendar from the web.</p>",
+   "h_apple_t": "iPhone, iPad or Mac",
+   "h_apple_html": "<p>On the iPhone, iPad or Mac itself, tap Subscribe and confirm in Calendar. On a Windows computer this button does not work: choose Google or Outlook.</p><p>If nothing happens (for example, when the page is open inside another app), open it in Safari, or choose “Other”, copy the link and add it in Calendar settings as a subscribed calendar.</p>",
+   "h_android_t": "Android",
+   "h_android_html": "<p>Tap Subscribe: the calendar is added to your Google account and shows in Google Calendar and Samsung Calendar. If it does not show, open Google Calendar settings, tap the calendar name and turn on sync.</p>",
+   "h_outro_t": "Other calendar",
+   "h_outro_html": "<p>Tap “Copy link” and paste the link into your app, in the option to subscribe to or add a calendar from URL (Thunderbird: new calendar on the network; Proton, Yahoo, Nextcloud and others: calendar from URL).</p>",
+   "h_bilhetes_t": "Where can I buy tickets or register?",
+   "h_bilhetes_html": "<p>When the event page shows prices, free entry, tickets or registration, that information appears in the event notes, with the ticket link (for example, BOL) or registration link. Always check the event page.</p>",
+   "h_tema_t": "How are the theme and type chosen?",
+   "h_tema_html": "<p>Automatically, from the title and description of each event. Each event has a single theme and a single type and is always in the full calendar. In some cases the classification may not be the best fit.</p>",
+   "h_lingua_t": "Which language are the events in?",
+   "h_lingua_html": "<p>This page and the names of calendars and categories are in the language you choose. The title and description of each event stay in Portuguese, as on the municipality's website.</p>",
+   "h_freq_t": "How often is it updated?",
+   "h_freq_html": "<p>Events are read from the municipality's website every 4 hours. Each app decides when to check the calendar again: it may take a few hours and, in Google Calendar, up to a day.</p>",
+   "h_sair_t": "How to unsubscribe",
+   "h_sair_html": "<p>Delete the subscribed calendar in your app's settings. The events disappear immediately.</p>",
+   "rodape_html": "Events come from the <a href=\"{fonte}\">events page at cm-pvarzim.pt</a>. Check dates, times and access conditions on each event page (the link is in the event notes).",
+   "rodape2": "This page uses no cookies and no analytics.",
+   "ver_em": "View this page in English",
+   "fechar": "Close",
+   "cal_geral": "Póvoa de Varzim Municipal Events",
+   "cal_geral_desc": "All events from the municipal calendar.",
+   "cal_prefixo": "Póvoa de Varzim: ",
+   "bilhetes_titulo": "Tickets and registration (in Portuguese):",
+   "lab_bilhetes": "Tickets",
+   "lab_inscricao": "Registration",
+   "mais_info": "More information",
+   "nota_lingua": "Event title and description in Portuguese, as published by the municipality.",
+   "temas": {
+    "cultura": [
+     "Culture",
+     "Music, cinema, theatre, exhibitions, books and heritage"
+    ],
+    "desporto": [
+     "Sport",
+     "Races, tournaments and physical activity"
+    ],
+    "ambiente-mobilidade": [
+     "Environment and mobility",
+     "Nature, climate, energy and transport"
+    ],
+    "turismo-economia": [
+     "Tourism and economy",
+     "Tourism, food, shops, business and jobs"
+    ],
+    "comunidade-cidadania": [
+     "Community and citizenship",
+     "Health, education, family, youth and civic life"
+    ]
+   },
+   "tipos": {
+    "concertos": [
+     "Concerts",
+     "Concerts, recitals, choirs, bands and live music"
+    ],
+    "cinema": [
+     "Cinema",
+     "Film screenings, movies and documentaries"
+    ],
+    "teatro": [
+     "Theatre",
+     "Plays, street theatre, puppets and staged readings"
+    ],
+    "espetaculos": [
+     "Shows",
+     "Dance, circus, magic, comedy, musicals and street shows"
+    ],
+    "exposicoes": [
+     "Exhibitions",
+     "Art, photography, history and heritage exhibitions"
+    ],
+    "literatura": [
+     "Literature",
+     "Books, reading, poetry and storytelling"
+    ],
+    "oficinas-atividades": [
+     "Workshops and activities",
+     "Workshops, courses, talks, games and activities for all ages"
+    ],
+    "provas-desportivas": [
+     "Sports events",
+     "Tournaments, races, walks, matches and open training"
+    ],
+    "festas-feiras": [
+     "Festivals, fairs and markets",
+     "Local festivities, festivals, fairs, markets and food"
+    ],
+    "visitas-passeios": [
+     "Tours and walks",
+     "Guided tours, routes, walks and trails"
+    ],
+    "acoes-campanhas": [
+     "Campaigns and initiatives",
+     "Awareness, health checks, collections, clean-ups and charity campaigns"
+    ],
+    "comemoracoes": [
+     "Celebrations and ceremonies",
+     "Commemorative days, ceremonies, galas, tributes and formal sessions"
+    ]
+   }
+  },
+  "es": {
+   "nome": "Español",
+   "bandeira": "es",
+   "html_lang": "es",
+   "titulo_pagina": "NEXO/Eventos · Agenda municipal de Póvoa de Varzim",
+   "descricao_meta": "Suscríbase a la agenda municipal de Póvoa de Varzim en su calendario: completa, por tema o por tipo de evento.",
+   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Eventos",
+   "sub_html": "La <strong>agenda</strong> municipal de Póvoa de Varzim en <strong>su calendario</strong>",
+   "saltar": "Saltar al contenido",
+   "lingua": "Idioma",
+   "letra": "Tamaño del texto",
+   "letra_menos": "Reducir el texto",
+   "letra_mais": "Aumentar el texto",
+   "pergunta": "¿Qué calendario quiere utilizar?",
+   "op_google": "Google",
+   "op_outlook": "Outlook",
+   "op_apple": "iPhone, iPad o Mac",
+   "op_android": "Android",
+   "op_outro": "Otro",
+   "dica_google": "Abre Google Calendar en su cuenta de Google y pide confirmación.",
+   "dica_outlook": "Abre Outlook en la web (cuenta Microsoft 365) y pide confirmación.",
+   "dica_apple": "Abre la app Calendario. Úselo en el propio iPhone, iPad o Mac.",
+   "dica_android": "El calendario se añade a su cuenta de Google: aparece en Google Calendar y en Calendario de Samsung.",
+   "dica_outro": "Copie el enlace y añádalo en su aplicación como calendario por URL (suscripción).",
+   "subscrever": "Suscribirse",
+   "copiar": "Copiar enlace",
+   "copiado": "Enlace copiado. Péguelo en su aplicación de calendario.",
+   "copiar_falhou": "No se pudo copiar automáticamente. Seleccione y copie el enlace:",
+   "completa_titulo": "Agenda completa",
+   "completa_texto": "Todos los eventos en un solo calendario ({total}).",
+   "evento_1": "1 evento",
+   "eventos_n": "{n} eventos",
+   "sem_eventos": "Sin eventos por ahora",
+   "da_agenda": "{p} de la agenda",
+   "por_tema": "Suscribirse por tema",
+   "por_tipo": "Suscribirse por tipo",
+   "aviso": "Evite suscribirse a temas y tipos a la vez, para no recibir eventos repetidos.",
+   "ajuda": "Ayuda",
+   "h_google_t": "Google",
+   "h_google_html": "<p>Pulse Suscribirse: se abre Google Calendar en la cuenta de Google con la sesión iniciada. Confirme para añadirlo. El calendario aparece en todos los dispositivos vinculados a esa cuenta.</p>",
+   "h_outlook_t": "Outlook",
+   "h_outlook_html": "<p>Con una cuenta Microsoft 365 (profesional o educativa), Suscribirse abre Outlook en la web y pide confirmación.</p><p>Con una cuenta personal (Outlook.com, Hotmail), elija «Otro», copie el enlace y, en outlook.com, añada un calendario desde la web.</p>",
+   "h_apple_t": "iPhone, iPad o Mac",
+   "h_apple_html": "<p>En el propio iPhone, iPad o Mac, pulse Suscribirse y confirme en Calendario. En un ordenador con Windows este botón no funciona: elija Google u Outlook.</p><p>Si no ocurre nada (por ejemplo, con la página abierta dentro de otra app), ábrala en Safari, o elija «Otro», copie el enlace y añádalo en los ajustes de Calendario como calendario suscrito.</p>",
+   "h_android_t": "Android",
+   "h_android_html": "<p>Pulse Suscribirse: el calendario se añade a su cuenta de Google y aparece en Google Calendar y en Calendario de Samsung. Si no aparece, abra los ajustes de Google Calendar, pulse el nombre del calendario y active la sincronización.</p>",
+   "h_outro_t": "Otro calendario",
+   "h_outro_html": "<p>Pulse «Copiar enlace» y péguelo en su aplicación, en la opción de suscribirse o añadir un calendario por URL (Thunderbird: nuevo calendario en la red; Proton, Yahoo, Nextcloud y otros: calendario desde URL).</p>",
+   "h_bilhetes_t": "¿Dónde comprar entradas o inscribirse?",
+   "h_bilhetes_html": "<p>Cuando la página del evento indica precio, entrada libre, entradas o inscripción, esa información aparece en las notas del evento, con el enlace de compra (por ejemplo, BOL) o de inscripción. Compruébelo siempre en la página del evento.</p>",
+   "h_tema_t": "¿Cómo se eligen el tema y el tipo?",
+   "h_tema_html": "<p>Automáticamente, a partir del título y la descripción de cada evento. Cada evento tiene un solo tema y un solo tipo y está siempre en la agenda completa. En casos puntuales, la clasificación puede no ser la más adecuada.</p>",
+   "h_lingua_t": "¿En qué idioma están los eventos?",
+   "h_lingua_html": "<p>La página y los nombres de los calendarios y categorías están en el idioma elegido. El título y la descripción de cada evento están en portugués, como en la web del municipio.</p>",
+   "h_freq_t": "¿Con qué frecuencia se actualiza?",
+   "h_freq_html": "<p>La agenda se lee de la web del municipio cada 4 horas. Cada aplicación decide cuándo vuelve a leer el calendario: puede tardar unas horas y, en Google Calendar, hasta un día.</p>",
+   "h_sair_t": "Cómo dejar de recibirla",
+   "h_sair_html": "<p>Elimine el calendario suscrito en los ajustes de la aplicación. Los eventos desaparecen de inmediato.</p>",
+   "rodape_html": "Los eventos proceden de la <a href=\"{fonte}\">agenda publicada en cm-pvarzim.pt</a>. Compruebe fechas, horarios y condiciones de acceso en la página de cada evento (el enlace está en las notas del evento).",
+   "rodape2": "Esta página no usa cookies ni estadísticas.",
+   "ver_em": "Ver esta página en español",
+   "fechar": "Cerrar",
+   "cal_geral": "Agenda Municipal de Póvoa de Varzim",
+   "cal_geral_desc": "Todos los eventos de la agenda municipal.",
+   "cal_prefixo": "Póvoa de Varzim: ",
+   "bilhetes_titulo": "Entradas e inscripciones (en portugués):",
+   "lab_bilhetes": "Entradas",
+   "lab_inscricao": "Inscripción",
+   "mais_info": "Más información",
+   "nota_lingua": "Título y descripción del evento en portugués, tal como los publica el municipio.",
+   "temas": {
+    "cultura": [
+     "Cultura",
+     "Música, cine, teatro, exposiciones, libros y patrimonio"
+    ],
+    "desporto": [
+     "Deporte",
+     "Pruebas, torneos y actividad física"
+    ],
+    "ambiente-mobilidade": [
+     "Medio ambiente y movilidad",
+     "Naturaleza, clima, energía y transporte"
+    ],
+    "turismo-economia": [
+     "Turismo y economía",
+     "Turismo, gastronomía, comercio, empresas y empleo"
+    ],
+    "comunidade-cidadania": [
+     "Comunidad y ciudadanía",
+     "Salud, educación, familia, juventud y vida municipal"
+    ]
+   },
+   "tipos": {
+    "concertos": [
+     "Conciertos",
+     "Conciertos, recitales, coros, bandas y música en directo"
+    ],
+    "cinema": [
+     "Cine",
+     "Sesiones de cine, películas y documentales"
+    ],
+    "teatro": [
+     "Teatro",
+     "Obras de teatro, teatro de calle, marionetas y lecturas dramatizadas"
+    ],
+    "espetaculos": [
+     "Espectáculos",
+     "Danza, circo, magia, humor, musicales y espectáculos de calle"
+    ],
+    "exposicoes": [
+     "Exposiciones",
+     "Exposiciones de arte, fotografía, historia y patrimonio"
+    ],
+    "literatura": [
+     "Literatura",
+     "Libros, lectura, poesía y cuentos"
+    ],
+    "oficinas-atividades": [
+     "Talleres y actividades",
+     "Talleres, cursos, conferencias, juegos y actividades para todas las edades"
+    ],
+    "provas-desportivas": [
+     "Pruebas deportivas",
+     "Torneos, carreras, caminatas, partidos y entrenamientos abiertos"
+    ],
+    "festas-feiras": [
+     "Fiestas, ferias y mercados",
+     "Fiestas populares, festivales, ferias, mercados y gastronomía"
+    ],
+    "visitas-passeios": [
+     "Visitas y paseos",
+     "Visitas guiadas, rutas, paseos y recorridos"
+    ],
+    "acoes-campanhas": [
+     "Acciones y campañas",
+     "Sensibilización, cribados, recogidas, limpiezas y campañas solidarias"
+    ],
+    "comemoracoes": [
+     "Conmemoraciones y ceremonias",
+     "Días conmemorativos, ceremonias, galas, homenajes y sesiones solemnes"
+    ]
+   }
+  },
+  "it": {
+   "nome": "Italiano",
+   "bandeira": "it",
+   "html_lang": "it",
+   "titulo_pagina": "NEXO/Eventi · Agenda municipale di Póvoa de Varzim",
+   "descricao_meta": "Iscriviti all'agenda municipale di Póvoa de Varzim nel tuo calendario: completa, per tema o per tipo di evento.",
+   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Eventi",
+   "sub_html": "L'<strong>agenda</strong> municipale di Póvoa de Varzim nel <strong>tuo calendario</strong>",
+   "saltar": "Vai al contenuto",
+   "lingua": "Lingua",
+   "letra": "Dimensione del testo",
+   "letra_menos": "Riduci il testo",
+   "letra_mais": "Ingrandisci il testo",
+   "pergunta": "Quale calendario vuoi usare?",
+   "op_google": "Google",
+   "op_outlook": "Outlook",
+   "op_apple": "iPhone, iPad o Mac",
+   "op_android": "Android",
+   "op_outro": "Altro",
+   "dica_google": "Apre Google Calendar nel tuo account Google e chiede conferma.",
+   "dica_outlook": "Apre Outlook sul web (account Microsoft 365) e chiede conferma.",
+   "dica_apple": "Apre l'app Calendario. Usalo sullo stesso iPhone, iPad o Mac.",
+   "dica_android": "Il calendario viene aggiunto al tuo account Google: appare in Google Calendar e in Calendario Samsung.",
+   "dica_outro": "Copia il link e aggiungilo nella tua app come calendario da URL (iscrizione).",
+   "subscrever": "Iscriviti",
+   "copiar": "Copia link",
+   "copiado": "Link copiato. Incollalo nella tua app di calendario.",
+   "copiar_falhou": "Impossibile copiare automaticamente. Seleziona e copia il link:",
+   "completa_titulo": "Agenda completa",
+   "completa_texto": "Tutti gli eventi in un unico calendario ({total}).",
+   "evento_1": "1 evento",
+   "eventos_n": "{n} eventi",
+   "sem_eventos": "Nessun evento al momento",
+   "da_agenda": "{p} dell'agenda",
+   "por_tema": "Iscriviti per tema",
+   "por_tipo": "Iscriviti per tipo",
+   "aviso": "Evita di iscriverti a temi e tipi contemporaneamente, per non ricevere eventi ripetuti.",
+   "ajuda": "Aiuto",
+   "h_google_t": "Google",
+   "h_google_html": "<p>Tocca Iscriviti: Google Calendar si apre nell'account Google con cui hai effettuato l'accesso. Conferma per aggiungerlo. Il calendario appare su tutti i dispositivi collegati a quell'account.</p>",
+   "h_outlook_t": "Outlook",
+   "h_outlook_html": "<p>Con un account Microsoft 365 (lavoro o scuola), Iscriviti apre Outlook sul web e chiede conferma.</p><p>Con un account personale (Outlook.com, Hotmail), scegli «Altro», copia il link e, su outlook.com, aggiungi un calendario dal web.</p>",
+   "h_apple_t": "iPhone, iPad o Mac",
+   "h_apple_html": "<p>Sullo stesso iPhone, iPad o Mac, tocca Iscriviti e conferma in Calendario. Su un computer Windows questo pulsante non funziona: scegli Google o Outlook.</p><p>Se non succede nulla (ad esempio con la pagina aperta dentro un'altra app), aprila in Safari, oppure scegli «Altro», copia il link e aggiungilo nelle impostazioni di Calendario come calendario sottoscritto.</p>",
+   "h_android_t": "Android",
+   "h_android_html": "<p>Tocca Iscriviti: il calendario viene aggiunto al tuo account Google e appare in Google Calendar e in Calendario Samsung. Se non appare, apri le impostazioni di Google Calendar, tocca il nome del calendario e attiva la sincronizzazione.</p>",
+   "h_outro_t": "Altro calendario",
+   "h_outro_html": "<p>Tocca «Copia link» e incolla il link nella tua app, nell'opzione per iscriverti o aggiungere un calendario da URL (Thunderbird: nuovo calendario in rete; Proton, Yahoo, Nextcloud e altri: calendario da URL).</p>",
+   "h_bilhetes_t": "Dove comprare i biglietti o iscriversi?",
+   "h_bilhetes_html": "<p>Quando la pagina dell'evento indica prezzo, ingresso libero, biglietti o iscrizione, queste informazioni compaiono nelle note dell'evento, con il link per l'acquisto (ad esempio, BOL) o per l'iscrizione. Verifica sempre sulla pagina dell'evento.</p>",
+   "h_tema_t": "Come vengono scelti il tema e il tipo?",
+   "h_tema_html": "<p>Automaticamente, dal titolo e dalla descrizione di ogni evento. Ogni evento ha un solo tema e un solo tipo ed è sempre nell'agenda completa. In alcuni casi la classificazione potrebbe non essere la più adatta.</p>",
+   "h_lingua_t": "In che lingua sono gli eventi?",
+   "h_lingua_html": "<p>La pagina e i nomi dei calendari e delle categorie sono nella lingua scelta. Il titolo e la descrizione di ogni evento restano in portoghese, come sul sito del comune.</p>",
+   "h_freq_t": "Ogni quanto viene aggiornata?",
+   "h_freq_html": "<p>L'agenda viene letta dal sito del comune ogni 4 ore. Ogni app decide quando rileggere il calendario: possono servire alcune ore e, in Google Calendar, fino a un giorno.</p>",
+   "h_sair_t": "Come annullare l'iscrizione",
+   "h_sair_html": "<p>Elimina il calendario sottoscritto nelle impostazioni dell'app. Gli eventi scompaiono subito.</p>",
+   "rodape_html": "Gli eventi provengono dall'<a href=\"{fonte}\">agenda pubblicata su cm-pvarzim.pt</a>. Verifica date, orari e condizioni di accesso sulla pagina di ogni evento (il link è nelle note dell'evento).",
+   "rodape2": "Questa pagina non usa cookie né statistiche.",
+   "ver_em": "Vedi questa pagina in italiano",
+   "fechar": "Chiudi",
+   "cal_geral": "Agenda municipale di Póvoa de Varzim",
+   "cal_geral_desc": "Tutti gli eventi dell'agenda municipale.",
+   "cal_prefixo": "Póvoa de Varzim: ",
+   "bilhetes_titulo": "Biglietti e iscrizioni (in portoghese):",
+   "lab_bilhetes": "Biglietti",
+   "lab_inscricao": "Iscrizione",
+   "mais_info": "Maggiori informazioni",
+   "nota_lingua": "Titolo e descrizione dell'evento in portoghese, come pubblicati dal comune.",
+   "temas": {
+    "cultura": [
+     "Cultura",
+     "Musica, cinema, teatro, mostre, libri e patrimonio"
+    ],
+    "desporto": [
+     "Sport",
+     "Gare, tornei e attività fisica"
+    ],
+    "ambiente-mobilidade": [
+     "Ambiente e mobilità",
+     "Natura, clima, energia e trasporti"
+    ],
+    "turismo-economia": [
+     "Turismo ed economia",
+     "Turismo, gastronomia, commercio, imprese e lavoro"
+    ],
+    "comunidade-cidadania": [
+     "Comunità e cittadinanza",
+     "Salute, istruzione, famiglia, giovani e vita cittadina"
+    ]
+   },
+   "tipos": {
+    "concertos": [
+     "Concerti",
+     "Concerti, recital, cori, bande e musica dal vivo"
+    ],
+    "cinema": [
+     "Cinema",
+     "Proiezioni, film e documentari"
+    ],
+    "teatro": [
+     "Teatro",
+     "Spettacoli teatrali, teatro di strada, marionette e letture sceniche"
+    ],
+    "espetaculos": [
+     "Spettacoli",
+     "Danza, circo, magia, comicità, musical e spettacoli di strada"
+    ],
+    "exposicoes": [
+     "Mostre",
+     "Mostre d'arte, fotografia, storia e patrimonio"
+    ],
+    "literatura": [
+     "Letteratura",
+     "Libri, lettura, poesia e racconti"
+    ],
+    "oficinas-atividades": [
+     "Laboratori e attività",
+     "Laboratori, corsi, conferenze, giochi e attività per tutte le età"
+    ],
+    "provas-desportivas": [
+     "Gare sportive",
+     "Tornei, corse, camminate, partite e allenamenti aperti"
+    ],
+    "festas-feiras": [
+     "Feste, fiere e mercati",
+     "Feste popolari, festival, fiere, mercati e gastronomia"
+    ],
+    "visitas-passeios": [
+     "Visite e passeggiate",
+     "Visite guidate, itinerari, passeggiate e percorsi"
+    ],
+    "acoes-campanhas": [
+     "Iniziative e campagne",
+     "Sensibilizzazione, screening, raccolte, pulizie e campagne solidali"
+    ],
+    "comemoracoes": [
+     "Ricorrenze e cerimonie",
+     "Giornate commemorative, cerimonie, gala, omaggi e sedute solenni"
+    ]
+   }
+  },
+  "fr": {
+   "nome": "Français",
+   "bandeira": "fr",
+   "html_lang": "fr",
+   "titulo_pagina": "NEXO/Événements · Agenda municipal de Póvoa de Varzim",
+   "descricao_meta": "Abonnez-vous à l'agenda municipal de Póvoa de Varzim dans votre calendrier : complet, par thème ou par type d'événement.",
+   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Événements",
+   "sub_html": "L'<strong>agenda</strong> municipal de Póvoa de Varzim dans <strong>votre calendrier</strong>",
+   "saltar": "Aller au contenu",
+   "lingua": "Langue",
+   "letra": "Taille du texte",
+   "letra_menos": "Réduire le texte",
+   "letra_mais": "Agrandir le texte",
+   "pergunta": "Quel calendrier voulez-vous utiliser ?",
+   "op_google": "Google",
+   "op_outlook": "Outlook",
+   "op_apple": "iPhone, iPad ou Mac",
+   "op_android": "Android",
+   "op_outro": "Autre",
+   "dica_google": "Ouvre Google Agenda dans votre compte Google et demande une confirmation.",
+   "dica_outlook": "Ouvre Outlook sur le web (compte Microsoft 365) et demande une confirmation.",
+   "dica_apple": "Ouvre l'app Calendrier. À utiliser sur l'iPhone, l'iPad ou le Mac lui-même.",
+   "dica_android": "Le calendrier est ajouté à votre compte Google : il apparaît dans Google Agenda et dans Calendrier Samsung.",
+   "dica_outro": "Copiez le lien et ajoutez-le dans votre application comme calendrier par URL (abonnement).",
+   "subscrever": "S'abonner",
+   "copiar": "Copier le lien",
+   "copiado": "Lien copié. Collez-le dans votre application de calendrier.",
+   "copiar_falhou": "Copie automatique impossible. Sélectionnez et copiez le lien :",
+   "completa_titulo": "Agenda complet",
+   "completa_texto": "Tous les événements dans un seul calendrier ({total}).",
+   "evento_1": "1 événement",
+   "eventos_n": "{n} événements",
+   "sem_eventos": "Aucun événement pour le moment",
+   "da_agenda": "{p} de l'agenda",
+   "por_tema": "S'abonner par thème",
+   "por_tipo": "S'abonner par type",
+   "aviso": "Évitez de vous abonner à des thèmes et à des types en même temps, pour ne pas recevoir d'événements en double.",
+   "ajuda": "Aide",
+   "h_google_t": "Google",
+   "h_google_html": "<p>Touchez S'abonner : Google Agenda s'ouvre dans le compte Google connecté. Confirmez pour l'ajouter. Le calendrier apparaît sur tous les appareils liés à ce compte.</p>",
+   "h_outlook_t": "Outlook",
+   "h_outlook_html": "<p>Avec un compte Microsoft 365 (professionnel ou scolaire), S'abonner ouvre Outlook sur le web et demande une confirmation.</p><p>Avec un compte personnel (Outlook.com, Hotmail), choisissez « Autre », copiez le lien et, sur outlook.com, ajoutez un calendrier depuis le web.</p>",
+   "h_apple_t": "iPhone, iPad ou Mac",
+   "h_apple_html": "<p>Sur l'iPhone, l'iPad ou le Mac lui-même, touchez S'abonner et confirmez dans Calendrier. Sur un ordinateur Windows, ce bouton ne fonctionne pas : choisissez Google ou Outlook.</p><p>Si rien ne se passe (par exemple, page ouverte dans une autre app), ouvrez-la dans Safari, ou choisissez « Autre », copiez le lien et ajoutez-le dans les réglages de Calendrier comme calendrier avec abonnement.</p>",
+   "h_android_t": "Android",
+   "h_android_html": "<p>Touchez S'abonner : le calendrier est ajouté à votre compte Google et apparaît dans Google Agenda et Calendrier Samsung. S'il n'apparaît pas, ouvrez les paramètres de Google Agenda, touchez le nom du calendrier et activez la synchronisation.</p>",
+   "h_outro_t": "Autre calendrier",
+   "h_outro_html": "<p>Touchez « Copier le lien » et collez le lien dans votre application, dans l'option pour s'abonner ou ajouter un calendrier par URL (Thunderbird : nouveau calendrier sur le réseau ; Proton, Yahoo, Nextcloud et autres : calendrier depuis une URL).</p>",
+   "h_bilhetes_t": "Où acheter des billets ou s'inscrire ?",
+   "h_bilhetes_html": "<p>Lorsque la page de l'événement indique un prix, l'entrée libre, des billets ou une inscription, ces informations apparaissent dans les notes de l'événement, avec le lien d'achat (par exemple, BOL) ou d'inscription. Vérifiez toujours sur la page de l'événement.</p>",
+   "h_tema_t": "Comment le thème et le type sont-ils choisis ?",
+   "h_tema_html": "<p>Automatiquement, à partir du titre et de la description de chaque événement. Chaque événement a un seul thème et un seul type et figure toujours dans l'agenda complet. Dans certains cas, la classification peut ne pas être la plus adaptée.</p>",
+   "h_lingua_t": "En quelle langue sont les événements ?",
+   "h_lingua_html": "<p>La page et les noms des calendriers et des catégories sont dans la langue choisie. Le titre et la description de chaque événement restent en portugais, comme sur le site de la municipalité.</p>",
+   "h_freq_t": "À quelle fréquence est-il mis à jour ?",
+   "h_freq_html": "<p>L'agenda est lu sur le site de la municipalité toutes les 4 heures. Chaque application décide quand relire le calendrier : cela peut prendre quelques heures et, dans Google Agenda, jusqu'à un jour.</p>",
+   "h_sair_t": "Comment se désabonner",
+   "h_sair_html": "<p>Supprimez le calendrier abonné dans les réglages de l'application. Les événements disparaissent immédiatement.</p>",
+   "rodape_html": "Les événements proviennent de l'<a href=\"{fonte}\">agenda publié sur cm-pvarzim.pt</a>. Vérifiez les dates, horaires et conditions d'accès sur la page de chaque événement (le lien figure dans les notes de l'événement).",
+   "rodape2": "Cette page n'utilise ni cookies ni statistiques.",
+   "ver_em": "Voir cette page en français",
+   "fechar": "Fermer",
+   "cal_geral": "Agenda municipal de Póvoa de Varzim",
+   "cal_geral_desc": "Tous les événements de l'agenda municipal.",
+   "cal_prefixo": "Póvoa de Varzim : ",
+   "bilhetes_titulo": "Billets et inscriptions (en portugais) :",
+   "lab_bilhetes": "Billets",
+   "lab_inscricao": "Inscription",
+   "mais_info": "Plus d'informations",
+   "nota_lingua": "Titre et description de l'événement en portugais, tels que publiés par la municipalité.",
+   "temas": {
+    "cultura": [
+     "Culture",
+     "Musique, cinéma, théâtre, expositions, livres et patrimoine"
+    ],
+    "desporto": [
+     "Sport",
+     "Épreuves, tournois et activité physique"
+    ],
+    "ambiente-mobilidade": [
+     "Environnement et mobilité",
+     "Nature, climat, énergie et transports"
+    ],
+    "turismo-economia": [
+     "Tourisme et économie",
+     "Tourisme, gastronomie, commerce, entreprises et emploi"
+    ],
+    "comunidade-cidadania": [
+     "Communauté et citoyenneté",
+     "Santé, éducation, famille, jeunesse et vie municipale"
+    ]
+   },
+   "tipos": {
+    "concertos": [
+     "Concerts",
+     "Concerts, récitals, chorales, fanfares et musique live"
+    ],
+    "cinema": [
+     "Cinéma",
+     "Séances de cinéma, films et documentaires"
+    ],
+    "teatro": [
+     "Théâtre",
+     "Pièces de théâtre, théâtre de rue, marionnettes et lectures mises en scène"
+    ],
+    "espetaculos": [
+     "Spectacles",
+     "Danse, cirque, magie, humour, comédies musicales et spectacles de rue"
+    ],
+    "exposicoes": [
+     "Expositions",
+     "Expositions d'art, de photographie, d'histoire et de patrimoine"
+    ],
+    "literatura": [
+     "Littérature",
+     "Livres, lecture, poésie et contes"
+    ],
+    "oficinas-atividades": [
+     "Ateliers et activités",
+     "Ateliers, cours, conférences, jeux et activités pour tous les âges"
+    ],
+    "provas-desportivas": [
+     "Épreuves sportives",
+     "Tournois, courses, randonnées, matchs et entraînements ouverts"
+    ],
+    "festas-feiras": [
+     "Fêtes, foires et marchés",
+     "Fêtes populaires, festivals, foires, marchés et gastronomie"
+    ],
+    "visitas-passeios": [
+     "Visites et balades",
+     "Visites guidées, itinéraires, balades et parcours"
+    ],
+    "acoes-campanhas": [
+     "Actions et campagnes",
+     "Sensibilisation, dépistages, collectes, nettoyages et campagnes solidaires"
+    ],
+    "comemoracoes": [
+     "Commémorations et cérémonies",
+     "Journées commémoratives, cérémonies, galas, hommages et séances solennelles"
+    ]
+   }
+  },
+  "de": {
+   "nome": "Deutsch",
+   "bandeira": "de",
+   "html_lang": "de",
+   "titulo_pagina": "NEXO/Veranstaltungen · Veranstaltungskalender von Póvoa de Varzim",
+   "descricao_meta": "Abonnieren Sie den städtischen Veranstaltungskalender von Póvoa de Varzim in Ihrem Kalender: komplett, nach Thema oder nach Art.",
+   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Veranstaltungen",
+   "sub_html": "Die <strong>Veranstaltungen</strong> der Stadt Póvoa de Varzim in <strong>Ihrem Kalender</strong>",
+   "saltar": "Zum Inhalt springen",
+   "lingua": "Sprache",
+   "letra": "Schriftgröße",
+   "letra_menos": "Schrift verkleinern",
+   "letra_mais": "Schrift vergrößern",
+   "pergunta": "Welchen Kalender möchten Sie verwenden?",
+   "op_google": "Google",
+   "op_outlook": "Outlook",
+   "op_apple": "iPhone, iPad oder Mac",
+   "op_android": "Android",
+   "op_outro": "Andere",
+   "dica_google": "Öffnet Google Kalender in Ihrem Google-Konto und bittet um Bestätigung.",
+   "dica_outlook": "Öffnet Outlook im Web (Microsoft-365-Konto) und bittet um Bestätigung.",
+   "dica_apple": "Öffnet die Kalender-App. Direkt auf dem iPhone, iPad oder Mac verwenden.",
+   "dica_android": "Der Kalender wird Ihrem Google-Konto hinzugefügt: Er erscheint in Google Kalender und im Samsung Kalender.",
+   "dica_outro": "Kopieren Sie den Link und fügen Sie ihn in Ihrer App als Kalender per URL (Abonnement) hinzu.",
+   "subscrever": "Abonnieren",
+   "copiar": "Link kopieren",
+   "copiado": "Link kopiert. Fügen Sie ihn in Ihre Kalender-App ein.",
+   "copiar_falhou": "Automatisches Kopieren nicht möglich. Markieren und kopieren Sie den Link:",
+   "completa_titulo": "Alle Veranstaltungen",
+   "completa_texto": "Alle Veranstaltungen in einem Kalender ({total}).",
+   "evento_1": "1 Veranstaltung",
+   "eventos_n": "{n} Veranstaltungen",
+   "sem_eventos": "Derzeit keine Veranstaltungen",
+   "da_agenda": "{p} aller Veranstaltungen",
+   "por_tema": "Nach Thema abonnieren",
+   "por_tipo": "Nach Art abonnieren",
+   "aviso": "Abonnieren Sie nicht gleichzeitig Themen und Arten, sonst erhalten Sie Veranstaltungen doppelt.",
+   "ajuda": "Hilfe",
+   "h_google_t": "Google",
+   "h_google_html": "<p>Tippen Sie auf Abonnieren: Google Kalender öffnet sich im angemeldeten Google-Konto. Bestätigen Sie das Hinzufügen. Der Kalender erscheint auf allen Geräten, die mit diesem Konto verbunden sind.</p>",
+   "h_outlook_t": "Outlook",
+   "h_outlook_html": "<p>Mit einem Microsoft-365-Konto (Arbeit oder Schule) öffnet Abonnieren Outlook im Web und bittet um Bestätigung.</p><p>Mit einem privaten Konto (Outlook.com, Hotmail) wählen Sie „Andere“, kopieren den Link und fügen auf outlook.com einen Kalender aus dem Web hinzu.</p>",
+   "h_apple_t": "iPhone, iPad oder Mac",
+   "h_apple_html": "<p>Tippen Sie direkt auf dem iPhone, iPad oder Mac auf Abonnieren und bestätigen Sie in Kalender. Auf einem Windows-Computer funktioniert diese Schaltfläche nicht: Wählen Sie Google oder Outlook.</p><p>Wenn nichts passiert (z. B. wenn die Seite in einer anderen App geöffnet ist), öffnen Sie sie in Safari, oder wählen Sie „Andere“, kopieren Sie den Link und fügen Sie ihn in den Kalender-Einstellungen als abonnierten Kalender hinzu.</p>",
+   "h_android_t": "Android",
+   "h_android_html": "<p>Tippen Sie auf Abonnieren: Der Kalender wird Ihrem Google-Konto hinzugefügt und erscheint in Google Kalender und im Samsung Kalender. Falls nicht, öffnen Sie die Einstellungen von Google Kalender, tippen Sie auf den Kalendernamen und aktivieren Sie die Synchronisierung.</p>",
+   "h_outro_t": "Anderer Kalender",
+   "h_outro_html": "<p>Tippen Sie auf „Link kopieren“ und fügen Sie den Link in Ihrer App bei der Option zum Abonnieren oder Hinzufügen eines Kalenders per URL ein (Thunderbird: neuer Kalender im Netzwerk; Proton, Yahoo, Nextcloud und andere: Kalender per URL).</p>",
+   "h_bilhetes_t": "Wo kann ich Tickets kaufen oder mich anmelden?",
+   "h_bilhetes_html": "<p>Wenn die Veranstaltungsseite Preise, freien Eintritt, Tickets oder eine Anmeldung nennt, erscheinen diese Angaben in den Notizen der Veranstaltung, mit dem Link zum Ticketkauf (z. B. BOL) oder zur Anmeldung. Prüfen Sie immer die Veranstaltungsseite.</p>",
+   "h_tema_t": "Wie werden Thema und Art gewählt?",
+   "h_tema_html": "<p>Automatisch, anhand von Titel und Beschreibung jeder Veranstaltung. Jede Veranstaltung hat genau ein Thema und eine Art und ist immer im Gesamtkalender. In Einzelfällen passt die Einordnung nicht ganz.</p>",
+   "h_lingua_t": "In welcher Sprache sind die Veranstaltungen?",
+   "h_lingua_html": "<p>Die Seite und die Namen der Kalender und Kategorien sind in der gewählten Sprache. Titel und Beschreibung jeder Veranstaltung bleiben auf Portugiesisch, wie auf der Website der Stadt.</p>",
+   "h_freq_t": "Wie oft wird er aktualisiert?",
+   "h_freq_html": "<p>Die Veranstaltungen werden alle 4 Stunden von der Website der Stadt gelesen. Jede App entscheidet selbst, wann sie den Kalender neu lädt: Das kann einige Stunden dauern, bei Google Kalender bis zu einem Tag.</p>",
+   "h_sair_t": "Abonnement beenden",
+   "h_sair_html": "<p>Löschen Sie den abonnierten Kalender in den Einstellungen der App. Die Veranstaltungen verschwinden sofort.</p>",
+   "rodape_html": "Die Veranstaltungen stammen aus dem <a href=\"{fonte}\">Veranstaltungskalender auf cm-pvarzim.pt</a>. Prüfen Sie Daten, Uhrzeiten und Zugangsbedingungen auf der Seite jeder Veranstaltung (der Link steht in den Notizen der Veranstaltung).",
+   "rodape2": "Diese Seite verwendet keine Cookies und keine Statistiken.",
+   "ver_em": "Diese Seite auf Deutsch anzeigen",
+   "fechar": "Schließen",
+   "cal_geral": "Veranstaltungen der Stadt Póvoa de Varzim",
+   "cal_geral_desc": "Alle Veranstaltungen des städtischen Kalenders.",
+   "cal_prefixo": "Póvoa de Varzim: ",
+   "bilhetes_titulo": "Tickets und Anmeldung (auf Portugiesisch):",
+   "lab_bilhetes": "Tickets",
+   "lab_inscricao": "Anmeldung",
+   "mais_info": "Weitere Informationen",
+   "nota_lingua": "Titel und Beschreibung der Veranstaltung auf Portugiesisch, wie von der Stadt veröffentlicht.",
+   "temas": {
+    "cultura": [
+     "Kultur",
+     "Musik, Kino, Theater, Ausstellungen, Bücher und Kulturerbe"
+    ],
+    "desporto": [
+     "Sport",
+     "Wettkämpfe, Turniere und Bewegung"
+    ],
+    "ambiente-mobilidade": [
+     "Umwelt und Mobilität",
+     "Natur, Klima, Energie und Verkehr"
+    ],
+    "turismo-economia": [
+     "Tourismus und Wirtschaft",
+     "Tourismus, Gastronomie, Handel, Unternehmen und Arbeit"
+    ],
+    "comunidade-cidadania": [
+     "Gemeinschaft und Bürgerschaft",
+     "Gesundheit, Bildung, Familie, Jugend und Stadtleben"
+    ]
+   },
+   "tipos": {
+    "concertos": [
+     "Konzerte",
+     "Konzerte, Liederabende, Chöre, Bands und Livemusik"
+    ],
+    "cinema": [
+     "Kino",
+     "Filmvorführungen, Filme und Dokumentarfilme"
+    ],
+    "teatro": [
+     "Theater",
+     "Theaterstücke, Straßentheater, Puppentheater und szenische Lesungen"
+    ],
+    "espetaculos": [
+     "Shows",
+     "Tanz, Zirkus, Zauberei, Comedy, Musicals und Straßenkunst"
+    ],
+    "exposicoes": [
+     "Ausstellungen",
+     "Ausstellungen zu Kunst, Fotografie, Geschichte und Kulturerbe"
+    ],
+    "literatura": [
+     "Literatur",
+     "Bücher, Lesungen, Lyrik und Geschichten"
+    ],
+    "oficinas-atividades": [
+     "Workshops und Aktivitäten",
+     "Workshops, Kurse, Vorträge, Spiele und Aktivitäten für jedes Alter"
+    ],
+    "provas-desportivas": [
+     "Sportveranstaltungen",
+     "Turniere, Läufe, Wanderungen, Spiele und offene Trainings"
+    ],
+    "festas-feiras": [
+     "Feste, Messen und Märkte",
+     "Volksfeste, Festivals, Messen, Märkte und Gastronomie"
+    ],
+    "visitas-passeios": [
+     "Führungen und Spaziergänge",
+     "Führungen, Routen, Spaziergänge und Wanderwege"
+    ],
+    "acoes-campanhas": [
+     "Aktionen und Kampagnen",
+     "Aufklärung, Vorsorgeuntersuchungen, Sammlungen, Aufräumaktionen und Spendenkampagnen"
+    ],
+    "comemoracoes": [
+     "Gedenktage und Zeremonien",
+     "Gedenktage, Zeremonien, Galas, Ehrungen und Festsitzungen"
+    ]
+   }
+  },
+  "zh": {
+   "nome": "中文",
+   "bandeira": "cn",
+   "html_lang": "zh-Hans",
+   "titulo_pagina": "NEXO/活动 · 波武阿-迪瓦尔津市政活动",
+   "descricao_meta": "将波武阿-迪瓦尔津市政活动订阅到您的日历：全部活动、按主题或按类型。",
+   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>活动",
+   "sub_html": "波武阿-迪瓦尔津市政<strong>活动</strong>，尽在<strong>您的日历</strong>",
+   "saltar": "跳到正文",
+   "lingua": "语言",
+   "letra": "文字大小",
+   "letra_menos": "缩小文字",
+   "letra_mais": "放大文字",
+   "pergunta": "您想使用哪种日历？",
+   "op_google": "Google",
+   "op_outlook": "Outlook",
+   "op_apple": "iPhone、iPad 或 Mac",
+   "op_android": "Android",
+   "op_outro": "其他",
+   "dica_google": "在您的 Google 账户中打开 Google 日历，并请您确认。",
+   "dica_outlook": "打开网页版 Outlook（Microsoft 365 账户），并请您确认。",
+   "dica_apple": "打开“日历”应用。请在 iPhone、iPad 或 Mac 本机上使用。",
+   "dica_android": "日历将添加到您的 Google 账户，显示在 Google 日历和三星日历中。",
+   "dica_outro": "复制链接，并在您的应用中以“通过网址订阅日历”的方式添加。",
+   "subscrever": "订阅",
+   "copiar": "复制链接",
+   "copiado": "链接已复制。请粘贴到您的日历应用中。",
+   "copiar_falhou": "无法自动复制。请选中并复制链接：",
+   "completa_titulo": "全部活动",
+   "completa_texto": "所有活动汇集在一个日历中（{total}）。",
+   "evento_1": "1 项活动",
+   "eventos_n": "{n} 项活动",
+   "sem_eventos": "暂无活动",
+   "da_agenda": "占全部活动的 {p}",
+   "por_tema": "按主题订阅",
+   "por_tipo": "按类型订阅",
+   "aviso": "请勿同时订阅主题和类型，以免收到重复的活动。",
+   "ajuda": "帮助",
+   "h_google_t": "Google",
+   "h_google_html": "<p>点按“订阅”：将在已登录的 Google 账户中打开 Google 日历。确认后即可添加。该日历会显示在与此账户关联的所有设备上。</p>",
+   "h_outlook_t": "Outlook",
+   "h_outlook_html": "<p>使用 Microsoft 365 账户（工作或学校）时，“订阅”会打开网页版 Outlook 并请您确认。</p><p>使用个人账户（Outlook.com、Hotmail）时，请选择“其他”，复制链接，然后在 outlook.com 中从网页添加日历。</p>",
+   "h_apple_t": "iPhone、iPad 或 Mac",
+   "h_apple_html": "<p>请在 iPhone、iPad 或 Mac 本机上点按“订阅”，并在“日历”中确认。在 Windows 电脑上此按钮无效：请选择 Google 或 Outlook。</p><p>如果没有反应（例如页面在其他应用内打开），请用 Safari 打开，或选择“其他”，复制链接，并在“日历”设置中添加为订阅日历。</p>",
+   "h_android_t": "Android",
+   "h_android_html": "<p>点按“订阅”：日历将添加到您的 Google 账户，并显示在 Google 日历和三星日历中。如未显示，请打开 Google 日历设置，点按日历名称并开启同步。</p>",
+   "h_outro_t": "其他日历",
+   "h_outro_html": "<p>点按“复制链接”，然后在您的应用中通过“订阅日历”或“通过网址添加日历”粘贴该链接（Thunderbird：新建网络日历；Proton、Yahoo、Nextcloud 等：通过网址添加日历）。</p>",
+   "h_bilhetes_t": "在哪里购票或报名？",
+   "h_bilhetes_html": "<p>如果活动页面注明了价格、免费入场、门票或报名信息，这些内容会显示在活动备注中，并附有购票链接（例如 BOL）或报名链接。请始终以活动页面为准。</p>",
+   "h_tema_t": "主题和类型是如何确定的？",
+   "h_tema_html": "<p>根据每项活动的标题和说明自动确定。每项活动只有一个主题和一个类型，并始终包含在全部活动日历中。个别情况下，分类可能不够准确。</p>",
+   "h_lingua_t": "活动使用哪种语言？",
+   "h_lingua_html": "<p>本页面以及日历和分类名称使用您所选的语言。每项活动的标题和说明保留葡萄牙语，与市政府网站一致。</p>",
+   "h_freq_t": "多久更新一次？",
+   "h_freq_html": "<p>每 4 小时从市政府网站读取一次活动。各应用自行决定何时重新读取日历：可能需要几个小时，Google 日历最长可能需要一天。</p>",
+   "h_sair_t": "如何取消订阅",
+   "h_sair_html": "<p>在应用设置中删除已订阅的日历，活动会立即消失。</p>",
+   "rodape_html": "活动信息来自 <a href=\"{fonte}\">cm-pvarzim.pt 发布的活动日程</a>。请在每项活动的页面上核实日期、时间和入场条件（链接位于活动备注中）。",
+   "rodape2": "本页面不使用 Cookie，也不进行统计。",
+   "ver_em": "以中文查看此页面",
+   "fechar": "关闭",
+   "cal_geral": "波武阿-迪瓦尔津市政活动",
+   "cal_geral_desc": "市政活动日程中的全部活动。",
+   "cal_prefixo": "波武阿-迪瓦尔津：",
+   "bilhetes_titulo": "门票与报名（葡萄牙语）：",
+   "lab_bilhetes": "门票",
+   "lab_inscricao": "报名",
+   "mais_info": "更多信息",
+   "nota_lingua": "活动标题和说明为葡萄牙语，与市政府发布的内容一致。",
+   "temas": {
+    "cultura": [
+     "文化",
+     "音乐、电影、戏剧、展览、图书与文化遗产"
+    ],
+    "desporto": [
+     "体育",
+     "比赛、锦标赛与体育活动"
+    ],
+    "ambiente-mobilidade": [
+     "环境与出行",
+     "自然、气候、能源与交通"
+    ],
+    "turismo-economia": [
+     "旅游与经济",
+     "旅游、美食、商业、企业与就业"
+    ],
+    "comunidade-cidadania": [
+     "社区与公民生活",
+     "健康、教育、家庭、青年与市政生活"
+    ]
+   },
+   "tipos": {
+    "concertos": [
+     "音乐会",
+     "音乐会、独奏会、合唱、乐队与现场音乐"
+    ],
+    "cinema": [
+     "电影",
+     "电影放映、影片与纪录片"
+    ],
+    "teatro": [
+     "戏剧",
+     "话剧、街头戏剧、木偶剧与剧本朗读"
+    ],
+    "espetaculos": [
+     "表演",
+     "舞蹈、马戏、魔术、喜剧、音乐剧与街头表演"
+    ],
+    "exposicoes": [
+     "展览",
+     "艺术、摄影、历史与文化遗产展览"
+    ],
+    "literatura": [
+     "文学",
+     "图书、阅读、诗歌与故事"
+    ],
+    "oficinas-atividades": [
+     "工作坊与活动",
+     "工作坊、课程、讲座、游戏及适合各年龄段的活动"
+    ],
+    "provas-desportivas": [
+     "体育赛事",
+     "锦标赛、跑步、徒步、比赛与公开训练"
+    ],
+    "festas-feiras": [
+     "节庆、集市与市场",
+     "民俗节庆、节日、集市、市场与美食"
+    ],
+    "visitas-passeios": [
+     "参观与漫步",
+     "导览参观、路线、漫步与步道"
+    ],
+    "acoes-campanhas": [
+     "行动与公益活动",
+     "宣传、健康筛查、募集、清洁与公益活动"
+    ],
+    "comemoracoes": [
+     "纪念与典礼",
+     "纪念日、典礼、晚会、致敬与正式会议"
+    ]
+   }
+  },
+  "ja": {
+   "nome": "日本語",
+   "bandeira": "jp",
+   "html_lang": "ja",
+   "titulo_pagina": "NEXO/イベント · ポヴォア・デ・ヴァルジン市のイベント",
+   "descricao_meta": "ポヴォア・デ・ヴァルジン市のイベントをお使いのカレンダーで購読：すべて、テーマ別、種類別。",
+   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>イベント",
+   "sub_html": "ポヴォア・デ・ヴァルジン市の<strong>イベント</strong>を<strong>あなたのカレンダー</strong>に",
+   "saltar": "本文へ移動",
+   "lingua": "言語",
+   "letra": "文字サイズ",
+   "letra_menos": "文字を小さく",
+   "letra_mais": "文字を大きく",
+   "pergunta": "どのカレンダーを使いますか？",
+   "op_google": "Google",
+   "op_outlook": "Outlook",
+   "op_apple": "iPhone・iPad・Mac",
+   "op_android": "Android",
+   "op_outro": "その他",
+   "dica_google": "Google アカウントで Google カレンダーが開き、確認を求められます。",
+   "dica_outlook": "Web 版 Outlook（Microsoft 365 アカウント）が開き、確認を求められます。",
+   "dica_apple": "「カレンダー」アプリが開きます。iPhone・iPad・Mac 本体でご利用ください。",
+   "dica_android": "カレンダーは Google アカウントに追加され、Google カレンダーと Samsung カレンダーに表示されます。",
+   "dica_outro": "リンクをコピーし、アプリで「URL からカレンダーを購読」として追加してください。",
+   "subscrever": "購読する",
+   "copiar": "リンクをコピー",
+   "copiado": "リンクをコピーしました。カレンダーアプリに貼り付けてください。",
+   "copiar_falhou": "自動でコピーできませんでした。リンクを選択してコピーしてください：",
+   "completa_titulo": "すべてのイベント",
+   "completa_texto": "すべてのイベントを 1 つのカレンダーに（{total}）。",
+   "evento_1": "1 件のイベント",
+   "eventos_n": "{n} 件のイベント",
+   "sem_eventos": "現在イベントはありません",
+   "da_agenda": "全体の {p}",
+   "por_tema": "テーマ別に購読",
+   "por_tipo": "種類別に購読",
+   "aviso": "テーマと種類を同時に購読すると、同じイベントが重複して表示されます。どちらか一方をお選びください。",
+   "ajuda": "ヘルプ",
+   "h_google_t": "Google",
+   "h_google_html": "<p>「購読する」をタップすると、ログイン中の Google アカウントで Google カレンダーが開きます。確認すると追加されます。このアカウントに接続したすべての端末に表示されます。</p>",
+   "h_outlook_t": "Outlook",
+   "h_outlook_html": "<p>Microsoft 365 アカウント（職場または学校）では、「購読する」で Web 版 Outlook が開き、確認を求められます。</p><p>個人アカウント（Outlook.com、Hotmail）では、「その他」を選んでリンクをコピーし、outlook.com で Web からカレンダーを追加してください。</p>",
+   "h_apple_t": "iPhone・iPad・Mac",
+   "h_apple_html": "<p>iPhone・iPad・Mac 本体で「購読する」をタップし、カレンダーで確認してください。Windows パソコンではこのボタンは動作しません。Google または Outlook を選んでください。</p><p>何も起こらない場合（ほかのアプリ内でページを開いているときなど）は、Safari で開くか、「その他」を選んでリンクをコピーし、カレンダーの設定で照会カレンダーとして追加してください。</p>",
+   "h_android_t": "Android",
+   "h_android_html": "<p>「購読する」をタップすると、カレンダーが Google アカウントに追加され、Google カレンダーと Samsung カレンダーに表示されます。表示されない場合は、Google カレンダーの設定でカレンダー名をタップし、同期をオンにしてください。</p>",
+   "h_outro_t": "その他のカレンダー",
+   "h_outro_html": "<p>「リンクをコピー」をタップし、アプリの「カレンダーを購読」または「URL からカレンダーを追加」にリンクを貼り付けてください（Thunderbird：ネットワーク上の新しいカレンダー、Proton・Yahoo・Nextcloud など：URL からカレンダーを追加）。</p>",
+   "h_bilhetes_t": "チケットの購入や申し込みはどこで？",
+   "h_bilhetes_html": "<p>イベントページに料金、入場無料、チケット、申し込みの記載がある場合、その情報はイベントのメモに表示され、購入リンク（例：BOL）や申し込みリンクも付きます。必ずイベントページでご確認ください。</p>",
+   "h_tema_t": "テーマと種類はどのように決まりますか？",
+   "h_tema_html": "<p>各イベントのタイトルと説明から自動的に決まります。各イベントのテーマと種類はそれぞれ 1 つで、すべてのイベントのカレンダーには必ず含まれます。まれに分類が適切でない場合があります。</p>",
+   "h_lingua_t": "イベントは何語で表示されますか？",
+   "h_lingua_html": "<p>このページとカレンダー名・カテゴリ名は選択した言語で表示されます。各イベントのタイトルと説明は、市のウェブサイトと同じくポルトガル語のままです。</p>",
+   "h_freq_t": "更新の頻度は？",
+   "h_freq_html": "<p>市のウェブサイトから 4 時間ごとにイベントを読み込みます。カレンダーを再読み込みするタイミングは各アプリが決めます。数時間かかることがあり、Google カレンダーでは最大 1 日かかります。</p>",
+   "h_sair_t": "購読をやめるには",
+   "h_sair_html": "<p>アプリの設定で購読中のカレンダーを削除してください。イベントはすぐに消えます。</p>",
+   "rodape_html": "イベント情報は <a href=\"{fonte}\">cm-pvarzim.pt のイベント情報</a> から取得しています。日時や入場条件は各イベントのページでご確認ください（リンクはイベントのメモにあります）。",
+   "rodape2": "このページは Cookie や統計を使用していません。",
+   "ver_em": "このページを日本語で表示",
+   "fechar": "閉じる",
+   "cal_geral": "ポヴォア・デ・ヴァルジン市のイベント",
+   "cal_geral_desc": "市のイベントカレンダーのすべてのイベント。",
+   "cal_prefixo": "ポヴォア・デ・ヴァルジン：",
+   "bilhetes_titulo": "チケット・申し込み（ポルトガル語）：",
+   "lab_bilhetes": "チケット",
+   "lab_inscricao": "申し込み",
+   "mais_info": "詳細",
+   "nota_lingua": "イベントのタイトルと説明は、市が公開しているポルトガル語のままです。",
+   "temas": {
+    "cultura": [
+     "文化",
+     "音楽、映画、演劇、展覧会、本、文化遺産"
+    ],
+    "desporto": [
+     "スポーツ",
+     "競技、大会、運動"
+    ],
+    "ambiente-mobilidade": [
+     "環境・交通",
+     "自然、気候、エネルギー、交通"
+    ],
+    "turismo-economia": [
+     "観光・経済",
+     "観光、食、商業、企業、雇用"
+    ],
+    "comunidade-cidadania": [
+     "地域・市民生活",
+     "健康、教育、家族、若者、市政"
+    ]
+   },
+   "tipos": {
+    "concertos": [
+     "コンサート",
+     "コンサート、リサイタル、合唱、バンド、ライブ音楽"
+    ],
+    "cinema": [
+     "映画",
+     "映画上映、映画、ドキュメンタリー"
+    ],
+    "teatro": [
+     "演劇",
+     "演劇、大道演劇、人形劇、朗読劇"
+    ],
+    "espetaculos": [
+     "ショー",
+     "ダンス、サーカス、マジック、お笑い、ミュージカル、大道芸"
+    ],
+    "exposicoes": [
+     "展覧会",
+     "美術、写真、歴史、文化遺産の展覧会"
+    ],
+    "literatura": [
+     "文学",
+     "本、読書、詩、お話"
+    ],
+    "oficinas-atividades": [
+     "ワークショップ・アクティビティ",
+     "ワークショップ、講座、講演、ゲーム、全年齢向けアクティビティ"
+    ],
+    "provas-desportivas": [
+     "スポーツイベント",
+     "大会、ランニング、ウォーキング、試合、公開練習"
+    ],
+    "festas-feiras": [
+     "祭り・フェア・市場",
+     "郷土の祭り、フェスティバル、フェア、市場、グルメ"
+    ],
+    "visitas-passeios": [
+     "見学・散策",
+     "ガイドツアー、ルート、散策、遊歩道"
+    ],
+    "acoes-campanhas": [
+     "取り組み・キャンペーン",
+     "啓発、健康診断、回収、清掃、チャリティー"
+    ],
+    "comemoracoes": [
+     "記念行事・式典",
+     "記念日、式典、ガラ、表彰、公式会議"
+    ]
+   }
+  },
+  "nl": {
+   "nome": "Nederlands",
+   "bandeira": "nl",
+   "html_lang": "nl",
+   "titulo_pagina": "NEXO/Evenementen · Gemeentelijke evenementen van Póvoa de Varzim",
+   "descricao_meta": "Abonneer u op de gemeentelijke evenementen van Póvoa de Varzim in uw agenda: alles, per thema of per soort.",
+   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Evenementen",
+   "sub_html": "De gemeentelijke <strong>evenementen</strong> van Póvoa de Varzim in <strong>uw agenda</strong>",
+   "saltar": "Naar de inhoud",
+   "lingua": "Taal",
+   "letra": "Tekstgrootte",
+   "letra_menos": "Kleinere tekst",
+   "letra_mais": "Grotere tekst",
+   "pergunta": "Welke agenda wilt u gebruiken?",
+   "op_google": "Google",
+   "op_outlook": "Outlook",
+   "op_apple": "iPhone, iPad of Mac",
+   "op_android": "Android",
+   "op_outro": "Andere",
+   "dica_google": "Opent Google Agenda in uw Google-account en vraagt om bevestiging.",
+   "dica_outlook": "Opent Outlook op het web (Microsoft 365-account) en vraagt om bevestiging.",
+   "dica_apple": "Opent de app Agenda. Gebruik dit op de iPhone, iPad of Mac zelf.",
+   "dica_android": "De agenda wordt aan uw Google-account toegevoegd: zichtbaar in Google Agenda en Samsung Agenda.",
+   "dica_outro": "Kopieer de link en voeg hem in uw app toe als agenda via URL (abonnement).",
+   "subscrever": "Abonneren",
+   "copiar": "Link kopiëren",
+   "copiado": "Link gekopieerd. Plak hem in uw agenda-app.",
+   "copiar_falhou": "Automatisch kopiëren lukte niet. Selecteer en kopieer de link:",
+   "completa_titulo": "Alle evenementen",
+   "completa_texto": "Alle evenementen in één agenda ({total}).",
+   "evento_1": "1 evenement",
+   "eventos_n": "{n} evenementen",
+   "sem_eventos": "Op dit moment geen evenementen",
+   "da_agenda": "{p} van alle evenementen",
+   "por_tema": "Abonneren per thema",
+   "por_tipo": "Abonneren per soort",
+   "aviso": "Abonneer u niet tegelijk op thema's en soorten, anders krijgt u evenementen dubbel.",
+   "ajuda": "Hulp",
+   "h_google_t": "Google",
+   "h_google_html": "<p>Tik op Abonneren: Google Agenda opent in het Google-account waarmee u bent ingelogd. Bevestig om toe te voegen. De agenda verschijnt op alle apparaten die aan dat account gekoppeld zijn.</p>",
+   "h_outlook_t": "Outlook",
+   "h_outlook_html": "<p>Met een Microsoft 365-account (werk of school) opent Abonneren Outlook op het web en vraagt om bevestiging.</p><p>Met een persoonlijk account (Outlook.com, Hotmail) kiest u ‘Andere’, kopieert u de link en voegt u op outlook.com een agenda van het web toe.</p>",
+   "h_apple_t": "iPhone, iPad of Mac",
+   "h_apple_html": "<p>Tik op de iPhone, iPad of Mac zelf op Abonneren en bevestig in Agenda. Op een Windows-computer werkt deze knop niet: kies Google of Outlook.</p><p>Gebeurt er niets (bijvoorbeeld als de pagina in een andere app is geopend), open haar dan in Safari, of kies ‘Andere’, kopieer de link en voeg hem in de instellingen van Agenda toe als geabonneerde agenda.</p>",
+   "h_android_t": "Android",
+   "h_android_html": "<p>Tik op Abonneren: de agenda wordt aan uw Google-account toegevoegd en verschijnt in Google Agenda en Samsung Agenda. Verschijnt hij niet, open dan de instellingen van Google Agenda, tik op de naam van de agenda en zet synchronisatie aan.</p>",
+   "h_outro_t": "Andere agenda",
+   "h_outro_html": "<p>Tik op ‘Link kopiëren’ en plak de link in uw app, bij de optie om te abonneren op of een agenda toe te voegen via URL (Thunderbird: nieuwe agenda op het netwerk; Proton, Yahoo, Nextcloud en andere: agenda via URL).</p>",
+   "h_bilhetes_t": "Waar koop ik kaartjes of schrijf ik me in?",
+   "h_bilhetes_html": "<p>Als de evenementpagina prijzen, gratis toegang, kaartjes of inschrijving vermeldt, staat die informatie in de notities van het evenement, met de link om te kopen (bijvoorbeeld BOL) of in te schrijven. Controleer altijd de evenementpagina.</p>",
+   "h_tema_t": "Hoe worden thema en soort gekozen?",
+   "h_tema_html": "<p>Automatisch, op basis van de titel en beschrijving van elk evenement. Elk evenement heeft één thema en één soort en staat altijd in de volledige agenda. Soms past de indeling niet helemaal.</p>",
+   "h_lingua_t": "In welke taal staan de evenementen?",
+   "h_lingua_html": "<p>De pagina en de namen van agenda's en categorieën zijn in de gekozen taal. Titel en beschrijving van elk evenement blijven in het Portugees, zoals op de website van de gemeente.</p>",
+   "h_freq_t": "Hoe vaak wordt hij bijgewerkt?",
+   "h_freq_html": "<p>De evenementen worden elke 4 uur van de website van de gemeente gelezen. Elke app bepaalt zelf wanneer de agenda opnieuw wordt gelezen: dat kan enkele uren duren, bij Google Agenda tot een dag.</p>",
+   "h_sair_t": "Abonnement opzeggen",
+   "h_sair_html": "<p>Verwijder de geabonneerde agenda in de instellingen van de app. De evenementen verdwijnen meteen.</p>",
+   "rodape_html": "De evenementen komen uit de <a href=\"{fonte}\">evenementenagenda op cm-pvarzim.pt</a>. Controleer data, tijden en toegangsvoorwaarden op de pagina van elk evenement (de link staat in de notities).",
+   "rodape2": "Deze pagina gebruikt geen cookies en geen statistieken.",
+   "ver_em": "Bekijk deze pagina in het Nederlands",
+   "fechar": "Sluiten",
+   "cal_geral": "Gemeentelijke evenementen Póvoa de Varzim",
+   "cal_geral_desc": "Alle evenementen uit de gemeentelijke agenda.",
+   "cal_prefixo": "Póvoa de Varzim: ",
+   "bilhetes_titulo": "Kaartjes en inschrijving (in het Portugees):",
+   "lab_bilhetes": "Kaartjes",
+   "lab_inscricao": "Inschrijving",
+   "mais_info": "Meer informatie",
+   "nota_lingua": "Titel en beschrijving van het evenement in het Portugees, zoals gepubliceerd door de gemeente.",
+   "temas": {
+    "cultura": [
+     "Cultuur",
+     "Muziek, film, theater, tentoonstellingen, boeken en erfgoed"
+    ],
+    "desporto": [
+     "Sport",
+     "Wedstrijden, toernooien en beweging"
+    ],
+    "ambiente-mobilidade": [
+     "Milieu en mobiliteit",
+     "Natuur, klimaat, energie en vervoer"
+    ],
+    "turismo-economia": [
+     "Toerisme en economie",
+     "Toerisme, eten, winkels, bedrijven en werk"
+    ],
+    "comunidade-cidadania": [
+     "Gemeenschap en burgerschap",
+     "Gezondheid, onderwijs, gezin, jeugd en gemeenteleven"
+    ]
+   },
+   "tipos": {
+    "concertos": [
+     "Concerten",
+     "Concerten, recitals, koren, bands en livemuziek"
+    ],
+    "cinema": [
+     "Film",
+     "Filmvoorstellingen, films en documentaires"
+    ],
+    "teatro": [
+     "Theater",
+     "Toneelstukken, straattheater, poppenspel en voorleesvoorstellingen"
+    ],
+    "espetaculos": [
+     "Shows",
+     "Dans, circus, goochelen, comedy, musicals en straatvoorstellingen"
+    ],
+    "exposicoes": [
+     "Tentoonstellingen",
+     "Tentoonstellingen over kunst, fotografie, geschiedenis en erfgoed"
+    ],
+    "literatura": [
+     "Literatuur",
+     "Boeken, lezen, poëzie en verhalen"
+    ],
+    "oficinas-atividades": [
+     "Workshops en activiteiten",
+     "Workshops, cursussen, lezingen, spellen en activiteiten voor alle leeftijden"
+    ],
+    "provas-desportivas": [
+     "Sportevenementen",
+     "Toernooien, hardloopwedstrijden, wandelingen, wedstrijden en open trainingen"
+    ],
+    "festas-feiras": [
+     "Feesten, beurzen en markten",
+     "Volksfeesten, festivals, beurzen, markten en eten"
+    ],
+    "visitas-passeios": [
+     "Rondleidingen en wandelingen",
+     "Rondleidingen, routes, wandelingen en paden"
+    ],
+    "acoes-campanhas": [
+     "Acties en campagnes",
+     "Voorlichting, screenings, inzamelingen, opruimacties en goede doelen"
+    ],
+    "comemoracoes": [
+     "Herdenkingen en ceremonies",
+     "Herdenkingsdagen, ceremonies, gala's, eerbetonen en plechtige zittingen"
+    ]
+   }
+  },
+  "pl": {
+   "nome": "Polski",
+   "bandeira": "pl",
+   "html_lang": "pl",
+   "titulo_pagina": "NEXO/Wydarzenia · Wydarzenia miejskie w Póvoa de Varzim",
+   "descricao_meta": "Subskrybuj wydarzenia miejskie Póvoa de Varzim w swoim kalendarzu: wszystkie, według tematu lub rodzaju.",
+   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Wydarzenia",
+   "sub_html": "Miejskie <strong>wydarzenia</strong> Póvoa de Varzim w <strong>Twoim kalendarzu</strong>",
+   "saltar": "Przejdź do treści",
+   "lingua": "Język",
+   "letra": "Rozmiar tekstu",
+   "letra_menos": "Mniejszy tekst",
+   "letra_mais": "Większy tekst",
+   "pergunta": "Którego kalendarza chcesz używać?",
+   "op_google": "Google",
+   "op_outlook": "Outlook",
+   "op_apple": "iPhone, iPad lub Mac",
+   "op_android": "Android",
+   "op_outro": "Inny",
+   "dica_google": "Otwiera Kalendarz Google na Twoim koncie Google i prosi o potwierdzenie.",
+   "dica_outlook": "Otwiera Outlook w przeglądarce (konto Microsoft 365) i prosi o potwierdzenie.",
+   "dica_apple": "Otwiera aplikację Kalendarz. Użyj na samym iPhonie, iPadzie lub Macu.",
+   "dica_android": "Kalendarz zostanie dodany do Twojego konta Google: pojawi się w Kalendarzu Google i Kalendarzu Samsung.",
+   "dica_outro": "Skopiuj link i dodaj go w swojej aplikacji jako kalendarz z adresu URL (subskrypcja).",
+   "subscrever": "Subskrybuj",
+   "copiar": "Kopiuj link",
+   "copiado": "Link skopiowany. Wklej go w aplikacji kalendarza.",
+   "copiar_falhou": "Nie udało się skopiować automatycznie. Zaznacz i skopiuj link:",
+   "completa_titulo": "Wszystkie wydarzenia",
+   "completa_texto": "Wszystkie wydarzenia w jednym kalendarzu ({total}).",
+   "evento_1": "1 wydarzenie",
+   "eventos_n": "Wydarzenia: {n}",
+   "sem_eventos": "Obecnie brak wydarzeń",
+   "da_agenda": "{p} wszystkich wydarzeń",
+   "por_tema": "Subskrybuj według tematu",
+   "por_tipo": "Subskrybuj według rodzaju",
+   "aviso": "Nie subskrybuj jednocześnie tematów i rodzajów, aby nie otrzymywać powtórzonych wydarzeń.",
+   "ajuda": "Pomoc",
+   "h_google_t": "Google",
+   "h_google_html": "<p>Dotknij Subskrybuj: Kalendarz Google otworzy się na zalogowanym koncie Google. Potwierdź dodanie. Kalendarz pojawi się na wszystkich urządzeniach połączonych z tym kontem.</p>",
+   "h_outlook_t": "Outlook",
+   "h_outlook_html": "<p>Na koncie Microsoft 365 (służbowym lub szkolnym) Subskrybuj otwiera Outlook w przeglądarce i prosi o potwierdzenie.</p><p>Na koncie prywatnym (Outlook.com, Hotmail) wybierz „Inny”, skopiuj link i na outlook.com dodaj kalendarz z sieci Web.</p>",
+   "h_apple_t": "iPhone, iPad lub Mac",
+   "h_apple_html": "<p>Na samym iPhonie, iPadzie lub Macu dotknij Subskrybuj i potwierdź w Kalendarzu. Na komputerze z Windows ten przycisk nie działa: wybierz Google lub Outlook.</p><p>Jeśli nic się nie dzieje (np. gdy strona jest otwarta w innej aplikacji), otwórz ją w Safari albo wybierz „Inny”, skopiuj link i dodaj go w ustawieniach Kalendarza jako kalendarz subskrybowany.</p>",
+   "h_android_t": "Android",
+   "h_android_html": "<p>Dotknij Subskrybuj: kalendarz zostanie dodany do Twojego konta Google i pojawi się w Kalendarzu Google i Kalendarzu Samsung. Jeśli się nie pojawi, otwórz ustawienia Kalendarza Google, dotknij nazwy kalendarza i włącz synchronizację.</p>",
+   "h_outro_t": "Inny kalendarz",
+   "h_outro_html": "<p>Dotknij „Kopiuj link” i wklej link w swojej aplikacji, w opcji subskrypcji lub dodawania kalendarza z adresu URL (Thunderbird: nowy kalendarz w sieci; Proton, Yahoo, Nextcloud i inne: kalendarz z adresu URL).</p>",
+   "h_bilhetes_t": "Gdzie kupić bilety lub się zapisać?",
+   "h_bilhetes_html": "<p>Jeśli strona wydarzenia podaje cenę, wstęp wolny, bilety lub zapisy, informacja ta pojawia się w notatkach wydarzenia, z linkiem do zakupu (np. BOL) lub zapisów. Zawsze sprawdzaj stronę wydarzenia.</p>",
+   "h_tema_t": "Jak wybierany jest temat i rodzaj?",
+   "h_tema_html": "<p>Automatycznie, na podstawie tytułu i opisu każdego wydarzenia. Każde wydarzenie ma jeden temat i jeden rodzaj i zawsze jest w pełnym kalendarzu. W pojedynczych przypadkach klasyfikacja może nie być najtrafniejsza.</p>",
+   "h_lingua_t": "W jakim języku są wydarzenia?",
+   "h_lingua_html": "<p>Strona oraz nazwy kalendarzy i kategorii są w wybranym języku. Tytuł i opis każdego wydarzenia pozostają po portugalsku, tak jak na stronie gminy.</p>",
+   "h_freq_t": "Jak często jest aktualizowany?",
+   "h_freq_html": "<p>Wydarzenia są pobierane ze strony gminy co 4 godziny. Każda aplikacja sama decyduje, kiedy ponownie odczytać kalendarz: może to potrwać kilka godzin, a w Kalendarzu Google do jednego dnia.</p>",
+   "h_sair_t": "Jak zrezygnować",
+   "h_sair_html": "<p>Usuń subskrybowany kalendarz w ustawieniach aplikacji. Wydarzenia znikną od razu.</p>",
+   "rodape_html": "Wydarzenia pochodzą z <a href=\"{fonte}\">kalendarza wydarzeń na cm-pvarzim.pt</a>. Sprawdź daty, godziny i warunki wstępu na stronie każdego wydarzenia (link jest w notatkach wydarzenia).",
+   "rodape2": "Ta strona nie używa plików cookie ani statystyk.",
+   "ver_em": "Zobacz tę stronę po polsku",
+   "fechar": "Zamknij",
+   "cal_geral": "Wydarzenia miejskie Póvoa de Varzim",
+   "cal_geral_desc": "Wszystkie wydarzenia z kalendarza miejskiego.",
+   "cal_prefixo": "Póvoa de Varzim: ",
+   "bilhetes_titulo": "Bilety i zapisy (po portugalsku):",
+   "lab_bilhetes": "Bilety",
+   "lab_inscricao": "Zapisy",
+   "mais_info": "Więcej informacji",
+   "nota_lingua": "Tytuł i opis wydarzenia po portugalsku, tak jak opublikowała je gmina.",
+   "temas": {
+    "cultura": [
+     "Kultura",
+     "Muzyka, kino, teatr, wystawy, książki i dziedzictwo"
+    ],
+    "desporto": [
+     "Sport",
+     "Zawody, turnieje i aktywność fizyczna"
+    ],
+    "ambiente-mobilidade": [
+     "Środowisko i mobilność",
+     "Przyroda, klimat, energia i transport"
+    ],
+    "turismo-economia": [
+     "Turystyka i gospodarka",
+     "Turystyka, gastronomia, handel, firmy i praca"
+    ],
+    "comunidade-cidadania": [
+     "Społeczność i obywatelstwo",
+     "Zdrowie, edukacja, rodzina, młodzież i życie gminy"
+    ]
+   },
+   "tipos": {
+    "concertos": [
+     "Koncerty",
+     "Koncerty, recitale, chóry, zespoły i muzyka na żywo"
+    ],
+    "cinema": [
+     "Kino",
+     "Seanse, filmy i dokumenty"
+    ],
+    "teatro": [
+     "Teatr",
+     "Spektakle, teatr uliczny, lalki i czytania sceniczne"
+    ],
+    "espetaculos": [
+     "Widowiska",
+     "Taniec, cyrk, magia, komedia, musicale i występy uliczne"
+    ],
+    "exposicoes": [
+     "Wystawy",
+     "Wystawy sztuki, fotografii, historii i dziedzictwa"
+    ],
+    "literatura": [
+     "Literatura",
+     "Książki, czytanie, poezja i opowieści"
+    ],
+    "oficinas-atividades": [
+     "Warsztaty i zajęcia",
+     "Warsztaty, kursy, wykłady, gry i zajęcia dla każdego wieku"
+    ],
+    "provas-desportivas": [
+     "Wydarzenia sportowe",
+     "Turnieje, biegi, marsze, mecze i otwarte treningi"
+    ],
+    "festas-feiras": [
+     "Święta, targi i jarmarki",
+     "Święta ludowe, festiwale, targi, jarmarki i gastronomia"
+    ],
+    "visitas-passeios": [
+     "Zwiedzanie i spacery",
+     "Zwiedzanie z przewodnikiem, trasy, spacery i szlaki"
+    ],
+    "acoes-campanhas": [
+     "Akcje i kampanie",
+     "Edukacja, badania profilaktyczne, zbiórki, sprzątanie i akcje charytatywne"
+    ],
+    "comemoracoes": [
+     "Obchody i uroczystości",
+     "Dni pamięci, uroczystości, gale, hołdy i uroczyste sesje"
+    ]
+   }
+  }
+ }
+}

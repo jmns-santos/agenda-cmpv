@@ -23,6 +23,7 @@ import argparse
 import base64
 import hashlib
 import html
+import json
 import logging
 import os
 import re
@@ -60,6 +61,8 @@ DOMINIOS_PERMITIDOS = {"www.cm-pvarzim.pt", "cm-pvarzim.pt"}
 
 PASTA_SCRIPT = Path(__file__).resolve().parent
 MODELO_PAGINA = PASTA_SCRIPT / "modelo_pagina.html"
+TRADUCOES = PASTA_SCRIPT / "traducoes.json"
+LOGOTIPO = PASTA_SCRIPT / "logotipo.png"
 PASTA_FONTES = PASTA_SCRIPT / "fontes"
 
 NOME_GERAL = "Agenda Municipal da Póvoa de Varzim"
@@ -564,14 +567,22 @@ def info_acesso(item):
     return frases, ligacoes[:3]
 
 
-def texto_acesso(item, descricao=""):
+TEXTOS_PT = {
+    "bilhetes_titulo": "Bilhetes e inscrições:", "lab_bilhetes": "Bilhetes", "lab_inscricao": "Inscrição",
+    "mais_info": "Mais informação", "nota_lingua": "",
+}
+
+
+def texto_acesso(item, descricao="", t=None):
     """Bloco para as notas do evento. Não repete frases que já estão na descrição."""
+    t = t or TEXTOS_PT
     frases, ligacoes = info_acesso(item)
     ja = normalizar(descricao)
     frases = [f for f in frases if normalizar(f).strip() not in ja]
     if not frases and not ligacoes:
         return ""
-    linhas = ["Bilhetes e inscrições:"] + frases + ["{}: {}".format(r, u) for r, u in ligacoes]
+    rotulos = {"Bilhetes": t["lab_bilhetes"], "Inscrição": t["lab_inscricao"]}
+    linhas = [t["bilhetes_titulo"]] + frases + ["{}: {}".format(rotulos.get(r, r), u) for r, u in ligacoes]
     return "\n".join(linhas)
 
 
@@ -690,7 +701,9 @@ def novo_calendario(nome, descricao, url_fonte):
     return cal
 
 
-def criar_evento(item, tema, tipo):
+def criar_evento(item, tema, tipo, t=None, nomes=None):
+    """t: textos da língua (por omissão, português). nomes: {slug: nome} dos temas e tipos nessa língua."""
+    t = t or TEXTOS_PT
     inicio = parse_iso(item.get("start"))
     fim = parse_iso(item.get("end")) or inicio + timedelta(hours=1)
     if fim < inicio:
@@ -722,13 +735,15 @@ def criar_evento(item, tema, tipo):
 
     link = link_seguro(item.get("url") or item.get("eventUrl"))
     descricao = limpar_texto(item.get("description") or item.get("text"))
-    partes = [p for p in (descricao, texto_acesso(item, descricao), "Mais informação: " + link if link else "") if p]
+    partes = [p for p in (descricao, texto_acesso(item, descricao, t), t["nota_lingua"],
+                          "{}: {}".format(t["mais_info"], link) if link else "") if p]
     if partes:
         ev.add("description", vText("\n\n".join(partes)))
     if link:
         ev.add("url", link)
 
-    ev.add("categories", [tema.nome, tipo.nome])
+    nomes = nomes or {}
+    ev.add("categories", [nomes.get(tema.slug, tema.nome), nomes.get(tipo.slug, tipo.nome)])
     ev.add("transp", "TRANSPARENT")  # não marca a pessoa como "ocupada"
     return ev
 
@@ -737,27 +752,60 @@ def ordenar(itens):
     return sorted(itens, key=lambda i: (parse_iso(i.get("start")), limpar_texto(i.get("title"))))
 
 
-def construir_calendarios(itens, url_base):
+def carregar_traducoes():
+    """Línguas da página e dos calendários (traducoes.json, ao lado deste script)."""
+    if not TRADUCOES.is_file():
+        raise FileNotFoundError("Falta {} (textos da página em cada língua).".format(TRADUCOES))
+    return json.loads(TRADUCOES.read_text(encoding="utf-8"))
+
+
+def prefixo_lingua(lingua):
+    """O português fica na raiz (não muda os links já subscritos); as outras em l/<código>/."""
+    return "" if lingua == "pt" else "l/{}/".format(lingua)
+
+
+def nome_grupo(g, t):
+    """(nome, resumo) de um tema ou tipo na língua t; em português vem de TEMAS/TIPOS."""
+    if t:
+        for chave in ("temas", "tipos"):
+            if g.slug in t.get(chave, {}):
+                return tuple(t[chave][g.slug])
+    return g.nome, g.resumo
+
+
+def classificar_todos(itens):
+    """Tema e tipo de cada evento, calculados uma vez para todas as línguas."""
+    return [(item, classificar(item), classificar_tipo(item)) for item in ordenar(itens)]
+
+
+def construir_calendarios(itens, url_base, lingua="pt", t=None, classificados=None):
     """Devolve {caminho_relativo: bytes} e a contagem de eventos por tema e por tipo."""
-    geral = novo_calendario(NOME_GERAL, "Todos os eventos da agenda municipal.",
-                            url_ics(url_base, "agenda.ics"))
+    t_ics = dict(TEXTOS_PT, **{k: v for k, v in (t or {}).items() if k in TEXTOS_PT})
+    pre = prefixo_lingua(lingua)
+    nomes = {g.slug: nome_grupo(g, t)[0] for g in TEMAS + TIPOS}
+    cal_geral = (t or {}).get("cal_geral", NOME_GERAL)
+    cal_desc = (t or {}).get("cal_geral_desc", "Todos os eventos da agenda municipal.")
+    cal_pref = (t or {}).get("cal_prefixo", PREFIXO_TEMA)
+
+    geral = novo_calendario(cal_geral, cal_desc, url_ics(url_base, pre + "agenda.ics"))
     grupos = {}
     for pasta, lista in (("temas", TEMAS), ("tipos", TIPOS)):
         for g in lista:
-            caminho = "{}/{}.ics".format(pasta, g.slug)
-            grupos[caminho] = novo_calendario(PREFIXO_TEMA + g.nome, g.resumo + ".", url_ics(url_base, caminho))
-    contagem = {"temas": {t.slug: 0 for t in TEMAS}, "tipos": {t.slug: 0 for t in TIPOS}}
+            caminho = "{}{}/{}.ics".format(pre, pasta, g.slug)
+            nome, resumo = nome_grupo(g, t)
+            grupos[caminho] = novo_calendario(cal_pref + nome, resumo + ".", url_ics(url_base, caminho))
+    contagem = {"temas": {g.slug: 0 for g in TEMAS}, "tipos": {g.slug: 0 for g in TIPOS}}
 
-    for item in ordenar(itens):
-        tema, tipo = classificar(item), classificar_tipo(item)
+    for item, tema, tipo in (classificados if classificados is not None else classificar_todos(itens)):
         contagem["temas"][tema.slug] += 1
         contagem["tipos"][tipo.slug] += 1
-        geral.add_component(criar_evento(item, tema, tipo))
-        grupos["temas/{}.ics".format(tema.slug)].add_component(criar_evento(item, tema, tipo))
-        grupos["tipos/{}.ics".format(tipo.slug)].add_component(criar_evento(item, tema, tipo))
-        logging.debug("%-22s %-22s %s", tema.slug, tipo.slug, limpar_texto(item.get("title")))
+        geral.add_component(criar_evento(item, tema, tipo, t_ics, nomes))
+        grupos["{}temas/{}.ics".format(pre, tema.slug)].add_component(criar_evento(item, tema, tipo, t_ics, nomes))
+        grupos["{}tipos/{}.ics".format(pre, tipo.slug)].add_component(criar_evento(item, tema, tipo, t_ics, nomes))
+        if lingua == "pt":
+            logging.debug("%-22s %-22s %s", tema.slug, tipo.slug, limpar_texto(item.get("title")))
 
-    ficheiros = {"agenda.ics": geral.to_ical()}
+    ficheiros = {pre + "agenda.ics": geral.to_ical()}
     for caminho, cal in grupos.items():
         ficheiros[caminho] = cal.to_ical()
     return ficheiros, contagem
@@ -767,10 +815,14 @@ def construir_calendarios(itens, url_base):
 # Página pública
 # ---------------------------------------------------------------------------
 
-def texto_contagem(n):
+def texto_contagem(n, t=None):
+    if t is None:
+        if n == 0:
+            return "Sem eventos de momento"
+        return "1 evento" if n == 1 else "{} eventos".format(n)
     if n == 0:
-        return "Sem eventos de momento"
-    return "1 evento" if n == 1 else "{} eventos".format(n)
+        return t["sem_eventos"]
+    return t["evento_1"] if n == 1 else t["eventos_n"].format(n=n)
 
 
 def texto_percentagem(n, total):
@@ -786,6 +838,45 @@ ICONE_CALENDARIO = (
     'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">'
     '<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>'
 )
+ICONE_COPIAR = (
+    '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" '
+    'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">'
+    '<rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>'
+)
+
+
+def _estrela(cx, cy, r, rot=0.0):
+    import math
+    pts = []
+    for i in range(10):
+        ang = math.radians(-90 + rot + i * 36)
+        rr = r if i % 2 == 0 else r * 0.382
+        pts.append("{:.2f},{:.2f}".format(cx + rr * math.cos(ang), cy + rr * math.sin(ang)))
+    return '<polygon points="{}" fill="#ffde00"/>'.format(" ".join(pts))
+
+
+# Bandeiras simplificadas (desenhadas aqui: os emojis de bandeira não aparecem no Windows).
+BANDEIRAS = {
+    "pt": '<rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/>'
+          '<circle cx="12" cy="10" r="4.4" fill="#ffe900"/><rect x="10.2" y="7.4" width="3.6" height="5" rx="1" fill="#fff" stroke="#da291c" stroke-width=".8"/>',
+    "gb": '<rect width="30" height="20" fill="#012169"/><path d="M0,0 30,20M30,0 0,20" stroke="#fff" stroke-width="4"/>'
+          '<path d="M0,0 30,20M30,0 0,20" stroke="#c8102e" stroke-width="1.5"/><path d="M15,0V20M0,10H30" stroke="#fff" stroke-width="6"/>'
+          '<path d="M15,0V20M0,10H30" stroke="#c8102e" stroke-width="3.4"/>',
+    "es": '<rect width="30" height="20" fill="#aa151b"/><rect y="5" width="30" height="10" fill="#f1bf00"/>',
+    "it": '<rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#009246"/><rect x="20" width="10" height="20" fill="#ce2b37"/>',
+    "fr": '<rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#002654"/><rect x="20" width="10" height="20" fill="#ce1126"/>',
+    "de": '<rect width="30" height="20" fill="#ffce00"/><rect width="30" height="6.67" fill="#000"/><rect y="6.67" width="30" height="6.67" fill="#dd0000"/>',
+    "nl": '<rect width="30" height="20" fill="#21468b"/><rect width="30" height="13.33" fill="#fff"/><rect width="30" height="6.67" fill="#ae1c28"/>',
+    "pl": '<rect width="30" height="20" fill="#dc143c"/><rect width="30" height="10" fill="#fff"/>',
+    "jp": '<rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/>',
+    "cn": '<rect width="30" height="20" fill="#de2910"/>' + _estrela(5, 5, 3) + _estrela(10, 2, 1, 23) +
+          _estrela(12, 4, 1, 45) + _estrela(12, 7, 1, 70) + _estrela(10, 9, 1, 20),
+}
+
+
+def bandeira(codigo):
+    return ('<svg class="bandeira" viewBox="0 0 30 20" aria-hidden="true" focusable="false">{}</svg>'
+            .format(BANDEIRAS.get(codigo, "")))
 
 
 def links(url_base, caminho):
@@ -801,68 +892,132 @@ def links(url_base, caminho):
     }
 
 
-def bloco_subscricao(url_base, caminho, rotulo):
+def bloco_subscricao(url_base, caminho, rotulo, t):
     l = {k: html.escape(v, quote=True) for k, v in links(url_base, caminho).items()}
-    r = html.escape(rotulo, quote=True)
+    sub = html.escape(t["subscrever"])
+    aria = html.escape("{}: {}".format(t["subscrever"], rotulo), quote=True)
+    aria_copiar = html.escape("{}: {}".format(t["copiar"], rotulo), quote=True)
     return (
         '<div class="acoes">\n'
-        '  <a class="botao so-apple" href="{webcal}" aria-label="Subscrever {r} no Calendário do iPhone, iPad ou Mac">{i}Subscrever</a>\n'
-        '  <a class="botao so-google" href="{google}" target="_blank" rel="noopener noreferrer" '
-        'aria-label="Subscrever {r} no Google Calendar">{i}Subscrever</a>\n'
-        '  <a class="botao so-outlook" href="{outlook}" target="_blank" rel="noopener noreferrer" '
-        'aria-label="Subscrever {r} no Outlook">{i}Subscrever</a>\n'
+        '  <a class="botao so-google" href="{google}" target="_blank" rel="noopener noreferrer" aria-label="{aria} (Google)">{i}{sub}</a>\n'
+        '  <a class="botao so-outlook" href="{outlook}" target="_blank" rel="noopener noreferrer" aria-label="{aria} (Outlook)">{i}{sub}</a>\n'
+        '  <a class="botao so-apple" href="{webcal}" target="_top" aria-label="{aria} (iPhone, iPad, Mac)">{i}{sub}</a>\n'
+        '  <a class="botao so-android" href="{google}" target="_blank" rel="noopener noreferrer" aria-label="{aria} (Android)">{i}{sub}</a>\n'
         '  <div class="copiar so-outro">\n'
-        '    <input type="text" readonly value="{https}" aria-label="Link de {r}">\n'
-        '    <button type="button" class="botao-copiar" data-link="{https}">Copiar link</button>\n'
+        '    <button type="button" class="botao botao-copiar" data-link="{https}" aria-label="{aria_copiar}">{c}{copiar}</button>\n'
+        '    <input type="text" readonly value="{https}" aria-label="{aria_copiar}">\n'
         '  </div>\n'
         '</div>'
-    ).format(r=r, i=ICONE_CALENDARIO, **l)
+    ).format(i=ICONE_CALENDARIO, c=ICONE_COPIAR, sub=sub, aria=aria, aria_copiar=aria_copiar,
+             copiar=html.escape(t["copiar"]), **l)
 
 
-def lista_grupos(grupos, pasta, contagem, total, url_base):
+def lista_grupos(grupos, pasta, contagem, total, url_base, lingua, t):
     linhas = []
+    pre = prefixo_lingua(lingua)
     for g in grupos:
         n = contagem[g.slug]
         pct = 100.0 * n / total if total else 0.0
+        nome, resumo = nome_grupo(g, t if lingua != "pt" else None)
         linhas.append(
             '<li class="cartao{vazio}" style="--cor: {cor}; --pct: {pct:.1f}%">\n'
             '  <h3>{nome}</h3>\n'
             '  <p class="resumo">{resumo}</p>\n'
             '  <span class="barra" aria-hidden="true"><span></span></span>\n'
             '  <div class="rodape">\n'
-            '    <span class="valor">{contagem}{percentagem}</span>\n'
+            '    <p class="valor">{contagem}{percentagem}</p>\n'
             '    {acoes}\n'
             '  </div>\n'
             '</li>'.format(
                 vazio=" vazio" if n == 0 else "",
                 cor=html.escape(g.cor, quote=True),
                 pct=pct,
-                nome=html.escape(g.nome),
-                resumo=html.escape(g.resumo),
-                contagem=texto_contagem(n),
-                percentagem=" <small>· {} da agenda</small>".format(texto_percentagem(n, total)) if n else "",
-                acoes=bloco_subscricao(url_base, "{}/{}.ics".format(pasta, g.slug), g.nome),
+                nome=html.escape(nome),
+                resumo=html.escape(resumo),
+                contagem=html.escape(texto_contagem(n, t)),
+                percentagem=" <small>· {}</small>".format(
+                    html.escape(t["da_agenda"].format(p=texto_percentagem(n, total)))) if n else "",
+                acoes=bloco_subscricao(url_base, "{}{}/{}.ics".format(pre, pasta, g.slug), nome, t),
             )
         )
     return "\n".join(linhas)
 
 
-def gerar_pagina(contagem, total, url_base):
+def logotipo_data_uri():
+    if not LOGOTIPO.is_file():
+        return ""
+    return "data:image/png;base64," + base64.b64encode(LOGOTIPO.read_bytes()).decode()
+
+
+def caminho_pagina(de, para):
+    """Link relativo da página da língua `de` para a da língua `para`."""
+    raiz = "" if de == "pt" else "../../"
+    return raiz + prefixo_lingua(para) + "index.html"
+
+
+def seletor_linguas(lingua, trad):
+    itens = []
+    for cod in trad["ordem"]:
+        t = trad["linguas"][cod]
+        atual = ' aria-current="page"' if cod == lingua else ""
+        itens.append(
+            '<li><a href="{href}" hreflang="{hl}" lang="{hl}"{atual} data-lingua="{cod}">{b}<span>{nome}</span></a></li>'.format(
+                href=caminho_pagina(lingua, cod), hl=t["html_lang"], atual=atual, cod=cod,
+                b=bandeira(t["bandeira"]), nome=html.escape(t["nome"])))
+    return "\n        ".join(itens)
+
+
+def sugestoes_linguas(lingua, trad):
+    """Uma frase por língua ("Ver esta página em …"), mostrada só a quem tem o navegador nessa língua."""
+    itens = []
+    for cod in trad["ordem"]:
+        if cod == lingua:
+            continue
+        t = trad["linguas"][cod]
+        itens.append('<li data-lingua="{cod}" lang="{hl}"><a href="{href}" hreflang="{hl}">{b}{txt}</a></li>'.format(
+            cod=cod, hl=t["html_lang"], href=caminho_pagina(lingua, cod), b=bandeira(t["bandeira"]),
+            txt=html.escape(t["ver_em"])))
+    return "\n      ".join(itens)
+
+
+def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None):
+    trad = trad or carregar_traducoes()
+    t = trad["linguas"][lingua]
     modelo = MODELO_PAGINA.read_text(encoding="utf-8")
 
     script = re.search(r"<script>(.*?)</script>", modelo, re.S)
     hash_script = base64.b64encode(hashlib.sha256(script.group(1).encode("utf-8")).digest()).decode() if script else ""
 
+    pre = prefixo_lingua(lingua)
     substituicoes = {
         "{{HASH_SCRIPT}}": hash_script,
-        "{{TOTAL}}": texto_contagem(total).lower(),
-        "{{ACOES_GERAL}}": bloco_subscricao(url_base, "agenda.ics", "a agenda completa"),
-        "{{LISTA_TEMAS}}": lista_grupos(TEMAS, "temas", contagem["temas"], total, url_base),
-        "{{LISTA_TIPOS}}": lista_grupos(TIPOS, "tipos", contagem["tipos"], total, url_base),
-        "{{FONTE_PAGINA}}": html.escape(FONTE_PAGINA, quote=True),
+        "{{LINGUA}}": t["html_lang"],
+        "{{CODIGO_LINGUA}}": lingua,
+        "{{RAIZ}}": "" if lingua == "pt" else "../../",
+        "{{LOGOTIPO}}": logotipo_data_uri(),
+        "{{BANDEIRA}}": bandeira(t["bandeira"]),
+        "{{SELETOR_LINGUAS}}": seletor_linguas(lingua, trad),
+        "{{SUGESTOES}}": sugestoes_linguas(lingua, trad),
+        "{{ACOES_GERAL}}": bloco_subscricao(url_base, pre + "agenda.ics", t["completa_titulo"], t),
+        "{{LISTA_TEMAS}}": lista_grupos(TEMAS, "temas", contagem["temas"], total, url_base, lingua, t),
+        "{{LISTA_TIPOS}}": lista_grupos(TIPOS, "tipos", contagem["tipos"], total, url_base, lingua, t),
     }
     for chave, valor in substituicoes.items():
         modelo = modelo.replace(chave, valor)
+
+    def texto(m):
+        chave = m.group(1)
+        valor = t[chave]
+        if chave == "completa_texto":
+            return html.escape(valor.format(total=texto_contagem(total, t)))
+        if chave == "rodape_html":
+            return valor.format(fonte=html.escape(FONTE_PAGINA, quote=True))
+        return valor if chave.endswith("_html") else html.escape(valor, quote=True)
+
+    modelo = re.sub(r"\{\{T:([a-z0-9_]+)\}\}", texto, modelo)
+    falta = re.findall(r"\{\{[^}]+\}\}", modelo)
+    if falta:
+        raise ValueError("Marcadores por preencher no modelo: {}".format(sorted(set(falta))))
     return modelo.encode("utf-8")
 
 
@@ -886,15 +1041,22 @@ def escrever_atomico(conteudo, destino: Path):
 
 
 def gerar_saidas(itens, pasta, url_base):
-    ficheiros, contagem = construir_calendarios(itens, url_base)
-    ficheiros["index.html"] = gerar_pagina(contagem, len(itens), url_base)
-    for caminho, conteudo in ficheiros.items():
-        escrever_atomico(conteudo, pasta / caminho)
-    for sub in ("temas", "tipos"):
-        atuais = {Path(c).name for c in ficheiros if c.startswith(sub + "/")}
-        for antigo in (pasta / sub).glob("*.ics"):
-            if antigo.name not in atuais:
-                antigo.unlink()
+    """Escreve os calendários e a página em todas as línguas. Devolve a contagem (igual em todas)."""
+    trad = carregar_traducoes()
+    classificados = classificar_todos(itens)
+    contagem = None
+    for lingua in trad["ordem"]:
+        t = trad["linguas"][lingua]
+        ficheiros, contagem = construir_calendarios(itens, url_base, lingua, t if lingua != "pt" else None, classificados)
+        ficheiros[prefixo_lingua(lingua) + "index.html"] = gerar_pagina(contagem, len(itens), url_base, lingua, trad)
+        for caminho, conteudo in ficheiros.items():
+            escrever_atomico(conteudo, pasta / caminho)
+        for sub in ("temas", "tipos"):
+            dir_sub = pasta / (prefixo_lingua(lingua) + sub)
+            atuais = {Path(c).name for c in ficheiros if c.startswith(prefixo_lingua(lingua) + sub + "/")}
+            for antigo in dir_sub.glob("*.ics"):
+                if antigo.name not in atuais:
+                    antigo.unlink()
     if pasta.resolve() != PASTA_SCRIPT and PASTA_FONTES.is_dir():
         # para a página funcionar também quando é gerada noutra pasta
         (pasta / "fontes").mkdir(exist_ok=True)

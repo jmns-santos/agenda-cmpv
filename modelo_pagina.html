@@ -1,28 +1,29 @@
 <!doctype html>
-<html lang="pt-PT">
+<html lang="{{LINGUA}}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-{{HASH_SCRIPT}}'; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="NEXO - EVENTOS: subscreva a agenda municipal da Póvoa de Varzim no calendário do telemóvel ou do computador, completa, por tema ou por tipo.">
+<meta name="description" content="{{T:descricao_meta}}">
 <meta name="theme-color" content="#0f4c6b">
-<title>NEXO - EVENTOS · Agenda municipal da Póvoa de Varzim</title>
+<title>{{T:titulo_pagina}}</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='5' width='26' height='24' rx='4' fill='%230f4c6b'/%3E%3Crect x='3' y='5' width='26' height='7' rx='3' fill='%230a3a52'/%3E%3Cpath d='M7 22c3-3 6-3 9 0s6 3 9 0' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
-  @font-face { font-family: "CMPV"; src: url("fontes/cmpv-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-  @font-face { font-family: "CMPV"; src: url("fontes/cmpv-bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: "CMPV"; src: url("{{RAIZ}}fontes/cmpv-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: "CMPV"; src: url("{{RAIZ}}fontes/cmpv-bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 
   :root {
     --fundo: #f4f8fa;
     --cartao: #ffffff;
     --tinta: #14242d;
-    --cinza: #56656e;
-    --linha: #dbe4e9;
-    --trilho: #e7eef2;
+    --cinza: #4d5c65;
+    --linha: #d3dde3;
+    --trilho: #e4ecf0;
     --mar: #0f4c6b;
     --mar-forte: #0a3a52;
     --mar-claro: #e3eff5;
+    --sol: #ffd166;
     --botao: #0f4c6b;
     --botao-texto: #ffffff;
     --foco: #e0a100;
@@ -33,9 +34,9 @@
     :root {
       --fundo: #0b151b;
       --cartao: #12212a;
-      --tinta: #e6eef2;
-      --cinza: #a3b4bd;
-      --linha: #24404e;
+      --tinta: #e9f0f3;
+      --cinza: #aebdc5;
+      --linha: #2a4553;
       --trilho: #1c3340;
       --mar-claro: #16323f;
       --botao: #2b7fa9;
@@ -47,308 +48,397 @@
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0; background: var(--fundo); color: var(--tinta);
-    font-family: "CMPV", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 1rem; line-height: 1.5; overflow-x: clip;
+    font-family: "CMPV", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", "Hiragino Sans", "Yu Gothic", sans-serif;
+    font-size: 1.0625rem; line-height: 1.55; overflow-x: clip;
   }
   a { color: inherit; }
   :focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; }
   p { margin: 0; }
-  .largura { max-width: 60rem; margin: 0 auto; padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
+  .largura { max-width: 62rem; margin: 0 auto; padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
   .escondido { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
   .apenas-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .saltar { position: absolute; left: .5rem; top: -4rem; z-index: 10; background: var(--cartao); color: var(--tinta); padding: .6rem .9rem; border-radius: 8px; font-weight: 700; }
+  .saltar:focus { top: .5rem; }
+  .bandeira { width: 1.5em; height: 1em; flex: none; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .18); }
 
   /* Topo */
-  .topo { background: var(--mar); color: #fff; padding-top: max(1.6rem, env(safe-area-inset-top)); }
-  .topo h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.05; letter-spacing: .01em; font-weight: 700; }
-  .topo p { margin-top: .3rem; color: #d6e7ef; font-size: clamp(1rem, 2.6vw, 1.15rem); }
-  .onda { display: block; width: 100%; height: 22px; margin-top: 1.1rem; }
+  .topo { background: var(--mar); color: #fff; padding-top: max(.9rem, env(safe-area-inset-top)); }
+  .topo-grelha { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .9rem 1.2rem; }
+  .marca { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem .9rem; min-width: 0; }
+  .marca > div { min-width: 0; }
+  .logo-cm { flex: none; display: block; background: #fff; border-radius: 10px; padding: .35rem .5rem; line-height: 0; }
+  .logo-cm img { display: block; height: 3.3rem; width: auto; }
+  .topo h1 { margin: 0; font-size: clamp(1.7rem, 7vw, 2.7rem); overflow-wrap: anywhere; hyphens: auto; line-height: 1; font-weight: 700; letter-spacing: .01em; }
+  .barra-titulo { color: var(--sol); margin: 0 .06em; }
+  .topo .sub { margin-top: .35rem; color: #dcebf2; font-size: clamp(1.05rem, 3vw, 1.3rem); line-height: 1.3; }
+  .topo .sub strong { color: var(--sol); font-weight: 700; }
+  .onda { display: block; width: 100%; height: 20px; margin-top: .9rem; }
   .onda path { fill: var(--fundo); }
+
+  .ferramentas { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-left: auto; }
+  .linguas { position: relative; }
+  .linguas summary {
+    list-style: none; display: flex; align-items: center; gap: .45rem; cursor: pointer;
+    min-height: 2.75rem; padding: .3rem .75rem; border: 1.5px solid rgba(255, 255, 255, .55); border-radius: 9px;
+    font-weight: 700; font-size: .95rem; color: #fff;
+  }
+  .linguas summary::-webkit-details-marker { display: none; }
+  .linguas summary::after { content: ""; width: .45em; height: .45em; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); margin-left: .15rem; }
+  .linguas ul {
+    position: absolute; right: 0; top: calc(100% + .35rem); z-index: 20; min-width: 12rem; margin: 0; padding: .35rem; list-style: none;
+    background: var(--cartao); color: var(--tinta); border: 1px solid var(--linha); border-radius: 10px; box-shadow: 0 8px 28px rgba(0, 0, 0, .2);
+  }
+  .linguas li a { display: flex; align-items: center; gap: .6rem; min-height: 2.75rem; padding: .3rem .6rem; border-radius: 7px; text-decoration: none; font-size: 1rem; }
+  .linguas li a:hover { background: var(--mar-claro); }
+  .linguas li a[aria-current] { font-weight: 700; background: var(--mar-claro); }
+  .letra { display: none; gap: .25rem; }
+  .js .letra { display: flex; }
+  .letra button {
+    min-width: 2.75rem; min-height: 2.75rem; padding: 0 .5rem; border-radius: 9px; cursor: pointer;
+    background: transparent; color: #fff; border: 1.5px solid rgba(255, 255, 255, .55); font: inherit; font-weight: 700; font-size: 1rem;
+  }
+  .letra button[data-letra="1"] { font-size: 1.2rem; }
+  .linguas summary:hover, .letra button:hover { background: rgba(255, 255, 255, .12); }
+
+  .sugestao { background: var(--mar-claro); border-bottom: 1px solid var(--linha); }
+  .sugestao .largura { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding-top: .4rem; padding-bottom: .4rem; }
+  .sugestao ul { margin: 0; padding: 0; list-style: none; }
+  .sugestao li { display: none; }
+  .sugestao li.visivel { display: block; }
+  .sugestao a { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; min-height: 2.5rem; }
+  .sugestao button { min-width: 2.5rem; min-height: 2.5rem; border: 0; background: transparent; color: var(--tinta); font-size: 1.4rem; cursor: pointer; border-radius: 8px; }
 
   /* Escolhas (botões segmentados) */
   .segmentos { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: .25rem; padding: .25rem; background: var(--trilho); border-radius: 12px; }
   .segmentos label {
     display: flex; align-items: center; justify-content: center; text-align: center;
-    min-height: 2.6rem; padding: .35rem .5rem; border-radius: 9px;
-    font-size: .92rem; font-weight: 700; line-height: 1.15; color: var(--cinza);
+    min-height: 2.9rem; padding: .35rem .5rem; border-radius: 9px;
+    font-size: 1rem; font-weight: 700; line-height: 1.15; color: var(--cinza); overflow-wrap: anywhere;
     cursor: pointer; user-select: none;
   }
   .segmentos label:hover { color: var(--tinta); }
 
-  /* Calendário usado */
-  .seletor { position: sticky; top: 0; z-index: 3; background: var(--fundo); padding: max(.6rem, env(safe-area-inset-top)) 0 .6rem; border-bottom: 1px solid var(--linha); }
-  .seletor .pergunta { font-size: .85rem; font-weight: 700; color: var(--cinza); margin: 0 0 .35rem; text-transform: uppercase; letter-spacing: .04em; }
-  .seletor .segmentos { grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); }
-  @media (max-width: 34rem) { .seletor .segmentos { grid-template-columns: repeat(2, 1fr); } }
-  #sis-apple:checked ~ .seletor label[for="sis-apple"],
+  /* Calendário a usar */
+  .seletor { position: sticky; top: 0; z-index: 3; background: var(--fundo); padding: max(.6rem, env(safe-area-inset-top)) 0 .7rem; border-bottom: 1px solid var(--linha); }
+  .seletor .pergunta { font-size: 1.05rem; font-weight: 700; color: var(--tinta); margin: 0 0 .4rem; }
+  .seletor .segmentos { grid-auto-flow: row; grid-template-columns: repeat(5, 1fr); }
+  @media (max-width: 40rem) {
+    .seletor { position: static; }
+    .seletor .segmentos { grid-template-columns: repeat(2, 1fr); }
+    .seletor .segmentos label:last-child { grid-column: 1 / -1; }
+  }
   #sis-google:checked ~ .seletor label[for="sis-google"],
   #sis-outlook:checked ~ .seletor label[for="sis-outlook"],
+  #sis-apple:checked ~ .seletor label[for="sis-apple"],
+  #sis-android:checked ~ .seletor label[for="sis-android"],
   #sis-outro:checked ~ .seletor label[for="sis-outro"],
   #vista-tema:checked ~ main label[for="vista-tema"],
-  #vista-tipo:checked ~ main label[for="vista-tipo"] { background: var(--cartao); color: var(--mar); box-shadow: var(--sombra); }
-  @media (prefers-color-scheme: dark) {
-    #sis-apple:checked ~ .seletor label[for="sis-apple"],
-    #sis-google:checked ~ .seletor label[for="sis-google"],
-    #sis-outlook:checked ~ .seletor label[for="sis-outlook"],
-    #sis-outro:checked ~ .seletor label[for="sis-outro"],
-    #vista-tema:checked ~ main label[for="vista-tema"],
-    #vista-tipo:checked ~ main label[for="vista-tipo"] { background: var(--botao); color: #fff; }
-  }
-  #sis-apple:focus-visible ~ .seletor label[for="sis-apple"],
+  #vista-tipo:checked ~ main label[for="vista-tipo"] { background: var(--botao); color: #fff; box-shadow: var(--sombra); }
   #sis-google:focus-visible ~ .seletor label[for="sis-google"],
   #sis-outlook:focus-visible ~ .seletor label[for="sis-outlook"],
+  #sis-apple:focus-visible ~ .seletor label[for="sis-apple"],
+  #sis-android:focus-visible ~ .seletor label[for="sis-android"],
   #sis-outro:focus-visible ~ .seletor label[for="sis-outro"],
   #vista-tema:focus-visible ~ main label[for="vista-tema"],
   #vista-tipo:focus-visible ~ main label[for="vista-tipo"] { outline: 3px solid var(--foco); outline-offset: 1px; }
-  .dica { display: none; margin-top: .4rem; font-size: .85rem; color: var(--cinza); }
+  .dica { display: none; margin-top: .45rem; font-size: .95rem; color: var(--cinza); }
   #sis-google:checked ~ .seletor .dica-google,
   #sis-outlook:checked ~ .seletor .dica-outlook,
+  #sis-apple:checked ~ .seletor .dica-apple,
+  #sis-android:checked ~ .seletor .dica-android,
   #sis-outro:checked ~ .seletor .dica-outro { display: block; }
 
   /* Botões: só aparece o do calendário escolhido */
-  .so-apple, .so-google, .so-outlook, .so-outro { display: none !important; }
-  #sis-apple:checked ~ main .so-apple,
+  .so-google, .so-outlook, .so-apple, .so-android, .so-outro { display: none !important; }
   #sis-google:checked ~ main .so-google,
   #sis-outlook:checked ~ main .so-outlook,
+  #sis-apple:checked ~ main .so-apple,
+  #sis-android:checked ~ main .so-android,
   #sis-outro:checked ~ main .so-outro { display: flex !important; }
 
   .acoes { display: flex; flex-direction: column; gap: .4rem; }
   .botao {
-    align-items: center; justify-content: center; gap: .4rem;
-    min-height: 2.6rem; padding: .45rem 1rem;
-    background: var(--botao); color: var(--botao-texto);
-    border-radius: 9px; font-weight: 700; font-size: .95rem; text-decoration: none; white-space: nowrap;
+    display: inline-flex; align-items: center; justify-content: center; gap: .45rem;
+    min-height: 2.9rem; padding: .45rem 1.1rem;
+    background: var(--botao); color: var(--botao-texto); border: 0; cursor: pointer;
+    border-radius: 9px; font: inherit; font-weight: 700; font-size: 1rem; text-decoration: none; text-align: center; overflow-wrap: anywhere;
   }
   .botao:hover { background: var(--mar-forte); }
-  .botao svg { width: 1.05em; height: 1.05em; flex: none; }
-  .copiar { gap: .35rem; }
+  .botao svg { width: 1.1em; height: 1.1em; flex: none; }
+  .copiar { flex-direction: column; gap: .35rem; }
   .copiar input {
-    flex: 1 1 auto; min-width: 0; min-height: 2.4rem; padding: .35rem .55rem;
-    font: inherit; font-size: .8rem; color: var(--tinta);
+    width: 100%; min-height: 2.6rem; padding: .35rem .55rem; font: inherit; font-size: .85rem; color: var(--tinta);
     background: var(--fundo); border: 1px solid var(--linha); border-radius: 8px;
   }
-  .botao-copiar {
-    display: none; flex: none; min-height: 2.4rem; padding: .35rem .7rem;
-    font: inherit; font-size: .85rem; font-weight: 700; color: var(--tinta);
-    background: var(--cartao); border: 1.5px solid var(--linha); border-radius: 8px; cursor: pointer;
-  }
-  .js .botao-copiar { display: inline-flex; align-items: center; }
+  .botao-copiar { display: none; }
+  .js .botao-copiar { display: inline-flex; }
+  .js .copiar input { display: none; }
+  .js .copiar.falhou input { display: block; }
 
   main { padding-top: 1.1rem; padding-bottom: 1.5rem; }
 
   /* Agenda completa */
   .completa {
-    display: grid; grid-template-columns: 1fr minmax(12rem, 16rem); gap: .9rem 1.2rem; align-items: center;
+    display: grid; grid-template-columns: 1fr minmax(min(12rem, 100%), 16rem); gap: .9rem 1.2rem; align-items: center;
     background: var(--cartao); border: 1px solid var(--linha); border-radius: 14px; padding: 1rem 1.1rem; box-shadow: var(--sombra);
-    border-left: 5px solid var(--mar);
+    border-left: 6px solid var(--mar);
   }
-  .completa h2 { margin: 0; font-size: 1.2rem; line-height: 1.25; }
-  .completa .linha2 { color: var(--cinza); font-size: .92rem; margin-top: .15rem; }
+  .completa h2 { margin: 0; font-size: 1.3rem; line-height: 1.25; }
+  .completa .linha2 { color: var(--cinza); margin-top: .15rem; font-variant-numeric: lining-nums tabular-nums; }
   @media (max-width: 36rem) { .completa { grid-template-columns: 1fr; } }
 
   /* Tema / tipo */
   .escolha { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
-  /* linha a toda a largura, igual à que separa o seletor do calendário */
   .escolha::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
-  .escolha > .segmentos { max-width: 26rem; }
+  .escolha > .segmentos { max-width: 30rem; }
 
-  .grelha { list-style: none; margin: .8rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr)); gap: .65rem; }
+  .grelha { list-style: none; margin: .9rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(16.5rem, 100%), 1fr)); gap: .7rem; }
   .cartao {
-    display: flex; flex-direction: column; gap: .4rem;
-    background: var(--cartao); border: 1px solid var(--linha); border-radius: 12px; padding: .75rem .85rem .8rem;
-    box-shadow: var(--sombra); border-left: 5px solid var(--cor);
+    display: flex; flex-direction: column; gap: .45rem;
+    background: var(--cartao); border: 1px solid var(--linha); border-radius: 12px; padding: .8rem .9rem .85rem;
+    box-shadow: var(--sombra); border-left: 6px solid var(--cor);
   }
-  .cartao h3 { margin: 0; font-size: 1rem; line-height: 1.25; }
-  .cartao .resumo { color: var(--cinza); font-size: .84rem; line-height: 1.3; flex: 1 1 auto; }
-  .barra { display: block; height: 5px; border-radius: 3px; background: var(--trilho); overflow: hidden; margin-top: .15rem; }
+  .cartao h3 { margin: 0; font-size: 1.1rem; line-height: 1.25; }
+  .cartao .resumo { color: var(--cinza); font-size: .92rem; line-height: 1.35; flex: 1 1 auto; }
+  .barra { display: block; height: 6px; border-radius: 3px; background: var(--trilho); overflow: hidden; margin-top: .15rem; }
   .barra span { display: block; height: 100%; width: var(--pct); min-width: 4px; background: var(--cor); border-radius: 3px; }
   .vazio .barra span { min-width: 0; }
-  .rodape { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .45rem .6rem; }
-  .valor { font-size: .88rem; font-weight: 700; white-space: nowrap; font-variant-numeric: lining-nums tabular-nums; }
+  .rodape { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem .6rem; }
+  .valor { font-size: .95rem; font-weight: 700; font-variant-numeric: lining-nums tabular-nums; }
   .valor small { font-size: 1em; font-weight: 400; color: var(--cinza); }
-  .cartao .acoes { flex-direction: row; flex-wrap: wrap; justify-content: flex-end; flex: 1 1 auto; }
-  .cartao .botao { min-height: 2.3rem; padding: .35rem .85rem; font-size: .88rem; }
-  .cartao .copiar { flex: 1 1 100%; }
-  .linha2 { font-variant-numeric: lining-nums tabular-nums; }
+  .cartao .acoes { flex-direction: row; flex-wrap: wrap; justify-content: flex-end; margin-left: auto; }
+  .cartao .copiar { width: 100%; }
 
   .grelha.painel-tipos { display: none; }
   #vista-tipo:checked ~ main .grelha.painel-temas { display: none; }
   #vista-tipo:checked ~ main .grelha.painel-tipos { display: grid; }
 
-  .aviso { margin-top: .9rem; padding: .65rem .8rem; border-radius: 10px; background: var(--mar-claro); font-size: .88rem; }
+  .aviso { margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
 
   /* Ajuda */
   .ajuda { margin-top: 2rem; }
-  .ajuda h2 { font-size: 1.15rem; margin: 0 0 .4rem; }
-  details { border-bottom: 1px solid var(--linha); }
-  details:first-of-type { border-top: 1px solid var(--linha); }
-  summary { cursor: pointer; padding: .7rem 0; font-weight: 700; font-size: .95rem; }
-  details > div { padding: 0 0 .8rem; font-size: .92rem; }
-  details p + p { margin-top: .5rem; }
+  .ajuda h2 { font-size: 1.25rem; margin: 0 0 .4rem; }
+  details.item { border-bottom: 1px solid var(--linha); }
+  details.item:first-of-type { border-top: 1px solid var(--linha); }
+  details.item summary { cursor: pointer; padding: .75rem 0; font-weight: 700; font-size: 1.02rem; min-height: 2.75rem; }
+  details.item > div { padding: 0 0 .85rem; }
+  details.item p + p { margin-top: .5rem; }
 
-  footer { border-top: 1px solid var(--linha); padding-top: 1rem; padding-bottom: max(2rem, env(safe-area-inset-bottom)); font-size: .85rem; color: var(--cinza); }
+  footer { border-top: 1px solid var(--linha); padding-top: 1rem; padding-bottom: max(2rem, env(safe-area-inset-bottom)); font-size: .92rem; color: var(--cinza); }
   footer p + p { margin-top: .4rem; }
+
+  /* Embutido na PGU (?embed=1): sem cabeçalho grande nem rodapé */
+  .embed .marca, .embed .onda, .embed footer { display: none; }
+  .embed .topo { padding-top: .5rem; padding-bottom: .5rem; }
+  .embed .seletor { position: static; }
+
+  @media (forced-colors: active) {
+    .cartao, .completa { border-left-color: CanvasText; }
+    .barra span { background: CanvasText; }
+  }
+  @media print {
+    .seletor, .ferramentas, .acoes, .sugestao { display: none !important; }
+  }
 </style>
 </head>
-<body>
+<body data-copiado="{{T:copiado}}" data-falhou="{{T:copiar_falhou}}" data-lingua="{{CODIGO_LINGUA}}">
 
-<input type="radio" name="sistema" id="sis-apple" class="escondido" checked aria-label="iPhone, iPad ou Mac">
-<input type="radio" name="sistema" id="sis-google" class="escondido" aria-label="Android ou Google Calendar">
-<input type="radio" name="sistema" id="sis-outlook" class="escondido" aria-label="Outlook">
-<input type="radio" name="sistema" id="sis-outro" class="escondido" aria-label="Outra aplicação">
-<input type="radio" name="vista" id="vista-tema" class="escondido" checked aria-label="Subscrever por tema">
-<input type="radio" name="vista" id="vista-tipo" class="escondido" aria-label="Subscrever por tipo">
+<a class="saltar" href="#conteudo">{{T:saltar}}</a>
+
+<input type="radio" name="sistema" id="sis-google" class="escondido" checked aria-label="{{T:op_google}}">
+<input type="radio" name="sistema" id="sis-outlook" class="escondido" aria-label="{{T:op_outlook}}">
+<input type="radio" name="sistema" id="sis-apple" class="escondido" aria-label="{{T:op_apple}}">
+<input type="radio" name="sistema" id="sis-android" class="escondido" aria-label="{{T:op_android}}">
+<input type="radio" name="sistema" id="sis-outro" class="escondido" aria-label="{{T:op_outro}}">
+<input type="radio" name="vista" id="vista-tema" class="escondido" checked aria-label="{{T:por_tema}}">
+<input type="radio" name="vista" id="vista-tipo" class="escondido" aria-label="{{T:por_tipo}}">
 
 <header class="topo">
-  <div class="largura">
-    <h1>NEXO - EVENTOS</h1>
-    <p>Agenda municipal da Póvoa de Varzim no seu calendário</p>
+  <div class="largura topo-grelha">
+    <div class="marca">
+      <span class="logo-cm"><img src="{{LOGOTIPO}}" alt="Câmara Municipal da Póvoa de Varzim" width="90" height="63"></span>
+      <div>
+        <h1>{{T:h1_html}}</h1>
+        <p class="sub">{{T:sub_html}}</p>
+      </div>
+    </div>
+    <div class="ferramentas">
+      <details class="linguas">
+        <summary aria-label="{{T:lingua}}">{{BANDEIRA}}<span>{{T:nome}}</span></summary>
+        <ul>
+        {{SELETOR_LINGUAS}}
+        </ul>
+      </details>
+      <div class="letra" role="group" aria-label="{{T:letra}}">
+        <button type="button" data-letra="-1" aria-label="{{T:letra_menos}}">A−</button>
+        <button type="button" data-letra="1" aria-label="{{T:letra_mais}}">A+</button>
+      </div>
+    </div>
   </div>
   <svg class="onda" viewBox="0 0 1200 22" preserveAspectRatio="none" aria-hidden="true" focusable="false">
     <path d="M0 14 C 150 2, 300 2, 450 12 S 750 22, 900 11 S 1100 4, 1200 10 L 1200 22 L 0 22 Z"/>
   </svg>
 </header>
 
-<div class="seletor">
+<div class="sugestao" id="sugestao" hidden>
   <div class="largura">
-    <p class="pergunta" id="pergunta">Que calendário usa?</p>
-    <div class="segmentos" role="group" aria-labelledby="pergunta">
-      <label for="sis-apple">iPhone, iPad ou Mac</label>
-      <label for="sis-google">Android ou Google</label>
-      <label for="sis-outlook">Outlook</label>
-      <label for="sis-outro">Outra aplicação</label>
-    </div>
-    <p class="dica dica-google">Abre o Google Calendar na conta Google com sessão iniciada. Use a mesma conta do telemóvel.</p>
-    <p class="dica dica-outlook">Abre o Outlook na web com a conta Microsoft 365 (profissional ou escolar).</p>
-    <p class="dica dica-outro">Copie o link e adicione-o na aplicação como calendário da internet (por URL).</p>
+    <ul>
+      {{SUGESTOES}}
+    </ul>
+    <button type="button" id="fechar-sugestao" aria-label="{{T:fechar}}">×</button>
   </div>
 </div>
 
-<main class="largura">
+<div class="seletor">
+  <div class="largura">
+    <p class="pergunta" id="pergunta">{{T:pergunta}}</p>
+    <div class="segmentos" role="group" aria-labelledby="pergunta">
+      <label for="sis-google">{{T:op_google}}</label>
+      <label for="sis-outlook">{{T:op_outlook}}</label>
+      <label for="sis-apple">{{T:op_apple}}</label>
+      <label for="sis-android">{{T:op_android}}</label>
+      <label for="sis-outro">{{T:op_outro}}</label>
+    </div>
+    <p class="dica dica-google">{{T:dica_google}}</p>
+    <p class="dica dica-outlook">{{T:dica_outlook}}</p>
+    <p class="dica dica-apple">{{T:dica_apple}}</p>
+    <p class="dica dica-android">{{T:dica_android}}</p>
+    <p class="dica dica-outro">{{T:dica_outro}}</p>
+  </div>
+</div>
+
+<main class="largura" id="conteudo" tabindex="-1">
 
   <section class="completa" aria-labelledby="t-geral">
     <div>
-      <h2 id="t-geral">Agenda completa</h2>
-      <p class="linha2">Todos os eventos num só calendário ({{TOTAL}} agendados).</p>
+      <h2 id="t-geral">{{T:completa_titulo}}</h2>
+      <p class="linha2">{{T:completa_texto}}</p>
     </div>
     {{ACOES_GERAL}}
   </section>
 
-  <section class="escolha" aria-label="Subscrever só uma parte da agenda">
-    <div class="segmentos" role="group" aria-label="Subscrever por tema ou por tipo">
-      <label for="vista-tema">Subscrever por tema</label>
-      <label for="vista-tipo">Subscrever por tipo</label>
+  <section class="escolha" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
+    <div class="segmentos" role="group" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
+      <label for="vista-tema">{{T:por_tema}}</label>
+      <label for="vista-tipo">{{T:por_tipo}}</label>
     </div>
 
-    <ul class="grelha painel-temas" aria-label="Temas">
+    <ul class="grelha painel-temas" aria-label="{{T:por_tema}}">
 {{LISTA_TEMAS}}
     </ul>
-    <ul class="grelha painel-tipos" aria-label="Tipos">
+    <ul class="grelha painel-tipos" aria-label="{{T:por_tipo}}">
 {{LISTA_TIPOS}}
     </ul>
 
-    <p class="aviso">Evite subscrever temas e tipos em simultâneo, para não receber eventos repetidos.</p>
-
+    <p class="aviso">{{T:aviso}}</p>
   </section>
 
   <section class="ajuda" aria-labelledby="t-ajuda">
-    <h2 id="t-ajuda">Ajuda</h2>
-    <details>
-      <summary>iPhone, iPad ou Mac</summary>
-      <div>
-        <p>Toque em Subscrever e confirme no Calendário.</p>
-        <p>Se nada acontecer, escolha «Outra aplicação», copie o link e adicione-o nas definições do Calendário: Contas › Adicionar conta › Outra › Adicionar calendário subscrito.</p>
-      </div>
-    </details>
-    <details>
-      <summary>Android ou Google Calendar</summary>
-      <div>
-        <p>Toque em Subscrever: abre o Google Calendar na conta Google com sessão iniciada e pede para adicionar o calendário. Depois aparece na app Google Calendar e nas apps ligadas à mesma conta, como o Calendário Samsung.</p>
-        <p>Se não aparecer na app, abra as definições do Google Calendar, toque no nome do calendário e ative a sincronização.</p>
-      </div>
-    </details>
-    <details>
-      <summary>Outlook</summary>
-      <div>
-        <p>Com uma conta Microsoft 365 (profissional ou escolar), Subscrever abre o Outlook na web e pede confirmação.</p>
-        <p>Com uma conta pessoal (Outlook.com, Hotmail), escolha «Outra aplicação», copie o link e, em outlook.com, use Adicionar calendário › Subscrever a partir da Web.</p>
-      </div>
-    </details>
-    <details>
-      <summary>Outra aplicação</summary>
-      <div>
-        <p>Copie o link e procure na aplicação a opção de adicionar um calendário da internet ou por URL.</p>
-      </div>
-    </details>
-    <details>
-      <summary>Onde comprar bilhetes ou fazer a inscrição?</summary>
-      <div>
-        <p>Quando a página do evento no site do município indica preço, entrada livre, bilhetes ou inscrição, essa informação aparece nas notas do evento, com o link de compra (por exemplo, BOL) ou de inscrição. Confirme sempre na página do evento.</p>
-      </div>
-    </details>
-    <details>
-      <summary>Como são escolhidos o tema e o tipo?</summary>
-      <div>
-        <p>Automaticamente, a partir do título e da descrição de cada evento. Cada evento tem um só tema e um só tipo e está sempre na agenda completa. Em casos pontuais, a classificação pode não ser a mais adequada.</p>
-      </div>
-    </details>
-    <details>
-      <summary>Com que frequência é atualizada?</summary>
-      <div>
-        <p>A agenda é lida do site do município a cada 4 horas. Cada aplicação decide quando volta a ler o calendário: pode demorar algumas horas e, no Google Calendar, até um dia.</p>
-      </div>
-    </details>
-    <details>
-      <summary>Como deixar de receber</summary>
-      <div>
-        <p>Apague o calendário subscrito nas definições da aplicação. Os eventos desaparecem de imediato.</p>
-      </div>
-    </details>
+    <h2 id="t-ajuda">{{T:ajuda}}</h2>
+    <details class="item"><summary>{{T:h_google_t}}</summary><div>{{T:h_google_html}}</div></details>
+    <details class="item"><summary>{{T:h_outlook_t}}</summary><div>{{T:h_outlook_html}}</div></details>
+    <details class="item"><summary>{{T:h_apple_t}}</summary><div>{{T:h_apple_html}}</div></details>
+    <details class="item"><summary>{{T:h_android_t}}</summary><div>{{T:h_android_html}}</div></details>
+    <details class="item"><summary>{{T:h_outro_t}}</summary><div>{{T:h_outro_html}}</div></details>
+    <details class="item"><summary>{{T:h_bilhetes_t}}</summary><div>{{T:h_bilhetes_html}}</div></details>
+    <details class="item"><summary>{{T:h_tema_t}}</summary><div>{{T:h_tema_html}}</div></details>
+    <details class="item"><summary>{{T:h_lingua_t}}</summary><div>{{T:h_lingua_html}}</div></details>
+    <details class="item"><summary>{{T:h_freq_t}}</summary><div>{{T:h_freq_html}}</div></details>
+    <details class="item"><summary>{{T:h_sair_t}}</summary><div>{{T:h_sair_html}}</div></details>
   </section>
 
 </main>
 
 <footer class="largura">
-  <p>Os eventos vêm da <a href="{{FONTE_PAGINA}}">agenda publicada em cm-pvarzim.pt</a>. Confirme datas, horários e condições de acesso na página de cada evento (o link está nas notas do evento).</p>
-  <p>Esta página não usa cookies nem estatísticas.</p>
+  <p>{{T:rodape_html}}</p>
+  <p>{{T:rodape2}}</p>
 </footer>
 
 <p class="apenas-leitor" aria-live="polite" id="estado"></p>
 
 <script>
 (function () {
-  document.documentElement.className += ' js';
+  var raiz = document.documentElement;
+  raiz.className += ' js';
+  var corpo = document.body;
 
-  // Escolhe o calendario conforme o dispositivo (sem JavaScript fica iPhone, iPad ou Mac).
-  var ua = navigator.userAgent || '';
-  var sis = null;
-  if (/Android/i.test(ua)) sis = 'sis-google';
-  else if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) sis = 'sis-apple';
-  else if (/Windows/i.test(ua)) sis = 'sis-outlook';
-  else if (/CrOS|Linux/i.test(ua)) sis = 'sis-google';
-  if (sis) document.getElementById(sis).checked = true;
+  function ler(chave) { try { return window.localStorage.getItem(chave); } catch (e) { return null; } }
+  function gravar(chave, valor) { try { window.localStorage.setItem(chave, valor); } catch (e) {} }
 
-  var estado = document.getElementById('estado');
-
-  function selecionar(botao) {
-    var campo = botao.parentNode.querySelector('input');
-    campo.focus();
-    campo.select();
+  // Embutido noutra página (ex. PGU): ?embed=1 tira o cabeçalho e o rodapé, também nas outras línguas.
+  var embutido = /[?&]embed=1\b/.test(location.search);
+  if (embutido) {
+    raiz.className += ' embed';
+    var ligacoes = document.querySelectorAll('.linguas a, .sugestao a');
+    for (var i = 0; i < ligacoes.length; i++) ligacoes[i].href += (ligacoes[i].href.indexOf('?') < 0 ? '?' : '&') + 'embed=1';
   }
 
+  // Tamanho da letra (guardado só neste navegador).
+  var tamanhos = [100, 115, 130, 150];
+  var nivel = parseInt(ler('nexo-eventos-letra') || '0', 10);
+  if (!(nivel >= 0 && nivel < tamanhos.length)) nivel = 0;
+  function aplicarLetra() { raiz.style.fontSize = tamanhos[nivel] + '%'; }
+  aplicarLetra();
+  var botoesLetra = document.querySelectorAll('[data-letra]');
+  for (var j = 0; j < botoesLetra.length; j++) {
+    botoesLetra[j].addEventListener('click', function () {
+      nivel = Math.max(0, Math.min(tamanhos.length - 1, nivel + parseInt(this.getAttribute('data-letra'), 10)));
+      aplicarLetra();
+      gravar('nexo-eventos-letra', String(nivel));
+    });
+  }
+
+  // Língua escolhida: lembrar, e sugerir a do navegador (sem mudar de página sozinho).
+  var linguas = document.querySelectorAll('.linguas a');
+  for (var k = 0; k < linguas.length; k++) {
+    linguas[k].addEventListener('click', function () { gravar('nexo-eventos-lingua', this.getAttribute('data-lingua')); });
+  }
+  var escolhida = ler('nexo-eventos-lingua');
+  var navegador = ((navigator.languages && navigator.languages[0]) || navigator.language || '').slice(0, 2).toLowerCase();
+  var atual = corpo.getAttribute('data-lingua');
+  if (!escolhida && navegador && navegador !== atual) {
+    var sugestao = document.querySelector('.sugestao li[data-lingua="' + navegador + '"]');
+    if (sugestao) {
+      sugestao.className = 'visivel';
+      document.getElementById('sugestao').hidden = false;
+      sugestao.querySelector('a').addEventListener('click', function () { gravar('nexo-eventos-lingua', navegador); });
+    }
+  }
+  document.getElementById('fechar-sugestao').addEventListener('click', function () {
+    document.getElementById('sugestao').hidden = true;
+    gravar('nexo-eventos-lingua', atual);
+  });
+
+  // Fechar o menu de línguas ao clicar fora ou com Esc.
+  var menu = document.querySelector('.linguas');
+  document.addEventListener('click', function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); }
+  });
+
+  // Copiar link.
+  var estado = document.getElementById('estado');
   document.addEventListener('click', function (e) {
     var botao = e.target.closest ? e.target.closest('.botao-copiar') : null;
     if (!botao) return;
+    var caixa = botao.parentNode;
     var link = botao.getAttribute('data-link');
-    function fim(ok) {
-      botao.textContent = ok ? 'Copiado' : 'Copie o link selecionado';
-      estado.textContent = ok ? 'Link copiado.' : 'Link selecionado.';
-      setTimeout(function () { botao.textContent = 'Copiar link'; }, 2500);
+    function falhou() {
+      caixa.className += ' falhou';
+      var campo = caixa.querySelector('input');
+      campo.focus();
+      campo.select();
+      estado.textContent = corpo.getAttribute('data-falhou');
     }
     if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(link).then(function () { fim(true); }, function () { selecionar(botao); fim(false); });
+      navigator.clipboard.writeText(link).then(function () {
+        estado.textContent = corpo.getAttribute('data-copiado');
+        var original = botao.innerHTML;
+        botao.textContent = '✓ ' + corpo.getAttribute('data-copiado');
+        setTimeout(function () { botao.innerHTML = original; }, 3500);
+      }, falhou);
     } else {
-      selecionar(botao);
-      fim(false);
+      falhou();
     }
   });
 })();

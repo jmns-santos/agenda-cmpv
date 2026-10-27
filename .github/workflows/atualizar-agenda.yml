@@ -9,6 +9,8 @@ on:
     paths:
       - "gerar_agenda_ics.py"
       - "modelo_pagina.html"
+      - "traducoes.json"
+      - "logotipo.png"
       - "requirements.txt"
       - ".github/workflows/atualizar-agenda.yml"
 
@@ -42,7 +44,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add agenda.ics temas tipos index.html
+          git add agenda.ics temas tipos index.html l
           if git diff --staged --quiet; then
             echo "Sem alterações na agenda."
             exit 0
