@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Sensibilización, cribados, recogidas, limpiezas y campañas 
+ solidarias.
+NAME:Póvoa de Varzim: Acciones y campañas
+X-WR-CALNAME:Póvoa de Varzim: Acciones y campañas
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/es/tipos/acoe
+ s-campanhas.ics
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+END:VCALENDAR

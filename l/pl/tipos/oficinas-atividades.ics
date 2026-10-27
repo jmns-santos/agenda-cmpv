@@ -1,0 +1,162 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Warsztaty, kursy, wykłady, gry i zajęcia dla każdego wieku
+ .
+NAME:Póvoa de Varzim: Warsztaty i zajęcia
+X-WR-CALNAME:Póvoa de Varzim: Warsztaty i zajęcia
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/pl/tipos/ofic
+ inas-atividades.ics
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:"O Caso Palimpsesto - Um Mistério no Arquivo"
+DTSTART:20261026T093000Z
+DTEND:20261030T170000Z
+DTSTAMP:20261016T091021Z
+UID:by1jYXNvLXBsaW1wc2VzdG8tdW0tbWlzdGVyaW8tbm8tYXJxdWl2b3wyMDI2LTA5LTI4ID
+ E1OjQzOjQx@agenda.cm-pvarzim.pt
+CATEGORIES:Kultura,Warsztaty i zajęcia
+DESCRIPTION:Durante a semana de 26 a 30 de outubro\, o Arquivo Municipal p
+ romove uma atividade lúdico-pedagógica baseada na lógica do jogo "Clued
+ o"\, adaptada ao contexto de um Arquivo Histórico.\n\nBilety i zapisy (po
+  portugalsku):\nA participação é gratuita e os interessados podem inscr
+ ever-se junto do Arquivo Municipal através dos seguintes meios: e-mail: a
+ rquivomunicipal@cm-pvarzim.pt / telefone: 252 090 003.\n\nTytuł i opis wy
+ darzenia po portugalsku\, tak jak opublikowała je gmina.\n\nWięcej infor
+ macji: https://www.cm-pvarzim.pt/eventos/o-caso-plimpsesto-um-misterio-no-
+ arquivo/
+LAST-MODIFIED:20261016T091021Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/o-caso-plimpsesto-um-misterio-no-arq
+ uivo/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Oficina "Do Plástico fiz Sardinha"
+DTSTART:20261031T103000Z
+DTEND:20261031T123000Z
+DTSTAMP:20260831T105731Z
+UID:b2ZpY2luYS1kby1wbGFzdGljby1maXotc2FyZGluaGF8MjAyNi0wOC0zMSAwOTo1MjoyNg
+ ==@agenda.cm-pvarzim.pt
+CATEGORIES:Środowisko i mobilność,Warsztaty i zajęcia
+DESCRIPTION:No dia 31 de outubro\, pelas 10h30\, o Café-Concerto do Cine-
+ Teatro Garrett vai acolher a Oficina "Do Plástico fiz Sardinha".\n\nBilet
+ y i zapisy (po portugalsku):\nOs bilhetes custam 5\,00€ e estão à vend
+ a no Cine-Teatro Garrett.\n\nTytuł i opis wydarzenia po portugalsku\, tak
+  jak opublikowała je gmina.\n\nWięcej informacji: https://www.cm-pvarzim
+ .pt/eventos/oficina-do-plastico-fiz-sardinha/
+LAST-MODIFIED:20260831T105731Z
+LOCATION:Cine-Teatro Garrett - Café-Concerto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/oficina-do-plastico-fiz-sardinha/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Curso de Paleografia
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261129
+DTSTAMP:20261015T093004Z
+UID:Y3Vyc28tZGUtcGFsZW9ncmFmaWF8MjAyNi0xMC0xNSAwOTozMDowMw==@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Turystyka i gospodarka,Warsztaty i zajęcia
+DESCRIPTION:Todas as sextas-feiras de novembro (6\, 13\, 20 e 27)\, o Arqu
+ ivo Municipal irá dinamizar um curso de paleografia\, destinado a públic
+ o em geral\, professores\, investigadores e estudantes.\n\nBilety i zapisy
+  (po portugalsku):\nAs inscrições já se encontram abertas e são limita
+ das\, com um custo fixo de 10\,00 (sujeito a pagamento no ato de inscriç
+ ão)\, através do contacto 252 090 003 ou\, em alternativa\, do email arq
+ uivomunicipal@cm-pvarzim.pt.\n\nTytuł i opis wydarzenia po portugalsku\, 
+ tak jak opublikowała je gmina.\n\nWięcej informacji: https://www.cm-pvar
+ zim.pt/eventos/curso-de-paleografia/
+LAST-MODIFIED:20261015T093004Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lavorada Mensal
+DTSTART:20261114T143000Z
+DTEND:20261114T180000Z
+DTSTAMP:20261021T140720Z
+UID:bGF2b3JhZGEtbWVuc2FsLTN8MjAyNi0xMC0yMSAxNDowNzoxOA==@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Kultura,Warsztaty i zajęcia
+DESCRIPTION:Segundo sábado do mês é dia de Lavorada Mensal\, na Bibliot
+ eca Municipal Rocha Peixoto. Assim\, na tarde de 14 de novembro\, entre as
+  14h30 e as 18h00\, a Associação Lavorada ensina a fazer um xaile para o
+ s dias de outono\, por entre castanhas e geropiga.\n\nTytuł i opis wydarz
+ enia po portugalsku\, tak jak opublikowała je gmina.\n\nWięcej informacj
+ i: https://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
+LAST-MODIFIED:20261021T140720Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábados a jogar na Biblioteca
+DTSTART:20261114T150000Z
+DTEND:20261114T170000Z
+DTSTAMP:20261021T142911Z
+UID:MzYyMzE1fDIwMjYtMTAtMjEgMTQ6Mjg6NDA=@agenda.cm-pvarzim.pt
+CATEGORIES:Kultura,Warsztaty i zajęcia
+DESCRIPTION:No dia 14 de novembro\, a partir das 15h00\, terá lugar\, na 
+ sala infantil e juvenil da Biblioteca Municipal\, mais uma sessão da inic
+ iativa "Sábados a jogar na Biblioteca".\n\nBilety i zapisy (po portugalsk
+ u):\nA inscrição no evento é gratuita\, mas obrigatória através do em
+ ail biblioteca@cm-pvarzim.pt\, telefone 252 616 000 ou presencialmente\, a
+ té um limite de 12 participantes.\n\nTytuł i opis wydarzenia po portugal
+ sku\, tak jak opublikowała je gmina.\n\nWięcej informacji: https://www.c
+ m-pvarzim.pt/eventos/362315/
+LAST-MODIFIED:20261021T142911Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/362315/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ciclo Lavorada Gente: "Um prefácio à Camisola Poveira: Represent
+ ação das camisolas no século XIX"
+DTSTART:20261128T150000Z
+DTEND:20261128T163000Z
+DTSTAMP:20261027T142926Z
+UID:Y2ljbG8tbGF2b3JhZGEtZ2VudGUtdW0tcHJlZmFjaW8tYS1jYW1pc29sYS1wb3ZlaXJhLX
+ JlcHJlc2VudGFjYW8tZGFzLWNhbWlzb2xhcy1uby1zZWN1bG8teGl4fDIwMjYtMTAtMjcgMTQ6
+ Mjg6MjU=@agenda.cm-pvarzim.pt
+CATEGORIES:Kultura,Warsztaty i zajęcia
+DESCRIPTION:A Associação Lavorada promove\, no próximo dia 28 de novemb
+ ro\, a partir das 15h00\, mais uma tertúlia do ciclo Lavorada Gente\, des
+ ta vez dedicada à história e à construção daquilo que reconhecemos ho
+ je como Camisola Poveira.\n\nTytuł i opis wydarzenia po portugalsku\, tak
+  jak opublikowała je gmina.\n\nWięcej informacji: https://www.cm-pvarzim
+ .pt/eventos/ciclo-lavorada-gente-um-prefacio-a-camisola-poveira-representa
+ cao-das-camisolas-no-seculo-xix/
+LAST-MODIFIED:20261027T142926Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/ciclo-lavorada-gente-um-prefacio-a-c
+ amisola-poveira-representacao-das-camisolas-no-seculo-xix/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábados a jogar na Biblioteca
+DTSTART:20261212T150000Z
+DTEND:20261212T170000Z
+DTSTAMP:20261021T143254Z
+UID:c2FiYWRvcy1hLWpvZ2FyLW5hLWJpYmxpb3RlY2EtMjB8MjAyNi0xMC0yMSAxNDozMjowNg
+ ==@agenda.cm-pvarzim.pt
+CATEGORIES:Kultura,Warsztaty i zajęcia
+DESCRIPTION:No dia 12 de dezembro\, a partir das 15h00\, terá lugar\, na 
+ sala infantil e juvenil da Biblioteca Municipal\, mais uma sessão da inic
+ iativa "Sábados a jogar na Biblioteca".\n\nBilety i zapisy (po portugalsk
+ u):\nA inscrição no evento é gratuita\, mas obrigatória através do em
+ ail biblioteca@cm-pvarzim.pt\, telefone 252 616 000 ou presencialmente\, a
+ té um limite de 12 participantes.\n\nTytuł i opis wydarzenia po portugal
+ sku\, tak jak opublikowała je gmina.\n\nWięcej informacji: https://www.c
+ m-pvarzim.pt/eventos/sabados-a-jogar-na-biblioteca-20/
+LAST-MODIFIED:20261021T143254Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sabados-a-jogar-na-biblioteca-20/
+END:VEVENT
+END:VCALENDAR

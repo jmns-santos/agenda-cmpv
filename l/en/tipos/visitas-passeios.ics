@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Guided tours, routes, walks and trails.
+NAME:Póvoa de Varzim: Tours and walks
+X-WR-CALNAME:Póvoa de Varzim: Tours and walks
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/en/tipos/visi
+ tas-passeios.ics
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+END:VCALENDAR

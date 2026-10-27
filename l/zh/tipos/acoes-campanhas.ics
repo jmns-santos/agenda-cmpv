@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:宣传、健康筛查、募集、清洁与公益活动.
+NAME:波武阿-迪瓦尔津：行动与公益活动
+X-WR-CALNAME:波武阿-迪瓦尔津：行动与公益活动
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/acoe
+ s-campanhas.ics
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+END:VCALENDAR

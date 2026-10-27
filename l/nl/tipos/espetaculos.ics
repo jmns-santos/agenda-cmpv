@@ -1,0 +1,56 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Dans, circus, goochelen, comedy, musicals en straatvoorstelli
+ ngen.
+NAME:Póvoa de Varzim: Shows
+X-WR-CALNAME:Póvoa de Varzim: Shows
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/nl/tipos/espe
+ taculos.ics
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Espetáculo de dança "AmarAmália"
+DTSTART:20261121T210000Z
+DTEND:20261121T230000Z
+DTSTAMP:20261023T152912Z
+UID:ZXNwZXRhY3Vsby1kZS1kYW5jYS1hbWFyYW1hbGlhfDIwMjYtMTAtMjMgMTU6Mjk6MTE=@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultuur,Shows
+DESCRIPTION:No dia 21 de novembro\, às 21h00\, sobe ao palco do Cine-Teat
+ ro Garrett\, o espetáculo "AmarAmália"\, pela Companhia Portuguesa de Ba
+ ilado Contemporâneo.\n\nKaartjes en inschrijving (in het Portugees):\nOs 
+ bilhetes custam 20\,00€ (Plateia) e 15\,00€ (Camarotes/ Balcão).\n\nT
+ itel en beschrijving van het evenement in het Portugees\, zoals gepublicee
+ rd door de gemeente.\n\nMeer informatie: https://www.cm-pvarzim.pt/eventos
+ /espetaculo-de-danca-amaramalia/
+LAST-MODIFIED:20261023T152912Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-amaramalia/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Musical "Capuchinho Vermelho - o Musical"
+DTSTART:20261212T160000Z
+DTEND:20261212T173000Z
+DTSTAMP:20261022T153239Z
+UID:bXVzaWNhbC1jYXB1Y2hpbmhvLXZlcm1lbGhvLW8tbXVzaWNhbHwyMDI2LTEwLTIyIDE1Oj
+ MyOjM4@agenda.cm-pvarzim.pt
+CATEGORIES:Cultuur,Shows
+DESCRIPTION:No dia 12 de dezembro\, o Cine-Teatro Garrett vai apresentar "
+ Capuchinho Vermelho - o Musical".\n\nKaartjes en inschrijving (in het Port
+ ugees):\nBilhetes: 13€ (Plateia) e 11€ (Balcão).\nKaartjes: https://w
+ ww.bol.pt/Comprar/Bilhetes/187698-capuchinho_vermelho_o_musical-cine_teatr
+ o_garrett/\n\nTitel en beschrijving van het evenement in het Portugees\, z
+ oals gepubliceerd door de gemeente.\n\nMeer informatie: https://www.cm-pva
+ rzim.pt/eventos/musical-capuchinho-vermelho-o-musical/
+LAST-MODIFIED:20261022T153239Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/musical-capuchinho-vermelho-o-musica
+ l/
+END:VEVENT
+END:VCALENDAR

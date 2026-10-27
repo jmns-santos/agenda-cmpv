@@ -1,0 +1,59 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Turismo, gastronomia, commercio, imprese e lavoro.
+NAME:Póvoa de Varzim: Turismo ed economia
+X-WR-CALNAME:Póvoa de Varzim: Turismo ed economia
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/it/temas/turi
+ smo-economia.ics
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Mercado Aberto de Flores 2026
+DTSTART:20261031T060000Z
+DTEND:20261031T130000Z
+DTSTAMP:20260928T130805Z
+UID:bWVyY2Fkby1hYmVydG8tZGUtZmxvcmVzLTIwMjZ8MjAyNi0wOS0yOCAxMzowNDoyNA==@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Turismo ed economia,Feste\, fiere e mercati
+DESCRIPTION:No dia 31 de outubro\, o Mercado Municipal vai realizar\, mais
+  uma edição do Mercado Aberto de Flores\, entre as 6h00 e as 13h00.\n\nB
+ iglietti e iscrizioni (in portoghese):\nOs comerciantes do Mercado Municip
+ al\, com estabelecimentos ou produção no concelho da Póvoa de Varzim de
+ vem efetuar a sua inscrição junto do Mercado Municipal (portaria)\, entr
+ e os dias 24 e 30 de outubro.\nTodos os esclarecimentos e inscrições pod
+ em ser obtidos através dos seguintes contactos: 252 616 099 ou mercadomun
+ icipal@cm-pvarzim.pt.\n\nTitolo e descrizione dell'evento in portoghese\, 
+ come pubblicati dal comune.\n\nMaggiori informazioni: https://www.cm-pvarz
+ im.pt/eventos/mercado-aberto-de-flores-2026/
+LAST-MODIFIED:20260928T130805Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mercado-aberto-de-flores-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Curso de Paleografia
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261129
+DTSTAMP:20261015T093004Z
+UID:Y3Vyc28tZGUtcGFsZW9ncmFmaWF8MjAyNi0xMC0xNSAwOTozMDowMw==@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Turismo ed economia,Laboratori e attività
+DESCRIPTION:Todas as sextas-feiras de novembro (6\, 13\, 20 e 27)\, o Arqu
+ ivo Municipal irá dinamizar um curso de paleografia\, destinado a públic
+ o em geral\, professores\, investigadores e estudantes.\n\nBiglietti e isc
+ rizioni (in portoghese):\nAs inscrições já se encontram abertas e são 
+ limitadas\, com um custo fixo de 10\,00 (sujeito a pagamento no ato de ins
+ crição)\, através do contacto 252 090 003 ou\, em alternativa\, do emai
+ l arquivomunicipal@cm-pvarzim.pt.\n\nTitolo e descrizione dell'evento in p
+ ortoghese\, come pubblicati dal comune.\n\nMaggiori informazioni: https://
+ www.cm-pvarzim.pt/eventos/curso-de-paleografia/
+LAST-MODIFIED:20261015T093004Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
+END:VEVENT
+END:VCALENDAR
