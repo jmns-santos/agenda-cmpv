@@ -106,7 +106,7 @@ TEMAS = [
         "trono de sao pedro", "presepio", "janeiras", "cortejo", "camisola poveira", r"rancho\b",
         "tragedia maritima", "monumento", "correntes d escritas", "museus", r"festas?\b",
         "expressao dramatica", "expressao plastica",
-    ], "#b03a5b"),
+    ], "#8e1b4f"),
     Tema("desporto", "Desporto", "Provas, torneios e atividade física", [
         "desport", "futebol", "futsal", "andebol", "basquet", "voleibol", "hoquei",
         "atletismo", "natacao", "surf", "bodyboard", "kickboxing", "boxe", "karate", "judo",
@@ -114,7 +114,7 @@ TEMAS = [
         "torneio", "campeonato", "championship", "maratona", "corrida", r"correr\b",
         "caminhada", r"caminhar\b", "trail", "fitness", "zumba", "pilates", "atividade fisica",
         "xadrez", "triatlo", "duatlo", "skate", "patinagem", "football", "jogos desportivos",
-    ], "#2e7d4f"),
+    ], "#1b6e3a"),
     Tema("ambiente-mobilidade", "Ambiente e mobilidade", "Natureza, clima, energia e transportes", [
         "mobilidade", "transporte", "bicicleta", "ciclovia", "pedonal", "autocarro",
         "estacionamento", "transito", "seguranca rodoviaria",
@@ -122,14 +122,14 @@ TEMAS = [
         "floresta", "arvore", "plantac", "biodiversidade", "natureza", "limpeza de praia",
         "eco escola", "beach clean", "clean up", "agricultura", "horta", r"aves\b", "oceano", "litoral", "fogo",
         "gestao de combustivel",
-    ], "#1c7fa6"),
+    ], "#006d77"),
     Tema("turismo-economia", "Turismo e economia", "Turismo, gastronomia, comércio, empresas e emprego", [
         "turism", "turistic", "gastronom", "vinho", "vinic", "wine", FEIRA, "mercado",
         "artesanato", r"empresas?\b", "empresarial", "negocio", "empreend", "emprego", "empregab",
         "comercio", "economia", "investimento", "startup", "formacao profissional", r"cooperativas?\b",
         "rabanada", "sardinh", "doces", "chocolate", "showcooking", "burger", "food truck",
         "street food", "petisc", "agrosemana", "flores",
-    ], "#c0532a"),
+    ], "#b4480b"),
     Tema("comunidade-cidadania", "Comunidade e cidadania", "Saúde, educação, família, juventude e vida municipal", [
         "saude", "senior", "idoso", "envelhecimento", "rastreio", "dadiva", "sangue",
         "social", "solidari", "voluntari", "inclusao", "cuidador", "cuidados", "deficiencia",
@@ -138,7 +138,7 @@ TEMAS = [
         "assembleia", "sessao solene", "tomada de posse", "reuniao publica", "cidadania",
         "participativ", "eleic", "direitos", "igualdade", "violencia", "interculturalidade",
         "seguranca", "protecao civil", r"paz\b", "bairro", "consumidor", "alimentac", "bem estar",
-    ], "#5b4b9a"),
+    ], "#2f3e9e"),
 ]
 
 # Eventos sem nenhuma palavra-chave de tema.
@@ -159,7 +159,7 @@ TIPOS = [
         "audicao", "cantares", "cantigas", "janeiras", "pifaro", "showcase", "pimba", "fadista",
         r"festival de (?:tunas|musica|jazz|fado|bandas|coros|folclore|guitarra)", "festival de tunas",
         r"gala (?:do|de) (?:fado|musica)", r"grande gala do fado",
-    ], "#b03a5b", fracas=["noite de", r"live\b", "ao vivo"], tema="cultura",
+    ], "#d32f2f", fracas=["noite de", r"live\b", "ao vivo"], tema="cultura",
         so_titulo=[r"bandas?\b", "musica", r"cantar\b", "guitarra", "trompete", "piano", "violino", "acustic",
                    "cantor", r"rock\b", "cantautor", "quarteto", "trio"]),
     Tema("cinema", "Cinema", "Sessões de cinema, filmes e documentários", [
@@ -167,7 +167,7 @@ TIPOS = [
         "cineclube", "projecao", "cine concerto", r"realizad[oa] por", "realizador", "serao de cinema",
         "sessao de cinema", "sessoes de cinema", "pelicula", "classificacao etaria", r"m/\d+", "octopus",
         r"ecra\b", r"duracao.{0,4}\d+ minutos",
-    ], "#7a3e9d", fracas=["cine teatro garrett", r"exibe\b", "exibicao", "exibem", "estreia nacional"], tema="cultura"),
+    ], "#6a3fb5", fracas=["cine teatro garrett", r"exibe\b", "exibicao", "exibem", "estreia nacional"], tema="cultura"),
     Tema("teatro", "Teatro", "Peças de teatro, teatro de rua, marionetas e leituras encenadas", [
         "(?<!cine.)teatro", "teatral", "peca de teatro", "dramaturg", "encenac", "leitura encenada",
         "marionetas", "fantoches", "monologo", r"revista\b", "auto de natal", "presepio vivo",
@@ -179,18 +179,18 @@ TIPOS = [
         "ilusionis", "fashion", "desfile de moda", "variedades",
         "fogo de artificio", "videomapping", "video mapping", r"gala de opera\b", "gala final", "miss povoa",
         "concurso de danca",
-    ], "#d0711f", fracas=["espetaculo", r"show\b", "atuac", "animacao de rua", "animacao"], tema="cultura",
+    ], "#e07b00", fracas=["espetaculo", r"show\b", "atuac", "animacao de rua", "animacao"], tema="cultura",
         so_titulo=["magia", "magico", "humor", "performance", "rusgas"]),
     Tema("exposicoes", "Exposições", "Exposições de arte, fotografia, história e património", [
         "exposi", r"patentes?\b", "bienal", "residencia artistica", "inauguracao da exposi",
-    ], "#8d6e00", tema="cultura", so_titulo=[r"mostras?\b", "instalacao", "mural"]),
+    ], "#8a7300", tema="cultura", so_titulo=[r"mostras?\b", "instalacao", "mural"]),
     Tema("literatura", "Literatura", "Livros, leitura, poesia e contos", [
         "poesia", "poemas", "poeta", "literari", "literatura", "conta contos", "hora do conto", "book club",
         "boletim cultural", "feira do livro", "tertulia literaria", "declamac", r"sarau\b",
         "biblioteca no jardim", "biblioteca de jardim", "bibliotecas de verao", "lancamento do livro",
         "apresentacao do livro", r"livros? .{0,60}lancad", "correntes d escritas", "coletanea",
         "escritores", "lancamento de livro",
-    ], "#5d4037", tema="cultura",
+    ], "#795548", tema="cultura",
         so_titulo=["livro", "leitura", "leitores", r"ler\b", r"contos?\b", r"historias\b", r"mesa \d+", "autores"]),
     Tema("oficinas-atividades", "Oficinas e atividades", "Oficinas, cursos, conferências, jogos e atividades para todas as idades", [
         "oficina", "workshop", "atelie", "atelier", "curso", "formacao", "capacitacao", "masterclass",
@@ -202,7 +202,7 @@ TIPOS = [
         "mesa redonda", "mesa de reflexao", "webinar", "forum", "foruns", "cimeira", "summit", "ciclo aberto",
         "conversas?\b", "orcamento participativo", "assembleia de cidadaos", "apresentacao do projeto",
         "apresentacao do pacto", "apresentacao do plano", "apresentacao do programa", "apresentacao do estudo",
-    ], "#00796b", fracas=["concurso", "sessao", "sessoes", "encontro", "ciclo", "programa", "projeto", "atividade",
+    ], "#00897b", fracas=["concurso", "sessao", "sessoes", "encontro", "ciclo", "programa", "projeto", "atividade",
                          "iniciativa", r"clube\b", r"familias?\b", "estagio", "dinamiz"],
         so_titulo=["laboratorio", r"jogos?\b", r"jogar\b", "misterio", "aprender", "demonstrac", "experimenta"]),
     Tema("provas-desportivas", "Provas desportivas", "Torneios, corridas, caminhadas, jogos e treinos abertos", [
@@ -216,7 +216,7 @@ TIPOS = [
         "milha", r"run\b", r"walk\b", r"bike\b", "showdown", "estagio internacional",
         "jogos desportivos", "jogos olimpicos", "jogos juvenis", "walking football", "grande premio",
         "futvolei", "golf", "hidro",
-    ], "#2e7d4f", tema="desporto", so_titulo=["desport"]),
+    ], "#388e3c", tema="desporto", so_titulo=["desport"]),
     Tema("festas-feiras", "Festas, feiras e mercados", "Festas populares, festivais, feiras, mercados e gastronomia", [
         r"festas?\b", r"fest\b", "festival", "festeja", "arraial", "romaria", "procissao",
         "peregrinacao", "semana santa", "solenidades", "queima de judas", "trono de sao pedro",
@@ -226,13 +226,13 @@ TIPOS = [
         "gastronom", "cozinha ao vivo", "showcooking", "agrosemana",
         "burger", "food truck", "rabanada", "papagaios", r"bailes?\b", "springfest",
         "noitada", "dias no parque", "rusgas", "desfolhada", "sao martinho", "noites? de", "sao pedrinho", "pequenada",
-    ], "#c0532a", fracas=["semana d", "folia"],
+    ], "#f4511e", fracas=["semana d", "folia"],
         so_titulo=["mercado", r"natal\b", "pascoa", "vinho", "wine", "chocolate"]),
     Tema("visitas-passeios", "Visitas e passeios", "Visitas guiadas, roteiros, passeios e percursos", [
         "visita", "roteiro", "passeio", r"passear\b", "peddy paper",
         "observacao de aves", "excursao", "jornadas europeias do patrimonio",
         "portas abertas", "dia aberto", "open day", "caminho de santiago", "noite dos museus", "noite no museu",
-    ], "#1f7a8c", so_titulo=["percurso", r"rotas?\b", "trilho", "descobert", "descobrir"]),
+    ], "#0288d1", so_titulo=["percurso", r"rotas?\b", "trilho", "descobert", "descobrir"]),
     Tema("acoes-campanhas", "Ações e campanhas", "Sensibilização, rastreios, recolhas, limpezas e campanhas solidárias", [
         "plantacao", "acao de controlo", "ecocentro", "reciclag", "campanha", "peditorio",
         "rastreio", "dadiva", "doacao", "voluntariado", r"saude primeiro",
@@ -241,14 +241,14 @@ TIPOS = [
         "sessoes informativas", "informar para", "consultorio", "vacinac", "esterilizac",
         "banco alimentar", "angariac", "embrulha", "simulacro", "beach clean", "clean up", "promocao de saude", "promocao da saude",
         "rastreios", "divulgacao d[aoe]", "apoio especializado", "balcao de atendimento", "atendimento",
-    ], "#1c7f5a", so_titulo=["limpeza", "recolha", "prevencao", "adocao"]),
+    ], "#546e7a", so_titulo=["limpeza", "recolha", "prevencao", "adocao"]),
     Tema("comemoracoes", "Comemorações e cerimónias", "Dias comemorativos, cerimónias, galas, homenagens e sessões solenes", [
         "sessao solene", "cerimonia", "tomada de posse", "assembleia municipal", "reuniao publica",
         "reuniao de camara", "inauguracao", r"galas?\b",
         "aniversario", "centenario", "bicentenario", "25 de abril", "1 de dezembro", "geminac",
         "tragedia maritima", "memoria da tragedia", "entrega de premios", "premiacao", "abertura oficial",
         "evocac", r"missa\b", "dia da cidade", "dia do municipio", r"\d+ anos da freguesia",
-    ], "#5b4b9a", fracas=[r"dia (?:mundial|internacional|nacional|europeu|municipal)\b", r"dia d[aoe]s?\b",
+    ], "#9c27b0", fracas=[r"dia (?:mundial|internacional|nacional|europeu|municipal)\b", r"dia d[aoe]s?\b",
                          "semana europeia", "semana nacional", "lancamento", "abertura", "reabertura"],
         so_titulo=["homenagem", "comemora", "celebracao",
                    r"dia (?:mundial|internacional|nacional|europeu|municipal) ",
@@ -450,6 +450,132 @@ def classificar(item):
 
 
 # ---------------------------------------------------------------------------
+# Bilhetes, entradas e inscrições
+# ---------------------------------------------------------------------------
+# Copia do texto do evento as frases sobre bilhetes, preços, entrada livre e
+# inscrições, e os links de compra (BOL, Ticketline...) e de inscrição. Só
+# usa o que está escrito no site: nada é deduzido nem completado.
+
+ACESSO_RE = re.compile(
+    r"bilhete|bilheteira|ingresso|inscri[çc]|gratuit|entrada (?:é )?(?:livre|gratuita)|entradas?\s*[:|]|"
+    r"acesso (?:é )?livre|(?:levantamento de|mediante|com) convite", re.I)
+# Um valor em euros só conta quando a frase fala de pagar (evita prémios, orçamentos...).
+EUROS_RE = re.compile(r"\d\s?€|€\s?\d|\beuros?\b", re.I)
+PAGAR_RE = re.compile(r"\bcust(?:a|am|ar|o de)\b|pre[çc]o|\bpag|s[óo]cio|desconto|valor da (?:entrada|inscri)", re.I)
+HOSTS_BILHETES = ("bol.pt", "ticketline.pt", "ticketline.sapo.pt", "blueticket.pt", "seetickets.com")
+HOSTS_INSCRICAO = ("forms.gle", "forms.office.com")
+A_RE = re.compile(r'<a\b[^>]*?href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', re.I | re.S)
+BLOCO_RE = re.compile(r"<br\s*/?>|</p>|</li>|</div>|</h\d>|</tr>", re.I)
+FRASE_RE = re.compile(r"(?<=[.!?])\s+(?=[A-ZÀ-Ý0-9«“\"])")
+MARCA_RE = re.compile(r"⟦(\d+)⟧")
+MAX_FRASES_ACESSO = 3
+MAX_CARACTERES_FRASE = 320
+
+
+def _host(url):
+    try:
+        return (urlsplit(url).hostname or "").lower()
+    except ValueError:
+        return ""
+
+
+def _do_host(host, lista):
+    return any(host == h or host.endswith("." + h) for h in lista)
+
+
+def _url_publico(url):
+    try:
+        p = urlsplit(url)
+    except ValueError:
+        return False
+    return p.scheme in ("http", "https") and bool(p.hostname) and len(url) <= 500
+
+
+def _sem_parenteses_longos(frase, limite=60):
+    """Tira parênteses compridos (ex. o horário da bilheteira): estão na página do evento."""
+    saida, abertos = [], []
+    for c in frase:
+        if c == "(":
+            abertos.append(len(saida))
+        saida.append(c)
+        if c == ")" and abertos:
+            inicio = abertos.pop()
+            if not abertos and len(saida) - inicio > limite:
+                del saida[inicio:]
+    frase = re.sub(r"\s{2,}", " ", "".join(saida))
+    return re.sub(r"\s+([.,;:])", r"\1", frase).strip()
+
+
+def info_acesso(item):
+    """Devolve (frases, [(rótulo, url)]) sobre bilhetes, entradas e inscrições."""
+    bruto = "{}\n{}".format(item.get("text") or "", item.get("description") or "")
+    urls = []
+
+    def ancora(m):
+        url = html.unescape(m.group(1)).strip()
+        rotulo = TAG_RE.sub("", m.group(2)).strip()
+        if url.lower().startswith("mailto:"):
+            return rotulo or url[7:]
+        if not _url_publico(url):
+            return rotulo
+        urls.append(url)
+        return "{} ⟦{}⟧".format(rotulo if rotulo != url else "", len(urls) - 1)
+
+    texto = A_RE.sub(ancora, bruto)
+    texto = html.unescape(TAG_RE.sub(" ", BLOCO_RE.sub("\n", texto)))
+
+    frases, vistas, ligacoes = [], set(), []
+
+    def juntar(rotulo, url):
+        if url not in [u for _, u in ligacoes]:
+            ligacoes.append((rotulo, url))
+
+    for bloco in texto.split("\n"):
+        bloco = re.sub(r"\s+", " ", bloco).strip()
+        for frase in FRASE_RE.split(bloco):
+            marcas = [urls[int(n)] for n in MARCA_RE.findall(frase)]
+            frase = re.sub(r"https?://\S+", "", MARCA_RE.sub("", frase))
+            frase = _sem_parenteses_longos(frase).strip(" -–|")
+            if len(frase) < 8 or not (ACESSO_RE.search(frase) or (EUROS_RE.search(frase) and PAGAR_RE.search(frase))):
+                continue
+            if frase.lower() in vistas or len(frases) >= MAX_FRASES_ACESSO:
+                continue
+            vistas.add(frase.lower())
+            if len(frase) > MAX_CARACTERES_FRASE:
+                frase = frase[:MAX_CARACTERES_FRASE].rsplit(" ", 1)[0] + "…"
+            frases.append(frase)
+            for url in marcas:
+                if _do_host(_host(url), HOSTS_BILHETES):
+                    juntar("Bilhetes", url)
+                elif re.search(r"inscri", frase, re.I):
+                    juntar("Inscrição", url)
+                elif re.search(r"bilhete|bilheteira|ingresso", frase, re.I):
+                    juntar("Bilhetes", url)
+
+    # Links de compra ou formulários de inscrição em qualquer parte do texto.
+    for url in urls + re.findall(r"https?://[^\s<>\"'⟦⟧]+", bruto):
+        url = url.rstrip(".,;)")
+        if not _url_publico(url):
+            continue
+        if _do_host(_host(url), HOSTS_BILHETES):
+            juntar("Bilhetes", url)
+        elif _do_host(_host(url), HOSTS_INSCRICAO):
+            juntar("Inscrição", url)
+    return frases, ligacoes[:3]
+
+
+def texto_acesso(item, descricao=""):
+    """Bloco para as notas do evento. Não repete frases que já estão na descrição."""
+    frases, ligacoes = info_acesso(item)
+    ja = normalizar(descricao)
+    frases = [f for f in frases if normalizar(f).strip() not in ja]
+    if not frases and not ligacoes:
+        return ""
+    linhas = ["Bilhetes e inscrições:"] + frases + ["{}: {}".format(r, u) for r, u in ligacoes]
+    return "\n".join(linhas)
+
+
+# ---------------------------------------------------------------------------
 # Recolha
 # ---------------------------------------------------------------------------
 
@@ -596,7 +722,7 @@ def criar_evento(item, tema, tipo):
 
     link = link_seguro(item.get("url") or item.get("eventUrl"))
     descricao = limpar_texto(item.get("description") or item.get("text"))
-    partes = [p for p in (descricao, "Mais informação: " + link if link else "") if p]
+    partes = [p for p in (descricao, texto_acesso(item, descricao), "Mais informação: " + link if link else "") if p]
     if partes:
         ev.add("description", vText("\n\n".join(partes)))
     if link:
@@ -665,8 +791,14 @@ ICONE_CALENDARIO = (
 def links(url_base, caminho):
     https = url_ics(url_base, caminho)
     webcal = "webcal://" + https.split("://", 1)[1]
-    google = "https://calendar.google.com/calendar/render?cid=" + quote(webcal, safe="")
-    return {"https": https, "webcal": webcal, "google": google}
+    return {
+        "https": https,
+        "webcal": webcal,
+        # Abre o Google Calendar na conta com sessão iniciada e pede confirmação.
+        "google": "https://calendar.google.com/calendar/render?cid=" + quote(webcal, safe=""),
+        # Abre o Outlook na web (Microsoft 365) e pede confirmação.
+        "outlook": "https://outlook.office.com/calendar/0/addfromweb?url=" + quote(webcal, safe=""),
+    }
 
 
 def bloco_subscricao(url_base, caminho, rotulo):
@@ -674,10 +806,11 @@ def bloco_subscricao(url_base, caminho, rotulo):
     r = html.escape(rotulo, quote=True)
     return (
         '<div class="acoes">\n'
-        '  <a class="botao so-apple" href="{webcal}" aria-label="Subscrever {r} no iPhone, iPad ou Mac">{i}Subscrever</a>\n'
+        '  <a class="botao so-apple" href="{webcal}" aria-label="Subscrever {r} no Calendário do iPhone, iPad ou Mac">{i}Subscrever</a>\n'
         '  <a class="botao so-google" href="{google}" target="_blank" rel="noopener noreferrer" '
         'aria-label="Subscrever {r} no Google Calendar">{i}Subscrever</a>\n'
-        '  <a class="botao so-outro" href="{webcal}" aria-label="Subscrever {r} no Outlook ou noutra aplicação">{i}Subscrever</a>\n'
+        '  <a class="botao so-outlook" href="{outlook}" target="_blank" rel="noopener noreferrer" '
+        'aria-label="Subscrever {r} no Outlook">{i}Subscrever</a>\n'
         '  <div class="copiar so-outro">\n'
         '    <input type="text" readonly value="{https}" aria-label="Link de {r}">\n'
         '    <button type="button" class="botao-copiar" data-link="{https}">Copiar link</button>\n'
@@ -707,7 +840,7 @@ def lista_grupos(grupos, pasta, contagem, total, url_base):
                 nome=html.escape(g.nome),
                 resumo=html.escape(g.resumo),
                 contagem=texto_contagem(n),
-                percentagem=" <small>({})</small>".format(texto_percentagem(n, total)) if n else "",
+                percentagem=" <small>· {} da agenda</small>".format(texto_percentagem(n, total)) if n else "",
                 acoes=bloco_subscricao(url_base, "{}/{}.ics".format(pasta, g.slug), g.nome),
             )
         )

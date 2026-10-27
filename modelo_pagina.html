@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-{{HASH_SCRIPT}}'; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="Subscreva a agenda de eventos da Póvoa de Varzim no calendário do telemóvel ou do computador, completa, por tema ou por tipo.">
+<meta name="description" content="NEXO - EVENTOS: subscreva a agenda municipal da Póvoa de Varzim no calendário do telemóvel ou do computador, completa, por tema ou por tipo.">
 <meta name="theme-color" content="#0f4c6b">
-<title>Agenda municipal da Póvoa de Varzim no seu calendário</title>
+<title>NEXO - EVENTOS · Agenda municipal da Póvoa de Varzim</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='5' width='26' height='24' rx='4' fill='%230f4c6b'/%3E%3Crect x='3' y='5' width='26' height='7' rx='3' fill='%230a3a52'/%3E%3Cpath d='M7 22c3-3 6-3 9 0s6 3 9 0' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
   @font-face { font-family: "CMPV"; src: url("fontes/cmpv-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
@@ -48,7 +48,7 @@
   body {
     margin: 0; background: var(--fundo); color: var(--tinta);
     font-family: "CMPV", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 1rem; line-height: 1.5;
+    font-size: 1rem; line-height: 1.5; overflow-x: clip;
   }
   a { color: inherit; }
   :focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; }
@@ -59,8 +59,8 @@
 
   /* Topo */
   .topo { background: var(--mar); color: #fff; padding-top: max(1.6rem, env(safe-area-inset-top)); }
-  .topo h1 { margin: 0 0 .45rem; font-size: clamp(1.55rem, 4.6vw, 2.25rem); line-height: 1.1; letter-spacing: -.02em; font-weight: 700; }
-  .topo p { max-width: 40em; color: #d6e7ef; font-size: 1rem; }
+  .topo h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.05; letter-spacing: .01em; font-weight: 700; }
+  .topo p { margin-top: .3rem; color: #d6e7ef; font-size: clamp(1rem, 2.6vw, 1.15rem); }
   .onda { display: block; width: 100%; height: 22px; margin-top: 1.1rem; }
   .onda path { fill: var(--fundo); }
 
@@ -77,32 +77,38 @@
   /* Calendário usado */
   .seletor { position: sticky; top: 0; z-index: 3; background: var(--fundo); padding: max(.6rem, env(safe-area-inset-top)) 0 .6rem; border-bottom: 1px solid var(--linha); }
   .seletor .pergunta { font-size: .85rem; font-weight: 700; color: var(--cinza); margin: 0 0 .35rem; text-transform: uppercase; letter-spacing: .04em; }
+  .seletor .segmentos { grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 34rem) { .seletor .segmentos { grid-template-columns: repeat(2, 1fr); } }
   #sis-apple:checked ~ .seletor label[for="sis-apple"],
   #sis-google:checked ~ .seletor label[for="sis-google"],
+  #sis-outlook:checked ~ .seletor label[for="sis-outlook"],
   #sis-outro:checked ~ .seletor label[for="sis-outro"],
   #vista-tema:checked ~ main label[for="vista-tema"],
   #vista-tipo:checked ~ main label[for="vista-tipo"] { background: var(--cartao); color: var(--mar); box-shadow: var(--sombra); }
   @media (prefers-color-scheme: dark) {
     #sis-apple:checked ~ .seletor label[for="sis-apple"],
     #sis-google:checked ~ .seletor label[for="sis-google"],
+    #sis-outlook:checked ~ .seletor label[for="sis-outlook"],
     #sis-outro:checked ~ .seletor label[for="sis-outro"],
     #vista-tema:checked ~ main label[for="vista-tema"],
     #vista-tipo:checked ~ main label[for="vista-tipo"] { background: var(--botao); color: #fff; }
   }
   #sis-apple:focus-visible ~ .seletor label[for="sis-apple"],
   #sis-google:focus-visible ~ .seletor label[for="sis-google"],
+  #sis-outlook:focus-visible ~ .seletor label[for="sis-outlook"],
   #sis-outro:focus-visible ~ .seletor label[for="sis-outro"],
   #vista-tema:focus-visible ~ main label[for="vista-tema"],
   #vista-tipo:focus-visible ~ main label[for="vista-tipo"] { outline: 3px solid var(--foco); outline-offset: 1px; }
   .dica { display: none; margin-top: .4rem; font-size: .85rem; color: var(--cinza); }
-  #sis-apple:checked ~ .seletor .dica-apple,
   #sis-google:checked ~ .seletor .dica-google,
+  #sis-outlook:checked ~ .seletor .dica-outlook,
   #sis-outro:checked ~ .seletor .dica-outro { display: block; }
 
   /* Botões: só aparece o do calendário escolhido */
-  .so-apple, .so-google, .so-outro { display: none !important; }
+  .so-apple, .so-google, .so-outlook, .so-outro { display: none !important; }
   #sis-apple:checked ~ main .so-apple,
   #sis-google:checked ~ main .so-google,
+  #sis-outlook:checked ~ main .so-outlook,
   #sis-outro:checked ~ main .so-outro { display: flex !important; }
 
   .acoes { display: flex; flex-direction: column; gap: .4rem; }
@@ -140,10 +146,10 @@
   @media (max-width: 36rem) { .completa { grid-template-columns: 1fr; } }
 
   /* Tema / tipo */
-  .escolha { margin-top: 1.4rem; }
+  .escolha { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
+  /* linha a toda a largura, igual à que separa o seletor do calendário */
+  .escolha::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
   .escolha > .segmentos { max-width: 26rem; }
-  .explica { margin: .7rem 0 .2rem; color: var(--cinza); font-size: .92rem; }
-  .explica strong { color: var(--tinta); }
 
   .grelha { list-style: none; margin: .8rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr)); gap: .65rem; }
   .cartao {
@@ -164,9 +170,8 @@
   .cartao .copiar { flex: 1 1 100%; }
   .linha2 { font-variant-numeric: lining-nums tabular-nums; }
 
-  .grelha.painel-tipos, .explica.explica-tipo { display: none; }
-  #vista-tipo:checked ~ main .grelha.painel-temas, #vista-tipo:checked ~ main .explica.explica-tema { display: none; }
-  #vista-tipo:checked ~ main .explica.explica-tipo { display: block; }
+  .grelha.painel-tipos { display: none; }
+  #vista-tipo:checked ~ main .grelha.painel-temas { display: none; }
   #vista-tipo:checked ~ main .grelha.painel-tipos { display: grid; }
 
   .aviso { margin-top: .9rem; padding: .65rem .8rem; border-radius: 10px; background: var(--mar-claro); font-size: .88rem; }
@@ -188,14 +193,15 @@
 
 <input type="radio" name="sistema" id="sis-apple" class="escondido" checked aria-label="iPhone, iPad ou Mac">
 <input type="radio" name="sistema" id="sis-google" class="escondido" aria-label="Android ou Google Calendar">
-<input type="radio" name="sistema" id="sis-outro" class="escondido" aria-label="Outlook ou outra aplicação">
+<input type="radio" name="sistema" id="sis-outlook" class="escondido" aria-label="Outlook">
+<input type="radio" name="sistema" id="sis-outro" class="escondido" aria-label="Outra aplicação">
 <input type="radio" name="vista" id="vista-tema" class="escondido" checked aria-label="Subscrever por tema">
 <input type="radio" name="vista" id="vista-tipo" class="escondido" aria-label="Subscrever por tipo">
 
 <header class="topo">
   <div class="largura">
-    <h1>Agenda municipal da Póvoa de Varzim no seu calendário</h1>
-    <p>Subscreva uma vez e os eventos do município aparecem no seu calendário. Eventos novos e mudanças de horário chegam sozinhos.</p>
+    <h1>NEXO - EVENTOS</h1>
+    <p>Agenda municipal da Póvoa de Varzim no seu calendário</p>
   </div>
   <svg class="onda" viewBox="0 0 1200 22" preserveAspectRatio="none" aria-hidden="true" focusable="false">
     <path d="M0 14 C 150 2, 300 2, 450 12 S 750 22, 900 11 S 1100 4, 1200 10 L 1200 22 L 0 22 Z"/>
@@ -208,11 +214,12 @@
     <div class="segmentos" role="group" aria-labelledby="pergunta">
       <label for="sis-apple">iPhone, iPad ou Mac</label>
       <label for="sis-google">Android ou Google</label>
-      <label for="sis-outro">Outlook ou outra</label>
+      <label for="sis-outlook">Outlook</label>
+      <label for="sis-outro">Outra aplicação</label>
     </div>
-    <p class="dica dica-apple">Subscrever abre a app Calendário, que pede confirmação.</p>
-    <p class="dica dica-google">Subscrever abre o Google Calendar. Use a mesma conta Google do telemóvel.</p>
-    <p class="dica dica-outro">No Outlook para computador basta Subscrever. Noutras aplicações, copie o link e adicione-o como calendário da internet.</p>
+    <p class="dica dica-google">Abre o Google Calendar na conta Google com sessão iniciada. Use a mesma conta do telemóvel.</p>
+    <p class="dica dica-outlook">Abre o Outlook na web com a conta Microsoft 365 (profissional ou escolar).</p>
+    <p class="dica dica-outro">Copie o link e adicione-o na aplicação como calendário da internet (por URL).</p>
   </div>
 </div>
 
@@ -221,7 +228,7 @@
   <section class="completa" aria-labelledby="t-geral">
     <div>
       <h2 id="t-geral">Agenda completa</h2>
-      <p class="linha2">Todos os eventos num só calendário: {{TOTAL}} nos próximos meses.</p>
+      <p class="linha2">Todos os eventos num só calendário ({{TOTAL}} agendados).</p>
     </div>
     {{ACOES_GERAL}}
   </section>
@@ -231,9 +238,6 @@
       <label for="vista-tema">Subscrever por tema</label>
       <label for="vista-tipo">Subscrever por tipo</label>
     </div>
-    <p class="explica explica-tema"><strong>Tema</strong> é o assunto do evento: cultura, desporto, ambiente, turismo ou comunidade.</p>
-    <p class="explica explica-tipo"><strong>Tipo</strong> é o formato do evento: concerto, filme, peça de teatro, exposição, prova desportiva…</p>
-    <p class="explica">Entre parênteses, a parte da agenda atual que recebe com cada opção.</p>
 
     <ul class="grelha painel-temas" aria-label="Temas">
 {{LISTA_TEMAS}}
@@ -242,7 +246,8 @@
 {{LISTA_TIPOS}}
     </ul>
 
-    <p class="aviso">Pode subscrever vários temas, ou vários tipos, sem eventos repetidos. Não misture temas com tipos nem com a agenda completa: aí os eventos aparecem em duplicado.</p>
+    <p class="aviso">Evite subscrever temas e tipos em simultâneo, para não receber eventos repetidos.</p>
+
   </section>
 
   <section class="ajuda" aria-labelledby="t-ajuda">
@@ -251,34 +256,45 @@
       <summary>iPhone, iPad ou Mac</summary>
       <div>
         <p>Toque em Subscrever e confirme no Calendário.</p>
-        <p>Se não abrir, escolha «Outlook ou outra», copie o link e adicione-o em Definições › Calendário › Contas › Adicionar conta › Outra › Adicionar calendário subscrito. Nas versões mais recentes do iOS, o Calendário está em Definições › Apps.</p>
+        <p>Se nada acontecer, escolha «Outra aplicação», copie o link e adicione-o nas definições do Calendário: Contas › Adicionar conta › Outra › Adicionar calendário subscrito.</p>
       </div>
     </details>
     <details>
       <summary>Android ou Google Calendar</summary>
       <div>
-        <p>Escolha «Android ou Google», toque em Subscrever e confirme. O calendário fica na sua conta Google e aparece no Google Calendar e nas apps ligadas à conta, como o Calendário Samsung.</p>
-        <p>Se não aparecer, abra as definições do Google Calendar, toque no nome do calendário e ative a sincronização.</p>
-        <p>Se o botão não funcionar, use um computador: em calendar.google.com, junto a «Outros calendários», escolha + › «A partir do URL» e cole o link (visível em «Outlook ou outra»).</p>
+        <p>Toque em Subscrever: abre o Google Calendar na conta Google com sessão iniciada e pede para adicionar o calendário. Depois aparece na app Google Calendar e nas apps ligadas à mesma conta, como o Calendário Samsung.</p>
+        <p>Se não aparecer na app, abra as definições do Google Calendar, toque no nome do calendário e ative a sincronização.</p>
       </div>
     </details>
     <details>
-      <summary>Outlook e outras aplicações</summary>
+      <summary>Outlook</summary>
       <div>
-        <p>No Outlook para Windows ou Mac, o botão Subscrever abre a subscrição. No Outlook na web, use Adicionar calendário › Subscrever a partir da Web e cole o link.</p>
-        <p>Noutras aplicações, procure a opção para adicionar um calendário da internet ou por URL.</p>
+        <p>Com uma conta Microsoft 365 (profissional ou escolar), Subscrever abre o Outlook na web e pede confirmação.</p>
+        <p>Com uma conta pessoal (Outlook.com, Hotmail), escolha «Outra aplicação», copie o link e, em outlook.com, use Adicionar calendário › Subscrever a partir da Web.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Outra aplicação</summary>
+      <div>
+        <p>Copie o link e procure na aplicação a opção de adicionar um calendário da internet ou por URL.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Onde comprar bilhetes ou fazer a inscrição?</summary>
+      <div>
+        <p>Quando a página do evento no site do município indica preço, entrada livre, bilhetes ou inscrição, essa informação aparece nas notas do evento, com o link de compra (por exemplo, BOL) ou de inscrição. Confirme sempre na página do evento.</p>
       </div>
     </details>
     <details>
       <summary>Como são escolhidos o tema e o tipo?</summary>
       <div>
-        <p>Automaticamente, pelas palavras do título e da descrição de cada evento. Cada evento tem um só tema e um só tipo, e está sempre na agenda completa.</p>
+        <p>Automaticamente, a partir do título e da descrição de cada evento. Cada evento tem um só tema e um só tipo e está sempre na agenda completa. Em casos pontuais, a classificação pode não ser a mais adequada.</p>
       </div>
     </details>
     <details>
       <summary>Com que frequência é atualizada?</summary>
       <div>
-        <p>A agenda é verificada no site do município a cada poucas horas. Cada aplicação decide quando atualiza: no iPhone e no Outlook costuma ser em poucas horas; no Google Calendar pode demorar até um dia.</p>
+        <p>A agenda é lida do site do município a cada 4 horas. Cada aplicação decide quando volta a ler o calendário: pode demorar algumas horas e, no Google Calendar, até um dia.</p>
       </div>
     </details>
     <details>
@@ -302,8 +318,14 @@
 (function () {
   document.documentElement.className += ' js';
 
-  // Por defeito: iPhone, iPad ou Mac. So muda sozinho num telemovel Android.
-  if (/Android/i.test(navigator.userAgent || '')) document.getElementById('sis-google').checked = true;
+  // Escolhe o calendario conforme o dispositivo (sem JavaScript fica iPhone, iPad ou Mac).
+  var ua = navigator.userAgent || '';
+  var sis = null;
+  if (/Android/i.test(ua)) sis = 'sis-google';
+  else if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) sis = 'sis-apple';
+  else if (/Windows/i.test(ua)) sis = 'sis-outlook';
+  else if (/CrOS|Linux/i.test(ua)) sis = 'sis-google';
+  if (sis) document.getElementById(sis).checked = true;
 
   var estado = document.getElementById('estado');
 
