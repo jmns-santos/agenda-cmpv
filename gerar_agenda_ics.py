@@ -76,137 +76,187 @@ class Tema:
     resumo: str
     palavras: list = field(default_factory=list)
     cor: str = "#6b7780"
+    fracas: list = field(default_factory=list)   # só contam se nenhuma palavra forte aparecer
+    tema: str = ""                               # tipos: tema a que o tipo puxa (ver PESO_TIPO)
+    so_titulo: list = field(default_factory=list)  # tipos: palavras que só contam no título
 
 
-# Ordem da lista = ordem de apresentação na página. Máximo de 5 temas.
+# TEMA = o assunto do evento. TIPO = o formato do evento.
+# Cada evento tem um só tema e um só tipo, e está sempre na agenda completa.
+#
 # Palavras-chave sem acentos e em minúsculas; cada uma é procurada no início
-# de uma palavra ("teatro" apanha "teatros", "cine" apanha "cinema").
+# de uma palavra ("teatro" apanha "teatros", "exposi" apanha "exposição").
 # Para exigir a palavra exata, terminar com "\b" (ex. r"correr\b").
+# Ordem da lista = ordem de apresentação na página.
+# "feira" sem apanhar "quinta-feira", "sexta-feira"...
+FEIRA = r"(?<!segunda\W)(?<!terca\W)(?<!quarta\W)(?<!quinta\W)(?<!sexta\W)feiras?\b"
+
 TEMAS = [
-    Tema("cultura", "Cultura", "Espetáculos, exposições, livros e património", [
+    Tema("cultura", "Cultura", "Música, cinema, teatro, exposições, livros e património", [
         "cinema", "filme", "documentario", "teatro", "concerto", "musica", "musical",
-        "opereta", "opera", "orquestra", "banda", "tributo", "fado", "danca", "bailado",
-        "espetaculo", "festival", "comedia", "stand up", "circo", "sons no patrimonio",
-        "exposi", "mostra", "pintura", "fotografia", "escultura", "galeria", "museu",
-        "patrimonio", "historia", "historic", "arqueolog", "visita guiada", "jornadas europeias",
-        "livro", "literari", "leitura", "poesia", "conferencia", "palestra", "coloquio",
-        "seminario", "tertulia", "congresso",
-        "arraial", "romaria", "tradic", "folclore", "cantares", r"festas?\b", "carnaval",
-        r"natal\b", "sao pedro(?! de rates)", "geminac",
+        "opereta", "opera", "orquestra", "filarmonica", r"bandas?\b", "tributo", "fado", r"coros?\b",
+        "coral", "danca", "bailado", "espetaculo", "comedia", "stand up", "circo", "sons no patrimonio",
+        "exposi", "pintura", "fotografia", "escultura", "galeria", "museu", "arte", "artista",
+        "patrimonio", "historia", "historic", "arqueolog", "arquivo municipal", "jornadas europeias",
+        "livro", "literari", "literatura", "leitura", "poesia", "poeta", "escritor", "autor",
+        "biblioteca", "camoes", "eca de queiros", "camilo",
+        "folclore", "cantares", "tradic", "etnograf", "carnaval", "entrudo", "domingo gordo", "geminac",
+        "romaria", "arraial", "procissao", "peregrinac", "festas? em honra", "santos populares",
+        r"sao joao\b", "sao pedro(?! de rates)", "santo antonio", "semana santa", "queima de judas",
+        "trono de sao pedro", "presepio", "janeiras", "cortejo", "camisola poveira", r"rancho\b",
+        "tragedia maritima", "monumento", "correntes d escritas", "museus", r"festas?\b",
+        "expressao dramatica", "expressao plastica",
     ], "#b03a5b"),
     Tema("desporto", "Desporto", "Provas, torneios e atividade física", [
         "desport", "futebol", "futsal", "andebol", "basquet", "voleibol", "hoquei",
         "atletismo", "natacao", "surf", "bodyboard", "kickboxing", "boxe", "karate", "judo",
         "ginastica", "padel", "tenis", "ciclismo", "btt", "regata", "remo", "canoagem",
         "torneio", "campeonato", "championship", "maratona", "corrida", r"correr\b",
-        "caminhada", r"caminhar\b", "trail", "fitness", "yoga",
+        "caminhada", r"caminhar\b", "trail", "fitness", "zumba", "pilates", "atividade fisica",
+        "xadrez", "triatlo", "duatlo", "skate", "patinagem", "football", "jogos desportivos",
     ], "#2e7d4f"),
-    Tema("ambiente-mobilidade", "Ambiente e mobilidade", "Sustentabilidade, energia e transportes", [
+    Tema("ambiente-mobilidade", "Ambiente e mobilidade", "Natureza, clima, energia e transportes", [
         "mobilidade", "transporte", "bicicleta", "ciclovia", "pedonal", "autocarro",
         "estacionamento", "transito", "seguranca rodoviaria",
-        "ambient", "energ", "sustentab", "reciclag", "plastico", "residuos", "clima",
-        "floresta", "plantac", "biodiversidade", "limpeza de praia", "eco escola",
+        "ambient", "energ", "sustentab", "reciclag", "residuos", "desperdicio", "plastico", "clima",
+        "floresta", "arvore", "plantac", "biodiversidade", "natureza", "limpeza de praia",
+        "eco escola", "beach clean", "clean up", "agricultura", "horta", r"aves\b", "oceano", "litoral", "fogo",
+        "gestao de combustivel",
     ], "#1c7fa6"),
-    Tema("turismo-economia", "Turismo e economia", "Turismo, gastronomia, feiras e empresas", [
-        "turism", "turistic", "gastronom", "vinho", "vinic", "wine", "feira", "mercado",
-        "artesanato", r"empresas?\b", "negocio", "empreend", "emprego",
-        "comercio", "economia", "investimento", "startup", "formacao profissional",
+    Tema("turismo-economia", "Turismo e economia", "Turismo, gastronomia, comércio, empresas e emprego", [
+        "turism", "turistic", "gastronom", "vinho", "vinic", "wine", FEIRA, "mercado",
+        "artesanato", r"empresas?\b", "empresarial", "negocio", "empreend", "emprego", "empregab",
+        "comercio", "economia", "investimento", "startup", "formacao profissional", r"cooperativas?\b",
+        "rabanada", "sardinh", "doces", "chocolate", "showcooking", "burger", "food truck",
+        "street food", "petisc", "agrosemana", "flores",
     ], "#c0532a"),
-    Tema("comunidade-cidadania", "Comunidade e cidadania", "Saúde, família, ação social e vida municipal", [
+    Tema("comunidade-cidadania", "Comunidade e cidadania", "Saúde, educação, família, juventude e vida municipal", [
         "saude", "senior", "idoso", "envelhecimento", "rastreio", "dadiva", "sangue",
-        "social", "solidari", "voluntari", "inclusao", "cuidados",
-        "bebe", "crianca", "infantil", "infancia", r"familias?\b", "miudos", "pais e filhos",
-        "ludoteca", "ferias escolares",
-        "assembleia", "sessao solene", "tomada de posse", "reuniao publica", "cerimonia",
-        "eleic", "referendo", "cidadania", "participativ", "debate",
+        "social", "solidari", "voluntari", "inclusao", "cuidador", "cuidados", "deficiencia",
+        "bebe", "crianca", "infantil", "infancia", r"familias?\b", "parental", r"pais\b", "filhos",
+        "escola", "educac", "educativ", "ensino", "ensino superior", "jovens", "juventude", "juvenil", "ferias escolares",
+        "assembleia", "sessao solene", "tomada de posse", "reuniao publica", "cidadania",
+        "participativ", "eleic", "direitos", "igualdade", "violencia", "interculturalidade",
+        "seguranca", "protecao civil", r"paz\b", "bairro", "consumidor", "alimentac", "bem estar",
     ], "#5b4b9a"),
 ]
 
-# Tema dos eventos que não correspondem a nenhuma palavra-chave: assim,
-# nenhum evento fica fora dos temas (e todos estão sempre na agenda completa).
+# Eventos sem nenhuma palavra-chave de tema.
 TEMA_PADRAO = TEMAS[-1]
 
 # Em caso de empate na pontuação, ganha o tema que aparece primeiro aqui.
-PRIORIDADE = ["ambiente-mobilidade", "desporto", "cultura", "turismo-economia", "comunidade-cidadania"]
+PRIORIDADE = ["ambiente-mobilidade", "desporto", "turismo-economia", "cultura", "comunidade-cidadania"]
 
-# Tipos de evento (o formato: concerto, exposição, oficina...).
-# Ganha a palavra-chave que aparece mais cedo no título ("Oficina de teatro"
-# é oficina; "Concerto de Natal" é concerto). Sem nada no título, vale a
-# descrição. Sem nada em nenhum, fica em "Outros".
+# Tipos de evento (o formato). Ganha a palavra-chave forte que aparece mais
+# cedo no título ("Oficina de teatro" é oficina; "Concerto de Natal" é
+# concerto). Sem nada no título, vale a descrição e depois o texto completo.
+# Só depois contam as palavras fracas. Sem nada, o tipo vem do tema
+# (Desporto: provas desportivas; restantes: oficinas e atividades).
 TIPOS = [
-    Tema("concertos", "Concertos e música", "Concertos, recitais e música ao vivo", [
-        "concerto", "recital", "orquestra", r"bandas?\b", "fado", r"coros?\b", "coral",
-        "tributo", "ensemble", "sons no patrimonio", r"dj\b", "jazz", "fanfarra", r"tunas?\b",
-        "musica", "audicao", r"cantar\b", "cantares", "cantigas", "janeiras", "guitarra",
-        "trompete", "piano", "pifaro",
-    ], "#b03a5b"),
-    Tema("cinema", "Cinema", "Sessões de cinema e documentários", [
-        "cinema", r"filmes?\b", "documentario", "curtas metragens", "cineclube",
-    ], "#7a3e9d"),
-    Tema("teatro-espetaculos", "Teatro e espetáculos", "Teatro, dança, musicais, circo e humor", [
-        "teatro", "danca", r"dance\b", "bailado", "ballet", "hip hop", "espetaculo", r"musical\b",
-        "opera", "opereta", "circo", "stand up", "comedia", "comedy", "humor", "magia",
-        "marionetas", "fantoches", r"galas?\b", "performance", "fashion", "desfile de moda",
-        "miss povoa",
-    ], "#c2185b"),
-    Tema("exposicoes", "Exposições", "Exposições e mostras", [
-        "exposi", r"mostras?\b", "inauguracao da exposi", "instalacao", "mural", "bienal",
-        "residencia artistica",
-    ], "#8d6e00"),
-    Tema("livros-leitura", "Livros e leitura", "Apresentações de livros, leituras e escrita", [
-        "livro", "leitura", "leitores", r"ler\b", "poesia", "poemas", "literari", "escrita",
-        r"contos?\b", "conta contos", r"historias\b", "book club", "boletim cultural",
-    ], "#5d4037"),
-    Tema("oficinas-atividades", "Oficinas e atividades", "Oficinas, workshops, cursos e programas de férias", [
-        "oficina", "workshop", "atelie", "atelier", "curso", "formacao", "capacitacao",
-        "masterclass", r"aulas?\b", "laboratorio", "explicacoes", r"artes (?:e )?oficios",
-        "primeiros socorros", "repair cafe", "lavorada", "crochet", "tricot", r"ferias\b",
-        "acampamento", "programa psicoeducativo", "atividade ludica",
-    ], "#00796b"),
-    Tema("conferencias-sessoes", "Conferências e sessões", "Conferências, palestras, debates e sessões informativas", [
-        "conferencia", "palestra", "coloquio", "seminario", "congresso", "jornadas",
-        "tertulia", "debate", "mesa redonda", "mesa de reflexao", "webinar", "encontro",
-        "forum", "cimeira", "summit", "ciclo aberto", "conversa",
-        r"sess(?:ao|oes) (?:de )?(?:informativ|esclarecimento|sensibilizacao|publica|sobre|com|apresentacao|intercambio)",
-        r"acao de sensibilizacao", r"apresentacao do (?:projeto|pacto|plano|programa|estudo)",
-        "informar para",
-    ], "#1c6fa6"),
-    Tema("provas-desportivas", "Provas e atividade física", "Torneios, corridas, caminhadas e aulas desportivas", [
+    Tema("concertos", "Concertos", "Concertos, recitais, coros, bandas e música ao vivo", [
+        "concerto", "recital", "orquestra", "filarmonica", "fado", r"coros?\b", "coral",
+        "tributo", "ensemble", "sons no patrimonio", r"dj\b", r"djs\b", "jazz", "blues", "fanfarra", r"tunas?\b",
+        "audicao", "cantares", "cantigas", "janeiras", "pifaro", "showcase", "pimba", "fadista",
+        r"festival de (?:tunas|musica|jazz|fado|bandas|coros|folclore|guitarra)", "festival de tunas",
+        r"gala (?:do|de) (?:fado|musica)", r"grande gala do fado",
+    ], "#b03a5b", fracas=["noite de", r"live\b", "ao vivo"], tema="cultura",
+        so_titulo=[r"bandas?\b", "musica", r"cantar\b", "guitarra", "trompete", "piano", "violino", "acustic",
+                   "cantor", r"rock\b", "cantautor", "quarteto", "trio"]),
+    Tema("cinema", "Cinema", "Sessões de cinema, filmes e documentários", [
+        "cinema", r"filmes?\b", "documentario", "curtas metragens", "curta metragem", "longa metragem",
+        "cineclube", "projecao", "cine concerto", r"realizad[oa] por", "realizador", "serao de cinema",
+        "sessao de cinema", "sessoes de cinema", "pelicula", "classificacao etaria", r"m/\d+", "octopus",
+        r"ecra\b", r"duracao.{0,4}\d+ minutos",
+    ], "#7a3e9d", fracas=["cine teatro garrett", r"exibe\b", "exibicao", "exibem", "estreia nacional"], tema="cultura"),
+    Tema("teatro", "Teatro", "Peças de teatro, teatro de rua, marionetas e leituras encenadas", [
+        "(?<!cine.)teatro", "teatral", "peca de teatro", "dramaturg", "encenac", "leitura encenada",
+        "marionetas", "fantoches", "monologo", r"revista\b", "auto de natal", "presepio vivo",
+        "recriacao d", "paixao de cristo",
+    ], "#c2185b", tema="cultura"),
+    Tema("espetaculos", "Espetáculos", "Dança, circo, magia, humor, musicais e espetáculos de rua", [
+        "danca", r"dance\b", "bailado", "ballet", "hip hop", "breaking", r"musical\b", r"opera\b", "opereta",
+        "circo", "circense", "acrobac", "malabar", "stand up", "comedia", "comedy", "humorista",
+        "ilusionis", "fashion", "desfile de moda", "variedades",
+        "fogo de artificio", "videomapping", "video mapping", r"gala de opera\b", "gala final", "miss povoa",
+        "concurso de danca",
+    ], "#d0711f", fracas=["espetaculo", r"show\b", "atuac", "animacao de rua", "animacao"], tema="cultura",
+        so_titulo=["magia", "magico", "humor", "performance", "rusgas"]),
+    Tema("exposicoes", "Exposições", "Exposições de arte, fotografia, história e património", [
+        "exposi", r"patentes?\b", "bienal", "residencia artistica", "inauguracao da exposi",
+    ], "#8d6e00", tema="cultura", so_titulo=[r"mostras?\b", "instalacao", "mural"]),
+    Tema("literatura", "Literatura", "Livros, leitura, poesia e contos", [
+        "poesia", "poemas", "poeta", "literari", "literatura", "conta contos", "hora do conto", "book club",
+        "boletim cultural", "feira do livro", "tertulia literaria", "declamac", r"sarau\b",
+        "biblioteca no jardim", "biblioteca de jardim", "bibliotecas de verao", "lancamento do livro",
+        "apresentacao do livro", r"livros? .{0,60}lancad", "correntes d escritas", "coletanea",
+        "escritores", "lancamento de livro",
+    ], "#5d4037", tema="cultura",
+        so_titulo=["livro", "leitura", "leitores", r"ler\b", r"contos?\b", r"historias\b", r"mesa \d+", "autores"]),
+    Tema("oficinas-atividades", "Oficinas e atividades", "Oficinas, cursos, conferências, jogos e atividades para todas as idades", [
+        "oficina", "workshop", "atelie", "atelier", "curso", "formacao", "capacitacao", "masterclass",
+        r"aulas?\b", "explicacoes", r"artes (?:e )?oficios", "primeiros socorros",
+        "repair cafe", "crochet", "tricot", r"ferias\b", "acampamento", "programa psicoeducativo",
+        "atividade ludica", "ludoteca", "gincana", r"quizz?\b", "escape room",
+        "hackathon", "lavorada",
+        "conferencia", "palestra", "coloquio", "seminario", "congresso", "jornadas", "tertulia", "debate",
+        "mesa redonda", "mesa de reflexao", "webinar", "forum", "foruns", "cimeira", "summit", "ciclo aberto",
+        "conversas?\b", "orcamento participativo", "assembleia de cidadaos", "apresentacao do projeto",
+        "apresentacao do pacto", "apresentacao do plano", "apresentacao do programa", "apresentacao do estudo",
+    ], "#00796b", fracas=["concurso", "sessao", "sessoes", "encontro", "ciclo", "programa", "projeto", "atividade",
+                         "iniciativa", r"clube\b", r"familias?\b", "estagio", "dinamiz"],
+        so_titulo=["laboratorio", r"jogos?\b", r"jogar\b", "misterio", "aprender", "demonstrac", "experimenta"]),
+    Tema("provas-desportivas", "Provas desportivas", "Torneios, corridas, caminhadas, jogos e treinos abertos", [
         "torneio", "campeonato", "championship", r"taca\b", r"cup\b", r"open\b", "trofeu",
-        "corrida", "maratona", "caminhada", "trail", r"cross\b", "corta mato", "raid", "meeting",
+        "corrida", "maratona", "caminhada", "trail", r"cross\b", "corta mato", r"raid\b", "meeting",
         "classica", r"provas?\b", "regata", "futebol", "football", "futsal", "andebol", "basquet",
         "voleibol", "hoquei", "atletismo", r"ppa\b", "natacao", "surf", "bodyboard", "ciclismo",
         "btt", "padel", "tenis", "squash", "boccia", "xadrez", "ginastica", "aerobica", "fitness",
-        "yoga", "zumba", "pilates", "desport", "atividade fisica", r"sub \d+",
-    ], "#2e7d4f"),
-    Tema("festas-feiras", "Festas, feiras e mercados", "Festas populares, festivais, feiras e mercados", [
+        "yoga", "zumba", "pilates", "atividade fisica", r"sub \d+", "karate", "judo",
+        "kickboxing", "boxe", "triatlo", "duatlo", "aquatlo", "canoagem", r"remo\b", "patinagem", "skate",
+        "milha", r"run\b", r"walk\b", r"bike\b", "showdown", "estagio internacional",
+        "jogos desportivos", "jogos olimpicos", "jogos juvenis", "walking football", "grande premio",
+        "futvolei", "golf", "hidro",
+    ], "#2e7d4f", tema="desporto", so_titulo=["desport"]),
+    Tema("festas-feiras", "Festas, feiras e mercados", "Festas populares, festivais, feiras, mercados e gastronomia", [
         r"festas?\b", r"fest\b", "festival", "festeja", "arraial", "romaria", "procissao",
         "peregrinacao", "semana santa", "solenidades", "queima de judas", "trono de sao pedro",
-        "feira", "mercado", "mercadinho", "carnaval", "halloween", r"natal\b", "fim d ano",
-        "passagem de ano", "pascoa", "sardinhada", "magusto", "santos populares", "cortejo",
+        FEIRA, "mercadinho", "carnaval", "halloween", "fim d ano",
+        "passagem de ano", "sardinhada", "magusto", "santos populares", "cortejo",
         "desfile", "convivio", "by night", "sunset", "noite branca", "mostra gastronom",
-        "gastronom", "cozinha ao vivo", "showcooking", "wine", "vinho", "chocolate", "agrosemana",
-        "burger", "food truck",
-    ], "#c0532a"),
-    Tema("visitas-passeios", "Visitas e passeios", "Visitas guiadas, roteiros e passeios", [
-        "visita", "roteiro", "passeio", r"passear\b", "percurso", r"rotas?\b", "peddy paper",
-        "observacao de aves", "descobrir",
-    ], "#1f7a8c"),
-    Tema("acoes-campanhas", "Ações e campanhas", "Ações ambientais, de saúde e solidárias", [
-        "plantacao", "limpeza", "acao de controlo", "ecocentro", "reciclag", "campanha",
-        "peditorio", "rastreio", "dadiva", "doacao", "recolha", "voluntariado", r"saude primeiro",
+        "gastronom", "cozinha ao vivo", "showcooking", "agrosemana",
+        "burger", "food truck", "rabanada", "papagaios", r"bailes?\b", "springfest",
+        "noitada", "dias no parque", "rusgas", "desfolhada", "sao martinho", "noites? de", "sao pedrinho", "pequenada",
+    ], "#c0532a", fracas=["semana d", "folia"],
+        so_titulo=["mercado", r"natal\b", "pascoa", "vinho", "wine", "chocolate"]),
+    Tema("visitas-passeios", "Visitas e passeios", "Visitas guiadas, roteiros, passeios e percursos", [
+        "visita", "roteiro", "passeio", r"passear\b", "peddy paper",
+        "observacao de aves", "excursao", "jornadas europeias do patrimonio",
+        "portas abertas", "dia aberto", "open day", "caminho de santiago", "noite dos museus", "noite no museu",
+    ], "#1f7a8c", so_titulo=["percurso", r"rotas?\b", "trilho", "descobert", "descobrir"]),
+    Tema("acoes-campanhas", "Ações e campanhas", "Sensibilização, rastreios, recolhas, limpezas e campanhas solidárias", [
+        "plantacao", "acao de controlo", "ecocentro", "reciclag", "campanha", "peditorio",
+        "rastreio", "dadiva", "doacao", "voluntariado", r"saude primeiro",
         r"acao (?:de )?(?:promocao|saude)", "outubro rosa", "pelo clima", "restart a heart",
-    ], "#1c7f5a"),
-    Tema("comemoracoes", "Comemorações e cerimónias", "Dias comemorativos, cerimónias e sessões solenes", [
+        "sensibilizac", "sessao de esclarecimento", "sessoes de esclarecimento", "sessao informativa",
+        "sessoes informativas", "informar para", "consultorio", "vacinac", "esterilizac",
+        "banco alimentar", "angariac", "embrulha", "simulacro", "beach clean", "clean up", "promocao de saude", "promocao da saude",
+        "rastreios", "divulgacao d[aoe]", "apoio especializado", "balcao de atendimento", "atendimento",
+    ], "#1c7f5a", so_titulo=["limpeza", "recolha", "prevencao", "adocao"]),
+    Tema("comemoracoes", "Comemorações e cerimónias", "Dias comemorativos, cerimónias, galas, homenagens e sessões solenes", [
         "sessao solene", "cerimonia", "tomada de posse", "assembleia municipal", "reuniao publica",
-        "reuniao de camara", "inauguracao", "homenagem", "comemora", "celebracao",
-        r"dia (?:mundial|internacional|nacional|europeu|do|da|dos|das|de)\b", r"semana europeia",
-        "aniversario", "centenario", "bicentenario", "25 de abril", "geminac", "tragedia maritima",
-        "memoria da tragedia", "orcamento participativo",
-    ], "#5b4b9a"),
-    Tema("outros", "Outros", "Restantes eventos", [], "#6b7780"),
+        "reuniao de camara", "inauguracao", r"galas?\b",
+        "aniversario", "centenario", "bicentenario", "25 de abril", "1 de dezembro", "geminac",
+        "tragedia maritima", "memoria da tragedia", "entrega de premios", "premiacao", "abertura oficial",
+        "evocac", r"missa\b", "dia da cidade", "dia do municipio", r"\d+ anos da freguesia",
+    ], "#5b4b9a", fracas=[r"dia (?:mundial|internacional|nacional|europeu|municipal)\b", r"dia d[aoe]s?\b",
+                         "semana europeia", "semana nacional", "lancamento", "abertura", "reabertura"],
+        so_titulo=["homenagem", "comemora", "celebracao",
+                   r"dia (?:mundial|internacional|nacional|europeu|municipal) ",
+                   r"dia d[aoe]s? (?:pai|mae|crianca|mulher|agricultor|horticultor|europa|mar|cidade|municipio|avo|namorados)",
+                   r"semana (?:europeia|nacional|mundial) "]),
 ]
-TIPO_PADRAO = TIPOS[-1]
+TIPO_PADRAO = TIPOS[6]                     # Oficinas e atividades
+TIPO_DO_TEMA = {"desporto": "provas-desportivas", "ambiente-mobilidade": "acoes-campanhas"}   # sem palavra-chave nenhuma
 
 # Campos da API que possam trazer categorias/etiquetas do próprio site.
 # Se existirem, contam tanto como o título na classificação.
@@ -215,6 +265,7 @@ CAMPOS_CATEGORIA = ("categories", "category", "subjects", "subject", "tags", "ev
 PESO_TITULO = 3
 PESO_CATEGORIA = 3
 PESO_DESCRICAO = 1
+PESO_TIPO = 2      # o tipo puxa o tema: um concerto é cultura, uma prova é desporto
 
 TAG_RE = re.compile(r"<[^>]+>")
 ESPACOS_RE = re.compile(r"\s+")
@@ -277,17 +328,19 @@ def link_seguro(url):
 # Classificação por tema
 # ---------------------------------------------------------------------------
 
+def _compilar_lista(palavras):
+    return [re.compile(r"(?<=[ ])" + p.replace(" ", r"\s+")) for p in palavras]
+
+
 def _compilar(temas):
-    padroes = {}
-    for tema in temas:
-        padroes[tema.slug] = [
-            re.compile(r"(?<=[ ])" + p.replace(" ", r"\s+")) for p in tema.palavras
-        ]
-    return padroes
+    return {t.slug: _compilar_lista(t.palavras) for t in temas}
 
 
 PADROES = _compilar(TEMAS)
 PADROES_TIPO = _compilar(TIPOS)
+PADROES_TIPO_FRACOS = {t.slug: _compilar_lista(t.fracas) for t in TIPOS}
+PADROES_TIPO_TITULO = {t.slug: _compilar_lista(t.palavras + t.so_titulo) for t in TIPOS}
+TIPOS_POR_SLUG = {t.slug: t for t in TIPOS}
 ORDEM_EMPATE = {slug: i for i, slug in enumerate(PRIORIDADE)}
 
 
@@ -304,34 +357,48 @@ def texto_categorias(item):
     return " ".join(partes)
 
 
-def classificar(item):
+def _textos(item):
     titulo = normalizar(limpar_texto(item.get("title")))
-    categorias = normalizar(texto_categorias(item))
-    descricao = normalizar(limpar_texto(item.get("description") or item.get("text")))
+    descricao = normalizar(limpar_texto(item.get("description")))
+    completo = normalizar(limpar_texto(item.get("text")))
+    return titulo, descricao, completo
 
-    melhor, melhor_pontos = TEMA_PADRAO, 0
+
+def _pontuar_temas(item, tipo=None):
+    titulo, descricao, completo = _textos(item)
+    categorias = normalizar(texto_categorias(item))
+    descricao = descricao if descricao.strip() else completo
+    pontos = {}
     for tema in TEMAS:
-        pontos = 0
+        p = 0
         for padrao in PADROES[tema.slug]:
             if padrao.search(titulo):
-                pontos += PESO_TITULO
+                p += PESO_TITULO
             if padrao.search(categorias):
-                pontos += PESO_CATEGORIA
+                p += PESO_CATEGORIA
             if padrao.search(descricao):
-                pontos += PESO_DESCRICAO
-        if pontos > melhor_pontos or (
-            pontos == melhor_pontos and pontos > 0
-            and ORDEM_EMPATE.get(tema.slug, 99) < ORDEM_EMPATE.get(melhor.slug, 99)
-        ):
-            melhor, melhor_pontos = tema, pontos
+                p += PESO_DESCRICAO
+        if tipo is not None and tipo.tema == tema.slug:
+            p += PESO_TIPO
+        pontos[tema.slug] = p
+    return pontos
+
+
+def _melhor_tema(pontos):
+    melhor, melhor_pontos = TEMA_PADRAO, 0
+    for tema in TEMAS:
+        p = pontos[tema.slug]
+        if p > melhor_pontos or (p == melhor_pontos and p > 0
+                                 and ORDEM_EMPATE.get(tema.slug, 99) < ORDEM_EMPATE.get(melhor.slug, 99)):
+            melhor, melhor_pontos = tema, p
     return melhor
 
 
-def _primeiro_tipo(texto):
+def _primeiro_tipo(texto, padroes):
     """Tipo cuja palavra-chave aparece mais cedo no texto (empate: a mais longa)."""
     melhor, melhor_chave = None, None
     for tipo in TIPOS:
-        for padrao in PADROES_TIPO[tipo.slug]:
+        for padrao in padroes[tipo.slug]:
             m = padrao.search(texto)
             if m:
                 chave = (m.start(), -(m.end() - m.start()))
@@ -340,13 +407,46 @@ def _primeiro_tipo(texto):
     return melhor
 
 
+def _tipo_dominante(texto, padroes):
+    """Tipo com mais palavras-chave no texto (empate: a que aparece mais cedo).
+    Na descrição e no texto completo uma palavra solta engana ("magia" numa
+    sinopse); o tipo que mais se repete é o que descreve o evento."""
+    contagem, primeira = {}, {}
+    for tipo in TIPOS:
+        for padrao in padroes[tipo.slug]:
+            for m in padrao.finditer(texto):
+                contagem[tipo.slug] = contagem.get(tipo.slug, 0) + 1
+                primeira[tipo.slug] = min(primeira.get(tipo.slug, m.start()), m.start())
+    if not contagem:
+        return None
+    melhor = min(contagem, key=lambda s: (-contagem[s], primeira[s]))
+    return TIPOS_POR_SLUG[melhor]
+
+
+def _tipo_por_palavras(item):
+    titulo, descricao, completo = _textos(item)
+    for padroes_titulo, padroes in ((PADROES_TIPO_TITULO, PADROES_TIPO), (PADROES_TIPO_FRACOS, PADROES_TIPO_FRACOS)):
+        tipo = _primeiro_tipo(titulo, padroes_titulo)
+        if tipo is not None:
+            return tipo
+        for texto in (descricao, completo):
+            tipo = _tipo_dominante(texto, padroes)
+            if tipo is not None:
+                return tipo
+    return None
+
+
 def classificar_tipo(item):
-    titulo = normalizar(limpar_texto(item.get("title")))
-    tipo = _primeiro_tipo(titulo)
+    tipo = _tipo_por_palavras(item)
     if tipo is None:
-        descricao = normalizar(limpar_texto(item.get("description") or item.get("text")))
-        tipo = _primeiro_tipo(descricao)
-    return tipo or TIPO_PADRAO
+        tema = _melhor_tema(_pontuar_temas(item))
+        tipo = TIPOS_POR_SLUG.get(TIPO_DO_TEMA.get(tema.slug), TIPO_PADRAO)
+    return tipo
+
+
+def classificar(item):
+    """Tema do evento. O tipo (o formato) também conta: um concerto puxa para Cultura."""
+    return _melhor_tema(_pontuar_temas(item, _tipo_por_palavras(item)))
 
 
 # ---------------------------------------------------------------------------
@@ -547,6 +647,21 @@ def texto_contagem(n):
     return "1 evento" if n == 1 else "{} eventos".format(n)
 
 
+def texto_percentagem(n, total):
+    """Parte da agenda atual, arredondada (\"<1%\" em vez de \"0%\" quando há eventos)."""
+    if not total or not n:
+        return "0%"
+    p = 100.0 * n / total
+    return "<1%" if p < 1 else "{}%".format(int(p + 0.5))
+
+
+ICONE_CALENDARIO = (
+    '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" '
+    'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">'
+    '<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>'
+)
+
+
 def links(url_base, caminho):
     https = url_ics(url_base, caminho)
     webcal = "webcal://" + https.split("://", 1)[1]
@@ -559,39 +674,44 @@ def bloco_subscricao(url_base, caminho, rotulo):
     r = html.escape(rotulo, quote=True)
     return (
         '<div class="acoes">\n'
-        '  <a class="botao so-apple" href="{webcal}" aria-label="Subscrever {r} no iPhone, iPad ou Mac">Subscrever</a>\n'
+        '  <a class="botao so-apple" href="{webcal}" aria-label="Subscrever {r} no iPhone, iPad ou Mac">{i}Subscrever</a>\n'
         '  <a class="botao so-google" href="{google}" target="_blank" rel="noopener noreferrer" '
-        'aria-label="Subscrever {r} no Google Calendar">Subscrever</a>\n'
-        '  <a class="botao so-outro" href="{webcal}" aria-label="Subscrever {r} no Outlook ou noutra aplicação">Subscrever</a>\n'
+        'aria-label="Subscrever {r} no Google Calendar">{i}Subscrever</a>\n'
+        '  <a class="botao so-outro" href="{webcal}" aria-label="Subscrever {r} no Outlook ou noutra aplicação">{i}Subscrever</a>\n'
         '  <div class="copiar so-outro">\n'
         '    <input type="text" readonly value="{https}" aria-label="Link de {r}">\n'
         '    <button type="button" class="botao-copiar" data-link="{https}">Copiar link</button>\n'
         '  </div>\n'
         '</div>'
-    ).format(r=r, **l)
+    ).format(r=r, i=ICONE_CALENDARIO, **l)
 
 
-def lista_grupos(grupos, pasta, contagem, url_base):
+def lista_grupos(grupos, pasta, contagem, total, url_base):
     linhas = []
     for g in grupos:
+        n = contagem[g.slug]
+        pct = 100.0 * n / total if total else 0.0
         linhas.append(
-            '<li class="tema" style="--cor-tema: {cor}">\n'
-            '  <div class="tema-texto">\n'
-            '    <h3>{nome}</h3>\n'
-            '    <p>{resumo}</p>\n'
-            '    <p class="contagem">{contagem}</p>\n'
+            '<li class="cartao{vazio}" style="--cor: {cor}; --pct: {pct:.1f}%">\n'
+            '  <h3>{nome}</h3>\n'
+            '  <p class="resumo">{resumo}</p>\n'
+            '  <span class="barra" aria-hidden="true"><span></span></span>\n'
+            '  <div class="rodape">\n'
+            '    <span class="valor">{contagem}{percentagem}</span>\n'
+            '    {acoes}\n'
             '  </div>\n'
-            '  {acoes}\n'
             '</li>'.format(
+                vazio=" vazio" if n == 0 else "",
                 cor=html.escape(g.cor, quote=True),
+                pct=pct,
                 nome=html.escape(g.nome),
                 resumo=html.escape(g.resumo),
-                contagem=texto_contagem(contagem[g.slug]),
+                contagem=texto_contagem(n),
+                percentagem=" <small>({})</small>".format(texto_percentagem(n, total)) if n else "",
                 acoes=bloco_subscricao(url_base, "{}/{}.ics".format(pasta, g.slug), g.nome),
             )
         )
     return "\n".join(linhas)
-
 
 
 def gerar_pagina(contagem, total, url_base):
@@ -602,10 +722,10 @@ def gerar_pagina(contagem, total, url_base):
 
     substituicoes = {
         "{{HASH_SCRIPT}}": hash_script,
-        "{{TOTAL}}": texto_contagem(total),
+        "{{TOTAL}}": texto_contagem(total).lower(),
         "{{ACOES_GERAL}}": bloco_subscricao(url_base, "agenda.ics", "a agenda completa"),
-        "{{LISTA_TEMAS}}": lista_grupos(TEMAS, "temas", contagem["temas"], url_base),
-        "{{LISTA_TIPOS}}": lista_grupos(TIPOS, "tipos", contagem["tipos"], url_base),
+        "{{LISTA_TEMAS}}": lista_grupos(TEMAS, "temas", contagem["temas"], total, url_base),
+        "{{LISTA_TIPOS}}": lista_grupos(TIPOS, "tipos", contagem["tipos"], total, url_base),
         "{{FONTE_PAGINA}}": html.escape(FONTE_PAGINA, quote=True),
     }
     for chave, valor in substituicoes.items():
