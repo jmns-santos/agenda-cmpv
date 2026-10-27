@@ -65,13 +65,13 @@
    "h_tema_t": "Como são escolhidos o tema e o tipo?",
    "h_tema_html": "<p>Automaticamente, a partir do título e da descrição de cada evento. Cada evento tem um só tema e um só tipo e está sempre na agenda completa. Em casos pontuais, a classificação pode não ser a mais adequada.</p>",
    "h_lingua_t": "Em que língua ficam os eventos?",
-   "h_lingua_html": "<p>A página e os nomes dos calendários e das categorias ficam na língua escolhida. O título e a descrição de cada evento ficam em português, como no site do município.</p>",
+   "h_lingua_html": "<p>A página e os nomes dos calendários e das categorias ficam na língua escolhida. O título e a descrição de cada evento ficam em português, como no site do município. Datas e horas aparecem no formato do seu telemóvel.</p><p>Um calendário já subscrito não muda de língua: para mudar, apague-o e subscreva de novo nesta página, na língua que quiser.</p>",
    "h_freq_t": "Com que frequência é atualizada?",
    "h_freq_html": "<p>A agenda é lida do site do município a cada 4 horas. Cada aplicação decide quando volta a ler o calendário: pode demorar algumas horas e, no Google Calendar, até um dia.</p>",
    "h_sair_t": "Como deixar de receber",
    "h_sair_html": "<p>Apague o calendário subscrito nas definições da aplicação. Os eventos desaparecem de imediato.</p>",
    "rodape_html": "Os eventos vêm da <a href=\"{fonte}\">agenda publicada em cm-pvarzim.pt</a>. Confirme datas, horários e condições de acesso na página de cada evento (o link está nas notas do evento).",
-   "rodape2": "Esta página não usa cookies nem estatísticas.",
+   "rodape2": "Esta página não usa cookies nem estatísticas. A língua e o tamanho da letra escolhidos ficam guardados só neste navegador.",
    "ver_em": "Ver esta página em português",
    "fechar": "Fechar",
    "cal_geral": "Agenda Municipal da Póvoa de Varzim",
@@ -83,7 +83,32 @@
    "mais_info": "Mais informação",
    "nota_lingua": "",
    "temas": {},
-   "tipos": {}
+   "tipos": {},
+   "prox_titulo": "Próximos eventos",
+   "prox_intro": "Adicione um evento ao seu calendário e escolha o aviso que quiser, por exemplo uma semana antes.",
+   "nota_hora": "Horas de Portugal continental.",
+   "mostrar": "Mostrar",
+   "todos": "Todos os eventos",
+   "grupo_temas": "Temas",
+   "grupo_tipos": "Tipos",
+   "adicionar": "Adicionar ao meu calendário",
+   "baixar": "Descarregar evento (.ics)",
+   "a_decorrer": "A decorrer",
+   "sem_resultados": "Não há eventos nesta escolha.",
+   "link_bilhetes": "Bilhetes",
+   "link_inscricao": "Inscrição",
+   "link_mais": "Mais informação",
+   "cancelado": "Cancelado",
+   "local": "Local",
+   "h_aviso_t": "Como receber um aviso antes de um evento?",
+   "h_aviso_html": "<p><strong>iPhone, iPad ou Mac:</strong> antes de subscrever, escolha o aviso (1 dia ou 1 semana antes de cada evento). O Calendário costuma retirar os avisos ao subscrever: desligue «Remover alertas» nas definições desse calendário.</p><p><strong>Google e Android:</strong> depois de subscrever, abra as definições do Google Calendar, escolha o calendário e, em «Notificações de eventos», adicione o aviso (por exemplo, 1 semana). Vale para todos os eventos desse calendário.</p><p><strong>Outlook e outras aplicações:</strong> os calendários subscritos não deixam pôr avisos. Em «Próximos eventos», toque em «Adicionar ao meu calendário»: o evento fica seu e pode escolher o aviso.</p>",
+   "aviso_rotulo": "Aviso antes de cada evento",
+   "aviso_0": "Sem aviso",
+   "aviso_1d": "1 dia antes",
+   "aviso_1s": "1 semana antes",
+   "dica_aviso_apple": "Se o aviso não aparecer, desligue «Remover alertas» nas definições deste calendário.",
+   "dica_aviso_google": "Para ter avisos, depois de subscrever abra as definições do Google Calendar, escolha este calendário e, em «Notificações de eventos», adicione por exemplo 1 semana.",
+   "dica_aviso_outlook": "O Outlook não deixa pôr avisos em calendários subscritos. Para isso, use «Adicionar ao meu calendário» em Próximos eventos."
   },
   "en": {
    "nome": "English",
@@ -138,13 +163,13 @@
    "h_tema_t": "How are the theme and type chosen?",
    "h_tema_html": "<p>Automatically, from the title and description of each event. Each event has a single theme and a single type and is always in the full calendar. In some cases the classification may not be the best fit.</p>",
    "h_lingua_t": "Which language are the events in?",
-   "h_lingua_html": "<p>This page and the names of calendars and categories are in the language you choose. The title and description of each event stay in Portuguese, as on the municipality's website.</p>",
+   "h_lingua_html": "<p>This page and the names of calendars and categories are in the language you choose. The title and description of each event stay in Portuguese, as on the municipality's website. Dates and times follow your phone's format.</p><p>A calendar you already subscribed to does not change language: to change it, delete it and subscribe again on this page, in the language you want.</p>",
    "h_freq_t": "How often is it updated?",
    "h_freq_html": "<p>Events are read from the municipality's website every 4 hours. Each app decides when to check the calendar again: it may take a few hours and, in Google Calendar, up to a day.</p>",
    "h_sair_t": "How to unsubscribe",
    "h_sair_html": "<p>Delete the subscribed calendar in your app's settings. The events disappear immediately.</p>",
    "rodape_html": "Events come from the <a href=\"{fonte}\">events page at cm-pvarzim.pt</a>. Check dates, times and access conditions on each event page (the link is in the event notes).",
-   "rodape2": "This page uses no cookies and no analytics.",
+   "rodape2": "This page uses no cookies and no analytics. Your chosen language and text size are stored only in this browser.",
    "ver_em": "View this page in English",
    "fechar": "Close",
    "cal_geral": "Póvoa de Varzim Municipal Events",
@@ -164,17 +189,25 @@
      "Sport",
      "Races, tournaments and physical activity"
     ],
-    "ambiente-mobilidade": [
-     "Environment and mobility",
-     "Nature, climate, energy and transport"
+    "ambiente": [
+     "Environment",
+     "Nature, climate, energy, water, waste and recycling"
     ],
-    "turismo-economia": [
-     "Tourism and economy",
-     "Tourism, food, shops, business and jobs"
+    "mobilidade-transportes": [
+     "Mobility and transport",
+     "Public transport, cycling, walking and road safety"
     ],
-    "comunidade-cidadania": [
-     "Community and citizenship",
-     "Health, education, family, youth and civic life"
+    "turismo": [
+     "Tourism",
+     "Tourism, food, wine, crafts and promotion of Póvoa"
+    ],
+    "economia": [
+     "Economy",
+     "Shops, business, jobs, training and markets"
+    ],
+    "cidadania": [
+     "Citizenship",
+     "Health, education, family, youth, inclusion and civic life"
     ]
    },
    "tipos": {
@@ -226,7 +259,32 @@
      "Celebrations and ceremonies",
      "Commemorative days, ceremonies, galas, tributes and formal sessions"
     ]
-   }
+   },
+   "prox_titulo": "Upcoming events",
+   "prox_intro": "Add an event to your calendar and choose the reminder you want, for example one week before.",
+   "nota_hora": "Times are Portugal mainland time.",
+   "mostrar": "Show",
+   "todos": "All events",
+   "grupo_temas": "Themes",
+   "grupo_tipos": "Types",
+   "adicionar": "Add to my calendar",
+   "baixar": "Download event (.ics)",
+   "a_decorrer": "Happening now",
+   "sem_resultados": "No events for this choice.",
+   "link_bilhetes": "Tickets",
+   "link_inscricao": "Registration",
+   "link_mais": "More information",
+   "cancelado": "Cancelled",
+   "local": "Venue",
+   "h_aviso_t": "How do I get a reminder before an event?",
+   "h_aviso_html": "<p><strong>iPhone, iPad or Mac:</strong> before subscribing, choose the reminder (1 day or 1 week before each event). Calendar usually removes reminders when subscribing: turn off “Remove Alerts” in that calendar's settings.</p><p><strong>Google and Android:</strong> after subscribing, open Google Calendar settings, choose the calendar and, under “Event notifications”, add the reminder (for example, 1 week). It applies to every event in that calendar.</p><p><strong>Outlook and other apps:</strong> subscribed calendars do not allow reminders. In “Upcoming events”, tap “Add to my calendar”: the event becomes yours and you can choose the reminder.</p>",
+   "aviso_rotulo": "Reminder before each event",
+   "aviso_0": "No reminder",
+   "aviso_1d": "1 day before",
+   "aviso_1s": "1 week before",
+   "dica_aviso_apple": "If the reminder does not appear, turn off “Remove Alerts” in this calendar's settings.",
+   "dica_aviso_google": "For reminders, after subscribing open Google Calendar settings, choose this calendar and, under “Event notifications”, add for example 1 week.",
+   "dica_aviso_outlook": "Outlook does not allow reminders on subscribed calendars. Use “Add to my calendar” in Upcoming events instead."
   },
   "es": {
    "nome": "Español",
@@ -281,13 +339,13 @@
    "h_tema_t": "¿Cómo se eligen el tema y el tipo?",
    "h_tema_html": "<p>Automáticamente, a partir del título y la descripción de cada evento. Cada evento tiene un solo tema y un solo tipo y está siempre en la agenda completa. En casos puntuales, la clasificación puede no ser la más adecuada.</p>",
    "h_lingua_t": "¿En qué idioma están los eventos?",
-   "h_lingua_html": "<p>La página y los nombres de los calendarios y categorías están en el idioma elegido. El título y la descripción de cada evento están en portugués, como en la web del municipio.</p>",
+   "h_lingua_html": "<p>La página y los nombres de los calendarios y categorías están en el idioma elegido. El título y la descripción de cada evento están en portugués, como en la web del municipio. Las fechas y horas siguen el formato de su teléfono.</p><p>Un calendario ya suscrito no cambia de idioma: para cambiarlo, elimínelo y vuelva a suscribirse en esta página, en el idioma que quiera.</p>",
    "h_freq_t": "¿Con qué frecuencia se actualiza?",
    "h_freq_html": "<p>La agenda se lee de la web del municipio cada 4 horas. Cada aplicación decide cuándo vuelve a leer el calendario: puede tardar unas horas y, en Google Calendar, hasta un día.</p>",
    "h_sair_t": "Cómo dejar de recibirla",
    "h_sair_html": "<p>Elimine el calendario suscrito en los ajustes de la aplicación. Los eventos desaparecen de inmediato.</p>",
    "rodape_html": "Los eventos proceden de la <a href=\"{fonte}\">agenda publicada en cm-pvarzim.pt</a>. Compruebe fechas, horarios y condiciones de acceso en la página de cada evento (el enlace está en las notas del evento).",
-   "rodape2": "Esta página no usa cookies ni estadísticas.",
+   "rodape2": "Esta página no usa cookies ni estadísticas. El idioma y el tamaño de letra elegidos se guardan solo en este navegador.",
    "ver_em": "Ver esta página en español",
    "fechar": "Cerrar",
    "cal_geral": "Agenda Municipal de Póvoa de Varzim",
@@ -307,17 +365,25 @@
      "Deporte",
      "Pruebas, torneos y actividad física"
     ],
-    "ambiente-mobilidade": [
-     "Medio ambiente y movilidad",
-     "Naturaleza, clima, energía y transporte"
+    "ambiente": [
+     "Medio ambiente",
+     "Naturaleza, clima, energía, agua, residuos y reciclaje"
     ],
-    "turismo-economia": [
-     "Turismo y economía",
-     "Turismo, gastronomía, comercio, empresas y empleo"
+    "mobilidade-transportes": [
+     "Movilidad y transporte",
+     "Transporte público, bicicleta, ir a pie y seguridad vial"
     ],
-    "comunidade-cidadania": [
-     "Comunidad y ciudadanía",
-     "Salud, educación, familia, juventud y vida municipal"
+    "turismo": [
+     "Turismo",
+     "Turismo, gastronomía, vinos, artesanía y promoción de Póvoa"
+    ],
+    "economia": [
+     "Economía",
+     "Comercio, empresas, empleo, formación y mercados"
+    ],
+    "cidadania": [
+     "Ciudadanía",
+     "Salud, educación, familia, juventud, inclusión y vida municipal"
     ]
    },
    "tipos": {
@@ -369,7 +435,32 @@
      "Conmemoraciones y ceremonias",
      "Días conmemorativos, ceremonias, galas, homenajes y sesiones solemnes"
     ]
-   }
+   },
+   "prox_titulo": "Próximos eventos",
+   "prox_intro": "Añada un evento a su calendario y elija el aviso que quiera, por ejemplo una semana antes.",
+   "nota_hora": "Horas de Portugal continental.",
+   "mostrar": "Mostrar",
+   "todos": "Todos los eventos",
+   "grupo_temas": "Temas",
+   "grupo_tipos": "Tipos",
+   "adicionar": "Añadir a mi calendario",
+   "baixar": "Descargar evento (.ics)",
+   "a_decorrer": "En curso",
+   "sem_resultados": "No hay eventos con esta selección.",
+   "link_bilhetes": "Entradas",
+   "link_inscricao": "Inscripción",
+   "link_mais": "Más información",
+   "cancelado": "Cancelado",
+   "local": "Lugar",
+   "h_aviso_t": "¿Cómo recibir un aviso antes de un evento?",
+   "h_aviso_html": "<p><strong>iPhone, iPad o Mac:</strong> antes de suscribirse, elija el aviso (1 día o 1 semana antes de cada evento). Calendario suele eliminar los avisos al suscribirse: desactive «Eliminar alertas» en los ajustes de ese calendario.</p><p><strong>Google y Android:</strong> después de suscribirse, abra los ajustes de Google Calendar, elija el calendario y, en «Notificaciones de eventos», añada el aviso (por ejemplo, 1 semana). Se aplica a todos los eventos de ese calendario.</p><p><strong>Outlook y otras aplicaciones:</strong> los calendarios suscritos no permiten avisos. En «Próximos eventos», pulse «Añadir a mi calendario»: el evento pasa a ser suyo y puede elegir el aviso.</p>",
+   "aviso_rotulo": "Aviso antes de cada evento",
+   "aviso_0": "Sin aviso",
+   "aviso_1d": "1 día antes",
+   "aviso_1s": "1 semana antes",
+   "dica_aviso_apple": "Si el aviso no aparece, desactive «Eliminar alertas» en los ajustes de este calendario.",
+   "dica_aviso_google": "Para recibir avisos, después de suscribirse abra los ajustes de Google Calendar, elija este calendario y, en «Notificaciones de eventos», añada por ejemplo 1 semana.",
+   "dica_aviso_outlook": "Outlook no permite avisos en calendarios suscritos. Para ello, use «Añadir a mi calendario» en Próximos eventos."
   },
   "it": {
    "nome": "Italiano",
@@ -424,13 +515,13 @@
    "h_tema_t": "Come vengono scelti il tema e il tipo?",
    "h_tema_html": "<p>Automaticamente, dal titolo e dalla descrizione di ogni evento. Ogni evento ha un solo tema e un solo tipo ed è sempre nell'agenda completa. In alcuni casi la classificazione potrebbe non essere la più adatta.</p>",
    "h_lingua_t": "In che lingua sono gli eventi?",
-   "h_lingua_html": "<p>La pagina e i nomi dei calendari e delle categorie sono nella lingua scelta. Il titolo e la descrizione di ogni evento restano in portoghese, come sul sito del comune.</p>",
+   "h_lingua_html": "<p>La pagina e i nomi dei calendari e delle categorie sono nella lingua scelta. Il titolo e la descrizione di ogni evento restano in portoghese, come sul sito del comune. Date e orari seguono il formato del tuo telefono.</p><p>Un calendario già sottoscritto non cambia lingua: per cambiarla, eliminalo e iscriviti di nuovo da questa pagina nella lingua che preferisci.</p>",
    "h_freq_t": "Ogni quanto viene aggiornata?",
    "h_freq_html": "<p>L'agenda viene letta dal sito del comune ogni 4 ore. Ogni app decide quando rileggere il calendario: possono servire alcune ore e, in Google Calendar, fino a un giorno.</p>",
    "h_sair_t": "Come annullare l'iscrizione",
    "h_sair_html": "<p>Elimina il calendario sottoscritto nelle impostazioni dell'app. Gli eventi scompaiono subito.</p>",
    "rodape_html": "Gli eventi provengono dall'<a href=\"{fonte}\">agenda pubblicata su cm-pvarzim.pt</a>. Verifica date, orari e condizioni di accesso sulla pagina di ogni evento (il link è nelle note dell'evento).",
-   "rodape2": "Questa pagina non usa cookie né statistiche.",
+   "rodape2": "Questa pagina non usa cookie né statistiche. La lingua e la dimensione del testo scelte restano salvate solo in questo browser.",
    "ver_em": "Vedi questa pagina in italiano",
    "fechar": "Chiudi",
    "cal_geral": "Agenda municipale di Póvoa de Varzim",
@@ -450,17 +541,25 @@
      "Sport",
      "Gare, tornei e attività fisica"
     ],
-    "ambiente-mobilidade": [
-     "Ambiente e mobilità",
-     "Natura, clima, energia e trasporti"
+    "ambiente": [
+     "Ambiente",
+     "Natura, clima, energia, acqua, rifiuti e riciclo"
     ],
-    "turismo-economia": [
-     "Turismo ed economia",
-     "Turismo, gastronomia, commercio, imprese e lavoro"
+    "mobilidade-transportes": [
+     "Mobilità e trasporti",
+     "Trasporto pubblico, bicicletta, a piedi e sicurezza stradale"
     ],
-    "comunidade-cidadania": [
-     "Comunità e cittadinanza",
-     "Salute, istruzione, famiglia, giovani e vita cittadina"
+    "turismo": [
+     "Turismo",
+     "Turismo, gastronomia, vini, artigianato e promozione di Póvoa"
+    ],
+    "economia": [
+     "Economia",
+     "Commercio, imprese, lavoro, formazione e mercati"
+    ],
+    "cidadania": [
+     "Cittadinanza",
+     "Salute, istruzione, famiglia, giovani, inclusione e vita cittadina"
     ]
    },
    "tipos": {
@@ -512,7 +611,32 @@
      "Ricorrenze e cerimonie",
      "Giornate commemorative, cerimonie, gala, omaggi e sedute solenni"
     ]
-   }
+   },
+   "prox_titulo": "Prossimi eventi",
+   "prox_intro": "Aggiungi un evento al tuo calendario e scegli il promemoria che preferisci, ad esempio una settimana prima.",
+   "nota_hora": "Orari del Portogallo continentale.",
+   "mostrar": "Mostra",
+   "todos": "Tutti gli eventi",
+   "grupo_temas": "Temi",
+   "grupo_tipos": "Tipi",
+   "adicionar": "Aggiungi al mio calendario",
+   "baixar": "Scarica evento (.ics)",
+   "a_decorrer": "In corso",
+   "sem_resultados": "Nessun evento per questa scelta.",
+   "link_bilhetes": "Biglietti",
+   "link_inscricao": "Iscrizione",
+   "link_mais": "Maggiori informazioni",
+   "cancelado": "Annullato",
+   "local": "Luogo",
+   "h_aviso_t": "Come ricevere un promemoria prima di un evento?",
+   "h_aviso_html": "<p><strong>iPhone, iPad o Mac:</strong> prima di iscriverti, scegli il promemoria (1 giorno o 1 settimana prima di ogni evento). Calendario di solito rimuove gli avvisi all'iscrizione: disattiva «Rimuovi avvisi» nelle impostazioni di quel calendario.</p><p><strong>Google e Android:</strong> dopo l'iscrizione, apri le impostazioni di Google Calendar, scegli il calendario e, in «Notifiche eventi», aggiungi il promemoria (ad esempio, 1 settimana). Vale per tutti gli eventi di quel calendario.</p><p><strong>Outlook e altre app:</strong> i calendari sottoscritti non consentono promemoria. In «Prossimi eventi», tocca «Aggiungi al mio calendario»: l'evento diventa tuo e puoi scegliere il promemoria.</p>",
+   "aviso_rotulo": "Promemoria prima di ogni evento",
+   "aviso_0": "Nessun promemoria",
+   "aviso_1d": "1 giorno prima",
+   "aviso_1s": "1 settimana prima",
+   "dica_aviso_apple": "Se il promemoria non compare, disattiva «Rimuovi avvisi» nelle impostazioni di questo calendario.",
+   "dica_aviso_google": "Per i promemoria, dopo l'iscrizione apri le impostazioni di Google Calendar, scegli questo calendario e, in «Notifiche eventi», aggiungi ad esempio 1 settimana.",
+   "dica_aviso_outlook": "Outlook non consente promemoria nei calendari sottoscritti. Usa invece «Aggiungi al mio calendario» in Prossimi eventi."
   },
   "fr": {
    "nome": "Français",
@@ -567,13 +691,13 @@
    "h_tema_t": "Comment le thème et le type sont-ils choisis ?",
    "h_tema_html": "<p>Automatiquement, à partir du titre et de la description de chaque événement. Chaque événement a un seul thème et un seul type et figure toujours dans l'agenda complet. Dans certains cas, la classification peut ne pas être la plus adaptée.</p>",
    "h_lingua_t": "En quelle langue sont les événements ?",
-   "h_lingua_html": "<p>La page et les noms des calendriers et des catégories sont dans la langue choisie. Le titre et la description de chaque événement restent en portugais, comme sur le site de la municipalité.</p>",
+   "h_lingua_html": "<p>La page et les noms des calendriers et des catégories sont dans la langue choisie. Le titre et la description de chaque événement restent en portugais, comme sur le site de la municipalité. Les dates et heures suivent le format de votre téléphone.</p><p>Un calendrier déjà abonné ne change pas de langue : pour la changer, supprimez-le et abonnez-vous à nouveau sur cette page, dans la langue voulue.</p>",
    "h_freq_t": "À quelle fréquence est-il mis à jour ?",
    "h_freq_html": "<p>L'agenda est lu sur le site de la municipalité toutes les 4 heures. Chaque application décide quand relire le calendrier : cela peut prendre quelques heures et, dans Google Agenda, jusqu'à un jour.</p>",
    "h_sair_t": "Comment se désabonner",
    "h_sair_html": "<p>Supprimez le calendrier abonné dans les réglages de l'application. Les événements disparaissent immédiatement.</p>",
    "rodape_html": "Les événements proviennent de l'<a href=\"{fonte}\">agenda publié sur cm-pvarzim.pt</a>. Vérifiez les dates, horaires et conditions d'accès sur la page de chaque événement (le lien figure dans les notes de l'événement).",
-   "rodape2": "Cette page n'utilise ni cookies ni statistiques.",
+   "rodape2": "Cette page n'utilise ni cookies ni statistiques. La langue et la taille du texte choisies sont enregistrées uniquement dans ce navigateur.",
    "ver_em": "Voir cette page en français",
    "fechar": "Fermer",
    "cal_geral": "Agenda municipal de Póvoa de Varzim",
@@ -593,17 +717,25 @@
      "Sport",
      "Épreuves, tournois et activité physique"
     ],
-    "ambiente-mobilidade": [
-     "Environnement et mobilité",
-     "Nature, climat, énergie et transports"
+    "ambiente": [
+     "Environnement",
+     "Nature, climat, énergie, eau, déchets et recyclage"
     ],
-    "turismo-economia": [
-     "Tourisme et économie",
-     "Tourisme, gastronomie, commerce, entreprises et emploi"
+    "mobilidade-transportes": [
+     "Mobilité et transports",
+     "Transports publics, vélo, marche et sécurité routière"
     ],
-    "comunidade-cidadania": [
-     "Communauté et citoyenneté",
-     "Santé, éducation, famille, jeunesse et vie municipale"
+    "turismo": [
+     "Tourisme",
+     "Tourisme, gastronomie, vins, artisanat et promotion de Póvoa"
+    ],
+    "economia": [
+     "Économie",
+     "Commerce, entreprises, emploi, formation et marchés"
+    ],
+    "cidadania": [
+     "Citoyenneté",
+     "Santé, éducation, famille, jeunesse, inclusion et vie municipale"
     ]
    },
    "tipos": {
@@ -655,7 +787,32 @@
      "Commémorations et cérémonies",
      "Journées commémoratives, cérémonies, galas, hommages et séances solennelles"
     ]
-   }
+   },
+   "prox_titulo": "Prochains événements",
+   "prox_intro": "Ajoutez un événement à votre calendrier et choisissez le rappel que vous voulez, par exemple une semaine avant.",
+   "nota_hora": "Heures du Portugal continental.",
+   "mostrar": "Afficher",
+   "todos": "Tous les événements",
+   "grupo_temas": "Thèmes",
+   "grupo_tipos": "Types",
+   "adicionar": "Ajouter à mon calendrier",
+   "baixar": "Télécharger l'événement (.ics)",
+   "a_decorrer": "En cours",
+   "sem_resultados": "Aucun événement pour ce choix.",
+   "link_bilhetes": "Billets",
+   "link_inscricao": "Inscription",
+   "link_mais": "Plus d'informations",
+   "cancelado": "Annulé",
+   "local": "Lieu",
+   "h_aviso_t": "Comment recevoir un rappel avant un événement ?",
+   "h_aviso_html": "<p><strong>iPhone, iPad ou Mac :</strong> avant de vous abonner, choisissez le rappel (1 jour ou 1 semaine avant chaque événement). Calendrier supprime souvent les alertes lors de l'abonnement : désactivez « Supprimer les alertes » dans les réglages de ce calendrier.</p><p><strong>Google et Android :</strong> après l'abonnement, ouvrez les paramètres de Google Agenda, choisissez le calendrier et, dans « Notifications d'événements », ajoutez le rappel (par exemple, 1 semaine). Il s'applique à tous les événements de ce calendrier.</p><p><strong>Outlook et autres applications :</strong> les calendriers abonnés ne permettent pas de rappels. Dans « Prochains événements », touchez « Ajouter à mon calendrier » : l'événement devient le vôtre et vous pouvez choisir le rappel.</p>",
+   "aviso_rotulo": "Rappel avant chaque événement",
+   "aviso_0": "Sans rappel",
+   "aviso_1d": "1 jour avant",
+   "aviso_1s": "1 semaine avant",
+   "dica_aviso_apple": "Si le rappel n'apparaît pas, désactivez « Supprimer les alertes » dans les réglages de ce calendrier.",
+   "dica_aviso_google": "Pour avoir des rappels, après l'abonnement ouvrez les paramètres de Google Agenda, choisissez ce calendrier et, dans « Notifications d'événements », ajoutez par exemple 1 semaine.",
+   "dica_aviso_outlook": "Outlook ne permet pas de rappels sur les calendriers abonnés. Utilisez plutôt « Ajouter à mon calendrier » dans Prochains événements."
   },
   "de": {
    "nome": "Deutsch",
@@ -710,13 +867,13 @@
    "h_tema_t": "Wie werden Thema und Art gewählt?",
    "h_tema_html": "<p>Automatisch, anhand von Titel und Beschreibung jeder Veranstaltung. Jede Veranstaltung hat genau ein Thema und eine Art und ist immer im Gesamtkalender. In Einzelfällen passt die Einordnung nicht ganz.</p>",
    "h_lingua_t": "In welcher Sprache sind die Veranstaltungen?",
-   "h_lingua_html": "<p>Die Seite und die Namen der Kalender und Kategorien sind in der gewählten Sprache. Titel und Beschreibung jeder Veranstaltung bleiben auf Portugiesisch, wie auf der Website der Stadt.</p>",
+   "h_lingua_html": "<p>Die Seite und die Namen der Kalender und Kategorien sind in der gewählten Sprache. Titel und Beschreibung jeder Veranstaltung bleiben auf Portugiesisch, wie auf der Website der Stadt. Datum und Uhrzeit folgen dem Format Ihres Telefons.</p><p>Ein bereits abonnierter Kalender wechselt die Sprache nicht: Löschen Sie ihn und abonnieren Sie ihn auf dieser Seite in der gewünschten Sprache neu.</p>",
    "h_freq_t": "Wie oft wird er aktualisiert?",
    "h_freq_html": "<p>Die Veranstaltungen werden alle 4 Stunden von der Website der Stadt gelesen. Jede App entscheidet selbst, wann sie den Kalender neu lädt: Das kann einige Stunden dauern, bei Google Kalender bis zu einem Tag.</p>",
    "h_sair_t": "Abonnement beenden",
    "h_sair_html": "<p>Löschen Sie den abonnierten Kalender in den Einstellungen der App. Die Veranstaltungen verschwinden sofort.</p>",
    "rodape_html": "Die Veranstaltungen stammen aus dem <a href=\"{fonte}\">Veranstaltungskalender auf cm-pvarzim.pt</a>. Prüfen Sie Daten, Uhrzeiten und Zugangsbedingungen auf der Seite jeder Veranstaltung (der Link steht in den Notizen der Veranstaltung).",
-   "rodape2": "Diese Seite verwendet keine Cookies und keine Statistiken.",
+   "rodape2": "Diese Seite verwendet keine Cookies und keine Statistiken. Die gewählte Sprache und Schriftgröße werden nur in diesem Browser gespeichert.",
    "ver_em": "Diese Seite auf Deutsch anzeigen",
    "fechar": "Schließen",
    "cal_geral": "Veranstaltungen der Stadt Póvoa de Varzim",
@@ -736,17 +893,25 @@
      "Sport",
      "Wettkämpfe, Turniere und Bewegung"
     ],
-    "ambiente-mobilidade": [
-     "Umwelt und Mobilität",
-     "Natur, Klima, Energie und Verkehr"
+    "ambiente": [
+     "Umwelt",
+     "Natur, Klima, Energie, Wasser, Abfall und Recycling"
     ],
-    "turismo-economia": [
-     "Tourismus und Wirtschaft",
-     "Tourismus, Gastronomie, Handel, Unternehmen und Arbeit"
+    "mobilidade-transportes": [
+     "Mobilität und Verkehr",
+     "Öffentlicher Verkehr, Radfahren, Zufußgehen und Verkehrssicherheit"
     ],
-    "comunidade-cidadania": [
-     "Gemeinschaft und Bürgerschaft",
-     "Gesundheit, Bildung, Familie, Jugend und Stadtleben"
+    "turismo": [
+     "Tourismus",
+     "Tourismus, Gastronomie, Wein, Handwerk und Werbung für Póvoa"
+    ],
+    "economia": [
+     "Wirtschaft",
+     "Handel, Unternehmen, Arbeit, Weiterbildung und Märkte"
+    ],
+    "cidadania": [
+     "Bürgerschaft",
+     "Gesundheit, Bildung, Familie, Jugend, Inklusion und Stadtleben"
     ]
    },
    "tipos": {
@@ -798,7 +963,32 @@
      "Gedenktage und Zeremonien",
      "Gedenktage, Zeremonien, Galas, Ehrungen und Festsitzungen"
     ]
-   }
+   },
+   "prox_titulo": "Nächste Veranstaltungen",
+   "prox_intro": "Fügen Sie eine Veranstaltung Ihrem Kalender hinzu und wählen Sie die gewünschte Erinnerung, zum Beispiel eine Woche vorher.",
+   "nota_hora": "Uhrzeiten in portugiesischer Festlandzeit.",
+   "mostrar": "Anzeigen",
+   "todos": "Alle Veranstaltungen",
+   "grupo_temas": "Themen",
+   "grupo_tipos": "Arten",
+   "adicionar": "Zu meinem Kalender hinzufügen",
+   "baixar": "Veranstaltung herunterladen (.ics)",
+   "a_decorrer": "Läuft gerade",
+   "sem_resultados": "Keine Veranstaltungen für diese Auswahl.",
+   "link_bilhetes": "Tickets",
+   "link_inscricao": "Anmeldung",
+   "link_mais": "Weitere Informationen",
+   "cancelado": "Abgesagt",
+   "local": "Ort",
+   "h_aviso_t": "Wie erhalte ich eine Erinnerung vor einer Veranstaltung?",
+   "h_aviso_html": "<p><strong>iPhone, iPad oder Mac:</strong> Wählen Sie vor dem Abonnieren die Erinnerung (1 Tag oder 1 Woche vor jeder Veranstaltung). Kalender entfernt Hinweise beim Abonnieren meist: Deaktivieren Sie „Hinweise entfernen“ in den Einstellungen dieses Kalenders.</p><p><strong>Google und Android:</strong> Öffnen Sie nach dem Abonnieren die Einstellungen von Google Kalender, wählen Sie den Kalender und fügen Sie unter „Terminbenachrichtigungen“ die Erinnerung hinzu (z. B. 1 Woche). Sie gilt für alle Veranstaltungen dieses Kalenders.</p><p><strong>Outlook und andere Apps:</strong> Abonnierte Kalender erlauben keine Erinnerungen. Tippen Sie unter „Nächste Veranstaltungen“ auf „Zu meinem Kalender hinzufügen“: Die Veranstaltung gehört dann Ihnen und Sie können die Erinnerung wählen.</p>",
+   "aviso_rotulo": "Erinnerung vor jeder Veranstaltung",
+   "aviso_0": "Keine Erinnerung",
+   "aviso_1d": "1 Tag vorher",
+   "aviso_1s": "1 Woche vorher",
+   "dica_aviso_apple": "Erscheint die Erinnerung nicht, deaktivieren Sie „Hinweise entfernen“ in den Einstellungen dieses Kalenders.",
+   "dica_aviso_google": "Für Erinnerungen öffnen Sie nach dem Abonnieren die Einstellungen von Google Kalender, wählen diesen Kalender und fügen unter „Terminbenachrichtigungen“ z. B. 1 Woche hinzu.",
+   "dica_aviso_outlook": "Outlook erlaubt keine Erinnerungen in abonnierten Kalendern. Nutzen Sie stattdessen „Zu meinem Kalender hinzufügen“ unter Nächste Veranstaltungen."
   },
   "zh": {
    "nome": "中文",
@@ -853,13 +1043,13 @@
    "h_tema_t": "主题和类型是如何确定的？",
    "h_tema_html": "<p>根据每项活动的标题和说明自动确定。每项活动只有一个主题和一个类型，并始终包含在全部活动日历中。个别情况下，分类可能不够准确。</p>",
    "h_lingua_t": "活动使用哪种语言？",
-   "h_lingua_html": "<p>本页面以及日历和分类名称使用您所选的语言。每项活动的标题和说明保留葡萄牙语，与市政府网站一致。</p>",
+   "h_lingua_html": "<p>本页面以及日历和分类名称使用您所选的语言。每项活动的标题和说明保留葡萄牙语，与市政府网站一致。日期和时间按您手机的格式显示。</p><p>已订阅的日历不会更改语言：如需更改，请删除该日历，并在本页面以所需语言重新订阅。</p>",
    "h_freq_t": "多久更新一次？",
    "h_freq_html": "<p>每 4 小时从市政府网站读取一次活动。各应用自行决定何时重新读取日历：可能需要几个小时，Google 日历最长可能需要一天。</p>",
    "h_sair_t": "如何取消订阅",
    "h_sair_html": "<p>在应用设置中删除已订阅的日历，活动会立即消失。</p>",
    "rodape_html": "活动信息来自 <a href=\"{fonte}\">cm-pvarzim.pt 发布的活动日程</a>。请在每项活动的页面上核实日期、时间和入场条件（链接位于活动备注中）。",
-   "rodape2": "本页面不使用 Cookie，也不进行统计。",
+   "rodape2": "本页面不使用 Cookie，也不进行统计。您选择的语言和文字大小仅保存在此浏览器中。",
    "ver_em": "以中文查看此页面",
    "fechar": "关闭",
    "cal_geral": "波武阿-迪瓦尔津市政活动",
@@ -879,17 +1069,25 @@
      "体育",
      "比赛、锦标赛与体育活动"
     ],
-    "ambiente-mobilidade": [
-     "环境与出行",
-     "自然、气候、能源与交通"
+    "ambiente": [
+     "环境",
+     "自然、气候、能源、水、废物与回收"
     ],
-    "turismo-economia": [
-     "旅游与经济",
-     "旅游、美食、商业、企业与就业"
+    "mobilidade-transportes": [
+     "出行与交通",
+     "公共交通、骑行、步行与道路安全"
     ],
-    "comunidade-cidadania": [
-     "社区与公民生活",
-     "健康、教育、家庭、青年与市政生活"
+    "turismo": [
+     "旅游",
+     "旅游、美食、葡萄酒、手工艺与城市推广"
+    ],
+    "economia": [
+     "经济",
+     "商业、企业、就业、培训与市场"
+    ],
+    "cidadania": [
+     "公民生活",
+     "健康、教育、家庭、青年、包容与市政生活"
     ]
    },
    "tipos": {
@@ -941,7 +1139,32 @@
      "纪念与典礼",
      "纪念日、典礼、晚会、致敬与正式会议"
     ]
-   }
+   },
+   "prox_titulo": "即将举行的活动",
+   "prox_intro": "将活动添加到您的日历，并选择所需的提醒时间，例如提前一周。",
+   "nota_hora": "时间为葡萄牙本土时间。",
+   "mostrar": "显示",
+   "todos": "全部活动",
+   "grupo_temas": "主题",
+   "grupo_tipos": "类型",
+   "adicionar": "添加到我的日历",
+   "baixar": "下载活动（.ics）",
+   "a_decorrer": "正在进行",
+   "sem_resultados": "此选项下暂无活动。",
+   "link_bilhetes": "门票",
+   "link_inscricao": "报名",
+   "link_mais": "更多信息",
+   "cancelado": "已取消",
+   "local": "地点",
+   "h_aviso_t": "如何在活动前收到提醒？",
+   "h_aviso_html": "<p><strong>iPhone、iPad 或 Mac：</strong>订阅前请选择提醒（每项活动提前 1 天或 1 周）。“日历”在订阅时通常会移除提醒：请在该日历的设置中关闭“移除提醒”。</p><p><strong>Google 和 Android：</strong>订阅后，打开 Google 日历设置，选择该日历，在“活动通知”中添加提醒（例如提前 1 周）。该设置适用于此日历中的所有活动。</p><p><strong>Outlook 及其他应用：</strong>订阅的日历不允许设置提醒。请在“即将举行的活动”中点按“添加到我的日历”：活动将归您所有，您可以自行选择提醒。</p>",
+   "aviso_rotulo": "每项活动前的提醒",
+   "aviso_0": "不提醒",
+   "aviso_1d": "提前 1 天",
+   "aviso_1s": "提前 1 周",
+   "dica_aviso_apple": "如果没有出现提醒，请在此日历的设置中关闭“移除提醒”。",
+   "dica_aviso_google": "如需提醒，订阅后请打开 Google 日历设置，选择此日历，并在“活动通知”中添加，例如提前 1 周。",
+   "dica_aviso_outlook": "Outlook 不允许为订阅的日历设置提醒。请改用“即将举行的活动”中的“添加到我的日历”。"
   },
   "ja": {
    "nome": "日本語",
@@ -996,13 +1219,13 @@
    "h_tema_t": "テーマと種類はどのように決まりますか？",
    "h_tema_html": "<p>各イベントのタイトルと説明から自動的に決まります。各イベントのテーマと種類はそれぞれ 1 つで、すべてのイベントのカレンダーには必ず含まれます。まれに分類が適切でない場合があります。</p>",
    "h_lingua_t": "イベントは何語で表示されますか？",
-   "h_lingua_html": "<p>このページとカレンダー名・カテゴリ名は選択した言語で表示されます。各イベントのタイトルと説明は、市のウェブサイトと同じくポルトガル語のままです。</p>",
+   "h_lingua_html": "<p>このページとカレンダー名・カテゴリ名は選択した言語で表示されます。各イベントのタイトルと説明は、市のウェブサイトと同じくポルトガル語のままです。日付と時刻はお使いの電話の形式で表示されます。</p><p>購読済みのカレンダーの言語は変わりません。変更するには、カレンダーを削除し、このページで希望の言語を選んで購読し直してください。</p>",
    "h_freq_t": "更新の頻度は？",
    "h_freq_html": "<p>市のウェブサイトから 4 時間ごとにイベントを読み込みます。カレンダーを再読み込みするタイミングは各アプリが決めます。数時間かかることがあり、Google カレンダーでは最大 1 日かかります。</p>",
    "h_sair_t": "購読をやめるには",
    "h_sair_html": "<p>アプリの設定で購読中のカレンダーを削除してください。イベントはすぐに消えます。</p>",
    "rodape_html": "イベント情報は <a href=\"{fonte}\">cm-pvarzim.pt のイベント情報</a> から取得しています。日時や入場条件は各イベントのページでご確認ください（リンクはイベントのメモにあります）。",
-   "rodape2": "このページは Cookie や統計を使用していません。",
+   "rodape2": "このページは Cookie や統計を使用していません。選択した言語と文字サイズはこのブラウザにのみ保存されます。",
    "ver_em": "このページを日本語で表示",
    "fechar": "閉じる",
    "cal_geral": "ポヴォア・デ・ヴァルジン市のイベント",
@@ -1022,17 +1245,25 @@
      "スポーツ",
      "競技、大会、運動"
     ],
-    "ambiente-mobilidade": [
-     "環境・交通",
-     "自然、気候、エネルギー、交通"
+    "ambiente": [
+     "環境",
+     "自然、気候、エネルギー、水、ごみ、リサイクル"
     ],
-    "turismo-economia": [
-     "観光・経済",
-     "観光、食、商業、企業、雇用"
+    "mobilidade-transportes": [
+     "移動・交通",
+     "公共交通、自転車、徒歩、交通安全"
     ],
-    "comunidade-cidadania": [
-     "地域・市民生活",
-     "健康、教育、家族、若者、市政"
+    "turismo": [
+     "観光",
+     "観光、食、ワイン、工芸、ポヴォアの魅力発信"
+    ],
+    "economia": [
+     "経済",
+     "商業、企業、雇用、研修、市場"
+    ],
+    "cidadania": [
+     "市民生活",
+     "健康、教育、家族、若者、インクルージョン、市政"
     ]
    },
    "tipos": {
@@ -1084,7 +1315,32 @@
      "記念行事・式典",
      "記念日、式典、ガラ、表彰、公式会議"
     ]
-   }
+   },
+   "prox_titulo": "今後のイベント",
+   "prox_intro": "イベントをカレンダーに追加し、1 週間前など、お好みの通知を設定してください。",
+   "nota_hora": "時刻はポルトガル本土時間です。",
+   "mostrar": "表示",
+   "todos": "すべてのイベント",
+   "grupo_temas": "テーマ",
+   "grupo_tipos": "種類",
+   "adicionar": "カレンダーに追加",
+   "baixar": "イベントをダウンロード（.ics）",
+   "a_decorrer": "開催中",
+   "sem_resultados": "この条件のイベントはありません。",
+   "link_bilhetes": "チケット",
+   "link_inscricao": "申し込み",
+   "link_mais": "詳細",
+   "cancelado": "中止",
+   "local": "会場",
+   "h_aviso_t": "イベントの前に通知を受け取るには？",
+   "h_aviso_html": "<p><strong>iPhone・iPad・Mac：</strong>購読する前に通知（各イベントの 1 日前または 1 週間前）を選んでください。カレンダーは購読時に通知を削除することが多いため、そのカレンダーの設定で「通知を削除」をオフにしてください。</p><p><strong>Google・Android：</strong>購読後、Google カレンダーの設定でカレンダーを選び、「予定の通知」で通知（例：1 週間前）を追加してください。そのカレンダーのすべてのイベントに適用されます。</p><p><strong>Outlook・その他のアプリ：</strong>購読カレンダーには通知を設定できません。「今後のイベント」で「カレンダーに追加」をタップすると、イベントはあなたの予定になり、通知を選べます。</p>",
+   "aviso_rotulo": "各イベント前の通知",
+   "aviso_0": "通知なし",
+   "aviso_1d": "1 日前",
+   "aviso_1s": "1 週間前",
+   "dica_aviso_apple": "通知が表示されない場合は、このカレンダーの設定で「通知を削除」をオフにしてください。",
+   "dica_aviso_google": "通知を受け取るには、購読後に Google カレンダーの設定でこのカレンダーを選び、「予定の通知」で 1 週間前などを追加してください。",
+   "dica_aviso_outlook": "Outlook では購読カレンダーに通知を設定できません。「今後のイベント」の「カレンダーに追加」をご利用ください。"
   },
   "nl": {
    "nome": "Nederlands",
@@ -1139,13 +1395,13 @@
    "h_tema_t": "Hoe worden thema en soort gekozen?",
    "h_tema_html": "<p>Automatisch, op basis van de titel en beschrijving van elk evenement. Elk evenement heeft één thema en één soort en staat altijd in de volledige agenda. Soms past de indeling niet helemaal.</p>",
    "h_lingua_t": "In welke taal staan de evenementen?",
-   "h_lingua_html": "<p>De pagina en de namen van agenda's en categorieën zijn in de gekozen taal. Titel en beschrijving van elk evenement blijven in het Portugees, zoals op de website van de gemeente.</p>",
+   "h_lingua_html": "<p>De pagina en de namen van agenda's en categorieën zijn in de gekozen taal. Titel en beschrijving van elk evenement blijven in het Portugees, zoals op de website van de gemeente. Datum en tijd volgen de notatie van uw telefoon.</p><p>Een agenda waarop u al geabonneerd bent, verandert niet van taal: verwijder hem en abonneer u opnieuw op deze pagina, in de gewenste taal.</p>",
    "h_freq_t": "Hoe vaak wordt hij bijgewerkt?",
    "h_freq_html": "<p>De evenementen worden elke 4 uur van de website van de gemeente gelezen. Elke app bepaalt zelf wanneer de agenda opnieuw wordt gelezen: dat kan enkele uren duren, bij Google Agenda tot een dag.</p>",
    "h_sair_t": "Abonnement opzeggen",
    "h_sair_html": "<p>Verwijder de geabonneerde agenda in de instellingen van de app. De evenementen verdwijnen meteen.</p>",
    "rodape_html": "De evenementen komen uit de <a href=\"{fonte}\">evenementenagenda op cm-pvarzim.pt</a>. Controleer data, tijden en toegangsvoorwaarden op de pagina van elk evenement (de link staat in de notities).",
-   "rodape2": "Deze pagina gebruikt geen cookies en geen statistieken.",
+   "rodape2": "Deze pagina gebruikt geen cookies en geen statistieken. De gekozen taal en tekstgrootte worden alleen in deze browser bewaard.",
    "ver_em": "Bekijk deze pagina in het Nederlands",
    "fechar": "Sluiten",
    "cal_geral": "Gemeentelijke evenementen Póvoa de Varzim",
@@ -1165,17 +1421,25 @@
      "Sport",
      "Wedstrijden, toernooien en beweging"
     ],
-    "ambiente-mobilidade": [
-     "Milieu en mobiliteit",
-     "Natuur, klimaat, energie en vervoer"
+    "ambiente": [
+     "Milieu",
+     "Natuur, klimaat, energie, water, afval en recycling"
     ],
-    "turismo-economia": [
-     "Toerisme en economie",
-     "Toerisme, eten, winkels, bedrijven en werk"
+    "mobilidade-transportes": [
+     "Mobiliteit en vervoer",
+     "Openbaar vervoer, fietsen, lopen en verkeersveiligheid"
     ],
-    "comunidade-cidadania": [
-     "Gemeenschap en burgerschap",
-     "Gezondheid, onderwijs, gezin, jeugd en gemeenteleven"
+    "turismo": [
+     "Toerisme",
+     "Toerisme, eten, wijn, ambacht en promotie van Póvoa"
+    ],
+    "economia": [
+     "Economie",
+     "Handel, bedrijven, werk, opleiding en markten"
+    ],
+    "cidadania": [
+     "Burgerschap",
+     "Gezondheid, onderwijs, gezin, jeugd, inclusie en gemeenteleven"
     ]
    },
    "tipos": {
@@ -1227,7 +1491,32 @@
      "Herdenkingen en ceremonies",
      "Herdenkingsdagen, ceremonies, gala's, eerbetonen en plechtige zittingen"
     ]
-   }
+   },
+   "prox_titulo": "Komende evenementen",
+   "prox_intro": "Voeg een evenement toe aan uw agenda en kies de herinnering die u wilt, bijvoorbeeld een week vooraf.",
+   "nota_hora": "Tijden in Portugese tijd (vasteland).",
+   "mostrar": "Tonen",
+   "todos": "Alle evenementen",
+   "grupo_temas": "Thema's",
+   "grupo_tipos": "Soorten",
+   "adicionar": "Aan mijn agenda toevoegen",
+   "baixar": "Evenement downloaden (.ics)",
+   "a_decorrer": "Nu bezig",
+   "sem_resultados": "Geen evenementen voor deze keuze.",
+   "link_bilhetes": "Kaartjes",
+   "link_inscricao": "Inschrijving",
+   "link_mais": "Meer informatie",
+   "cancelado": "Geannuleerd",
+   "local": "Locatie",
+   "h_aviso_t": "Hoe krijg ik een herinnering vóór een evenement?",
+   "h_aviso_html": "<p><strong>iPhone, iPad of Mac:</strong> kies vóór het abonneren de herinnering (1 dag of 1 week vóór elk evenement). Agenda verwijdert meldingen meestal bij het abonneren: zet ‘Verwijder meldingen’ uit in de instellingen van die agenda.</p><p><strong>Google en Android:</strong> open na het abonneren de instellingen van Google Agenda, kies de agenda en voeg bij ‘Afspraakmeldingen’ de herinnering toe (bijvoorbeeld 1 week). Dit geldt voor alle evenementen van die agenda.</p><p><strong>Outlook en andere apps:</strong> geabonneerde agenda's staan geen herinneringen toe. Tik bij ‘Komende evenementen’ op ‘Aan mijn agenda toevoegen’: het evenement wordt van u en u kiest zelf de herinnering.</p>",
+   "aviso_rotulo": "Herinnering vóór elk evenement",
+   "aviso_0": "Geen herinnering",
+   "aviso_1d": "1 dag vooraf",
+   "aviso_1s": "1 week vooraf",
+   "dica_aviso_apple": "Verschijnt de herinnering niet, zet dan ‘Verwijder meldingen’ uit in de instellingen van deze agenda.",
+   "dica_aviso_google": "Voor herinneringen opent u na het abonneren de instellingen van Google Agenda, kiest u deze agenda en voegt u bij ‘Afspraakmeldingen’ bijvoorbeeld 1 week toe.",
+   "dica_aviso_outlook": "Outlook staat geen herinneringen toe in geabonneerde agenda's. Gebruik in plaats daarvan ‘Aan mijn agenda toevoegen’ bij Komende evenementen."
   },
   "pl": {
    "nome": "Polski",
@@ -1282,13 +1571,13 @@
    "h_tema_t": "Jak wybierany jest temat i rodzaj?",
    "h_tema_html": "<p>Automatycznie, na podstawie tytułu i opisu każdego wydarzenia. Każde wydarzenie ma jeden temat i jeden rodzaj i zawsze jest w pełnym kalendarzu. W pojedynczych przypadkach klasyfikacja może nie być najtrafniejsza.</p>",
    "h_lingua_t": "W jakim języku są wydarzenia?",
-   "h_lingua_html": "<p>Strona oraz nazwy kalendarzy i kategorii są w wybranym języku. Tytuł i opis każdego wydarzenia pozostają po portugalsku, tak jak na stronie gminy.</p>",
+   "h_lingua_html": "<p>Strona oraz nazwy kalendarzy i kategorii są w wybranym języku. Tytuł i opis każdego wydarzenia pozostają po portugalsku, tak jak na stronie gminy. Daty i godziny są w formacie Twojego telefonu.</p><p>Już subskrybowany kalendarz nie zmienia języka: aby go zmienić, usuń kalendarz i zasubskrybuj go ponownie na tej stronie w wybranym języku.</p>",
    "h_freq_t": "Jak często jest aktualizowany?",
    "h_freq_html": "<p>Wydarzenia są pobierane ze strony gminy co 4 godziny. Każda aplikacja sama decyduje, kiedy ponownie odczytać kalendarz: może to potrwać kilka godzin, a w Kalendarzu Google do jednego dnia.</p>",
    "h_sair_t": "Jak zrezygnować",
    "h_sair_html": "<p>Usuń subskrybowany kalendarz w ustawieniach aplikacji. Wydarzenia znikną od razu.</p>",
    "rodape_html": "Wydarzenia pochodzą z <a href=\"{fonte}\">kalendarza wydarzeń na cm-pvarzim.pt</a>. Sprawdź daty, godziny i warunki wstępu na stronie każdego wydarzenia (link jest w notatkach wydarzenia).",
-   "rodape2": "Ta strona nie używa plików cookie ani statystyk.",
+   "rodape2": "Ta strona nie używa plików cookie ani statystyk. Wybrany język i rozmiar tekstu są zapisywane tylko w tej przeglądarce.",
    "ver_em": "Zobacz tę stronę po polsku",
    "fechar": "Zamknij",
    "cal_geral": "Wydarzenia miejskie Póvoa de Varzim",
@@ -1308,17 +1597,25 @@
      "Sport",
      "Zawody, turnieje i aktywność fizyczna"
     ],
-    "ambiente-mobilidade": [
-     "Środowisko i mobilność",
-     "Przyroda, klimat, energia i transport"
+    "ambiente": [
+     "Środowisko",
+     "Przyroda, klimat, energia, woda, odpady i recykling"
     ],
-    "turismo-economia": [
-     "Turystyka i gospodarka",
-     "Turystyka, gastronomia, handel, firmy i praca"
+    "mobilidade-transportes": [
+     "Mobilność i transport",
+     "Transport publiczny, rower, chodzenie pieszo i bezpieczeństwo drogowe"
     ],
-    "comunidade-cidadania": [
-     "Społeczność i obywatelstwo",
-     "Zdrowie, edukacja, rodzina, młodzież i życie gminy"
+    "turismo": [
+     "Turystyka",
+     "Turystyka, gastronomia, wino, rękodzieło i promocja Póvoa"
+    ],
+    "economia": [
+     "Gospodarka",
+     "Handel, firmy, praca, szkolenia i targi"
+    ],
+    "cidadania": [
+     "Obywatelstwo",
+     "Zdrowie, edukacja, rodzina, młodzież, integracja i życie gminy"
     ]
    },
    "tipos": {
@@ -1370,7 +1667,32 @@
      "Obchody i uroczystości",
      "Dni pamięci, uroczystości, gale, hołdy i uroczyste sesje"
     ]
-   }
+   },
+   "prox_titulo": "Nadchodzące wydarzenia",
+   "prox_intro": "Dodaj wydarzenie do swojego kalendarza i wybierz przypomnienie, na przykład tydzień wcześniej.",
+   "nota_hora": "Godziny według czasu Portugalii kontynentalnej.",
+   "mostrar": "Pokaż",
+   "todos": "Wszystkie wydarzenia",
+   "grupo_temas": "Tematy",
+   "grupo_tipos": "Rodzaje",
+   "adicionar": "Dodaj do mojego kalendarza",
+   "baixar": "Pobierz wydarzenie (.ics)",
+   "a_decorrer": "W trakcie",
+   "sem_resultados": "Brak wydarzeń dla tego wyboru.",
+   "link_bilhetes": "Bilety",
+   "link_inscricao": "Zapisy",
+   "link_mais": "Więcej informacji",
+   "cancelado": "Odwołane",
+   "local": "Miejsce",
+   "h_aviso_t": "Jak otrzymać przypomnienie przed wydarzeniem?",
+   "h_aviso_html": "<p><strong>iPhone, iPad lub Mac:</strong> przed subskrypcją wybierz przypomnienie (1 dzień lub 1 tydzień przed każdym wydarzeniem). Kalendarz zwykle usuwa alerty przy subskrypcji: wyłącz „Usuń alerty” w ustawieniach tego kalendarza.</p><p><strong>Google i Android:</strong> po subskrypcji otwórz ustawienia Kalendarza Google, wybierz kalendarz i w „Powiadomieniach o wydarzeniach” dodaj przypomnienie (np. 1 tydzień). Dotyczy wszystkich wydarzeń w tym kalendarzu.</p><p><strong>Outlook i inne aplikacje:</strong> subskrybowane kalendarze nie pozwalają na przypomnienia. W „Nadchodzących wydarzeniach” dotknij „Dodaj do mojego kalendarza”: wydarzenie stanie się Twoje i wybierzesz przypomnienie.</p>",
+   "aviso_rotulo": "Przypomnienie przed każdym wydarzeniem",
+   "aviso_0": "Bez przypomnienia",
+   "aviso_1d": "1 dzień wcześniej",
+   "aviso_1s": "1 tydzień wcześniej",
+   "dica_aviso_apple": "Jeśli przypomnienie się nie pojawia, wyłącz „Usuń alerty” w ustawieniach tego kalendarza.",
+   "dica_aviso_google": "Aby mieć przypomnienia, po subskrypcji otwórz ustawienia Kalendarza Google, wybierz ten kalendarz i w „Powiadomieniach o wydarzeniach” dodaj np. 1 tydzień.",
+   "dica_aviso_outlook": "Outlook nie pozwala na przypomnienia w subskrybowanych kalendarzach. Użyj zamiast tego „Dodaj do mojego kalendarza” w Nadchodzących wydarzeniach."
   }
  }
 }

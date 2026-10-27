@@ -6,8 +6,14 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-{{HASH_SCRIPT}}'; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="{{T:descricao_meta}}">
-<meta name="theme-color" content="#0f4c6b">
+<meta name="theme-color" content="#ffffff">
 <title>{{T:titulo_pagina}}</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{T:titulo_pagina}}">
+<meta property="og:description" content="{{T:descricao_meta}}">
+<meta property="og:url" content="{{URL_PAGINA}}">
+<link rel="canonical" href="{{URL_PAGINA}}">
+{{ALTERNATIVAS}}
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='5' width='26' height='24' rx='4' fill='%230f4c6b'/%3E%3Crect x='3' y='5' width='26' height='7' rx='3' fill='%230a3a52'/%3E%3Cpath d='M7 22c3-3 6-3 9 0s6 3 9 0' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
   @font-face { font-family: "CMPV"; src: url("{{RAIZ}}fontes/cmpv-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
@@ -39,7 +45,7 @@
       --linha: #2a4553;
       --trilho: #1c3340;
       --mar-claro: #16323f;
-      --botao: #2b7fa9;
+      --botao: #22698f;
       --sombra: none;
     }
   }
@@ -62,25 +68,28 @@
   .bandeira { width: 1.5em; height: 1em; flex: none; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .18); }
 
   /* Topo */
-  .topo { background: var(--mar); color: #fff; padding-top: max(.9rem, env(safe-area-inset-top)); }
+  /* Topo branco: o logótipo da Câmara fica sobre branco, com a sua forma, sem caixa à volta */
+  .topo { background: #fff; color: #0a3a52; padding-top: max(.9rem, env(safe-area-inset-top)); }
   .topo-grelha { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .9rem 1.2rem; }
-  .marca { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem .9rem; min-width: 0; }
+  .marca { display: flex; align-items: center; gap: .6rem .9rem; min-width: 0; }
   .marca > div { min-width: 0; }
-  .logo-cm { flex: none; display: block; background: #fff; border-radius: 10px; padding: .35rem .5rem; line-height: 0; }
-  .logo-cm img { display: block; height: 3.3rem; width: auto; }
+  .logo-cm { flex: none; display: block; line-height: 0; }
+  .logo-cm img { display: block; height: 64px; width: auto; }
+  @media (max-width: 40rem) { .marca { gap: .6rem; } .logo-cm img { height: 48px; } }
   .topo h1 { margin: 0; font-size: clamp(1.7rem, 7vw, 2.7rem); overflow-wrap: anywhere; hyphens: auto; line-height: 1; font-weight: 700; letter-spacing: .01em; }
-  .barra-titulo { color: var(--sol); margin: 0 .06em; }
-  .topo .sub { margin-top: .35rem; color: #dcebf2; font-size: clamp(1.05rem, 3vw, 1.3rem); line-height: 1.3; }
-  .topo .sub strong { color: var(--sol); font-weight: 700; }
-  .onda { display: block; width: 100%; height: 20px; margin-top: .9rem; }
-  .onda path { fill: var(--fundo); }
+  .topo h1 { color: #0f4c6b; }
+  .barra-titulo { color: #e07b00; margin: 0 .06em; }
+  .topo .sub { margin-top: .35rem; color: #2a3d47; font-size: clamp(1.05rem, 3vw, 1.3rem); line-height: 1.3; }
+  .topo .sub strong { color: #b4480b; font-weight: 700; }
+  .onda { display: block; width: 100%; height: 18px; margin-top: .9rem; background: #fff; }
+  .onda path { fill: #0f4c6b; }
 
   .ferramentas { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-left: auto; }
   .linguas { position: relative; }
   .linguas summary {
     list-style: none; display: flex; align-items: center; gap: .45rem; cursor: pointer;
-    min-height: 2.75rem; padding: .3rem .75rem; border: 1.5px solid rgba(255, 255, 255, .55); border-radius: 9px;
-    font-weight: 700; font-size: .95rem; color: #fff;
+    min-height: 2.75rem; padding: .3rem .75rem; border: 1.5px solid #b9c8d0; border-radius: 9px;
+    font-weight: 700; font-size: .95rem; color: #14242d; background: #fff;
   }
   .linguas summary::-webkit-details-marker { display: none; }
   .linguas summary::after { content: ""; width: .45em; height: .45em; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); margin-left: .15rem; }
@@ -95,10 +104,10 @@
   .js .letra { display: flex; }
   .letra button {
     min-width: 2.75rem; min-height: 2.75rem; padding: 0 .5rem; border-radius: 9px; cursor: pointer;
-    background: transparent; color: #fff; border: 1.5px solid rgba(255, 255, 255, .55); font: inherit; font-weight: 700; font-size: 1rem;
+    background: #fff; color: #14242d; border: 1.5px solid #b9c8d0; font: inherit; font-weight: 700; font-size: 1rem;
   }
   .letra button[data-letra="1"] { font-size: 1.2rem; }
-  .linguas summary:hover, .letra button:hover { background: rgba(255, 255, 255, .12); }
+  .linguas summary:hover, .letra button:hover { background: #eaf2f6; }
 
   .sugestao { background: var(--mar-claro); border-bottom: 1px solid var(--linha); }
   .sugestao .largura { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding-top: .4rem; padding-bottom: .4rem; }
@@ -132,6 +141,9 @@
   #sis-apple:checked ~ .seletor label[for="sis-apple"],
   #sis-android:checked ~ .seletor label[for="sis-android"],
   #sis-outro:checked ~ .seletor label[for="sis-outro"],
+  #av-0:checked ~ .seletor label[for="av-0"],
+  #av-1d:checked ~ .seletor label[for="av-1d"],
+  #av-1s:checked ~ .seletor label[for="av-1s"],
   #vista-tema:checked ~ main label[for="vista-tema"],
   #vista-tipo:checked ~ main label[for="vista-tipo"] { background: var(--botao); color: #fff; box-shadow: var(--sombra); }
   #sis-google:focus-visible ~ .seletor label[for="sis-google"],
@@ -139,6 +151,9 @@
   #sis-apple:focus-visible ~ .seletor label[for="sis-apple"],
   #sis-android:focus-visible ~ .seletor label[for="sis-android"],
   #sis-outro:focus-visible ~ .seletor label[for="sis-outro"],
+  #av-0:focus-visible ~ .seletor label[for="av-0"],
+  #av-1d:focus-visible ~ .seletor label[for="av-1d"],
+  #av-1s:focus-visible ~ .seletor label[for="av-1s"],
   #vista-tema:focus-visible ~ main label[for="vista-tema"],
   #vista-tipo:focus-visible ~ main label[for="vista-tipo"] { outline: 3px solid var(--foco); outline-offset: 1px; }
   .dica { display: none; margin-top: .45rem; font-size: .95rem; color: var(--cinza); }
@@ -146,13 +161,24 @@
   #sis-outlook:checked ~ .seletor .dica-outlook,
   #sis-apple:checked ~ .seletor .dica-apple,
   #sis-android:checked ~ .seletor .dica-android,
-  #sis-outro:checked ~ .seletor .dica-outro { display: block; }
+  #sis-outro:checked ~ .seletor .dica-outro,
+  #sis-google:checked ~ .seletor .dica-aviso-google,
+  #sis-android:checked ~ .seletor .dica-aviso-google,
+  #sis-outlook:checked ~ .seletor .dica-aviso-outlook { display: block; }
+  .aviso-escolha { display: none; margin-top: .7rem; }
+  #sis-apple:checked ~ .seletor .aviso-escolha { display: block; }
+  .aviso-escolha .pergunta { font-size: 1rem; }
+  .aviso-escolha .segmentos { max-width: 34rem; grid-auto-flow: column; grid-template-columns: none; }
+  .aviso-escolha .dica { display: block; }
+  .seletor .aviso-escolha .segmentos label:last-child { grid-column: auto; }
 
   /* Botões: só aparece o do calendário escolhido */
   .so-google, .so-outlook, .so-apple, .so-android, .so-outro { display: none !important; }
   #sis-google:checked ~ main .so-google,
   #sis-outlook:checked ~ main .so-outlook,
-  #sis-apple:checked ~ main .so-apple,
+  #sis-apple:checked ~ #av-0:checked ~ main .so-apple.av-0,
+  #sis-apple:checked ~ #av-1d:checked ~ main .so-apple.av-aviso-1d,
+  #sis-apple:checked ~ #av-1s:checked ~ main .so-apple.av-aviso-1s,
   #sis-android:checked ~ main .so-android,
   #sis-outro:checked ~ main .so-outro { display: flex !important; }
 
@@ -215,6 +241,44 @@
 
   .aviso { margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
 
+  /* Próximos eventos */
+  .proximos { margin-top: 2rem; padding-top: 1.4rem; position: relative; }
+  .proximos::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
+  .proximos h2 { margin: 0; font-size: 1.35rem; }
+  .proximos .intro { margin-top: .3rem; }
+  .proximos .intro .nota { color: var(--cinza); font-size: .92rem; }
+  .filtro { display: none; align-items: center; gap: .6rem; flex-wrap: wrap; margin-top: .9rem; }
+  .js .filtro { display: flex; }
+  .filtro label { font-weight: 700; }
+  .filtro select {
+    min-height: 2.9rem; min-width: min(18rem, 100%); padding: .35rem .7rem; font: inherit; color: var(--tinta);
+    background: var(--cartao); border: 1.5px solid var(--linha); border-radius: 9px;
+  }
+  .mes-grupo h3.mes { margin: 1.3rem 0 .5rem; font-size: 1.1rem; color: var(--cinza); }
+  .eventos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(19rem, 100%), 1fr)); gap: .7rem; }
+  .evento {
+    display: flex; flex-direction: column; gap: .3rem;
+    background: var(--cartao); border: 1px solid var(--linha); border-radius: 12px; padding: .8rem .9rem .85rem;
+    box-shadow: var(--sombra); border-left: 6px solid var(--cor);
+  }
+  .evento .quando { font-weight: 700; color: var(--mar); font-variant-numeric: lining-nums tabular-nums; }
+  @media (prefers-color-scheme: dark) { .evento .quando { color: #8fc6e3; } }
+  .evento h4 { margin: 0; font-size: 1.08rem; line-height: 1.3; }
+  .evento .onde { display: flex; gap: .35rem; align-items: flex-start; color: var(--cinza); font-size: .95rem; }
+  .evento .onde svg { width: 1.05em; height: 1.05em; flex: none; margin-top: .2em; }
+  .evento .etiquetas { font-size: .88rem; color: var(--cinza); }
+  .evento .ligacoes { display: flex; flex-wrap: wrap; gap: .3rem 1rem; font-size: .95rem; }
+  .evento .ligacoes a { font-weight: 700; color: var(--mar); text-underline-offset: 3px; min-height: 2.75rem; display: inline-flex; align-items: center; }
+  @media (prefers-color-scheme: dark) { .evento .ligacoes a { color: #8fc6e3; } }
+  .acoes-evento { display: flex; margin-top: auto; padding-top: .3rem; }
+  .botao-sec { width: 100%; background: var(--cartao); color: var(--mar); border: 1.5px solid var(--mar); }
+  .botao-sec:hover { background: var(--mar-claro); }
+  @media (prefers-color-scheme: dark) { .botao-sec { color: #e9f0f3; border-color: #2b7fa9; } }
+  .evento.cancelado h4 { text-decoration: line-through; }
+  .selo { display: inline-block; margin-left: .5rem; padding: 0 .45rem; border-radius: 6px; background: #b42318; color: #fff; font-size: .85rem; }
+  .sem-resultados { margin-top: 1rem; }
+  .evento[hidden], .mes-grupo[hidden] { display: none; }
+
   /* Ajuda */
   .ajuda { margin-top: 2rem; }
   .ajuda h2 { font-size: 1.25rem; margin: 0 0 .4rem; }
@@ -237,7 +301,7 @@
     .barra span { background: CanvasText; }
   }
   @media print {
-    .seletor, .ferramentas, .acoes, .sugestao { display: none !important; }
+    .seletor, .ferramentas, .acoes, .acoes-evento, .filtro, .sugestao { display: none !important; }
   }
 </style>
 </head>
@@ -250,13 +314,16 @@
 <input type="radio" name="sistema" id="sis-apple" class="escondido" aria-label="{{T:op_apple}}">
 <input type="radio" name="sistema" id="sis-android" class="escondido" aria-label="{{T:op_android}}">
 <input type="radio" name="sistema" id="sis-outro" class="escondido" aria-label="{{T:op_outro}}">
+<input type="radio" name="aviso" id="av-0" class="escondido" checked aria-label="{{T:aviso_rotulo}}: {{T:aviso_0}}">
+<input type="radio" name="aviso" id="av-1d" class="escondido" aria-label="{{T:aviso_rotulo}}: {{T:aviso_1d}}">
+<input type="radio" name="aviso" id="av-1s" class="escondido" aria-label="{{T:aviso_rotulo}}: {{T:aviso_1s}}">
 <input type="radio" name="vista" id="vista-tema" class="escondido" checked aria-label="{{T:por_tema}}">
 <input type="radio" name="vista" id="vista-tipo" class="escondido" aria-label="{{T:por_tipo}}">
 
 <header class="topo">
   <div class="largura topo-grelha">
     <div class="marca">
-      <span class="logo-cm"><img src="{{LOGOTIPO}}" alt="Câmara Municipal da Póvoa de Varzim" width="90" height="63"></span>
+      <span class="logo-cm"><img src="{{LOGOTIPO}}" alt="Câmara Municipal da Póvoa de Varzim" width="90" height="65"></span>
       <div>
         <h1>{{T:h1_html}}</h1>
         <p class="sub">{{T:sub_html}}</p>
@@ -264,7 +331,7 @@
     </div>
     <div class="ferramentas">
       <details class="linguas">
-        <summary aria-label="{{T:lingua}}">{{BANDEIRA}}<span>{{T:nome}}</span></summary>
+        <summary><span class="apenas-leitor">{{T:lingua}}: </span>{{BANDEIRA}}<span>{{T:nome}}</span></summary>
         <ul>
         {{SELETOR_LINGUAS}}
         </ul>
@@ -280,7 +347,7 @@
   </svg>
 </header>
 
-<div class="sugestao" id="sugestao" hidden>
+<div class="sugestao" id="sugestao" role="region" aria-label="{{T:lingua}}" hidden>
   <div class="largura">
     <ul>
       {{SUGESTOES}}
@@ -289,7 +356,7 @@
   </div>
 </div>
 
-<div class="seletor">
+<div class="seletor" role="region" aria-labelledby="pergunta">
   <div class="largura">
     <p class="pergunta" id="pergunta">{{T:pergunta}}</p>
     <div class="segmentos" role="group" aria-labelledby="pergunta">
@@ -304,6 +371,17 @@
     <p class="dica dica-apple">{{T:dica_apple}}</p>
     <p class="dica dica-android">{{T:dica_android}}</p>
     <p class="dica dica-outro">{{T:dica_outro}}</p>
+    <p class="dica dica-aviso-google">{{T:dica_aviso_google}}</p>
+    <p class="dica dica-aviso-outlook">{{T:dica_aviso_outlook}}</p>
+    <div class="aviso-escolha">
+      <p class="pergunta" id="t-aviso">{{T:aviso_rotulo}}</p>
+      <div class="segmentos" role="group" aria-labelledby="t-aviso">
+        <label for="av-0">{{T:aviso_0}}</label>
+        <label for="av-1d">{{T:aviso_1d}}</label>
+        <label for="av-1s">{{T:aviso_1s}}</label>
+      </div>
+      <p class="dica">{{T:dica_aviso_apple}}</p>
+    </div>
   </div>
 </div>
 
@@ -333,6 +411,21 @@
     <p class="aviso">{{T:aviso}}</p>
   </section>
 
+  <section class="proximos" aria-labelledby="t-prox">
+    <h2 id="t-prox">{{T:prox_titulo}}</h2>
+    <p class="intro">{{T:prox_intro}} <span class="nota">{{T:nota_hora}}</span></p>
+    <div class="filtro">
+      <label for="filtro-eventos">{{T:mostrar}}</label>
+      <select id="filtro-eventos">
+          {{OPCOES_FILTRO}}
+      </select>
+    </div>
+    <div id="lista-eventos">
+{{LISTA_EVENTOS}}
+    </div>
+    <p class="sem-resultados" id="sem-resultados" role="status" hidden>{{T:sem_resultados}}</p>
+  </section>
+
   <section class="ajuda" aria-labelledby="t-ajuda">
     <h2 id="t-ajuda">{{T:ajuda}}</h2>
     <details class="item"><summary>{{T:h_google_t}}</summary><div>{{T:h_google_html}}</div></details>
@@ -340,6 +433,7 @@
     <details class="item"><summary>{{T:h_apple_t}}</summary><div>{{T:h_apple_html}}</div></details>
     <details class="item"><summary>{{T:h_android_t}}</summary><div>{{T:h_android_html}}</div></details>
     <details class="item"><summary>{{T:h_outro_t}}</summary><div>{{T:h_outro_html}}</div></details>
+    <details class="item"><summary>{{T:h_aviso_t}}</summary><div>{{T:h_aviso_html}}</div></details>
     <details class="item"><summary>{{T:h_bilhetes_t}}</summary><div>{{T:h_bilhetes_html}}</div></details>
     <details class="item"><summary>{{T:h_tema_t}}</summary><div>{{T:h_tema_html}}</div></details>
     <details class="item"><summary>{{T:h_lingua_t}}</summary><div>{{T:h_lingua_html}}</div></details>
@@ -415,6 +509,63 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); }
   });
+
+  // Datas dos eventos no formato da língua da página (hora de Portugal continental).
+  var lingua = raiz.lang || 'pt-PT';
+  function formatar(data, opcoes) {
+    try {
+      opcoes.timeZone = 'Europe/Lisbon';
+      return new Intl.DateTimeFormat(lingua, opcoes).format(data);
+    } catch (e) { return null; }
+  }
+  var datas = document.querySelectorAll('time[data-inicio]');
+  for (var d = 0; d < datas.length; d++) {
+    var el = datas[d];
+    var ini = new Date(el.getAttribute('data-inicio'));
+    var fim = new Date(el.getAttribute('data-fim'));
+    var diaInteiro = el.getAttribute('data-dia') === '1';
+    var mesmoDia = formatar(ini, { year: 'numeric', month: '2-digit', day: '2-digit' }) === formatar(fim, { year: 'numeric', month: '2-digit', day: '2-digit' });
+    // Um espetáculo que acaba depois da meia-noite conta como um só dia.
+    if (!diaInteiro && fim - ini < 86400000) mesmoDia = true;
+    var texto;
+    if (mesmoDia) {
+      texto = formatar(ini, { weekday: 'short', day: 'numeric', month: 'short' });
+      if (!diaInteiro && texto) texto += ' · ' + formatar(ini, { hour: '2-digit', minute: '2-digit' }) + '–' + formatar(fim, { hour: '2-digit', minute: '2-digit' });
+    } else {
+      var outroAno = formatar(ini, { year: 'numeric' }) !== formatar(fim, { year: 'numeric' });
+      var a = formatar(ini, outroAno ? { day: 'numeric', month: 'short', year: 'numeric' } : { day: 'numeric', month: 'short' });
+      var b = formatar(fim, { day: 'numeric', month: 'short', year: 'numeric' });
+      texto = a && b ? a + ' – ' + b : null;
+    }
+    if (texto) el.textContent = texto;
+  }
+  var meses = document.querySelectorAll('h3.mes[data-mes]');
+  for (var m = 0; m < meses.length; m++) {
+    var t = formatar(new Date(meses[m].getAttribute('data-mes')), { month: 'long', year: 'numeric' });
+    if (t) meses[m].textContent = t.charAt(0).toUpperCase() + t.slice(1);
+  }
+
+  // Filtro dos próximos eventos (tema ou tipo).
+  var filtro = document.getElementById('filtro-eventos');
+  if (filtro) {
+    filtro.addEventListener('change', function () {
+      var partes = this.value.split(':');
+      var grupos = document.querySelectorAll('.mes-grupo');
+      var total = 0;
+      for (var g = 0; g < grupos.length; g++) {
+        var itens = grupos[g].querySelectorAll('.evento');
+        var visiveis = 0;
+        for (var n = 0; n < itens.length; n++) {
+          var ok = !this.value || itens[n].getAttribute('data-' + partes[0]) === partes[1];
+          itens[n].hidden = !ok;
+          if (ok) visiveis++;
+        }
+        grupos[g].hidden = visiveis === 0;
+        total += visiveis;
+      }
+      document.getElementById('sem-resultados').hidden = total > 0;
+    });
+  }
 
   // Copiar link.
   var estado = document.getElementById('estado');

@@ -38,7 +38,7 @@ from urllib.parse import quote, urlsplit
 
 import requests
 from requests.adapters import HTTPAdapter, Retry
-from icalendar import Calendar, Event, vText
+from icalendar import Alarm, Calendar, Event, vText
 
 try:
     from zoneinfo import ZoneInfo
@@ -117,23 +117,34 @@ TEMAS = [
         "torneio", "campeonato", "championship", "maratona", "corrida", r"correr\b",
         "caminhada", r"caminhar\b", "trail", "fitness", "zumba", "pilates", "atividade fisica",
         "xadrez", "triatlo", "duatlo", "skate", "patinagem", "football", "jogos desportivos",
-    ], "#1b6e3a"),
-    Tema("ambiente-mobilidade", "Ambiente e mobilidade", "Natureza, clima, energia e transportes", [
-        "mobilidade", "transporte", "bicicleta", "ciclovia", "pedonal", "autocarro",
-        "estacionamento", "transito", "seguranca rodoviaria",
-        "ambient", "energ", "sustentab", "reciclag", "residuos", "desperdicio", "plastico", "clima",
-        "floresta", "arvore", "plantac", "biodiversidade", "natureza", "limpeza de praia",
-        "eco escola", "beach clean", "clean up", "agricultura", "horta", r"aves\b", "oceano", "litoral", "fogo",
-        "gestao de combustivel",
-    ], "#006d77"),
-    Tema("turismo-economia", "Turismo e economia", "Turismo, gastronomia, comércio, empresas e emprego", [
-        "turism", "turistic", "gastronom", "vinho", "vinic", "wine", FEIRA, "mercado",
-        "artesanato", r"empresas?\b", "empresarial", "negocio", "empreend", "emprego", "empregab",
-        "comercio", "economia", "investimento", "startup", "formacao profissional", r"cooperativas?\b",
-        "rabanada", "sardinh", "doces", "chocolate", "showcooking", "burger", "food truck",
-        "street food", "petisc", "agrosemana", "flores",
-    ], "#b4480b"),
-    Tema("comunidade-cidadania", "Comunidade e cidadania", "Saúde, educação, família, juventude e vida municipal", [
+    ], "#1b5e20"),
+    Tema("ambiente", "Ambiente", "Natureza, clima, energia, água, resíduos e reciclagem", [
+        "ambient", "energ", "sustentab", "reciclag", "residuos", "desperdicio", "plastico", r"clima\b", "climatic",
+        "floresta", r"arvores?(?! genealog)", "plantac", "reflorest", "biodiversidade", "natureza", "limpeza de praia", "limpeza",
+        "eco escola", "eco escolas", "beach clean", "clean up", "agricultura", "horta", r"aves\b", "oceano", "litoral",
+        "gestao de combustivel", "incendio", "compostagem", "ecocentro", "economia circular", "centro do clima",
+        "monstros domesticos", r"agua\b", "poupanca de agua", "animais", "zero waste", "lipor", "gia\b",
+        "interpretacao ambiental", "dunas", "praias? (?:acessive|limpa)", "bandeira azul",
+    ], "#004d40"),
+    Tema("mobilidade-transportes", "Mobilidade e transportes", "Transportes públicos, bicicleta, andar a pé e segurança rodoviária", [
+        "mobilidade", "transporte", "bicicleta", "ciclovia", "ciclavel", "pedonal", "autocarro", "metro\b",
+        "comboio", "estacionamento", "transito", "seguranca rodoviaria", "rede de transportes", "unir\b",
+        "trotinete", "boleia", "car free", "dia sem carros", "cycling", "bike to", "xeque bike", "passadeira",
+        "andar a pe", "caminhar para a escola", "comboio de bicicletas", "schoolbus", "school bus", ], "#1565c0"),
+    Tema("turismo", "Turismo", "Turismo, gastronomia, vinhos, artesanato e promoção da Póvoa", [
+        "turism", "turistic", "gastronom", "vinho", "vinic", "wine", "artesanato", "artesao", "artesaos",
+        "rabanada", "sardinh", "doces", "docaria", "chocolate", "showcooking", "cozinha ao vivo",
+        "burger", "food truck", "street food", "petisc", "fins de semana gastronomicos", "alojamento local",
+        "visitantes", "cocktail", "marisco", "pescado", "rosca doce",
+    ], "#9e5d00"),
+    Tema("economia", "Economia", "Comércio, empresas, emprego, formação e mercados", [
+        FEIRA, "mercadinho", r"empresas?\b", "empresari", "negocio", "empreend", "emprego", "empregab",
+        "comercio", "comerciante", "economia", "economic", "investimento", "startup", "formacao profissional",
+        r"cooperativas?\b", "agrosemana", "flores", "networking", "fundos comunitarios", "financiamento",
+        "industria", r"pme\b", "lojas", "inovacao", "propriedade intelectual", "portugal 2030",
+        "prr\b", "apoio especializado", "competitividade",
+    ], "#3e2723"),
+    Tema("cidadania", "Cidadania", "Saúde, educação, família, juventude, inclusão e vida municipal", [
         "saude", "senior", "idoso", "envelhecimento", "rastreio", "dadiva", "sangue",
         "social", "solidari", "voluntari", "inclusao", "cuidador", "cuidados", "deficiencia",
         "bebe", "crianca", "infantil", "infancia", r"familias?\b", "parental", r"pais\b", "filhos",
@@ -141,14 +152,15 @@ TEMAS = [
         "assembleia", "sessao solene", "tomada de posse", "reuniao publica", "cidadania",
         "participativ", "eleic", "direitos", "igualdade", "violencia", "interculturalidade",
         "seguranca", "protecao civil", r"paz\b", "bairro", "consumidor", "alimentac", "bem estar",
-    ], "#2f3e9e"),
+        "bupi", "literacia", "discussao publica", "consulta publica", "plano de pormenor", "plano diretor", "bullying", "mulher", "comunidade",
+    ], "#1a237e"),
 ]
 
 # Eventos sem nenhuma palavra-chave de tema.
 TEMA_PADRAO = TEMAS[-1]
 
 # Em caso de empate na pontuação, ganha o tema que aparece primeiro aqui.
-PRIORIDADE = ["ambiente-mobilidade", "desporto", "turismo-economia", "cultura", "comunidade-cidadania"]
+PRIORIDADE = ["mobilidade-transportes", "ambiente", "desporto", "turismo", "economia", "cultura", "cidadania"]
 
 # Tipos de evento (o formato). Ganha a palavra-chave forte que aparece mais
 # cedo no título ("Oficina de teatro" é oficina; "Concerto de Natal" é
@@ -227,7 +239,7 @@ TIPOS = [
         "passagem de ano", "sardinhada", "magusto", "santos populares", "cortejo",
         "desfile", "convivio", "by night", "sunset", "noite branca", "mostra gastronom",
         "gastronom", "cozinha ao vivo", "showcooking", "agrosemana",
-        "burger", "food truck", "rabanada", "papagaios", r"bailes?\b", "springfest",
+        "burger", "food truck", "rabanada", "papagaios", r"provas? de vinhos?", "prova comentada", r"bailes?\b", "springfest",
         "noitada", "dias no parque", "rusgas", "desfolhada", "sao martinho", "noites? de", "sao pedrinho", "pequenada",
     ], "#f4511e", fracas=["semana d", "folia"],
         so_titulo=["mercado", r"natal\b", "pascoa", "vinho", "wine", "chocolate"]),
@@ -259,7 +271,7 @@ TIPOS = [
                    r"semana (?:europeia|nacional|mundial) "]),
 ]
 TIPO_PADRAO = TIPOS[6]                     # Oficinas e atividades
-TIPO_DO_TEMA = {"desporto": "provas-desportivas", "ambiente-mobilidade": "acoes-campanhas"}   # sem palavra-chave nenhuma
+TIPO_DO_TEMA = {"desporto": "provas-desportivas", "ambiente": "acoes-campanhas", "mobilidade-transportes": "acoes-campanhas"}   # sem palavra-chave nenhuma
 
 # Campos da API que possam trazer categorias/etiquetas do próprio site.
 # Se existirem, contam tanto como o título na classificação.
@@ -268,7 +280,7 @@ CAMPOS_CATEGORIA = ("categories", "category", "subjects", "subject", "tags", "ev
 PESO_TITULO = 3
 PESO_CATEGORIA = 3
 PESO_DESCRICAO = 1
-PESO_TIPO = 2      # o tipo puxa o tema: um concerto é cultura, uma prova é desporto
+PESO_TIPO = 3      # o tipo puxa o tema: um concerto é cultura, uma prova é desporto
 
 TAG_RE = re.compile(r"<[^>]+>")
 ESPACOS_RE = re.compile(r"\s+")
@@ -685,7 +697,7 @@ def url_ics(url_base, caminho):
     return url_base + caminho
 
 
-def novo_calendario(nome, descricao, url_fonte):
+def novo_calendario(nome, descricao, url_fonte, cor=None):
     cal = Calendar()
     cal.add("prodid", PRODID)
     cal.add("version", "2.0")
@@ -698,10 +710,12 @@ def novo_calendario(nome, descricao, url_fonte):
     cal.add("source", url_fonte, parameters={"VALUE": "URI"})
     cal.add("refresh-interval", timedelta(hours=HORAS_ATUALIZACAO), parameters={"VALUE": "DURATION"})
     cal.add("x-published-ttl", "PT{}H".format(HORAS_ATUALIZACAO))
+    if cor:
+        cal.add("x-apple-calendar-color", cor)  # cor sugerida (Calendário da Apple)
     return cal
 
 
-def criar_evento(item, tema, tipo, t=None, nomes=None):
+def criar_evento(item, tema, tipo, t=None, nomes=None, aviso=None):
     """t: textos da língua (por omissão, português). nomes: {slug: nome} dos temas e tipos nessa língua."""
     t = t or TEXTOS_PT
     inicio = parse_iso(item.get("start"))
@@ -745,6 +759,15 @@ def criar_evento(item, tema, tipo, t=None, nomes=None):
     nomes = nomes or {}
     ev.add("categories", [nomes.get(tema.slug, tema.nome), nomes.get(tipo.slug, tipo.nome)])
     ev.add("transp", "TRANSPARENT")  # não marca a pessoa como "ocupada"
+    cancelado = bool(CANCELADO_RE.search(limpar_texto(item.get("title"))))
+    if cancelado:
+        ev.add("status", "CANCELLED")  # as aplicações mostram-no riscado ou como cancelado
+    if aviso and not cancelado:
+        alarme = Alarm()
+        alarme.add("action", "DISPLAY")
+        alarme.add("description", vText(limpar_texto(item.get("title")) or "Evento"))
+        alarme.add("trigger", -aviso)  # antes do início
+        ev.add_component(alarme)
     return ev
 
 
@@ -778,7 +801,12 @@ def classificar_todos(itens):
     return [(item, classificar(item), classificar_tipo(item)) for item in ordenar(itens)]
 
 
-def construir_calendarios(itens, url_base, lingua="pt", t=None, classificados=None):
+# Calendários com aviso antes de cada evento (sufixo no nome do ficheiro). Só o Calendário da Apple
+# usa estes avisos, e só se a pessoa desligar «Remover alertas»; o Google e o Outlook ignoram-nos.
+AVISOS = (("", None), ("-aviso-1d", timedelta(days=1)), ("-aviso-1s", timedelta(days=7)))
+
+
+def construir_calendarios(itens, url_base, lingua="pt", t=None, classificados=None, sufixo="", aviso=None):
     """Devolve {caminho_relativo: bytes} e a contagem de eventos por tema e por tipo."""
     t_ics = dict(TEXTOS_PT, **{k: v for k, v in (t or {}).items() if k in TEXTOS_PT})
     pre = prefixo_lingua(lingua)
@@ -787,25 +815,25 @@ def construir_calendarios(itens, url_base, lingua="pt", t=None, classificados=No
     cal_desc = (t or {}).get("cal_geral_desc", "Todos os eventos da agenda municipal.")
     cal_pref = (t or {}).get("cal_prefixo", PREFIXO_TEMA)
 
-    geral = novo_calendario(cal_geral, cal_desc, url_ics(url_base, pre + "agenda.ics"))
+    geral = novo_calendario(cal_geral, cal_desc, url_ics(url_base, pre + "agenda" + sufixo + ".ics"), "#0f4c6b")
     grupos = {}
     for pasta, lista in (("temas", TEMAS), ("tipos", TIPOS)):
         for g in lista:
-            caminho = "{}{}/{}.ics".format(pre, pasta, g.slug)
+            caminho = "{}{}/{}{}.ics".format(pre, pasta, g.slug, sufixo)
             nome, resumo = nome_grupo(g, t)
-            grupos[caminho] = novo_calendario(cal_pref + nome, resumo + ".", url_ics(url_base, caminho))
+            grupos[caminho] = novo_calendario(cal_pref + nome, resumo + ".", url_ics(url_base, caminho), g.cor)
     contagem = {"temas": {g.slug: 0 for g in TEMAS}, "tipos": {g.slug: 0 for g in TIPOS}}
 
     for item, tema, tipo in (classificados if classificados is not None else classificar_todos(itens)):
         contagem["temas"][tema.slug] += 1
         contagem["tipos"][tipo.slug] += 1
-        geral.add_component(criar_evento(item, tema, tipo, t_ics, nomes))
-        grupos["{}temas/{}.ics".format(pre, tema.slug)].add_component(criar_evento(item, tema, tipo, t_ics, nomes))
-        grupos["{}tipos/{}.ics".format(pre, tipo.slug)].add_component(criar_evento(item, tema, tipo, t_ics, nomes))
-        if lingua == "pt":
+        geral.add_component(criar_evento(item, tema, tipo, t_ics, nomes, aviso))
+        grupos["{}temas/{}{}.ics".format(pre, tema.slug, sufixo)].add_component(criar_evento(item, tema, tipo, t_ics, nomes, aviso))
+        grupos["{}tipos/{}{}.ics".format(pre, tipo.slug, sufixo)].add_component(criar_evento(item, tema, tipo, t_ics, nomes, aviso))
+        if lingua == "pt" and not sufixo:
             logging.debug("%-22s %-22s %s", tema.slug, tipo.slug, limpar_texto(item.get("title")))
 
-    ficheiros = {pre + "agenda.ics": geral.to_ical()}
+    ficheiros = {pre + "agenda" + sufixo + ".ics": geral.to_ical()}
     for caminho, cal in grupos.items():
         ficheiros[caminho] = cal.to_ical()
     return ficheiros, contagem
@@ -897,19 +925,24 @@ def bloco_subscricao(url_base, caminho, rotulo, t):
     sub = html.escape(t["subscrever"])
     aria = html.escape("{}: {}".format(t["subscrever"], rotulo), quote=True)
     aria_copiar = html.escape("{}: {}".format(t["copiar"], rotulo), quote=True)
+    # iPhone, iPad e Mac: um link por opção de aviso (só aparece o da opção escolhida).
+    apple = ""
+    for sufixo, _ in AVISOS:
+        webcal = html.escape(links(url_base, caminho[:-4] + sufixo + ".ics")["webcal"], quote=True)
+        apple += ('  <a class="botao so-apple av{suf}" href="{w}" target="_top" aria-label="{aria} (iPhone, iPad, Mac)">{i}{sub}</a>\n'
+                  .format(suf=sufixo or "-0", w=webcal, aria=aria, i=ICONE_CALENDARIO, sub=sub))
     return (
         '<div class="acoes">\n'
-        '  <a class="botao so-google" href="{google}" target="_blank" rel="noopener noreferrer" aria-label="{aria} (Google)">{i}{sub}</a>\n'
+        '  <a class="botao so-google so-android" href="{google}" target="_blank" rel="noopener noreferrer" aria-label="{aria} (Google)">{i}{sub}</a>\n'
         '  <a class="botao so-outlook" href="{outlook}" target="_blank" rel="noopener noreferrer" aria-label="{aria} (Outlook)">{i}{sub}</a>\n'
-        '  <a class="botao so-apple" href="{webcal}" target="_top" aria-label="{aria} (iPhone, iPad, Mac)">{i}{sub}</a>\n'
-        '  <a class="botao so-android" href="{google}" target="_blank" rel="noopener noreferrer" aria-label="{aria} (Android)">{i}{sub}</a>\n'
+        '{apple}'
         '  <div class="copiar so-outro">\n'
         '    <button type="button" class="botao botao-copiar" data-link="{https}" aria-label="{aria_copiar}">{c}{copiar}</button>\n'
         '    <input type="text" readonly value="{https}" aria-label="{aria_copiar}">\n'
         '  </div>\n'
         '</div>'
     ).format(i=ICONE_CALENDARIO, c=ICONE_COPIAR, sub=sub, aria=aria, aria_copiar=aria_copiar,
-             copiar=html.escape(t["copiar"]), **l)
+             copiar=html.escape(t["copiar"]), apple=apple, **l)
 
 
 def lista_grupos(grupos, pasta, contagem, total, url_base, lingua, t):
@@ -980,7 +1013,193 @@ def sugestoes_linguas(lingua, trad):
     return "\n      ".join(itens)
 
 
-def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None):
+# ---------------------------------------------------------------------------
+# Próximos eventos: cada evento pode ser adicionado ao calendário da pessoa
+# ---------------------------------------------------------------------------
+# Um evento adicionado (e não subscrito) fica da pessoa: pode pôr-lhe o aviso
+# que quiser. Funciona em todas as aplicações, ao contrário dos avisos em
+# calendários subscritos.
+
+PASTA_EVENTOS = "e"          # e/<id>.ics: um ficheiro por evento (iPhone, Mac e outras apps)
+MAX_DETALHES_LINK = 160      # texto da descrição nos links do Google e do Outlook (o link do evento vai sempre)
+CANCELADO_RE = re.compile(r"\bcancelad[oa]s?\b", re.I)
+
+
+def id_evento(item):
+    chave = str(item.get("uid") or item.get("id") or item.get("url") or item.get("title"))
+    return hashlib.sha1(chave.encode("utf-8")).hexdigest()[:16]
+
+
+def datas_evento(item):
+    """(início, fim, dia_inteiro) com as mesmas regras do .ics."""
+    inicio = parse_iso(item.get("start"))
+    fim = parse_iso(item.get("end")) or inicio + timedelta(hours=1)
+    if fim < inicio:
+        fim = inicio + timedelta(hours=1)
+    return inicio, fim, eh_dia_inteiro(inicio, fim)
+
+
+def _qs(params):
+    return "&".join("{}={}".format(k, quote(str(v), safe="")) for k, v in params.items() if v not in (None, ""))
+
+
+def _detalhes_curtos(item):
+    descricao = limpar_texto(item.get("description") or item.get("text"))
+    if len(descricao) > MAX_DETALHES_LINK:
+        descricao = descricao[:MAX_DETALHES_LINK].rsplit(" ", 1)[0] + "…"
+    link = link_seguro(item.get("url") or item.get("eventUrl"))
+    return "\n\n".join(p for p in (descricao, link) if p)
+
+
+def link_google_evento(item):
+    inicio, fim, dia = datas_evento(item)
+    if dia:
+        datas = "{}/{}".format(inicio.astimezone(LISBOA).strftime("%Y%m%d"),
+                               (fim.astimezone(LISBOA).date() + timedelta(days=1)).strftime("%Y%m%d"))
+    else:
+        datas = "{}/{}".format(inicio.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ"),
+                               fim.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ"))
+    return "https://calendar.google.com/calendar/render?" + _qs({
+        "action": "TEMPLATE", "text": limpar_texto(item.get("title")), "dates": datas,
+        "details": _detalhes_curtos(item), "location": limpar_texto(item.get("location")), "ctz": "Europe/Lisbon",
+    })
+
+
+def link_outlook_evento(item):
+    inicio, fim, dia = datas_evento(item)
+    if dia:
+        ini, fi = inicio.astimezone(LISBOA).date().isoformat(), (fim.astimezone(LISBOA).date() + timedelta(days=1)).isoformat()
+    else:
+        ini = inicio.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        fi = fim.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return "https://outlook.office.com/calendar/0/deeplink/compose?" + _qs({
+        "path": "/calendar/action/compose", "rru": "addevent", "subject": limpar_texto(item.get("title")),
+        "startdt": ini, "enddt": fi, "allday": "true" if dia else "false",
+        "location": limpar_texto(item.get("location")), "body": _detalhes_curtos(item),
+    })
+
+
+def ics_evento(item, tema, tipo):
+    """Um só evento, para importar (fica no calendário da pessoa, que lhe pode pôr avisos)."""
+    cal = Calendar()
+    cal.add("prodid", PRODID)
+    cal.add("version", "2.0")
+    cal.add("calscale", "GREGORIAN")
+    cal.add("method", "PUBLISH")
+    cal.add_component(criar_evento(item, tema, tipo))
+    return cal.to_ical()
+
+
+ICONE_LOCAL = (
+    '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" '
+    'stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/>'
+    '<circle cx="12" cy="9.5" r="2.5"/></svg>'
+)
+ICONE_ADICIONAR = (
+    '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" '
+    'stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/>'
+    '<path d="M12 13v5M9.5 15.5h5"/></svg>'
+)
+
+
+def opcoes_filtro(lingua, t):
+    tt = t if lingua != "pt" else None
+    linhas = ['<option value="">{}</option>'.format(html.escape(t["todos"]))]
+    for rotulo, pasta, grupos in ((t["grupo_temas"], "tema", TEMAS), (t["grupo_tipos"], "tipo", TIPOS)):
+        linhas.append('<optgroup label="{}">'.format(html.escape(rotulo, quote=True)))
+        for g in grupos:
+            linhas.append('<option value="{}:{}">{}</option>'.format(pasta, g.slug, html.escape(nome_grupo(g, tt)[0])))
+        linhas.append('</optgroup>')
+    return "\n          ".join(linhas)
+
+
+def _botoes_evento(item, ics_url, titulo, t):
+    """Três ligações: Google (também Android), Outlook e o ficheiro .ics (iPhone, Mac e outras apps)."""
+    aria = html.escape("{}: {}".format(t["adicionar"], titulo), quote=True)
+    rot = html.escape(t["adicionar"])
+    return (
+        '<div class="acoes-evento">'
+        '<a class="botao botao-sec so-google so-android" href="{g}" target="_blank" rel="noopener noreferrer" aria-label="{a}">{r}</a>'
+        '<a class="botao botao-sec so-outlook" href="{o}" target="_blank" rel="noopener noreferrer" aria-label="{a}">{r}</a>'
+        '<a class="botao botao-sec so-apple so-outro" href="{i}" target="_top" aria-label="{a}">{r}</a>'
+        '</div>'
+    ).format(g=html.escape(link_google_evento(item), quote=True), o=html.escape(link_outlook_evento(item), quote=True),
+             i=html.escape(ics_url, quote=True), a=aria, r=rot)
+
+
+def lista_eventos(classificados, url_base, lingua, t, agora):
+    """HTML da lista de próximos eventos, agrupada por mês (os já começados ficam em «A decorrer»)."""
+    tt = t if lingua != "pt" else None
+    lang_evento = '' if lingua == "pt" else ' lang="pt-PT"'
+    grupos, ordem = {}, []
+    for item, tema, tipo in classificados:
+        inicio, fim, dia = datas_evento(item)
+        if inicio is None:
+            continue
+        chave = "a-decorrer" if inicio < agora else inicio.astimezone(LISBOA).strftime("%Y-%m")
+        if chave not in grupos:
+            grupos[chave] = []
+            ordem.append(chave)
+        grupos[chave].append((item, tema, tipo, inicio, fim, dia))
+    ordem.sort(key=lambda c: "~" if c == "a-decorrer" else c)   # os já começados (exposições...) no fim
+
+    blocos = []
+    for chave in ordem:
+        if chave == "a-decorrer":
+            titulo_grupo = '<h3 class="mes">{}</h3>'.format(html.escape(t["a_decorrer"]))
+        else:
+            ano, mes = chave.split("-")
+            titulo_grupo = '<h3 class="mes" data-mes="{a}-{m}-15T12:00:00Z">{m}/{a}</h3>'.format(a=ano, m=mes)
+        itens = []
+        for item, tema, tipo, inicio, fim, dia in grupos[chave]:
+            titulo = limpar_texto(item.get("title")) or "Evento"
+            local = limpar_texto(item.get("location"))
+            if not re.search(r"\w", local):
+                local = ""
+            link = link_seguro(item.get("url") or item.get("eventUrl"))
+            _, ligacoes = info_acesso(item)
+            bilhetes = next((u for r, u in ligacoes if r == "Bilhetes"), "")
+            inscricao = next((u for r, u in ligacoes if r == "Inscrição"), "")
+            ini_l = inicio.astimezone(LISBOA)
+            texto_data = ini_l.strftime("%d/%m/%Y") if dia else ini_l.strftime("%d/%m/%Y %H:%M")
+            links_html = []
+            if bilhetes:
+                links_html.append('<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(
+                    html.escape(bilhetes, quote=True), html.escape(t["link_bilhetes"])))
+            if inscricao:
+                links_html.append('<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(
+                    html.escape(inscricao, quote=True), html.escape(t["link_inscricao"])))
+            if link:
+                links_html.append('<a href="{}" target="_blank" rel="noopener noreferrer">{}</a>'.format(
+                    html.escape(link, quote=True), html.escape(t["link_mais"])))
+            cancelado = bool(CANCELADO_RE.search(titulo))
+            itens.append(
+                '<li class="evento{canc}" data-tema="{te}" data-tipo="{ti}" style="--cor: {cor}">\n'
+                '  <p class="quando"><time datetime="{ini}" data-inicio="{ini}" data-fim="{fim}" data-dia="{dia}">{txt}</time>{badge}</p>\n'
+                '  <h4{lang}>{titulo}</h4>\n'
+                '{local}'
+                '  <p class="etiquetas"><span>{nte}</span> · <span>{nti}</span></p>\n'
+                '{links}'
+                '  {botoes}\n'
+                '</li>'.format(
+                    canc=" cancelado" if cancelado else "", te=tema.slug, ti=tipo.slug,
+                    cor=html.escape(tipo.cor, quote=True),
+                    ini=inicio.astimezone(timezone.utc).isoformat(), fim=fim.astimezone(timezone.utc).isoformat(),
+                    dia="1" if dia else "0", txt=texto_data,
+                    badge=' <span class="selo">{}</span>'.format(html.escape(t["cancelado"])) if cancelado else "",
+                    lang=lang_evento, titulo=html.escape(titulo),
+                    local='  <p class="onde"{l}>{ic}<span class="apenas-leitor">{r}: </span>{v}</p>\n'.format(
+                        l=lang_evento, ic=ICONE_LOCAL, r=html.escape(t["local"]), v=html.escape(local)) if local else "",
+                    nte=html.escape(nome_grupo(tema, tt)[0]), nti=html.escape(nome_grupo(tipo, tt)[0]),
+                    links='  <p class="ligacoes">{}</p>\n'.format(" ".join(links_html)) if links_html else "",
+                    botoes=_botoes_evento(item, url_ics(url_base, "{}/{}.ics".format(PASTA_EVENTOS, id_evento(item))), titulo, t),
+                ))
+        blocos.append('<section class="mes-grupo">\n{}\n<ul class="eventos">\n{}\n</ul>\n</section>'.format(
+            titulo_grupo, "\n".join(itens)))
+    return "\n".join(blocos)
+
+
+def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None, classificados=None, agora=None):
     trad = trad or carregar_traducoes()
     t = trad["linguas"][lingua]
     modelo = MODELO_PAGINA.read_text(encoding="utf-8")
@@ -1001,6 +1220,13 @@ def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None):
         "{{ACOES_GERAL}}": bloco_subscricao(url_base, pre + "agenda.ics", t["completa_titulo"], t),
         "{{LISTA_TEMAS}}": lista_grupos(TEMAS, "temas", contagem["temas"], total, url_base, lingua, t),
         "{{LISTA_TIPOS}}": lista_grupos(TIPOS, "tipos", contagem["tipos"], total, url_base, lingua, t),
+        "{{OPCOES_FILTRO}}": opcoes_filtro(lingua, t),
+        "{{LISTA_EVENTOS}}": lista_eventos(classificados or [], url_base, lingua, t, agora or datetime.now(timezone.utc)),
+        "{{ALTERNATIVAS}}": "\n".join(
+            '<link rel="alternate" hreflang="{}" href="{}">'.format(
+                trad["linguas"][c]["html_lang"], html.escape(url_base + prefixo_lingua(c), quote=True))
+            for c in trad["ordem"]),
+        "{{URL_PAGINA}}": html.escape(url_base + pre, quote=True),
     }
     for chave, valor in substituicoes.items():
         modelo = modelo.replace(chave, valor)
@@ -1044,11 +1270,25 @@ def gerar_saidas(itens, pasta, url_base):
     """Escreve os calendários e a página em todas as línguas. Devolve a contagem (igual em todas)."""
     trad = carregar_traducoes()
     classificados = classificar_todos(itens)
+    agora = datetime.now(timezone.utc)
     contagem = None
+    # Um .ics por evento, para adicionar (não subscrever): o mesmo em todas as línguas.
+    eventos = {"{}/{}.ics".format(PASTA_EVENTOS, id_evento(item)): ics_evento(item, tema, tipo)
+               for item, tema, tipo in classificados if parse_iso(item.get("start"))}
+    for caminho, conteudo in eventos.items():
+        escrever_atomico(conteudo, pasta / caminho)
+    for antigo in (pasta / PASTA_EVENTOS).glob("*.ics"):
+        if "{}/{}".format(PASTA_EVENTOS, antigo.name) not in eventos:
+            antigo.unlink()
     for lingua in trad["ordem"]:
         t = trad["linguas"][lingua]
-        ficheiros, contagem = construir_calendarios(itens, url_base, lingua, t if lingua != "pt" else None, classificados)
-        ficheiros[prefixo_lingua(lingua) + "index.html"] = gerar_pagina(contagem, len(itens), url_base, lingua, trad)
+        ficheiros = {}
+        for sufixo, aviso in AVISOS:
+            parte, contagem = construir_calendarios(itens, url_base, lingua, t if lingua != "pt" else None,
+                                                    classificados, sufixo, aviso)
+            ficheiros.update(parte)
+        ficheiros[prefixo_lingua(lingua) + "index.html"] = gerar_pagina(
+            contagem, len(itens), url_base, lingua, trad, classificados, agora)
         for caminho, conteudo in ficheiros.items():
             escrever_atomico(conteudo, pasta / caminho)
         for sub in ("temas", "tipos"):
