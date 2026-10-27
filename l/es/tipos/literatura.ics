@@ -9,6 +9,7 @@ X-WR-CALNAME:Póvoa de Varzim: Literatura
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/es/tipos/lite
  ratura.ics
+X-APPLE-CALENDAR-COLOR:#795548
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
@@ -119,6 +120,29 @@ LOCATION:Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/clube-de-leituras-maritimas-livros-d
  e-marear-6/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lançamento do livro “A Póvoa de Varzim na Belle Époque: panor
+ ama da vida cultural e do turismo balnear”
+DTSTART:20261116T213000Z
+DTEND:20261116T230000Z
+DTSTAMP:20261027T155206Z
+UID:bGFuY2FtZW50by1kby1saXZyby1hLXBvdm9hLWRlLXZhcnppbS1uYS1iZWxsZS1lcG9xdW
+ UtcGFub3JhbWEtZGEtdmlkYS1jdWx0dXJhbC1lLWRvLXR1cmlzbW8tYmFsbmVhcnwyMDI2LTEw
+ LTI3IDE1OjUyOjA1@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Literatura
+DESCRIPTION:No dia 16 de novembro\, às 21h30\, será lançado\, no Museu 
+ Municipal\, o livro Lançamento do livro “A Póvoa de Varzim na Belle É
+ poque: panorama da vida cultural e do turismo balnear”.\n\nTítulo y des
+ cripción del evento en portugués\, tal como los publica el municipio.\n
+ \nMás información: https://www.cm-pvarzim.pt/eventos/lancamento-do-livro
+ -a-povoa-de-varzim-na-belle-epoque-panorama-da-vida-cultural-e-do-turismo-
+ balnear/
+LAST-MODIFIED:20261027T155206Z
+LOCATION:Museu Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-a-povoa-de-varzi
+ m-na-belle-epoque-panorama-da-vida-cultural-e-do-turismo-balnear/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Apresentação do livro infantil "Cachalote\, a baleia com a cauda

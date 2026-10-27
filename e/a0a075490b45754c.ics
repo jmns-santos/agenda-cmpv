@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Sessão de leitura "A ovelhinha que veio para jantar"
+DTSTART:20261121T160000Z
+DTEND:20261121T174500Z
+DTSTAMP:20261022T085515Z
+UID:c2Vzc2FvLWRlLWxlaXR1cmEtYS1vdmVsaGluaGEtcXVlLXZlaW8tcGFyYS1qYW50YXJ8Mj
+ AyNi0xMC0yMiAwODo1NToxNA==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Literatura
+DESCRIPTION:No dia 21 de novembro\, às 16h00\, a Biblioteca Municipal ir
+ á promover a sessão de leitura para pais e bebés "A ovelhinha que veio 
+ para jantar"\, dinamizada por Ana Sofia Maia.\n\nBilhetes e inscrições:
+ \nAs inscrições para esta atividade\, destinada a bebés entre os 12 e 4
+ 8 meses\, são gratuitas\, mas obrigatórias\, através do email bibliotec
+ a@cm-pvarzim.pt\, do telefone 252 616 000\, ou\, em alternativa\, presenci
+ almente\, na Biblioteca Municipal.\n\nMais informação: https://www.cm-pv
+ arzim.pt/eventos/sessao-de-leitura-a-ovelhinha-que-veio-para-jantar/
+LAST-MODIFIED:20261022T085515Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sessao-de-leitura-a-ovelhinha-que-ve
+ io-para-jantar/
+END:VEVENT
+END:VCALENDAR

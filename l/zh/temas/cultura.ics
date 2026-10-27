@@ -9,6 +9,7 @@ X-WR-CALNAME:波武阿-迪瓦尔津：文化
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cult
  ura.ics
+X-APPLE-CALENDAR-COLOR:#8e1b4f
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
@@ -629,6 +630,28 @@ LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-
  de-lisboa-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lançamento do livro “A Póvoa de Varzim na Belle Époque: panor
+ ama da vida cultural e do turismo balnear”
+DTSTART:20261116T213000Z
+DTEND:20261116T230000Z
+DTSTAMP:20261027T155206Z
+UID:bGFuY2FtZW50by1kby1saXZyby1hLXBvdm9hLWRlLXZhcnppbS1uYS1iZWxsZS1lcG9xdW
+ UtcGFub3JhbWEtZGEtdmlkYS1jdWx0dXJhbC1lLWRvLXR1cmlzbW8tYmFsbmVhcnwyMDI2LTEw
+ LTI3IDE1OjUyOjA1@agenda.cm-pvarzim.pt
+CATEGORIES:文化,文学
+DESCRIPTION:No dia 16 de novembro\, às 21h30\, será lançado\, no Museu 
+ Municipal\, o livro Lançamento do livro “A Póvoa de Varzim na Belle É
+ poque: panorama da vida cultural e do turismo balnear”.\n\n活动标题
+ 和说明为葡萄牙语，与市政府发布的内容一致。\n\n更多
+ 信息: https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-a-povoa-de-v
+ arzim-na-belle-epoque-panorama-da-vida-cultural-e-do-turismo-balnear/
+LAST-MODIFIED:20261027T155206Z
+LOCATION:Museu Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-a-povoa-de-varzi
+ m-na-belle-epoque-panorama-da-vida-cultural-e-do-turismo-balnear/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Apresentação do livro infantil "Cachalote\, a baleia com a cauda

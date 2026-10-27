@@ -9,6 +9,7 @@ X-WR-CALNAME:Póvoa de Varzim: Święta, targi i jarmarki
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/pl/tipos/fest
  as-feiras.ics
+X-APPLE-CALENDAR-COLOR:#f4511e
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
@@ -60,7 +61,7 @@ DTEND:20261031T130000Z
 DTSTAMP:20260928T130805Z
 UID:bWVyY2Fkby1hYmVydG8tZGUtZmxvcmVzLTIwMjZ8MjAyNi0wOS0yOCAxMzowNDoyNA==@a
  genda.cm-pvarzim.pt
-CATEGORIES:Turystyka i gospodarka,Święta\, targi i jarmarki
+CATEGORIES:Gospodarka,Święta\, targi i jarmarki
 DESCRIPTION:No dia 31 de outubro\, o Mercado Municipal vai realizar\, mais
   uma edição do Mercado Aberto de Flores\, entre as 6h00 e as 13h00.\n\nB
  ilety i zapisy (po portugalsku):\nOs comerciantes do Mercado Municipal\, c

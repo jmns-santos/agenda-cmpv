@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Histórias com Yoga
+DTSTART:20261205T153000Z
+DTEND:20261205T171500Z
+DTSTAMP:20261026T104129Z
+UID:aGlzdG9yaWFzLWNvbS15b2dhfDIwMjYtMTAtMjYgMTA6NDE6Mjg=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura,Literatura
+DESCRIPTION:O Projeto Luminisca e a Biblioteca Municipal Rocha Peixoto vol
+ tam a convidar as famílias a embarcarem numa viagem pelo mundo dos livros
+ \, das emoções e do yoga\, no próximo sábado\, 5 de dezembro\, às 15h
+ 30.\n\nBilhetes e inscrições:\nO número máximo de participantes é 30 
+ pessoas\, sendo que inscrição no evento é gratuita\, mas obrigatória\,
+  através dos seguintes meios: email biblioteca@cm-pvarzim.pt\; telefone 2
+ 52 616 000 ou presencialmente na Biblioteca Municipal.\n\nMais informaçã
+ o: https://www.cm-pvarzim.pt/eventos/historias-com-yoga/
+LAST-MODIFIED:20261026T104129Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga/
+END:VEVENT
+END:VCALENDAR

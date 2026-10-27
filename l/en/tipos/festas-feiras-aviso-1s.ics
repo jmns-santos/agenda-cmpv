@@ -1,0 +1,121 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Local festivities, festivals, fairs, markets and food.
+NAME:Póvoa de Varzim: Festivals, fairs and markets
+X-WR-CALNAME:Póvoa de Varzim: Festivals, fairs and markets
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/en/tipos/fest
+ as-feiras-aviso-1s.ics
+X-APPLE-CALENDAR-COLOR:#f4511e
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:FIMPV+
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20270531
+DTSTAMP:20261013T151317Z
+UID:ZmltcHZ8MjAyNi0xMC0xMyAxMzoyMzozMA==@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Festivals\, fairs and markets
+DESCRIPTION:Ao longo de décadas\, o Festival Internacional de Música da 
+ Póvoa de Varzim afirmou-se como uma das referências maiores da programa
+ ção musical em Portugal\, trazendo à cidade intérpretes de excelência
+  e criando\, edição após edição\, uma relação profunda com o seu p
+ úblico. Essa relação tem crescido de ano para ano: os poveiros enchem a
+ s salas\, procuram a música\, querem ouvir mais e mais vezes.\n\nTickets 
+ and registration (in Portuguese):\nA entrada para os espetáculos deste an
+ o é gratuita mediante convite\, levantado no local\, até à lotação da
+  sala.\n\nEvent title and description in Portuguese\, as published by the 
+ municipality.\n\nMore information: https://www.cm-pvarzim.pt/eventos/fimpv
+ /
+LAST-MODIFIED:20261013T151317Z
+LOCATION:Cine-Teatro Garrett\, Auditório Municipal e Diana Bar
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/fimpv/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:FIMPV+
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Festa de Halloween
+DTSTART:20261030T193000Z
+DTEND:20261031T000000Z
+DTSTAMP:20261019T103653Z
+UID:ZmVzdGEtZGUtaGFsbG93ZWVufDIwMjYtMDktMjkgMTU6MDY6MDI=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Culture,Festivals\, fairs and markets
+DESCRIPTION:A Casa da Juventude vai transformar-se no cenário ideal para 
+ uma noite de terror no dia 30 de outubro.\n\nTickets and registration (in 
+ Portuguese):\nAs inscrições são limitadas e obrigatórias\, devendo ser
+  efetuadas presencialmente nas instalações da Casa da Juventude até ao 
+ dia 26 de outubro.\n\nEvent title and description in Portuguese\, as publi
+ shed by the municipality.\n\nMore information: https://www.cm-pvarzim.pt/e
+ ventos/festa-de-halloween/
+LAST-MODIFIED:20261019T103653Z
+LOCATION:Casa da Juventude
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/festa-de-halloween/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Festa de Halloween
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mercado Aberto de Flores 2026
+DTSTART:20261031T060000Z
+DTEND:20261031T130000Z
+DTSTAMP:20260928T130805Z
+UID:bWVyY2Fkby1hYmVydG8tZGUtZmxvcmVzLTIwMjZ8MjAyNi0wOS0yOCAxMzowNDoyNA==@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Economy,Festivals\, fairs and markets
+DESCRIPTION:No dia 31 de outubro\, o Mercado Municipal vai realizar\, mais
+  uma edição do Mercado Aberto de Flores\, entre as 6h00 e as 13h00.\n\nT
+ ickets and registration (in Portuguese):\nOs comerciantes do Mercado Munic
+ ipal\, com estabelecimentos ou produção no concelho da Póvoa de Varzim 
+ devem efetuar a sua inscrição junto do Mercado Municipal (portaria)\, en
+ tre os dias 24 e 30 de outubro.\nTodos os esclarecimentos e inscrições p
+ odem ser obtidos através dos seguintes contactos: 252 616 099 ou mercadom
+ unicipal@cm-pvarzim.pt.\n\nEvent title and description in Portuguese\, as 
+ published by the municipality.\n\nMore information: https://www.cm-pvarzim
+ .pt/eventos/mercado-aberto-de-flores-2026/
+LAST-MODIFIED:20260928T130805Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mercado-aberto-de-flores-2026/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Mercado Aberto de Flores 2026
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Three Sixty Halloween
+DTSTART:20261031T220000Z
+DTEND:20261101T040000Z
+DTSTAMP:20261019T103529Z
+UID:dGhyZWUtc2l4dHktaGFsbG93ZWVufDIwMjYtMDktMjkgMTE6NTU6NTc=@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Culture,Festivals\, fairs and markets
+DESCRIPTION:O Three Sixty Halloween é um evento de entretenimento e músi
+ ca comercial\, a realizar no dia 31 de outubro\, no Póvoa Arena\, com uma
+  lotação prevista de até 5.000 pessoas.\n\nTickets and registration (in
+  Portuguese):\nOs bilhetes estão à venda em\nTickets: https://3cket.com/
+ pt/event/three-sixty-colosseum-of-terror\n\nEvent title and description in
+  Portuguese\, as published by the municipality.\n\nMore information: https
+ ://www.cm-pvarzim.pt/eventos/three-sixty-halloween/
+LAST-MODIFIED:20261019T103529Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/three-sixty-halloween/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Three Sixty Halloween
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

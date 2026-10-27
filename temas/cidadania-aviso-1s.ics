@@ -1,0 +1,72 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Saúde, educação, família, juventude, inclusão e vida mun
+ icipal.
+NAME:Póvoa de Varzim: Cidadania
+X-WR-CALNAME:Póvoa de Varzim: Cidadania
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/temas/cidadania
+ -aviso-1s.ics
+X-APPLE-CALENDAR-COLOR:#1a237e
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Projeto Escola da Minha Vida
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20270424
+DTSTAMP:20261014T092233Z
+UID:cHJvamV0by1lc2NvbGEtZGEtbWluaGEtdmlkYS0zfDIwMjYtMTAtMTQgMDk6MjI6MzI=@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cidadania,Provas desportivas
+DESCRIPTION:O Projeto Escola da Minha Vida (PEMV)\, organizado pela Câmar
+ a Municipal da Póvoa de Varzim\, avança para nova edição\, a partir de
+  19 de outubro.\n\nBilhetes e inscrições:\nAceda aos regulamentos/fichas
+  de inscrição de todas as modalidades a concurso e fique a par de toda a
+  informação sobre o PEMV 2026/2027 no portal municipal.\nInscrição: ht
+ tps://www.cm-pvarzim.pt/territorio/juventude/casa-da-juventude/atividade/p
+ rojeto-escola-da-minha-vida/projeto-escola-da-minha-vida-2026-2027/regulam
+ entos-das-diversas-modalidades-a-concurso/\nInscrição: https://www.cm-pv
+ arzim.pt/territorio/juventude/casa-da-juventude/atividade/projeto-escola-d
+ a-minha-vida/projeto-escola-da-minha-vida-2026-2027/\n\nMais informação:
+  https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
+LAST-MODIFIED:20261014T092233Z
+LOCATION:Escolas do concelho\, Diana Bar\, Póvoa Arena\, Parque da Cidade
+  e Casa da Juventude
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Projeto Escola da Minha Vida
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:"Deixem o Pimba em Paz"
+DTSTART:20261204T213000Z
+DTEND:20261204T233000Z
+DTSTAMP:20261001T145442Z
+UID:ZGVpeGVtLW8tcGltYmEtZW0tcGF6LTJ8MjAyNi0xMC0wMSAxNDo0OToxOA==@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Cidadania,Concertos
+DESCRIPTION:Estreado em 2013\, “Deixem o Pimba em Paz” conquistou o p
+ úblico com uma reinterpretação irreverente do repertório pimba\, tendo
+  percorrido Portugal de Norte a Sul\, ilhas incluídas\, e atravessando fr
+ onteiras até aos Estados Unidos da América e Brasil.\n\nBilhetes e inscr
+ ições:\nOs bilhetes estão à venda na BOL.\nBilhetes: https://www.bol.p
+ t/Comprar/Bilhetes/183417-deixem_o_pimba_em_paz_povoa_de_varzim-povoa_aren
+ a/\n\nMais informação: https://www.cm-pvarzim.pt/eventos/deixem-o-pimba-
+ em-paz-2/
+LAST-MODIFIED:20261001T145442Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/deixem-o-pimba-em-paz-2/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:"Deixem o Pimba em Paz"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

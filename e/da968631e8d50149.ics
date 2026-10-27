@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Bicentenário do "Paredão" de D. Maria I (1826) - o simbolismo de
+  uma obra de engenharia
+DTSTART:20261114T150000Z
+DTEND:20261114T173000Z
+DTSTAMP:20261015T133829Z
+UID:YmljZW50ZW5hcmlvLWRvLXBhcmVkYW8tZGUtZC1tYXJpYS1pLTE4MjYtby1zaW1ib2xpc2
+ 1vLWRlLXVtYS1vYnJhLWRlLWVuZ2VuaGFyaWF8MjAyNi0xMC0xNSAxMzozODoyOA==@agenda.
+ cm-pvarzim.pt
+CATEGORIES:Cultura,Comemorações e cerimónias
+DESCRIPTION:No ano em que se assinala o bicentenário da conclusão da pri
+ meira intervenção humana na enseada natural da Póvoa de Varzim\, o Muse
+ u Municipal abre portas à comunidade para descobrir a importância centra
+ l da pesca na afirmação política\, socioeconómica e cultural da nossa 
+ cidade.\n\nBilhetes e inscrições:\nA entrada é livre.\n\nMais informaç
+ ão: https://www.cm-pvarzim.pt/eventos/bicentenario-do-paredao-de-d-maria-
+ i-1826-o-simbolismo-de-uma-obra-de-engenharia/
+LAST-MODIFIED:20261015T133829Z
+LOCATION:Museu Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/bicentenario-do-paredao-de-d-maria-i
+ -1826-o-simbolismo-de-uma-obra-de-engenharia/
+END:VEVENT
+END:VCALENDAR

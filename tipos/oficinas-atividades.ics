@@ -10,6 +10,7 @@ X-WR-CALNAME:Póvoa de Varzim: Oficinas e atividades
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/tipos/oficinas-
  atividades.ics
+X-APPLE-CALENDAR-COLOR:#00897b
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
@@ -40,7 +41,7 @@ DTEND:20261031T123000Z
 DTSTAMP:20260831T105731Z
 UID:b2ZpY2luYS1kby1wbGFzdGljby1maXotc2FyZGluaGF8MjAyNi0wOC0zMSAwOTo1MjoyNg
  ==@agenda.cm-pvarzim.pt
-CATEGORIES:Ambiente e mobilidade,Oficinas e atividades
+CATEGORIES:Ambiente,Oficinas e atividades
 DESCRIPTION:No dia 31 de outubro\, pelas 10h30\, o Café-Concerto do Cine-
  Teatro Garrett vai acolher a Oficina "Do Plástico fiz Sardinha".\n\nBilhe
  tes e inscrições:\nOs bilhetes custam 5\,00€ e estão à venda no Cine
@@ -58,7 +59,7 @@ DTEND;VALUE=DATE:20261129
 DTSTAMP:20261015T093004Z
 UID:Y3Vyc28tZGUtcGFsZW9ncmFmaWF8MjAyNi0xMC0xNSAwOTozMDowMw==@agenda.cm-pva
  rzim.pt
-CATEGORIES:Turismo e economia,Oficinas e atividades
+CATEGORIES:Economia,Oficinas e atividades
 DESCRIPTION:Todas as sextas-feiras de novembro (6\, 13\, 20 e 27)\, o Arqu
  ivo Municipal irá dinamizar um curso de paleografia\, destinado a públic
  o em geral\, professores\, investigadores e estudantes.\n\nBilhetes e insc

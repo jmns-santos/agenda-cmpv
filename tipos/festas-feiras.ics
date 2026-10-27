@@ -9,6 +9,7 @@ X-WR-CALNAME:Póvoa de Varzim: Festas, feiras e mercados
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/tipos/festas-fe
  iras.ics
+X-APPLE-CALENDAR-COLOR:#f4511e
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
@@ -58,7 +59,7 @@ DTEND:20261031T130000Z
 DTSTAMP:20260928T130805Z
 UID:bWVyY2Fkby1hYmVydG8tZGUtZmxvcmVzLTIwMjZ8MjAyNi0wOS0yOCAxMzowNDoyNA==@a
  genda.cm-pvarzim.pt
-CATEGORIES:Turismo e economia,Festas\, feiras e mercados
+CATEGORIES:Economia,Festas\, feiras e mercados
 DESCRIPTION:No dia 31 de outubro\, o Mercado Municipal vai realizar\, mais
   uma edição do Mercado Aberto de Flores\, entre as 6h00 e as 13h00.\n\nB
  ilhetes e inscrições:\nOs comerciantes do Mercado Municipal\, com estabe

@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:XIII Encontro de Música Coral da Póvoa de Varzim
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261207
+DTSTAMP:20261027T153734Z
+UID:eGlpaS1lbmNvbnRyby1kZS1tdXNpY2EtY29yYWwtZGEtcG92b2EtZGUtdmFyemltfDIwMj
+ YtMTAtMjcgMTU6Mzc6MzM=@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Concertos
+DESCRIPTION:A 13.ª edição do Encontro de Música Coral da Póvoa de Var
+ zim (eMCPV ’26) decorre de 13 de novembro a 6 de dezembro\, reunindo uma
+  vasta programação que cruza concertos de agrupamentos nacionais e inter
+ nacionais\, oficinas\, conferências e cinema. O evento\, organizado pela 
+ Capela Marta\, com o apoio da Câmara Municipal\, arranca oficialmente a 1
+ 3 de novembro\, sexta-feira\, às 18h30\, com a Cerimónia de Abertura no 
+ Barrière Casino Póvoa. No dia seguinte\, 14 de novembro\, sábado\, às 
+ 16h00\, o programa ruma ao Santuário Eucarístico de Balasar para uma Vis
+ ita Guiada conduzida pelo Monsenhor Manuel Casado Neiva\, complementada po
+ r um momento musical a cargo de Diogo Zão. O primeiro fim de semana encer
+ ra a 15 de novembro\, domingo\, às 16h00\, na Igreja da Lapa\, que acolhe
+  as vozes do Coral Femenina Barbanza (vinda de Espanha)\, do Orfeão de Br
+ aga e do Coro de Pais da Academia de Música de Viana do Castelo. A músic
+ a regressa a 21 de novembro\, sábado\, centralizada no Diana-Bar. A tarde
+  começa às 17h00 com uma oficina de Prática Coral orientada por Patríc
+ ia Costa\, seguindo-se\, às 21h45\, as atuações do BJazz Choir (Guimar
+ ães)\, do Cantoencanto (Viana do Castelo) e do Corisco d’Aveiro. No dom
+ ingo\, 22 de novembro\, às 16h00\, os concertos passam para a Igreja da M
+ isericórdia\, com a participação do Orfeão Famalicense\, do Coro Anima
+ to (Lisboa) e das Voces Radiae (Porto). A reta final de novembro faz-se de
+  teoria e de apresentações ao ar livre. A 26 de novembro\, quinta-feira
+ \, às 18h00\, a Biblioteca Municipal Rocha Peixoto acolhe a conferência 
+ “A arte da Regência e As Formas Musicais”\, proferida por Sylvio Lago
+ . No sábado\, 28 de novembro\, às 21h45\, a Igreja São José de Ribamar
+  recebe os grupos Voz Nua (Aveiro)\, Ars Vocalis (Esposende) e Vocal Art E
+ nsemble (Paços de Ferreira). Logo no dia seguinte\, 29 de novembro\, domi
+ ngo\, o festival sai à rua: a Praça da República recebe os Coros do Con
+ celho às 15h00\, e a Praça do Almada enche-se de espírito natalício à
+ s 17h00 com o Coro Feliz Natal Póvoa de Varzim no arranque oficial das fe
+ stividades. Já em dezembro\, o eMCPV abre espaço à sétima arte na quin
+ ta-feira\, dia 3\, às 21h45\, no Cine-Teatro Garrett\, onde o Cine-Clube 
+ Octopus apresenta a projeção de EPiC: Elvis Presley in Concert. O últim
+ o fim de semana do encontro começa a 5 de dezembro\, sábado\, às 21h45
+ \, na Igreja Matriz\, com as prestações da Capella Bracarensis (Braga)\,
+  do Ensemble Ángel Barja de Vigo (Espanha) e do Nura Ensemble (Guimarães
+ ). O grande encerramento desta edição acontece a 6 de dezembro\, domingo
+ \, às 16h00\, marcando o regresso ao Santuário Eucarístico de Balasar p
+ ara um concerto conjunto do Coro Capela Marta\, da Capela Marta Júnior e 
+ da Orquestra Euracini.\n\nMais informação: https://www.cm-pvarzim.pt/eve
+ ntos/xiii-encontro-de-musica-coral-da-povoa-de-varzim/
+LAST-MODIFIED:20261027T153734Z
+LOCATION:Póvoa de Varzim
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/xiii-encontro-de-musica-coral-da-pov
+ oa-de-varzim/
+END:VEVENT
+END:VCALENDAR

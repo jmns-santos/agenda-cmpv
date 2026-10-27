@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Festa de Halloween
+DTSTART:20261030T193000Z
+DTEND:20261031T000000Z
+DTSTAMP:20261019T103653Z
+UID:ZmVzdGEtZGUtaGFsbG93ZWVufDIwMjYtMDktMjkgMTU6MDY6MDI=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura,Festas\, feiras e mercados
+DESCRIPTION:A Casa da Juventude vai transformar-se no cenário ideal para 
+ uma noite de terror no dia 30 de outubro.\n\nBilhetes e inscrições:\nAs 
+ inscrições são limitadas e obrigatórias\, devendo ser efetuadas presen
+ cialmente nas instalações da Casa da Juventude até ao dia 26 de outubro
+ .\n\nMais informação: https://www.cm-pvarzim.pt/eventos/festa-de-hallowe
+ en/
+LAST-MODIFIED:20261019T103653Z
+LOCATION:Casa da Juventude
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/festa-de-halloween/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Cinema "Verity"
+DTSTART:20261108T213000Z
+DTEND:20261108T231500Z
+DTSTAMP:20261021T082411Z
+UID:Y2luZW1hLXZlcml0eXwyMDI2LTEwLTIxIDA4OjIzOjI3@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Cinema
+DESCRIPTION:No dia 8 de novembro\, às 21h30\, será exibido\, no Cine-Tea
+ tro Garrett\, o thriller psicológico "Verity".\n\nBilhetes e inscrições
+ :\nEntradas: Os bilhetes custam 3\,50€ e estão à venda na BOL e no Cin
+ e-Teatro Garrett.\nBilhetes: https://www.bol.pt/Projecto/EntidadesAderente
+ s/3289-cine_teatro_garrett\n\nMais informação: https://www.cm-pvarzim.pt
+ /eventos/cinema-verity/
+LAST-MODIFIED:20261021T082411Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-verity/
+END:VEVENT
+END:VCALENDAR

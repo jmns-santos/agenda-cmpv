@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Mercado Aberto de Flores 2026
+DTSTART:20261031T060000Z
+DTEND:20261031T130000Z
+DTSTAMP:20260928T130805Z
+UID:bWVyY2Fkby1hYmVydG8tZGUtZmxvcmVzLTIwMjZ8MjAyNi0wOS0yOCAxMzowNDoyNA==@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Economia,Festas\, feiras e mercados
+DESCRIPTION:No dia 31 de outubro\, o Mercado Municipal vai realizar\, mais
+  uma edição do Mercado Aberto de Flores\, entre as 6h00 e as 13h00.\n\nB
+ ilhetes e inscrições:\nOs comerciantes do Mercado Municipal\, com estabe
+ lecimentos ou produção no concelho da Póvoa de Varzim devem efetuar a s
+ ua inscrição junto do Mercado Municipal (portaria)\, entre os dias 24 e 
+ 30 de outubro.\nTodos os esclarecimentos e inscrições podem ser obtidos 
+ através dos seguintes contactos: 252 616 099 ou mercadomunicipal@cm-pvarz
+ im.pt.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/mercado-abe
+ rto-de-flores-2026/
+LAST-MODIFIED:20260928T130805Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mercado-aberto-de-flores-2026/
+END:VEVENT
+END:VCALENDAR

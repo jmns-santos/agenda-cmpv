@@ -1,0 +1,111 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:美術、写真、歴史、文化遺産の展覧会.
+NAME:ポヴォア・デ・ヴァルジン：展覧会
+X-WR-CALNAME:ポヴォア・デ・ヴァルジン：展覧会
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/expo
+ sicoes-aviso-1s.ics
+X-APPLE-CALENDAR-COLOR:#8a7300
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Mostra de Pintura "ACERVO"
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20261101
+DTSTAMP:20260915T135707Z
+UID:bW9zdHJhLWRlLXBpbnR1cmEtYWNlcnZvfDIwMjYtMDktMTQgMDk6NDI6NDg=@agenda.cm
+ -pvarzim.pt
+CATEGORIES:文化,展覧会
+DESCRIPTION:Nos meses de setembro e outubro\, o auditório da Biblioteca M
+ unicipal acolhe a primeira Mostra do Ciclo ACERVO - Mostra de Pintura da B
+ iblioteca Municipal Rocha Peixoto.\n\nイベントのタイトルと説明
+ は、市が公開しているポルトガル語のままです。\n\n詳
+ 細: https://www.cm-pvarzim.pt/eventos/mostra-de-pintura-acervo/
+LAST-MODIFIED:20260915T135707Z
+LOCATION:Auditório da Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mostra-de-pintura-acervo/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Mostra de Pintura "ACERVO"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Exposição de fotografia "Olhares [in]Comuns"
+DTSTART:20261010T080000Z
+DTEND:20261031T190000Z
+DTSTAMP:20260930T095959Z
+UID:ZXhwb3NpY2FvLWRlLWZvdG9ncmFmaWEtb2xoYXJlcy1pbmNvbXVuc3wyMDI2LTA5LTMwID
+ A5OjU1OjUw@agenda.cm-pvarzim.pt
+CATEGORIES:文化,展覧会
+DESCRIPTION:Entre 10 e 31 de outubro\, estará patente na Biblioteca Munic
+ ipal\, a exposição de fotografia de Lídia Soares de Moura "Olhares [in]
+ Comuns".\n\nイベントのタイトルと説明は、市が公開して
+ いるポルトガル語のままです。\n\n詳細: https://www.cm-pvarz
+ im.pt/eventos/exposicao-de-fotografia-olhares-incomuns/
+LAST-MODIFIED:20260930T095959Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-olhares-inco
+ muns/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exposição de fotografia "Olhares [in]Comuns"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Exposição de pintura "Gesto de esperança"
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261116
+DTSTAMP:20261022T081718Z
+UID:ZXhwb3NpY2FvLWRlLXBpbnR1cmEtZ2VzdG8tZGUtZXNwZXJhbmNhfDIwMjYtMTAtMjIgMD
+ g6MTc6MTc=@agenda.cm-pvarzim.pt
+CATEGORIES:文化,展覧会
+DESCRIPTION:O Posto de Turismo dos Torreões vai acolher\, de 22 de outubr
+ o a 15 de novembro\, a exposição de pintura “Gesto de esperança”\, 
+ de Paulo Silva.\n\nイベントのタイトルと説明は、市が公開
+ しているポルトガル語のままです。\n\n詳細: https://www.cm
+ -pvarzim.pt/eventos/exposicao-de-pintura-gesto-de-esperanca/
+LAST-MODIFIED:20261022T081718Z
+LOCATION:Posto de Turismo dos Torreões
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-pintura-gesto-de-espera
+ nca/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exposição de pintura "Gesto de esperança"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Exposição de fotografia "Onde eu estiver"
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261129
+DTSTAMP:20261021T134628Z
+UID:ZXhwb3NpY2FvLWRlLWZvdG9ncmFmaWEtb25kZS1ldS1lc3RpdmVyfDIwMjYtMTAtMjEgMT
+ M6NDU6NTI=@agenda.cm-pvarzim.pt
+CATEGORIES:文化,展覧会
+DESCRIPTION:Entre os dias 4 e 28 de novembro\, estará patente na Bibliote
+ ca Municipal Rocha Peixoto a exposição de fotografia "Onde eu estiver"\,
+  da autoria de Francisca Machado.\n\nイベントのタイトルと説明
+ は、市が公開しているポルトガル語のままです。\n\n詳
+ 細: https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-onde-eu-est
+ iver/
+LAST-MODIFIED:20261021T134628Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-onde-eu-esti
+ ver/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exposição de fotografia "Onde eu estiver"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

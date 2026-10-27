@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Curso de Paleografia
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261129
+DTSTAMP:20261015T093004Z
+UID:Y3Vyc28tZGUtcGFsZW9ncmFmaWF8MjAyNi0xMC0xNSAwOTozMDowMw==@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Economia,Oficinas e atividades
+DESCRIPTION:Todas as sextas-feiras de novembro (6\, 13\, 20 e 27)\, o Arqu
+ ivo Municipal irá dinamizar um curso de paleografia\, destinado a públic
+ o em geral\, professores\, investigadores e estudantes.\n\nBilhetes e insc
+ rições:\nAs inscrições já se encontram abertas e são limitadas\, com
+  um custo fixo de 10\,00 (sujeito a pagamento no ato de inscrição)\, atr
+ avés do contacto 252 090 003 ou\, em alternativa\, do email arquivomunici
+ pal@cm-pvarzim.pt.\n\nMais informação: https://www.cm-pvarzim.pt/eventos
+ /curso-de-paleografia/
+LAST-MODIFIED:20261015T093004Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
+END:VEVENT
+END:VCALENDAR

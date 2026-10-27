@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Musical "Capuchinho Vermelho - o Musical"
+DTSTART:20261212T160000Z
+DTEND:20261212T173000Z
+DTSTAMP:20261022T153239Z
+UID:bXVzaWNhbC1jYXB1Y2hpbmhvLXZlcm1lbGhvLW8tbXVzaWNhbHwyMDI2LTEwLTIyIDE1Oj
+ MyOjM4@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Espetáculos
+DESCRIPTION:No dia 12 de dezembro\, o Cine-Teatro Garrett vai apresentar "
+ Capuchinho Vermelho - o Musical".\n\nBilhetes e inscrições:\nBilhetes: 1
+ 3€ (Plateia) e 11€ (Balcão).\nBilhetes: https://www.bol.pt/Comprar/Bi
+ lhetes/187698-capuchinho_vermelho_o_musical-cine_teatro_garrett/\n\nMais i
+ nformação: https://www.cm-pvarzim.pt/eventos/musical-capuchinho-vermelho
+ -o-musical/
+LAST-MODIFIED:20261022T153239Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/musical-capuchinho-vermelho-o-musica
+ l/
+END:VEVENT
+END:VCALENDAR

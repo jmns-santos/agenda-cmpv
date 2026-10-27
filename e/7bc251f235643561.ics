@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Concerto Comentado
+DTSTART:20261119T183000Z
+DTEND:20261119T200000Z
+DTSTAMP:20261020T110828Z
+UID:Y29uY2VydG8tY29tZW50YWRvfDIwMjYtMTAtMjAgMTE6MDg6Mjc=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura,Concertos
+DESCRIPTION:A Escola de Música da Póvoa de Varzim convida a comunidade a
+  assistir ao Concerto Comentado – Itinerários Internacionais do Repert
+ ório Violetístico\, que terá lugar no dia 19 de novembro\, às 18h30\, 
+ no Auditório Municipal.\n\nMais informação: https://www.cm-pvarzim.pt/e
+ ventos/concerto-comentado/
+LAST-MODIFIED:20261020T110828Z
+LOCATION:Auditório Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-comentado/
+END:VEVENT
+END:VCALENDAR

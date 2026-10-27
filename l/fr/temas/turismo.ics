@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Tourisme, gastronomie, vins, artisanat et promotion de Póvoa
+ .
+NAME:Póvoa de Varzim : Tourisme
+X-WR-CALNAME:Póvoa de Varzim : Tourisme
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/fr/temas/turi
+ smo.ics
+X-APPLE-CALENDAR-COLOR:#9e5d00
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+END:VCALENDAR

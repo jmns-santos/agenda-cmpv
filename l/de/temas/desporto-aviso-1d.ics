@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Wettkämpfe, Turniere und Bewegung.
+NAME:Póvoa de Varzim: Sport
+X-WR-CALNAME:Póvoa de Varzim: Sport
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/de/temas/desp
+ orto-aviso-1d.ics
+X-APPLE-CALENDAR-COLOR:#1b5e20
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Gala do Desporto
+DTSTART:20261120T213000Z
+DTEND:20261120T231500Z
+DTSTAMP:20261023T105742Z
+UID:Z2FsYS1kby1kZXNwb3J0by00fDIwMjYtMTAtMjMgMTA6NTc6NDE=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Sport,Gedenktage und Zeremonien
+DESCRIPTION:No dia 20 de novembro\, a Câmara Municipal da Póvoa de Varzi
+ m vai realizar mais uma edição da Gala do Desporto\, no Póvoa Arena.\n
+ \nTickets und Anmeldung (auf Portugiesisch):\nA entrada no evento é livre
+ \, mas sujeita a reserva (através do 915 150 275) e levantamento do bilhe
+ te.\n\nTitel und Beschreibung der Veranstaltung auf Portugiesisch\, wie vo
+ n der Stadt veröffentlicht.\n\nWeitere Informationen: https://www.cm-pvar
+ zim.pt/eventos/gala-do-desporto-4/
+LAST-MODIFIED:20261023T105742Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/gala-do-desporto-4/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Gala do Desporto
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

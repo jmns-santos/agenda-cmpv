@@ -11,6 +11,7 @@ X-WR-CALNAME:ポヴォア・デ・ヴァルジン：取り組み・キャ
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/acoe
  s-campanhas.ics
+X-APPLE-CALENDAR-COLOR:#546e7a
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 END:VCALENDAR

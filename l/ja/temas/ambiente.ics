@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:自然、気候、エネルギー、水、ごみ、リサイ
+ クル.
+NAME:ポヴォア・デ・ヴァルジン：環境
+X-WR-CALNAME:ポヴォア・デ・ヴァルジン：環境
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/ambi
+ ente.ics
+X-APPLE-CALENDAR-COLOR:#004d40
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Oficina "Do Plástico fiz Sardinha"
+DTSTART:20261031T103000Z
+DTEND:20261031T123000Z
+DTSTAMP:20260831T105731Z
+UID:b2ZpY2luYS1kby1wbGFzdGljby1maXotc2FyZGluaGF8MjAyNi0wOC0zMSAwOTo1MjoyNg
+ ==@agenda.cm-pvarzim.pt
+CATEGORIES:環境,ワークショップ・アクティビティ
+DESCRIPTION:No dia 31 de outubro\, pelas 10h30\, o Café-Concerto do Cine-
+ Teatro Garrett vai acolher a Oficina "Do Plástico fiz Sardinha".\n\nチ
+ ケット・申し込み（ポルトガル語）：\nOs bilhetes custam 5
+ \,00€ e estão à venda no Cine-Teatro Garrett.\n\nイベントのタイ
+ トルと説明は、市が公開しているポルトガル語のまま
+ です。\n\n詳細: https://www.cm-pvarzim.pt/eventos/oficina-do-plastico
+ -fiz-sardinha/
+LAST-MODIFIED:20260831T105731Z
+LOCATION:Cine-Teatro Garrett - Café-Concerto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/oficina-do-plastico-fiz-sardinha/
+END:VEVENT
+END:VCALENDAR

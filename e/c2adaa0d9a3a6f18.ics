@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Exposição de fotografia "Onde eu estiver"
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261129
+DTSTAMP:20261021T134628Z
+UID:ZXhwb3NpY2FvLWRlLWZvdG9ncmFmaWEtb25kZS1ldS1lc3RpdmVyfDIwMjYtMTAtMjEgMT
+ M6NDU6NTI=@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Exposições
+DESCRIPTION:Entre os dias 4 e 28 de novembro\, estará patente na Bibliote
+ ca Municipal Rocha Peixoto a exposição de fotografia "Onde eu estiver"\,
+  da autoria de Francisca Machado.\n\nMais informação: https://www.cm-pva
+ rzim.pt/eventos/exposicao-de-fotografia-onde-eu-estiver/
+LAST-MODIFIED:20261021T134628Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-onde-eu-esti
+ ver/
+END:VEVENT
+END:VCALENDAR

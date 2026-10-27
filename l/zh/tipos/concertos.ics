@@ -9,6 +9,7 @@ X-WR-CALNAME:波武阿-迪瓦尔津：音乐会
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/conc
  ertos.ics
+X-APPLE-CALENDAR-COLOR:#d32f2f
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
@@ -180,7 +181,7 @@ DTEND:20261204T233000Z
 DTSTAMP:20261001T145442Z
 UID:ZGVpeGVtLW8tcGltYmEtZW0tcGF6LTJ8MjAyNi0xMC0wMSAxNDo0OToxOA==@agenda.cm
  -pvarzim.pt
-CATEGORIES:社区与公民生活,音乐会
+CATEGORIES:公民生活,音乐会
 DESCRIPTION:Estreado em 2013\, “Deixem o Pimba em Paz” conquistou o p
  úblico com uma reinterpretação irreverente do repertório pimba\, tendo
   percorrido Portugal de Norte a Sul\, ilhas incluídas\, e atravessando fr

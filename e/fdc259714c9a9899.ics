@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Teatro "Quando Menos se Espera"
+DTSTART:20261201T213000Z
+DTEND:20261202T233000Z
+DTSTAMP:20261014T135909Z
+UID:dGVhdHJvLXF1YW5kby1tZW5vcy1zZS1lc3BlcmF8MjAyNi0wOS0wNCAwOTozMjowNg==@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultura,Teatro
+DESCRIPTION:Nos dias 1 e 2 de dezembro\, pelas 21h30\, sobe ao palco do Ci
+ ne-Teatro Garrett a peça "Quando Menos se Espera".\n\nBilhetes e inscriç
+ ões:\nAs entradas custam 27€ e os bilhetes estão na venda na BOL e no 
+ Cine-Teatro Garrett\nBilhetes: https://www.bol.pt/Comprar/Bilhetes/185536-
+ quando_menos_se_espera-cine_teatro_garrett/\n\nMais informação: https://
+ www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
+LAST-MODIFIED:20261014T135909Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
+END:VEVENT
+END:VCALENDAR

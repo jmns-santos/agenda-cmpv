@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Three Sixty Halloween
+DTSTART:20261031T220000Z
+DTEND:20261101T040000Z
+DTSTAMP:20261019T103529Z
+UID:dGhyZWUtc2l4dHktaGFsbG93ZWVufDIwMjYtMDktMjkgMTE6NTU6NTc=@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Cultura,Festas\, feiras e mercados
+DESCRIPTION:O Three Sixty Halloween é um evento de entretenimento e músi
+ ca comercial\, a realizar no dia 31 de outubro\, no Póvoa Arena\, com uma
+  lotação prevista de até 5.000 pessoas.\n\nBilhetes e inscrições:\nOs
+  bilhetes estão à venda em\nBilhetes: https://3cket.com/pt/event/three-s
+ ixty-colosseum-of-terror\n\nMais informação: https://www.cm-pvarzim.pt/e
+ ventos/three-sixty-halloween/
+LAST-MODIFIED:20261019T103529Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/three-sixty-halloween/
+END:VEVENT
+END:VCALENDAR

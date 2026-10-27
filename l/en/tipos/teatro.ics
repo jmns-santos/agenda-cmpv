@@ -9,6 +9,7 @@ X-WR-CALNAME:Póvoa de Varzim: Theatre
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/en/tipos/teat
  ro.ics
+X-APPLE-CALENDAR-COLOR:#c2185b
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT

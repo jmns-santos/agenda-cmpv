@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Lavorada Mensal
+DTSTART:20261114T143000Z
+DTEND:20261114T180000Z
+DTSTAMP:20261021T140720Z
+UID:bGF2b3JhZGEtbWVuc2FsLTN8MjAyNi0xMC0yMSAxNDowNzoxOA==@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura,Oficinas e atividades
+DESCRIPTION:Segundo sábado do mês é dia de Lavorada Mensal\, na Bibliot
+ eca Municipal Rocha Peixoto. Assim\, na tarde de 14 de novembro\, entre as
+  14h30 e as 18h00\, a Associação Lavorada ensina a fazer um xaile para o
+ s dias de outono\, por entre castanhas e geropiga.\n\nMais informação: h
+ ttps://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
+LAST-MODIFIED:20261021T140720Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Teatro "Los Virtuosos"
+DTSTART:20261107T213000Z
+DTEND:20261107T230000Z
+DTSTAMP:20261020T092112Z
+UID:dGVhdHJvLWxvcy12aXJ0dW9zb3N8MjAyNi0xMC0yMCAwOToyMToxMQ==@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Cultura,Teatro
+DESCRIPTION:No âmbito da Temporada Teatral\, a Varazim Teatro apresenta\,
+  a 7 de novembro\, pelas 21h30\, a peça "Los Virtuosos" pelo Teatro del A
+ stillero\, no Cine-Teatro Garrett.\n\nBilhetes e inscrições:\nAs entrada
+ s custam 7€\, com desconto para estudantes\, reformados ou aposentados\,
+  menores de 30 anos e maiores de 65 anos\, desempregados\, pessoas com inc
+ apacidade ou deficiência e surdos\, grupo de 8 pessoas ou mais\, família
+ s numerosas (5 pessoas ou mais): 5€.\nPara sócios e portadores do Cart
+ ão de Amigo da Varazim e Associados da Acapo: 3\,50€.\nOs bilhetes est
+ ão à venda no Cine-Teatro Garrett\, BOL\, CTT\, FNAC\, WORTEN.\n\nMais i
+ nformação: https://www.cm-pvarzim.pt/eventos/teatro-los-virtuosos/
+LAST-MODIFIED:20261020T092112Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-los-virtuosos/
+END:VEVENT
+END:VCALENDAR

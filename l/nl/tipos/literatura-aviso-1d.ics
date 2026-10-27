@@ -1,0 +1,367 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Boeken, lezen, poëzie en verhalen.
+NAME:Póvoa de Varzim: Literatuur
+X-WR-CALNAME:Póvoa de Varzim: Literatuur
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/nl/tipos/lite
+ ratura-aviso-1d.ics
+X-APPLE-CALENDAR-COLOR:#795548
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Mês Internacional da Biblioteca Escolar (MIBE) Bibliotecas\, Lite
+ racia e Inteligência artificial
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261031
+DTSTAMP:20261006T100859Z
+UID:bWVzLWludGVybmFjaW9uYWwtZGEtYmlibGlvdGVjYS1lc2NvbGFyLW1pYmUtYmlibGlvdG
+ VjYXMtbGl0ZXJhY2lhLWUtaW50ZWxpZ2VuY2lhLWFydGlmaWNpYWx8MjAyNi0wOS0zMCAxMTow
+ NjozMg==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultuur,Literatuur
+DESCRIPTION:Durante o mês de outubro\, a Biblioteca Municipal Rocha Peixo
+ to associa-se à celebração do Mês Internacional da Biblioteca Escolar
+ \, promovendo um conjunto de três iniciativas que aproximam livros\, leit
+ ores e novas tecnologias. As atividades serão feitas em parceria com as B
+ ibliotecas Escolares do Concelho da Póvoa de Varzim\, dos cinco agrupamen
+ tos de escolas e das escolas secundárias.\n\nTitel en beschrijving van he
+ t evenement in het Portugees\, zoals gepubliceerd door de gemeente.\n\nMee
+ r informatie: https://www.cm-pvarzim.pt/eventos/mes-internacional-da-bibli
+ oteca-escolar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
+LAST-MODIFIED:20261006T100859Z
+LOCATION:-
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esco
+ lar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Mês Internacional da Biblioteca Escolar (MIBE) Bibliotecas\, 
+ Literacia e Inteligência artificial
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sessão de leitura e Oficina de expressão plástica
+DTSTART:20261031T153000Z
+DTEND:20261031T173000Z
+DTSTAMP:20261012T150549Z
+UID:c2Vzc2FvLWRlLWxlaXR1cmEtZS1vZmljaW5hLWRlLWV4cHJlc3Nhby1wbGFzdGljYXwyMD
+ I2LTEwLTEyIDE1OjA1OjQ4@agenda.cm-pvarzim.pt
+CATEGORIES:Cultuur,Literatuur
+DESCRIPTION:No dia 31 de outubro\, a Biblioteca Municipal Rocha Peixoto va
+ i apresentar uma sessão de leitura do conto "O Ladrão de Folhas" de Alic
+ e Hemming e ilustração: Nicola Slater\; seguida de uma oficina de expres
+ são plástica com folhas do jardim.\n\nKaartjes en inschrijving (in het P
+ ortugees):\nA atividade é gratuita e os interessados devem realizar a sua
+  inscrição através de email biblioteca@cm-pvarzim.pt\, telefone 252 616
+  000 ou presencialmente na Biblioteca Municipal.\n\nTitel en beschrijving 
+ van het evenement in het Portugees\, zoals gepubliceerd door de gemeente.
+ \n\nMeer informatie: https://www.cm-pvarzim.pt/eventos/sessao-de-leitura-e
+ -oficina-de-expressao-plastica/
+LAST-MODIFIED:20261012T150549Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sessao-de-leitura-e-oficina-de-expre
+ ssao-plastica/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sessão de leitura e Oficina de expressão plástica
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Apresentação do livro "O chapéu\, o olho\, a cadeira e a sereia
+ : quatro breves histórias"
+DTSTART:20261107T160000Z
+DTEND:20261206T183000Z
+DTSTAMP:20261021T135603Z
+UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tY2hhcGV1LW8tb2xoby1hLWNhZGVpcmEtZS1hLX
+ NlcmVpYS1xdWF0cm8tYnJldmVzLWhpc3Rvcmlhc3wyMDI2LTEwLTIxIDEzOjU2OjAy@agenda.
+ cm-pvarzim.pt
+CATEGORIES:Cultuur,Literatuur
+DESCRIPTION:A Biblioteca Municipal Rocha Peixoto irá acolher\, no dia 7 d
+ e novembro\, às 16h00\, a sessão de apresentação do livro O chapéu\, 
+ o olho\, a cadeira e a sereia: quatro breves histórias\, da autoria de Ja
+ imemorto.\n\nTitel en beschrijving van het evenement in het Portugees\, zo
+ als gepubliceerd door de gemeente.\n\nMeer informatie: https://www.cm-pvar
+ zim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olho-a-cadeira-e-a-sereia-
+ quatro-breves-historias/
+LAST-MODIFIED:20261021T135603Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olh
+ o-a-cadeira-e-a-sereia-quatro-breves-historias/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Apresentação do livro "O chapéu\, o olho\, a cadeira e a se
+ reia: quatro breves histórias"
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cais de Leitura
+DTSTART:20261110T210000Z
+DTEND:20261110T224500Z
+DTSTAMP:20261021T135838Z
+UID:Y2Fpcy1kZS1sZWl0dXJhLTIxfDIwMjYtMTAtMjEgMTM6NTg6Mzc=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultuur,Literatuur
+DESCRIPTION:No âmbito da sua programação em ambiente digital\, a Biblio
+ teca Municipal Rocha Peixoto volta a marcar encontro online para falar sob
+ re livros\, no dia 10 de novembro\, às 21h00.\n\nTitel en beschrijving va
+ n het evenement in het Portugees\, zoals gepubliceerd door de gemeente.\n
+ \nMeer informatie: https://www.cm-pvarzim.pt/eventos/cais-de-leitura-21/
+LAST-MODIFIED:20261021T135838Z
+LOCATION:online
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cais-de-leitura-21/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cais de Leitura
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Clube de Leituras Marítimas "Livros de Marear"
+DTSTART:20261114T150000Z
+DTEND:20261114T164500Z
+DTSTAMP:20261021T142549Z
+UID:Y2x1YmUtZGUtbGVpdHVyYXMtbWFyaXRpbWFzLWxpdnJvcy1kZS1tYXJlYXItNnwyMDI2LT
+ EwLTIxIDE0OjI1OjQ4@agenda.cm-pvarzim.pt
+CATEGORIES:Cultuur,Literatuur
+DESCRIPTION:No dia 14 de novembro\, às 15h00\, a Biblioteca Municipal Roc
+ ha Peixoto acolhe mais um encontro do Clube de Leituras Marítimas "Livros
+  de Marear".\n\nTitel en beschrijving van het evenement in het Portugees\,
+  zoals gepubliceerd door de gemeente.\n\nMeer informatie: https://www.cm-p
+ varzim.pt/eventos/clube-de-leituras-maritimas-livros-de-marear-6/
+LAST-MODIFIED:20261021T142549Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/clube-de-leituras-maritimas-livros-d
+ e-marear-6/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Clube de Leituras Marítimas "Livros de Marear"
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lançamento do livro “A Póvoa de Varzim na Belle Époque: panor
+ ama da vida cultural e do turismo balnear”
+DTSTART:20261116T213000Z
+DTEND:20261116T230000Z
+DTSTAMP:20261027T155206Z
+UID:bGFuY2FtZW50by1kby1saXZyby1hLXBvdm9hLWRlLXZhcnppbS1uYS1iZWxsZS1lcG9xdW
+ UtcGFub3JhbWEtZGEtdmlkYS1jdWx0dXJhbC1lLWRvLXR1cmlzbW8tYmFsbmVhcnwyMDI2LTEw
+ LTI3IDE1OjUyOjA1@agenda.cm-pvarzim.pt
+CATEGORIES:Cultuur,Literatuur
+DESCRIPTION:No dia 16 de novembro\, às 21h30\, será lançado\, no Museu 
+ Municipal\, o livro Lançamento do livro “A Póvoa de Varzim na Belle É
+ poque: panorama da vida cultural e do turismo balnear”.\n\nTitel en besc
+ hrijving van het evenement in het Portugees\, zoals gepubliceerd door de g
+ emeente.\n\nMeer informatie: https://www.cm-pvarzim.pt/eventos/lancamento-
+ do-livro-a-povoa-de-varzim-na-belle-epoque-panorama-da-vida-cultural-e-do-
+ turismo-balnear/
+LAST-MODIFIED:20261027T155206Z
+LOCATION:Museu Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-a-povoa-de-varzi
+ m-na-belle-epoque-panorama-da-vida-cultural-e-do-turismo-balnear/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Lançamento do livro “A Póvoa de Varzim na Belle Époque: p
+ anorama da vida cultural e do turismo balnear”
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Apresentação do livro infantil "Cachalote\, a baleia com a cauda
+  plástica"
+DTSTART:20261118T100000Z
+DTEND:20261118T120000Z
+DTSTAMP:20261022T084850Z
+UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLWluZmFudGlsLWNhY2hhbG90ZS1hLWJhbGVpYS1jb2
+ 0tYS1jYXVkYS1wbGFzdGljYXwyMDI2LTEwLTIyIDA4OjQ4OjI2@agenda.cm-pvarzim.pt
+CATEGORIES:Cultuur,Literatuur
+DESCRIPTION:O Dia Nacional do Mar celebra-se a 16 de novembro. Para assina
+ lar esta efeméride\, a Biblioteca Municipal Rocha Peixito irá dinamizar 
+ uma sessão de apresentação do livro infantil “Cachalote\, a baleia co
+ m a cauda plástica”\, de Luciana Vampré di Monte\, no dia 18 de novemb
+ ro\, a partir das 10h00.\n\nTitel en beschrijving van het evenement in het
+  Portugees\, zoals gepubliceerd door de gemeente.\n\nMeer informatie: http
+ s://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-infantil-cachalote-a-b
+ aleia-com-a-cauda-plastica/
+LAST-MODIFIED:20261022T084850Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-infantil-cacha
+ lote-a-baleia-com-a-cauda-plastica/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Apresentação do livro infantil "Cachalote\, a baleia com a c
+ auda plástica"
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Apresentação do livro "O extremo afiado do espelho"
+DTSTART:20261121T160000Z
+DTEND:20261121T180000Z
+DTSTAMP:20261023T091258Z
+UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tZXh0cmVtby1hZmlhZG8tZG8tZXNwZWxob3wyMD
+ I2LTEwLTIzIDA5OjEyOjU3@agenda.cm-pvarzim.pt
+CATEGORIES:Cultuur,Literatuur
+DESCRIPTION:A Biblioteca Municipal Rocha Peixoto irá acolher\, no dia 21 
+ de novembro\, a partir das 16h00\, a sessão de apresentação do livro "O
+  extremo afiado do espelho"\, de Mário Amazan. A apresentação da obra s
+ erá feita pelo escritor Vítor da Rocha.\n\nTitel en beschrijving van het
+  evenement in het Portugees\, zoals gepubliceerd door de gemeente.\n\nMeer
+  informatie: https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-ext
+ remo-afiado-do-espelho/
+LAST-MODIFIED:20261023T091258Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-extremo-afia
+ do-do-espelho/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Apresentação do livro "O extremo afiado do espelho"
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sessão de leitura "A ovelhinha que veio para jantar"
+DTSTART:20261121T160000Z
+DTEND:20261121T174500Z
+DTSTAMP:20261022T085515Z
+UID:c2Vzc2FvLWRlLWxlaXR1cmEtYS1vdmVsaGluaGEtcXVlLXZlaW8tcGFyYS1qYW50YXJ8Mj
+ AyNi0xMC0yMiAwODo1NToxNA==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultuur,Literatuur
+DESCRIPTION:No dia 21 de novembro\, às 16h00\, a Biblioteca Municipal ir
+ á promover a sessão de leitura para pais e bebés "A ovelhinha que veio 
+ para jantar"\, dinamizada por Ana Sofia Maia.\n\nKaartjes en inschrijving 
+ (in het Portugees):\nAs inscrições para esta atividade\, destinada a beb
+ és entre os 12 e 48 meses\, são gratuitas\, mas obrigatórias\, através
+  do email biblioteca@cm-pvarzim.pt\, do telefone 252 616 000\, ou\, em alt
+ ernativa\, presencialmente\, na Biblioteca Municipal.\n\nTitel en beschrij
+ ving van het evenement in het Portugees\, zoals gepubliceerd door de gemee
+ nte.\n\nMeer informatie: https://www.cm-pvarzim.pt/eventos/sessao-de-leitu
+ ra-a-ovelhinha-que-veio-para-jantar/
+LAST-MODIFIED:20261022T085515Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sessao-de-leitura-a-ovelhinha-que-ve
+ io-para-jantar/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sessão de leitura "A ovelhinha que veio para jantar"
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Póvoa Conto a Conto
+DTSTART:20261128T151500Z
+DTEND:20261128T170000Z
+DTSTAMP:20261026T103527Z
+UID:cG92b2EtY29udG8tYS1jb250by01fDIwMjYtMTAtMjYgMTA6MzU6MjY=@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Cultuur,Literatuur
+DESCRIPTION:A Ethos\, Pathos\, Logos — Associação e a Biblioteca Munic
+ ipal Rocha Peixoto colaboram novamente em momentos de leitura seguidos de 
+ actividades didáticas\, desta vez numa exploração do património poveir
+ o enquanto força motriz!\n\nKaartjes en inschrijving (in het Portugees):
+ \nAs sessões da Póvoa Conto a Conto são destinadas a crianças entre os
+  5 e os 12 anos de idade\, e sujeitas a inscrição em biblioteca@cm-pvarz
+ im.pt\, 252 616 000 ou presencialmente\, na Biblioteca Municipal.\n\nTitel
+  en beschrijving van het evenement in het Portugees\, zoals gepubliceerd d
+ oor de gemeente.\n\nMeer informatie: https://www.cm-pvarzim.pt/eventos/pov
+ oa-conto-a-conto-5/
+LAST-MODIFIED:20261026T103527Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/povoa-conto-a-conto-5/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Póvoa Conto a Conto
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Histórias com Yoga
+DTSTART:20261205T153000Z
+DTEND:20261205T171500Z
+DTSTAMP:20261026T104129Z
+UID:aGlzdG9yaWFzLWNvbS15b2dhfDIwMjYtMTAtMjYgMTA6NDE6Mjg=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultuur,Literatuur
+DESCRIPTION:O Projeto Luminisca e a Biblioteca Municipal Rocha Peixoto vol
+ tam a convidar as famílias a embarcarem numa viagem pelo mundo dos livros
+ \, das emoções e do yoga\, no próximo sábado\, 5 de dezembro\, às 15h
+ 30.\n\nKaartjes en inschrijving (in het Portugees):\nO número máximo de 
+ participantes é 30 pessoas\, sendo que inscrição no evento é gratuita
+ \, mas obrigatória\, através dos seguintes meios: email biblioteca@cm-pv
+ arzim.pt\; telefone 252 616 000 ou presencialmente na Biblioteca Municipal
+ .\n\nTitel en beschrijving van het evenement in het Portugees\, zoals gepu
+ bliceerd door de gemeente.\n\nMeer informatie: https://www.cm-pvarzim.pt/e
+ ventos/historias-com-yoga/
+LAST-MODIFIED:20261026T104129Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Histórias com Yoga
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cais de Leitura
+DTSTART:20261215T210000Z
+DTEND:20261215T233000Z
+DTSTAMP:20261021T140206Z
+UID:Y2Fpcy1kZS1sZWl0dXJhLTIyfDIwMjYtMTAtMjEgMTQ6MDE6MDY=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultuur,Literatuur
+DESCRIPTION:No âmbito da sua programação em ambiente digital\, a Biblio
+ teca Municipal Rocha Peixoto volta a marcar encontro online para falar sob
+ re livros\, no dia 15 de dezembro\, às 21h00.\n\nTitel en beschrijving va
+ n het evenement in het Portugees\, zoals gepubliceerd door de gemeente.\n
+ \nMeer informatie: https://www.cm-pvarzim.pt/eventos/cais-de-leitura-22/
+LAST-MODIFIED:20261021T140206Z
+LOCATION:online
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cais-de-leitura-22/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cais de Leitura
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:"No meu tempo dou-te um conto"
+DTSTART:20261216T100000Z
+DTEND:20261216T120000Z
+DTSTAMP:20261026T104709Z
+UID:bm8tbWV1LXRlbXBvLWRvdS10ZS11bS1jb250by0yNXwyMDI2LTEwLTI2IDEwOjQ2OjEy@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultuur,Literatuur
+DESCRIPTION:No dia 16 de dezembro\, às 10h00\, a Biblioteca Municipal vai
+  promover a iniciativa “No meu tempo\, dou-te um conto”\, com a leitur
+ a da história "O Anjo Tobias e a Rochinha de Natal” de Maria Aurora Car
+ valho Homem.\n\nTitel en beschrijving van het evenement in het Portugees\,
+  zoals gepubliceerd door de gemeente.\n\nMeer informatie: https://www.cm-p
+ varzim.pt/eventos/no-meu-tempo-dou-te-um-conto-25/
+LAST-MODIFIED:20261026T104709Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/no-meu-tempo-dou-te-um-conto-25/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:"No meu tempo dou-te um conto"
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

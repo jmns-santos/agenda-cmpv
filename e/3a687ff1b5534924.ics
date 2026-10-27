@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Concerto "Disco Voador"
+DTSTART:20261030T213000Z
+DTEND:20261030T233000Z
+DTSTAMP:20260810T092500Z
+UID:Y29uY2VydG8tZGlzY28tdm9hZG9yfDIwMjYtMDgtMTAgMDk6MjQ6NTk=@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Cultura,Concertos
+DESCRIPTION:No dia 30 de outubro\, às 21h30\, o Café-Concerto vai acolhe
+ r um concerto com Disco Voador.\n\nBilhetes e inscrições:\nOs bilhetes c
+ ustam 5\,00€ e estão à venda na BOL e no Cine-Teatro Garrett\nBilhetes
+ : https://www.bol.pt/Comprar/Bilhetes/183236-disco_voador-cine_teatro_garr
+ ett/\n\nMais informação: https://www.cm-pvarzim.pt/eventos/concerto-disc
+ o-voador/
+LAST-MODIFIED:20260810T092500Z
+LOCATION:Cine-Teatro Garrett - Café-Concerto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-disco-voador/
+END:VEVENT
+END:VCALENDAR

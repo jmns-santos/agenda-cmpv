@@ -1,0 +1,66 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:舞蹈、马戏、魔术、喜剧、音乐剧与街头表演.
+NAME:波武阿-迪瓦尔津：表演
+X-WR-CALNAME:波武阿-迪瓦尔津：表演
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/espe
+ taculos-aviso-1s.ics
+X-APPLE-CALENDAR-COLOR:#e07b00
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Espetáculo de dança "AmarAmália"
+DTSTART:20261121T210000Z
+DTEND:20261121T230000Z
+DTSTAMP:20261023T152912Z
+UID:ZXNwZXRhY3Vsby1kZS1kYW5jYS1hbWFyYW1hbGlhfDIwMjYtMTAtMjMgMTU6Mjk6MTE=@a
+ genda.cm-pvarzim.pt
+CATEGORIES:文化,表演
+DESCRIPTION:No dia 21 de novembro\, às 21h00\, sobe ao palco do Cine-Teat
+ ro Garrett\, o espetáculo "AmarAmália"\, pela Companhia Portuguesa de Ba
+ ilado Contemporâneo.\n\n门票与报名（葡萄牙语）：\nOs bilhetes
+  custam 20\,00€ (Plateia) e 15\,00€ (Camarotes/ Balcão).\n\n活动标
+ 题和说明为葡萄牙语，与市政府发布的内容一致。\n\n更
+ 多信息: https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-amaramali
+ a/
+LAST-MODIFIED:20261023T152912Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-amaramalia/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Espetáculo de dança "AmarAmália"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Musical "Capuchinho Vermelho - o Musical"
+DTSTART:20261212T160000Z
+DTEND:20261212T173000Z
+DTSTAMP:20261022T153239Z
+UID:bXVzaWNhbC1jYXB1Y2hpbmhvLXZlcm1lbGhvLW8tbXVzaWNhbHwyMDI2LTEwLTIyIDE1Oj
+ MyOjM4@agenda.cm-pvarzim.pt
+CATEGORIES:文化,表演
+DESCRIPTION:No dia 12 de dezembro\, o Cine-Teatro Garrett vai apresentar "
+ Capuchinho Vermelho - o Musical".\n\n门票与报名（葡萄牙语）：
+ \nBilhetes: 13€ (Plateia) e 11€ (Balcão).\n门票: https://www.bol.pt
+ /Comprar/Bilhetes/187698-capuchinho_vermelho_o_musical-cine_teatro_garrett
+ /\n\n活动标题和说明为葡萄牙语，与市政府发布的内容一
+ 致。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/musical-capuchin
+ ho-vermelho-o-musical/
+LAST-MODIFIED:20261022T153239Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/musical-capuchinho-vermelho-o-musica
+ l/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Musical "Capuchinho Vermelho - o Musical"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

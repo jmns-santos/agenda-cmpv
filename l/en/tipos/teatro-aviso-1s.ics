@@ -1,0 +1,97 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Plays, street theatre, puppets and staged readings.
+NAME:Póvoa de Varzim: Theatre
+X-WR-CALNAME:Póvoa de Varzim: Theatre
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/en/tipos/teat
+ ro-aviso-1s.ics
+X-APPLE-CALENDAR-COLOR:#c2185b
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Teatro "Los Virtuosos"
+DTSTART:20261107T213000Z
+DTEND:20261107T230000Z
+DTSTAMP:20261020T092112Z
+UID:dGVhdHJvLWxvcy12aXJ0dW9zb3N8MjAyNi0xMC0yMCAwOToyMToxMQ==@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Culture,Theatre
+DESCRIPTION:No âmbito da Temporada Teatral\, a Varazim Teatro apresenta\,
+  a 7 de novembro\, pelas 21h30\, a peça "Los Virtuosos" pelo Teatro del A
+ stillero\, no Cine-Teatro Garrett.\n\nTickets and registration (in Portugu
+ ese):\nAs entradas custam 7€\, com desconto para estudantes\, reformados
+  ou aposentados\, menores de 30 anos e maiores de 65 anos\, desempregados
+ \, pessoas com incapacidade ou deficiência e surdos\, grupo de 8 pessoas 
+ ou mais\, famílias numerosas (5 pessoas ou mais): 5€.\nPara sócios e p
+ ortadores do Cartão de Amigo da Varazim e Associados da Acapo: 3\,50€.
+ \nOs bilhetes estão à venda no Cine-Teatro Garrett\, BOL\, CTT\, FNAC\, 
+ WORTEN.\n\nEvent title and description in Portuguese\, as published by the
+  municipality.\n\nMore information: https://www.cm-pvarzim.pt/eventos/teat
+ ro-los-virtuosos/
+LAST-MODIFIED:20261020T092112Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-los-virtuosos/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Teatro "Los Virtuosos"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro "Quando Menos se Espera"
+DTSTART:20261201T213000Z
+DTEND:20261202T233000Z
+DTSTAMP:20261014T135909Z
+UID:dGVhdHJvLXF1YW5kby1tZW5vcy1zZS1lc3BlcmF8MjAyNi0wOS0wNCAwOTozMjowNg==@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Culture,Theatre
+DESCRIPTION:Nos dias 1 e 2 de dezembro\, pelas 21h30\, sobe ao palco do Ci
+ ne-Teatro Garrett a peça "Quando Menos se Espera".\n\nTickets and registr
+ ation (in Portuguese):\nAs entradas custam 27€ e os bilhetes estão na v
+ enda na BOL e no Cine-Teatro Garrett\nTickets: https://www.bol.pt/Comprar/
+ Bilhetes/185536-quando_menos_se_espera-cine_teatro_garrett/\n\nEvent title
+  and description in Portuguese\, as published by the municipality.\n\nMore
+  information: https://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-esp
+ era/
+LAST-MODIFIED:20261014T135909Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Teatro "Quando Menos se Espera"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro para bebés “A Árvore das Chupetas”
+DTSTART:20261205T110000Z
+DTEND:20261205T123000Z
+DTSTAMP:20261022T153318Z
+UID:dGVhdHJvLXBhcmEtYmViZXMtYS1hcnZvcmUtZGFzLWNodXBldGFzLTJ8MjAyNi0xMC0yMi
+ AxNTowNjowNA==@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Theatre
+DESCRIPTION:No dia 5 de dezembro\, às 11h00\, terá lugar\, no Cine-Teatr
+ o Garrett\, teatro para toda a família.\n\nTickets and registration (in P
+ ortuguese):\nBilhetes: 9€.\nTickets: https://www.bol.pt/Comprar/Bilhetes
+ /187696-a_arvore_das_chupetas_teatro_para_bebes-cine_teatro_garrett/\n\nEv
+ ent title and description in Portuguese\, as published by the municipality
+ .\n\nMore information: https://www.cm-pvarzim.pt/eventos/teatro-para-bebes
+ -a-arvore-das-chupetas-2/
+LAST-MODIFIED:20261022T153318Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-para-bebes-a-arvore-das-chupe
+ tas-2/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Teatro para bebés “A Árvore das Chupetas”
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

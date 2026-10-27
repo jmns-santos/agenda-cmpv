@@ -1,0 +1,1291 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Musique, cinéma, théâtre, expositions, livres et patrimoin
+ e.
+NAME:Póvoa de Varzim : Culture
+X-WR-CALNAME:Póvoa de Varzim : Culture
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/fr/temas/cult
+ ura-aviso-1s.ics
+X-APPLE-CALENDAR-COLOR:#8e1b4f
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Mostra de Pintura "ACERVO"
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20261101
+DTSTAMP:20260915T135707Z
+UID:bW9zdHJhLWRlLXBpbnR1cmEtYWNlcnZvfDIwMjYtMDktMTQgMDk6NDI6NDg=@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Culture,Expositions
+DESCRIPTION:Nos meses de setembro e outubro\, o auditório da Biblioteca M
+ unicipal acolhe a primeira Mostra do Ciclo ACERVO - Mostra de Pintura da B
+ iblioteca Municipal Rocha Peixoto.\n\nTitre et description de l'événemen
+ t en portugais\, tels que publiés par la municipalité.\n\nPlus d'informa
+ tions: https://www.cm-pvarzim.pt/eventos/mostra-de-pintura-acervo/
+LAST-MODIFIED:20260915T135707Z
+LOCATION:Auditório da Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mostra-de-pintura-acervo/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Mostra de Pintura "ACERVO"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Exposição de fotografia "Olhares [in]Comuns"
+DTSTART:20261010T080000Z
+DTEND:20261031T190000Z
+DTSTAMP:20260930T095959Z
+UID:ZXhwb3NpY2FvLWRlLWZvdG9ncmFmaWEtb2xoYXJlcy1pbmNvbXVuc3wyMDI2LTA5LTMwID
+ A5OjU1OjUw@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Expositions
+DESCRIPTION:Entre 10 e 31 de outubro\, estará patente na Biblioteca Munic
+ ipal\, a exposição de fotografia de Lídia Soares de Moura "Olhares [in]
+ Comuns".\n\nTitre et description de l'événement en portugais\, tels que 
+ publiés par la municipalité.\n\nPlus d'informations: https://www.cm-pvar
+ zim.pt/eventos/exposicao-de-fotografia-olhares-incomuns/
+LAST-MODIFIED:20260930T095959Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-olhares-inco
+ muns/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exposição de fotografia "Olhares [in]Comuns"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mês Internacional da Biblioteca Escolar (MIBE) Bibliotecas\, Lite
+ racia e Inteligência artificial
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261031
+DTSTAMP:20261006T100859Z
+UID:bWVzLWludGVybmFjaW9uYWwtZGEtYmlibGlvdGVjYS1lc2NvbGFyLW1pYmUtYmlibGlvdG
+ VjYXMtbGl0ZXJhY2lhLWUtaW50ZWxpZ2VuY2lhLWFydGlmaWNpYWx8MjAyNi0wOS0zMCAxMTow
+ NjozMg==@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Littérature
+DESCRIPTION:Durante o mês de outubro\, a Biblioteca Municipal Rocha Peixo
+ to associa-se à celebração do Mês Internacional da Biblioteca Escolar
+ \, promovendo um conjunto de três iniciativas que aproximam livros\, leit
+ ores e novas tecnologias. As atividades serão feitas em parceria com as B
+ ibliotecas Escolares do Concelho da Póvoa de Varzim\, dos cinco agrupamen
+ tos de escolas e das escolas secundárias.\n\nTitre et description de l'é
+ vénement en portugais\, tels que publiés par la municipalité.\n\nPlus d
+ 'informations: https://www.cm-pvarzim.pt/eventos/mes-internacional-da-bibl
+ ioteca-escolar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
+LAST-MODIFIED:20261006T100859Z
+LOCATION:-
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esco
+ lar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Mês Internacional da Biblioteca Escolar (MIBE) Bibliotecas\, 
+ Literacia e Inteligência artificial
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Exposição de pintura "Gesto de esperança"
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261116
+DTSTAMP:20261022T081718Z
+UID:ZXhwb3NpY2FvLWRlLXBpbnR1cmEtZ2VzdG8tZGUtZXNwZXJhbmNhfDIwMjYtMTAtMjIgMD
+ g6MTc6MTc=@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Expositions
+DESCRIPTION:O Posto de Turismo dos Torreões vai acolher\, de 22 de outubr
+ o a 15 de novembro\, a exposição de pintura “Gesto de esperança”\, 
+ de Paulo Silva.\n\nTitre et description de l'événement en portugais\, te
+ ls que publiés par la municipalité.\n\nPlus d'informations: https://www.
+ cm-pvarzim.pt/eventos/exposicao-de-pintura-gesto-de-esperanca/
+LAST-MODIFIED:20261022T081718Z
+LOCATION:Posto de Turismo dos Torreões
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-pintura-gesto-de-espera
+ nca/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exposição de pintura "Gesto de esperança"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:FIMPV+
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20270531
+DTSTAMP:20261013T151317Z
+UID:ZmltcHZ8MjAyNi0xMC0xMyAxMzoyMzozMA==@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Fêtes\, foires et marchés
+DESCRIPTION:Ao longo de décadas\, o Festival Internacional de Música da 
+ Póvoa de Varzim afirmou-se como uma das referências maiores da programa
+ ção musical em Portugal\, trazendo à cidade intérpretes de excelência
+  e criando\, edição após edição\, uma relação profunda com o seu p
+ úblico. Essa relação tem crescido de ano para ano: os poveiros enchem a
+ s salas\, procuram a música\, querem ouvir mais e mais vezes.\n\nBillets 
+ et inscriptions (en portugais) :\nA entrada para os espetáculos deste ano
+  é gratuita mediante convite\, levantado no local\, até à lotação da 
+ sala.\n\nTitre et description de l'événement en portugais\, tels que pub
+ liés par la municipalité.\n\nPlus d'informations: https://www.cm-pvarzim
+ .pt/eventos/fimpv/
+LAST-MODIFIED:20261013T151317Z
+LOCATION:Cine-Teatro Garrett\, Auditório Municipal e Diana Bar
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/fimpv/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:FIMPV+
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:"O Caso Palimpsesto - Um Mistério no Arquivo"
+DTSTART:20261026T093000Z
+DTEND:20261030T170000Z
+DTSTAMP:20261016T091021Z
+UID:by1jYXNvLXBsaW1wc2VzdG8tdW0tbWlzdGVyaW8tbm8tYXJxdWl2b3wyMDI2LTA5LTI4ID
+ E1OjQzOjQx@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Ateliers et activités
+DESCRIPTION:Durante a semana de 26 a 30 de outubro\, o Arquivo Municipal p
+ romove uma atividade lúdico-pedagógica baseada na lógica do jogo "Clued
+ o"\, adaptada ao contexto de um Arquivo Histórico.\n\nBillets et inscript
+ ions (en portugais) :\nA participação é gratuita e os interessados pode
+ m inscrever-se junto do Arquivo Municipal através dos seguintes meios: e-
+ mail: arquivomunicipal@cm-pvarzim.pt / telefone: 252 090 003.\n\nTitre et 
+ description de l'événement en portugais\, tels que publiés par la munic
+ ipalité.\n\nPlus d'informations: https://www.cm-pvarzim.pt/eventos/o-caso
+ -plimpsesto-um-misterio-no-arquivo/
+LAST-MODIFIED:20261016T091021Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/o-caso-plimpsesto-um-misterio-no-arq
+ uivo/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:"O Caso Palimpsesto - Um Mistério no Arquivo"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Hope"
+DTSTART:20261029T214500Z
+DTEND:20261029T233000Z
+DTSTAMP:20260922T101310Z
+UID:Y2luZW1hLWhvcGV8MjAyNi0wOS0yMiAxMDoxMzowOQ==@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Cinéma
+DESCRIPTION:No dia 29 de outubro\, às 21h45\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme "Hope".\n\nBillets et inscriptions (en portugais) :
+ \nEntradas: 4\,00€ (não sócio) 0€ (sócio).\nDesconto para menores d
+ e 23 anos: 2€ cada (*até à menor idade estabelecida em cada filme) | B
+ ilhetes à venda no Cine-Teatro Garrett.\n\nTitre et description de l'év
+ énement en portugais\, tels que publiés par la municipalité.\n\nPlus d'
+ informations: https://www.cm-pvarzim.pt/eventos/cinema-hope/
+LAST-MODIFIED:20260922T101310Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-hope/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cinema "Hope"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Festa de Halloween
+DTSTART:20261030T193000Z
+DTEND:20261031T000000Z
+DTSTAMP:20261019T103653Z
+UID:ZmVzdGEtZGUtaGFsbG93ZWVufDIwMjYtMDktMjkgMTU6MDY6MDI=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Culture,Fêtes\, foires et marchés
+DESCRIPTION:A Casa da Juventude vai transformar-se no cenário ideal para 
+ uma noite de terror no dia 30 de outubro.\n\nBillets et inscriptions (en p
+ ortugais) :\nAs inscrições são limitadas e obrigatórias\, devendo ser 
+ efetuadas presencialmente nas instalações da Casa da Juventude até ao d
+ ia 26 de outubro.\n\nTitre et description de l'événement en portugais\, 
+ tels que publiés par la municipalité.\n\nPlus d'informations: https://ww
+ w.cm-pvarzim.pt/eventos/festa-de-halloween/
+LAST-MODIFIED:20261019T103653Z
+LOCATION:Casa da Juventude
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/festa-de-halloween/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Festa de Halloween
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto "Disco Voador"
+DTSTART:20261030T213000Z
+DTEND:20261030T233000Z
+DTSTAMP:20260810T092500Z
+UID:Y29uY2VydG8tZGlzY28tdm9hZG9yfDIwMjYtMDgtMTAgMDk6MjQ6NTk=@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Culture,Concerts
+DESCRIPTION:No dia 30 de outubro\, às 21h30\, o Café-Concerto vai acolhe
+ r um concerto com Disco Voador.\n\nBillets et inscriptions (en portugais) 
+ :\nOs bilhetes custam 5\,00€ e estão à venda na BOL e no Cine-Teatro G
+ arrett\nBillets: https://www.bol.pt/Comprar/Bilhetes/183236-disco_voador-c
+ ine_teatro_garrett/\n\nTitre et description de l'événement en portugais
+ \, tels que publiés par la municipalité.\n\nPlus d'informations: https:/
+ /www.cm-pvarzim.pt/eventos/concerto-disco-voador/
+LAST-MODIFIED:20260810T092500Z
+LOCATION:Cine-Teatro Garrett - Café-Concerto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-disco-voador/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Concerto "Disco Voador"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sessão de leitura e Oficina de expressão plástica
+DTSTART:20261031T153000Z
+DTEND:20261031T173000Z
+DTSTAMP:20261012T150549Z
+UID:c2Vzc2FvLWRlLWxlaXR1cmEtZS1vZmljaW5hLWRlLWV4cHJlc3Nhby1wbGFzdGljYXwyMD
+ I2LTEwLTEyIDE1OjA1OjQ4@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Littérature
+DESCRIPTION:No dia 31 de outubro\, a Biblioteca Municipal Rocha Peixoto va
+ i apresentar uma sessão de leitura do conto "O Ladrão de Folhas" de Alic
+ e Hemming e ilustração: Nicola Slater\; seguida de uma oficina de expres
+ são plástica com folhas do jardim.\n\nBillets et inscriptions (en portug
+ ais) :\nA atividade é gratuita e os interessados devem realizar a sua ins
+ crição através de email biblioteca@cm-pvarzim.pt\, telefone 252 616 000
+  ou presencialmente na Biblioteca Municipal.\n\nTitre et description de l'
+ événement en portugais\, tels que publiés par la municipalité.\n\nPlus
+  d'informations: https://www.cm-pvarzim.pt/eventos/sessao-de-leitura-e-ofi
+ cina-de-expressao-plastica/
+LAST-MODIFIED:20261012T150549Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sessao-de-leitura-e-oficina-de-expre
+ ssao-plastica/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sessão de leitura e Oficina de expressão plástica
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto Juliana Linhares "Até Cansar o Cansaço"
+DTSTART:20261031T213000Z
+DTEND:20261031T233000Z
+DTSTAMP:20260918T143902Z
+UID:Y29uY2VydG8tanVsaWFuYS1saW5oYXJlcy1hdGUtY2Fuc2FyLW8tY2Fuc2Fjb3wyMDI2LT
+ A4LTI2IDExOjM1OjQ4@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Concerts
+DESCRIPTION:No dia 31 de outubro\, às 21h30\, Juliana Linhares vai aprese
+ ntar\, no Cine-Teatro Garrett\, "Até Cansar o Cansaço".\n\nBillets et in
+ scriptions (en portugais) :\nOs bilhetes custam 12\,50€ (Plateia) e 10
+ € (Balcão e Camarotes) e estão à venda na BOL e no Cine-Teatro Garret
+ t\nBillets: https://www.bol.pt/Comprar/Bilhetes/183931-juliana_linhares_at
+ e_cansar_o_cansaco-cine_teatro_garrett/\n\nTitre et description de l'évé
+ nement en portugais\, tels que publiés par la municipalité.\n\nPlus d'in
+ formations: https://www.cm-pvarzim.pt/eventos/concerto-juliana-linhares-at
+ e-cansar-o-cansaco/
+LAST-MODIFIED:20260918T143902Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-juliana-linhares-ate-cansar
+ -o-cansaco/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Concerto Juliana Linhares "Até Cansar o Cansaço"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Three Sixty Halloween
+DTSTART:20261031T220000Z
+DTEND:20261101T040000Z
+DTSTAMP:20261019T103529Z
+UID:dGhyZWUtc2l4dHktaGFsbG93ZWVufDIwMjYtMDktMjkgMTE6NTU6NTc=@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Culture,Fêtes\, foires et marchés
+DESCRIPTION:O Three Sixty Halloween é um evento de entretenimento e músi
+ ca comercial\, a realizar no dia 31 de outubro\, no Póvoa Arena\, com uma
+  lotação prevista de até 5.000 pessoas.\n\nBillets et inscriptions (en 
+ portugais) :\nOs bilhetes estão à venda em\nBillets: https://3cket.com/p
+ t/event/three-sixty-colosseum-of-terror\n\nTitre et description de l'évé
+ nement en portugais\, tels que publiés par la municipalité.\n\nPlus d'in
+ formations: https://www.cm-pvarzim.pt/eventos/three-sixty-halloween/
+LAST-MODIFIED:20261019T103529Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/three-sixty-halloween/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Three Sixty Halloween
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Exposição de fotografia "Onde eu estiver"
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261129
+DTSTAMP:20261021T134628Z
+UID:ZXhwb3NpY2FvLWRlLWZvdG9ncmFmaWEtb25kZS1ldS1lc3RpdmVyfDIwMjYtMTAtMjEgMT
+ M6NDU6NTI=@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Expositions
+DESCRIPTION:Entre os dias 4 e 28 de novembro\, estará patente na Bibliote
+ ca Municipal Rocha Peixoto a exposição de fotografia "Onde eu estiver"\,
+  da autoria de Francisca Machado.\n\nTitre et description de l'événement
+  en portugais\, tels que publiés par la municipalité.\n\nPlus d'informat
+ ions: https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-onde-eu-es
+ tiver/
+LAST-MODIFIED:20261021T134628Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-onde-eu-esti
+ ver/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exposição de fotografia "Onde eu estiver"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "A Saga de Anatahan"
+DTSTART:20261105T214500Z
+DTEND:20261105T234500Z
+DTSTAMP:20261021T081624Z
+UID:Y2luZW1hLWEtc2FnYS1kZS1hbmF0YWhhbnwyMDI2LTEwLTIxIDA4OjE2OjIz@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Culture,Cinéma
+DESCRIPTION:No dia 5 de novembro\, às 21h45\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme "A Saga de Anatahan".\n\nBillets et inscriptions (en
+  portugais) :\nEntradas: Gratuitas\, no âmbito da comemoração do Dia Mu
+ ndial do Cinema\, mediante levantamento de convite no local\, até ao limi
+ te de lotação da sala.\n\nTitre et description de l'événement en portu
+ gais\, tels que publiés par la municipalité.\n\nPlus d'informations: htt
+ ps://www.cm-pvarzim.pt/eventos/cinema-a-saga-de-anatahan/
+LAST-MODIFIED:20261021T081624Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-a-saga-de-anatahan/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cinema "A Saga de Anatahan"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Apresentação do livro "O chapéu\, o olho\, a cadeira e a sereia
+ : quatro breves histórias"
+DTSTART:20261107T160000Z
+DTEND:20261206T183000Z
+DTSTAMP:20261021T135603Z
+UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tY2hhcGV1LW8tb2xoby1hLWNhZGVpcmEtZS1hLX
+ NlcmVpYS1xdWF0cm8tYnJldmVzLWhpc3Rvcmlhc3wyMDI2LTEwLTIxIDEzOjU2OjAy@agenda.
+ cm-pvarzim.pt
+CATEGORIES:Culture,Littérature
+DESCRIPTION:A Biblioteca Municipal Rocha Peixoto irá acolher\, no dia 7 d
+ e novembro\, às 16h00\, a sessão de apresentação do livro O chapéu\, 
+ o olho\, a cadeira e a sereia: quatro breves histórias\, da autoria de Ja
+ imemorto.\n\nTitre et description de l'événement en portugais\, tels que
+  publiés par la municipalité.\n\nPlus d'informations: https://www.cm-pva
+ rzim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olho-a-cadeira-e-a-sereia
+ -quatro-breves-historias/
+LAST-MODIFIED:20261021T135603Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olh
+ o-a-cadeira-e-a-sereia-quatro-breves-historias/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Apresentação do livro "O chapéu\, o olho\, a cadeira e a se
+ reia: quatro breves histórias"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto de Amizade
+DTSTART:20261107T190000Z
+DTEND:20261107T203000Z
+DTSTAMP:20261020T110316Z
+UID:Y29uY2VydG8tZGUtYW1pemFkZXwyMDI2LTEwLTIwIDExOjAzOjE2@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Culture,Concerts
+DESCRIPTION:No âmbito das relações de geminação existentes entre o Mu
+ nicípio da Póvoa de Varzim e a cidade galega de A Guarda (Espanha)\, enc
+ ontra-se programado um intercâmbio sociocultural que promete aproximar as
+  duas comunidades através da música e da arte.\n\nBillets et inscription
+ s (en portugais) :\nO evento dividir-se-á em duas datas e palcos distinto
+ s: 24 de outubro – na Igreja de Santa Maria\, na cidade de A Guarda (Gal
+ iza\, Espanha)\, às 20h00 (hora espanhola)\, e no dia 7 de novembro\, na 
+ Igreja da Misericórdia\, na Póvoa de Varzim\, às 19h00\, com entrada li
+ vre.\n\nTitre et description de l'événement en portugais\, tels que publ
+ iés par la municipalité.\n\nPlus d'informations: https://www.cm-pvarzim.
+ pt/eventos/concerto-de-amizade/
+LAST-MODIFIED:20261020T110316Z
+LOCATION:Igreja da Misericórdia
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-de-amizade/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Concerto de Amizade
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro "Los Virtuosos"
+DTSTART:20261107T213000Z
+DTEND:20261107T230000Z
+DTSTAMP:20261020T092112Z
+UID:dGVhdHJvLWxvcy12aXJ0dW9zb3N8MjAyNi0xMC0yMCAwOToyMToxMQ==@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Culture,Théâtre
+DESCRIPTION:No âmbito da Temporada Teatral\, a Varazim Teatro apresenta\,
+  a 7 de novembro\, pelas 21h30\, a peça "Los Virtuosos" pelo Teatro del A
+ stillero\, no Cine-Teatro Garrett.\n\nBillets et inscriptions (en portugai
+ s) :\nAs entradas custam 7€\, com desconto para estudantes\, reformados 
+ ou aposentados\, menores de 30 anos e maiores de 65 anos\, desempregados\,
+  pessoas com incapacidade ou deficiência e surdos\, grupo de 8 pessoas ou
+  mais\, famílias numerosas (5 pessoas ou mais): 5€.\nPara sócios e por
+ tadores do Cartão de Amigo da Varazim e Associados da Acapo: 3\,50€.\nO
+ s bilhetes estão à venda no Cine-Teatro Garrett\, BOL\, CTT\, FNAC\, WOR
+ TEN.\n\nTitre et description de l'événement en portugais\, tels que publ
+ iés par la municipalité.\n\nPlus d'informations: https://www.cm-pvarzim.
+ pt/eventos/teatro-los-virtuosos/
+LAST-MODIFIED:20261020T092112Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-los-virtuosos/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Teatro "Los Virtuosos"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "A Ilha Esquecida"
+DTSTART:20261108T213000Z
+DTEND:20261108T231500Z
+DTSTAMP:20261021T082007Z
+UID:Y2luZW1hLWEtaWxoYS1lc3F1ZWNpZGF8MjAyNi0xMC0yMSAwODoxOTo0OQ==@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Culture,Cinéma
+DESCRIPTION:No dia 8 de novembro\, às 21h30\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme "A Ilha Esquecida" (versão portuguesa).\n\nBillets 
+ et inscriptions (en portugais) :\nEntradas: Os bilhetes custam 3\,50€ e 
+ estão à venda na BOL e no Cine-Teatro Garrett.\nBillets: https://www.bol
+ .pt/Projecto/EntidadesAderentes/3289-cine_teatro_garrett\n\nTitre et descr
+ iption de l'événement en portugais\, tels que publiés par la municipali
+ té.\n\nPlus d'informations: https://www.cm-pvarzim.pt/eventos/cinema-a-il
+ ha-esquecida/
+LAST-MODIFIED:20261021T082007Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-a-ilha-esquecida/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cinema "A Ilha Esquecida"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Verity"
+DTSTART:20261108T213000Z
+DTEND:20261108T231500Z
+DTSTAMP:20261021T082411Z
+UID:Y2luZW1hLXZlcml0eXwyMDI2LTEwLTIxIDA4OjIzOjI3@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Cinéma
+DESCRIPTION:No dia 8 de novembro\, às 21h30\, será exibido\, no Cine-Tea
+ tro Garrett\, o thriller psicológico "Verity".\n\nBillets et inscriptions
+  (en portugais) :\nEntradas: Os bilhetes custam 3\,50€ e estão à venda
+  na BOL e no Cine-Teatro Garrett.\nBillets: https://www.bol.pt/Projecto/En
+ tidadesAderentes/3289-cine_teatro_garrett\n\nTitre et description de l'év
+ énement en portugais\, tels que publiés par la municipalité.\n\nPlus d'
+ informations: https://www.cm-pvarzim.pt/eventos/cinema-verity/
+LAST-MODIFIED:20261021T082411Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-verity/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cinema "Verity"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cais de Leitura
+DTSTART:20261110T210000Z
+DTEND:20261110T224500Z
+DTSTAMP:20261021T135838Z
+UID:Y2Fpcy1kZS1sZWl0dXJhLTIxfDIwMjYtMTAtMjEgMTM6NTg6Mzc=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Culture,Littérature
+DESCRIPTION:No âmbito da sua programação em ambiente digital\, a Biblio
+ teca Municipal Rocha Peixoto volta a marcar encontro online para falar sob
+ re livros\, no dia 10 de novembro\, às 21h00.\n\nTitre et description de 
+ l'événement en portugais\, tels que publiés par la municipalité.\n\nPl
+ us d'informations: https://www.cm-pvarzim.pt/eventos/cais-de-leitura-21/
+LAST-MODIFIED:20261021T135838Z
+LOCATION:online
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cais-de-leitura-21/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cais de Leitura
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Naza"
+DTSTART:20261112T214500Z
+DTEND:20261112T233000Z
+DTSTAMP:20261021T082939Z
+UID:Y2luZW1hLW5hemF8MjAyNi0xMC0yMSAwODoyOTozOA==@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Cinéma
+DESCRIPTION:No dia 12 de novembro\, às 21h45\, será exibido\, no Cine-Te
+ atro Garrett\, o premiado filme "Naza".\n\nBillets et inscriptions (en por
+ tugais) :\nEntradas: 4\,00€ (não sócio) 0€ (sócio).\nDesconto para 
+ menores de 23 anos: 2€ cada (*até à menor idade estabelecida em cada f
+ ilme) | Bilhetes à venda no Cine-Teatro Garrett.\n\nTitre et description 
+ de l'événement en portugais\, tels que publiés par la municipalité.\n
+ \nPlus d'informations: https://www.cm-pvarzim.pt/eventos/cinema-naza/
+LAST-MODIFIED:20261021T082939Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-naza/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cinema "Naza"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:XIII Encontro de Música Coral da Póvoa de Varzim
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261207
+DTSTAMP:20261027T153734Z
+UID:eGlpaS1lbmNvbnRyby1kZS1tdXNpY2EtY29yYWwtZGEtcG92b2EtZGUtdmFyemltfDIwMj
+ YtMTAtMjcgMTU6Mzc6MzM=@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Concerts
+DESCRIPTION:A 13.ª edição do Encontro de Música Coral da Póvoa de Var
+ zim (eMCPV ’26) decorre de 13 de novembro a 6 de dezembro\, reunindo uma
+  vasta programação que cruza concertos de agrupamentos nacionais e inter
+ nacionais\, oficinas\, conferências e cinema. O evento\, organizado pela 
+ Capela Marta\, com o apoio da Câmara Municipal\, arranca oficialmente a 1
+ 3 de novembro\, sexta-feira\, às 18h30\, com a Cerimónia de Abertura no 
+ Barrière Casino Póvoa. No dia seguinte\, 14 de novembro\, sábado\, às 
+ 16h00\, o programa ruma ao Santuário Eucarístico de Balasar para uma Vis
+ ita Guiada conduzida pelo Monsenhor Manuel Casado Neiva\, complementada po
+ r um momento musical a cargo de Diogo Zão. O primeiro fim de semana encer
+ ra a 15 de novembro\, domingo\, às 16h00\, na Igreja da Lapa\, que acolhe
+  as vozes do Coral Femenina Barbanza (vinda de Espanha)\, do Orfeão de Br
+ aga e do Coro de Pais da Academia de Música de Viana do Castelo. A músic
+ a regressa a 21 de novembro\, sábado\, centralizada no Diana-Bar. A tarde
+  começa às 17h00 com uma oficina de Prática Coral orientada por Patríc
+ ia Costa\, seguindo-se\, às 21h45\, as atuações do BJazz Choir (Guimar
+ ães)\, do Cantoencanto (Viana do Castelo) e do Corisco d’Aveiro. No dom
+ ingo\, 22 de novembro\, às 16h00\, os concertos passam para a Igreja da M
+ isericórdia\, com a participação do Orfeão Famalicense\, do Coro Anima
+ to (Lisboa) e das Voces Radiae (Porto). A reta final de novembro faz-se de
+  teoria e de apresentações ao ar livre. A 26 de novembro\, quinta-feira
+ \, às 18h00\, a Biblioteca Municipal Rocha Peixoto acolhe a conferência 
+ “A arte da Regência e As Formas Musicais”\, proferida por Sylvio Lago
+ . No sábado\, 28 de novembro\, às 21h45\, a Igreja São José de Ribamar
+  recebe os grupos Voz Nua (Aveiro)\, Ars Vocalis (Esposende) e Vocal Art E
+ nsemble (Paços de Ferreira). Logo no dia seguinte\, 29 de novembro\, domi
+ ngo\, o festival sai à rua: a Praça da República recebe os Coros do Con
+ celho às 15h00\, e a Praça do Almada enche-se de espírito natalício à
+ s 17h00 com o Coro Feliz Natal Póvoa de Varzim no arranque oficial das fe
+ stividades. Já em dezembro\, o eMCPV abre espaço à sétima arte na quin
+ ta-feira\, dia 3\, às 21h45\, no Cine-Teatro Garrett\, onde o Cine-Clube 
+ Octopus apresenta a projeção de EPiC: Elvis Presley in Concert. O últim
+ o fim de semana do encontro começa a 5 de dezembro\, sábado\, às 21h45
+ \, na Igreja Matriz\, com as prestações da Capella Bracarensis (Braga)\,
+  do Ensemble Ángel Barja de Vigo (Espanha) e do Nura Ensemble (Guimarães
+ ). O grande encerramento desta edição acontece a 6 de dezembro\, domingo
+ \, às 16h00\, marcando o regresso ao Santuário Eucarístico de Balasar p
+ ara um concerto conjunto do Coro Capela Marta\, da Capela Marta Júnior e 
+ da Orquestra Euracini.\n\nTitre et description de l'événement en portuga
+ is\, tels que publiés par la municipalité.\n\nPlus d'informations: https
+ ://www.cm-pvarzim.pt/eventos/xiii-encontro-de-musica-coral-da-povoa-de-var
+ zim/
+LAST-MODIFIED:20261027T153734Z
+LOCATION:Póvoa de Varzim
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/xiii-encontro-de-musica-coral-da-pov
+ oa-de-varzim/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:XIII Encontro de Música Coral da Póvoa de Varzim
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lavorada Mensal
+DTSTART:20261114T143000Z
+DTEND:20261114T180000Z
+DTSTAMP:20261021T140720Z
+UID:bGF2b3JhZGEtbWVuc2FsLTN8MjAyNi0xMC0yMSAxNDowNzoxOA==@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Culture,Ateliers et activités
+DESCRIPTION:Segundo sábado do mês é dia de Lavorada Mensal\, na Bibliot
+ eca Municipal Rocha Peixoto. Assim\, na tarde de 14 de novembro\, entre as
+  14h30 e as 18h00\, a Associação Lavorada ensina a fazer um xaile para o
+ s dias de outono\, por entre castanhas e geropiga.\n\nTitre et description
+  de l'événement en portugais\, tels que publiés par la municipalité.\n
+ \nPlus d'informations: https://www.cm-pvarzim.pt/eventos/lavorada-mensal-3
+ /
+LAST-MODIFIED:20261021T140720Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Lavorada Mensal
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Bicentenário do "Paredão" de D. Maria I (1826) - o simbolismo de
+  uma obra de engenharia
+DTSTART:20261114T150000Z
+DTEND:20261114T173000Z
+DTSTAMP:20261015T133829Z
+UID:YmljZW50ZW5hcmlvLWRvLXBhcmVkYW8tZGUtZC1tYXJpYS1pLTE4MjYtby1zaW1ib2xpc2
+ 1vLWRlLXVtYS1vYnJhLWRlLWVuZ2VuaGFyaWF8MjAyNi0xMC0xNSAxMzozODoyOA==@agenda.
+ cm-pvarzim.pt
+CATEGORIES:Culture,Commémorations et cérémonies
+DESCRIPTION:No ano em que se assinala o bicentenário da conclusão da pri
+ meira intervenção humana na enseada natural da Póvoa de Varzim\, o Muse
+ u Municipal abre portas à comunidade para descobrir a importância centra
+ l da pesca na afirmação política\, socioeconómica e cultural da nossa 
+ cidade.\n\nBillets et inscriptions (en portugais) :\nA entrada é livre.\n
+ \nTitre et description de l'événement en portugais\, tels que publiés p
+ ar la municipalité.\n\nPlus d'informations: https://www.cm-pvarzim.pt/eve
+ ntos/bicentenario-do-paredao-de-d-maria-i-1826-o-simbolismo-de-uma-obra-de
+ -engenharia/
+LAST-MODIFIED:20261015T133829Z
+LOCATION:Museu Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/bicentenario-do-paredao-de-d-maria-i
+ -1826-o-simbolismo-de-uma-obra-de-engenharia/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bicentenário do "Paredão" de D. Maria I (1826) - o simbolism
+ o de uma obra de engenharia
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Clube de Leituras Marítimas "Livros de Marear"
+DTSTART:20261114T150000Z
+DTEND:20261114T164500Z
+DTSTAMP:20261021T142549Z
+UID:Y2x1YmUtZGUtbGVpdHVyYXMtbWFyaXRpbWFzLWxpdnJvcy1kZS1tYXJlYXItNnwyMDI2LT
+ EwLTIxIDE0OjI1OjQ4@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Littérature
+DESCRIPTION:No dia 14 de novembro\, às 15h00\, a Biblioteca Municipal Roc
+ ha Peixoto acolhe mais um encontro do Clube de Leituras Marítimas "Livros
+  de Marear".\n\nTitre et description de l'événement en portugais\, tels 
+ que publiés par la municipalité.\n\nPlus d'informations: https://www.cm-
+ pvarzim.pt/eventos/clube-de-leituras-maritimas-livros-de-marear-6/
+LAST-MODIFIED:20261021T142549Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/clube-de-leituras-maritimas-livros-d
+ e-marear-6/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Clube de Leituras Marítimas "Livros de Marear"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábados a jogar na Biblioteca
+DTSTART:20261114T150000Z
+DTEND:20261114T170000Z
+DTSTAMP:20261021T142911Z
+UID:MzYyMzE1fDIwMjYtMTAtMjEgMTQ6Mjg6NDA=@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Ateliers et activités
+DESCRIPTION:No dia 14 de novembro\, a partir das 15h00\, terá lugar\, na 
+ sala infantil e juvenil da Biblioteca Municipal\, mais uma sessão da inic
+ iativa "Sábados a jogar na Biblioteca".\n\nBillets et inscriptions (en po
+ rtugais) :\nA inscrição no evento é gratuita\, mas obrigatória atravé
+ s do email biblioteca@cm-pvarzim.pt\, telefone 252 616 000 ou presencialme
+ nte\, até um limite de 12 participantes.\n\nTitre et description de l'év
+ énement en portugais\, tels que publiés par la municipalité.\n\nPlus d'
+ informations: https://www.cm-pvarzim.pt/eventos/362315/
+LAST-MODIFIED:20261021T142911Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/362315/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sábados a jogar na Biblioteca
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto Pedro Abrunhosa
+DTSTART:20261114T213000Z
+DTEND:20261114T230000Z
+DTSTAMP:20260807T152457Z
+UID:Y29uY2VydG8tcGVkcm8tYWJydW5ob3NhfDIwMjYtMDgtMDcgMTU6MjQ6NTc=@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Culture,Concerts
+DESCRIPTION:No dia 14 de novembro\, às 21h30\, Pedro Abrunhosa vai atuar 
+ no Póvoa Arena.\n\nBillets et inscriptions (en portugais) :\nOs bilhetes 
+ estão à venda na BOL e os preços variam entre os 40 e os 20€: Plateia
+  Central – 40\,00€ | Plateia Lateral – 35\,00€| Setores 1\, 2\, 7 
+ e 8 – Inferior- 35\,00€ | Setores 1\, 2\, 7 e 8 – Superior – 30\,0
+ 0€ | Setores 3 e 6 – Inferior- 25\,00€\nBillets: https://www.bol.pt/
+ Comprar/Bilhetes/176846-pedro_abrunhosa-povoa_arena/\n\nTitre et descripti
+ on de l'événement en portugais\, tels que publiés par la municipalité.
+ \n\nPlus d'informations: https://www.cm-pvarzim.pt/eventos/concerto-pedro-
+ abrunhosa/
+LAST-MODIFIED:20260807T152457Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-pedro-abrunhosa/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Concerto Pedro Abrunhosa
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Santo António\, o Casamenteiro de Lisboa": nova sessão
+DTSTART:20261115T213000Z
+DTEND:20261115T233000Z
+DTSTAMP:20261021T083352Z
+UID:Y2luZW1hLXNhbnRvLWFudG9uaW8tby1jYXNhbWVudGVpcm8tZGUtbGlzYm9hLTJ8MjAyNi
+ 0xMC0yMSAwODozMjo1NQ==@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Cinéma
+DESCRIPTION:No dia 15 de novembro\, às 21h30\, será exibida\, no Cine-Te
+ atro Garrett\, nova sessão do filme "Santo António\, o Casamenteiro de L
+ isboa".\n\nBillets et inscriptions (en portugais) :\nEntradas: Os bilhetes
+  custam 3\,50€ e estão à venda na BOL e no Cine-Teatro Garrett.\nBille
+ ts: https://www.bol.pt/Projecto/EntidadesAderentes/3289-cine_teatro_garret
+ t\n\nTitre et description de l'événement en portugais\, tels que publié
+ s par la municipalité.\n\nPlus d'informations: https://www.cm-pvarzim.pt/
+ eventos/cinema-santo-antonio-o-casamenteiro-de-lisboa-2/
+LAST-MODIFIED:20261021T083352Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-
+ de-lisboa-2/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cinema "Santo António\, o Casamenteiro de Lisboa": nova sess
+ ão
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lançamento do livro “A Póvoa de Varzim na Belle Époque: panor
+ ama da vida cultural e do turismo balnear”
+DTSTART:20261116T213000Z
+DTEND:20261116T230000Z
+DTSTAMP:20261027T155206Z
+UID:bGFuY2FtZW50by1kby1saXZyby1hLXBvdm9hLWRlLXZhcnppbS1uYS1iZWxsZS1lcG9xdW
+ UtcGFub3JhbWEtZGEtdmlkYS1jdWx0dXJhbC1lLWRvLXR1cmlzbW8tYmFsbmVhcnwyMDI2LTEw
+ LTI3IDE1OjUyOjA1@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Littérature
+DESCRIPTION:No dia 16 de novembro\, às 21h30\, será lançado\, no Museu 
+ Municipal\, o livro Lançamento do livro “A Póvoa de Varzim na Belle É
+ poque: panorama da vida cultural e do turismo balnear”.\n\nTitre et desc
+ ription de l'événement en portugais\, tels que publiés par la municipal
+ ité.\n\nPlus d'informations: https://www.cm-pvarzim.pt/eventos/lancamento
+ -do-livro-a-povoa-de-varzim-na-belle-epoque-panorama-da-vida-cultural-e-do
+ -turismo-balnear/
+LAST-MODIFIED:20261027T155206Z
+LOCATION:Museu Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-a-povoa-de-varzi
+ m-na-belle-epoque-panorama-da-vida-cultural-e-do-turismo-balnear/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Lançamento do livro “A Póvoa de Varzim na Belle Époque: p
+ anorama da vida cultural e do turismo balnear”
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Apresentação do livro infantil "Cachalote\, a baleia com a cauda
+  plástica"
+DTSTART:20261118T100000Z
+DTEND:20261118T120000Z
+DTSTAMP:20261022T084850Z
+UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLWluZmFudGlsLWNhY2hhbG90ZS1hLWJhbGVpYS1jb2
+ 0tYS1jYXVkYS1wbGFzdGljYXwyMDI2LTEwLTIyIDA4OjQ4OjI2@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Littérature
+DESCRIPTION:O Dia Nacional do Mar celebra-se a 16 de novembro. Para assina
+ lar esta efeméride\, a Biblioteca Municipal Rocha Peixito irá dinamizar 
+ uma sessão de apresentação do livro infantil “Cachalote\, a baleia co
+ m a cauda plástica”\, de Luciana Vampré di Monte\, no dia 18 de novemb
+ ro\, a partir das 10h00.\n\nTitre et description de l'événement en portu
+ gais\, tels que publiés par la municipalité.\n\nPlus d'informations: htt
+ ps://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-infantil-cachalote-a-
+ baleia-com-a-cauda-plastica/
+LAST-MODIFIED:20261022T084850Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-infantil-cacha
+ lote-a-baleia-com-a-cauda-plastica/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Apresentação do livro infantil "Cachalote\, a baleia com a c
+ auda plástica"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto Comentado
+DTSTART:20261119T183000Z
+DTEND:20261119T200000Z
+DTSTAMP:20261020T110828Z
+UID:Y29uY2VydG8tY29tZW50YWRvfDIwMjYtMTAtMjAgMTE6MDg6Mjc=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Culture,Concerts
+DESCRIPTION:A Escola de Música da Póvoa de Varzim convida a comunidade a
+  assistir ao Concerto Comentado – Itinerários Internacionais do Repert
+ ório Violetístico\, que terá lugar no dia 19 de novembro\, às 18h30\, 
+ no Auditório Municipal.\n\nTitre et description de l'événement en portu
+ gais\, tels que publiés par la municipalité.\n\nPlus d'informations: htt
+ ps://www.cm-pvarzim.pt/eventos/concerto-comentado/
+LAST-MODIFIED:20261020T110828Z
+LOCATION:Auditório Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-comentado/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Concerto Comentado
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "A Amiga Silenciosa"
+DTSTART:20261119T214500Z
+DTEND:20261119T233000Z
+DTSTAMP:20261021T083711Z
+UID:Y2luZW1hLWEtYW1pZ2Etc2lsZW5jaW9zYXwyMDI2LTEwLTIxIDA4OjM2OjUx@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Culture,Cinéma
+DESCRIPTION:No dia 19 de novembro\, às 21h45\, será exibido\, no Cine-Te
+ atro Garrett\, o filme "A Amiga Silenciosa".\n\nBillets et inscriptions (e
+ n portugais) :\nEntradas: 4\,00€ (não sócio) 0€ (sócio).\nDesconto 
+ para menores de 23 anos: 2€ cada (*até à menor idade estabelecida em c
+ ada filme) | Bilhetes à venda no Cine-Teatro Garrett.\n\nTitre et descrip
+ tion de l'événement en portugais\, tels que publiés par la municipalit
+ é.\n\nPlus d'informations: https://www.cm-pvarzim.pt/eventos/cinema-a-ami
+ ga-silenciosa/
+LAST-MODIFIED:20261021T083711Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-a-amiga-silenciosa/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cinema "A Amiga Silenciosa"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Apresentação do livro "O extremo afiado do espelho"
+DTSTART:20261121T160000Z
+DTEND:20261121T180000Z
+DTSTAMP:20261023T091258Z
+UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tZXh0cmVtby1hZmlhZG8tZG8tZXNwZWxob3wyMD
+ I2LTEwLTIzIDA5OjEyOjU3@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Littérature
+DESCRIPTION:A Biblioteca Municipal Rocha Peixoto irá acolher\, no dia 21 
+ de novembro\, a partir das 16h00\, a sessão de apresentação do livro "O
+  extremo afiado do espelho"\, de Mário Amazan. A apresentação da obra s
+ erá feita pelo escritor Vítor da Rocha.\n\nTitre et description de l'év
+ énement en portugais\, tels que publiés par la municipalité.\n\nPlus d'
+ informations: https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-ex
+ tremo-afiado-do-espelho/
+LAST-MODIFIED:20261023T091258Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-extremo-afia
+ do-do-espelho/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Apresentação do livro "O extremo afiado do espelho"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sessão de leitura "A ovelhinha que veio para jantar"
+DTSTART:20261121T160000Z
+DTEND:20261121T174500Z
+DTSTAMP:20261022T085515Z
+UID:c2Vzc2FvLWRlLWxlaXR1cmEtYS1vdmVsaGluaGEtcXVlLXZlaW8tcGFyYS1qYW50YXJ8Mj
+ AyNi0xMC0yMiAwODo1NToxNA==@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Littérature
+DESCRIPTION:No dia 21 de novembro\, às 16h00\, a Biblioteca Municipal ir
+ á promover a sessão de leitura para pais e bebés "A ovelhinha que veio 
+ para jantar"\, dinamizada por Ana Sofia Maia.\n\nBillets et inscriptions (
+ en portugais) :\nAs inscrições para esta atividade\, destinada a bebés 
+ entre os 12 e 48 meses\, são gratuitas\, mas obrigatórias\, através do 
+ email biblioteca@cm-pvarzim.pt\, do telefone 252 616 000\, ou\, em alterna
+ tiva\, presencialmente\, na Biblioteca Municipal.\n\nTitre et description 
+ de l'événement en portugais\, tels que publiés par la municipalité.\n
+ \nPlus d'informations: https://www.cm-pvarzim.pt/eventos/sessao-de-leitura
+ -a-ovelhinha-que-veio-para-jantar/
+LAST-MODIFIED:20261022T085515Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sessao-de-leitura-a-ovelhinha-que-ve
+ io-para-jantar/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sessão de leitura "A ovelhinha que veio para jantar"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Espetáculo de dança "AmarAmália"
+DTSTART:20261121T210000Z
+DTEND:20261121T230000Z
+DTSTAMP:20261023T152912Z
+UID:ZXNwZXRhY3Vsby1kZS1kYW5jYS1hbWFyYW1hbGlhfDIwMjYtMTAtMjMgMTU6Mjk6MTE=@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Culture,Spectacles
+DESCRIPTION:No dia 21 de novembro\, às 21h00\, sobe ao palco do Cine-Teat
+ ro Garrett\, o espetáculo "AmarAmália"\, pela Companhia Portuguesa de Ba
+ ilado Contemporâneo.\n\nBillets et inscriptions (en portugais) :\nOs bilh
+ etes custam 20\,00€ (Plateia) e 15\,00€ (Camarotes/ Balcão).\n\nTitre
+  et description de l'événement en portugais\, tels que publiés par la m
+ unicipalité.\n\nPlus d'informations: https://www.cm-pvarzim.pt/eventos/es
+ petaculo-de-danca-amaramalia/
+LAST-MODIFIED:20261023T152912Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-amaramalia/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Espetáculo de dança "AmarAmália"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Trapalhões"
+DTSTART:20261122T153000Z
+DTEND:20261122T174500Z
+DTSTAMP:20261027T091431Z
+UID:Y2luZW1hLXRyYXBhbGhvZXN8MjAyNi0xMC0yMSAwODo0MzoxNA==@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Culture,Cinéma
+DESCRIPTION:No dia 22 de novembro\, às 15h30\, será exibido\, no Cine-Te
+ atro Garrett\, o filme "Trapalhões" (versão portuguesa).\n\nBillets et i
+ nscriptions (en portugais) :\nEntradas: Os bilhetes custam 3\,50€ e est
+ ão à venda na BOL e no Cine-Teatro Garrett.\nBillets: https://www.bol.pt
+ /Projecto/EntidadesAderentes/3289-cine_teatro_garrett\n\nTitre et descript
+ ion de l'événement en portugais\, tels que publiés par la municipalité
+ .\n\nPlus d'informations: https://www.cm-pvarzim.pt/eventos/cinema-trapalh
+ oes/
+LAST-MODIFIED:20261027T091431Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-trapalhoes/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cinema "Trapalhões"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "O Pecado Mora em Cima"
+DTSTART:20261122T213000Z
+DTEND:20261122T231500Z
+DTSTAMP:20261021T084500Z
+UID:Y2luZW1hLW8tcGVjYWRvLW1vcmEtZW0tY2ltYXwyMDI2LTEwLTIxIDA4OjQ0OjM5@agend
+ a.cm-pvarzim.pt
+CATEGORIES:Culture,Cinéma
+DESCRIPTION:No dia 22 de novembro\, às 21h30\, será exibido\, no Cine-Te
+ atro Garrett\, o filme "O Pecado Mora em Cima".\n\nBillets et inscriptions
+  (en portugais) :\nEntradas: Os bilhetes custam 3\,50€ e estão à venda
+  na BOL e no Cine-Teatro Garrett.\nBillets: https://www.bol.pt/Projecto/En
+ tidadesAderentes/3289-cine_teatro_garrett\n\nTitre et description de l'év
+ énement en portugais\, tels que publiés par la municipalité.\n\nPlus d'
+ informations: https://www.cm-pvarzim.pt/eventos/cinema-o-pecado-mora-em-ci
+ ma/
+LAST-MODIFIED:20261021T084500Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-o-pecado-mora-em-cima/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cinema "O Pecado Mora em Cima"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Adolescência\, Sexo e Morte no Acampamento Miasma"
+DTSTART:20261126T214500Z
+DTEND:20261126T233000Z
+DTSTAMP:20261027T091334Z
+UID:Y2luZW1hLWFkb2xlc2NlbmNpYS1zZXhvLWUtbW9ydGUtbm8tYWNhbXBhbWVudG8tbWlhc2
+ 1hfDIwMjYtMTAtMjEgMDg6NDg6MTU=@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Cinéma
+DESCRIPTION:No dia 26 de novembro\, às 21h45\, será exibido\, no Cine-Te
+ atro Garrett\, o filme "Adolescência\, Sexo e Morte no Acampamento Miasma
+ ".\n\nBillets et inscriptions (en portugais) :\nEntradas: 4\,00€ (não s
+ ócio) 0€ (sócio).\nDesconto para menores de 23 anos: 2€ cada (*até 
+ à menor idade estabelecida em cada filme) | Bilhetes à venda no Cine-Tea
+ tro Garrett.\n\nTitre et description de l'événement en portugais\, tels 
+ que publiés par la municipalité.\n\nPlus d'informations: https://www.cm-
+ pvarzim.pt/eventos/cinema-adolescencia-sexo-e-morte-no-acampamento-miasma/
+LAST-MODIFIED:20261027T091334Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-adolescencia-sexo-e-morte-no-
+ acampamento-miasma/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cinema "Adolescência\, Sexo e Morte no Acampamento Miasma"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ciclo Lavorada Gente: "Um prefácio à Camisola Poveira: Represent
+ ação das camisolas no século XIX"
+DTSTART:20261128T150000Z
+DTEND:20261128T163000Z
+DTSTAMP:20261027T142926Z
+UID:Y2ljbG8tbGF2b3JhZGEtZ2VudGUtdW0tcHJlZmFjaW8tYS1jYW1pc29sYS1wb3ZlaXJhLX
+ JlcHJlc2VudGFjYW8tZGFzLWNhbWlzb2xhcy1uby1zZWN1bG8teGl4fDIwMjYtMTAtMjcgMTQ6
+ Mjg6MjU=@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Ateliers et activités
+DESCRIPTION:A Associação Lavorada promove\, no próximo dia 28 de novemb
+ ro\, a partir das 15h00\, mais uma tertúlia do ciclo Lavorada Gente\, des
+ ta vez dedicada à história e à construção daquilo que reconhecemos ho
+ je como Camisola Poveira.\n\nTitre et description de l'événement en port
+ ugais\, tels que publiés par la municipalité.\n\nPlus d'informations: ht
+ tps://www.cm-pvarzim.pt/eventos/ciclo-lavorada-gente-um-prefacio-a-camisol
+ a-poveira-representacao-das-camisolas-no-seculo-xix/
+LAST-MODIFIED:20261027T142926Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/ciclo-lavorada-gente-um-prefacio-a-c
+ amisola-poveira-representacao-das-camisolas-no-seculo-xix/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ciclo Lavorada Gente: "Um prefácio à Camisola Poveira: Repre
+ sentação das camisolas no século XIX"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Póvoa Conto a Conto
+DTSTART:20261128T151500Z
+DTEND:20261128T170000Z
+DTSTAMP:20261026T103527Z
+UID:cG92b2EtY29udG8tYS1jb250by01fDIwMjYtMTAtMjYgMTA6MzU6MjY=@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Culture,Littérature
+DESCRIPTION:A Ethos\, Pathos\, Logos — Associação e a Biblioteca Munic
+ ipal Rocha Peixoto colaboram novamente em momentos de leitura seguidos de 
+ actividades didáticas\, desta vez numa exploração do património poveir
+ o enquanto força motriz!\n\nBillets et inscriptions (en portugais) :\nAs 
+ sessões da Póvoa Conto a Conto são destinadas a crianças entre os 5 e 
+ os 12 anos de idade\, e sujeitas a inscrição em biblioteca@cm-pvarzim.pt
+ \, 252 616 000 ou presencialmente\, na Biblioteca Municipal.\n\nTitre et d
+ escription de l'événement en portugais\, tels que publiés par la munici
+ palité.\n\nPlus d'informations: https://www.cm-pvarzim.pt/eventos/povoa-c
+ onto-a-conto-5/
+LAST-MODIFIED:20261026T103527Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/povoa-conto-a-conto-5/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Póvoa Conto a Conto
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro "Quando Menos se Espera"
+DTSTART:20261201T213000Z
+DTEND:20261202T233000Z
+DTSTAMP:20261014T135909Z
+UID:dGVhdHJvLXF1YW5kby1tZW5vcy1zZS1lc3BlcmF8MjAyNi0wOS0wNCAwOTozMjowNg==@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Culture,Théâtre
+DESCRIPTION:Nos dias 1 e 2 de dezembro\, pelas 21h30\, sobe ao palco do Ci
+ ne-Teatro Garrett a peça "Quando Menos se Espera".\n\nBillets et inscript
+ ions (en portugais) :\nAs entradas custam 27€ e os bilhetes estão na ve
+ nda na BOL e no Cine-Teatro Garrett\nBillets: https://www.bol.pt/Comprar/B
+ ilhetes/185536-quando_menos_se_espera-cine_teatro_garrett/\n\nTitre et des
+ cription de l'événement en portugais\, tels que publiés par la municipa
+ lité.\n\nPlus d'informations: https://www.cm-pvarzim.pt/eventos/teatro-qu
+ ando-menos-se-espera/
+LAST-MODIFIED:20261014T135909Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Teatro "Quando Menos se Espera"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro para bebés “A Árvore das Chupetas”
+DTSTART:20261205T110000Z
+DTEND:20261205T123000Z
+DTSTAMP:20261022T153318Z
+UID:dGVhdHJvLXBhcmEtYmViZXMtYS1hcnZvcmUtZGFzLWNodXBldGFzLTJ8MjAyNi0xMC0yMi
+ AxNTowNjowNA==@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Théâtre
+DESCRIPTION:No dia 5 de dezembro\, às 11h00\, terá lugar\, no Cine-Teatr
+ o Garrett\, teatro para toda a família.\n\nBillets et inscriptions (en po
+ rtugais) :\nBilhetes: 9€.\nBillets: https://www.bol.pt/Comprar/Bilhetes/
+ 187696-a_arvore_das_chupetas_teatro_para_bebes-cine_teatro_garrett/\n\nTit
+ re et description de l'événement en portugais\, tels que publiés par la
+  municipalité.\n\nPlus d'informations: https://www.cm-pvarzim.pt/eventos/
+ teatro-para-bebes-a-arvore-das-chupetas-2/
+LAST-MODIFIED:20261022T153318Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-para-bebes-a-arvore-das-chupe
+ tas-2/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Teatro para bebés “A Árvore das Chupetas”
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Histórias com Yoga
+DTSTART:20261205T153000Z
+DTEND:20261205T171500Z
+DTSTAMP:20261026T104129Z
+UID:aGlzdG9yaWFzLWNvbS15b2dhfDIwMjYtMTAtMjYgMTA6NDE6Mjg=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Culture,Littérature
+DESCRIPTION:O Projeto Luminisca e a Biblioteca Municipal Rocha Peixoto vol
+ tam a convidar as famílias a embarcarem numa viagem pelo mundo dos livros
+ \, das emoções e do yoga\, no próximo sábado\, 5 de dezembro\, às 15h
+ 30.\n\nBillets et inscriptions (en portugais) :\nO número máximo de part
+ icipantes é 30 pessoas\, sendo que inscrição no evento é gratuita\, ma
+ s obrigatória\, através dos seguintes meios: email biblioteca@cm-pvarzim
+ .pt\; telefone 252 616 000 ou presencialmente na Biblioteca Municipal.\n\n
+ Titre et description de l'événement en portugais\, tels que publiés par
+  la municipalité.\n\nPlus d'informations: https://www.cm-pvarzim.pt/event
+ os/historias-com-yoga/
+LAST-MODIFIED:20261026T104129Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Histórias com Yoga
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábados a jogar na Biblioteca
+DTSTART:20261212T150000Z
+DTEND:20261212T170000Z
+DTSTAMP:20261021T143254Z
+UID:c2FiYWRvcy1hLWpvZ2FyLW5hLWJpYmxpb3RlY2EtMjB8MjAyNi0xMC0yMSAxNDozMjowNg
+ ==@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Ateliers et activités
+DESCRIPTION:No dia 12 de dezembro\, a partir das 15h00\, terá lugar\, na 
+ sala infantil e juvenil da Biblioteca Municipal\, mais uma sessão da inic
+ iativa "Sábados a jogar na Biblioteca".\n\nBillets et inscriptions (en po
+ rtugais) :\nA inscrição no evento é gratuita\, mas obrigatória atravé
+ s do email biblioteca@cm-pvarzim.pt\, telefone 252 616 000 ou presencialme
+ nte\, até um limite de 12 participantes.\n\nTitre et description de l'év
+ énement en portugais\, tels que publiés par la municipalité.\n\nPlus d'
+ informations: https://www.cm-pvarzim.pt/eventos/sabados-a-jogar-na-bibliot
+ eca-20/
+LAST-MODIFIED:20261021T143254Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sabados-a-jogar-na-biblioteca-20/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sábados a jogar na Biblioteca
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Musical "Capuchinho Vermelho - o Musical"
+DTSTART:20261212T160000Z
+DTEND:20261212T173000Z
+DTSTAMP:20261022T153239Z
+UID:bXVzaWNhbC1jYXB1Y2hpbmhvLXZlcm1lbGhvLW8tbXVzaWNhbHwyMDI2LTEwLTIyIDE1Oj
+ MyOjM4@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Spectacles
+DESCRIPTION:No dia 12 de dezembro\, o Cine-Teatro Garrett vai apresentar "
+ Capuchinho Vermelho - o Musical".\n\nBillets et inscriptions (en portugais
+ ) :\nBilhetes: 13€ (Plateia) e 11€ (Balcão).\nBillets: https://www.bo
+ l.pt/Comprar/Bilhetes/187698-capuchinho_vermelho_o_musical-cine_teatro_gar
+ rett/\n\nTitre et description de l'événement en portugais\, tels que pub
+ liés par la municipalité.\n\nPlus d'informations: https://www.cm-pvarzim
+ .pt/eventos/musical-capuchinho-vermelho-o-musical/
+LAST-MODIFIED:20261022T153239Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/musical-capuchinho-vermelho-o-musica
+ l/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Musical "Capuchinho Vermelho - o Musical"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cais de Leitura
+DTSTART:20261215T210000Z
+DTEND:20261215T233000Z
+DTSTAMP:20261021T140206Z
+UID:Y2Fpcy1kZS1sZWl0dXJhLTIyfDIwMjYtMTAtMjEgMTQ6MDE6MDY=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Culture,Littérature
+DESCRIPTION:No âmbito da sua programação em ambiente digital\, a Biblio
+ teca Municipal Rocha Peixoto volta a marcar encontro online para falar sob
+ re livros\, no dia 15 de dezembro\, às 21h00.\n\nTitre et description de 
+ l'événement en portugais\, tels que publiés par la municipalité.\n\nPl
+ us d'informations: https://www.cm-pvarzim.pt/eventos/cais-de-leitura-22/
+LAST-MODIFIED:20261021T140206Z
+LOCATION:online
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cais-de-leitura-22/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cais de Leitura
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:"No meu tempo dou-te um conto"
+DTSTART:20261216T100000Z
+DTEND:20261216T120000Z
+DTSTAMP:20261026T104709Z
+UID:bm8tbWV1LXRlbXBvLWRvdS10ZS11bS1jb250by0yNXwyMDI2LTEwLTI2IDEwOjQ2OjEy@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Culture,Littérature
+DESCRIPTION:No dia 16 de dezembro\, às 10h00\, a Biblioteca Municipal vai
+  promover a iniciativa “No meu tempo\, dou-te um conto”\, com a leitur
+ a da história "O Anjo Tobias e a Rochinha de Natal” de Maria Aurora Car
+ valho Homem.\n\nTitre et description de l'événement en portugais\, tels 
+ que publiés par la municipalité.\n\nPlus d'informations: https://www.cm-
+ pvarzim.pt/eventos/no-meu-tempo-dou-te-um-conto-25/
+LAST-MODIFIED:20261026T104709Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/no-meu-tempo-dou-te-um-conto-25/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:"No meu tempo dou-te um conto"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

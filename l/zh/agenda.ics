@@ -8,6 +8,7 @@ NAME:波武阿-迪瓦尔津市政活动
 X-WR-CALNAME:波武阿-迪瓦尔津市政活动
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/zh/agenda.ics
+X-APPLE-CALENDAR-COLOR:#0f4c6b
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
@@ -79,7 +80,7 @@ DTEND;VALUE=DATE:20270424
 DTSTAMP:20261014T092233Z
 UID:cHJvamV0by1lc2NvbGEtZGEtbWluaGEtdmlkYS0zfDIwMjYtMTAtMTQgMDk6MjI6MzI=@a
  genda.cm-pvarzim.pt
-CATEGORIES:社区与公民生活,体育赛事
+CATEGORIES:公民生活,体育赛事
 DESCRIPTION:O Projeto Escola da Minha Vida (PEMV)\, organizado pela Câmar
  a Municipal da Póvoa de Varzim\, avança para nova edição\, a partir de
   19 de outubro.\n\n门票与报名（葡萄牙语）：\nAceda aos regulam
@@ -228,7 +229,7 @@ DTEND:20261031T130000Z
 DTSTAMP:20260928T130805Z
 UID:bWVyY2Fkby1hYmVydG8tZGUtZmxvcmVzLTIwMjZ8MjAyNi0wOS0yOCAxMzowNDoyNA==@a
  genda.cm-pvarzim.pt
-CATEGORIES:旅游与经济,节庆、集市与市场
+CATEGORIES:经济,节庆、集市与市场
 DESCRIPTION:No dia 31 de outubro\, o Mercado Municipal vai realizar\, mais
   uma edição do Mercado Aberto de Flores\, entre as 6h00 e as 13h00.\n\n
  门票与报名（葡萄牙语）：\nOs comerciantes do Mercado Municipal
@@ -251,7 +252,7 @@ DTEND:20261031T123000Z
 DTSTAMP:20260831T105731Z
 UID:b2ZpY2luYS1kby1wbGFzdGljby1maXotc2FyZGluaGF8MjAyNi0wOC0zMSAwOTo1MjoyNg
  ==@agenda.cm-pvarzim.pt
-CATEGORIES:环境与出行,工作坊与活动
+CATEGORIES:环境,工作坊与活动
 DESCRIPTION:No dia 31 de outubro\, pelas 10h30\, o Café-Concerto do Cine-
  Teatro Garrett vai acolher a Oficina "Do Plástico fiz Sardinha".\n\n门
  票与报名（葡萄牙语）：\nOs bilhetes custam 5\,00€ e estão à
@@ -375,7 +376,7 @@ DTEND;VALUE=DATE:20261129
 DTSTAMP:20261015T093004Z
 UID:Y3Vyc28tZGUtcGFsZW9ncmFmaWF8MjAyNi0xMC0xNSAwOTozMDowMw==@agenda.cm-pva
  rzim.pt
-CATEGORIES:旅游与经济,工作坊与活动
+CATEGORIES:经济,工作坊与活动
 DESCRIPTION:Todas as sextas-feiras de novembro (6\, 13\, 20 e 27)\, o Arqu
  ivo Municipal irá dinamizar um curso de paleografia\, destinado a públic
  o em geral\, professores\, investigadores e estudantes.\n\n门票与报名
@@ -720,6 +721,28 @@ URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-
  de-lisboa-2/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Lançamento do livro “A Póvoa de Varzim na Belle Époque: panor
+ ama da vida cultural e do turismo balnear”
+DTSTART:20261116T213000Z
+DTEND:20261116T230000Z
+DTSTAMP:20261027T155206Z
+UID:bGFuY2FtZW50by1kby1saXZyby1hLXBvdm9hLWRlLXZhcnppbS1uYS1iZWxsZS1lcG9xdW
+ UtcGFub3JhbWEtZGEtdmlkYS1jdWx0dXJhbC1lLWRvLXR1cmlzbW8tYmFsbmVhcnwyMDI2LTEw
+ LTI3IDE1OjUyOjA1@agenda.cm-pvarzim.pt
+CATEGORIES:文化,文学
+DESCRIPTION:No dia 16 de novembro\, às 21h30\, será lançado\, no Museu 
+ Municipal\, o livro Lançamento do livro “A Póvoa de Varzim na Belle É
+ poque: panorama da vida cultural e do turismo balnear”.\n\n活动标题
+ 和说明为葡萄牙语，与市政府发布的内容一致。\n\n更多
+ 信息: https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-a-povoa-de-v
+ arzim-na-belle-epoque-panorama-da-vida-cultural-e-do-turismo-balnear/
+LAST-MODIFIED:20261027T155206Z
+LOCATION:Museu Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-a-povoa-de-varzi
+ m-na-belle-epoque-panorama-da-vida-cultural-e-do-turismo-balnear/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Apresentação do livro infantil "Cachalote\, a baleia com a cauda
   plástica"
 DTSTART:20261118T100000Z
@@ -999,7 +1022,7 @@ DTEND:20261204T233000Z
 DTSTAMP:20261001T145442Z
 UID:ZGVpeGVtLW8tcGltYmEtZW0tcGF6LTJ8MjAyNi0xMC0wMSAxNDo0OToxOA==@agenda.cm
  -pvarzim.pt
-CATEGORIES:社区与公民生活,音乐会
+CATEGORIES:公民生活,音乐会
 DESCRIPTION:Estreado em 2013\, “Deixem o Pimba em Paz” conquistou o p
  úblico com uma reinterpretação irreverente do repertório pimba\, tendo
   percorrido Portugal de Norte a Sul\, ilhas incluídas\, e atravessando fr

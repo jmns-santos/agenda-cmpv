@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Sensibilisation, dépistages, collectes, nettoyages et campag
+ nes solidaires.
+NAME:Póvoa de Varzim : Actions et campagnes
+X-WR-CALNAME:Póvoa de Varzim : Actions et campagnes
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/fr/tipos/acoe
+ s-campanhas-aviso-1d.ics
+X-APPLE-CALENDAR-COLOR:#546e7a
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+END:VCALENDAR

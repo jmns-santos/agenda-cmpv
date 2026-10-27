@@ -8,6 +8,7 @@ NAME:Agenda municipale di Póvoa de Varzim
 X-WR-CALNAME:Agenda municipale di Póvoa de Varzim
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/it/agenda.ics
+X-APPLE-CALENDAR-COLOR:#0f4c6b
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
@@ -79,7 +80,7 @@ DTEND;VALUE=DATE:20270424
 DTSTAMP:20261014T092233Z
 UID:cHJvamV0by1lc2NvbGEtZGEtbWluaGEtdmlkYS0zfDIwMjYtMTAtMTQgMDk6MjI6MzI=@a
  genda.cm-pvarzim.pt
-CATEGORIES:Comunità e cittadinanza,Gare sportive
+CATEGORIES:Cittadinanza,Gare sportive
 DESCRIPTION:O Projeto Escola da Minha Vida (PEMV)\, organizado pela Câmar
  a Municipal da Póvoa de Varzim\, avança para nova edição\, a partir de
   19 de outubro.\n\nBiglietti e iscrizioni (in portoghese):\nAceda aos regu
@@ -230,7 +231,7 @@ DTEND:20261031T130000Z
 DTSTAMP:20260928T130805Z
 UID:bWVyY2Fkby1hYmVydG8tZGUtZmxvcmVzLTIwMjZ8MjAyNi0wOS0yOCAxMzowNDoyNA==@a
  genda.cm-pvarzim.pt
-CATEGORIES:Turismo ed economia,Feste\, fiere e mercati
+CATEGORIES:Economia,Feste\, fiere e mercati
 DESCRIPTION:No dia 31 de outubro\, o Mercado Municipal vai realizar\, mais
   uma edição do Mercado Aberto de Flores\, entre as 6h00 e as 13h00.\n\nB
  iglietti e iscrizioni (in portoghese):\nOs comerciantes do Mercado Municip
@@ -253,7 +254,7 @@ DTEND:20261031T123000Z
 DTSTAMP:20260831T105731Z
 UID:b2ZpY2luYS1kby1wbGFzdGljby1maXotc2FyZGluaGF8MjAyNi0wOC0zMSAwOTo1MjoyNg
  ==@agenda.cm-pvarzim.pt
-CATEGORIES:Ambiente e mobilità,Laboratori e attività
+CATEGORIES:Ambiente,Laboratori e attività
 DESCRIPTION:No dia 31 de outubro\, pelas 10h30\, o Café-Concerto do Cine-
  Teatro Garrett vai acolher a Oficina "Do Plástico fiz Sardinha".\n\nBigli
  etti e iscrizioni (in portoghese):\nOs bilhetes custam 5\,00€ e estão 
@@ -378,7 +379,7 @@ DTEND;VALUE=DATE:20261129
 DTSTAMP:20261015T093004Z
 UID:Y3Vyc28tZGUtcGFsZW9ncmFmaWF8MjAyNi0xMC0xNSAwOTozMDowMw==@agenda.cm-pva
  rzim.pt
-CATEGORIES:Turismo ed economia,Laboratori e attività
+CATEGORIES:Economia,Laboratori e attività
 DESCRIPTION:Todas as sextas-feiras de novembro (6\, 13\, 20 e 27)\, o Arqu
  ivo Municipal irá dinamizar um curso de paleografia\, destinado a públic
  o em geral\, professores\, investigadores e estudantes.\n\nBiglietti e isc
@@ -723,6 +724,29 @@ URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-
  de-lisboa-2/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Lançamento do livro “A Póvoa de Varzim na Belle Époque: panor
+ ama da vida cultural e do turismo balnear”
+DTSTART:20261116T213000Z
+DTEND:20261116T230000Z
+DTSTAMP:20261027T155206Z
+UID:bGFuY2FtZW50by1kby1saXZyby1hLXBvdm9hLWRlLXZhcnppbS1uYS1iZWxsZS1lcG9xdW
+ UtcGFub3JhbWEtZGEtdmlkYS1jdWx0dXJhbC1lLWRvLXR1cmlzbW8tYmFsbmVhcnwyMDI2LTEw
+ LTI3IDE1OjUyOjA1@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Letteratura
+DESCRIPTION:No dia 16 de novembro\, às 21h30\, será lançado\, no Museu 
+ Municipal\, o livro Lançamento do livro “A Póvoa de Varzim na Belle É
+ poque: panorama da vida cultural e do turismo balnear”.\n\nTitolo e desc
+ rizione dell'evento in portoghese\, come pubblicati dal comune.\n\nMaggior
+ i informazioni: https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-a-po
+ voa-de-varzim-na-belle-epoque-panorama-da-vida-cultural-e-do-turismo-balne
+ ar/
+LAST-MODIFIED:20261027T155206Z
+LOCATION:Museu Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-a-povoa-de-varzi
+ m-na-belle-epoque-panorama-da-vida-cultural-e-do-turismo-balnear/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Apresentação do livro infantil "Cachalote\, a baleia com a cauda
   plástica"
 DTSTART:20261118T100000Z
@@ -1005,7 +1029,7 @@ DTEND:20261204T233000Z
 DTSTAMP:20261001T145442Z
 UID:ZGVpeGVtLW8tcGltYmEtZW0tcGF6LTJ8MjAyNi0xMC0wMSAxNDo0OToxOA==@agenda.cm
  -pvarzim.pt
-CATEGORIES:Comunità e cittadinanza,Concerti
+CATEGORIES:Cittadinanza,Concerti
 DESCRIPTION:Estreado em 2013\, “Deixem o Pimba em Paz” conquistou o p
  úblico com uma reinterpretação irreverente do repertório pimba\, tendo
   percorrido Portugal de Norte a Sul\, ilhas incluídas\, e atravessando fr

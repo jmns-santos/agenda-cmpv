@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Öffentlicher Verkehr, Radfahren, Zufußgehen und Verkehrssic
+ herheit.
+NAME:Póvoa de Varzim: Mobilität und Verkehr
+X-WR-CALNAME:Póvoa de Varzim: Mobilität und Verkehr
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/de/temas/mobi
+ lidade-transportes-aviso-1s.ics
+X-APPLE-CALENDAR-COLOR:#1565c0
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+END:VCALENDAR

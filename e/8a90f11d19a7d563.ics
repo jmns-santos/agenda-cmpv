@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Concerto de Amizade
+DTSTART:20261107T190000Z
+DTEND:20261107T203000Z
+DTSTAMP:20261020T110316Z
+UID:Y29uY2VydG8tZGUtYW1pemFkZXwyMDI2LTEwLTIwIDExOjAzOjE2@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura,Concertos
+DESCRIPTION:No âmbito das relações de geminação existentes entre o Mu
+ nicípio da Póvoa de Varzim e a cidade galega de A Guarda (Espanha)\, enc
+ ontra-se programado um intercâmbio sociocultural que promete aproximar as
+  duas comunidades através da música e da arte.\n\nBilhetes e inscriçõe
+ s:\nO evento dividir-se-á em duas datas e palcos distintos: 24 de outubro
+  – na Igreja de Santa Maria\, na cidade de A Guarda (Galiza\, Espanha)\,
+  às 20h00 (hora espanhola)\, e no dia 7 de novembro\, na Igreja da Miseri
+ córdia\, na Póvoa de Varzim\, às 19h00\, com entrada livre.\n\nMais inf
+ ormação: https://www.cm-pvarzim.pt/eventos/concerto-de-amizade/
+LAST-MODIFIED:20261020T110316Z
+LOCATION:Igreja da Misericórdia
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-de-amizade/
+END:VEVENT
+END:VCALENDAR

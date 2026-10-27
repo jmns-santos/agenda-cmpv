@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Cinema "Trapalhões"
+DTSTART:20261122T153000Z
+DTEND:20261122T174500Z
+DTSTAMP:20261027T091431Z
+UID:Y2luZW1hLXRyYXBhbGhvZXN8MjAyNi0xMC0yMSAwODo0MzoxNA==@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura,Cinema
+DESCRIPTION:No dia 22 de novembro\, às 15h30\, será exibido\, no Cine-Te
+ atro Garrett\, o filme "Trapalhões" (versão portuguesa).\n\nBilhetes e i
+ nscrições:\nEntradas: Os bilhetes custam 3\,50€ e estão à venda na B
+ OL e no Cine-Teatro Garrett.\nBilhetes: https://www.bol.pt/Projecto/Entida
+ desAderentes/3289-cine_teatro_garrett\n\nMais informação: https://www.cm
+ -pvarzim.pt/eventos/cinema-trapalhoes/
+LAST-MODIFIED:20261027T091431Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-trapalhoes/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Ciclo Lavorada Gente: "Um prefácio à Camisola Poveira: Represent
+ ação das camisolas no século XIX"
+DTSTART:20261128T150000Z
+DTEND:20261128T163000Z
+DTSTAMP:20261027T142926Z
+UID:Y2ljbG8tbGF2b3JhZGEtZ2VudGUtdW0tcHJlZmFjaW8tYS1jYW1pc29sYS1wb3ZlaXJhLX
+ JlcHJlc2VudGFjYW8tZGFzLWNhbWlzb2xhcy1uby1zZWN1bG8teGl4fDIwMjYtMTAtMjcgMTQ6
+ Mjg6MjU=@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Oficinas e atividades
+DESCRIPTION:A Associação Lavorada promove\, no próximo dia 28 de novemb
+ ro\, a partir das 15h00\, mais uma tertúlia do ciclo Lavorada Gente\, des
+ ta vez dedicada à história e à construção daquilo que reconhecemos ho
+ je como Camisola Poveira.\n\nMais informação: https://www.cm-pvarzim.pt/
+ eventos/ciclo-lavorada-gente-um-prefacio-a-camisola-poveira-representacao-
+ das-camisolas-no-seculo-xix/
+LAST-MODIFIED:20261027T142926Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/ciclo-lavorada-gente-um-prefacio-a-c
+ amisola-poveira-representacao-das-camisolas-no-seculo-xix/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,73 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:健康、教育、家庭、青年、包容与市政生活.
+NAME:波武阿-迪瓦尔津：公民生活
+X-WR-CALNAME:波武阿-迪瓦尔津：公民生活
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cida
+ dania-aviso-1s.ics
+X-APPLE-CALENDAR-COLOR:#1a237e
+X-PUBLISHED-TTL:PT4H
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Projeto Escola da Minha Vida
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20270424
+DTSTAMP:20261014T092233Z
+UID:cHJvamV0by1lc2NvbGEtZGEtbWluaGEtdmlkYS0zfDIwMjYtMTAtMTQgMDk6MjI6MzI=@a
+ genda.cm-pvarzim.pt
+CATEGORIES:公民生活,体育赛事
+DESCRIPTION:O Projeto Escola da Minha Vida (PEMV)\, organizado pela Câmar
+ a Municipal da Póvoa de Varzim\, avança para nova edição\, a partir de
+  19 de outubro.\n\n门票与报名（葡萄牙语）：\nAceda aos regulam
+ entos/fichas de inscrição de todas as modalidades a concurso e fique a p
+ ar de toda a informação sobre o PEMV 2026/2027 no portal municipal.\n报
+ 名: https://www.cm-pvarzim.pt/territorio/juventude/casa-da-juventude/ativ
+ idade/projeto-escola-da-minha-vida/projeto-escola-da-minha-vida-2026-2027/
+ regulamentos-das-diversas-modalidades-a-concurso/\n报名: https://www.cm-
+ pvarzim.pt/territorio/juventude/casa-da-juventude/atividade/projeto-escola
+ -da-minha-vida/projeto-escola-da-minha-vida-2026-2027/\n\n活动标题和
+ 说明为葡萄牙语，与市政府发布的内容一致。\n\n更多信
+ 息: https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
+LAST-MODIFIED:20261014T092233Z
+LOCATION:Escolas do concelho\, Diana Bar\, Póvoa Arena\, Parque da Cidade
+  e Casa da Juventude
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Projeto Escola da Minha Vida
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:"Deixem o Pimba em Paz"
+DTSTART:20261204T213000Z
+DTEND:20261204T233000Z
+DTSTAMP:20261001T145442Z
+UID:ZGVpeGVtLW8tcGltYmEtZW0tcGF6LTJ8MjAyNi0xMC0wMSAxNDo0OToxOA==@agenda.cm
+ -pvarzim.pt
+CATEGORIES:公民生活,音乐会
+DESCRIPTION:Estreado em 2013\, “Deixem o Pimba em Paz” conquistou o p
+ úblico com uma reinterpretação irreverente do repertório pimba\, tendo
+  percorrido Portugal de Norte a Sul\, ilhas incluídas\, e atravessando fr
+ onteiras até aos Estados Unidos da América e Brasil.\n\n门票与报名
+ （葡萄牙语）：\nOs bilhetes estão à venda na BOL.\n门票: https:
+ //www.bol.pt/Comprar/Bilhetes/183417-deixem_o_pimba_em_paz_povoa_de_varzim
+ -povoa_arena/\n\n活动标题和说明为葡萄牙语，与市政府发布
+ 的内容一致。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/deix
+ em-o-pimba-em-paz-2/
+LAST-MODIFIED:20261001T145442Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/deixem-o-pimba-em-paz-2/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:"Deixem o Pimba em Paz"
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

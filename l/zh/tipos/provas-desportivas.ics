@@ -9,6 +9,7 @@ X-WR-CALNAME:波武阿-迪瓦尔津：体育赛事
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/prov
  as-desportivas.ics
+X-APPLE-CALENDAR-COLOR:#388e3c
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
@@ -18,7 +19,7 @@ DTEND;VALUE=DATE:20270424
 DTSTAMP:20261014T092233Z
 UID:cHJvamV0by1lc2NvbGEtZGEtbWluaGEtdmlkYS0zfDIwMjYtMTAtMTQgMDk6MjI6MzI=@a
  genda.cm-pvarzim.pt
-CATEGORIES:社区与公民生活,体育赛事
+CATEGORIES:公民生活,体育赛事
 DESCRIPTION:O Projeto Escola da Minha Vida (PEMV)\, organizado pela Câmar
  a Municipal da Póvoa de Varzim\, avança para nova edição\, a partir de
   19 de outubro.\n\n门票与报名（葡萄牙语）：\nAceda aos regulam
