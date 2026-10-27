@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-TH5j0XFYJJ6VkSB7kSaRMdvHqGa+N15ZCMX9XO8xRVE='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-QMu8YdBXFwmigSzFbnY5qolJ7LKt12SHPlOAawRkuAw='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="Subscreva a agenda de eventos da Póvoa de Varzim no calendário do telemóvel ou do computador, completa, por tema ou por tipo.">
+<meta name="description" content="NEXO - EVENTOS: subscreva a agenda municipal da Póvoa de Varzim no calendário do telemóvel ou do computador, completa, por tema ou por tipo.">
 <meta name="theme-color" content="#0f4c6b">
-<title>Agenda municipal da Póvoa de Varzim no seu calendário</title>
+<title>NEXO - EVENTOS · Agenda municipal da Póvoa de Varzim</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='5' width='26' height='24' rx='4' fill='%230f4c6b'/%3E%3Crect x='3' y='5' width='26' height='7' rx='3' fill='%230a3a52'/%3E%3Cpath d='M7 22c3-3 6-3 9 0s6 3 9 0' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
   @font-face { font-family: "CMPV"; src: url("fontes/cmpv-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
@@ -48,7 +48,7 @@
   body {
     margin: 0; background: var(--fundo); color: var(--tinta);
     font-family: "CMPV", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 1rem; line-height: 1.5;
+    font-size: 1rem; line-height: 1.5; overflow-x: clip;
   }
   a { color: inherit; }
   :focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; }
@@ -59,8 +59,8 @@
 
   /* Topo */
   .topo { background: var(--mar); color: #fff; padding-top: max(1.6rem, env(safe-area-inset-top)); }
-  .topo h1 { margin: 0 0 .45rem; font-size: clamp(1.55rem, 4.6vw, 2.25rem); line-height: 1.1; letter-spacing: -.02em; font-weight: 700; }
-  .topo p { max-width: 40em; color: #d6e7ef; font-size: 1rem; }
+  .topo h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.05; letter-spacing: .01em; font-weight: 700; }
+  .topo p { margin-top: .3rem; color: #d6e7ef; font-size: clamp(1rem, 2.6vw, 1.15rem); }
   .onda { display: block; width: 100%; height: 22px; margin-top: 1.1rem; }
   .onda path { fill: var(--fundo); }
 
@@ -77,32 +77,38 @@
   /* Calendário usado */
   .seletor { position: sticky; top: 0; z-index: 3; background: var(--fundo); padding: max(.6rem, env(safe-area-inset-top)) 0 .6rem; border-bottom: 1px solid var(--linha); }
   .seletor .pergunta { font-size: .85rem; font-weight: 700; color: var(--cinza); margin: 0 0 .35rem; text-transform: uppercase; letter-spacing: .04em; }
+  .seletor .segmentos { grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 34rem) { .seletor .segmentos { grid-template-columns: repeat(2, 1fr); } }
   #sis-apple:checked ~ .seletor label[for="sis-apple"],
   #sis-google:checked ~ .seletor label[for="sis-google"],
+  #sis-outlook:checked ~ .seletor label[for="sis-outlook"],
   #sis-outro:checked ~ .seletor label[for="sis-outro"],
   #vista-tema:checked ~ main label[for="vista-tema"],
   #vista-tipo:checked ~ main label[for="vista-tipo"] { background: var(--cartao); color: var(--mar); box-shadow: var(--sombra); }
   @media (prefers-color-scheme: dark) {
     #sis-apple:checked ~ .seletor label[for="sis-apple"],
     #sis-google:checked ~ .seletor label[for="sis-google"],
+    #sis-outlook:checked ~ .seletor label[for="sis-outlook"],
     #sis-outro:checked ~ .seletor label[for="sis-outro"],
     #vista-tema:checked ~ main label[for="vista-tema"],
     #vista-tipo:checked ~ main label[for="vista-tipo"] { background: var(--botao); color: #fff; }
   }
   #sis-apple:focus-visible ~ .seletor label[for="sis-apple"],
   #sis-google:focus-visible ~ .seletor label[for="sis-google"],
+  #sis-outlook:focus-visible ~ .seletor label[for="sis-outlook"],
   #sis-outro:focus-visible ~ .seletor label[for="sis-outro"],
   #vista-tema:focus-visible ~ main label[for="vista-tema"],
   #vista-tipo:focus-visible ~ main label[for="vista-tipo"] { outline: 3px solid var(--foco); outline-offset: 1px; }
   .dica { display: none; margin-top: .4rem; font-size: .85rem; color: var(--cinza); }
-  #sis-apple:checked ~ .seletor .dica-apple,
   #sis-google:checked ~ .seletor .dica-google,
+  #sis-outlook:checked ~ .seletor .dica-outlook,
   #sis-outro:checked ~ .seletor .dica-outro { display: block; }
 
   /* Botões: só aparece o do calendário escolhido */
-  .so-apple, .so-google, .so-outro { display: none !important; }
+  .so-apple, .so-google, .so-outlook, .so-outro { display: none !important; }
   #sis-apple:checked ~ main .so-apple,
   #sis-google:checked ~ main .so-google,
+  #sis-outlook:checked ~ main .so-outlook,
   #sis-outro:checked ~ main .so-outro { display: flex !important; }
 
   .acoes { display: flex; flex-direction: column; gap: .4rem; }
@@ -140,10 +146,10 @@
   @media (max-width: 36rem) { .completa { grid-template-columns: 1fr; } }
 
   /* Tema / tipo */
-  .escolha { margin-top: 1.4rem; }
+  .escolha { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
+  /* linha a toda a largura, igual à que separa o seletor do calendário */
+  .escolha::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
   .escolha > .segmentos { max-width: 26rem; }
-  .explica { margin: .7rem 0 .2rem; color: var(--cinza); font-size: .92rem; }
-  .explica strong { color: var(--tinta); }
 
   .grelha { list-style: none; margin: .8rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr)); gap: .65rem; }
   .cartao {
@@ -164,9 +170,8 @@
   .cartao .copiar { flex: 1 1 100%; }
   .linha2 { font-variant-numeric: lining-nums tabular-nums; }
 
-  .grelha.painel-tipos, .explica.explica-tipo { display: none; }
-  #vista-tipo:checked ~ main .grelha.painel-temas, #vista-tipo:checked ~ main .explica.explica-tema { display: none; }
-  #vista-tipo:checked ~ main .explica.explica-tipo { display: block; }
+  .grelha.painel-tipos { display: none; }
+  #vista-tipo:checked ~ main .grelha.painel-temas { display: none; }
   #vista-tipo:checked ~ main .grelha.painel-tipos { display: grid; }
 
   .aviso { margin-top: .9rem; padding: .65rem .8rem; border-radius: 10px; background: var(--mar-claro); font-size: .88rem; }
@@ -188,14 +193,15 @@
 
 <input type="radio" name="sistema" id="sis-apple" class="escondido" checked aria-label="iPhone, iPad ou Mac">
 <input type="radio" name="sistema" id="sis-google" class="escondido" aria-label="Android ou Google Calendar">
-<input type="radio" name="sistema" id="sis-outro" class="escondido" aria-label="Outlook ou outra aplicação">
+<input type="radio" name="sistema" id="sis-outlook" class="escondido" aria-label="Outlook">
+<input type="radio" name="sistema" id="sis-outro" class="escondido" aria-label="Outra aplicação">
 <input type="radio" name="vista" id="vista-tema" class="escondido" checked aria-label="Subscrever por tema">
 <input type="radio" name="vista" id="vista-tipo" class="escondido" aria-label="Subscrever por tipo">
 
 <header class="topo">
   <div class="largura">
-    <h1>Agenda municipal da Póvoa de Varzim no seu calendário</h1>
-    <p>Subscreva uma vez e os eventos do município aparecem no seu calendário. Eventos novos e mudanças de horário chegam sozinhos.</p>
+    <h1>NEXO - EVENTOS</h1>
+    <p>Agenda municipal da Póvoa de Varzim no seu calendário</p>
   </div>
   <svg class="onda" viewBox="0 0 1200 22" preserveAspectRatio="none" aria-hidden="true" focusable="false">
     <path d="M0 14 C 150 2, 300 2, 450 12 S 750 22, 900 11 S 1100 4, 1200 10 L 1200 22 L 0 22 Z"/>
@@ -208,11 +214,12 @@
     <div class="segmentos" role="group" aria-labelledby="pergunta">
       <label for="sis-apple">iPhone, iPad ou Mac</label>
       <label for="sis-google">Android ou Google</label>
-      <label for="sis-outro">Outlook ou outra</label>
+      <label for="sis-outlook">Outlook</label>
+      <label for="sis-outro">Outra aplicação</label>
     </div>
-    <p class="dica dica-apple">Subscrever abre a app Calendário, que pede confirmação.</p>
-    <p class="dica dica-google">Subscrever abre o Google Calendar. Use a mesma conta Google do telemóvel.</p>
-    <p class="dica dica-outro">No Outlook para computador basta Subscrever. Noutras aplicações, copie o link e adicione-o como calendário da internet.</p>
+    <p class="dica dica-google">Abre o Google Calendar na conta Google com sessão iniciada. Use a mesma conta do telemóvel.</p>
+    <p class="dica dica-outlook">Abre o Outlook na web com a conta Microsoft 365 (profissional ou escolar).</p>
+    <p class="dica dica-outro">Copie o link e adicione-o na aplicação como calendário da internet (por URL).</p>
   </div>
 </div>
 
@@ -221,12 +228,12 @@
   <section class="completa" aria-labelledby="t-geral">
     <div>
       <h2 id="t-geral">Agenda completa</h2>
-      <p class="linha2">Todos os eventos num só calendário: 50 eventos nos próximos meses.</p>
+      <p class="linha2">Todos os eventos num só calendário (51 eventos agendados).</p>
     </div>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/agenda.ics" aria-label="Subscrever a agenda completa no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/agenda.ics" aria-label="Subscrever a agenda completa no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fagenda.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever a agenda completa no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/agenda.ics" aria-label="Subscrever a agenda completa no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fagenda.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever a agenda completa no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/agenda.ics" aria-label="Link de a agenda completa">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/agenda.ics">Copiar link</button>
@@ -239,21 +246,18 @@
       <label for="vista-tema">Subscrever por tema</label>
       <label for="vista-tipo">Subscrever por tipo</label>
     </div>
-    <p class="explica explica-tema"><strong>Tema</strong> é o assunto do evento: cultura, desporto, ambiente, turismo ou comunidade.</p>
-    <p class="explica explica-tipo"><strong>Tipo</strong> é o formato do evento: concerto, filme, peça de teatro, exposição, prova desportiva…</p>
-    <p class="explica">Entre parênteses, a parte da agenda atual que recebe com cada opção.</p>
 
     <ul class="grelha painel-temas" aria-label="Temas">
-<li class="cartao" style="--cor: #b03a5b; --pct: 88.0%">
+<li class="cartao" style="--cor: #8e1b4f; --pct: 88.2%">
   <h3>Cultura</h3>
   <p class="resumo">Música, cinema, teatro, exposições, livros e património</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">44 eventos <small>(88%)</small></span>
+    <span class="valor">45 eventos <small>· 88% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/cultura.ics" aria-label="Subscrever Cultura no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/cultura.ics" aria-label="Subscrever Cultura no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fcultura.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Cultura no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/cultura.ics" aria-label="Subscrever Cultura no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fcultura.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Cultura no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/temas/cultura.ics" aria-label="Link de Cultura">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/temas/cultura.ics">Copiar link</button>
@@ -261,16 +265,16 @@
 </div>
   </div>
 </li>
-<li class="cartao" style="--cor: #2e7d4f; --pct: 2.0%">
+<li class="cartao" style="--cor: #1b6e3a; --pct: 2.0%">
   <h3>Desporto</h3>
   <p class="resumo">Provas, torneios e atividade física</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">1 evento <small>(2%)</small></span>
+    <span class="valor">1 evento <small>· 2% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/desporto.ics" aria-label="Subscrever Desporto no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/desporto.ics" aria-label="Subscrever Desporto no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fdesporto.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Desporto no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/desporto.ics" aria-label="Subscrever Desporto no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fdesporto.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Desporto no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/temas/desporto.ics" aria-label="Link de Desporto">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/temas/desporto.ics">Copiar link</button>
@@ -278,16 +282,16 @@
 </div>
   </div>
 </li>
-<li class="cartao" style="--cor: #1c7fa6; --pct: 2.0%">
+<li class="cartao" style="--cor: #006d77; --pct: 2.0%">
   <h3>Ambiente e mobilidade</h3>
   <p class="resumo">Natureza, clima, energia e transportes</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">1 evento <small>(2%)</small></span>
+    <span class="valor">1 evento <small>· 2% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/ambiente-mobilidade.ics" aria-label="Subscrever Ambiente e mobilidade no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/ambiente-mobilidade.ics" aria-label="Subscrever Ambiente e mobilidade no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fambiente-mobilidade.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Ambiente e mobilidade no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/ambiente-mobilidade.ics" aria-label="Subscrever Ambiente e mobilidade no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fambiente-mobilidade.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Ambiente e mobilidade no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/temas/ambiente-mobilidade.ics" aria-label="Link de Ambiente e mobilidade">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/temas/ambiente-mobilidade.ics">Copiar link</button>
@@ -295,16 +299,16 @@
 </div>
   </div>
 </li>
-<li class="cartao" style="--cor: #c0532a; --pct: 4.0%">
+<li class="cartao" style="--cor: #b4480b; --pct: 3.9%">
   <h3>Turismo e economia</h3>
   <p class="resumo">Turismo, gastronomia, comércio, empresas e emprego</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">2 eventos <small>(4%)</small></span>
+    <span class="valor">2 eventos <small>· 4% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/turismo-economia.ics" aria-label="Subscrever Turismo e economia no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/turismo-economia.ics" aria-label="Subscrever Turismo e economia no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fturismo-economia.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Turismo e economia no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/turismo-economia.ics" aria-label="Subscrever Turismo e economia no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fturismo-economia.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Turismo e economia no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/temas/turismo-economia.ics" aria-label="Link de Turismo e economia">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/temas/turismo-economia.ics">Copiar link</button>
@@ -312,16 +316,16 @@
 </div>
   </div>
 </li>
-<li class="cartao" style="--cor: #5b4b9a; --pct: 4.0%">
+<li class="cartao" style="--cor: #2f3e9e; --pct: 3.9%">
   <h3>Comunidade e cidadania</h3>
   <p class="resumo">Saúde, educação, família, juventude e vida municipal</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">2 eventos <small>(4%)</small></span>
+    <span class="valor">2 eventos <small>· 4% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/comunidade-cidadania.ics" aria-label="Subscrever Comunidade e cidadania no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/comunidade-cidadania.ics" aria-label="Subscrever Comunidade e cidadania no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fcomunidade-cidadania.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Comunidade e cidadania no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/temas/comunidade-cidadania.ics" aria-label="Subscrever Comunidade e cidadania no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftemas%2Fcomunidade-cidadania.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Comunidade e cidadania no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/temas/comunidade-cidadania.ics" aria-label="Link de Comunidade e cidadania">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/temas/comunidade-cidadania.ics">Copiar link</button>
@@ -331,16 +335,16 @@
 </li>
     </ul>
     <ul class="grelha painel-tipos" aria-label="Tipos">
-<li class="cartao" style="--cor: #b03a5b; --pct: 12.0%">
+<li class="cartao" style="--cor: #d32f2f; --pct: 11.8%">
   <h3>Concertos</h3>
   <p class="resumo">Concertos, recitais, coros, bandas e música ao vivo</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">6 eventos <small>(12%)</small></span>
+    <span class="valor">6 eventos <small>· 12% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/concertos.ics" aria-label="Subscrever Concertos no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/concertos.ics" aria-label="Subscrever Concertos no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fconcertos.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Concertos no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/concertos.ics" aria-label="Subscrever Concertos no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fconcertos.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Concertos no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/tipos/concertos.ics" aria-label="Link de Concertos">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/tipos/concertos.ics">Copiar link</button>
@@ -348,16 +352,16 @@
 </div>
   </div>
 </li>
-<li class="cartao" style="--cor: #7a3e9d; --pct: 20.0%">
+<li class="cartao" style="--cor: #6a3fb5; --pct: 19.6%">
   <h3>Cinema</h3>
   <p class="resumo">Sessões de cinema, filmes e documentários</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">10 eventos <small>(20%)</small></span>
+    <span class="valor">10 eventos <small>· 20% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/cinema.ics" aria-label="Subscrever Cinema no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/cinema.ics" aria-label="Subscrever Cinema no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fcinema.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Cinema no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/cinema.ics" aria-label="Subscrever Cinema no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fcinema.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Cinema no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/tipos/cinema.ics" aria-label="Link de Cinema">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/tipos/cinema.ics">Copiar link</button>
@@ -365,16 +369,16 @@
 </div>
   </div>
 </li>
-<li class="cartao" style="--cor: #c2185b; --pct: 6.0%">
+<li class="cartao" style="--cor: #c2185b; --pct: 5.9%">
   <h3>Teatro</h3>
   <p class="resumo">Peças de teatro, teatro de rua, marionetas e leituras encenadas</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">3 eventos <small>(6%)</small></span>
+    <span class="valor">3 eventos <small>· 6% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/teatro.ics" aria-label="Subscrever Teatro no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/teatro.ics" aria-label="Subscrever Teatro no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fteatro.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Teatro no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/teatro.ics" aria-label="Subscrever Teatro no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fteatro.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Teatro no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/tipos/teatro.ics" aria-label="Link de Teatro">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/tipos/teatro.ics">Copiar link</button>
@@ -382,16 +386,16 @@
 </div>
   </div>
 </li>
-<li class="cartao" style="--cor: #d0711f; --pct: 4.0%">
+<li class="cartao" style="--cor: #e07b00; --pct: 3.9%">
   <h3>Espetáculos</h3>
   <p class="resumo">Dança, circo, magia, humor, musicais e espetáculos de rua</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">2 eventos <small>(4%)</small></span>
+    <span class="valor">2 eventos <small>· 4% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/espetaculos.ics" aria-label="Subscrever Espetáculos no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/espetaculos.ics" aria-label="Subscrever Espetáculos no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fespetaculos.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Espetáculos no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/espetaculos.ics" aria-label="Subscrever Espetáculos no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fespetaculos.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Espetáculos no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/tipos/espetaculos.ics" aria-label="Link de Espetáculos">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/tipos/espetaculos.ics">Copiar link</button>
@@ -399,16 +403,16 @@
 </div>
   </div>
 </li>
-<li class="cartao" style="--cor: #8d6e00; --pct: 8.0%">
+<li class="cartao" style="--cor: #8a7300; --pct: 7.8%">
   <h3>Exposições</h3>
   <p class="resumo">Exposições de arte, fotografia, história e património</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">4 eventos <small>(8%)</small></span>
+    <span class="valor">4 eventos <small>· 8% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/exposicoes.ics" aria-label="Subscrever Exposições no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/exposicoes.ics" aria-label="Subscrever Exposições no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fexposicoes.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Exposições no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/exposicoes.ics" aria-label="Subscrever Exposições no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fexposicoes.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Exposições no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/tipos/exposicoes.ics" aria-label="Link de Exposições">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/tipos/exposicoes.ics">Copiar link</button>
@@ -416,16 +420,16 @@
 </div>
   </div>
 </li>
-<li class="cartao" style="--cor: #5d4037; --pct: 24.0%">
+<li class="cartao" style="--cor: #795548; --pct: 23.5%">
   <h3>Literatura</h3>
   <p class="resumo">Livros, leitura, poesia e contos</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">12 eventos <small>(24%)</small></span>
+    <span class="valor">12 eventos <small>· 24% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/literatura.ics" aria-label="Subscrever Literatura no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/literatura.ics" aria-label="Subscrever Literatura no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fliteratura.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Literatura no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/literatura.ics" aria-label="Subscrever Literatura no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fliteratura.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Literatura no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/tipos/literatura.ics" aria-label="Link de Literatura">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/tipos/literatura.ics">Copiar link</button>
@@ -433,16 +437,16 @@
 </div>
   </div>
 </li>
-<li class="cartao" style="--cor: #00796b; --pct: 12.0%">
+<li class="cartao" style="--cor: #00897b; --pct: 13.7%">
   <h3>Oficinas e atividades</h3>
   <p class="resumo">Oficinas, cursos, conferências, jogos e atividades para todas as idades</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">6 eventos <small>(12%)</small></span>
+    <span class="valor">7 eventos <small>· 14% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/oficinas-atividades.ics" aria-label="Subscrever Oficinas e atividades no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/oficinas-atividades.ics" aria-label="Subscrever Oficinas e atividades no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Foficinas-atividades.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Oficinas e atividades no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/oficinas-atividades.ics" aria-label="Subscrever Oficinas e atividades no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Foficinas-atividades.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Oficinas e atividades no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/tipos/oficinas-atividades.ics" aria-label="Link de Oficinas e atividades">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/tipos/oficinas-atividades.ics">Copiar link</button>
@@ -450,16 +454,16 @@
 </div>
   </div>
 </li>
-<li class="cartao" style="--cor: #2e7d4f; --pct: 2.0%">
+<li class="cartao" style="--cor: #388e3c; --pct: 2.0%">
   <h3>Provas desportivas</h3>
   <p class="resumo">Torneios, corridas, caminhadas, jogos e treinos abertos</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">1 evento <small>(2%)</small></span>
+    <span class="valor">1 evento <small>· 2% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/provas-desportivas.ics" aria-label="Subscrever Provas desportivas no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/provas-desportivas.ics" aria-label="Subscrever Provas desportivas no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fprovas-desportivas.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Provas desportivas no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/provas-desportivas.ics" aria-label="Subscrever Provas desportivas no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fprovas-desportivas.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Provas desportivas no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/tipos/provas-desportivas.ics" aria-label="Link de Provas desportivas">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/tipos/provas-desportivas.ics">Copiar link</button>
@@ -467,16 +471,16 @@
 </div>
   </div>
 </li>
-<li class="cartao" style="--cor: #c0532a; --pct: 8.0%">
+<li class="cartao" style="--cor: #f4511e; --pct: 7.8%">
   <h3>Festas, feiras e mercados</h3>
   <p class="resumo">Festas populares, festivais, feiras, mercados e gastronomia</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">4 eventos <small>(8%)</small></span>
+    <span class="valor">4 eventos <small>· 8% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/festas-feiras.ics" aria-label="Subscrever Festas, feiras e mercados no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/festas-feiras.ics" aria-label="Subscrever Festas, feiras e mercados no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Ffestas-feiras.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Festas, feiras e mercados no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/festas-feiras.ics" aria-label="Subscrever Festas, feiras e mercados no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Ffestas-feiras.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Festas, feiras e mercados no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/tipos/festas-feiras.ics" aria-label="Link de Festas, feiras e mercados">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/tipos/festas-feiras.ics">Copiar link</button>
@@ -484,16 +488,16 @@
 </div>
   </div>
 </li>
-<li class="cartao vazio" style="--cor: #1f7a8c; --pct: 0.0%">
+<li class="cartao vazio" style="--cor: #0288d1; --pct: 0.0%">
   <h3>Visitas e passeios</h3>
   <p class="resumo">Visitas guiadas, roteiros, passeios e percursos</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
     <span class="valor">Sem eventos de momento</span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/visitas-passeios.ics" aria-label="Subscrever Visitas e passeios no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/visitas-passeios.ics" aria-label="Subscrever Visitas e passeios no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fvisitas-passeios.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Visitas e passeios no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/visitas-passeios.ics" aria-label="Subscrever Visitas e passeios no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fvisitas-passeios.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Visitas e passeios no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/tipos/visitas-passeios.ics" aria-label="Link de Visitas e passeios">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/tipos/visitas-passeios.ics">Copiar link</button>
@@ -501,16 +505,16 @@
 </div>
   </div>
 </li>
-<li class="cartao vazio" style="--cor: #1c7f5a; --pct: 0.0%">
+<li class="cartao vazio" style="--cor: #546e7a; --pct: 0.0%">
   <h3>Ações e campanhas</h3>
   <p class="resumo">Sensibilização, rastreios, recolhas, limpezas e campanhas solidárias</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
     <span class="valor">Sem eventos de momento</span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/acoes-campanhas.ics" aria-label="Subscrever Ações e campanhas no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/acoes-campanhas.ics" aria-label="Subscrever Ações e campanhas no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Facoes-campanhas.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Ações e campanhas no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/acoes-campanhas.ics" aria-label="Subscrever Ações e campanhas no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Facoes-campanhas.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Ações e campanhas no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/tipos/acoes-campanhas.ics" aria-label="Link de Ações e campanhas">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/tipos/acoes-campanhas.ics">Copiar link</button>
@@ -518,16 +522,16 @@
 </div>
   </div>
 </li>
-<li class="cartao" style="--cor: #5b4b9a; --pct: 4.0%">
+<li class="cartao" style="--cor: #9c27b0; --pct: 3.9%">
   <h3>Comemorações e cerimónias</h3>
   <p class="resumo">Dias comemorativos, cerimónias, galas, homenagens e sessões solenes</p>
   <span class="barra" aria-hidden="true"><span></span></span>
   <div class="rodape">
-    <span class="valor">2 eventos <small>(4%)</small></span>
+    <span class="valor">2 eventos <small>· 4% da agenda</small></span>
     <div class="acoes">
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/comemoracoes.ics" aria-label="Subscrever Comemorações e cerimónias no iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/comemoracoes.ics" aria-label="Subscrever Comemorações e cerimónias no Calendário do iPhone, iPad ou Mac"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <a class="botao so-google" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fcomemoracoes.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Comemorações e cerimónias no Google Calendar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
-  <a class="botao so-outro" href="webcal://jmns-santos.github.io/agenda-cmpv/tipos/comemoracoes.ics" aria-label="Subscrever Comemorações e cerimónias no Outlook ou noutra aplicação"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Ftipos%2Fcomemoracoes.ics" target="_blank" rel="noopener noreferrer" aria-label="Subscrever Comemorações e cerimónias no Outlook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>Subscrever</a>
   <div class="copiar so-outro">
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/tipos/comemoracoes.ics" aria-label="Link de Comemorações e cerimónias">
     <button type="button" class="botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/tipos/comemoracoes.ics">Copiar link</button>
@@ -537,7 +541,8 @@
 </li>
     </ul>
 
-    <p class="aviso">Pode subscrever vários temas, ou vários tipos, sem eventos repetidos. Não misture temas com tipos nem com a agenda completa: aí os eventos aparecem em duplicado.</p>
+    <p class="aviso">Evite subscrever temas e tipos em simultâneo, para não receber eventos repetidos.</p>
+
   </section>
 
   <section class="ajuda" aria-labelledby="t-ajuda">
@@ -546,34 +551,45 @@
       <summary>iPhone, iPad ou Mac</summary>
       <div>
         <p>Toque em Subscrever e confirme no Calendário.</p>
-        <p>Se não abrir, escolha «Outlook ou outra», copie o link e adicione-o em Definições › Calendário › Contas › Adicionar conta › Outra › Adicionar calendário subscrito. Nas versões mais recentes do iOS, o Calendário está em Definições › Apps.</p>
+        <p>Se nada acontecer, escolha «Outra aplicação», copie o link e adicione-o nas definições do Calendário: Contas › Adicionar conta › Outra › Adicionar calendário subscrito.</p>
       </div>
     </details>
     <details>
       <summary>Android ou Google Calendar</summary>
       <div>
-        <p>Escolha «Android ou Google», toque em Subscrever e confirme. O calendário fica na sua conta Google e aparece no Google Calendar e nas apps ligadas à conta, como o Calendário Samsung.</p>
-        <p>Se não aparecer, abra as definições do Google Calendar, toque no nome do calendário e ative a sincronização.</p>
-        <p>Se o botão não funcionar, use um computador: em calendar.google.com, junto a «Outros calendários», escolha + › «A partir do URL» e cole o link (visível em «Outlook ou outra»).</p>
+        <p>Toque em Subscrever: abre o Google Calendar na conta Google com sessão iniciada e pede para adicionar o calendário. Depois aparece na app Google Calendar e nas apps ligadas à mesma conta, como o Calendário Samsung.</p>
+        <p>Se não aparecer na app, abra as definições do Google Calendar, toque no nome do calendário e ative a sincronização.</p>
       </div>
     </details>
     <details>
-      <summary>Outlook e outras aplicações</summary>
+      <summary>Outlook</summary>
       <div>
-        <p>No Outlook para Windows ou Mac, o botão Subscrever abre a subscrição. No Outlook na web, use Adicionar calendário › Subscrever a partir da Web e cole o link.</p>
-        <p>Noutras aplicações, procure a opção para adicionar um calendário da internet ou por URL.</p>
+        <p>Com uma conta Microsoft 365 (profissional ou escolar), Subscrever abre o Outlook na web e pede confirmação.</p>
+        <p>Com uma conta pessoal (Outlook.com, Hotmail), escolha «Outra aplicação», copie o link e, em outlook.com, use Adicionar calendário › Subscrever a partir da Web.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Outra aplicação</summary>
+      <div>
+        <p>Copie o link e procure na aplicação a opção de adicionar um calendário da internet ou por URL.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Onde comprar bilhetes ou fazer a inscrição?</summary>
+      <div>
+        <p>Quando a página do evento no site do município indica preço, entrada livre, bilhetes ou inscrição, essa informação aparece nas notas do evento, com o link de compra (por exemplo, BOL) ou de inscrição. Confirme sempre na página do evento.</p>
       </div>
     </details>
     <details>
       <summary>Como são escolhidos o tema e o tipo?</summary>
       <div>
-        <p>Automaticamente, pelas palavras do título e da descrição de cada evento. Cada evento tem um só tema e um só tipo, e está sempre na agenda completa.</p>
+        <p>Automaticamente, a partir do título e da descrição de cada evento. Cada evento tem um só tema e um só tipo e está sempre na agenda completa. Em casos pontuais, a classificação pode não ser a mais adequada.</p>
       </div>
     </details>
     <details>
       <summary>Com que frequência é atualizada?</summary>
       <div>
-        <p>A agenda é verificada no site do município a cada poucas horas. Cada aplicação decide quando atualiza: no iPhone e no Outlook costuma ser em poucas horas; no Google Calendar pode demorar até um dia.</p>
+        <p>A agenda é lida do site do município a cada 4 horas. Cada aplicação decide quando volta a ler o calendário: pode demorar algumas horas e, no Google Calendar, até um dia.</p>
       </div>
     </details>
     <details>
@@ -597,8 +613,14 @@
 (function () {
   document.documentElement.className += ' js';
 
-  // Por defeito: iPhone, iPad ou Mac. So muda sozinho num telemovel Android.
-  if (/Android/i.test(navigator.userAgent || '')) document.getElementById('sis-google').checked = true;
+  // Escolhe o calendario conforme o dispositivo (sem JavaScript fica iPhone, iPad ou Mac).
+  var ua = navigator.userAgent || '';
+  var sis = null;
+  if (/Android/i.test(ua)) sis = 'sis-google';
+  else if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) sis = 'sis-apple';
+  else if (/Windows/i.test(ua)) sis = 'sis-outlook';
+  else if (/CrOS|Linux/i.test(ua)) sis = 'sis-google';
+  if (sis) document.getElementById(sis).checked = true;
 
   var estado = document.getElementById('estado');
 
