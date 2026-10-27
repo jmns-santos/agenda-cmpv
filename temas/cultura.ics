@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALDESC:Espetáculos, exposições, livros e património.
+X-WR-CALDESC:Música, cinema, teatro, exposições, livros e património.
 NAME:Póvoa de Varzim: Cultura
 X-WR-CALNAME:Póvoa de Varzim: Cultura
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
@@ -55,7 +55,7 @@ DTSTAMP:20261006T100859Z
 UID:bWVzLWludGVybmFjaW9uYWwtZGEtYmlibGlvdGVjYS1lc2NvbGFyLW1pYmUtYmlibGlvdG
  VjYXMtbGl0ZXJhY2lhLWUtaW50ZWxpZ2VuY2lhLWFydGlmaWNpYWx8MjAyNi0wOS0zMCAxMTow
  NjozMg==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Comemorações e cerimónias
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:Durante o mês de outubro\, a Biblioteca Municipal Rocha Peixo
  to associa-se à celebração do Mês Internacional da Biblioteca Escolar
  \, promovendo um conjunto de três iniciativas que aproximam livros\, leit
@@ -114,7 +114,7 @@ DTEND:20261030T170000Z
 DTSTAMP:20261016T091021Z
 UID:by1jYXNvLXBsaW1wc2VzdG8tdW0tbWlzdGVyaW8tbm8tYXJxdWl2b3wyMDI2LTA5LTI4ID
  E1OjQzOjQx@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Outros
+CATEGORIES:Cultura,Oficinas e atividades
 DESCRIPTION:Durante a semana de 26 a 30 de outubro\, o Arquivo Municipal p
  romove uma atividade lúdico-pedagógica baseada na lógica do jogo "Clued
  o"\, adaptada ao contexto de um Arquivo Histórico.\n\nMais informação: 
@@ -164,7 +164,7 @@ DTEND:20261030T233000Z
 DTSTAMP:20260810T092500Z
 UID:Y29uY2VydG8tZGlzY28tdm9hZG9yfDIwMjYtMDgtMTAgMDk6MjQ6NTk=@agenda.cm-pva
  rzim.pt
-CATEGORIES:Cultura,Concertos e música
+CATEGORIES:Cultura,Concertos
 DESCRIPTION:No dia 30 de outubro\, às 21h30\, o Café-Concerto vai acolhe
  r um concerto com Disco Voador.\n\nMais informação: https://www.cm-pvarz
  im.pt/eventos/concerto-disco-voador/
@@ -180,7 +180,7 @@ DTEND:20261031T173000Z
 DTSTAMP:20261012T150549Z
 UID:c2Vzc2FvLWRlLWxlaXR1cmEtZS1vZmljaW5hLWRlLWV4cHJlc3Nhby1wbGFzdGljYXwyMD
  I2LTEwLTEyIDE1OjA1OjQ4@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:No dia 31 de outubro\, a Biblioteca Municipal Rocha Peixoto va
  i apresentar uma sessão de leitura do conto "O Ladrão de Folhas" de Alic
  e Hemming e ilustração: Nicola Slater\; seguida de uma oficina de expres
@@ -199,7 +199,7 @@ DTEND:20261031T233000Z
 DTSTAMP:20260918T143902Z
 UID:Y29uY2VydG8tanVsaWFuYS1saW5oYXJlcy1hdGUtY2Fuc2FyLW8tY2Fuc2Fjb3wyMDI2LT
  A4LTI2IDExOjM1OjQ4@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Concertos e música
+CATEGORIES:Cultura,Concertos
 DESCRIPTION:No dia 31 de outubro\, às 21h30\, Juliana Linhares vai aprese
  ntar\, no Cine-Teatro Garrett\, "Até Cansar o Cansaço".\n\nMais informa
  ção: https://www.cm-pvarzim.pt/eventos/concerto-juliana-linhares-ate-can
@@ -270,7 +270,7 @@ DTSTAMP:20261021T135603Z
 UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tY2hhcGV1LW8tb2xoby1hLWNhZGVpcmEtZS1hLX
  NlcmVpYS1xdWF0cm8tYnJldmVzLWhpc3Rvcmlhc3wyMDI2LTEwLTIxIDEzOjU2OjAy@agenda.
  cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:A Biblioteca Municipal Rocha Peixoto irá acolher\, no dia 7 d
  e novembro\, às 16h00\, a sessão de apresentação do livro O chapéu\, 
  o olho\, a cadeira e a sereia: quatro breves histórias\, da autoria de Ja
@@ -290,7 +290,7 @@ DTEND:20261107T203000Z
 DTSTAMP:20261020T110316Z
 UID:Y29uY2VydG8tZGUtYW1pemFkZXwyMDI2LTEwLTIwIDExOjAzOjE2@agenda.cm-pvarzim
  .pt
-CATEGORIES:Cultura,Concertos e música
+CATEGORIES:Cultura,Concertos
 DESCRIPTION:No âmbito das relações de geminação existentes entre o Mu
  nicípio da Póvoa de Varzim e a cidade galega de A Guarda (Espanha)\, enc
  ontra-se programado um intercâmbio sociocultural que promete aproximar as
@@ -308,7 +308,7 @@ DTEND:20261107T230000Z
 DTSTAMP:20261020T092112Z
 UID:dGVhdHJvLWxvcy12aXJ0dW9zb3N8MjAyNi0xMC0yMCAwOToyMToxMQ==@agenda.cm-pva
  rzim.pt
-CATEGORIES:Cultura,Teatro e espetáculos
+CATEGORIES:Cultura,Teatro
 DESCRIPTION:No âmbito da Temporada Teatral\, a Varazim Teatro apresenta\,
   a 7 de novembro\, pelas 21h30\, a peça "Los Virtuosos" pelo Teatro del A
  stillero\, no Cine-Teatro Garrett.\n\nMais informação: https://www.cm-pv
@@ -356,7 +356,7 @@ DTEND:20261110T224500Z
 DTSTAMP:20261021T135838Z
 UID:Y2Fpcy1kZS1sZWl0dXJhLTIxfDIwMjYtMTAtMjEgMTM6NTg6Mzc=@agenda.cm-pvarzim
  .pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:No âmbito da sua programação em ambiente digital\, a Biblio
  teca Municipal Rocha Peixoto volta a marcar encontro online para falar sob
  re livros\, no dia 10 de novembro\, às 21h00.\n\nMais informação: https
@@ -380,6 +380,24 @@ LAST-MODIFIED:20261021T082939Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-naza/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lavorada Mensal
+DTSTART:20261114T143000Z
+DTEND:20261114T180000Z
+DTSTAMP:20261021T140720Z
+UID:bGF2b3JhZGEtbWVuc2FsLTN8MjAyNi0xMC0yMSAxNDowNzoxOA==@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura,Oficinas e atividades
+DESCRIPTION:Segundo sábado do mês é dia de Lavorada Mensal\, na Bibliot
+ eca Municipal Rocha Peixoto. Assim\, na tarde de 14 de novembro\, entre as
+  14h30 e as 18h00\, a Associação Lavorada ensina a fazer um xaile para o
+ s dias de outono\, por entre castanhas e geropiga.\n\nMais informação: h
+ ttps://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
+LAST-MODIFIED:20261021T140720Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bicentenário do "Paredão" de D. Maria I (1826) - o simbolismo de
@@ -410,7 +428,7 @@ DTEND:20261114T164500Z
 DTSTAMP:20261021T142549Z
 UID:Y2x1YmUtZGUtbGVpdHVyYXMtbWFyaXRpbWFzLWxpdnJvcy1kZS1tYXJlYXItNnwyMDI2LT
  EwLTIxIDE0OjI1OjQ4@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:No dia 14 de novembro\, às 15h00\, a Biblioteca Municipal Roc
  ha Peixoto acolhe mais um encontro do Clube de Leituras Marítimas "Livros
   de Marear".\n\nMais informação: https://www.cm-pvarzim.pt/eventos/clube
@@ -422,13 +440,29 @@ URL:https://www.cm-pvarzim.pt/eventos/clube-de-leituras-maritimas-livros-d
  e-marear-6/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Sábados a jogar na Biblioteca
+DTSTART:20261114T150000Z
+DTEND:20261114T170000Z
+DTSTAMP:20261021T142911Z
+UID:MzYyMzE1fDIwMjYtMTAtMjEgMTQ6Mjg6NDA=@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Oficinas e atividades
+DESCRIPTION:No dia 14 de novembro\, a partir das 15h00\, terá lugar\, na 
+ sala infantil e juvenil da Biblioteca Municipal\, mais uma sessão da inic
+ iativa "Sábados a jogar na Biblioteca".\n\nMais informação: https://www
+ .cm-pvarzim.pt/eventos/362315/
+LAST-MODIFIED:20261021T142911Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/362315/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Concerto Pedro Abrunhosa
 DTSTART:20261114T213000Z
 DTEND:20261114T230000Z
 DTSTAMP:20260807T152457Z
 UID:Y29uY2VydG8tcGVkcm8tYWJydW5ob3NhfDIwMjYtMDgtMDcgMTU6MjQ6NTc=@agenda.cm
  -pvarzim.pt
-CATEGORIES:Cultura,Concertos e música
+CATEGORIES:Cultura,Concertos
 DESCRIPTION:No dia 14 de novembro\, às 21h30\, Pedro Abrunhosa vai atuar 
  no Póvoa Arena.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/c
  oncerto-pedro-abrunhosa/
@@ -463,7 +497,7 @@ DTEND:20261118T120000Z
 DTSTAMP:20261022T084850Z
 UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLWluZmFudGlsLWNhY2hhbG90ZS1hLWJhbGVpYS1jb2
  0tYS1jYXVkYS1wbGFzdGljYXwyMDI2LTEwLTIyIDA4OjQ4OjI2@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:O Dia Nacional do Mar celebra-se a 16 de novembro. Para assina
  lar esta efeméride\, a Biblioteca Municipal Rocha Peixito irá dinamizar 
  uma sessão de apresentação do livro infantil “Cachalote\, a baleia co
@@ -484,7 +518,7 @@ DTEND:20261119T200000Z
 DTSTAMP:20261020T110828Z
 UID:Y29uY2VydG8tY29tZW50YWRvfDIwMjYtMTAtMjAgMTE6MDg6Mjc=@agenda.cm-pvarzim
  .pt
-CATEGORIES:Cultura,Concertos e música
+CATEGORIES:Cultura,Concertos
 DESCRIPTION:A Escola de Música da Póvoa de Varzim convida a comunidade a
   assistir ao Concerto Comentado – Itinerários Internacionais do Repert
  ório Violetístico\, que terá lugar no dia 19 de novembro\, às 18h30\, 
@@ -518,7 +552,7 @@ DTEND:20261121T180000Z
 DTSTAMP:20261023T091258Z
 UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tZXh0cmVtby1hZmlhZG8tZG8tZXNwZWxob3wyMD
  I2LTEwLTIzIDA5OjEyOjU3@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:A Biblioteca Municipal Rocha Peixoto irá acolher\, no dia 21 
  de novembro\, a partir das 16h00\, a sessão de apresentação do livro "O
   extremo afiado do espelho"\, de Mário Amazan. A apresentação da obra s
@@ -537,7 +571,7 @@ DTEND:20261121T174500Z
 DTSTAMP:20261022T085515Z
 UID:c2Vzc2FvLWRlLWxlaXR1cmEtYS1vdmVsaGluaGEtcXVlLXZlaW8tcGFyYS1qYW50YXJ8Mj
  AyNi0xMC0yMiAwODo1NToxNA==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:No dia 21 de novembro\, às 16h00\, a Biblioteca Municipal ir
  á promover a sessão de leitura para pais e bebés "A ovelhinha que veio 
  para jantar"\, dinamizada por Ana Sofia Maia.\n\nMais informação: https:
@@ -556,7 +590,7 @@ DTEND:20261121T230000Z
 DTSTAMP:20261023T152912Z
 UID:ZXNwZXRhY3Vsby1kZS1kYW5jYS1hbWFyYW1hbGlhfDIwMjYtMTAtMjMgMTU6Mjk6MTE=@a
  genda.cm-pvarzim.pt
-CATEGORIES:Cultura,Teatro e espetáculos
+CATEGORIES:Cultura,Espetáculos
 DESCRIPTION:No dia 21 de novembro\, às 21h00\, sobe ao palco do Cine-Teat
  ro Garrett\, o espetáculo "AmarAmália"\, pela Companhia Portuguesa de Ba
  ilado Contemporâneo.\n\nMais informação: https://www.cm-pvarzim.pt/even
@@ -623,7 +657,7 @@ DTEND:20261128T170000Z
 DTSTAMP:20261026T103527Z
 UID:cG92b2EtY29udG8tYS1jb250by01fDIwMjYtMTAtMjYgMTA6MzU6MjY=@agenda.cm-pva
  rzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:A Ethos\, Pathos\, Logos — Associação e a Biblioteca Munic
  ipal Rocha Peixoto colaboram novamente em momentos de leitura seguidos de 
  actividades didáticas\, desta vez numa exploração do património poveir
@@ -641,7 +675,7 @@ DTEND:20261202T233000Z
 DTSTAMP:20261014T135909Z
 UID:dGVhdHJvLXF1YW5kby1tZW5vcy1zZS1lc3BlcmF8MjAyNi0wOS0wNCAwOTozMjowNg==@a
  genda.cm-pvarzim.pt
-CATEGORIES:Cultura,Teatro e espetáculos
+CATEGORIES:Cultura,Teatro
 DESCRIPTION:Nos dias 1 e 2 de dezembro\, pelas 21h30\, sobe ao palco do Ci
  ne-Teatro Garrett a peça "Quando Menos se Espera".\n\nMais informação: 
  https://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
@@ -657,7 +691,7 @@ DTEND:20261205T123000Z
 DTSTAMP:20261022T153318Z
 UID:dGVhdHJvLXBhcmEtYmViZXMtYS1hcnZvcmUtZGFzLWNodXBldGFzLTJ8MjAyNi0xMC0yMi
  AxNTowNjowNA==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Teatro e espetáculos
+CATEGORIES:Cultura,Teatro
 DESCRIPTION:No dia 5 de dezembro\, às 11h00\, terá lugar\, no Cine-Teatr
  o Garrett\, teatro para toda a família.\n\nMais informação: https://www
  .cm-pvarzim.pt/eventos/teatro-para-bebes-a-arvore-das-chupetas-2/
@@ -668,13 +702,48 @@ URL:https://www.cm-pvarzim.pt/eventos/teatro-para-bebes-a-arvore-das-chupe
  tas-2/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Histórias com Yoga
+DTSTART:20261205T153000Z
+DTEND:20261205T171500Z
+DTSTAMP:20261026T104129Z
+UID:aGlzdG9yaWFzLWNvbS15b2dhfDIwMjYtMTAtMjYgMTA6NDE6Mjg=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura,Literatura
+DESCRIPTION:O Projeto Luminisca e a Biblioteca Municipal Rocha Peixoto vol
+ tam a convidar as famílias a embarcarem numa viagem pelo mundo dos livros
+ \, das emoções e do yoga\, no próximo sábado\, 5 de dezembro\, às 15h
+ 30.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/historias-com-
+ yoga/
+LAST-MODIFIED:20261026T104129Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábados a jogar na Biblioteca
+DTSTART:20261212T150000Z
+DTEND:20261212T170000Z
+DTSTAMP:20261021T143254Z
+UID:c2FiYWRvcy1hLWpvZ2FyLW5hLWJpYmxpb3RlY2EtMjB8MjAyNi0xMC0yMSAxNDozMjowNg
+ ==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Oficinas e atividades
+DESCRIPTION:No dia 12 de dezembro\, a partir das 15h00\, terá lugar\, na 
+ sala infantil e juvenil da Biblioteca Municipal\, mais uma sessão da inic
+ iativa "Sábados a jogar na Biblioteca".\n\nMais informação: https://www
+ .cm-pvarzim.pt/eventos/sabados-a-jogar-na-biblioteca-20/
+LAST-MODIFIED:20261021T143254Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sabados-a-jogar-na-biblioteca-20/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Musical "Capuchinho Vermelho - o Musical"
 DTSTART:20261212T160000Z
 DTEND:20261212T173000Z
 DTSTAMP:20261022T153239Z
 UID:bXVzaWNhbC1jYXB1Y2hpbmhvLXZlcm1lbGhvLW8tbXVzaWNhbHwyMDI2LTEwLTIyIDE1Oj
  MyOjM4@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Teatro e espetáculos
+CATEGORIES:Cultura,Espetáculos
 DESCRIPTION:No dia 12 de dezembro\, o Cine-Teatro Garrett vai apresentar "
  Capuchinho Vermelho - o Musical".\n\nMais informação: https://www.cm-pva
  rzim.pt/eventos/musical-capuchinho-vermelho-o-musical/
@@ -691,7 +760,7 @@ DTEND:20261215T233000Z
 DTSTAMP:20261021T140206Z
 UID:Y2Fpcy1kZS1sZWl0dXJhLTIyfDIwMjYtMTAtMjEgMTQ6MDE6MDY=@agenda.cm-pvarzim
  .pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:No âmbito da sua programação em ambiente digital\, a Biblio
  teca Municipal Rocha Peixoto volta a marcar encontro online para falar sob
  re livros\, no dia 15 de dezembro\, às 21h00.\n\nMais informação: https
@@ -708,7 +777,7 @@ DTEND:20261216T120000Z
 DTSTAMP:20261026T104709Z
 UID:bm8tbWV1LXRlbXBvLWRvdS10ZS11bS1jb250by0yNXwyMDI2LTEwLTI2IDEwOjQ2OjEy@a
  genda.cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:No dia 16 de dezembro\, às 10h00\, a Biblioteca Municipal vai
   promover a iniciativa “No meu tempo\, dou-te um conto”\, com a leitur
  a da história "O Anjo Tobias e a Rochinha de Natal” de Maria Aurora Car

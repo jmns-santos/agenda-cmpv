@@ -3,7 +3,8 @@ VERSION:2.0
 PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALDESC:Oficinas, workshops, cursos e programas de férias.
+X-WR-CALDESC:Oficinas, cursos, conferências, jogos e atividades para toda
+ s as idades.
 NAME:Póvoa de Varzim: Oficinas e atividades
 X-WR-CALNAME:Póvoa de Varzim: Oficinas e atividades
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
@@ -11,6 +12,25 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/tipos/oficinas-
  atividades.ics
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:"O Caso Palimpsesto - Um Mistério no Arquivo"
+DTSTART:20261026T093000Z
+DTEND:20261030T170000Z
+DTSTAMP:20261016T091021Z
+UID:by1jYXNvLXBsaW1wc2VzdG8tdW0tbWlzdGVyaW8tbm8tYXJxdWl2b3wyMDI2LTA5LTI4ID
+ E1OjQzOjQx@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Oficinas e atividades
+DESCRIPTION:Durante a semana de 26 a 30 de outubro\, o Arquivo Municipal p
+ romove uma atividade lúdico-pedagógica baseada na lógica do jogo "Clued
+ o"\, adaptada ao contexto de um Arquivo Histórico.\n\nMais informação: 
+ https://www.cm-pvarzim.pt/eventos/o-caso-plimpsesto-um-misterio-no-arquivo
+ /
+LAST-MODIFIED:20261016T091021Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/o-caso-plimpsesto-um-misterio-no-arq
+ uivo/
+END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Oficina "Do Plástico fiz Sardinha"
 DTSTART:20261031T103000Z
@@ -52,7 +72,7 @@ DTEND:20261114T180000Z
 DTSTAMP:20261021T140720Z
 UID:bGF2b3JhZGEtbWVuc2FsLTN8MjAyNi0xMC0yMSAxNDowNzoxOA==@agenda.cm-pvarzim
  .pt
-CATEGORIES:Comunidade e cidadania,Oficinas e atividades
+CATEGORIES:Cultura,Oficinas e atividades
 DESCRIPTION:Segundo sábado do mês é dia de Lavorada Mensal\, na Bibliot
  eca Municipal Rocha Peixoto. Assim\, na tarde de 14 de novembro\, entre as
   14h30 e as 18h00\, a Associação Lavorada ensina a fazer um xaile para o
@@ -62,5 +82,38 @@ LAST-MODIFIED:20261021T140720Z
 LOCATION:Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábados a jogar na Biblioteca
+DTSTART:20261114T150000Z
+DTEND:20261114T170000Z
+DTSTAMP:20261021T142911Z
+UID:MzYyMzE1fDIwMjYtMTAtMjEgMTQ6Mjg6NDA=@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Oficinas e atividades
+DESCRIPTION:No dia 14 de novembro\, a partir das 15h00\, terá lugar\, na 
+ sala infantil e juvenil da Biblioteca Municipal\, mais uma sessão da inic
+ iativa "Sábados a jogar na Biblioteca".\n\nMais informação: https://www
+ .cm-pvarzim.pt/eventos/362315/
+LAST-MODIFIED:20261021T142911Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/362315/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábados a jogar na Biblioteca
+DTSTART:20261212T150000Z
+DTEND:20261212T170000Z
+DTSTAMP:20261021T143254Z
+UID:c2FiYWRvcy1hLWpvZ2FyLW5hLWJpYmxpb3RlY2EtMjB8MjAyNi0xMC0yMSAxNDozMjowNg
+ ==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Oficinas e atividades
+DESCRIPTION:No dia 12 de dezembro\, a partir das 15h00\, terá lugar\, na 
+ sala infantil e juvenil da Biblioteca Municipal\, mais uma sessão da inic
+ iativa "Sábados a jogar na Biblioteca".\n\nMais informação: https://www
+ .cm-pvarzim.pt/eventos/sabados-a-jogar-na-biblioteca-20/
+LAST-MODIFIED:20261021T143254Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sabados-a-jogar-na-biblioteca-20/
 END:VEVENT
 END:VCALENDAR

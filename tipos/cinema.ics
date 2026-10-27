@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALDESC:Sessões de cinema e documentários.
+X-WR-CALDESC:Sessões de cinema, filmes e documentários.
 NAME:Póvoa de Varzim: Cinema
 X-WR-CALNAME:Póvoa de Varzim: Cinema
 REFRESH-INTERVAL;VALUE=DURATION:PT4H

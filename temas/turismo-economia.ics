@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALDESC:Turismo, gastronomia, feiras e empresas.
+X-WR-CALDESC:Turismo, gastronomia, comércio, empresas e emprego.
 NAME:Póvoa de Varzim: Turismo e economia
 X-WR-CALNAME:Póvoa de Varzim: Turismo e economia
 REFRESH-INTERVAL;VALUE=DURATION:PT4H

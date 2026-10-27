@@ -3,14 +3,38 @@ VERSION:2.0
 PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALDESC:Apresentações de livros, leituras e escrita.
-NAME:Póvoa de Varzim: Livros e leitura
-X-WR-CALNAME:Póvoa de Varzim: Livros e leitura
+X-WR-CALDESC:Livros, leitura, poesia e contos.
+NAME:Póvoa de Varzim: Literatura
+X-WR-CALNAME:Póvoa de Varzim: Literatura
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
-SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/tipos/livros-le
- itura.ics
+SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/tipos/literatur
+ a.ics
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Mês Internacional da Biblioteca Escolar (MIBE) Bibliotecas\, Lite
+ racia e Inteligência artificial
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261031
+DTSTAMP:20261006T100859Z
+UID:bWVzLWludGVybmFjaW9uYWwtZGEtYmlibGlvdGVjYS1lc2NvbGFyLW1pYmUtYmlibGlvdG
+ VjYXMtbGl0ZXJhY2lhLWUtaW50ZWxpZ2VuY2lhLWFydGlmaWNpYWx8MjAyNi0wOS0zMCAxMTow
+ NjozMg==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Literatura
+DESCRIPTION:Durante o mês de outubro\, a Biblioteca Municipal Rocha Peixo
+ to associa-se à celebração do Mês Internacional da Biblioteca Escolar
+ \, promovendo um conjunto de três iniciativas que aproximam livros\, leit
+ ores e novas tecnologias. As atividades serão feitas em parceria com as B
+ ibliotecas Escolares do Concelho da Póvoa de Varzim\, dos cinco agrupamen
+ tos de escolas e das escolas secundárias.\n\nMais informação: https://w
+ ww.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-escolar-mibe-bibl
+ iotecas-literacia-e-inteligencia-artificial/
+LAST-MODIFIED:20261006T100859Z
+LOCATION:-
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esco
+ lar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
+END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Sessão de leitura e Oficina de expressão plástica
 DTSTART:20261031T153000Z
@@ -18,7 +42,7 @@ DTEND:20261031T173000Z
 DTSTAMP:20261012T150549Z
 UID:c2Vzc2FvLWRlLWxlaXR1cmEtZS1vZmljaW5hLWRlLWV4cHJlc3Nhby1wbGFzdGljYXwyMD
  I2LTEwLTEyIDE1OjA1OjQ4@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:No dia 31 de outubro\, a Biblioteca Municipal Rocha Peixoto va
  i apresentar uma sessão de leitura do conto "O Ladrão de Folhas" de Alic
  e Hemming e ilustração: Nicola Slater\; seguida de uma oficina de expres
@@ -39,7 +63,7 @@ DTSTAMP:20261021T135603Z
 UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tY2hhcGV1LW8tb2xoby1hLWNhZGVpcmEtZS1hLX
  NlcmVpYS1xdWF0cm8tYnJldmVzLWhpc3Rvcmlhc3wyMDI2LTEwLTIxIDEzOjU2OjAy@agenda.
  cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:A Biblioteca Municipal Rocha Peixoto irá acolher\, no dia 7 d
  e novembro\, às 16h00\, a sessão de apresentação do livro O chapéu\, 
  o olho\, a cadeira e a sereia: quatro breves histórias\, da autoria de Ja
@@ -59,7 +83,7 @@ DTEND:20261110T224500Z
 DTSTAMP:20261021T135838Z
 UID:Y2Fpcy1kZS1sZWl0dXJhLTIxfDIwMjYtMTAtMjEgMTM6NTg6Mzc=@agenda.cm-pvarzim
  .pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:No âmbito da sua programação em ambiente digital\, a Biblio
  teca Municipal Rocha Peixoto volta a marcar encontro online para falar sob
  re livros\, no dia 10 de novembro\, às 21h00.\n\nMais informação: https
@@ -76,7 +100,7 @@ DTEND:20261114T164500Z
 DTSTAMP:20261021T142549Z
 UID:Y2x1YmUtZGUtbGVpdHVyYXMtbWFyaXRpbWFzLWxpdnJvcy1kZS1tYXJlYXItNnwyMDI2LT
  EwLTIxIDE0OjI1OjQ4@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:No dia 14 de novembro\, às 15h00\, a Biblioteca Municipal Roc
  ha Peixoto acolhe mais um encontro do Clube de Leituras Marítimas "Livros
   de Marear".\n\nMais informação: https://www.cm-pvarzim.pt/eventos/clube
@@ -95,7 +119,7 @@ DTEND:20261118T120000Z
 DTSTAMP:20261022T084850Z
 UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLWluZmFudGlsLWNhY2hhbG90ZS1hLWJhbGVpYS1jb2
  0tYS1jYXVkYS1wbGFzdGljYXwyMDI2LTEwLTIyIDA4OjQ4OjI2@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:O Dia Nacional do Mar celebra-se a 16 de novembro. Para assina
  lar esta efeméride\, a Biblioteca Municipal Rocha Peixito irá dinamizar 
  uma sessão de apresentação do livro infantil “Cachalote\, a baleia co
@@ -116,7 +140,7 @@ DTEND:20261121T180000Z
 DTSTAMP:20261023T091258Z
 UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tZXh0cmVtby1hZmlhZG8tZG8tZXNwZWxob3wyMD
  I2LTEwLTIzIDA5OjEyOjU3@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:A Biblioteca Municipal Rocha Peixoto irá acolher\, no dia 21 
  de novembro\, a partir das 16h00\, a sessão de apresentação do livro "O
   extremo afiado do espelho"\, de Mário Amazan. A apresentação da obra s
@@ -135,7 +159,7 @@ DTEND:20261121T174500Z
 DTSTAMP:20261022T085515Z
 UID:c2Vzc2FvLWRlLWxlaXR1cmEtYS1vdmVsaGluaGEtcXVlLXZlaW8tcGFyYS1qYW50YXJ8Mj
  AyNi0xMC0yMiAwODo1NToxNA==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:No dia 21 de novembro\, às 16h00\, a Biblioteca Municipal ir
  á promover a sessão de leitura para pais e bebés "A ovelhinha que veio 
  para jantar"\, dinamizada por Ana Sofia Maia.\n\nMais informação: https:
@@ -154,7 +178,7 @@ DTEND:20261128T170000Z
 DTSTAMP:20261026T103527Z
 UID:cG92b2EtY29udG8tYS1jb250by01fDIwMjYtMTAtMjYgMTA6MzU6MjY=@agenda.cm-pva
  rzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:A Ethos\, Pathos\, Logos — Associação e a Biblioteca Munic
  ipal Rocha Peixoto colaboram novamente em momentos de leitura seguidos de 
  actividades didáticas\, desta vez numa exploração do património poveir
@@ -172,7 +196,7 @@ DTEND:20261205T171500Z
 DTSTAMP:20261026T104129Z
 UID:aGlzdG9yaWFzLWNvbS15b2dhfDIwMjYtMTAtMjYgMTA6NDE6Mjg=@agenda.cm-pvarzim
  .pt
-CATEGORIES:Desporto,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:O Projeto Luminisca e a Biblioteca Municipal Rocha Peixoto vol
  tam a convidar as famílias a embarcarem numa viagem pelo mundo dos livros
  \, das emoções e do yoga\, no próximo sábado\, 5 de dezembro\, às 15h
@@ -190,7 +214,7 @@ DTEND:20261215T233000Z
 DTSTAMP:20261021T140206Z
 UID:Y2Fpcy1kZS1sZWl0dXJhLTIyfDIwMjYtMTAtMjEgMTQ6MDE6MDY=@agenda.cm-pvarzim
  .pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:No âmbito da sua programação em ambiente digital\, a Biblio
  teca Municipal Rocha Peixoto volta a marcar encontro online para falar sob
  re livros\, no dia 15 de dezembro\, às 21h00.\n\nMais informação: https
@@ -207,7 +231,7 @@ DTEND:20261216T120000Z
 DTSTAMP:20261026T104709Z
 UID:bm8tbWV1LXRlbXBvLWRvdS10ZS11bS1jb250by0yNXwyMDI2LTEwLTI2IDEwOjQ2OjEy@a
  genda.cm-pvarzim.pt
-CATEGORIES:Cultura,Livros e leitura
+CATEGORIES:Cultura,Literatura
 DESCRIPTION:No dia 16 de dezembro\, às 10h00\, a Biblioteca Municipal vai
   promover a iniciativa “No meu tempo\, dou-te um conto”\, com a leitur
  a da história "O Anjo Tobias e a Rochinha de Natal” de Maria Aurora Car
