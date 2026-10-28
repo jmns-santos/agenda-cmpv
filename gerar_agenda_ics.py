@@ -34,7 +34,7 @@ import unicodedata
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import quote, urlsplit
+from urllib.parse import quote, urlencode, urlsplit
 
 import requests
 from requests.adapters import HTTPAdapter, Retry
@@ -688,6 +688,17 @@ def obter_eventos(sessao, hoje, horizonte):
     return list(eventos.values())
 
 
+def titulo_jogo_varzim(resumo):
+    """'Varzim - Fafe' (como vem do fixtur.es) -> 'Futebol - Varzim x Fafe'."""
+    resumo = limpar_texto(resumo) or "Varzim SC"
+    if resumo.lower().startswith("futebol"):
+        return resumo
+    partes = [p.strip() for p in resumo.split(" - ")]
+    if len(partes) == 2 and all(partes):
+        return "Futebol - {} x {}".format(*partes)
+    return "Futebol - " + resumo
+
+
 def obter_jogos_varzim(sessao, hoje, horizonte):
     """Calendario de jogos do Varzim SC (fixtur.es). Fonte externa e
     independente da API da Camara: qualquer falha fica so em log -- a agenda
@@ -732,7 +743,7 @@ def obter_jogos_varzim(sessao, hoje, horizonte):
 
         itens.append({
             "uid": "varzim-{}".format(uid),
-            "title": limpar_texto(str(comp.get("summary") or "Varzim SC")),
+            "title": titulo_jogo_varzim(str(comp.get("summary") or "")),
             "start": inicio.isoformat(),
             "end": fim.isoformat(),
             "location": limpar_texto(str(comp.get("location") or "")),
@@ -1084,6 +1095,30 @@ def hoje_utc():
     return datetime.now(LISBOA).replace(hour=0, minute=0, second=0, microsecond=0).astimezone(timezone.utc)
 
 
+def _links_adicionar(titulo, inicio, fim, dia_inteiro, local, descricao):
+    """Links "adicionar evento" do Google Calendar e do Outlook (um evento por link): abrem o
+    evento já preenchido no calendário da pessoa, que só tem de confirmar."""
+    descricao = (descricao or "")[:900]
+    if dia_inteiro:
+        d0 = inicio.astimezone(LISBOA).date()
+        d1 = fim.astimezone(LISBOA).date() + timedelta(days=1)  # fim exclusivo, como no .ics
+        datas_google = "{}/{}".format(d0.strftime("%Y%m%d"), d1.strftime("%Y%m%d"))
+        ini_outlook, fim_outlook = d0.isoformat(), d1.isoformat()
+    else:
+        datas_google = "{}/{}".format(inicio.strftime("%Y%m%dT%H%M%SZ"), fim.strftime("%Y%m%dT%H%M%SZ"))
+        ini_outlook, fim_outlook = inicio.strftime("%Y-%m-%dT%H:%M:%SZ"), fim.strftime("%Y-%m-%dT%H:%M:%SZ")
+    google = "https://calendar.google.com/calendar/render?" + urlencode({
+        "action": "TEMPLATE", "text": titulo, "dates": datas_google,
+        "details": descricao, "location": local, "ctz": "Europe/Lisbon",
+    }, safe="/", quote_via=quote)
+    outlook = "https://outlook.office.com/calendar/0/deeplink/compose?" + urlencode({
+        "path": "/calendar/action/compose", "rru": "addevent", "subject": titulo,
+        "startdt": ini_outlook, "enddt": fim_outlook, "allday": "true" if dia_inteiro else "false",
+        "location": local, "body": descricao,
+    }, safe="/", quote_via=quote)
+    return google, outlook
+
+
 def eventos_proximos(classificados, agora, t_ics, nomes, t=None):
     """Eventos dos próximos JANELA_PROXIMOS_DIAS dias, já com o VEVENT pronto (mesma serialização
     do resto do site) para a secção "Próximos eventos" montar o .ics de um ou vários sem rede."""
@@ -1101,8 +1136,14 @@ def eventos_proximos(classificados, agora, t_ics, nomes, t=None):
         ev = criar_evento(item, tema, tipo, t_ics, nomes)
         if str(ev.get("status") or "") == "CANCELLED":
             continue
+        titulo = str(ev.get("summary") or "")
+        local = str(ev.get("location") or "")
+        dia_inteiro = bool(eh_dia_inteiro(inicio, fim))
+        google, outlook = _links_adicionar(titulo, inicio, fim, dia_inteiro, local, str(ev.get("description") or ""))
         resultado.append({
-            "titulo": str(ev.get("summary") or ""),
+            "google": google,
+            "outlook": outlook,
+            "titulo": titulo,
             "inicio": inicio.isoformat(),
             "fim": fim.isoformat(),
             "diaInteiro": bool(eh_dia_inteiro(inicio, fim)),
@@ -1153,7 +1194,9 @@ def secao_proximos(proximos, t):
             '    <span class="etiquetas-proximo"><span class="etiqueta et-tema">{tema_nome}</span>'
             '<span class="etiqueta et-tipo">{tipo_nome}</span></span>\n'
             '  </label>\n'
-            '  <a class="botao botao-adicionar-um" href="{href}" download="evento.ics" aria-label="{aria_add}">{icone}<span>{rotulo}</span></a>\n'
+            '  <a class="botao botao-adicionar-um so-google so-android" href="{google}" target="_blank" rel="noopener noreferrer" aria-label="{aria_add} (Google)">{icone}<span>{rotulo}</span></a>\n'
+            '  <a class="botao botao-adicionar-um so-outlook" href="{outlook}" target="_blank" rel="noopener noreferrer" aria-label="{aria_add} (Outlook)">{icone}<span>{rotulo}</span></a>\n'
+            '  <a class="botao botao-adicionar-um so-apple so-outro" href="{href}" download="evento.ics" aria-label="{aria_add}">{icone}<span>{rotulo}</span></a>\n'
             '</li>'
         ).format(
             idx=idx,
@@ -1164,7 +1207,7 @@ def secao_proximos(proximos, t):
             iso=html.escape(p["inicio"], quote=True), quando=html.escape(quando),
             local_html=" · {}".format(html.escape(local)) if local else "",
             tema_nome=html.escape(p["temaNome"]), tipo_nome=html.escape(p["tipoNome"]),
-            href=href, aria_add=html.escape("{}: {}".format(t["adicionar_um"], p["titulo"]), quote=True),
+            href=href, google=html.escape(p["google"], quote=True), outlook=html.escape(p["outlook"], quote=True), aria_add=html.escape("{}: {}".format(t["adicionar_um"], p["titulo"]), quote=True),
             icone=ICONE_CALENDARIO, rotulo=html.escape(t["adicionar_um"]),
         ))
         temas_vistos[p["temaSlug"]] = (p["temaNome"], p["temaCor"])
@@ -1191,7 +1234,7 @@ def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None, proximos=Non
     proximos = proximos or []
     linhas_proximos, chips_temas, chips_tipos = secao_proximos(proximos, t)
     dados_proximos = json.dumps(
-        {"prodid": PRODID, "eventos": [{"vevent": p["vevent"]} for p in proximos]},
+        {"prodid": PRODID, "eventos": [{"vevent": p["vevent"], "google": p["google"], "outlook": p["outlook"]} for p in proximos]},
         ensure_ascii=False, separators=(",", ":"),
     ).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
     substituicoes = {

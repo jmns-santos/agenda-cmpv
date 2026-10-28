@@ -51,6 +51,7 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; }
+  [hidden] { display: none !important; }
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0; background: var(--fundo); color: var(--tinta);
@@ -271,6 +272,13 @@
   .selecionar-todos { display: flex; align-items: center; gap: .45rem; font-size: .92rem; font-weight: 700; cursor: pointer; }
   .selecionar-todos input { width: 1.2rem; height: 1.2rem; accent-color: var(--botao); }
   #proximos-adicionar:disabled { opacity: .5; cursor: not-allowed; }
+  .proximos > .segmentos { max-width: 22rem; margin-top: .8rem; }
+  .confirmar { margin-top: .8rem; padding: .8rem .9rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
+  .confirmar-lista { margin: .5rem 0; padding-left: 1.4rem; display: flex; flex-direction: column; gap: .35rem; }
+  .confirmar-lista a { font-weight: 700; }
+  .confirmar-lista li.feito a { color: var(--cinza); }
+  .confirmar-lista li.feito a::after { content: " \2713"; }
+  .confirmar-ics { font-size: .9rem; }
 
   @media (max-width: 30rem) {
     .item-proximo { flex-wrap: wrap; }
@@ -398,6 +406,11 @@
     <h2 id="t-proximos">{{T:proximos_titulo}}</h2>
     <p class="linha2">{{T:proximos_texto}}</p>
 
+    <div class="segmentos" role="group" aria-label="{{T:filtrar_tema}} / {{T:filtrar_tipo}}">
+      <label for="vista-tema">{{T:filtrar_tema}}</label>
+      <label for="vista-tipo">{{T:filtrar_tipo}}</label>
+    </div>
+
     <div class="filtros" role="group" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
       <div class="chips-temas" aria-label="{{T:por_tema}}">
 {{CHIPS_TEMAS_PROXIMOS}}
@@ -416,6 +429,11 @@
       <label class="selecionar-todos"><input type="checkbox" id="proximos-todos">{{T:selecionar_todos}}</label>
       <button type="button" class="botao" id="proximos-adicionar" disabled
         data-rotulo-zero="{{T:adicionar_zero}}" data-rotulo-n="{{T:adicionar_n}}">{{T:adicionar_zero}}</button>
+    </div>
+    <div class="confirmar" id="proximos-confirmar" hidden>
+      <p>{{T:confirmar_titulo}}</p>
+      <ol class="confirmar-lista"></ol>
+      <a class="confirmar-ics" href="#" download="eventos.ics">{{T:confirmar_ics}}</a>
     </div>
   </section>
 
@@ -546,6 +564,8 @@
     var caixaTodos = document.getElementById('proximos-todos');
     var botaoAdicionar = document.getElementById('proximos-adicionar');
     var chips = secao.querySelectorAll('.chip-filtro');
+    var vistaTipo = document.getElementById('vista-tipo');
+    var painel = document.getElementById('proximos-confirmar');
 
     function chipsLigados(classe) {
       var slugs = [];
@@ -556,6 +576,7 @@
     }
 
     function atualizarBotao() {
+      if (painel) painel.hidden = true;
       var n = 0;
       for (var i = 0; i < caixas.length; i++) {
         if (caixas[i].checked && !caixas[i].closest('li').hidden) n++;
@@ -581,8 +602,10 @@
     }
 
     function aplicarFiltro() {
-      var temas = chipsLigados('chip-tema');
-      var tipos = chipsLigados('chip-tipo');
+      // Só contam os filtros da vista ativa (tema ou tipo).
+      var porTipo = vistaTipo && vistaTipo.checked;
+      var temas = porTipo ? [] : chipsLigados('chip-tema');
+      var tipos = porTipo ? chipsLigados('chip-tipo') : [];
       for (var i = 0; i < linhas.length; i++) {
         var li = linhas[i];
         var mostraTema = temas.length === 0 || temas.indexOf(li.getAttribute('data-tema')) >= 0;
@@ -597,6 +620,12 @@
     }
 
     for (var c = 0; c < chips.length; c++) chips[c].addEventListener('change', aplicarFiltro);
+    var vistas = document.querySelectorAll('input[name="vista"]');
+    for (var v = 0; v < vistas.length; v++) vistas[v].addEventListener('change', aplicarFiltro);
+    var sistemas = document.querySelectorAll('input[name="sistema"]');
+    for (var s = 0; s < sistemas.length; s++) {
+      sistemas[s].addEventListener('change', function () { if (painel) painel.hidden = true; });
+    }
     for (var d = 0; d < caixas.length; d++) caixas[d].addEventListener('change', atualizarBotao);
     if (caixaTodos) {
       caixaTodos.addEventListener('change', function () {
@@ -611,24 +640,49 @@
     }
     if (botaoAdicionar) {
       botaoAdicionar.addEventListener('click', function () {
-        var partes = [];
+        var escolhidas = [];
         for (var i = 0; i < linhas.length; i++) {
           if (linhas[i].hidden) continue;
           var cx = linhas[i].querySelector('.marcar-evento');
-          if (cx && cx.checked) {
-            var idx = parseInt(linhas[i].getAttribute('data-idx'), 10);
-            if (dados.eventos[idx]) partes.push(dados.eventos[idx].vevent);
-          }
+          var ev = dados.eventos[parseInt(linhas[i].getAttribute('data-idx'), 10)];
+          if (cx && cx.checked && ev) escolhidas.push({ linha: linhas[i], ev: ev });
         }
-        if (!partes.length) return;
-        var texto = 'BEGIN:VCALENDAR\r\nPRODID:' + dados.prodid + '\r\nVERSION:2.0\r\nCALSCALE:GREGORIAN\r\n'
-          + partes.join('') + 'END:VCALENDAR\r\n';
-        var a = document.createElement('a');
-        a.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(texto);
-        a.download = 'eventos.ics';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
+        if (!escolhidas.length) return;
+        var texto = 'BEGIN:VCALENDAR\r\nPRODID:' + dados.prodid + '\r\nVERSION:2.0\r\nCALSCALE:GREGORIAN\r\n';
+        for (var j = 0; j < escolhidas.length; j++) texto += escolhidas[j].ev.vevent;
+        texto += 'END:VCALENDAR\r\n';
+        var href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(texto);
+        var sistema = (document.querySelector('input[name="sistema"]:checked') || {}).id || 'sis-outro';
+        // Apple e "Outro": um único .ics com todos; o calendário pede confirmação e junta-os.
+        if (sistema === 'sis-apple' || sistema === 'sis-outro' || !painel) {
+          var a = document.createElement('a');
+          a.href = href;
+          a.download = 'eventos.ics';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          return;
+        }
+        // Google, Android e Outlook só aceitam um evento por link: lista para confirmar cada um.
+        var chave = sistema === 'sis-outlook' ? 'outlook' : 'google';
+        var lista = painel.querySelector('.confirmar-lista');
+        while (lista.firstChild) lista.removeChild(lista.firstChild);
+        for (var k = 0; k < escolhidas.length; k++) {
+          var li = document.createElement('li');
+          var ligacao = document.createElement('a');
+          ligacao.href = escolhidas[k].ev[chave];
+          ligacao.target = '_blank';
+          ligacao.rel = 'noopener noreferrer';
+          var tit = escolhidas[k].linha.querySelector('.titulo-proximo');
+          var quando = escolhidas[k].linha.querySelector('time');
+          ligacao.textContent = (tit ? tit.textContent : '') + (quando ? ' · ' + quando.textContent : '');
+          ligacao.addEventListener('click', function () { this.parentNode.className = 'feito'; });
+          li.appendChild(ligacao);
+          lista.appendChild(li);
+        }
+        painel.querySelector('.confirmar-ics').href = href;
+        painel.hidden = false;
+        painel.scrollIntoView({ block: 'nearest' });
       });
     }
 
