@@ -41,6 +41,31 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Rastreios Cardiovasculares Gratuitos
+DTSTART:20261107T090000Z
+DTEND:20261107T130000Z
+DTSTAMP:20261028T091521Z
+UID:cmFzdHJlaW9zLWNhcmRpb3Zhc2N1bGFyZXMtZ3JhdHVpdG9zfDIwMjYtMTAtMjggMDk6MT
+ U6MjA=@agenda.cm-pvarzim.pt
+CATEGORIES:市民生活,取り組み・キャンペーン
+DESCRIPTION:O Município da Póvoa de Varzim\, em parceria com os Novos Fi
+ tados de Medicina da Universidade de Coimbra\, irá dinamizar rastreios ca
+ rdiovasculares abertos a toda a comunidade\, no dia 7 de novembro\, entre 
+ as 9h00 e as 13h00\, no Mercado Municipal.\n\nチケット・申し込み
+ （ポルトガル語）：\nTrata-se de uma ação gratuita de prevençã
+ o e educação para a saúde\, dirigida a visitantes\, comerciantes e popu
+ lação em geral\, que irá promover a medição da pressão arterial\, av
+ aliação da glicemia e cálculo do índice de massa corporal (IMC).\n\n
+ イベントのタイトルと説明は、市が公開しているポル
+ トガル語のままです。\n\n詳細: https://www.cm-pvarzim.pt/evento
+ s/rastreios-cardiovasculares-gratuitos/
+LAST-MODIFIED:20261028T091521Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/rastreios-cardiovasculares-gratuitos
+ /
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"Deixem o Pimba em Paz"
 DTSTART:20261204T213000Z
 DTEND:20261204T233000Z
@@ -61,5 +86,30 @@ LAST-MODIFIED:20261001T145442Z
 LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/deixem-o-pimba-em-paz-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Rastreios Cardiovasculares Gratuitos
+DTSTART:20261219T090000Z
+DTEND:20261219T130000Z
+DTSTAMP:20261028T093519Z
+UID:cmFzdHJlaW9zLWNhcmRpb3Zhc2N1bGFyZXMtZ3JhdHVpdG9zLTJ8MjAyNi0xMC0yOCAwOT
+ ozNToxOA==@agenda.cm-pvarzim.pt
+CATEGORIES:市民生活,取り組み・キャンペーン
+DESCRIPTION:O Município da Póvoa de Varzim\, em parceria com os Novos Fi
+ tados de Medicina da Universidade de Coimbra\, irá dinamizar rastreios ca
+ rdiovasculares abertos a toda a comunidade\, no dia 19 de dezembro\, entre
+  as 9h00 e as 13h00\, no Mercado Municipal.\n\nチケット・申し込み
+ （ポルトガル語）：\nTrata-se de uma ação gratuita de prevençã
+ o e educação para a saúde\, dirigida a visitantes\, comerciantes e popu
+ lação em geral\, que irá promover a medição da pressão arterial\, av
+ aliação da glicemia e cálculo do índice de massa corporal (IMC).\n\n
+ イベントのタイトルと説明は、市が公開しているポル
+ トガル語のままです。\n\n詳細: https://www.cm-pvarzim.pt/evento
+ s/rastreios-cardiovasculares-gratuitos-2/
+LAST-MODIFIED:20261028T093519Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/rastreios-cardiovasculares-gratuitos
+ -2/
 END:VEVENT
 END:VCALENDAR

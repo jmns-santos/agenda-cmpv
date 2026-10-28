@@ -199,4 +199,25 @@ LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/deixem-o-pimba-em-paz-2/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:“Um concerto à Luz da História” – comemoração dos 25 ano
+ s do Arquivo
+DTSTART:20261207T183000Z
+DTEND:20261207T203000Z
+DTSTAMP:20261028T093235Z
+UID:dW0tY29uY2VydG8tYS1sdXotZGEtaGlzdG9yaWEtY29tZW1vcmFjYW8tZG9zLTI1LWFub3
+ MtZG8tYXJxdWl2b3wyMDI2LTEwLTI4IDA5OjMyOjM0@agenda.cm-pvarzim.pt
+CATEGORIES:Kultur,Konzerte
+DESCRIPTION:No dia 7 de dezembro\, às 18h30\, o Arquivo Municipal irá re
+ ceber "um concerto à Luz da história"\, no âmbito da comemoração dos 
+ 25 anos deste espaço cultural da cidade.\n\nTitel und Beschreibung der Ve
+ ranstaltung auf Portugiesisch\, wie von der Stadt veröffentlicht.\n\nWeit
+ ere Informationen: https://www.cm-pvarzim.pt/eventos/um-concerto-a-luz-da-
+ historia-comemoracao-dos-25-anos-do-arquivo/
+LAST-MODIFIED:20261028T093235Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/um-concerto-a-luz-da-historia-comemo
+ racao-dos-25-anos-do-arquivo/
+END:VEVENT
 END:VCALENDAR

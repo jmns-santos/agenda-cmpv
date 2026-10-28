@@ -13,4 +13,54 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/nl/tipos/acoe
 X-APPLE-CALENDAR-COLOR:#546e7a
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Rastreios Cardiovasculares Gratuitos
+DTSTART:20261107T090000Z
+DTEND:20261107T130000Z
+DTSTAMP:20261028T091521Z
+UID:cmFzdHJlaW9zLWNhcmRpb3Zhc2N1bGFyZXMtZ3JhdHVpdG9zfDIwMjYtMTAtMjggMDk6MT
+ U6MjA=@agenda.cm-pvarzim.pt
+CATEGORIES:Burgerschap,Acties en campagnes
+DESCRIPTION:O Município da Póvoa de Varzim\, em parceria com os Novos Fi
+ tados de Medicina da Universidade de Coimbra\, irá dinamizar rastreios ca
+ rdiovasculares abertos a toda a comunidade\, no dia 7 de novembro\, entre 
+ as 9h00 e as 13h00\, no Mercado Municipal.\n\nKaartjes en inschrijving (in
+  het Portugees):\nTrata-se de uma ação gratuita de prevenção e educaç
+ ão para a saúde\, dirigida a visitantes\, comerciantes e população em 
+ geral\, que irá promover a medição da pressão arterial\, avaliação d
+ a glicemia e cálculo do índice de massa corporal (IMC).\n\nTitel en besc
+ hrijving van het evenement in het Portugees\, zoals gepubliceerd door de g
+ emeente.\n\nMeer informatie: https://www.cm-pvarzim.pt/eventos/rastreios-c
+ ardiovasculares-gratuitos/
+LAST-MODIFIED:20261028T091521Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/rastreios-cardiovasculares-gratuitos
+ /
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Rastreios Cardiovasculares Gratuitos
+DTSTART:20261219T090000Z
+DTEND:20261219T130000Z
+DTSTAMP:20261028T093519Z
+UID:cmFzdHJlaW9zLWNhcmRpb3Zhc2N1bGFyZXMtZ3JhdHVpdG9zLTJ8MjAyNi0xMC0yOCAwOT
+ ozNToxOA==@agenda.cm-pvarzim.pt
+CATEGORIES:Burgerschap,Acties en campagnes
+DESCRIPTION:O Município da Póvoa de Varzim\, em parceria com os Novos Fi
+ tados de Medicina da Universidade de Coimbra\, irá dinamizar rastreios ca
+ rdiovasculares abertos a toda a comunidade\, no dia 19 de dezembro\, entre
+  as 9h00 e as 13h00\, no Mercado Municipal.\n\nKaartjes en inschrijving (i
+ n het Portugees):\nTrata-se de uma ação gratuita de prevenção e educa
+ ção para a saúde\, dirigida a visitantes\, comerciantes e população e
+ m geral\, que irá promover a medição da pressão arterial\, avaliação
+  da glicemia e cálculo do índice de massa corporal (IMC).\n\nTitel en be
+ schrijving van het evenement in het Portugees\, zoals gepubliceerd door de
+  gemeente.\n\nMeer informatie: https://www.cm-pvarzim.pt/eventos/rastreios
+ -cardiovasculares-gratuitos-2/
+LAST-MODIFIED:20261028T093519Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/rastreios-cardiovasculares-gratuitos
+ -2/
+END:VEVENT
 END:VCALENDAR

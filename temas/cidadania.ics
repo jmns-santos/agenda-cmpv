@@ -39,6 +39,29 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Rastreios Cardiovasculares Gratuitos
+DTSTART:20261107T090000Z
+DTEND:20261107T130000Z
+DTSTAMP:20261028T091521Z
+UID:cmFzdHJlaW9zLWNhcmRpb3Zhc2N1bGFyZXMtZ3JhdHVpdG9zfDIwMjYtMTAtMjggMDk6MT
+ U6MjA=@agenda.cm-pvarzim.pt
+CATEGORIES:Cidadania,Ações e campanhas
+DESCRIPTION:O Município da Póvoa de Varzim\, em parceria com os Novos Fi
+ tados de Medicina da Universidade de Coimbra\, irá dinamizar rastreios ca
+ rdiovasculares abertos a toda a comunidade\, no dia 7 de novembro\, entre 
+ as 9h00 e as 13h00\, no Mercado Municipal.\n\nBilhetes e inscrições:\nTr
+ ata-se de uma ação gratuita de prevenção e educação para a saúde\, 
+ dirigida a visitantes\, comerciantes e população em geral\, que irá pro
+ mover a medição da pressão arterial\, avaliação da glicemia e cálcul
+ o do índice de massa corporal (IMC).\n\nMais informação: https://www.cm
+ -pvarzim.pt/eventos/rastreios-cardiovasculares-gratuitos/
+LAST-MODIFIED:20261028T091521Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/rastreios-cardiovasculares-gratuitos
+ /
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"Deixem o Pimba em Paz"
 DTSTART:20261204T213000Z
 DTEND:20261204T233000Z
@@ -58,5 +81,28 @@ LAST-MODIFIED:20261001T145442Z
 LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/deixem-o-pimba-em-paz-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Rastreios Cardiovasculares Gratuitos
+DTSTART:20261219T090000Z
+DTEND:20261219T130000Z
+DTSTAMP:20261028T093519Z
+UID:cmFzdHJlaW9zLWNhcmRpb3Zhc2N1bGFyZXMtZ3JhdHVpdG9zLTJ8MjAyNi0xMC0yOCAwOT
+ ozNToxOA==@agenda.cm-pvarzim.pt
+CATEGORIES:Cidadania,Ações e campanhas
+DESCRIPTION:O Município da Póvoa de Varzim\, em parceria com os Novos Fi
+ tados de Medicina da Universidade de Coimbra\, irá dinamizar rastreios ca
+ rdiovasculares abertos a toda a comunidade\, no dia 19 de dezembro\, entre
+  as 9h00 e as 13h00\, no Mercado Municipal.\n\nBilhetes e inscrições:\nT
+ rata-se de uma ação gratuita de prevenção e educação para a saúde\,
+  dirigida a visitantes\, comerciantes e população em geral\, que irá pr
+ omover a medição da pressão arterial\, avaliação da glicemia e cálcu
+ lo do índice de massa corporal (IMC).\n\nMais informação: https://www.c
+ m-pvarzim.pt/eventos/rastreios-cardiovasculares-gratuitos-2/
+LAST-MODIFIED:20261028T093519Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/rastreios-cardiovasculares-gratuitos
+ -2/
 END:VEVENT
 END:VCALENDAR

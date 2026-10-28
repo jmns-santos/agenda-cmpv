@@ -901,6 +901,42 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Exposição “25 anos & 25 documentos”
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20270130
+DTSTAMP:20261028T093918Z
+UID:ZXhwb3NpY2FvLTI1LWFub3MtMjUtZG9jdW1lbnRvc3wyMDI2LTEwLTI4IDA5OjM5OjE3@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultura,Exposições
+DESCRIPTION:De 7 de dezembro a 29 de janeiro de 2027\, o Arquivo Municipal
+  abre portas para a exposição "25 anos & 25 documentos".\n\nMais informa
+ ção: https://www.cm-pvarzim.pt/eventos/exposicao-25-anos-25-documentos/
+LAST-MODIFIED:20261028T093918Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-25-anos-25-documentos/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:“Um concerto à Luz da História” – comemoração dos 25 ano
+ s do Arquivo
+DTSTART:20261207T183000Z
+DTEND:20261207T203000Z
+DTSTAMP:20261028T093235Z
+UID:dW0tY29uY2VydG8tYS1sdXotZGEtaGlzdG9yaWEtY29tZW1vcmFjYW8tZG9zLTI1LWFub3
+ MtZG8tYXJxdWl2b3wyMDI2LTEwLTI4IDA5OjMyOjM0@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Concertos
+DESCRIPTION:No dia 7 de dezembro\, às 18h30\, o Arquivo Municipal irá re
+ ceber "um concerto à Luz da história"\, no âmbito da comemoração dos 
+ 25 anos deste espaço cultural da cidade.\n\nMais informação: https://ww
+ w.cm-pvarzim.pt/eventos/um-concerto-a-luz-da-historia-comemoracao-dos-25-a
+ nos-do-arquivo/
+LAST-MODIFIED:20261028T093235Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/um-concerto-a-luz-da-historia-comemo
+ racao-dos-25-anos-do-arquivo/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Sábados a jogar na Biblioteca
 DTSTART:20261212T150000Z
 DTEND:20261212T170000Z
