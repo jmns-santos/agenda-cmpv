@@ -32,7 +32,7 @@ import sys
 import tempfile
 import unicodedata
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import quote, urlsplit
 
@@ -53,6 +53,11 @@ except Exception:  # Windows sem o pacote tzdata
 FONTE_API = "https://www.cm-pvarzim.pt/wp-json/plone/v1/event"
 FONTE_PAGINA = "https://www.cm-pvarzim.pt/eventos/"
 
+# Jogos do Varzim SC (fixtur.es, sempre atualizado). Fonte externa: se falhar,
+# a agenda publica-se sem os jogos, nunca o contrario (ver obter_jogos_varzim).
+FONTE_VARZIM_ICS = "http://ics.fixtur.es/v2/varzim.ics?e23e09232ebff109"
+VARZIM_LINK = "https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/"
+
 # Endereço público onde os ficheiros ficam alojados (termina em "/").
 URL_PUBLICA = "https://jmns-santos.github.io/agenda-cmpv/"
 
@@ -70,6 +75,9 @@ PREFIXO_TEMA = "Póvoa de Varzim: "
 PRODID = "-//Póvoa de Varzim//Agenda Municipal//PT"
 DOMINIO_UID = "agenda.cm-pvarzim.pt"  # não alterar: mantém os eventos já subscritos
 HORAS_ATUALIZACAO = 4
+
+# "Próximo mês" = janela corrida a partir de hoje (não o mês de calendário).
+JANELA_PROXIMOS_DIAS = 30
 
 
 @dataclass
@@ -269,6 +277,8 @@ TIPOS = [
                    r"dia (?:mundial|internacional|nacional|europeu|municipal) ",
                    r"dia d[aoe]s? (?:pai|mae|crianca|mulher|agricultor|horticultor|europa|mar|cidade|municipio|avo|namorados)",
                    r"semana (?:europeia|nacional|mundial) "]),
+    Tema("jogos-varzim", "Jogos do Varzim", "Calendario de jogos do Varzim SC", [],
+         "#2e7d32", tema="desporto"),
 ]
 TIPO_PADRAO = TIPOS[6]                     # Oficinas e atividades
 TIPO_DO_TEMA = {"desporto": "provas-desportivas", "ambiente": "acoes-campanhas", "mobilidade-transportes": "acoes-campanhas"}   # sem palavra-chave nenhuma
@@ -356,6 +366,7 @@ PADROES_TIPO = _compilar(TIPOS)
 PADROES_TIPO_FRACOS = {t.slug: _compilar_lista(t.fracas) for t in TIPOS}
 PADROES_TIPO_TITULO = {t.slug: _compilar_lista(t.palavras + t.so_titulo) for t in TIPOS}
 TIPOS_POR_SLUG = {t.slug: t for t in TIPOS}
+TEMAS_POR_SLUG = {t.slug: t for t in TEMAS}
 ORDEM_EMPATE = {slug: i for i, slug in enumerate(PRIORIDADE)}
 
 
@@ -677,6 +688,63 @@ def obter_eventos(sessao, hoje, horizonte):
     return list(eventos.values())
 
 
+def obter_jogos_varzim(sessao, hoje, horizonte):
+    """Calendario de jogos do Varzim SC (fixtur.es). Fonte externa e
+    independente da API da Camara: qualquer falha fica so em log -- a agenda
+    publica-se na mesma, sem os jogos, nunca ao contrario."""
+    try:
+        resp = sessao.get(FONTE_VARZIM_ICS, timeout=20)
+        resp.raise_for_status()
+        calendario = Calendar.from_ical(resp.content)
+    except Exception as exc:
+        logging.warning("Jogos do Varzim indisponiveis, a agenda segue sem eles: %s", exc)
+        return []
+
+    itens = []
+    for comp in calendario.walk("VEVENT"):
+        campo_inicio = comp.get("dtstart")
+        inicio = campo_inicio.dt if campo_inicio else None
+        if inicio is None:
+            continue
+        if isinstance(inicio, date) and not isinstance(inicio, datetime):
+            inicio = datetime.combine(inicio, datetime.min.time(), tzinfo=LISBOA)
+        elif inicio.tzinfo is None:
+            inicio = inicio.replace(tzinfo=LISBOA)
+        inicio = inicio.astimezone(timezone.utc)
+
+        campo_fim = comp.get("dtend")
+        fim = campo_fim.dt if campo_fim else None
+        if fim is not None:
+            if isinstance(fim, date) and not isinstance(fim, datetime):
+                fim = datetime.combine(fim, datetime.min.time(), tzinfo=LISBOA)
+            elif fim.tzinfo is None:
+                fim = fim.replace(tzinfo=LISBOA)
+            fim = fim.astimezone(timezone.utc)
+        else:
+            fim = inicio + timedelta(hours=2)   # duracao habitual de um jogo
+
+        if fim < hoje or inicio > horizonte:
+            continue
+
+        uid = str(comp.get("uid") or "").strip()
+        if not uid:
+            continue
+
+        itens.append({
+            "uid": "varzim-{}".format(uid),
+            "title": limpar_texto(str(comp.get("summary") or "Varzim SC")),
+            "start": inicio.isoformat(),
+            "end": fim.isoformat(),
+            "location": limpar_texto(str(comp.get("location") or "")),
+            "description": limpar_texto(str(comp.get("description") or "")),
+            "url": VARZIM_LINK,
+            "_link_direto": True,
+            "_classificacao_fixa": ("desporto", "jogos-varzim"),
+        })
+    logging.info("Jogos do Varzim: %s", len(itens))
+    return itens
+
+
 def mostrar_campos(sessao):
     """Diagnóstico: mostra os campos que a API devolve (para ver se há categorias)."""
     resp = sessao.get(FONTE_API, params={"paged": 1}, timeout=20)
@@ -747,7 +815,7 @@ def criar_evento(item, tema, tipo, t=None, nomes=None):
     if local:
         ev.add("location", vText(local))
 
-    link = link_seguro(item.get("url") or item.get("eventUrl"))
+    link = item.get("url") if item.get("_link_direto") else link_seguro(item.get("url") or item.get("eventUrl"))
     descricao = limpar_texto(item.get("description") or item.get("text"))
     partes = [p for p in (descricao, texto_acesso(item, descricao, t), t["nota_lingua"],
                           "{}: {}".format(t["mais_info"], link) if link else "") if p]
@@ -790,11 +858,21 @@ def nome_grupo(g, t):
 
 
 def classificar_todos(itens):
-    """Tema e tipo de cada evento, calculados uma vez para todas as línguas."""
-    return [(item, classificar(item), classificar_tipo(item)) for item in ordenar(itens)]
+    """Tema e tipo de cada evento, calculados uma vez para todas as línguas.
+    Um item com '_classificacao_fixa' = (tema_slug, tipo_slug) nao passa pelas
+    palavras-chave -- usado por fontes externas ja sabidas (jogos do Varzim)."""
+    resultado = []
+    for item in ordenar(itens):
+        fixa = item.get("_classificacao_fixa")
+        if fixa:
+            tema_slug, tipo_slug = fixa
+            resultado.append((item, TEMAS_POR_SLUG[tema_slug], TIPOS_POR_SLUG[tipo_slug]))
+        else:
+            resultado.append((item, classificar(item), classificar_tipo(item)))
+    return resultado
 
 
-def construir_calendarios(itens, url_base, lingua="pt", t=None, classificados=None):
+def construir_calendarios(itens, url_base, lingua="pt", t=None, classificados=None, agora=None):
     """Devolve {caminho_relativo: bytes} e a contagem de eventos por tema e por tipo."""
     t_ics = dict(TEXTOS_PT, **{k: v for k, v in (t or {}).items() if k in TEXTOS_PT})
     pre = prefixo_lingua(lingua)
@@ -812,7 +890,8 @@ def construir_calendarios(itens, url_base, lingua="pt", t=None, classificados=No
             grupos[caminho] = novo_calendario(cal_pref + nome, resumo + ".", url_ics(url_base, caminho), g.cor)
     contagem = {"temas": {g.slug: 0 for g in TEMAS}, "tipos": {g.slug: 0 for g in TIPOS}}
 
-    for item, tema, tipo in (classificados if classificados is not None else classificar_todos(itens)):
+    lista_classificados = classificados if classificados is not None else classificar_todos(itens)
+    for item, tema, tipo in lista_classificados:
         contagem["temas"][tema.slug] += 1
         contagem["tipos"][tipo.slug] += 1
         geral.add_component(criar_evento(item, tema, tipo, t_ics, nomes))
@@ -824,7 +903,8 @@ def construir_calendarios(itens, url_base, lingua="pt", t=None, classificados=No
     ficheiros = {pre + "agenda.ics": geral.to_ical()}
     for caminho, cal in grupos.items():
         ficheiros[caminho] = cal.to_ical()
-    return ficheiros, contagem
+    proximos = eventos_proximos(lista_classificados, agora or hoje_utc(), t_ics, nomes, t)
+    return ficheiros, contagem, proximos
 
 
 # ---------------------------------------------------------------------------
@@ -999,15 +1079,121 @@ def sugestoes_linguas(lingua, trad):
 CANCELADO_RE = re.compile(r"\bcancelad[oa]s?\b", re.I)
 
 
-def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None):
+def hoje_utc():
+    """Meia-noite de hoje, hora de Lisboa, em UTC (serve de "agora" para os próximos eventos)."""
+    return datetime.now(LISBOA).replace(hour=0, minute=0, second=0, microsecond=0).astimezone(timezone.utc)
+
+
+def eventos_proximos(classificados, agora, t_ics, nomes, t=None):
+    """Eventos dos próximos JANELA_PROXIMOS_DIAS dias, já com o VEVENT pronto (mesma serialização
+    do resto do site) para a secção "Próximos eventos" montar o .ics de um ou vários sem rede."""
+    limite = agora + timedelta(days=JANELA_PROXIMOS_DIAS)
+    resultado = []
+    for item, tema, tipo in classificados:
+        inicio = parse_iso(item.get("start"))
+        if inicio is None:
+            continue
+        fim = parse_iso(item.get("end")) or (inicio + timedelta(hours=1))
+        if fim < inicio:
+            fim = inicio + timedelta(hours=1)
+        if fim < agora or inicio > limite:
+            continue
+        ev = criar_evento(item, tema, tipo, t_ics, nomes)
+        if str(ev.get("status") or "") == "CANCELLED":
+            continue
+        resultado.append({
+            "titulo": str(ev.get("summary") or ""),
+            "inicio": inicio.isoformat(),
+            "fim": fim.isoformat(),
+            "diaInteiro": bool(eh_dia_inteiro(inicio, fim)),
+            "local": str(ev.get("location") or ""),
+            "temaSlug": tema.slug, "temaNome": nome_grupo(tema, t)[0], "temaCor": tema.cor,
+            "tipoSlug": tipo.slug, "tipoNome": nome_grupo(tipo, t)[0], "tipoCor": tipo.cor,
+            "vevent": ev.to_ical().decode("utf-8"),
+        })
+    return resultado
+
+
+def _data_curta(dt):
+    dt = dt.astimezone(LISBOA)
+    return dt.strftime("%d/%m/%Y %H:%M")
+
+
+def _chip_proximo(slug, nome, cor, classe):
+    return (
+        '<input type="checkbox" class="escondido chip-filtro {classe}" data-slug="{slug}" id="{classe}-{slug}">\n'
+        '<label for="{classe}-{slug}" style="--cor: {cor}">{nome}</label>'
+    ).format(classe=classe, slug=html.escape(slug, quote=True), cor=html.escape(cor, quote=True), nome=html.escape(nome))
+
+
+def secao_proximos(proximos, t):
+    """Linhas da lista de "próximos eventos" + filtros (só os temas/tipos com eventos nos próximos dias)."""
+    linhas = []
+    temas_vistos, tipos_vistos = {}, {}
+    for idx, p in enumerate(proximos):
+        inicio = parse_iso(p["inicio"])
+        if p["diaInteiro"]:
+            quando = _data_curta(inicio).split(" ")[0] + " · " + t["proximos_dia_inteiro"]
+        else:
+            quando = _data_curta(inicio)
+        local = p["local"]
+        ics_unico = (
+            "BEGIN:VCALENDAR\r\nPRODID:{prodid}\r\nVERSION:2.0\r\nCALSCALE:GREGORIAN\r\n{vevent}END:VCALENDAR\r\n"
+        ).format(prodid=PRODID, vevent=p["vevent"])
+        href = "data:text/calendar;charset=utf-8," + quote(ics_unico.encode("utf-8"))
+        linhas.append((
+            '<li class="item-proximo" data-idx="{idx}" data-tema="{tema_slug}" data-tipo="{tipo_slug}" '
+            'style="--ct: {cor_tema}; --cp: {cor_tipo}">\n'
+            '  <span class="marcar-coluna">\n'
+            '    <input type="checkbox" class="marcar-evento" id="proximo-{idx}" aria-label="{aria_marcar}">\n'
+            '  </span>\n'
+            '  <label for="proximo-{idx}" class="info-proximo">\n'
+            '    <span class="titulo-proximo">{titulo}</span>\n'
+            '    <span class="meta-proximo"><time datetime="{iso}">{quando}</time>{local_html}</span>\n'
+            '    <span class="etiquetas-proximo"><span class="etiqueta et-tema">{tema_nome}</span>'
+            '<span class="etiqueta et-tipo">{tipo_nome}</span></span>\n'
+            '  </label>\n'
+            '  <a class="botao botao-adicionar-um" href="{href}" download="evento.ics" aria-label="{aria_add}">{icone}<span>{rotulo}</span></a>\n'
+            '</li>'
+        ).format(
+            idx=idx,
+            tema_slug=html.escape(p["temaSlug"], quote=True), tipo_slug=html.escape(p["tipoSlug"], quote=True),
+            cor_tema=html.escape(p["temaCor"], quote=True), cor_tipo=html.escape(p["tipoCor"], quote=True),
+            aria_marcar=html.escape("{}: {}".format(t["selecionar_evento"], p["titulo"]), quote=True),
+            titulo=html.escape(p["titulo"]),
+            iso=html.escape(p["inicio"], quote=True), quando=html.escape(quando),
+            local_html=" · {}".format(html.escape(local)) if local else "",
+            tema_nome=html.escape(p["temaNome"]), tipo_nome=html.escape(p["tipoNome"]),
+            href=href, aria_add=html.escape("{}: {}".format(t["adicionar_um"], p["titulo"]), quote=True),
+            icone=ICONE_CALENDARIO, rotulo=html.escape(t["adicionar_um"]),
+        ))
+        temas_vistos[p["temaSlug"]] = (p["temaNome"], p["temaCor"])
+        tipos_vistos[p["tipoSlug"]] = (p["tipoNome"], p["tipoCor"])
+    chips_temas = "\n".join(
+        _chip_proximo(g.slug, temas_vistos[g.slug][0], temas_vistos[g.slug][1], "chip-tema")
+        for g in TEMAS if g.slug in temas_vistos)
+    chips_tipos = "\n".join(
+        _chip_proximo(g.slug, tipos_vistos[g.slug][0], tipos_vistos[g.slug][1], "chip-tipo")
+        for g in TIPOS if g.slug in tipos_vistos)
+    return "\n".join(linhas), chips_temas, chips_tipos
+
+
+def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None, proximos=None):
     trad = trad or carregar_traducoes()
-    t = trad["linguas"][lingua]
+    t = dict(trad["linguas"]["pt"])
+    t.update(trad["linguas"][lingua])  # chaves novas ainda sem tradução ficam em português, nunca falham
     modelo = MODELO_PAGINA.read_text(encoding="utf-8")
 
     script = re.search(r"<script>(.*?)</script>", modelo, re.S)
     hash_script = base64.b64encode(hashlib.sha256(script.group(1).encode("utf-8")).digest()).decode() if script else ""
 
     pre = prefixo_lingua(lingua)
+    proximos = proximos or []
+    linhas_proximos, chips_temas, chips_tipos = secao_proximos(proximos, t)
+    dados_proximos = json.dumps(
+        {"prodid": PRODID, "eventos": [{"vevent": p["vevent"]} for p in proximos]},
+        ensure_ascii=False, separators=(",", ":"),
+    ).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
     substituicoes = {
         "{{HASH_SCRIPT}}": hash_script,
         "{{LINGUA}}": t["html_lang"],
@@ -1020,6 +1206,10 @@ def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None):
         "{{ACOES_GERAL}}": bloco_subscricao(url_base, pre + "agenda.ics", t["completa_titulo"], t),
         "{{LISTA_TEMAS}}": lista_grupos(TEMAS, "temas", contagem["temas"], total, url_base, lingua, t),
         "{{LISTA_TIPOS}}": lista_grupos(TIPOS, "tipos", contagem["tipos"], total, url_base, lingua, t),
+        "{{LISTA_PROXIMOS}}": linhas_proximos,
+        "{{CHIPS_TEMAS_PROXIMOS}}": chips_temas,
+        "{{CHIPS_TIPOS_PROXIMOS}}": chips_tipos,
+        "{{DADOS_PROXIMOS}}": dados_proximos,
         "{{ALTERNATIVAS}}": "\n".join(
             '<link rel="alternate" hreflang="{}" href="{}">'.format(
                 trad["linguas"][c]["html_lang"], html.escape(url_base + prefixo_lingua(c), quote=True))
@@ -1068,6 +1258,7 @@ def gerar_saidas(itens, pasta, url_base):
     """Escreve os calendários e a página em todas as línguas. Devolve a contagem (igual em todas)."""
     trad = carregar_traducoes()
     classificados = classificar_todos(itens)
+    agora = hoje_utc()
     contagem = None
     # Restos de versões anteriores (ficheiros por evento): apagar.
     if (pasta / "e").is_dir():
@@ -1079,8 +1270,9 @@ def gerar_saidas(itens, pasta, url_base):
             pass
     for lingua in trad["ordem"]:
         t = trad["linguas"][lingua]
-        ficheiros, contagem = construir_calendarios(itens, url_base, lingua, t if lingua != "pt" else None, classificados)
-        ficheiros[prefixo_lingua(lingua) + "index.html"] = gerar_pagina(contagem, len(itens), url_base, lingua, trad)
+        ficheiros, contagem, proximos = construir_calendarios(
+            itens, url_base, lingua, t if lingua != "pt" else None, classificados, agora)
+        ficheiros[prefixo_lingua(lingua) + "index.html"] = gerar_pagina(contagem, len(itens), url_base, lingua, trad, proximos)
         for caminho, conteudo in ficheiros.items():
             escrever_atomico(conteudo, pasta / caminho)
         for sub in ("temas", "tipos"):
@@ -1114,11 +1306,12 @@ def main():
         mostrar_campos(obter_sessao())
         return
 
-    hoje = datetime.now(LISBOA).replace(hour=0, minute=0, second=0, microsecond=0).astimezone(timezone.utc)
+    hoje = hoje_utc()
     horizonte = hoje + timedelta(days=30 * args.horizonte_meses)
 
+    sessao = obter_sessao()
     try:
-        itens = obter_eventos(obter_sessao(), hoje, horizonte)
+        itens = obter_eventos(sessao, hoje, horizonte)
     except Exception as exc:
         logging.error("Recolha falhou; os ficheiros publicados ficam como estavam. %s", exc)
         sys.exit(1)
@@ -1128,6 +1321,8 @@ def main():
         # não se apaga o que as pessoas já têm no calendário.
         logging.error("Nenhum evento recebido; os ficheiros publicados ficam como estavam.")
         sys.exit(1)
+
+    itens += obter_jogos_varzim(sessao, hoje, horizonte)
 
     try:
         contagem = gerar_saidas(itens, args.pasta_saida, url_base)

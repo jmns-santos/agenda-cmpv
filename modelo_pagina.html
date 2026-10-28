@@ -223,6 +223,59 @@
 
   .aviso { margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
 
+  /* Proximos eventos: filtro, selecao multipla e adicionar ao calendario sem subscricao */
+  .proximos { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
+  .proximos::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
+  .proximos h2 { margin: 0; font-size: 1.3rem; line-height: 1.25; }
+  .proximos .linha2 { color: var(--cinza); margin-top: .15rem; }
+
+  .filtros { display: none; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
+  .js .filtros { display: flex; }
+  .chips-temas, .chips-tipos { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .chips-tipos { display: none; }
+  #vista-tipo:checked ~ main .chips-temas { display: none; }
+  #vista-tipo:checked ~ main .chips-tipos { display: flex; }
+  .chip-filtro + label {
+    display: inline-flex; align-items: center; min-height: 2.3rem; padding: .25rem .75rem;
+    border-radius: 999px; border: 1.5px solid var(--linha); background: var(--cartao);
+    font-size: .88rem; font-weight: 700; color: var(--cinza); cursor: pointer; user-select: none;
+  }
+  .chip-filtro:checked + label { background: var(--cor); border-color: var(--cor); color: #fff; }
+  .chip-filtro:focus-visible + label { outline: 3px solid var(--foco); outline-offset: 1px; }
+
+  .lista-proximos { list-style: none; margin: .9rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
+  .item-proximo {
+    display: flex; align-items: center; gap: .6rem; background: var(--cartao); border: 1px solid var(--linha);
+    border-radius: 10px; padding: .55rem .7rem; border-left: 6px solid var(--ct);
+  }
+  #vista-tipo:checked ~ main .item-proximo { border-left-color: var(--cp); }
+  .marcar-coluna { display: none; flex: none; }
+  .js .marcar-coluna { display: flex; }
+  .marcar-evento { width: 1.3rem; height: 1.3rem; flex: none; accent-color: var(--botao); }
+  .info-proximo { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: .15rem; cursor: default; }
+  .js .info-proximo { cursor: pointer; }
+  .titulo-proximo { font-weight: 700; font-size: .98rem; overflow-wrap: anywhere; }
+  .meta-proximo { font-size: .85rem; color: var(--cinza); font-variant-numeric: lining-nums tabular-nums; }
+  .etiquetas-proximo { display: flex; gap: .35rem; flex-wrap: wrap; margin-top: .1rem; }
+  .etiqueta { font-size: .75rem; font-weight: 700; padding: .1rem .5rem; border-radius: 999px; background: var(--trilho); color: var(--cinza); }
+  .botao-adicionar-um { flex: none; min-height: 2.4rem; padding: .35rem .7rem; font-size: .85rem; }
+  .botao-adicionar-um svg { width: 1em; height: 1em; }
+  .botao-adicionar-um span { display: none; }
+  @media (min-width: 30rem) { .botao-adicionar-um span { display: inline; } }
+
+  .vazio-proximos { display: none; margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
+  .lista-proximos:empty + .vazio-proximos { display: block; }
+
+  .barra-selecao { display: none; align-items: center; justify-content: space-between; gap: .6rem; margin-top: .8rem; flex-wrap: wrap; }
+  .js .barra-selecao { display: flex; }
+  .selecionar-todos { display: flex; align-items: center; gap: .45rem; font-size: .92rem; font-weight: 700; cursor: pointer; }
+  .selecionar-todos input { width: 1.2rem; height: 1.2rem; accent-color: var(--botao); }
+  #proximos-adicionar:disabled { opacity: .5; cursor: not-allowed; }
+
+  @media (max-width: 30rem) {
+    .item-proximo { flex-wrap: wrap; }
+  }
+
   /* Ajuda */
   .ajuda { margin-top: 2rem; }
   .ajuda h2 { font-size: 1.25rem; margin: 0 0 .4rem; }
@@ -241,11 +294,11 @@
   .embed .seletor { position: static; }
 
   @media (forced-colors: active) {
-    .cartao, .completa { border-left-color: CanvasText; }
+    .cartao, .completa, .item-proximo { border-left-color: CanvasText; }
     .barra span { background: CanvasText; }
   }
   @media print {
-    .seletor, .ferramentas, .acoes, .sugestao { display: none !important; }
+    .seletor, .ferramentas, .acoes, .sugestao, .filtros, .barra-selecao, .marcar-coluna, .botao-adicionar-um { display: none !important; }
   }
 </style>
 </head>
@@ -341,6 +394,31 @@
     <p class="aviso">{{T:aviso}}</p>
   </section>
 
+  <section class="proximos" aria-labelledby="t-proximos">
+    <h2 id="t-proximos">{{T:proximos_titulo}}</h2>
+    <p class="linha2">{{T:proximos_texto}}</p>
+
+    <div class="filtros" role="group" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
+      <div class="chips-temas" aria-label="{{T:por_tema}}">
+{{CHIPS_TEMAS_PROXIMOS}}
+      </div>
+      <div class="chips-tipos" aria-label="{{T:por_tipo}}">
+{{CHIPS_TIPOS_PROXIMOS}}
+      </div>
+    </div>
+
+    <ul class="lista-proximos">
+{{LISTA_PROXIMOS}}
+    </ul>
+    <p class="vazio-proximos">{{T:proximos_vazio}}</p>
+
+    <div class="barra-selecao">
+      <label class="selecionar-todos"><input type="checkbox" id="proximos-todos">{{T:selecionar_todos}}</label>
+      <button type="button" class="botao" id="proximos-adicionar" disabled
+        data-rotulo-zero="{{T:adicionar_zero}}" data-rotulo-n="{{T:adicionar_n}}">{{T:adicionar_zero}}</button>
+    </div>
+  </section>
+
   <section class="ajuda" aria-labelledby="t-ajuda">
     <h2 id="t-ajuda">{{T:ajuda}}</h2>
     <details class="item"><summary>{{T:h_google_t}}</summary><div>{{T:h_google_html}}</div></details>
@@ -363,6 +441,8 @@
 </footer>
 
 <p class="apenas-leitor" aria-live="polite" id="estado"></p>
+
+<script type="application/json" id="dados-proximos">{{DADOS_PROXIMOS}}</script>
 
 <script>
 (function () {
@@ -449,6 +529,111 @@
       falhou();
     }
   });
+
+  // Proximos eventos: filtro por tema/tipo e adicionar um ou varios ao calendario, sem rede
+  // (os dados e o VEVENT de cada evento vem prontos do elemento #dados-proximos, servidos num
+  // <script type="application/json">, fora do script-src do CSP por nao ser JS executavel).
+  (function () {
+    var dadosEl = document.getElementById('dados-proximos');
+    var secao = document.querySelector('.proximos');
+    if (!dadosEl || !secao) return;
+    var dados;
+    try { dados = JSON.parse(dadosEl.textContent); } catch (e) { return; }
+    if (!dados || !dados.eventos || !dados.eventos.length) return;
+
+    var linhas = secao.querySelectorAll('.lista-proximos li[data-idx]');
+    var caixas = secao.querySelectorAll('.marcar-evento');
+    var caixaTodos = document.getElementById('proximos-todos');
+    var botaoAdicionar = document.getElementById('proximos-adicionar');
+    var chips = secao.querySelectorAll('.chip-filtro');
+
+    function chipsLigados(classe) {
+      var slugs = [];
+      for (var i = 0; i < chips.length; i++) {
+        if (chips[i].classList.contains(classe) && chips[i].checked) slugs.push(chips[i].getAttribute('data-slug'));
+      }
+      return slugs;
+    }
+
+    function atualizarBotao() {
+      var n = 0;
+      for (var i = 0; i < caixas.length; i++) {
+        if (caixas[i].checked && !caixas[i].closest('li').hidden) n++;
+      }
+      if (botaoAdicionar) {
+        botaoAdicionar.disabled = n === 0;
+        botaoAdicionar.textContent = n === 0
+          ? botaoAdicionar.getAttribute('data-rotulo-zero')
+          : botaoAdicionar.getAttribute('data-rotulo-n').replace('{n}', n);
+      }
+      if (caixaTodos) {
+        var visiveis = 0, marcadas = 0;
+        for (var j = 0; j < linhas.length; j++) {
+          if (!linhas[j].hidden) {
+            visiveis++;
+            var c = linhas[j].querySelector('.marcar-evento');
+            if (c && c.checked) marcadas++;
+          }
+        }
+        caixaTodos.checked = visiveis > 0 && marcadas === visiveis;
+        caixaTodos.disabled = visiveis === 0;
+      }
+    }
+
+    function aplicarFiltro() {
+      var temas = chipsLigados('chip-tema');
+      var tipos = chipsLigados('chip-tipo');
+      for (var i = 0; i < linhas.length; i++) {
+        var li = linhas[i];
+        var mostraTema = temas.length === 0 || temas.indexOf(li.getAttribute('data-tema')) >= 0;
+        var mostraTipo = tipos.length === 0 || tipos.indexOf(li.getAttribute('data-tipo')) >= 0;
+        li.hidden = !(mostraTema && mostraTipo);
+        if (li.hidden) {
+          var cx = li.querySelector('.marcar-evento');
+          if (cx) cx.checked = false;
+        }
+      }
+      atualizarBotao();
+    }
+
+    for (var c = 0; c < chips.length; c++) chips[c].addEventListener('change', aplicarFiltro);
+    for (var d = 0; d < caixas.length; d++) caixas[d].addEventListener('change', atualizarBotao);
+    if (caixaTodos) {
+      caixaTodos.addEventListener('change', function () {
+        for (var i = 0; i < linhas.length; i++) {
+          if (!linhas[i].hidden) {
+            var cx = linhas[i].querySelector('.marcar-evento');
+            if (cx) cx.checked = caixaTodos.checked;
+          }
+        }
+        atualizarBotao();
+      });
+    }
+    if (botaoAdicionar) {
+      botaoAdicionar.addEventListener('click', function () {
+        var partes = [];
+        for (var i = 0; i < linhas.length; i++) {
+          if (linhas[i].hidden) continue;
+          var cx = linhas[i].querySelector('.marcar-evento');
+          if (cx && cx.checked) {
+            var idx = parseInt(linhas[i].getAttribute('data-idx'), 10);
+            if (dados.eventos[idx]) partes.push(dados.eventos[idx].vevent);
+          }
+        }
+        if (!partes.length) return;
+        var texto = 'BEGIN:VCALENDAR\r\nPRODID:' + dados.prodid + '\r\nVERSION:2.0\r\nCALSCALE:GREGORIAN\r\n'
+          + partes.join('') + 'END:VCALENDAR\r\n';
+        var a = document.createElement('a');
+        a.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(texto);
+        a.download = 'eventos.ics';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      });
+    }
+
+    aplicarFiltro();
+  })();
 })();
 </script>
 </body>
