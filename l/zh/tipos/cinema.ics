@@ -111,13 +111,13 @@ URL:https://www.cm-pvarzim.pt/eventos/cinema-naza/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cinema "Santo António\, o Casamenteiro de Lisboa": nova sessão
-DTSTART:20261115T213000Z
-DTEND:20261115T233000Z
-DTSTAMP:20261021T083352Z
+DTSTART:20261115T160000Z
+DTEND:20261115T180000Z
+DTSTAMP:20261029T103835Z
 UID:Y2luZW1hLXNhbnRvLWFudG9uaW8tby1jYXNhbWVudGVpcm8tZGUtbGlzYm9hLTJ8MjAyNi
  0xMC0yMSAwODozMjo1NQ==@agenda.cm-pvarzim.pt
 CATEGORIES:文化,电影
-DESCRIPTION:No dia 15 de novembro\, às 21h30\, será exibida\, no Cine-Te
+DESCRIPTION:No dia 15 de novembro\, às 16h00\, será exibida\, no Cine-Te
  atro Garrett\, nova sessão do filme "Santo António\, o Casamenteiro de L
  isboa".\n\n门票与报名（葡萄牙语）：\nEntradas: Os bilhetes cus
  tam 3\,50€ e estão à venda na BOL e no Cine-Teatro Garrett.\n门票: h
@@ -125,7 +125,7 @@ DESCRIPTION:No dia 15 de novembro\, às 21h30\, será exibida\, no Cine-Te
  活动标题和说明为葡萄牙语，与市政府发布的内容一致
  。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/cinema-santo-antoni
  o-o-casamenteiro-de-lisboa-2/
-LAST-MODIFIED:20261021T083352Z
+LAST-MODIFIED:20261029T103835Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-

@@ -766,13 +766,13 @@ URL:https://www.cm-pvarzim.pt/eventos/concerto-pedro-abrunhosa/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cinema "Santo António\, o Casamenteiro de Lisboa": nova sessão
-DTSTART:20261115T213000Z
-DTEND:20261115T233000Z
-DTSTAMP:20261021T083352Z
+DTSTART:20261115T160000Z
+DTEND:20261115T180000Z
+DTSTAMP:20261029T103835Z
 UID:Y2luZW1hLXNhbnRvLWFudG9uaW8tby1jYXNhbWVudGVpcm8tZGUtbGlzYm9hLTJ8MjAyNi
  0xMC0yMSAwODozMjo1NQ==@agenda.cm-pvarzim.pt
 CATEGORIES:Culture,Cinéma
-DESCRIPTION:No dia 15 de novembro\, às 21h30\, será exibida\, no Cine-Te
+DESCRIPTION:No dia 15 de novembro\, às 16h00\, será exibida\, no Cine-Te
  atro Garrett\, nova sessão do filme "Santo António\, o Casamenteiro de L
  isboa".\n\nBillets et inscriptions (en portugais) :\nEntradas: Os bilhetes
   custam 3\,50€ e estão à venda na BOL e no Cine-Teatro Garrett.\nBille
@@ -780,7 +780,7 @@ DESCRIPTION:No dia 15 de novembro\, às 21h30\, será exibida\, no Cine-Te
  t\n\nTitre et description de l'événement en portugais\, tels que publié
  s par la municipalité.\n\nPlus d'informations: https://www.cm-pvarzim.pt/
  eventos/cinema-santo-antonio-o-casamenteiro-de-lisboa-2/
-LAST-MODIFIED:20261021T083352Z
+LAST-MODIFIED:20261029T103835Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-
@@ -1108,20 +1108,18 @@ BEGIN:VEVENT
 SUMMARY:"Deixem o Pimba em Paz"
 DTSTART:20261204T213000Z
 DTEND:20261204T233000Z
-DTSTAMP:20261001T145442Z
+DTSTAMP:20261029T101919Z
 UID:ZGVpeGVtLW8tcGltYmEtZW0tcGF6LTJ8MjAyNi0xMC0wMSAxNDo0OToxOA==@agenda.cm
  -pvarzim.pt
-CATEGORIES:Citoyenneté,Concerts
-DESCRIPTION:Estreado em 2013\, “Deixem o Pimba em Paz” conquistou o p
- úblico com uma reinterpretação irreverente do repertório pimba\, tendo
-  percorrido Portugal de Norte a Sul\, ilhas incluídas\, e atravessando fr
- onteiras até aos Estados Unidos da América e Brasil.\n\nBillets et inscr
- iptions (en portugais) :\nOs bilhetes estão à venda na BOL.\nBillets: ht
- tps://www.bol.pt/Comprar/Bilhetes/183417-deixem_o_pimba_em_paz_povoa_de_va
- rzim-povoa_arena/\n\nTitre et description de l'événement en portugais\, 
- tels que publiés par la municipalité.\n\nPlus d'informations: https://ww
- w.cm-pvarzim.pt/eventos/deixem-o-pimba-em-paz-2/
-LAST-MODIFIED:20261001T145442Z
+CATEGORIES:Culture,Concerts
+DESCRIPTION:Esgotada a primeira data anunciada\, o espetáculo volta ao P
+ óvoa Arena no dia 5 de dezembro\, às 21h30.\n\nBillets et inscriptions (
+ en portugais) :\nOs bilhetes estão à venda na BOL.\nBillets: https://www
+ .bol.pt/Comprar/Bilhetes/183417-deixem_o_pimba_em_paz_povoa_de_varzim-povo
+ a_arena/\n\nTitre et description de l'événement en portugais\, tels que 
+ publiés par la municipalité.\n\nPlus d'informations: https://www.cm-pvar
+ zim.pt/eventos/deixem-o-pimba-em-paz-2/
+LAST-MODIFIED:20261029T101919Z
 LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/deixem-o-pimba-em-paz-2/
@@ -1320,6 +1318,26 @@ LAST-MODIFIED:20261026T104709Z
 LOCATION:Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/no-meu-tempo-dou-te-um-conto-25/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Espetáculo de dança “23:59 (falta um minuto para o Natal)”
+DTSTART:20261216T213000Z
+DTEND:20261216T233000Z
+DTSTAMP:20261029T092445Z
+UID:ZXNwZXRhY3Vsby1kZS1kYW5jYS0yMzU5LWZhbHRhLXVtLW1pbnV0by1wYXJhLW8tbmF0YW
+ x8MjAyNi0xMC0yOSAwOToyNDo0NA==@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Spectacles
+DESCRIPTION:No dia 16 de dezembro\, às 21h30\, a Academia Dancing Rebels 
+ Dance Studio apresenta\, no Cine-Teatro Garrett\, o espetáculo “23:59 (
+ falta um minuto para o Natal)”.\n\nTitre et description de l'événement
+  en portugais\, tels que publiés par la municipalité.\n\nPlus d'informat
+ ions: https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-2359-falta-um-
+ minuto-para-o-natal/
+LAST-MODIFIED:20261029T092445Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-2359-falta-um-mi
+ nuto-para-o-natal/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Rastreios Cardiovasculares Gratuitos

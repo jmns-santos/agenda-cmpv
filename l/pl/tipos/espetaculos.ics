@@ -53,4 +53,23 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/musical-capuchinho-vermelho-o-musica
  l/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Espetáculo de dança “23:59 (falta um minuto para o Natal)”
+DTSTART:20261216T213000Z
+DTEND:20261216T233000Z
+DTSTAMP:20261029T092445Z
+UID:ZXNwZXRhY3Vsby1kZS1kYW5jYS0yMzU5LWZhbHRhLXVtLW1pbnV0by1wYXJhLW8tbmF0YW
+ x8MjAyNi0xMC0yOSAwOToyNDo0NA==@agenda.cm-pvarzim.pt
+CATEGORIES:Kultura,Widowiska
+DESCRIPTION:No dia 16 de dezembro\, às 21h30\, a Academia Dancing Rebels 
+ Dance Studio apresenta\, no Cine-Teatro Garrett\, o espetáculo “23:59 (
+ falta um minuto para o Natal)”.\n\nTytuł i opis wydarzenia po portugals
+ ku\, tak jak opublikowała je gmina.\n\nWięcej informacji: https://www.cm
+ -pvarzim.pt/eventos/espetaculo-de-danca-2359-falta-um-minuto-para-o-natal/
+LAST-MODIFIED:20261029T092445Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-2359-falta-um-mi
+ nuto-para-o-natal/
+END:VEVENT
 END:VCALENDAR
