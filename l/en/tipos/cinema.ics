@@ -13,25 +13,6 @@ X-APPLE-CALENDAR-COLOR:#6a3fb5
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Cinema "Hope"
-DTSTART:20261029T214500Z
-DTEND:20261029T233000Z
-DTSTAMP:20260922T101310Z
-UID:Y2luZW1hLWhvcGV8MjAyNi0wOS0yMiAxMDoxMzowOQ==@agenda.cm-pvarzim.pt
-CATEGORIES:Culture,Cinema
-DESCRIPTION:No dia 29 de outubro\, às 21h45\, será exibido\, no Cine-Tea
- tro Garrett\, o filme "Hope".\n\nTickets and registration (in Portuguese):
- \nEntradas: 4\,00€ (não sócio) 0€ (sócio).\nDesconto para menores d
- e 23 anos: 2€ cada (*até à menor idade estabelecida em cada filme) | B
- ilhetes à venda no Cine-Teatro Garrett.\n\nEvent title and description in
-  Portuguese\, as published by the municipality.\n\nMore information: https
- ://www.cm-pvarzim.pt/eventos/cinema-hope/
-LAST-MODIFIED:20260922T101310Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-hope/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Cinema "A Saga de Anatahan"
 DTSTART:20261105T214500Z
 DTEND:20261105T234500Z

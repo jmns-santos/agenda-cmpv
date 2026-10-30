@@ -166,25 +166,6 @@ URL:https://www.cm-pvarzim.pt/eventos/o-caso-plimpsesto-um-misterio-no-arq
  uivo/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cinema "Hope"
-DTSTART:20261029T214500Z
-DTEND:20261029T233000Z
-DTSTAMP:20260922T101310Z
-UID:Y2luZW1hLWhvcGV8MjAyNi0wOS0yMiAxMDoxMzowOQ==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Cinema
-DESCRIPTION:No dia 29 de outubro\, às 21h45\, será exibido\, no Cine-Tea
- tro Garrett\, o filme "Hope".\n\nBiglietti e iscrizioni (in portoghese):\n
- Entradas: 4\,00€ (não sócio) 0€ (sócio).\nDesconto para menores de 
- 23 anos: 2€ cada (*até à menor idade estabelecida em cada filme) | Bil
- hetes à venda no Cine-Teatro Garrett.\n\nTitolo e descrizione dell'evento
-  in portoghese\, come pubblicati dal comune.\n\nMaggiori informazioni: htt
- ps://www.cm-pvarzim.pt/eventos/cinema-hope/
-LAST-MODIFIED:20260922T101310Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-hope/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Festa de Halloween
 DTSTART:20261030T193000Z
 DTEND:20261031T000000Z
