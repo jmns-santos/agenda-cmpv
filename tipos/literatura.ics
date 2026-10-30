@@ -242,6 +242,24 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Clube de Leituras Marítimas "Livros de Marear"
+DTSTART:20261212T150000Z
+DTEND:20261212T174500Z
+DTSTAMP:20261030T120231Z
+UID:Y2x1YmUtZGUtbGVpdHVyYXMtbWFyaXRpbWFzLWxpdnJvcy1kZS1tYXJlYXItN3wyMDI2LT
+ EwLTMwIDEyOjAyOjMw@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Literatura
+DESCRIPTION:No dia 12 de dezembro\, às 15h00\, a Biblioteca Municipal Roc
+ ha Peixoto acolhe mais um encontro do Clube de Leituras Marítimas "Livros
+  de Marear".\n\nMais informação: https://www.cm-pvarzim.pt/eventos/clube
+ -de-leituras-maritimas-livros-de-marear-7/
+LAST-MODIFIED:20261030T120231Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/clube-de-leituras-maritimas-livros-d
+ e-marear-7/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cais de Leitura
 DTSTART:20261215T210000Z
 DTEND:20261215T233000Z

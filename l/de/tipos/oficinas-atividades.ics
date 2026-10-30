@@ -119,6 +119,26 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/362315/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Convergências: Ciclo de conferências por Sylvio Lago
+DTSTART:20261125T180000Z
+DTEND:20261127T193000Z
+DTSTAMP:20261030T115841Z
+UID:Y29udmVyZ2VuY2lhcy1jaWNsby1kZS1jb25mZXJlbmNpYXMtcG9yLXN5bHZpby1sYWdvfD
+ IwMjYtMTAtMzAgMTE6NTg6NDA=@agenda.cm-pvarzim.pt
+CATEGORIES:Kultur,Workshops und Aktivitäten
+DESCRIPTION:Nos dias 25\, 26 e 27 de novembro\, o Município da Póvoa de 
+ Varzim irá dinamizar o Ciclo de Conferências "Convergências"\, por Sylv
+ io Lago\, escritor e musicólogo.\n\nTitel und Beschreibung der Veranstalt
+ ung auf Portugiesisch\, wie von der Stadt veröffentlicht.\n\nWeitere Info
+ rmationen: https://www.cm-pvarzim.pt/eventos/convergencias-ciclo-de-confer
+ encias-por-sylvio-lago/
+LAST-MODIFIED:20261030T115841Z
+LOCATION:Biblioteca Municipal e Biblioteca Diana Bar
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/convergencias-ciclo-de-conferencias-
+ por-sylvio-lago/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Ciclo Lavorada Gente: "Um prefácio à Camisola Poveira: Represent
  ação das camisolas no século XIX"
 DTSTART:20261128T150000Z

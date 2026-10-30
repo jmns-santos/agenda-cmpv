@@ -14,6 +14,30 @@ X-APPLE-CALENDAR-COLOR:#9c27b0
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
+SUMMARY:Dia Nacional do Mar
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261201
+DTSTAMP:20261030T115255Z
+UID:ZGlhLW5hY2lvbmFsLWRvLW1hci00fDIwMjYtMTAtMzAgMTE6NTI6NTQ=@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Cultura,Conmemoraciones y ceremonias
+DESCRIPTION:No âmbito do Dia Nacional do Mar\, celebrado a 16 de novembro
+ \, a Biblioteca Municipal Rocha Peixoto irá promover um conjunto de inici
+ ativas para assinalar a efeméride\, durante todo o mês de novembro.\n\nE
+ ntradas e inscripciones (en portugués):\nEntre 9 e 21 de novembro\, no Fu
+ ndo Local da Biblioteca Municipal\, será dinamizada a mostra documental 
+ “A presença do mar no bilhete-postal ilustrado”\, seguindo-se a inici
+ ativa Livros de Marear | Clube de Leituras Marítimas\, animada por Abel C
+ oentrão\, a 14 de novembro\, a partir das 15h00\, no Auditório Municipal
+ \, a…\n\nTítulo y descripción del evento en portugués\, tal como los 
+ publica el municipio.\n\nMás información: https://www.cm-pvarzim.pt/even
+ tos/dia-nacional-do-mar-4/
+LAST-MODIFIED:20261030T115255Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/dia-nacional-do-mar-4/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Bicentenário do "Paredão" de D. Maria I (1826) - o simbolismo de
   uma obra de engenharia
 DTSTART:20261114T150000Z

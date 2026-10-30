@@ -56,6 +56,25 @@ URL:https://www.cm-pvarzim.pt/eventos/concerto-juliana-linhares-ate-cansar
  -o-cansaco/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:FIMPV+: Concerto de emmy Curl
+DTSTART:20261106T213000Z
+DTEND:20261106T233000Z
+DTSTAMP:20261030T101325Z
+UID:ZmltcHYtY29uY2VydG8tZGUtZW1teS1jdXJsfDIwMjYtMTAtMzAgMTA6MTM6MjQ=@agend
+ a.cm-pvarzim.pt
+CATEGORIES:Cultura,Conciertos
+DESCRIPTION:A programação do FIMPV+ prossegue no dia 6 de novembro\, às
+  21h30\, no Auditório Municipal da Póvoa de Varzim\, com um concerto de 
+ emmy Curl\, uma das vozes mais singulares da música portuguesa contempor
+ ânea.\n\nTítulo y descripción del evento en portugués\, tal como los p
+ ublica el municipio.\n\nMás información: https://www.cm-pvarzim.pt/event
+ os/fimpv-concerto-de-emmy-curl/
+LAST-MODIFIED:20261030T101325Z
+LOCATION:Auditório Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/fimpv-concerto-de-emmy-curl/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Concerto de Amizade
 DTSTART:20261107T190000Z
 DTEND:20261107T203000Z

@@ -99,4 +99,44 @@ LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/three-sixty-halloween/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Póvoa de Varzim\, Cidade Natal
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20270110
+DTSTAMP:20261030T123603Z
+UID:cG92b2EtZGUtdmFyemltLWNpZGFkZS1uYXRhbHwyMDI2LTEwLTMwIDEyOjM2OjAy@agend
+ a.cm-pvarzim.pt
+CATEGORIES:Kultur,Feste\, Messen und Märkte
+DESCRIPTION:A magia da época mais bonita do ano está prestes a chegar. D
+ e 29 de novembro a 9 de janeiro de 2027\, a iniciativa ‘Póvoa de Varzim
+ \, Cidade Natal’ vai transformar a nossa cidade num verdadeiro cenário 
+ de sonho\, repleto de luz\, música e animação para toda a família.\n\n
+ Titel und Beschreibung der Veranstaltung auf Portugiesisch\, wie von der S
+ tadt veröffentlicht.\n\nWeitere Informationen: https://www.cm-pvarzim.pt/
+ eventos/povoa-de-varzim-cidade-natal/
+LAST-MODIFIED:20261030T123603Z
+LOCATION:Póvoa de Varzim
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-cidade-natal/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Natal na Biblioteca
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261230
+DTSTAMP:20261030T120803Z
+UID:bmF0YWwtbmEtYmlibGlvdGVjYXwyMDI2LTEwLTMwIDEyOjA3OjM0@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Kultur,Feste\, Messen und Märkte
+DESCRIPTION:A Magia do Natal chega à Biblioteca Municipal Rocha Peixoto c
+ om um conjunto de atividades pensadas para encantar\, estimular e criar me
+ mórias que ficam para sempre.\n\nTickets und Anmeldung (auf Portugiesisch
+ ):\nInscrições através do email biblioteca@cm-pvarzim.pt ou\, em altern
+ ativa\, do telefone 252 616 000.\n\nTitel und Beschreibung der Veranstaltu
+ ng auf Portugiesisch\, wie von der Stadt veröffentlicht.\n\nWeitere Infor
+ mationen: https://www.cm-pvarzim.pt/eventos/natal-na-biblioteca/
+LAST-MODIFIED:20261030T120803Z
+LOCATION:Sala infantil e juvenil da Biblioteca Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/natal-na-biblioteca/
+END:VEVENT
 END:VCALENDAR
