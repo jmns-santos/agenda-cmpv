@@ -13,26 +13,6 @@ X-APPLE-CALENDAR-COLOR:#d32f2f
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Concerto "Disco Voador"
-DTSTART:20261030T213000Z
-DTEND:20261030T233000Z
-DTSTAMP:20260810T092500Z
-UID:Y29uY2VydG8tZGlzY28tdm9hZG9yfDIwMjYtMDgtMTAgMDk6MjQ6NTk=@agenda.cm-pva
- rzim.pt
-CATEGORIES:Kultura,Koncerty
-DESCRIPTION:No dia 30 de outubro\, às 21h30\, o Café-Concerto vai acolhe
- r um concerto com Disco Voador.\n\nBilety i zapisy (po portugalsku):\nOs b
- ilhetes custam 5\,00€ e estão à venda na BOL e no Cine-Teatro Garrett
- \nBilety: https://www.bol.pt/Comprar/Bilhetes/183236-disco_voador-cine_tea
- tro_garrett/\n\nTytuł i opis wydarzenia po portugalsku\, tak jak opubliko
- wała je gmina.\n\nWięcej informacji: https://www.cm-pvarzim.pt/eventos/c
- oncerto-disco-voador/
-LAST-MODIFIED:20260810T092500Z
-LOCATION:Cine-Teatro Garrett - Café-Concerto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/concerto-disco-voador/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Concerto Juliana Linhares "Até Cansar o Cansaço"
 DTSTART:20261031T213000Z
 DTEND:20261031T233000Z

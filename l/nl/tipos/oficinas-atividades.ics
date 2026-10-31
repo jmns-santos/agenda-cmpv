@@ -14,29 +14,6 @@ X-APPLE-CALENDAR-COLOR:#00897b
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:"O Caso Palimpsesto - Um Mistério no Arquivo"
-DTSTART:20261026T093000Z
-DTEND:20261030T170000Z
-DTSTAMP:20261016T091021Z
-UID:by1jYXNvLXBsaW1wc2VzdG8tdW0tbWlzdGVyaW8tbm8tYXJxdWl2b3wyMDI2LTA5LTI4ID
- E1OjQzOjQx@agenda.cm-pvarzim.pt
-CATEGORIES:Cultuur,Workshops en activiteiten
-DESCRIPTION:Durante a semana de 26 a 30 de outubro\, o Arquivo Municipal p
- romove uma atividade lúdico-pedagógica baseada na lógica do jogo "Clued
- o"\, adaptada ao contexto de um Arquivo Histórico.\n\nKaartjes en inschri
- jving (in het Portugees):\nA participação é gratuita e os interessados 
- podem inscrever-se junto do Arquivo Municipal através dos seguintes meios
- : e-mail: arquivomunicipal@cm-pvarzim.pt / telefone: 252 090 003.\n\nTitel
-  en beschrijving van het evenement in het Portugees\, zoals gepubliceerd d
- oor de gemeente.\n\nMeer informatie: https://www.cm-pvarzim.pt/eventos/o-c
- aso-plimpsesto-um-misterio-no-arquivo/
-LAST-MODIFIED:20261016T091021Z
-LOCATION:Arquivo Municipal
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/o-caso-plimpsesto-um-misterio-no-arq
- uivo/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Oficina "Do Plástico fiz Sardinha"
 DTSTART:20261031T103000Z
 DTEND:20261031T123000Z

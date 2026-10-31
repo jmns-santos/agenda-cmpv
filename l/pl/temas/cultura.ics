@@ -50,31 +50,6 @@ URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-olhares-inco
  muns/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mês Internacional da Biblioteca Escolar (MIBE) Bibliotecas\, Lite
- racia e Inteligência artificial
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261031
-DTSTAMP:20261006T100859Z
-UID:bWVzLWludGVybmFjaW9uYWwtZGEtYmlibGlvdGVjYS1lc2NvbGFyLW1pYmUtYmlibGlvdG
- VjYXMtbGl0ZXJhY2lhLWUtaW50ZWxpZ2VuY2lhLWFydGlmaWNpYWx8MjAyNi0wOS0zMCAxMTow
- NjozMg==@agenda.cm-pvarzim.pt
-CATEGORIES:Kultura,Literatura
-DESCRIPTION:Durante o mês de outubro\, a Biblioteca Municipal Rocha Peixo
- to associa-se à celebração do Mês Internacional da Biblioteca Escolar
- \, promovendo um conjunto de três iniciativas que aproximam livros\, leit
- ores e novas tecnologias. As atividades serão feitas em parceria com as B
- ibliotecas Escolares do Concelho da Póvoa de Varzim\, dos cinco agrupamen
- tos de escolas e das escolas secundárias.\n\nTytuł i opis wydarzenia po 
- portugalsku\, tak jak opublikowała je gmina.\n\nWięcej informacji: https
- ://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-escolar-mibe-
- bibliotecas-literacia-e-inteligencia-artificial/
-LAST-MODIFIED:20261006T100859Z
-LOCATION:-
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esco
- lar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Exposição de pintura "Gesto de esperança"
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261116
@@ -116,29 +91,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/fimpv/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:"O Caso Palimpsesto - Um Mistério no Arquivo"
-DTSTART:20261026T093000Z
-DTEND:20261030T170000Z
-DTSTAMP:20261016T091021Z
-UID:by1jYXNvLXBsaW1wc2VzdG8tdW0tbWlzdGVyaW8tbm8tYXJxdWl2b3wyMDI2LTA5LTI4ID
- E1OjQzOjQx@agenda.cm-pvarzim.pt
-CATEGORIES:Kultura,Warsztaty i zajęcia
-DESCRIPTION:Durante a semana de 26 a 30 de outubro\, o Arquivo Municipal p
- romove uma atividade lúdico-pedagógica baseada na lógica do jogo "Clued
- o"\, adaptada ao contexto de um Arquivo Histórico.\n\nBilety i zapisy (po
-  portugalsku):\nA participação é gratuita e os interessados podem inscr
- ever-se junto do Arquivo Municipal através dos seguintes meios: e-mail: a
- rquivomunicipal@cm-pvarzim.pt / telefone: 252 090 003.\n\nTytuł i opis wy
- darzenia po portugalsku\, tak jak opublikowała je gmina.\n\nWięcej infor
- macji: https://www.cm-pvarzim.pt/eventos/o-caso-plimpsesto-um-misterio-no-
- arquivo/
-LAST-MODIFIED:20261016T091021Z
-LOCATION:Arquivo Municipal
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/o-caso-plimpsesto-um-misterio-no-arq
- uivo/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Festa de Halloween
 DTSTART:20261030T193000Z
 DTEND:20261031T000000Z
@@ -157,26 +109,6 @@ LAST-MODIFIED:20261019T103653Z
 LOCATION:Casa da Juventude
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/festa-de-halloween/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Concerto "Disco Voador"
-DTSTART:20261030T213000Z
-DTEND:20261030T233000Z
-DTSTAMP:20260810T092500Z
-UID:Y29uY2VydG8tZGlzY28tdm9hZG9yfDIwMjYtMDgtMTAgMDk6MjQ6NTk=@agenda.cm-pva
- rzim.pt
-CATEGORIES:Kultura,Koncerty
-DESCRIPTION:No dia 30 de outubro\, às 21h30\, o Café-Concerto vai acolhe
- r um concerto com Disco Voador.\n\nBilety i zapisy (po portugalsku):\nOs b
- ilhetes custam 5\,00€ e estão à venda na BOL e no Cine-Teatro Garrett
- \nBilety: https://www.bol.pt/Comprar/Bilhetes/183236-disco_voador-cine_tea
- tro_garrett/\n\nTytuł i opis wydarzenia po portugalsku\, tak jak opubliko
- wała je gmina.\n\nWięcej informacji: https://www.cm-pvarzim.pt/eventos/c
- oncerto-disco-voador/
-LAST-MODIFIED:20260810T092500Z
-LOCATION:Cine-Teatro Garrett - Café-Concerto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/concerto-disco-voador/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Sessão de leitura e Oficina de expressão plástica

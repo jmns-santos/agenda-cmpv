@@ -13,31 +13,6 @@ X-APPLE-CALENDAR-COLOR:#795548
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Mês Internacional da Biblioteca Escolar (MIBE) Bibliotecas\, Lite
- racia e Inteligência artificial
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261031
-DTSTAMP:20261006T100859Z
-UID:bWVzLWludGVybmFjaW9uYWwtZGEtYmlibGlvdGVjYS1lc2NvbGFyLW1pYmUtYmlibGlvdG
- VjYXMtbGl0ZXJhY2lhLWUtaW50ZWxpZ2VuY2lhLWFydGlmaWNpYWx8MjAyNi0wOS0zMCAxMTow
- NjozMg==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Literatura
-DESCRIPTION:Durante o mês de outubro\, a Biblioteca Municipal Rocha Peixo
- to associa-se à celebração do Mês Internacional da Biblioteca Escolar
- \, promovendo um conjunto de três iniciativas que aproximam livros\, leit
- ores e novas tecnologias. As atividades serão feitas em parceria com as B
- ibliotecas Escolares do Concelho da Póvoa de Varzim\, dos cinco agrupamen
- tos de escolas e das escolas secundárias.\n\nTítulo y descripción del e
- vento en portugués\, tal como los publica el municipio.\n\nMás informaci
- ón: https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esc
- olar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
-LAST-MODIFIED:20261006T100859Z
-LOCATION:-
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/mes-internacional-da-biblioteca-esco
- lar-mibe-bibliotecas-literacia-e-inteligencia-artificial/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Sessão de leitura e Oficina de expressão plástica
 DTSTART:20261031T153000Z
 DTEND:20261031T173000Z
