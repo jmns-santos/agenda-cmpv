@@ -13,43 +13,6 @@ X-APPLE-CALENDAR-COLOR:#8e1b4f
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Mostra de Pintura "ACERVO"
-DTSTART;VALUE=DATE:20260919
-DTEND;VALUE=DATE:20261101
-DTSTAMP:20260915T135707Z
-UID:bW9zdHJhLWRlLXBpbnR1cmEtYWNlcnZvfDIwMjYtMDktMTQgMDk6NDI6NDg=@agenda.cm
- -pvarzim.pt
-CATEGORIES:Cultura,Mostre
-DESCRIPTION:Nos meses de setembro e outubro\, o auditório da Biblioteca M
- unicipal acolhe a primeira Mostra do Ciclo ACERVO - Mostra de Pintura da B
- iblioteca Municipal Rocha Peixoto.\n\nTitolo e descrizione dell'evento in 
- portoghese\, come pubblicati dal comune.\n\nMaggiori informazioni: https:/
- /www.cm-pvarzim.pt/eventos/mostra-de-pintura-acervo/
-LAST-MODIFIED:20260915T135707Z
-LOCATION:Auditório da Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/mostra-de-pintura-acervo/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Exposição de fotografia "Olhares [in]Comuns"
-DTSTART:20261010T080000Z
-DTEND:20261031T190000Z
-DTSTAMP:20260930T095959Z
-UID:ZXhwb3NpY2FvLWRlLWZvdG9ncmFmaWEtb2xoYXJlcy1pbmNvbXVuc3wyMDI2LTA5LTMwID
- A5OjU1OjUw@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Mostre
-DESCRIPTION:Entre 10 e 31 de outubro\, estará patente na Biblioteca Munic
- ipal\, a exposição de fotografia de Lídia Soares de Moura "Olhares [in]
- Comuns".\n\nTitolo e descrizione dell'evento in portoghese\, come pubblica
- ti dal comune.\n\nMaggiori informazioni: https://www.cm-pvarzim.pt/eventos
- /exposicao-de-fotografia-olhares-incomuns/
-LAST-MODIFIED:20260930T095959Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-olhares-inco
- muns/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Exposição de pintura "Gesto de esperança"
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261116
@@ -90,73 +53,6 @@ LAST-MODIFIED:20261013T151317Z
 LOCATION:Cine-Teatro Garrett\, Auditório Municipal e Diana Bar
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/fimpv/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Festa de Halloween
-DTSTART:20261030T193000Z
-DTEND:20261031T000000Z
-DTSTAMP:20261019T103653Z
-UID:ZmVzdGEtZGUtaGFsbG93ZWVufDIwMjYtMDktMjkgMTU6MDY6MDI=@agenda.cm-pvarzim
- .pt
-CATEGORIES:Cultura,Feste\, fiere e mercati
-DESCRIPTION:A Casa da Juventude vai transformar-se no cenário ideal para 
- uma noite de terror no dia 30 de outubro.\n\nBiglietti e iscrizioni (in po
- rtoghese):\nAs inscrições são limitadas e obrigatórias\, devendo ser e
- fetuadas presencialmente nas instalações da Casa da Juventude até ao di
- a 26 de outubro.\n\nTitolo e descrizione dell'evento in portoghese\, come 
- pubblicati dal comune.\n\nMaggiori informazioni: https://www.cm-pvarzim.pt
- /eventos/festa-de-halloween/
-LAST-MODIFIED:20261019T103653Z
-LOCATION:Casa da Juventude
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/festa-de-halloween/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sessão de leitura e Oficina de expressão plástica
-DTSTART:20261031T153000Z
-DTEND:20261031T173000Z
-DTSTAMP:20261012T150549Z
-UID:c2Vzc2FvLWRlLWxlaXR1cmEtZS1vZmljaW5hLWRlLWV4cHJlc3Nhby1wbGFzdGljYXwyMD
- I2LTEwLTEyIDE1OjA1OjQ4@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Letteratura
-DESCRIPTION:No dia 31 de outubro\, a Biblioteca Municipal Rocha Peixoto va
- i apresentar uma sessão de leitura do conto "O Ladrão de Folhas" de Alic
- e Hemming e ilustração: Nicola Slater\; seguida de uma oficina de expres
- são plástica com folhas do jardim.\n\nBiglietti e iscrizioni (in portogh
- ese):\nA atividade é gratuita e os interessados devem realizar a sua insc
- rição através de email biblioteca@cm-pvarzim.pt\, telefone 252 616 000 
- ou presencialmente na Biblioteca Municipal.\n\nTitolo e descrizione dell'e
- vento in portoghese\, come pubblicati dal comune.\n\nMaggiori informazioni
- : https://www.cm-pvarzim.pt/eventos/sessao-de-leitura-e-oficina-de-express
- ao-plastica/
-LAST-MODIFIED:20261012T150549Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/sessao-de-leitura-e-oficina-de-expre
- ssao-plastica/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Concerto Juliana Linhares "Até Cansar o Cansaço"
-DTSTART:20261031T213000Z
-DTEND:20261031T233000Z
-DTSTAMP:20260918T143902Z
-UID:Y29uY2VydG8tanVsaWFuYS1saW5oYXJlcy1hdGUtY2Fuc2FyLW8tY2Fuc2Fjb3wyMDI2LT
- A4LTI2IDExOjM1OjQ4@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Concerti
-DESCRIPTION:No dia 31 de outubro\, às 21h30\, Juliana Linhares vai aprese
- ntar\, no Cine-Teatro Garrett\, "Até Cansar o Cansaço".\n\nBiglietti e i
- scrizioni (in portoghese):\nOs bilhetes custam 12\,50€ (Plateia) e 10€
-  (Balcão e Camarotes) e estão à venda na BOL e no Cine-Teatro Garrett\n
- Biglietti: https://www.bol.pt/Comprar/Bilhetes/183931-juliana_linhares_ate
- _cansar_o_cansaco-cine_teatro_garrett/\n\nTitolo e descrizione dell'evento
-  in portoghese\, come pubblicati dal comune.\n\nMaggiori informazioni: htt
- ps://www.cm-pvarzim.pt/eventos/concerto-juliana-linhares-ate-cansar-o-cans
- aco/
-LAST-MODIFIED:20260918T143902Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/concerto-juliana-linhares-ate-cansar
- -o-cansaco/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Three Sixty Halloween

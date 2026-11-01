@@ -13,30 +13,6 @@ X-APPLE-CALENDAR-COLOR:#795548
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Sessão de leitura e Oficina de expressão plástica
-DTSTART:20261031T153000Z
-DTEND:20261031T173000Z
-DTSTAMP:20261012T150549Z
-UID:c2Vzc2FvLWRlLWxlaXR1cmEtZS1vZmljaW5hLWRlLWV4cHJlc3Nhby1wbGFzdGljYXwyMD
- I2LTEwLTEyIDE1OjA1OjQ4@agenda.cm-pvarzim.pt
-CATEGORIES:文化,文学
-DESCRIPTION:No dia 31 de outubro\, a Biblioteca Municipal Rocha Peixoto va
- i apresentar uma sessão de leitura do conto "O Ladrão de Folhas" de Alic
- e Hemming e ilustração: Nicola Slater\; seguida de uma oficina de expres
- são plástica com folhas do jardim.\n\nチケット・申し込み（ポ
- ルトガル語）：\nA atividade é gratuita e os interessados devem rea
- lizar a sua inscrição através de email biblioteca@cm-pvarzim.pt\, telef
- one 252 616 000 ou presencialmente na Biblioteca Municipal.\n\nイベン
- トのタイトルと説明は、市が公開しているポルトガル
- 語のままです。\n\n詳細: https://www.cm-pvarzim.pt/eventos/sessao-
- de-leitura-e-oficina-de-expressao-plastica/
-LAST-MODIFIED:20261012T150549Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/sessao-de-leitura-e-oficina-de-expre
- ssao-plastica/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Apresentação do livro "O chapéu\, o olho\, a cadeira e a sereia
  : quatro breves histórias"
 DTSTART:20261107T160000Z

@@ -13,29 +13,6 @@ X-APPLE-CALENDAR-COLOR:#d32f2f
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Concerto Juliana Linhares "Até Cansar o Cansaço"
-DTSTART:20261031T213000Z
-DTEND:20261031T233000Z
-DTSTAMP:20260918T143902Z
-UID:Y29uY2VydG8tanVsaWFuYS1saW5oYXJlcy1hdGUtY2Fuc2FyLW8tY2Fuc2Fjb3wyMDI2LT
- A4LTI2IDExOjM1OjQ4@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Concerti
-DESCRIPTION:No dia 31 de outubro\, às 21h30\, Juliana Linhares vai aprese
- ntar\, no Cine-Teatro Garrett\, "Até Cansar o Cansaço".\n\nBiglietti e i
- scrizioni (in portoghese):\nOs bilhetes custam 12\,50€ (Plateia) e 10€
-  (Balcão e Camarotes) e estão à venda na BOL e no Cine-Teatro Garrett\n
- Biglietti: https://www.bol.pt/Comprar/Bilhetes/183931-juliana_linhares_ate
- _cansar_o_cansaco-cine_teatro_garrett/\n\nTitolo e descrizione dell'evento
-  in portoghese\, come pubblicati dal comune.\n\nMaggiori informazioni: htt
- ps://www.cm-pvarzim.pt/eventos/concerto-juliana-linhares-ate-cansar-o-cans
- aco/
-LAST-MODIFIED:20260918T143902Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/concerto-juliana-linhares-ate-cansar
- -o-cansaco/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:FIMPV+: Concerto de emmy Curl
 DTSTART:20261106T213000Z
 DTEND:20261106T233000Z

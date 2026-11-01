@@ -36,49 +36,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/fimpv/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Festa de Halloween
-DTSTART:20261030T193000Z
-DTEND:20261031T000000Z
-DTSTAMP:20261019T103653Z
-UID:ZmVzdGEtZGUtaGFsbG93ZWVufDIwMjYtMDktMjkgMTU6MDY6MDI=@agenda.cm-pvarzim
- .pt
-CATEGORIES:Culture,Festivals\, fairs and markets
-DESCRIPTION:A Casa da Juventude vai transformar-se no cenário ideal para 
- uma noite de terror no dia 30 de outubro.\n\nTickets and registration (in 
- Portuguese):\nAs inscrições são limitadas e obrigatórias\, devendo ser
-  efetuadas presencialmente nas instalações da Casa da Juventude até ao 
- dia 26 de outubro.\n\nEvent title and description in Portuguese\, as publi
- shed by the municipality.\n\nMore information: https://www.cm-pvarzim.pt/e
- ventos/festa-de-halloween/
-LAST-MODIFIED:20261019T103653Z
-LOCATION:Casa da Juventude
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/festa-de-halloween/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Mercado Aberto de Flores 2026
-DTSTART:20261031T060000Z
-DTEND:20261031T130000Z
-DTSTAMP:20260928T130805Z
-UID:bWVyY2Fkby1hYmVydG8tZGUtZmxvcmVzLTIwMjZ8MjAyNi0wOS0yOCAxMzowNDoyNA==@a
- genda.cm-pvarzim.pt
-CATEGORIES:Economy,Festivals\, fairs and markets
-DESCRIPTION:No dia 31 de outubro\, o Mercado Municipal vai realizar\, mais
-  uma edição do Mercado Aberto de Flores\, entre as 6h00 e as 13h00.\n\nT
- ickets and registration (in Portuguese):\nOs comerciantes do Mercado Munic
- ipal\, com estabelecimentos ou produção no concelho da Póvoa de Varzim 
- devem efetuar a sua inscrição junto do Mercado Municipal (portaria)\, en
- tre os dias 24 e 30 de outubro.\nTodos os esclarecimentos e inscrições p
- odem ser obtidos através dos seguintes contactos: 252 616 099 ou mercadom
- unicipal@cm-pvarzim.pt.\n\nEvent title and description in Portuguese\, as 
- published by the municipality.\n\nMore information: https://www.cm-pvarzim
- .pt/eventos/mercado-aberto-de-flores-2026/
-LAST-MODIFIED:20260928T130805Z
-LOCATION:Mercado Municipal
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/mercado-aberto-de-flores-2026/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Three Sixty Halloween
 DTSTART:20261031T220000Z
 DTEND:20261101T040000Z
