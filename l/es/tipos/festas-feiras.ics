@@ -57,6 +57,24 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-cidade-natal/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Festas da Imaculada Conceição
+DTSTART:20261129T150000Z
+DTEND:20261213T130000Z
+DTSTAMP:20261102T155051Z
+UID:ZmVzdGFzLWRhLWltYWN1bGFkYS1jb25jZWljYW98MjAyNi0xMS0wMiAxNTo1MDo1MA==@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultura,Fiestas\, ferias y mercados
+DESCRIPTION:A Fortaleza da Póvoa de Varzim prepara-se para acolher as pre
+ stigiadas Festas em Honra da Imaculada Conceição\, que decorrerão entre
+  os dias 29 de novembro e 13 de dezembro.\n\nTítulo y descripción del ev
+ ento en portugués\, tal como los publica el municipio.\n\nMás informaci
+ ón: https://www.cm-pvarzim.pt/eventos/festas-da-imaculada-conceicao/
+LAST-MODIFIED:20261102T155051Z
+LOCATION:Fortaleza de Nossa Senhora da Conceição
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/festas-da-imaculada-conceicao/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Natal na Biblioteca
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261230

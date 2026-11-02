@@ -12,4 +12,27 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/it/temas/ambi
 X-APPLE-CALENDAR-COLOR:#004d40
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Ação de controlo de chorão
+DTSTART:20261107T100000Z
+DTEND:20261107T150000Z
+DTSTAMP:20261102T145835Z
+UID:YWNhby1kZS1jb250cm9sby1kZS1jaG9yYW8tM3wyMDI2LTExLTAyIDE0OjQ0OjU1@agend
+ a.cm-pvarzim.pt
+CATEGORIES:Ambiente,Iniziative e campagne
+DESCRIPTION:O Centro do Clima vai realizar\, no dia 7 de novembro\, uma no
+ va ação de controlo do chorão-das-praias\, na zona do passadiço junto 
+ ao Moinho de Aver-o-Mar\, perto da foz do rio Esteiro.\n\nBiglietti e iscr
+ izioni (in portoghese):\nA participação é gratuita\, mas sujeita a insc
+ rição.\nAs inscrições podem ser feitas através do QR Code do cartaz\,
+  do formulário ou do e-mail geral@centrodoclima.pt.\nIscrizione: https://
+ forms.gle/fV7Vp6VDHirYMyNS6\n\nTitolo e descrizione dell'evento in portogh
+ ese\, come pubblicati dal comune.\n\nMaggiori informazioni: https://www.cm
+ -pvarzim.pt/eventos/acao-de-controlo-de-chorao-3/
+LAST-MODIFIED:20261102T145835Z
+LOCATION:Zona do passadiço junto ao Moinho de Aver-o-Mar\, perto da foz d
+ o rio Esteiro
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-controlo-de-chorao-3/
+END:VEVENT
 END:VCALENDAR

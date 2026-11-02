@@ -362,7 +362,7 @@ SUMMARY:Bicentenário do "Paredão" de D. Maria I (1826) - o simbolismo de
   uma obra de engenharia
 DTSTART:20261114T150000Z
 DTEND:20261114T173000Z
-DTSTAMP:20261015T133829Z
+DTSTAMP:20261102T153902Z
 UID:YmljZW50ZW5hcmlvLWRvLXBhcmVkYW8tZGUtZC1tYXJpYS1pLTE4MjYtby1zaW1ib2xpc2
  1vLWRlLXVtYS1vYnJhLWRlLWVuZ2VuaGFyaWF8MjAyNi0xMC0xNSAxMzozODoyOA==@agenda.
  cm-pvarzim.pt
@@ -375,7 +375,7 @@ DESCRIPTION:No ano em que se assinala o bicentenário da conclusão da pri
  ł i opis wydarzenia po portugalsku\, tak jak opublikowała je gmina.\n\nW
  ięcej informacji: https://www.cm-pvarzim.pt/eventos/bicentenario-do-pared
  ao-de-d-maria-i-1826-o-simbolismo-de-uma-obra-de-engenharia/
-LAST-MODIFIED:20261015T133829Z
+LAST-MODIFIED:20261102T153902Z
 LOCATION:Museu Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/bicentenario-do-paredao-de-d-maria-i
@@ -469,7 +469,7 @@ SUMMARY:Lançamento do livro “A Póvoa de Varzim na Belle Époque: panor
  ama da vida cultural e do turismo balnear”
 DTSTART:20261116T213000Z
 DTEND:20261116T230000Z
-DTSTAMP:20261027T155206Z
+DTSTAMP:20261102T154040Z
 UID:bGFuY2FtZW50by1kby1saXZyby1hLXBvdm9hLWRlLXZhcnppbS1uYS1iZWxsZS1lcG9xdW
  UtcGFub3JhbWEtZGEtdmlkYS1jdWx0dXJhbC1lLWRvLXR1cmlzbW8tYmFsbmVhcnwyMDI2LTEw
  LTI3IDE1OjUyOjA1@agenda.cm-pvarzim.pt
@@ -480,7 +480,7 @@ DESCRIPTION:No dia 16 de novembro\, às 21h30\, será lançado\, no Museu
   wydarzenia po portugalsku\, tak jak opublikowała je gmina.\n\nWięcej in
  formacji: https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-a-povoa-de
  -varzim-na-belle-epoque-panorama-da-vida-cultural-e-do-turismo-balnear/
-LAST-MODIFIED:20261027T155206Z
+LAST-MODIFIED:20261102T154040Z
 LOCATION:Museu Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-a-povoa-de-varzi
@@ -758,6 +758,24 @@ LAST-MODIFIED:20261030T123603Z
 LOCATION:Póvoa de Varzim
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-cidade-natal/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Festas da Imaculada Conceição
+DTSTART:20261129T150000Z
+DTEND:20261213T130000Z
+DTSTAMP:20261102T155051Z
+UID:ZmVzdGFzLWRhLWltYWN1bGFkYS1jb25jZWljYW98MjAyNi0xMS0wMiAxNTo1MDo1MA==@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Kultura,Święta\, targi i jarmarki
+DESCRIPTION:A Fortaleza da Póvoa de Varzim prepara-se para acolher as pre
+ stigiadas Festas em Honra da Imaculada Conceição\, que decorrerão entre
+  os dias 29 de novembro e 13 de dezembro.\n\nTytuł i opis wydarzenia po p
+ ortugalsku\, tak jak opublikowała je gmina.\n\nWięcej informacji: https:
+ //www.cm-pvarzim.pt/eventos/festas-da-imaculada-conceicao/
+LAST-MODIFIED:20261102T155051Z
+LOCATION:Fortaleza de Nossa Senhora da Conceição
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/festas-da-imaculada-conceicao/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Teatro "Quando Menos se Espera"

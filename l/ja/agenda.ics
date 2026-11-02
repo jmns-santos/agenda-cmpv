@@ -213,6 +213,30 @@ URL:https://www.cm-pvarzim.pt/eventos/rastreios-cardiovasculares-gratuitos
  /
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Ação de controlo de chorão
+DTSTART:20261107T100000Z
+DTEND:20261107T150000Z
+DTSTAMP:20261102T145835Z
+UID:YWNhby1kZS1jb250cm9sby1kZS1jaG9yYW8tM3wyMDI2LTExLTAyIDE0OjQ0OjU1@agend
+ a.cm-pvarzim.pt
+CATEGORIES:環境,取り組み・キャンペーン
+DESCRIPTION:O Centro do Clima vai realizar\, no dia 7 de novembro\, uma no
+ va ação de controlo do chorão-das-praias\, na zona do passadiço junto 
+ ao Moinho de Aver-o-Mar\, perto da foz do rio Esteiro.\n\nチケット・
+ 申し込み（ポルトガル語）：\nA participação é gratuita\, ma
+ s sujeita a inscrição.\nAs inscrições podem ser feitas através do QR 
+ Code do cartaz\, do formulário ou do e-mail geral@centrodoclima.pt.\n申
+ し込み: https://forms.gle/fV7Vp6VDHirYMyNS6\n\nイベントのタイト
+ ルと説明は、市が公開しているポルトガル語のままで
+ す。\n\n詳細: https://www.cm-pvarzim.pt/eventos/acao-de-controlo-de-ch
+ orao-3/
+LAST-MODIFIED:20261102T145835Z
+LOCATION:Zona do passadiço junto ao Moinho de Aver-o-Mar\, perto da foz d
+ o rio Esteiro
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/acao-de-controlo-de-chorao-3/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Apresentação do livro "O chapéu\, o olho\, a cadeira e a sereia
  : quatro breves histórias"
 DTSTART:20261107T160000Z
@@ -460,7 +484,7 @@ SUMMARY:Bicentenário do "Paredão" de D. Maria I (1826) - o simbolismo de
   uma obra de engenharia
 DTSTART:20261114T150000Z
 DTEND:20261114T173000Z
-DTSTAMP:20261015T133829Z
+DTSTAMP:20261102T153902Z
 UID:YmljZW50ZW5hcmlvLWRvLXBhcmVkYW8tZGUtZC1tYXJpYS1pLTE4MjYtby1zaW1ib2xpc2
  1vLWRlLXVtYS1vYnJhLWRlLWVuZ2VuaGFyaWF8MjAyNi0xMC0xNSAxMzozODoyOA==@agenda.
  cm-pvarzim.pt
@@ -474,7 +498,7 @@ DESCRIPTION:No ano em que se assinala o bicentenário da conclusão da pri
  ているポルトガル語のままです。\n\n詳細: https://www.cm-pv
  arzim.pt/eventos/bicentenario-do-paredao-de-d-maria-i-1826-o-simbolismo-de
  -uma-obra-de-engenharia/
-LAST-MODIFIED:20261015T133829Z
+LAST-MODIFIED:20261102T153902Z
 LOCATION:Museu Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/bicentenario-do-paredao-de-d-maria-i
@@ -569,7 +593,7 @@ SUMMARY:Lançamento do livro “A Póvoa de Varzim na Belle Époque: panor
  ama da vida cultural e do turismo balnear”
 DTSTART:20261116T213000Z
 DTEND:20261116T230000Z
-DTSTAMP:20261027T155206Z
+DTSTAMP:20261102T154040Z
 UID:bGFuY2FtZW50by1kby1saXZyby1hLXBvdm9hLWRlLXZhcnppbS1uYS1iZWxsZS1lcG9xdW
  UtcGFub3JhbWEtZGEtdmlkYS1jdWx0dXJhbC1lLWRvLXR1cmlzbW8tYmFsbmVhcnwyMDI2LTEw
  LTI3IDE1OjUyOjA1@agenda.cm-pvarzim.pt
@@ -581,7 +605,7 @@ DESCRIPTION:No dia 16 de novembro\, às 21h30\, será lançado\, no Museu
  のままです。\n\n詳細: https://www.cm-pvarzim.pt/eventos/lancamento
  -do-livro-a-povoa-de-varzim-na-belle-epoque-panorama-da-vida-cultural-e-do
  -turismo-balnear/
-LAST-MODIFIED:20261027T155206Z
+LAST-MODIFIED:20261102T154040Z
 LOCATION:Museu Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/lancamento-do-livro-a-povoa-de-varzi
@@ -901,6 +925,25 @@ LAST-MODIFIED:20261030T123603Z
 LOCATION:Póvoa de Varzim
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-cidade-natal/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Festas da Imaculada Conceição
+DTSTART:20261129T150000Z
+DTEND:20261213T130000Z
+DTSTAMP:20261102T155051Z
+UID:ZmVzdGFzLWRhLWltYWN1bGFkYS1jb25jZWljYW98MjAyNi0xMS0wMiAxNTo1MDo1MA==@a
+ genda.cm-pvarzim.pt
+CATEGORIES:文化,祭り・フェア・市場
+DESCRIPTION:A Fortaleza da Póvoa de Varzim prepara-se para acolher as pre
+ stigiadas Festas em Honra da Imaculada Conceição\, que decorrerão entre
+  os dias 29 de novembro e 13 de dezembro.\n\nイベントのタイトル
+ と説明は、市が公開しているポルトガル語のままです
+ 。\n\n詳細: https://www.cm-pvarzim.pt/eventos/festas-da-imaculada-conce
+ icao/
+LAST-MODIFIED:20261102T155051Z
+LOCATION:Fortaleza de Nossa Senhora da Conceição
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/festas-da-imaculada-conceicao/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Teatro "Quando Menos se Espera"
