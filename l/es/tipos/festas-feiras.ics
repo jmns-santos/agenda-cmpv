@@ -37,26 +37,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/fimpv/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Three Sixty Halloween
-DTSTART:20261031T220000Z
-DTEND:20261101T040000Z
-DTSTAMP:20261019T103529Z
-UID:dGhyZWUtc2l4dHktaGFsbG93ZWVufDIwMjYtMDktMjkgMTE6NTU6NTc=@agenda.cm-pva
- rzim.pt
-CATEGORIES:Cultura,Fiestas\, ferias y mercados
-DESCRIPTION:O Three Sixty Halloween é um evento de entretenimento e músi
- ca comercial\, a realizar no dia 31 de outubro\, no Póvoa Arena\, com uma
-  lotação prevista de até 5.000 pessoas.\n\nEntradas e inscripciones (en
-  portugués):\nOs bilhetes estão à venda em\nEntradas: https://3cket.com
- /pt/event/three-sixty-colosseum-of-terror\n\nTítulo y descripción del ev
- ento en portugués\, tal como los publica el municipio.\n\nMás informaci
- ón: https://www.cm-pvarzim.pt/eventos/three-sixty-halloween/
-LAST-MODIFIED:20261019T103529Z
-LOCATION:Póvoa Arena
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/three-sixty-halloween/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Póvoa de Varzim\, Cidade Natal
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20270110
