@@ -38,4 +38,42 @@ LOCATION:Escolas do concelho\, Diana Bar\, Póvoa Arena\, Parque da Cidade
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:1.ª Jornada do 46.º Plano de Promoção de Atletismo
+DTSTART:20261115T093000Z
+DTEND:20261115T123000Z
+DTSTAMP:20261104T122913Z
+UID:MS1hLWpvcm5hZGEtZG8tNDYtby1wbGFuby1kZS1wcm9tb2Nhby1kZS1hdGxldGlzbW98Mj
+ AyNi0xMS0wNCAxMjoyOToxMg==@agenda.cm-pvarzim.pt
+CATEGORIES:体育,体育赛事
+DESCRIPTION:No dia 15 de novembro\, às 9h30\, terá lugar a 1.ª jornada 
+ do Plano de Promoção de Atletismo\, no Parque da Cidade.\n\n活动标题
+ 和说明为葡萄牙语，与市政府发布的内容一致。\n\n更多
+ 信息: https://www.cm-pvarzim.pt/eventos/1-a-jornada-do-46-o-plano-de-pro
+ mocao-de-atletismo/
+LAST-MODIFIED:20261104T122913Z
+LOCATION:Parque da Cidade
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/1-a-jornada-do-46-o-plano-de-promoca
+ o-de-atletismo/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:2.ª Jornada do 46.º Plano de Promoção de Atletismo
+DTSTART:20261122T093000Z
+DTEND:20261122T123000Z
+DTSTAMP:20261104T123741Z
+UID:Mi1hLWpvcm5hZGEtZG8tNDYtby1wbGFuby1kZS1wcm9tb2Nhby1kZS1hdGxldGlzbW98Mj
+ AyNi0xMS0wNCAxMjozNzo0MA==@agenda.cm-pvarzim.pt
+CATEGORIES:体育,体育赛事
+DESCRIPTION:No dia 22 de novembro\, às 9h30\, terá lugar\, nas ruas de B
+ alasar\, a 2.ª jornada do Plano de Promoção de Atletismo.\n\n活动标
+ 题和说明为葡萄牙语，与市政府发布的内容一致。\n\n更
+ 多信息: https://www.cm-pvarzim.pt/eventos/2-a-jornada-do-46-o-plano-de-
+ promocao-de-atletismo/
+LAST-MODIFIED:20261104T123741Z
+LOCATION:Arruamentos de Balasar
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/2-a-jornada-do-46-o-plano-de-promoca
+ o-de-atletismo/
+END:VEVENT
 END:VCALENDAR

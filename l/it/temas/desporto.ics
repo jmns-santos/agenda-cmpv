@@ -27,6 +27,25 @@ TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:1.ª Jornada do 46.º Plano de Promoção de Atletismo
+DTSTART:20261115T093000Z
+DTEND:20261115T123000Z
+DTSTAMP:20261104T122913Z
+UID:MS1hLWpvcm5hZGEtZG8tNDYtby1wbGFuby1kZS1wcm9tb2Nhby1kZS1hdGxldGlzbW98Mj
+ AyNi0xMS0wNCAxMjoyOToxMg==@agenda.cm-pvarzim.pt
+CATEGORIES:Sport,Gare sportive
+DESCRIPTION:No dia 15 de novembro\, às 9h30\, terá lugar a 1.ª jornada 
+ do Plano de Promoção de Atletismo\, no Parque da Cidade.\n\nTitolo e des
+ crizione dell'evento in portoghese\, come pubblicati dal comune.\n\nMaggio
+ ri informazioni: https://www.cm-pvarzim.pt/eventos/1-a-jornada-do-46-o-pla
+ no-de-promocao-de-atletismo/
+LAST-MODIFIED:20261104T122913Z
+LOCATION:Parque da Cidade
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/1-a-jornada-do-46-o-plano-de-promoca
+ o-de-atletismo/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Gala do Desporto
 DTSTART:20261120T213000Z
 DTEND:20261120T231500Z
@@ -45,6 +64,25 @@ LAST-MODIFIED:20261023T105742Z
 LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/gala-do-desporto-4/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:2.ª Jornada do 46.º Plano de Promoção de Atletismo
+DTSTART:20261122T093000Z
+DTEND:20261122T123000Z
+DTSTAMP:20261104T123741Z
+UID:Mi1hLWpvcm5hZGEtZG8tNDYtby1wbGFuby1kZS1wcm9tb2Nhby1kZS1hdGxldGlzbW98Mj
+ AyNi0xMS0wNCAxMjozNzo0MA==@agenda.cm-pvarzim.pt
+CATEGORIES:Sport,Gare sportive
+DESCRIPTION:No dia 22 de novembro\, às 9h30\, terá lugar\, nas ruas de B
+ alasar\, a 2.ª jornada do Plano de Promoção de Atletismo.\n\nTitolo e d
+ escrizione dell'evento in portoghese\, come pubblicati dal comune.\n\nMagg
+ iori informazioni: https://www.cm-pvarzim.pt/eventos/2-a-jornada-do-46-o-p
+ lano-de-promocao-de-atletismo/
+LAST-MODIFIED:20261104T123741Z
+LOCATION:Arruamentos de Balasar
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/2-a-jornada-do-46-o-plano-de-promoca
+ o-de-atletismo/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Futebol - Varzim x Trofense
