@@ -70,7 +70,7 @@
   a { color: inherit; }
   :focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; }
   p { margin: 0; }
-  .largura { max-width: 62rem; margin: 0 auto; padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
+  .largura { max-width: 78rem; margin: 0 auto; padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
   .escondido { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
   .apenas-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .saltar { position: absolute; left: .5rem; top: -4rem; z-index: 10; background: var(--cartao); color: var(--tinta); padding: .6rem .9rem; border-radius: 8px; font-weight: 700; }
@@ -84,8 +84,8 @@
   .marca { display: flex; align-items: center; gap: .7rem 1rem; min-width: 0; }
   .marca > div { min-width: 0; }
   .logo-cm { flex: none; display: flex; line-height: 0; }
-  .logo-cm img { display: block; height: 74px; width: auto; }
-  @media (max-width: 40rem) { .marca { gap: .6rem; } .logo-cm img { height: 58px; } }
+  .logo-cm img { display: block; height: 120px; width: auto; }
+  @media (max-width: 40rem) { .marca { gap: .5rem; flex-wrap: wrap; } .logo-cm img { height: 92px; } }
   .topo h1 { margin: 0; font-size: clamp(1.7rem, 7vw, 2.7rem); overflow-wrap: anywhere; hyphens: auto; line-height: 1; font-weight: 700; letter-spacing: .01em; }
   /* Uma só cor de base (branco) com um único tom de destaque (dourado), sempre o mesmo nos dois */
   .topo h1 { color: #fff; }
@@ -203,20 +203,24 @@
 
   main { padding-top: 1.1rem; padding-bottom: 1.5rem; }
 
-  /* Agenda completa */
+  /* Títulos de secção: maiúsculas, à semelhança do site institucional */
+  .titulo-seccao {
+    margin: 0 0 .9rem; font-size: 1.05rem; font-weight: 700; line-height: 1.25;
+    text-transform: uppercase; letter-spacing: .04em; color: var(--mar-forte);
+  }
+  .seletor .pergunta { text-transform: uppercase; letter-spacing: .04em; }
+
+  /* Subscrever agenda: cartão "Agenda completa" + escolha por tema/tipo, sem linha a separar */
+  .subscrever > .segmentos { max-width: 30rem; }
+
   .completa {
     display: grid; grid-template-columns: 1fr minmax(min(12rem, 100%), 16rem); gap: .9rem 1.2rem; align-items: center;
     background: var(--cartao); border: 1px solid var(--linha); border-radius: 14px; padding: 1rem 1.1rem; box-shadow: var(--sombra);
-    border-left: 6px solid var(--mar);
+    border-left: 6px solid var(--mar); margin-bottom: 1.2rem;
   }
-  .completa h2 { margin: 0; font-size: 1.3rem; line-height: 1.25; }
+  .completa .opcao-titulo { margin: 0; font-size: 1.1rem; font-weight: 700; line-height: 1.25; }
   .completa .linha2 { color: var(--cinza); margin-top: .15rem; font-variant-numeric: lining-nums tabular-nums; }
   @media (max-width: 36rem) { .completa { grid-template-columns: 1fr; } }
-
-  /* Tema / tipo: só aparece depois de escolher "por tema" ou "por tipo" (mais compacto) */
-  .escolha { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
-  .escolha::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
-  .escolha > .segmentos { max-width: 30rem; }
 
   .escolha-hint {
     margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem;
@@ -252,15 +256,12 @@
   .aviso { margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
 
   /* Proximos eventos: destaque rotativo, filtro, selecao multipla e adicionar ao calendario sem subscricao */
-  .duas-colunas { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
-  .duas-colunas::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
-  .proximos { margin-top: 0; padding-top: 0; }
+  .subscrever { margin-top: 1.4rem; }
+  .proximos { margin-top: 1.4rem; }
   @media (min-width: 64rem) {
     .duas-colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.4rem; align-items: start; }
-    .escolha { margin-top: 0; padding-top: 0; }
-    .escolha::before { content: none; }
+    .subscrever, .proximos { margin-top: 1.4rem; }
   }
-  .proximos h2 { margin: 0; font-size: 1.3rem; line-height: 1.25; }
   .proximos .linha2 { color: var(--cinza); margin-top: .15rem; }
   .proximos > .segmentos { max-width: 22rem; margin-top: .8rem; }
 
@@ -304,17 +305,23 @@
   }
   .destaque-posicao { font-size: .85rem; color: var(--cinza); font-variant-numeric: lining-nums tabular-nums; margin-left: auto; }
 
-  .controlo-selecao { margin-top: .9rem; }
+  .controlos-proximos { margin-top: .9rem; display: flex; flex-wrap: wrap; gap: .5rem; }
   .botao-secundario {
     display: inline-flex; align-items: center; gap: .4rem; min-height: 2.6rem; padding: .35rem .9rem;
     border-radius: 9px; border: 1.5px solid var(--linha); background: var(--cartao); color: var(--tinta);
     font: inherit; font-weight: 700; font-size: .95rem; cursor: pointer; user-select: none;
   }
-  #modo-selecao:checked ~ .controlo-selecao .botao-secundario { background: var(--botao); color: #fff; border-color: var(--botao); }
-  #modo-selecao:checked ~ .controlo-selecao .botao-secundario::after { content: " \2713"; }
-  #modo-selecao:focus-visible ~ .controlo-selecao .botao-secundario { outline: 3px solid var(--foco); outline-offset: 1px; }
+  #mostrar-todos:checked ~ .controlos-proximos .botao-mostrar { background: var(--botao); color: #fff; border-color: var(--botao); }
+  #mostrar-todos:checked ~ .controlos-proximos .botao-mostrar .chevron { color: #fff; }
+  #mostrar-todos:focus-visible ~ .controlos-proximos .botao-mostrar { outline: 3px solid var(--foco); outline-offset: 1px; }
+  #modo-selecao:checked ~ .controlos-proximos .botao-selecionar { background: var(--botao); color: #fff; border-color: var(--botao); }
+  #modo-selecao:checked ~ .controlos-proximos .botao-selecionar::after { content: " \2713"; }
+  #modo-selecao:focus-visible ~ .controlos-proximos .botao-selecionar { outline: 3px solid var(--foco); outline-offset: 1px; }
 
-  .lista-proximos { list-style: none; margin: .9rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
+  /* A lista de eventos soltos só aparece ao "Mostrar todos" ou ao entrar em modo de seleção; permite recolher ao clicar de novo */
+  .lista-proximos { display: none; list-style: none; margin: .9rem 0 0; padding: 0; flex-direction: column; gap: .5rem; }
+  #mostrar-todos:checked ~ .lista-proximos,
+  #modo-selecao:checked ~ .lista-proximos { display: flex; }
   .item-proximo {
     display: flex; align-items: center; gap: .6rem; background: var(--cartao); border: 1px solid var(--linha);
     border-radius: 10px; padding: .55rem .7rem; border-left: 6px solid var(--ct);
@@ -343,14 +350,17 @@
   @media (min-width: 30rem) { .botao-adicionar-um span { display: inline; } }
 
   .vazio-proximos { display: none; margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
-  .lista-proximos:empty + .vazio-proximos { display: block; }
+  #mostrar-todos:checked ~ .lista-proximos:empty + .vazio-proximos,
+  #modo-selecao:checked ~ .lista-proximos:empty + .vazio-proximos { display: block; }
 
   .barra-selecao { display: none; align-items: center; justify-content: space-between; gap: .6rem; margin-top: .8rem; flex-wrap: wrap; }
   .js #modo-selecao:checked ~ .barra-selecao { display: flex; }
   .selecionar-todos { display: flex; align-items: center; gap: .45rem; font-size: .92rem; font-weight: 700; cursor: pointer; }
   .selecionar-todos input { width: 1.2rem; height: 1.2rem; accent-color: var(--botao); }
   #proximos-adicionar:disabled { opacity: .5; cursor: not-allowed; }
-  .confirmar { margin-top: .8rem; padding: .8rem .9rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
+  .confirmar { display: none; margin-top: .8rem; padding: .8rem .9rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
+  #mostrar-todos:checked ~ .confirmar:not([hidden]),
+  #modo-selecao:checked ~ .confirmar:not([hidden]) { display: block; }
   .confirmar-lista { margin: .5rem 0; padding-left: 1.4rem; display: flex; flex-direction: column; gap: .35rem; }
   .confirmar-lista a { font-weight: 700; }
   .confirmar-lista li.feito a { color: var(--cinza); }
@@ -361,12 +371,30 @@
     .item-proximo { flex-wrap: wrap; }
   }
 
-  /* Ajuda */
+  /* Indicador comum (▽) para tudo o que abre/fecha: roda ao abrir */
+  .chevron {
+    flex: none; display: inline-block; font-size: .8em; line-height: 1; color: var(--botao);
+    transition: transform .15s; transform: rotate(0deg);
+  }
+  .chevron::before { content: "\25BD"; }
+  [open] > summary > .chevron,
+  #mostrar-todos:checked ~ .controlos-proximos .botao-mostrar .chevron { transform: rotate(180deg); }
+
+  /* Ajuda: secção fechada por omissão, abre ao clicar no título */
   .ajuda { margin-top: 2rem; }
-  .ajuda h2 { font-size: 1.25rem; margin: 0 0 .4rem; }
+  .ajuda-grupo > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: .5rem; }
+  .ajuda-grupo > summary::-webkit-details-marker { display: none; }
+  .ajuda-grupo > summary h2 { font-size: 1.25rem; margin: 0; }
+  .ajuda-grupo > summary .chevron { margin-left: auto; }
+  .ajuda-grupo > summary:focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; }
+  .ajuda-lista { margin-top: .4rem; }
   details.item { border-bottom: 1px solid var(--linha); }
   details.item:first-of-type { border-top: 1px solid var(--linha); }
-  details.item summary { cursor: pointer; padding: .75rem 0; font-weight: 700; font-size: 1.02rem; min-height: 2.75rem; }
+  details.item summary {
+    list-style: none; cursor: pointer; padding: .75rem 0; font-weight: 700; font-size: 1.02rem; min-height: 2.75rem;
+    display: flex; align-items: center; gap: .5rem; justify-content: space-between;
+  }
+  details.item summary::-webkit-details-marker { display: none; }
   details.item > div { padding: 0 0 .85rem; }
   details.item p + p { margin-top: .5rem; }
 
@@ -387,7 +415,8 @@
   }
   @media print {
     .seletor, .ferramentas, .acoes, .sugestao, .filtros, .barra-selecao, .marcar-coluna, .botao-adicionar-um,
-    .destaque, .controlo-selecao, .botao-info, .escolha-hint, .proximos-hint { display: none !important; }
+    .destaque, .controlos-proximos, .botao-info, .escolha-hint, .lista-hint { display: none !important; }
+    .lista-proximos { display: flex !important; }
   }
 </style>
 </head>
@@ -413,8 +442,8 @@
       <span class="logo-cm"><img src="data:image/png;base64,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" alt="NEXO — Centro de Inteligência Urbana, Póvoa de Varzim" width="780" height="260"></span>
       <div>
         <h1 class="apenas-leitor">NEXO</h1>
-        <p class="categoria">社会 - 活动</p>
-        <p class="sub"><strong>活动</strong>尽在<strong>您的日历</strong></p>
+        <p class="categoria">活动</p>
+        <p class="sub"><strong>城市活动日程</strong>尽在<strong>您的日历</strong></p>
       </div>
     </div>
     <div class="ferramentas">
@@ -463,7 +492,7 @@
 
 <div class="seletor" role="region" aria-labelledby="pergunta">
   <div class="largura">
-    <p class="pergunta" id="pergunta">您想使用哪种日历？</p>
+    <p class="pergunta" id="pergunta">日历类型</p>
     <div class="segmentos" role="group" aria-labelledby="pergunta">
       <label for="sis-google">Google</label>
       <label for="sis-outlook">Outlook</label>
@@ -481,12 +510,16 @@
 
 <main class="largura" id="conteudo" tabindex="-1">
 
-  <section class="completa" aria-labelledby="t-geral">
-    <div>
-      <h2 id="t-geral">全部活动</h2>
-      <p class="linha2">所有活动汇集在一个日历中（69 项活动）。</p>
-    </div>
-    <div class="acoes">
+  <div class="duas-colunas">
+  <section class="subscrever" aria-labelledby="t-subscrever">
+    <h2 id="t-subscrever" class="titulo-seccao">订阅日程</h2>
+
+    <div class="completa">
+      <div>
+        <p class="opcao-titulo">全部活动</p>
+        <p class="linha2">所有活动汇集在一个日历中（69 项活动）。</p>
+      </div>
+      <div class="acoes">
   <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Fagenda.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 全部活动 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
   <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Fagenda.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 全部活动 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
   <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/agenda.ics" target="_top" aria-label="订阅: 全部活动 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
@@ -495,11 +528,369 @@
     <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/agenda.ics" aria-label="复制链接: 全部活动">
   </div>
 </div>
+    </div>
+
+    <div class="segmentos" role="group" aria-label="按主题订阅 / 按类型订阅">
+      <label for="assinar-tema">按主题订阅</label>
+      <label for="assinar-tipo">按类型订阅</label>
+    </div>
+
+    <p class="escolha-hint">选择“按主题订阅”或“按类型订阅”即可查看选项。</p>
+
+    <div class="escolha-conteudo">
+      <p class="fechar-vista"><label for="assinar-fechado" class="botao-secundario botao-fechar"><span aria-hidden="true">×</span> 关闭</label></p>
+
+      <ul class="grelha painel-temas" aria-label="按主题订阅">
+<li class="cartao" style="--cor: #8e1b4f; --pct: 69.6%">
+  <h3>文化</h3>
+  <p class="resumo">音乐、电影、戏剧、展览、图书与文化遗产</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">48 项活动 <small>· 占全部活动的 70%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fcultura.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 文化 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fcultura.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 文化 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cultura.ics" target="_top" aria-label="订阅: 文化 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cultura.ics" aria-label="复制链接: 文化"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cultura.ics" aria-label="复制链接: 文化">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #1b5e20; --pct: 18.8%">
+  <h3>体育</h3>
+  <p class="resumo">比赛、锦标赛与体育活动</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">13 项活动 <small>· 占全部活动的 19%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fdesporto.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 体育 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fdesporto.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 体育 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/desporto.ics" target="_top" aria-label="订阅: 体育 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/desporto.ics" aria-label="复制链接: 体育"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/desporto.ics" aria-label="复制链接: 体育">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #004d40; --pct: 1.4%">
+  <h3>环境</h3>
+  <p class="resumo">自然、气候、能源、水、废物与回收</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">1 项活动 <small>· 占全部活动的 1%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fambiente.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 环境 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fambiente.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 环境 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/ambiente.ics" target="_top" aria-label="订阅: 环境 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/ambiente.ics" aria-label="复制链接: 环境"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/ambiente.ics" aria-label="复制链接: 环境">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao vazio" style="--cor: #1565c0; --pct: 0.0%">
+  <h3>出行与交通</h3>
+  <p class="resumo">公共交通、骑行、步行与道路安全</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">暂无活动</p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fmobilidade-transportes.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 出行与交通 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fmobilidade-transportes.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 出行与交通 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/mobilidade-transportes.ics" target="_top" aria-label="订阅: 出行与交通 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/mobilidade-transportes.ics" aria-label="复制链接: 出行与交通"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/mobilidade-transportes.ics" aria-label="复制链接: 出行与交通">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao vazio" style="--cor: #9e5d00; --pct: 0.0%">
+  <h3>旅游</h3>
+  <p class="resumo">旅游、美食、葡萄酒、手工艺与城市推广</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">暂无活动</p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fturismo.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 旅游 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fturismo.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 旅游 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/turismo.ics" target="_top" aria-label="订阅: 旅游 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/turismo.ics" aria-label="复制链接: 旅游"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/turismo.ics" aria-label="复制链接: 旅游">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #3e2723; --pct: 1.4%">
+  <h3>经济</h3>
+  <p class="resumo">商业、企业、就业、培训与市场</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">1 项活动 <small>· 占全部活动的 1%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Feconomia.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 经济 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Feconomia.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 经济 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/economia.ics" target="_top" aria-label="订阅: 经济 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/economia.ics" aria-label="复制链接: 经济"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/economia.ics" aria-label="复制链接: 经济">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #1a237e; --pct: 8.7%">
+  <h3>公民生活</h3>
+  <p class="resumo">健康、教育、家庭、青年、包容与市政生活</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">6 项活动 <small>· 占全部活动的 9%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fcidadania.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 公民生活 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fcidadania.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 公民生活 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cidadania.ics" target="_top" aria-label="订阅: 公民生活 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cidadania.ics" aria-label="复制链接: 公民生活"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cidadania.ics" aria-label="复制链接: 公民生活">
+  </div>
+</div>
+  </div>
+</li>
+      </ul>
+      <ul class="grelha painel-tipos" aria-label="按类型订阅">
+<li class="cartao" style="--cor: #d32f2f; --pct: 10.1%">
+  <h3>音乐会</h3>
+  <p class="resumo">音乐会、独奏会、合唱、乐队与现场音乐</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">7 项活动 <small>· 占全部活动的 10%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fconcertos.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 音乐会 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fconcertos.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 音乐会 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/concertos.ics" target="_top" aria-label="订阅: 音乐会 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/concertos.ics" aria-label="复制链接: 音乐会"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/concertos.ics" aria-label="复制链接: 音乐会">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #6a3fb5; --pct: 13.0%">
+  <h3>电影</h3>
+  <p class="resumo">电影放映、影片与纪录片</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">9 项活动 <small>· 占全部活动的 13%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fcinema.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 电影 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fcinema.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 电影 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/cinema.ics" target="_top" aria-label="订阅: 电影 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/cinema.ics" aria-label="复制链接: 电影"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/cinema.ics" aria-label="复制链接: 电影">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #c2185b; --pct: 4.3%">
+  <h3>戏剧</h3>
+  <p class="resumo">话剧、街头戏剧、木偶剧与剧本朗读</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">3 项活动 <small>· 占全部活动的 4%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fteatro.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 戏剧 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fteatro.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 戏剧 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/teatro.ics" target="_top" aria-label="订阅: 戏剧 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/teatro.ics" aria-label="复制链接: 戏剧"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/teatro.ics" aria-label="复制链接: 戏剧">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #e07b00; --pct: 4.3%">
+  <h3>表演</h3>
+  <p class="resumo">舞蹈、马戏、魔术、喜剧、音乐剧与街头表演</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">3 项活动 <small>· 占全部活动的 4%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fespetaculos.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 表演 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fespetaculos.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 表演 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/espetaculos.ics" target="_top" aria-label="订阅: 表演 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/espetaculos.ics" aria-label="复制链接: 表演"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/espetaculos.ics" aria-label="复制链接: 表演">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #8a7300; --pct: 4.3%">
+  <h3>展览</h3>
+  <p class="resumo">艺术、摄影、历史与文化遗产展览</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">3 项活动 <small>· 占全部活动的 4%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fexposicoes.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 展览 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fexposicoes.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 展览 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/exposicoes.ics" target="_top" aria-label="订阅: 展览 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/exposicoes.ics" aria-label="复制链接: 展览"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/exposicoes.ics" aria-label="复制链接: 展览">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #795548; --pct: 17.4%">
+  <h3>文学</h3>
+  <p class="resumo">图书、阅读、诗歌与故事</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">12 项活动 <small>· 占全部活动的 17%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fliteratura.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 文学 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fliteratura.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 文学 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/literatura.ics" target="_top" aria-label="订阅: 文学 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/literatura.ics" aria-label="复制链接: 文学"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/literatura.ics" aria-label="复制链接: 文学">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #00897b; --pct: 11.6%">
+  <h3>工作坊与活动</h3>
+  <p class="resumo">工作坊、课程、讲座、游戏及适合各年龄段的活动</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">8 项活动 <small>· 占全部活动的 12%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Foficinas-atividades.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 工作坊与活动 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Foficinas-atividades.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 工作坊与活动 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/oficinas-atividades.ics" target="_top" aria-label="订阅: 工作坊与活动 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/oficinas-atividades.ics" aria-label="复制链接: 工作坊与活动"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/oficinas-atividades.ics" aria-label="复制链接: 工作坊与活动">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #388e3c; --pct: 4.3%">
+  <h3>体育赛事</h3>
+  <p class="resumo">锦标赛、跑步、徒步、比赛与公开训练</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">3 项活动 <small>· 占全部活动的 4%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fprovas-desportivas.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 体育赛事 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fprovas-desportivas.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 体育赛事 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/provas-desportivas.ics" target="_top" aria-label="订阅: 体育赛事 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/provas-desportivas.ics" aria-label="复制链接: 体育赛事"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/provas-desportivas.ics" aria-label="复制链接: 体育赛事">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #f4511e; --pct: 5.8%">
+  <h3>节庆、集市与市场</h3>
+  <p class="resumo">民俗节庆、节日、集市、市场与美食</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">4 项活动 <small>· 占全部活动的 6%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Ffestas-feiras.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 节庆、集市与市场 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Ffestas-feiras.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 节庆、集市与市场 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/festas-feiras.ics" target="_top" aria-label="订阅: 节庆、集市与市场 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/festas-feiras.ics" aria-label="复制链接: 节庆、集市与市场"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/festas-feiras.ics" aria-label="复制链接: 节庆、集市与市场">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao vazio" style="--cor: #0288d1; --pct: 0.0%">
+  <h3>参观与漫步</h3>
+  <p class="resumo">导览参观、路线、漫步与步道</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">暂无活动</p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fvisitas-passeios.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 参观与漫步 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fvisitas-passeios.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 参观与漫步 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/visitas-passeios.ics" target="_top" aria-label="订阅: 参观与漫步 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/visitas-passeios.ics" aria-label="复制链接: 参观与漫步"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/visitas-passeios.ics" aria-label="复制链接: 参观与漫步">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #546e7a; --pct: 4.3%">
+  <h3>行动与公益活动</h3>
+  <p class="resumo">宣传、健康筛查、募集、清洁与公益活动</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">3 项活动 <small>· 占全部活动的 4%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Facoes-campanhas.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 行动与公益活动 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Facoes-campanhas.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 行动与公益活动 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/acoes-campanhas.ics" target="_top" aria-label="订阅: 行动与公益活动 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/acoes-campanhas.ics" aria-label="复制链接: 行动与公益活动"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/acoes-campanhas.ics" aria-label="复制链接: 行动与公益活动">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #9c27b0; --pct: 5.8%">
+  <h3>纪念与典礼</h3>
+  <p class="resumo">纪念日、典礼、晚会、致敬与正式会议</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">4 项活动 <small>· 占全部活动的 6%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fcomemoracoes.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 纪念与典礼 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fcomemoracoes.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 纪念与典礼 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/comemoracoes.ics" target="_top" aria-label="订阅: 纪念与典礼 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/comemoracoes.ics" aria-label="复制链接: 纪念与典礼"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/comemoracoes.ics" aria-label="复制链接: 纪念与典礼">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #2e7d32; --pct: 14.5%">
+  <h3>Jogos do Varzim</h3>
+  <p class="resumo">Calendario de jogos do Varzim SC</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">10 项活动 <small>· 占全部活动的 14%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fjogos-varzim.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: Jogos do Varzim (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fjogos-varzim.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: Jogos do Varzim (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/jogos-varzim.ics" target="_top" aria-label="订阅: Jogos do Varzim (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/jogos-varzim.ics" aria-label="复制链接: Jogos do Varzim"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/jogos-varzim.ics" aria-label="复制链接: Jogos do Varzim">
+  </div>
+</div>
+  </div>
+</li>
+      </ul>
+
+      <p class="aviso">请勿同时订阅主题和类型，以免收到重复的活动。</p>
+    </div>
   </section>
 
-  <div class="duas-colunas">
   <section class="proximos" aria-labelledby="t-proximos">
-    <h2 id="t-proximos">近期活动</h2>
+    <h2 id="t-proximos" class="titulo-seccao">近期活动</h2>
     <p class="linha2">未来 30 天的活动。可按主题或类型筛选，将一项或多项添加到您的日历，无需订阅。</p>
 
     <div class="segmentos" role="group" aria-label="按主题 / 按类型">
@@ -563,8 +954,12 @@
     <p class="lista-hint">选择“按主题”或“按类型”即可查看近期活动。</p>
 
     <div class="lista-conteudo">
+      <input type="checkbox" id="mostrar-todos" class="escondido">
       <input type="checkbox" id="modo-selecao" class="escondido">
-      <p class="controlo-selecao"><label for="modo-selecao" class="botao-secundario">选择多个活动</label></p>
+      <div class="controlos-proximos">
+        <label for="mostrar-todos" class="botao-secundario botao-mostrar">显示所有活动 <span class="chevron" aria-hidden="true"></span></label>
+        <label for="modo-selecao" class="botao-secundario botao-selecionar">选择多个活动</label>
+      </div>
 
       <div class="barra-selecao">
         <label class="selecionar-todos"><input type="checkbox" id="proximos-todos">全选</label>
@@ -1241,380 +1636,24 @@
       </div>
     </div>
   </section>
-
-  <section class="escolha" aria-label="按主题订阅 / 按类型订阅">
-    <div class="segmentos" role="group" aria-label="按主题订阅 / 按类型订阅">
-      <label for="assinar-tema">按主题订阅</label>
-      <label for="assinar-tipo">按类型订阅</label>
-    </div>
-
-    <p class="escolha-hint">选择“按主题订阅”或“按类型订阅”即可查看选项。</p>
-
-    <div class="escolha-conteudo">
-      <p class="fechar-vista"><label for="assinar-fechado" class="botao-secundario botao-fechar"><span aria-hidden="true">×</span> 关闭</label></p>
-
-      <ul class="grelha painel-temas" aria-label="按主题订阅">
-<li class="cartao" style="--cor: #8e1b4f; --pct: 69.6%">
-  <h3>文化</h3>
-  <p class="resumo">音乐、电影、戏剧、展览、图书与文化遗产</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">48 项活动 <small>· 占全部活动的 70%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fcultura.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 文化 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fcultura.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 文化 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cultura.ics" target="_top" aria-label="订阅: 文化 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cultura.ics" aria-label="复制链接: 文化"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cultura.ics" aria-label="复制链接: 文化">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #1b5e20; --pct: 18.8%">
-  <h3>体育</h3>
-  <p class="resumo">比赛、锦标赛与体育活动</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">13 项活动 <small>· 占全部活动的 19%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fdesporto.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 体育 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fdesporto.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 体育 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/desporto.ics" target="_top" aria-label="订阅: 体育 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/desporto.ics" aria-label="复制链接: 体育"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/desporto.ics" aria-label="复制链接: 体育">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #004d40; --pct: 1.4%">
-  <h3>环境</h3>
-  <p class="resumo">自然、气候、能源、水、废物与回收</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">1 项活动 <small>· 占全部活动的 1%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fambiente.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 环境 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fambiente.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 环境 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/ambiente.ics" target="_top" aria-label="订阅: 环境 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/ambiente.ics" aria-label="复制链接: 环境"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/ambiente.ics" aria-label="复制链接: 环境">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao vazio" style="--cor: #1565c0; --pct: 0.0%">
-  <h3>出行与交通</h3>
-  <p class="resumo">公共交通、骑行、步行与道路安全</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">暂无活动</p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fmobilidade-transportes.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 出行与交通 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fmobilidade-transportes.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 出行与交通 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/mobilidade-transportes.ics" target="_top" aria-label="订阅: 出行与交通 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/mobilidade-transportes.ics" aria-label="复制链接: 出行与交通"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/mobilidade-transportes.ics" aria-label="复制链接: 出行与交通">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao vazio" style="--cor: #9e5d00; --pct: 0.0%">
-  <h3>旅游</h3>
-  <p class="resumo">旅游、美食、葡萄酒、手工艺与城市推广</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">暂无活动</p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fturismo.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 旅游 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fturismo.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 旅游 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/turismo.ics" target="_top" aria-label="订阅: 旅游 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/turismo.ics" aria-label="复制链接: 旅游"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/turismo.ics" aria-label="复制链接: 旅游">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #3e2723; --pct: 1.4%">
-  <h3>经济</h3>
-  <p class="resumo">商业、企业、就业、培训与市场</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">1 项活动 <small>· 占全部活动的 1%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Feconomia.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 经济 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Feconomia.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 经济 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/economia.ics" target="_top" aria-label="订阅: 经济 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/economia.ics" aria-label="复制链接: 经济"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/economia.ics" aria-label="复制链接: 经济">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #1a237e; --pct: 8.7%">
-  <h3>公民生活</h3>
-  <p class="resumo">健康、教育、家庭、青年、包容与市政生活</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">6 项活动 <small>· 占全部活动的 9%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fcidadania.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 公民生活 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftemas%2Fcidadania.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 公民生活 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cidadania.ics" target="_top" aria-label="订阅: 公民生活 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cidadania.ics" aria-label="复制链接: 公民生活"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/temas/cidadania.ics" aria-label="复制链接: 公民生活">
-  </div>
-</div>
-  </div>
-</li>
-      </ul>
-      <ul class="grelha painel-tipos" aria-label="按类型订阅">
-<li class="cartao" style="--cor: #d32f2f; --pct: 10.1%">
-  <h3>音乐会</h3>
-  <p class="resumo">音乐会、独奏会、合唱、乐队与现场音乐</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">7 项活动 <small>· 占全部活动的 10%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fconcertos.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 音乐会 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fconcertos.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 音乐会 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/concertos.ics" target="_top" aria-label="订阅: 音乐会 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/concertos.ics" aria-label="复制链接: 音乐会"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/concertos.ics" aria-label="复制链接: 音乐会">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #6a3fb5; --pct: 13.0%">
-  <h3>电影</h3>
-  <p class="resumo">电影放映、影片与纪录片</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">9 项活动 <small>· 占全部活动的 13%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fcinema.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 电影 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fcinema.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 电影 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/cinema.ics" target="_top" aria-label="订阅: 电影 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/cinema.ics" aria-label="复制链接: 电影"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/cinema.ics" aria-label="复制链接: 电影">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #c2185b; --pct: 4.3%">
-  <h3>戏剧</h3>
-  <p class="resumo">话剧、街头戏剧、木偶剧与剧本朗读</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">3 项活动 <small>· 占全部活动的 4%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fteatro.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 戏剧 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fteatro.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 戏剧 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/teatro.ics" target="_top" aria-label="订阅: 戏剧 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/teatro.ics" aria-label="复制链接: 戏剧"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/teatro.ics" aria-label="复制链接: 戏剧">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #e07b00; --pct: 4.3%">
-  <h3>表演</h3>
-  <p class="resumo">舞蹈、马戏、魔术、喜剧、音乐剧与街头表演</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">3 项活动 <small>· 占全部活动的 4%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fespetaculos.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 表演 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fespetaculos.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 表演 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/espetaculos.ics" target="_top" aria-label="订阅: 表演 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/espetaculos.ics" aria-label="复制链接: 表演"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/espetaculos.ics" aria-label="复制链接: 表演">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #8a7300; --pct: 4.3%">
-  <h3>展览</h3>
-  <p class="resumo">艺术、摄影、历史与文化遗产展览</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">3 项活动 <small>· 占全部活动的 4%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fexposicoes.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 展览 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fexposicoes.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 展览 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/exposicoes.ics" target="_top" aria-label="订阅: 展览 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/exposicoes.ics" aria-label="复制链接: 展览"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/exposicoes.ics" aria-label="复制链接: 展览">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #795548; --pct: 17.4%">
-  <h3>文学</h3>
-  <p class="resumo">图书、阅读、诗歌与故事</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">12 项活动 <small>· 占全部活动的 17%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fliteratura.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 文学 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fliteratura.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 文学 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/literatura.ics" target="_top" aria-label="订阅: 文学 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/literatura.ics" aria-label="复制链接: 文学"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/literatura.ics" aria-label="复制链接: 文学">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #00897b; --pct: 11.6%">
-  <h3>工作坊与活动</h3>
-  <p class="resumo">工作坊、课程、讲座、游戏及适合各年龄段的活动</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">8 项活动 <small>· 占全部活动的 12%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Foficinas-atividades.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 工作坊与活动 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Foficinas-atividades.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 工作坊与活动 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/oficinas-atividades.ics" target="_top" aria-label="订阅: 工作坊与活动 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/oficinas-atividades.ics" aria-label="复制链接: 工作坊与活动"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/oficinas-atividades.ics" aria-label="复制链接: 工作坊与活动">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #388e3c; --pct: 4.3%">
-  <h3>体育赛事</h3>
-  <p class="resumo">锦标赛、跑步、徒步、比赛与公开训练</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">3 项活动 <small>· 占全部活动的 4%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fprovas-desportivas.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 体育赛事 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fprovas-desportivas.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 体育赛事 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/provas-desportivas.ics" target="_top" aria-label="订阅: 体育赛事 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/provas-desportivas.ics" aria-label="复制链接: 体育赛事"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/provas-desportivas.ics" aria-label="复制链接: 体育赛事">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #f4511e; --pct: 5.8%">
-  <h3>节庆、集市与市场</h3>
-  <p class="resumo">民俗节庆、节日、集市、市场与美食</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">4 项活动 <small>· 占全部活动的 6%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Ffestas-feiras.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 节庆、集市与市场 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Ffestas-feiras.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 节庆、集市与市场 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/festas-feiras.ics" target="_top" aria-label="订阅: 节庆、集市与市场 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/festas-feiras.ics" aria-label="复制链接: 节庆、集市与市场"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/festas-feiras.ics" aria-label="复制链接: 节庆、集市与市场">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao vazio" style="--cor: #0288d1; --pct: 0.0%">
-  <h3>参观与漫步</h3>
-  <p class="resumo">导览参观、路线、漫步与步道</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">暂无活动</p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fvisitas-passeios.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 参观与漫步 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fvisitas-passeios.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 参观与漫步 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/visitas-passeios.ics" target="_top" aria-label="订阅: 参观与漫步 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/visitas-passeios.ics" aria-label="复制链接: 参观与漫步"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/visitas-passeios.ics" aria-label="复制链接: 参观与漫步">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #546e7a; --pct: 4.3%">
-  <h3>行动与公益活动</h3>
-  <p class="resumo">宣传、健康筛查、募集、清洁与公益活动</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">3 项活动 <small>· 占全部活动的 4%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Facoes-campanhas.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 行动与公益活动 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Facoes-campanhas.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 行动与公益活动 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/acoes-campanhas.ics" target="_top" aria-label="订阅: 行动与公益活动 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/acoes-campanhas.ics" aria-label="复制链接: 行动与公益活动"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/acoes-campanhas.ics" aria-label="复制链接: 行动与公益活动">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #9c27b0; --pct: 5.8%">
-  <h3>纪念与典礼</h3>
-  <p class="resumo">纪念日、典礼、晚会、致敬与正式会议</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">4 项活动 <small>· 占全部活动的 6%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fcomemoracoes.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 纪念与典礼 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fcomemoracoes.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: 纪念与典礼 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/comemoracoes.ics" target="_top" aria-label="订阅: 纪念与典礼 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/comemoracoes.ics" aria-label="复制链接: 纪念与典礼"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/comemoracoes.ics" aria-label="复制链接: 纪念与典礼">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #2e7d32; --pct: 14.5%">
-  <h3>Jogos do Varzim</h3>
-  <p class="resumo">Calendario de jogos do Varzim SC</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">10 项活动 <small>· 占全部活动的 14%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fjogos-varzim.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: Jogos do Varzim (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fzh%2Ftipos%2Fjogos-varzim.ics" target="_blank" rel="noopener noreferrer" aria-label="订阅: Jogos do Varzim (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/jogos-varzim.ics" target="_top" aria-label="订阅: Jogos do Varzim (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>订阅</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/jogos-varzim.ics" aria-label="复制链接: Jogos do Varzim"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>复制链接</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/zh/tipos/jogos-varzim.ics" aria-label="复制链接: Jogos do Varzim">
-  </div>
-</div>
-  </div>
-</li>
-      </ul>
-
-      <p class="aviso">请勿同时订阅主题和类型，以免收到重复的活动。</p>
-    </div>
-  </section>
   </div>
 
   <section class="ajuda" aria-labelledby="t-ajuda">
-    <h2 id="t-ajuda">帮助</h2>
-    <details class="item"><summary>Google</summary><div><p>点按“订阅”：将在已登录的 Google 账户中打开 Google 日历。确认后即可添加。该日历会显示在与此账户关联的所有设备上。</p></div></details>
-    <details class="item"><summary>Outlook</summary><div><p>使用 Microsoft 365 账户（工作或学校）时，“订阅”会打开网页版 Outlook 并请您确认。</p><p>使用个人账户（Outlook.com、Hotmail）时，请选择“其他”，复制链接，然后在 outlook.com 中从网页添加日历。</p></div></details>
-    <details class="item"><summary>iPhone、iPad 或 Mac</summary><div><p>请在 iPhone、iPad 或 Mac 本机上点按“订阅”，并在“日历”中确认。在 Windows 电脑上此按钮无效：请选择 Google 或 Outlook。</p><p>如果没有反应（例如页面在其他应用内打开），请用 Safari 打开，或选择“其他”，复制链接，并在“日历”设置中添加为订阅日历。</p></div></details>
-    <details class="item"><summary>Android</summary><div><p>点按“订阅”：日历将添加到您的 Google 账户，并显示在 Google 日历和三星日历中。如未显示，请打开 Google 日历设置，点按日历名称并开启同步。</p></div></details>
-    <details class="item"><summary>其他日历</summary><div><p>点按“复制链接”，然后在您的应用中通过“订阅日历”或“通过网址添加日历”粘贴该链接（Thunderbird：新建网络日历；Proton、Yahoo、Nextcloud 等：通过网址添加日历）。</p></div></details>
-    <details class="item"><summary>在哪里购票或报名？</summary><div><p>如果活动页面注明了价格、免费入场、门票或报名信息，这些内容会显示在活动备注中，并附有购票链接（例如 BOL）或报名链接。请始终以活动页面为准。</p></div></details>
-    <details class="item"><summary>主题和类型是如何确定的？</summary><div><p>根据每项活动的标题和说明自动确定。每项活动只有一个主题和一个类型，并始终包含在全部活动日历中。个别情况下，分类可能不够准确。</p></div></details>
-    <details class="item"><summary>活动使用哪种语言？</summary><div><p>本页面以及日历和分类名称使用您所选的语言。每项活动的标题和说明保留葡萄牙语，与市政府网站一致。日期和时间按您手机的格式显示。</p><p>已订阅的日历不会更改语言：如需更改，请删除该日历，并在本页面以所需语言重新订阅。</p></div></details>
-    <details class="item"><summary>多久更新一次？</summary><div><p>每 4 小时从市政府网站读取一次活动。各应用自行决定何时重新读取日历：可能需要几个小时，Google 日历最长可能需要一天。</p></div></details>
-    <details class="item"><summary>如何取消订阅</summary><div><p>在应用设置中删除已订阅的日历，活动会立即消失。</p></div></details>
+    <details class="ajuda-grupo">
+      <summary><h2 id="t-ajuda" class="titulo-seccao">帮助</h2><span class="chevron" aria-hidden="true"></span></summary>
+      <div class="ajuda-lista">
+        <details class="item"><summary>Google<span class="chevron" aria-hidden="true"></span></summary><div><p>点按“订阅”：将在已登录的 Google 账户中打开 Google 日历。确认后即可添加。该日历会显示在与此账户关联的所有设备上。</p></div></details>
+        <details class="item"><summary>Outlook<span class="chevron" aria-hidden="true"></span></summary><div><p>使用 Microsoft 365 账户（工作或学校）时，“订阅”会打开网页版 Outlook 并请您确认。</p><p>使用个人账户（Outlook.com、Hotmail）时，请选择“其他”，复制链接，然后在 outlook.com 中从网页添加日历。</p></div></details>
+        <details class="item"><summary>iPhone、iPad 或 Mac<span class="chevron" aria-hidden="true"></span></summary><div><p>请在 iPhone、iPad 或 Mac 本机上点按“订阅”，并在“日历”中确认。在 Windows 电脑上此按钮无效：请选择 Google 或 Outlook。</p><p>如果没有反应（例如页面在其他应用内打开），请用 Safari 打开，或选择“其他”，复制链接，并在“日历”设置中添加为订阅日历。</p></div></details>
+        <details class="item"><summary>Android<span class="chevron" aria-hidden="true"></span></summary><div><p>点按“订阅”：日历将添加到您的 Google 账户，并显示在 Google 日历和三星日历中。如未显示，请打开 Google 日历设置，点按日历名称并开启同步。</p></div></details>
+        <details class="item"><summary>其他日历<span class="chevron" aria-hidden="true"></span></summary><div><p>点按“复制链接”，然后在您的应用中通过“订阅日历”或“通过网址添加日历”粘贴该链接（Thunderbird：新建网络日历；Proton、Yahoo、Nextcloud 等：通过网址添加日历）。</p></div></details>
+        <details class="item"><summary>在哪里购票或报名？<span class="chevron" aria-hidden="true"></span></summary><div><p>如果活动页面注明了价格、免费入场、门票或报名信息，这些内容会显示在活动备注中，并附有购票链接（例如 BOL）或报名链接。请始终以活动页面为准。</p></div></details>
+        <details class="item"><summary>主题和类型是如何确定的？<span class="chevron" aria-hidden="true"></span></summary><div><p>根据每项活动的标题和说明自动确定。每项活动只有一个主题和一个类型，并始终包含在全部活动日历中。个别情况下，分类可能不够准确。</p></div></details>
+        <details class="item"><summary>活动使用哪种语言？<span class="chevron" aria-hidden="true"></span></summary><div><p>本页面以及日历和分类名称使用您所选的语言。每项活动的标题和说明保留葡萄牙语，与市政府网站一致。日期和时间按您手机的格式显示。</p><p>已订阅的日历不会更改语言：如需更改，请删除该日历，并在本页面以所需语言重新订阅。</p></div></details>
+        <details class="item"><summary>多久更新一次？<span class="chevron" aria-hidden="true"></span></summary><div><p>每 4 小时从市政府网站读取一次活动。各应用自行决定何时重新读取日历：可能需要几个小时，Google 日历最长可能需要一天。</p></div></details>
+        <details class="item"><summary>如何取消订阅<span class="chevron" aria-hidden="true"></span></summary><div><p>在应用设置中删除已订阅的日历，活动会立即消失。</p></div></details>
+      </div>
+    </details>
   </section>
 
 </main>
@@ -1622,7 +1661,7 @@
 <footer class="largura">
   <p>活动信息来自 <a href="https://www.cm-pvarzim.pt/eventos/">cm-pvarzim.pt 发布的活动日程</a>。请在每项活动的页面上核实日期、时间和入场条件（链接位于活动备注中）。</p>
   <p>本页面不使用 Cookie，也不进行统计。您选择的语言和文字大小仅保存在此浏览器中。</p>
-  <p>规划部 - GIS(DP-SIG)的项目,属于城市管理平台的一部分,旨在分享更多信息,帮助建设信息更畅通的城市。</p>
+  <p>DP-SIG(城市智慧科)的项目,属于城市管理平台的一部分,旨在分享更多信息,帮助建设信息更畅通的城市。</p>
 </footer>
 
 <p class="apenas-leitor" aria-live="polite" id="estado"></p>
