@@ -84,8 +84,8 @@
   .marca { display: flex; align-items: center; gap: .7rem 1rem; min-width: 0; }
   .marca > div { min-width: 0; }
   .logo-cm { flex: none; display: flex; line-height: 0; }
-  .logo-cm img { display: block; height: 58px; width: auto; }
-  @media (max-width: 40rem) { .marca { gap: .6rem; } .logo-cm img { height: 46px; } }
+  .logo-cm img { display: block; height: 74px; width: auto; }
+  @media (max-width: 40rem) { .marca { gap: .6rem; } .logo-cm img { height: 58px; } }
   .topo h1 { margin: 0; font-size: clamp(1.7rem, 7vw, 2.7rem); overflow-wrap: anywhere; hyphens: auto; line-height: 1; font-weight: 700; letter-spacing: .01em; }
   /* Uma só cor de base (branco) com um único tom de destaque (dourado), sempre o mesmo nos dois */
   .topo h1 { color: #fff; }
@@ -252,8 +252,14 @@
   .aviso { margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
 
   /* Proximos eventos: destaque rotativo, filtro, selecao multipla e adicionar ao calendario sem subscricao */
-  .proximos { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
-  .proximos::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
+  .duas-colunas { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
+  .duas-colunas::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
+  .proximos { margin-top: 0; padding-top: 0; }
+  @media (min-width: 64rem) {
+    .duas-colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.4rem; align-items: start; }
+    .escolha { margin-top: 0; padding-top: 0; }
+    .escolha::before { content: none; }
+  }
   .proximos h2 { margin: 0; font-size: 1.3rem; line-height: 1.25; }
   .proximos .linha2 { color: var(--cinza); margin-top: .15rem; }
   .proximos > .segmentos { max-width: 22rem; margin-top: .8rem; }
@@ -264,6 +270,15 @@
   .chips-tipos { display: none; }
   #filtro-tipo:checked ~ main .chips-temas { display: none; }
   #filtro-tipo:checked ~ main .chips-tipos { display: flex; }
+
+  .lista-hint {
+    margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem;
+  }
+  .lista-conteudo { display: none; }
+  #filtro-tema:checked ~ main .lista-conteudo,
+  #filtro-tipo:checked ~ main .lista-conteudo { display: block; }
+  #filtro-tema:checked ~ main .lista-hint,
+  #filtro-tipo:checked ~ main .lista-hint { display: none; }
   .chip-filtro + label {
     display: inline-flex; align-items: center; min-height: 2.3rem; padding: .25rem .75rem;
     border-radius: 999px; border: 1.5px solid var(--linha); background: var(--cartao);
@@ -388,7 +403,8 @@
 <input type="radio" name="assinar" id="assinar-fechado" class="escondido" checked aria-label="Close">
 <input type="radio" name="assinar" id="assinar-tema" class="escondido" aria-label="Subscribe by theme">
 <input type="radio" name="assinar" id="assinar-tipo" class="escondido" aria-label="Subscribe by type">
-<input type="radio" name="filtro" id="filtro-tema" class="escondido" checked aria-label="By theme">
+<input type="radio" name="filtro" id="filtro-fechado" class="escondido" checked aria-label="Close">
+<input type="radio" name="filtro" id="filtro-tema" class="escondido" aria-label="By theme">
 <input type="radio" name="filtro" id="filtro-tipo" class="escondido" aria-label="By type">
 
 <header class="topo">
@@ -481,6 +497,7 @@
 </div>
   </section>
 
+  <div class="duas-colunas">
   <section class="proximos" aria-labelledby="t-proximos">
     <h2 id="t-proximos">Upcoming events</h2>
     <p class="linha2">Events in the next 30 days. Filter by theme or type and add one or several to your calendar, without subscribing to anything.</p>
@@ -543,16 +560,19 @@
       </div>
     </div>
 
-    <input type="checkbox" id="modo-selecao" class="escondido">
-    <p class="controlo-selecao"><label for="modo-selecao" class="botao-secundario">Select multiple events</label></p>
+    <p class="lista-hint">Choose “By theme” or “By type” to see the upcoming events.</p>
 
-    <div class="barra-selecao">
-      <label class="selecionar-todos"><input type="checkbox" id="proximos-todos">Select all</label>
-      <button type="button" class="botao" id="proximos-adicionar" disabled
-        data-rotulo-zero="Add to calendar" data-rotulo-n="Add {n} to calendar">Add to calendar</button>
-    </div>
+    <div class="lista-conteudo">
+      <input type="checkbox" id="modo-selecao" class="escondido">
+      <p class="controlo-selecao"><label for="modo-selecao" class="botao-secundario">Select multiple events</label></p>
 
-    <ul class="lista-proximos">
+      <div class="barra-selecao">
+        <label class="selecionar-todos"><input type="checkbox" id="proximos-todos">Select all</label>
+        <button type="button" class="botao" id="proximos-adicionar" disabled
+          data-rotulo-zero="Add to calendar" data-rotulo-n="Add {n} to calendar">Add to calendar</button>
+      </div>
+
+      <ul class="lista-proximos">
 <li class="item-proximo" data-idx="0" data-tema="cidadania" data-tipo="provas-desportivas" style="--ct: #1a237e; --cp: #388e3c">
   <span class="marcar-coluna">
     <input type="checkbox" class="marcar-evento" id="proximo-0" aria-label="Select: Projeto Escola da Minha Vida">
@@ -1211,13 +1231,14 @@
   <a class="botao botao-adicionar-um so-outlook" href="https://outlook.office.com/calendar/0/deeplink/compose?path=/calendar/action/compose&amp;rru=addevent&amp;subject=Teatro%20%22Quando%20Menos%20se%20Espera%22&amp;startdt=2026-12-01T21%3A30%3A00Z&amp;enddt=2026-12-02T23%3A30%3A00Z&amp;allday=false&amp;location=Cine-Teatro%20Garrett&amp;body=Nos%20dias%201%20e%202%20de%20dezembro%2C%20pelas%2021h30%2C%20sobe%20ao%20palco%20do%20Cine-Teatro%20Garrett%20a%20pe%C3%A7a%20%22Quando%20Menos%20se%20Espera%22.%0A%0ATickets%20and%20registration%20%28in%20Portuguese%29%3A%0AAs%20entradas%20custam%2027%E2%82%AC%20e%20os%20bilhetes%20est%C3%A3o%20na%20venda%20na%20BOL%20e%20no%20Cine-Teatro%20Garrett%0ATickets%3A%20https%3A//www.bol.pt/Comprar/Bilhetes/185536-quando_menos_se_espera-cine_teatro_garrett/%0A%0AEvent%20title%20and%20description%20in%20Portuguese%2C%20as%20published%20by%20the%20municipality.%0A%0AMore%20information%3A%20https%3A//www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/" target="_blank" rel="noopener noreferrer" aria-label="Add: Teatro &quot;Quando Menos se Espera&quot; (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg><span>Add</span></a>
   <a class="botao botao-adicionar-um so-apple so-outro" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0APRODID%3A-//P%C3%B3voa%20de%20Varzim//Agenda%20Municipal//PT%0D%0AVERSION%3A2.0%0D%0ACALSCALE%3AGREGORIAN%0D%0ABEGIN%3AVEVENT%0D%0ASUMMARY%3ATeatro%20%22Quando%20Menos%20se%20Espera%22%0D%0ADTSTART%3A20261201T213000Z%0D%0ADTEND%3A20261202T233000Z%0D%0ADTSTAMP%3A20261014T135909Z%0D%0AUID%3AdGVhdHJvLXF1YW5kby1tZW5vcy1zZS1lc3BlcmF8MjAyNi0wOS0wNCAwOTozMjowNg%3D%3D%40a%0D%0A%20genda.cm-pvarzim.pt%0D%0ACATEGORIES%3ACulture%2CTheatre%0D%0ADESCRIPTION%3ANos%20dias%201%20e%202%20de%20dezembro%5C%2C%20pelas%2021h30%5C%2C%20sobe%20ao%20palco%20do%20Ci%0D%0A%20ne-Teatro%20Garrett%20a%20pe%C3%A7a%20%22Quando%20Menos%20se%20Espera%22.%5Cn%5CnTickets%20and%20registr%0D%0A%20ation%20%28in%20Portuguese%29%3A%5CnAs%20entradas%20custam%2027%E2%82%AC%20e%20os%20bilhetes%20est%C3%A3o%20na%20v%0D%0A%20enda%20na%20BOL%20e%20no%20Cine-Teatro%20Garrett%5CnTickets%3A%20https%3A//www.bol.pt/Comprar/%0D%0A%20Bilhetes/185536-quando_menos_se_espera-cine_teatro_garrett/%5Cn%5CnEvent%20title%0D%0A%20%20and%20description%20in%20Portuguese%5C%2C%20as%20published%20by%20the%20municipality.%5Cn%5CnMore%0D%0A%20%20information%3A%20https%3A//www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-esp%0D%0A%20era/%0D%0ALAST-MODIFIED%3A20261014T135909Z%0D%0ALOCATION%3ACine-Teatro%20Garrett%0D%0ATRANSP%3ATRANSPARENT%0D%0AURL%3Ahttps%3A//www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A" download="evento.ics" aria-label="Add: Teatro &quot;Quando Menos se Espera&quot;"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg><span>Add</span></a>
 </li>
-    </ul>
-    <p class="vazio-proximos">No events in the next 30 days.</p>
+      </ul>
+      <p class="vazio-proximos">No events in the next 30 days.</p>
 
-    <div class="confirmar" id="proximos-confirmar" hidden>
-      <p>Google and Outlook only accept one event at a time: tap each one to confirm it in your calendar.</p>
-      <ol class="confirmar-lista"></ol>
-      <a class="confirmar-ics" href="#" download="eventos.ics">Or download them all in one .ics file to import</a>
+      <div class="confirmar" id="proximos-confirmar" hidden>
+        <p>Google and Outlook only accept one event at a time: tap each one to confirm it in your calendar.</p>
+        <ol class="confirmar-lista"></ol>
+        <a class="confirmar-ics" href="#" download="eventos.ics">Or download them all in one .ics file to import</a>
+      </div>
     </div>
   </section>
 
@@ -1580,6 +1601,7 @@
       <p class="aviso">Avoid subscribing to themes and types at the same time, so you don&#x27;t get duplicate events.</p>
     </div>
   </section>
+  </div>
 
   <section class="ajuda" aria-labelledby="t-ajuda">
     <h2 id="t-ajuda">Help</h2>
