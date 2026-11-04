@@ -960,6 +960,11 @@ ICONE_COPIAR = (
     'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">'
     '<rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>'
 )
+ICONE_INFO = (
+    '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" '
+    'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">'
+    '<path d="M7 17 17 7M9 7h8v8"/></svg>'
+)
 
 
 def _estrela(cx, cy, r, rot=0.0):
@@ -1157,7 +1162,11 @@ def eventos_proximos(classificados, agora, t_ics, nomes, t=None):
             "inicio": inicio.isoformat(),
             "fim": fim.isoformat(),
             "diaInteiro": bool(eh_dia_inteiro(inicio, fim)),
+            # Já em curso agora (começou mas ainda não acabou): a página assinala "Em curso"
+            # em vez de mostrar uma data de início que já passou.
+            "emCurso": inicio <= agora <= fim,
             "local": str(ev.get("location") or ""),
+            "link": str(ev.get("url") or ""),
             "temaSlug": tema.slug, "temaNome": nome_grupo(tema, t)[0], "temaCor": tema.cor,
             "tipoSlug": tipo.slug, "tipoNome": nome_grupo(tipo, t)[0], "tipoCor": tipo.cor,
             "vevent": ev.to_ical().decode("utf-8"),
@@ -1177,17 +1186,38 @@ def _chip_proximo(slug, nome, cor, classe):
     ).format(classe=classe, slug=html.escape(slug, quote=True), cor=html.escape(cor, quote=True), nome=html.escape(nome))
 
 
-def secao_proximos(proximos, t):
+def secao_proximos(proximos, t, agora=None):
     """Linhas da lista de "próximos eventos" + filtros (só os temas/tipos com eventos nos próximos dias)."""
+    agora = agora or datetime.now(timezone.utc)
     linhas = []
     temas_vistos, tipos_vistos = {}, {}
     for idx, p in enumerate(proximos):
         inicio = parse_iso(p["inicio"])
-        if p["diaInteiro"]:
-            quando = _data_curta(inicio).split(" ")[0] + " · " + t["proximos_dia_inteiro"]
+        if p.get("emCurso"):
+            fim = parse_iso(p["fim"])
+            if p["diaInteiro"]:
+                quando = t["ate_data"].format(data=fim.astimezone(LISBOA).strftime("%d/%m"))
+            else:
+                quando = t["ate_hora"].format(hora=fim.astimezone(LISBOA).strftime("%H:%M"))
+            etiqueta_curso = '<span class="etiqueta etiqueta-curso">{}</span>'.format(html.escape(t["em_curso"]))
         else:
-            quando = _data_curta(inicio)
+            if p["diaInteiro"]:
+                quando = _data_curta(inicio).split(" ")[0] + " · " + t["proximos_dia_inteiro"]
+            else:
+                quando = _data_curta(inicio)
+            etiqueta_curso = ""
         local = p["local"]
+        link = p.get("link") or ""
+        info_html = ""
+        if link:
+            info_html = (
+                '<a class="botao-info" href="{href}" target="_blank" rel="noopener noreferrer" aria-label="{aria}">'
+                '{icone}<span class="apenas-leitor">{rotulo}</span></a>\n'
+            ).format(
+                href=html.escape(link, quote=True),
+                aria=html.escape("{}: {}".format(t["mais_info"], p["titulo"]), quote=True),
+                icone=ICONE_INFO, rotulo=html.escape(t["mais_info"]),
+            )
         ics_unico = (
             "BEGIN:VCALENDAR\r\nPRODID:{prodid}\r\nVERSION:2.0\r\nCALSCALE:GREGORIAN\r\n{vevent}END:VCALENDAR\r\n"
         ).format(prodid=PRODID, vevent=p["vevent"])
@@ -1201,9 +1231,10 @@ def secao_proximos(proximos, t):
             '  <label for="proximo-{idx}" class="info-proximo">\n'
             '    <span class="titulo-proximo">{titulo}</span>\n'
             '    <span class="meta-proximo"><time datetime="{iso}">{quando}</time>{local_html}</span>\n'
-            '    <span class="etiquetas-proximo"><span class="etiqueta et-tema">{tema_nome}</span>'
+            '    <span class="etiquetas-proximo">{etiqueta_curso}<span class="etiqueta et-tema">{tema_nome}</span>'
             '<span class="etiqueta et-tipo">{tipo_nome}</span></span>\n'
             '  </label>\n'
+            '  {info_html}'
             '  <a class="botao botao-adicionar-um so-google so-android" href="{google}" target="_blank" rel="noopener noreferrer" aria-label="{aria_add} (Google)">{icone}<span>{rotulo}</span></a>\n'
             '  <a class="botao botao-adicionar-um so-outlook" href="{outlook}" target="_blank" rel="noopener noreferrer" aria-label="{aria_add} (Outlook)">{icone}<span>{rotulo}</span></a>\n'
             '  <a class="botao botao-adicionar-um so-apple so-outro" href="{href}" download="evento.ics" aria-label="{aria_add}">{icone}<span>{rotulo}</span></a>\n'
@@ -1216,7 +1247,9 @@ def secao_proximos(proximos, t):
             titulo=html.escape(p["titulo"]),
             iso=html.escape(p["inicio"], quote=True), quando=html.escape(quando),
             local_html=" · {}".format(html.escape(local)) if local else "",
+            etiqueta_curso=etiqueta_curso,
             tema_nome=html.escape(p["temaNome"]), tipo_nome=html.escape(p["tipoNome"]),
+            info_html=info_html,
             href=href, google=html.escape(p["google"], quote=True), outlook=html.escape(p["outlook"], quote=True), aria_add=html.escape("{}: {}".format(t["adicionar_um"], p["titulo"]), quote=True),
             icone=ICONE_CALENDARIO, rotulo=html.escape(t["adicionar_um"]),
         ))
@@ -1231,7 +1264,7 @@ def secao_proximos(proximos, t):
     return "\n".join(linhas), chips_temas, chips_tipos
 
 
-def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None, proximos=None):
+def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None, proximos=None, agora=None):
     trad = trad or carregar_traducoes()
     t = dict(trad["linguas"]["pt"])
     t.update(trad["linguas"][lingua])  # chaves novas ainda sem tradução ficam em português, nunca falham
@@ -1242,7 +1275,7 @@ def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None, proximos=Non
 
     pre = prefixo_lingua(lingua)
     proximos = proximos or []
-    linhas_proximos, chips_temas, chips_tipos = secao_proximos(proximos, t)
+    linhas_proximos, chips_temas, chips_tipos = secao_proximos(proximos, t, agora)
     dados_proximos = json.dumps(
         {"prodid": PRODID, "eventos": [{"vevent": p["vevent"], "google": p["google"], "outlook": p["outlook"]} for p in proximos]},
         ensure_ascii=False, separators=(",", ":"),
@@ -1311,7 +1344,9 @@ def gerar_saidas(itens, pasta, url_base):
     """Escreve os calendários e a página em todas as línguas. Devolve a contagem (igual em todas)."""
     trad = carregar_traducoes()
     classificados = classificar_todos(itens)
-    agora = hoje_utc()
+    # Momento real (não a meia-noite do dia): decide com precisão se um evento já
+    # terminou, está em curso ou ainda vai começar, nos "próximos eventos".
+    agora = datetime.now(timezone.utc)
     contagem = None
     # Restos de versões anteriores (ficheiros por evento): apagar.
     if (pasta / "e").is_dir():
@@ -1325,7 +1360,7 @@ def gerar_saidas(itens, pasta, url_base):
         t = trad["linguas"][lingua]
         ficheiros, contagem, proximos = construir_calendarios(
             itens, url_base, lingua, t if lingua != "pt" else None, classificados, agora)
-        ficheiros[prefixo_lingua(lingua) + "index.html"] = gerar_pagina(contagem, len(itens), url_base, lingua, trad, proximos)
+        ficheiros[prefixo_lingua(lingua) + "index.html"] = gerar_pagina(contagem, len(itens), url_base, lingua, trad, proximos, agora)
         for caminho, conteudo in ficheiros.items():
             escrever_atomico(conteudo, pasta / caminho)
         for sub in ("temas", "tipos"):

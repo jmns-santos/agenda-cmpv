@@ -78,10 +78,11 @@
   .logo-cm img { display: block; height: 64px; width: auto; }
   @media (max-width: 40rem) { .marca { gap: .6rem; } .logo-cm img { height: 48px; } }
   .topo h1 { margin: 0; font-size: clamp(1.7rem, 7vw, 2.7rem); overflow-wrap: anywhere; hyphens: auto; line-height: 1; font-weight: 700; letter-spacing: .01em; }
+  /* Cabeçalho numa só cor (marca e subtítulo) */
   .topo h1 { color: #0f4c6b; }
-  .barra-titulo { color: #e07b00; margin: 0 .06em; }
-  .topo .sub { margin-top: .35rem; color: #2a3d47; font-size: clamp(1.05rem, 3vw, 1.3rem); line-height: 1.3; }
-  .topo .sub strong { color: #b4480b; font-weight: 700; }
+  .barra-titulo { color: inherit; margin: 0 .06em; }
+  .topo .sub { margin-top: .35rem; color: #0f4c6b; font-size: clamp(1.05rem, 3vw, 1.3rem); line-height: 1.3; }
+  .topo .sub strong { font-weight: 700; }
   .onda { display: block; width: 100%; height: 18px; margin-top: .9rem; background: #fff; }
   .onda path { fill: #0f4c6b; }
 
@@ -196,10 +197,19 @@
   .completa .linha2 { color: var(--cinza); margin-top: .15rem; font-variant-numeric: lining-nums tabular-nums; }
   @media (max-width: 36rem) { .completa { grid-template-columns: 1fr; } }
 
-  /* Tema / tipo */
+  /* Tema / tipo: só aparece depois de escolher "por tema" ou "por tipo" (mais compacto) */
   .escolha { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
   .escolha::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
   .escolha > .segmentos { max-width: 30rem; }
+
+  .escolha-hint, .proximos-hint {
+    margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem;
+  }
+  .escolha-conteudo, .proximos-conteudo { display: none; }
+  #vista-tema:checked ~ main .escolha-conteudo, #vista-tipo:checked ~ main .escolha-conteudo,
+  #vista-tema:checked ~ main .proximos-conteudo, #vista-tipo:checked ~ main .proximos-conteudo { display: block; }
+  #vista-tema:checked ~ main .escolha-hint, #vista-tipo:checked ~ main .escolha-hint,
+  #vista-tema:checked ~ main .proximos-hint, #vista-tipo:checked ~ main .proximos-hint { display: none; }
 
   .grelha { list-style: none; margin: .9rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(16.5rem, 100%), 1fr)); gap: .7rem; }
   .cartao {
@@ -224,11 +234,12 @@
 
   .aviso { margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
 
-  /* Proximos eventos: filtro, selecao multipla e adicionar ao calendario sem subscricao */
+  /* Proximos eventos: destaque rotativo, filtro, selecao multipla e adicionar ao calendario sem subscricao */
   .proximos { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
   .proximos::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
   .proximos h2 { margin: 0; font-size: 1.3rem; line-height: 1.25; }
   .proximos .linha2 { color: var(--cinza); margin-top: .15rem; }
+  .proximos > .segmentos { max-width: 22rem; margin-top: .8rem; }
 
   .filtros { display: none; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
   .js .filtros { display: flex; }
@@ -244,6 +255,33 @@
   .chip-filtro:checked + label { background: var(--cor); border-color: var(--cor); color: #fff; }
   .chip-filtro:focus-visible + label { outline: 3px solid var(--foco); outline-offset: 1px; }
 
+  /* Destaque: quadro que vai mostrando os próximos eventos, um a um */
+  .destaque { margin-top: .9rem; background: var(--mar-claro); border-radius: 12px; padding: .8rem .9rem; }
+  .destaque-rotulo { margin: 0 0 .5rem; font-size: .85rem; font-weight: 700; color: var(--cinza); text-transform: uppercase; letter-spacing: .03em; }
+  .destaque-cartao { transition: opacity .2s; border-left: 6px solid var(--ct); padding-left: .7rem; }
+  #vista-tipo:checked ~ main .destaque-cartao { border-left-color: var(--cp); }
+  .destaque-cartao.a-mudar { opacity: 0; }
+  .destaque-controlos { display: flex; align-items: center; gap: .5rem; margin-top: .7rem; }
+  .destaque-nav {
+    flex: none; width: 2.3rem; height: 2.3rem; border-radius: 50%; border: 1.5px solid var(--linha);
+    background: var(--cartao); color: var(--tinta); font-size: 1.1rem; line-height: 1; cursor: pointer;
+  }
+  .destaque-pausa {
+    flex: none; min-height: 2.3rem; padding: 0 .8rem; border-radius: 999px; border: 1.5px solid var(--linha);
+    background: var(--cartao); color: var(--tinta); font: inherit; font-weight: 700; font-size: .85rem; cursor: pointer;
+  }
+  .destaque-posicao { font-size: .85rem; color: var(--cinza); font-variant-numeric: lining-nums tabular-nums; margin-left: auto; }
+
+  .controlo-selecao { margin-top: .9rem; }
+  .botao-secundario {
+    display: inline-flex; align-items: center; gap: .4rem; min-height: 2.6rem; padding: .35rem .9rem;
+    border-radius: 9px; border: 1.5px solid var(--linha); background: var(--cartao); color: var(--tinta);
+    font: inherit; font-weight: 700; font-size: .95rem; cursor: pointer; user-select: none;
+  }
+  #modo-selecao:checked ~ .controlo-selecao .botao-secundario { background: var(--botao); color: #fff; border-color: var(--botao); }
+  #modo-selecao:checked ~ .controlo-selecao .botao-secundario::after { content: " \2713"; }
+  #modo-selecao:focus-visible ~ .controlo-selecao .botao-secundario { outline: 3px solid var(--foco); outline-offset: 1px; }
+
   .lista-proximos { list-style: none; margin: .9rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
   .item-proximo {
     display: flex; align-items: center; gap: .6rem; background: var(--cartao); border: 1px solid var(--linha);
@@ -251,7 +289,7 @@
   }
   #vista-tipo:checked ~ main .item-proximo { border-left-color: var(--cp); }
   .marcar-coluna { display: none; flex: none; }
-  .js .marcar-coluna { display: flex; }
+  .js #modo-selecao:checked ~ .lista-proximos .marcar-coluna { display: flex; }
   .marcar-evento { width: 1.3rem; height: 1.3rem; flex: none; accent-color: var(--botao); }
   .info-proximo { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: .15rem; cursor: default; }
   .js .info-proximo { cursor: pointer; }
@@ -259,6 +297,14 @@
   .meta-proximo { font-size: .85rem; color: var(--cinza); font-variant-numeric: lining-nums tabular-nums; }
   .etiquetas-proximo { display: flex; gap: .35rem; flex-wrap: wrap; margin-top: .1rem; }
   .etiqueta { font-size: .75rem; font-weight: 700; padding: .1rem .5rem; border-radius: 999px; background: var(--trilho); color: var(--cinza); }
+  .etiqueta-curso { background: var(--sol); color: #3b2a00; }
+  .botao-info {
+    flex: none; display: inline-flex; align-items: center; justify-content: center;
+    width: 2.4rem; height: 2.4rem; border-radius: 50%; border: 1.5px solid var(--linha);
+    background: var(--cartao); color: var(--cinza);
+  }
+  .botao-info:hover { background: var(--mar-claro); color: var(--tinta); }
+  .botao-info svg { width: 1.15em; height: 1.15em; }
   .botao-adicionar-um { flex: none; min-height: 2.4rem; padding: .35rem .7rem; font-size: .85rem; }
   .botao-adicionar-um svg { width: 1em; height: 1em; }
   .botao-adicionar-um span { display: none; }
@@ -268,11 +314,10 @@
   .lista-proximos:empty + .vazio-proximos { display: block; }
 
   .barra-selecao { display: none; align-items: center; justify-content: space-between; gap: .6rem; margin-top: .8rem; flex-wrap: wrap; }
-  .js .barra-selecao { display: flex; }
+  .js #modo-selecao:checked ~ .barra-selecao { display: flex; }
   .selecionar-todos { display: flex; align-items: center; gap: .45rem; font-size: .92rem; font-weight: 700; cursor: pointer; }
   .selecionar-todos input { width: 1.2rem; height: 1.2rem; accent-color: var(--botao); }
   #proximos-adicionar:disabled { opacity: .5; cursor: not-allowed; }
-  .proximos > .segmentos { max-width: 22rem; margin-top: .8rem; }
   .confirmar { margin-top: .8rem; padding: .8rem .9rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
   .confirmar-lista { margin: .5rem 0; padding-left: 1.4rem; display: flex; flex-direction: column; gap: .35rem; }
   .confirmar-lista a { font-weight: 700; }
@@ -302,11 +347,15 @@
   .embed .seletor { position: static; }
 
   @media (forced-colors: active) {
-    .cartao, .completa, .item-proximo { border-left-color: CanvasText; }
+    .cartao, .completa, .item-proximo, .destaque-cartao { border-left-color: CanvasText; }
     .barra span { background: CanvasText; }
   }
+  @media (prefers-reduced-motion: reduce) {
+    .destaque-cartao { transition: none; }
+  }
   @media print {
-    .seletor, .ferramentas, .acoes, .sugestao, .filtros, .barra-selecao, .marcar-coluna, .botao-adicionar-um { display: none !important; }
+    .seletor, .ferramentas, .acoes, .sugestao, .filtros, .barra-selecao, .marcar-coluna, .botao-adicionar-um,
+    .destaque, .controlo-selecao, .botao-info, .escolha-hint, .proximos-hint { display: none !important; }
   }
 </style>
 </head>
@@ -319,7 +368,7 @@
 <input type="radio" name="sistema" id="sis-apple" class="escondido" aria-label="{{T:op_apple}}">
 <input type="radio" name="sistema" id="sis-android" class="escondido" aria-label="{{T:op_android}}">
 <input type="radio" name="sistema" id="sis-outro" class="escondido" aria-label="{{T:op_outro}}">
-<input type="radio" name="vista" id="vista-tema" class="escondido" checked aria-label="{{T:por_tema}}">
+<input type="radio" name="vista" id="vista-tema" class="escondido" aria-label="{{T:por_tema}}">
 <input type="radio" name="vista" id="vista-tipo" class="escondido" aria-label="{{T:por_tipo}}">
 
 <header class="topo">
@@ -392,14 +441,18 @@
       <label for="vista-tipo">{{T:por_tipo}}</label>
     </div>
 
-    <ul class="grelha painel-temas" aria-label="{{T:por_tema}}">
-{{LISTA_TEMAS}}
-    </ul>
-    <ul class="grelha painel-tipos" aria-label="{{T:por_tipo}}">
-{{LISTA_TIPOS}}
-    </ul>
+    <p class="escolha-hint">{{T:escolha_hint}}</p>
 
-    <p class="aviso">{{T:aviso}}</p>
+    <div class="escolha-conteudo">
+      <ul class="grelha painel-temas" aria-label="{{T:por_tema}}">
+{{LISTA_TEMAS}}
+      </ul>
+      <ul class="grelha painel-tipos" aria-label="{{T:por_tipo}}">
+{{LISTA_TIPOS}}
+      </ul>
+
+      <p class="aviso">{{T:aviso}}</p>
+    </div>
   </section>
 
   <section class="proximos" aria-labelledby="t-proximos">
@@ -411,29 +464,49 @@
       <label for="vista-tipo">{{T:filtrar_tipo}}</label>
     </div>
 
-    <div class="filtros" role="group" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
-      <div class="chips-temas" aria-label="{{T:por_tema}}">
+    <p class="proximos-hint">{{T:proximos_escolha}}</p>
+
+    <div class="proximos-conteudo">
+      <div class="filtros" role="group" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
+        <div class="chips-temas" aria-label="{{T:por_tema}}">
 {{CHIPS_TEMAS_PROXIMOS}}
-      </div>
-      <div class="chips-tipos" aria-label="{{T:por_tipo}}">
+        </div>
+        <div class="chips-tipos" aria-label="{{T:por_tipo}}">
 {{CHIPS_TIPOS_PROXIMOS}}
+        </div>
       </div>
-    </div>
 
-    <ul class="lista-proximos">
+      <div class="destaque" id="destaque-proximo" role="group" hidden aria-label="{{T:destaque_titulo}}">
+        <p class="destaque-rotulo">{{T:destaque_titulo}}</p>
+        <div class="destaque-cartao" aria-live="polite"></div>
+        <div class="destaque-controlos">
+          <button type="button" class="destaque-nav" data-dir="-1" aria-label="{{T:anterior}}">‹</button>
+          <button type="button" class="destaque-pausa" aria-pressed="false"
+            data-pausar="{{T:pausar}}" data-continuar="{{T:continuar}}">{{T:pausar}}</button>
+          <button type="button" class="destaque-nav" data-dir="1" aria-label="{{T:seguinte}}">›</button>
+          <span class="destaque-posicao" data-modelo="{{T:widget_posicao}}" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <input type="checkbox" id="modo-selecao" class="escondido">
+      <p class="controlo-selecao"><label for="modo-selecao" class="botao-secundario">{{T:selecionar_varios}}</label></p>
+
+      <div class="barra-selecao">
+        <label class="selecionar-todos"><input type="checkbox" id="proximos-todos">{{T:selecionar_todos}}</label>
+        <button type="button" class="botao" id="proximos-adicionar" disabled
+          data-rotulo-zero="{{T:adicionar_zero}}" data-rotulo-n="{{T:adicionar_n}}">{{T:adicionar_zero}}</button>
+      </div>
+
+      <ul class="lista-proximos">
 {{LISTA_PROXIMOS}}
-    </ul>
-    <p class="vazio-proximos">{{T:proximos_vazio}}</p>
+      </ul>
+      <p class="vazio-proximos">{{T:proximos_vazio}}</p>
 
-    <div class="barra-selecao">
-      <label class="selecionar-todos"><input type="checkbox" id="proximos-todos">{{T:selecionar_todos}}</label>
-      <button type="button" class="botao" id="proximos-adicionar" disabled
-        data-rotulo-zero="{{T:adicionar_zero}}" data-rotulo-n="{{T:adicionar_n}}">{{T:adicionar_zero}}</button>
-    </div>
-    <div class="confirmar" id="proximos-confirmar" hidden>
-      <p>{{T:confirmar_titulo}}</p>
-      <ol class="confirmar-lista"></ol>
-      <a class="confirmar-ics" href="#" download="eventos.ics">{{T:confirmar_ics}}</a>
+      <div class="confirmar" id="proximos-confirmar" hidden>
+        <p>{{T:confirmar_titulo}}</p>
+        <ol class="confirmar-lista"></ol>
+        <a class="confirmar-ics" href="#" download="eventos.ics">{{T:confirmar_ics}}</a>
+      </div>
     </div>
   </section>
 
@@ -567,6 +640,82 @@
     var vistaTipo = document.getElementById('vista-tipo');
     var painel = document.getElementById('proximos-confirmar');
 
+    // Destaque: pequeno quadro que mostra os eventos visíveis, um a um, a cada 5s.
+    var destaque = document.getElementById('destaque-proximo');
+    var destaqueCartao = destaque ? destaque.querySelector('.destaque-cartao') : null;
+    var destaquePosicao = destaque ? destaque.querySelector('.destaque-posicao') : null;
+    var destaquePausa = destaque ? destaque.querySelector('.destaque-pausa') : null;
+    var destaqueIndice = 0;
+    var destaqueTemporizador = null;
+    var destaquePausado = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+    function destaqueVisiveis() {
+      var lista = [];
+      for (var i = 0; i < linhas.length; i++) { if (!linhas[i].hidden) lista.push(linhas[i]); }
+      return lista;
+    }
+    function destaqueMostrar() {
+      if (!destaque) return;
+      var visiveis = destaqueVisiveis();
+      if (!visiveis.length) { destaque.hidden = true; return; }
+      destaque.hidden = false;
+      if (destaqueIndice >= visiveis.length) destaqueIndice = 0;
+      var linha = visiveis[destaqueIndice];
+      if (destaqueCartao) {
+        destaqueCartao.className = 'destaque-cartao ' + linha.className;
+        var estilo = linha.getAttribute('style');
+        if (estilo) destaqueCartao.setAttribute('style', estilo);
+        while (destaqueCartao.firstChild) destaqueCartao.removeChild(destaqueCartao.firstChild);
+        var info = linha.querySelector('.info-proximo');
+        if (info) destaqueCartao.appendChild(info.cloneNode(true));
+      }
+      if (destaquePosicao) {
+        var modelo = destaquePosicao.getAttribute('data-modelo') || '';
+        destaquePosicao.textContent = modelo.replace('{atual}', String(destaqueIndice + 1)).replace('{total}', String(visiveis.length));
+      }
+    }
+    function destaqueParar() { if (destaqueTemporizador) { clearInterval(destaqueTemporizador); destaqueTemporizador = null; } }
+    function destaqueComecar() {
+      destaqueParar();
+      if (destaquePausado) return;
+      destaqueTemporizador = setInterval(function () {
+        var visiveis = destaqueVisiveis();
+        if (!visiveis.length) return;
+        destaqueIndice = (destaqueIndice + 1) % visiveis.length;
+        destaqueMostrar();
+      }, 5000);
+    }
+    if (destaque) {
+      var botoesNav = destaque.querySelectorAll('.destaque-nav');
+      for (var n = 0; n < botoesNav.length; n++) {
+        botoesNav[n].addEventListener('click', function () {
+          var visiveis = destaqueVisiveis();
+          if (!visiveis.length) return;
+          var dir = parseInt(this.getAttribute('data-dir'), 10);
+          destaqueIndice = (destaqueIndice + dir + visiveis.length) % visiveis.length;
+          destaqueMostrar();
+          destaqueComecar();
+        });
+      }
+      if (destaquePausa) {
+        destaquePausa.addEventListener('click', function () {
+          destaquePausado = !destaquePausado;
+          destaquePausa.setAttribute('aria-pressed', String(destaquePausado));
+          destaquePausa.textContent = destaquePausado
+            ? destaquePausa.getAttribute('data-continuar')
+            : destaquePausa.getAttribute('data-pausar');
+          if (destaquePausado) destaqueParar(); else destaqueComecar();
+        });
+      }
+      destaque.addEventListener('mouseenter', destaqueParar);
+      destaque.addEventListener('mouseleave', function () { if (!destaquePausado) destaqueComecar(); });
+      destaque.addEventListener('focusin', destaqueParar);
+      destaque.addEventListener('focusout', function () { if (!destaquePausado) destaqueComecar(); });
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) destaqueParar(); else if (!destaquePausado) destaqueComecar();
+      });
+    }
+
     function chipsLigados(classe) {
       var slugs = [];
       for (var i = 0; i < chips.length; i++) {
@@ -617,6 +766,9 @@
         }
       }
       atualizarBotao();
+      destaqueIndice = 0;
+      destaqueMostrar();
+      destaqueComecar();
     }
 
     for (var c = 0; c < chips.length; c++) chips[c].addEventListener('change', aplicarFiltro);
