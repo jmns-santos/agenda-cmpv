@@ -1137,6 +1137,29 @@ URL:https://www.cm-pvarzim.pt/eventos/um-concerto-a-luz-da-historia-comemo
  racao-dos-25-anos-do-arquivo/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Oficina de Cozinha Botânica: "Preparar o Natal"
+DTSTART:20261212T100000Z
+DTEND:20261212T120000Z
+DTSTAMP:20261104T112814Z
+UID:b2ZpY2luYS1kZS1jb3ppbmhhLWJvdGFuaWNhLXByZXBhcmFyLW8tbmF0YWx8MjAyNi0xMS
+ 0wNCAxMToyNzo1NA==@agenda.cm-pvarzim.pt
+CATEGORIES:Bürgerschaft,Workshops und Aktivitäten
+DESCRIPTION:No dia 12 de dezembro\, às 10h00\, o Mercado Municipal irá d
+ inamizar uma oficina de cozinha botânica.\n\nTickets und Anmeldung (auf P
+ ortugiesisch):\nAs inscrições são limitadas e deverão ser efetuadas at
+ ravés do email mercadomunicipal@cm-pvarzim.pt\, até ao dia 9 de dezembro
+ .\nAnmeldung: https://www.cm-pvarzim.pt/eventos/oficina-de-cozinha-botanic
+ a-celebrar-o-sao-martinho/mercadomunicipal@cm-pvarzim.pt\n\nTitel und Besc
+ hreibung der Veranstaltung auf Portugiesisch\, wie von der Stadt veröffen
+ tlicht.\n\nWeitere Informationen: https://www.cm-pvarzim.pt/eventos/oficin
+ a-de-cozinha-botanica-preparar-o-natal/
+LAST-MODIFIED:20261104T112814Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/oficina-de-cozinha-botanica-preparar
+ -o-natal/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Clube de Leituras Marítimas "Livros de Marear"
 DTSTART:20261212T150000Z
 DTEND:20261212T174500Z

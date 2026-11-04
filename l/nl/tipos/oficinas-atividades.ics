@@ -139,6 +139,29 @@ URL:https://www.cm-pvarzim.pt/eventos/ciclo-lavorada-gente-um-prefacio-a-c
  amisola-poveira-representacao-das-camisolas-no-seculo-xix/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Oficina de Cozinha Botânica: "Preparar o Natal"
+DTSTART:20261212T100000Z
+DTEND:20261212T120000Z
+DTSTAMP:20261104T112814Z
+UID:b2ZpY2luYS1kZS1jb3ppbmhhLWJvdGFuaWNhLXByZXBhcmFyLW8tbmF0YWx8MjAyNi0xMS
+ 0wNCAxMToyNzo1NA==@agenda.cm-pvarzim.pt
+CATEGORIES:Burgerschap,Workshops en activiteiten
+DESCRIPTION:No dia 12 de dezembro\, às 10h00\, o Mercado Municipal irá d
+ inamizar uma oficina de cozinha botânica.\n\nKaartjes en inschrijving (in
+  het Portugees):\nAs inscrições são limitadas e deverão ser efetuadas 
+ através do email mercadomunicipal@cm-pvarzim.pt\, até ao dia 9 de dezemb
+ ro.\nInschrijving: https://www.cm-pvarzim.pt/eventos/oficina-de-cozinha-bo
+ tanica-celebrar-o-sao-martinho/mercadomunicipal@cm-pvarzim.pt\n\nTitel en 
+ beschrijving van het evenement in het Portugees\, zoals gepubliceerd door 
+ de gemeente.\n\nMeer informatie: https://www.cm-pvarzim.pt/eventos/oficina
+ -de-cozinha-botanica-preparar-o-natal/
+LAST-MODIFIED:20261104T112814Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/oficina-de-cozinha-botanica-preparar
+ -o-natal/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Sábados a jogar na Biblioteca
 DTSTART:20261212T150000Z
 DTEND:20261212T170000Z

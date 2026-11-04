@@ -107,6 +107,29 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/gala-miss-povoa/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Oficina de Cozinha Botânica: "Preparar o Natal"
+DTSTART:20261212T100000Z
+DTEND:20261212T120000Z
+DTSTAMP:20261104T112814Z
+UID:b2ZpY2luYS1kZS1jb3ppbmhhLWJvdGFuaWNhLXByZXBhcmFyLW8tbmF0YWx8MjAyNi0xMS
+ 0wNCAxMToyNzo1NA==@agenda.cm-pvarzim.pt
+CATEGORIES:市民生活,ワークショップ・アクティビティ
+DESCRIPTION:No dia 12 de dezembro\, às 10h00\, o Mercado Municipal irá d
+ inamizar uma oficina de cozinha botânica.\n\nチケット・申し込み
+ （ポルトガル語）：\nAs inscrições são limitadas e deverão ser
+  efetuadas através do email mercadomunicipal@cm-pvarzim.pt\, até ao dia 
+ 9 de dezembro.\n申し込み: https://www.cm-pvarzim.pt/eventos/oficina-de
+ -cozinha-botanica-celebrar-o-sao-martinho/mercadomunicipal@cm-pvarzim.pt\n
+ \nイベントのタイトルと説明は、市が公開しているポル
+ トガル語のままです。\n\n詳細: https://www.cm-pvarzim.pt/evento
+ s/oficina-de-cozinha-botanica-preparar-o-natal/
+LAST-MODIFIED:20261104T112814Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/oficina-de-cozinha-botanica-preparar
+ -o-natal/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Rastreios Cardiovasculares Gratuitos
 DTSTART:20261219T090000Z
 DTEND:20261219T130000Z
