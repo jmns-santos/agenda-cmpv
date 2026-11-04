@@ -1162,9 +1162,10 @@ def eventos_proximos(classificados, agora, t_ics, nomes, t=None):
             "inicio": inicio.isoformat(),
             "fim": fim.isoformat(),
             "diaInteiro": bool(eh_dia_inteiro(inicio, fim)),
-            # Já em curso agora (começou mas ainda não acabou): a página assinala "Em curso"
-            # em vez de mostrar uma data de início que já passou.
-            "emCurso": inicio <= agora <= fim,
+            # "Em curso" só para quem já vinha de um dia anterior (exposições, festivais):
+            # um evento que decorre hoje não precisa da etiqueta, a própria lista já o mostra
+            # como de hoje. Sem isto, qualquer evento de hoje já a decorrer ficaria marcado.
+            "emCurso": inicio.astimezone(LISBOA).date() < agora.astimezone(LISBOA).date() <= fim.astimezone(LISBOA).date(),
             "local": str(ev.get("location") or ""),
             "link": str(ev.get("url") or ""),
             "temaSlug": tema.slug, "temaNome": nome_grupo(tema, t)[0], "temaCor": tema.cor,
@@ -1210,13 +1211,16 @@ def secao_proximos(proximos, t, agora=None):
         link = p.get("link") or ""
         info_html = ""
         if link:
+            # Rótulo curto sempre visível (não só para leitores de ecrã): tem de ficar
+            # claro que ali se chega a mais informação sobre o evento (bilhetes, inscrição
+            # ou a página da câmara), não só um ícone que se possa confundir com outra coisa.
             info_html = (
                 '<a class="botao-info" href="{href}" target="_blank" rel="noopener noreferrer" aria-label="{aria}">'
-                '{icone}<span class="apenas-leitor">{rotulo}</span></a>\n'
+                '{icone}<span>{curta}</span></a>\n'
             ).format(
                 href=html.escape(link, quote=True),
                 aria=html.escape("{}: {}".format(t["mais_info"], p["titulo"]), quote=True),
-                icone=ICONE_INFO, rotulo=html.escape(t["mais_info"]),
+                icone=ICONE_INFO, curta=html.escape(t["info_curta"]),
             )
         ics_unico = (
             "BEGIN:VCALENDAR\r\nPRODID:{prodid}\r\nVERSION:2.0\r\nCALSCALE:GREGORIAN\r\n{vevent}END:VCALENDAR\r\n"

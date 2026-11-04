@@ -108,7 +108,8 @@
    "widget_posicao": "{atual} de {total}",
    "proximos_escolha": "Escolha «Por tema» ou «Por tipo» para ver os próximos eventos.",
    "escolha_hint": "Escolha «Subscrever por tema» ou «Subscrever por tipo» para ver as opções.",
-   "destaque_titulo": "Em destaque"
+   "destaque_titulo": "Em destaque",
+   "info_curta": "+ Info"
   },
   "en": {
    "nome": "English",
@@ -284,7 +285,8 @@
    "widget_posicao": "{atual} of {total}",
    "proximos_escolha": "Choose “By theme” or “By type” to see the upcoming events.",
    "escolha_hint": "Choose “Subscribe by theme” or “Subscribe by type” to see the options.",
-   "destaque_titulo": "Highlighted"
+   "destaque_titulo": "Highlighted",
+   "info_curta": "+ Info"
   },
   "es": {
    "nome": "Español",
@@ -460,7 +462,8 @@
    "widget_posicao": "{atual} de {total}",
    "proximos_escolha": "Elija «Por tema» o «Por tipo» para ver los próximos eventos.",
    "escolha_hint": "Elija «Suscribirse por tema» o «Suscribirse por tipo» para ver las opciones.",
-   "destaque_titulo": "Destacado"
+   "destaque_titulo": "Destacado",
+   "info_curta": "+ Info"
   },
   "it": {
    "nome": "Italiano",
@@ -636,7 +639,8 @@
    "widget_posicao": "{atual} di {total}",
    "proximos_escolha": "Scegli «Per tema» o «Per tipo» per vedere i prossimi eventi.",
    "escolha_hint": "Scegli «Abbonati per tema» o «Abbonati per tipo» per vedere le opzioni.",
-   "destaque_titulo": "In evidenza"
+   "destaque_titulo": "In evidenza",
+   "info_curta": "+ Info"
   },
   "fr": {
    "nome": "Français",
@@ -812,7 +816,8 @@
    "widget_posicao": "{atual} sur {total}",
    "proximos_escolha": "Choisissez « Par thème » ou « Par type » pour voir les prochains événements.",
    "escolha_hint": "Choisissez « S'abonner par thème » ou « S'abonner par type » pour voir les options.",
-   "destaque_titulo": "À la une"
+   "destaque_titulo": "À la une",
+   "info_curta": "+ Infos"
   },
   "de": {
    "nome": "Deutsch",
@@ -988,7 +993,8 @@
    "widget_posicao": "{atual} von {total}",
    "proximos_escolha": "Wählen Sie „Nach Thema“ oder „Nach Art“, um die kommenden Veranstaltungen zu sehen.",
    "escolha_hint": "Wählen Sie „Nach Thema abonnieren“ oder „Nach Art abonnieren“, um die Optionen zu sehen.",
-   "destaque_titulo": "Im Fokus"
+   "destaque_titulo": "Im Fokus",
+   "info_curta": "+ Info"
   },
   "zh": {
    "nome": "中文",
@@ -1164,7 +1170,8 @@
    "widget_posicao": "第 {atual} 项，共 {total} 项",
    "proximos_escolha": "选择“按主题”或“按类型”即可查看近期活动。",
    "escolha_hint": "选择“按主题订阅”或“按类型订阅”即可查看选项。",
-   "destaque_titulo": "精选"
+   "destaque_titulo": "精选",
+   "info_curta": "+ 详情"
   },
   "ja": {
    "nome": "日本語",
@@ -1340,7 +1347,8 @@
    "widget_posicao": "{total} 件中 {atual} 件目",
    "proximos_escolha": "「テーマ別」または「種類別」を選択すると、今後のイベントが表示されます。",
    "escolha_hint": "「テーマ別に登録」または「種類別に登録」を選択すると、選択肢が表示されます。",
-   "destaque_titulo": "注目"
+   "destaque_titulo": "注目",
+   "info_curta": "+ 詳細"
   },
   "nl": {
    "nome": "Nederlands",
@@ -1516,7 +1524,8 @@
    "widget_posicao": "{atual} van {total}",
    "proximos_escolha": "Kies ‘Op thema’ of ‘Op type’ om de aankomende evenementen te zien.",
    "escolha_hint": "Kies ‘Abonneren op thema’ of ‘Abonneren op type’ om de opties te zien.",
-   "destaque_titulo": "Uitgelicht"
+   "destaque_titulo": "Uitgelicht",
+   "info_curta": "+ Info"
   },
   "pl": {
    "nome": "Polski",
@@ -1692,7 +1701,8 @@
    "widget_posicao": "{atual} z {total}",
    "proximos_escolha": "Wybierz „Według tematu” lub „Według typu”, aby zobaczyć najbliższe wydarzenia.",
    "escolha_hint": "Wybierz „Zapisz się według tematu” lub „Zapisz się według typu”, aby zobaczyć opcje.",
-   "destaque_titulo": "Wyróżnione"
+   "destaque_titulo": "Wyróżnione",
+   "info_curta": "+ Info"
   }
  }
 }
