@@ -36,6 +36,27 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Oficina de Cozinha Botânica: Celebrar o São Martinho
+DTSTART:20261114T100000Z
+DTEND:20261114T120000Z
+DTSTAMP:20261104T112109Z
+UID:b2ZpY2luYS1kZS1jb3ppbmhhLWJvdGFuaWNhLWNlbGVicmFyLW8tc2FvLW1hcnRpbmhvfD
+ IwMjYtMTEtMDQgMTE6MjE6MDg=@agenda.cm-pvarzim.pt
+CATEGORIES:Bürgerschaft,Workshops und Aktivitäten
+DESCRIPTION:No dia 14 de novembro\, às 10h00\, o Mercado Municipal irá d
+ inamizar uma oficina de cozinha botânica.\n\nTickets und Anmeldung (auf P
+ ortugiesisch):\nAs inscrições são limitadas e deverão ser efetuadas at
+ ravés do email mercadomunicipal@cm-pvarzim.pt\, até ao dia 12 de novembr
+ o.\n\nTitel und Beschreibung der Veranstaltung auf Portugiesisch\, wie von
+  der Stadt veröffentlicht.\n\nWeitere Informationen: https://www.cm-pvarz
+ im.pt/eventos/oficina-de-cozinha-botanica-celebrar-o-sao-martinho/
+LAST-MODIFIED:20261104T112109Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/oficina-de-cozinha-botanica-celebrar
+ -o-sao-martinho/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Lavorada Mensal
 DTSTART:20261114T143000Z
 DTEND:20261114T180000Z

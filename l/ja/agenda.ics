@@ -458,6 +458,27 @@ URL:https://www.cm-pvarzim.pt/eventos/xiii-encontro-de-musica-coral-da-pov
  oa-de-varzim/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Oficina de Cozinha Botânica: Celebrar o São Martinho
+DTSTART:20261114T100000Z
+DTEND:20261114T120000Z
+DTSTAMP:20261104T112109Z
+UID:b2ZpY2luYS1kZS1jb3ppbmhhLWJvdGFuaWNhLWNlbGVicmFyLW8tc2FvLW1hcnRpbmhvfD
+ IwMjYtMTEtMDQgMTE6MjE6MDg=@agenda.cm-pvarzim.pt
+CATEGORIES:市民生活,ワークショップ・アクティビティ
+DESCRIPTION:No dia 14 de novembro\, às 10h00\, o Mercado Municipal irá d
+ inamizar uma oficina de cozinha botânica.\n\nチケット・申し込み
+ （ポルトガル語）：\nAs inscrições são limitadas e deverão ser
+  efetuadas através do email mercadomunicipal@cm-pvarzim.pt\, até ao dia 
+ 12 de novembro.\n\nイベントのタイトルと説明は、市が公開
+ しているポルトガル語のままです。\n\n詳細: https://www.cm
+ -pvarzim.pt/eventos/oficina-de-cozinha-botanica-celebrar-o-sao-martinho/
+LAST-MODIFIED:20261104T112109Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/oficina-de-cozinha-botanica-celebrar
+ -o-sao-martinho/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Lavorada Mensal
 DTSTART:20261114T143000Z
 DTEND:20261114T180000Z
@@ -756,6 +777,26 @@ LAST-MODIFIED:20261023T152912Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-amaramalia/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Gala Miss Póvoa
+DTSTART:20261121T210000Z
+DTEND:20261121T233000Z
+DTSTAMP:20261104T105811Z
+UID:Z2FsYS1taXNzLXBvdm9hfDIwMjYtMTEtMDQgMTA6NTY6NDQ=@agenda.cm-pvarzim.pt
+CATEGORIES:市民生活,記念行事・式典
+DESCRIPTION:No dia 21 de novembro\, às 21h00\, o Póvoa Arena vai acolher
+  a Gala Final do Concurso Miss Póvoa\, promovido pelo Jornal Mais Semaná
+ rio\, com o apoio do Município da Póvoa de Varzim.\n\nチケット・申
+ し込み（ポルトガル語）：\nOs convites\, gratuitos\, mas sujeit
+ os à lotação do espaço\, já estão disponíveis.\n\nイベントの
+ タイトルと説明は、市が公開しているポルトガル語の
+ ままです。\n\n詳細: https://www.cm-pvarzim.pt/eventos/gala-miss-pov
+ oa/
+LAST-MODIFIED:20261104T105811Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/gala-miss-povoa/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cinema "Trapalhões"

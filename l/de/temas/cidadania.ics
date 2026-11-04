@@ -66,6 +66,46 @@ URL:https://www.cm-pvarzim.pt/eventos/rastreios-cardiovasculares-gratuitos
  /
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Oficina de Cozinha Botânica: Celebrar o São Martinho
+DTSTART:20261114T100000Z
+DTEND:20261114T120000Z
+DTSTAMP:20261104T112109Z
+UID:b2ZpY2luYS1kZS1jb3ppbmhhLWJvdGFuaWNhLWNlbGVicmFyLW8tc2FvLW1hcnRpbmhvfD
+ IwMjYtMTEtMDQgMTE6MjE6MDg=@agenda.cm-pvarzim.pt
+CATEGORIES:Bürgerschaft,Workshops und Aktivitäten
+DESCRIPTION:No dia 14 de novembro\, às 10h00\, o Mercado Municipal irá d
+ inamizar uma oficina de cozinha botânica.\n\nTickets und Anmeldung (auf P
+ ortugiesisch):\nAs inscrições são limitadas e deverão ser efetuadas at
+ ravés do email mercadomunicipal@cm-pvarzim.pt\, até ao dia 12 de novembr
+ o.\n\nTitel und Beschreibung der Veranstaltung auf Portugiesisch\, wie von
+  der Stadt veröffentlicht.\n\nWeitere Informationen: https://www.cm-pvarz
+ im.pt/eventos/oficina-de-cozinha-botanica-celebrar-o-sao-martinho/
+LAST-MODIFIED:20261104T112109Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/oficina-de-cozinha-botanica-celebrar
+ -o-sao-martinho/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Gala Miss Póvoa
+DTSTART:20261121T210000Z
+DTEND:20261121T233000Z
+DTSTAMP:20261104T105811Z
+UID:Z2FsYS1taXNzLXBvdm9hfDIwMjYtMTEtMDQgMTA6NTY6NDQ=@agenda.cm-pvarzim.pt
+CATEGORIES:Bürgerschaft,Gedenktage und Zeremonien
+DESCRIPTION:No dia 21 de novembro\, às 21h00\, o Póvoa Arena vai acolher
+  a Gala Final do Concurso Miss Póvoa\, promovido pelo Jornal Mais Semaná
+ rio\, com o apoio do Município da Póvoa de Varzim.\n\nTickets und Anmeld
+ ung (auf Portugiesisch):\nOs convites\, gratuitos\, mas sujeitos à lotaç
+ ão do espaço\, já estão disponíveis.\n\nTitel und Beschreibung der Ve
+ ranstaltung auf Portugiesisch\, wie von der Stadt veröffentlicht.\n\nWeit
+ ere Informationen: https://www.cm-pvarzim.pt/eventos/gala-miss-povoa/
+LAST-MODIFIED:20261104T105811Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/gala-miss-povoa/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Rastreios Cardiovasculares Gratuitos
 DTSTART:20261219T090000Z
 DTEND:20261219T130000Z

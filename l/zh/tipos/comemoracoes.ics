@@ -79,4 +79,23 @@ LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/gala-do-desporto-4/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Gala Miss Póvoa
+DTSTART:20261121T210000Z
+DTEND:20261121T233000Z
+DTSTAMP:20261104T105811Z
+UID:Z2FsYS1taXNzLXBvdm9hfDIwMjYtMTEtMDQgMTA6NTY6NDQ=@agenda.cm-pvarzim.pt
+CATEGORIES:公民生活,纪念与典礼
+DESCRIPTION:No dia 21 de novembro\, às 21h00\, o Póvoa Arena vai acolher
+  a Gala Final do Concurso Miss Póvoa\, promovido pelo Jornal Mais Semaná
+ rio\, com o apoio do Município da Póvoa de Varzim.\n\n门票与报名（
+ 葡萄牙语）：\nOs convites\, gratuitos\, mas sujeitos à lotação do
+  espaço\, já estão disponíveis.\n\n活动标题和说明为葡萄牙
+ 语，与市政府发布的内容一致。\n\n更多信息: https://www.cm
+ -pvarzim.pt/eventos/gala-miss-povoa/
+LAST-MODIFIED:20261104T105811Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/gala-miss-povoa/
+END:VEVENT
 END:VCALENDAR
