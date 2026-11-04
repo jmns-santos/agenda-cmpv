@@ -83,7 +83,7 @@
   .topo h1 { margin: 0; font-size: clamp(1.7rem, 7vw, 2.7rem); overflow-wrap: anywhere; hyphens: auto; line-height: 1; font-weight: 700; letter-spacing: .01em; }
   /* Uma só cor de base (branco) com um único tom de destaque (dourado), sempre o mesmo nos dois */
   .topo h1 { color: #fff; }
-  .barra-titulo { color: var(--sol); margin: 0 .06em; }
+  .topo .categoria { margin: .2rem 0 0; color: var(--sol); font-size: .85rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
   .topo .sub { margin-top: .35rem; color: #fff; font-size: clamp(1.05rem, 3vw, 1.3rem); line-height: 1.3; }
   .topo .sub strong { font-weight: 700; color: var(--sol); }
   .onda { display: block; width: 100%; height: 18px; margin-top: .9rem; background: var(--mar-forte); }
@@ -148,15 +148,20 @@
   #sis-apple:checked ~ .seletor label[for="sis-apple"],
   #sis-android:checked ~ .seletor label[for="sis-android"],
   #sis-outro:checked ~ .seletor label[for="sis-outro"],
-  #vista-tema:checked ~ main label[for="vista-tema"],
-  #vista-tipo:checked ~ main label[for="vista-tipo"] { background: var(--botao); color: #fff; box-shadow: var(--sombra); }
+  #assinar-tema:checked ~ main label[for="assinar-tema"],
+  #assinar-tipo:checked ~ main label[for="assinar-tipo"],
+  #filtro-tema:checked ~ main label[for="filtro-tema"],
+  #filtro-tipo:checked ~ main label[for="filtro-tipo"] { background: var(--botao); color: #fff; box-shadow: var(--sombra); }
   #sis-google:focus-visible ~ .seletor label[for="sis-google"],
   #sis-outlook:focus-visible ~ .seletor label[for="sis-outlook"],
   #sis-apple:focus-visible ~ .seletor label[for="sis-apple"],
   #sis-android:focus-visible ~ .seletor label[for="sis-android"],
   #sis-outro:focus-visible ~ .seletor label[for="sis-outro"],
-  #vista-tema:focus-visible ~ main label[for="vista-tema"],
-  #vista-tipo:focus-visible ~ main label[for="vista-tipo"] { outline: 3px solid var(--foco); outline-offset: 1px; }
+  #assinar-tema:focus-visible ~ main label[for="assinar-tema"],
+  #assinar-tipo:focus-visible ~ main label[for="assinar-tipo"],
+  #filtro-tema:focus-visible ~ main label[for="filtro-tema"],
+  #filtro-tipo:focus-visible ~ main label[for="filtro-tipo"] { outline: 3px solid var(--foco); outline-offset: 1px; }
+  #assinar-fechado:focus-visible ~ main .botao-fechar { outline: 3px solid var(--foco); outline-offset: 1px; }
   .dica { display: none; margin-top: .45rem; font-size: .95rem; color: var(--cinza); }
   #sis-google:checked ~ .seletor .dica-google,
   #sis-outlook:checked ~ .seletor .dica-outlook,
@@ -207,14 +212,15 @@
   .escolha::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
   .escolha > .segmentos { max-width: 30rem; }
 
-  .escolha-hint, .proximos-hint {
+  .escolha-hint {
     margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem;
   }
-  .escolha-conteudo, .proximos-conteudo { display: none; }
-  #vista-tema:checked ~ main .escolha-conteudo, #vista-tipo:checked ~ main .escolha-conteudo,
-  #vista-tema:checked ~ main .proximos-conteudo, #vista-tipo:checked ~ main .proximos-conteudo { display: block; }
-  #vista-tema:checked ~ main .escolha-hint, #vista-tipo:checked ~ main .escolha-hint,
-  #vista-tema:checked ~ main .proximos-hint, #vista-tipo:checked ~ main .proximos-hint { display: none; }
+  .escolha-conteudo { display: none; }
+  #assinar-tema:checked ~ main .escolha-conteudo,
+  #assinar-tipo:checked ~ main .escolha-conteudo { display: block; }
+  #assinar-tema:checked ~ main .escolha-hint,
+  #assinar-tipo:checked ~ main .escolha-hint { display: none; }
+  .fechar-vista { margin: 0 0 .9rem; }
 
   .grelha { list-style: none; margin: .9rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(16.5rem, 100%), 1fr)); gap: .7rem; }
   .cartao {
@@ -234,8 +240,8 @@
   .cartao .copiar { width: 100%; }
 
   .grelha.painel-tipos { display: none; }
-  #vista-tipo:checked ~ main .grelha.painel-temas { display: none; }
-  #vista-tipo:checked ~ main .grelha.painel-tipos { display: grid; }
+  #assinar-tipo:checked ~ main .grelha.painel-temas { display: none; }
+  #assinar-tipo:checked ~ main .grelha.painel-tipos { display: grid; }
 
   .aviso { margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
 
@@ -250,8 +256,8 @@
   .js .filtros { display: flex; }
   .chips-temas, .chips-tipos { display: flex; flex-wrap: wrap; gap: .4rem; }
   .chips-tipos { display: none; }
-  #vista-tipo:checked ~ main .chips-temas { display: none; }
-  #vista-tipo:checked ~ main .chips-tipos { display: flex; }
+  #filtro-tipo:checked ~ main .chips-temas { display: none; }
+  #filtro-tipo:checked ~ main .chips-tipos { display: flex; }
   .chip-filtro + label {
     display: inline-flex; align-items: center; min-height: 2.3rem; padding: .25rem .75rem;
     border-radius: 999px; border: 1.5px solid var(--linha); background: var(--cartao);
@@ -264,7 +270,7 @@
   .destaque { margin-top: .9rem; background: var(--mar-claro); border-radius: 12px; padding: .8rem .9rem; }
   .destaque-rotulo { margin: 0 0 .5rem; font-size: .85rem; font-weight: 700; color: var(--cinza); text-transform: uppercase; letter-spacing: .03em; }
   .destaque-cartao { transition: opacity .2s; border-left: 6px solid var(--ct); padding-left: .7rem; }
-  #vista-tipo:checked ~ main .destaque-cartao { border-left-color: var(--cp); }
+  #filtro-tipo:checked ~ main .destaque-cartao { border-left-color: var(--cp); }
   .destaque-cartao.a-mudar { opacity: 0; }
   .destaque-controlos { display: flex; align-items: center; gap: .5rem; margin-top: .7rem; }
   .destaque-nav {
@@ -292,7 +298,7 @@
     display: flex; align-items: center; gap: .6rem; background: var(--cartao); border: 1px solid var(--linha);
     border-radius: 10px; padding: .55rem .7rem; border-left: 6px solid var(--ct);
   }
-  #vista-tipo:checked ~ main .item-proximo { border-left-color: var(--cp); }
+  #filtro-tipo:checked ~ main .item-proximo { border-left-color: var(--cp); }
   .marcar-coluna { display: none; flex: none; }
   .js #modo-selecao:checked ~ .lista-proximos .marcar-coluna { display: flex; }
   .marcar-evento { width: 1.3rem; height: 1.3rem; flex: none; accent-color: var(--botao); }
@@ -373,15 +379,19 @@
 <input type="radio" name="sistema" id="sis-apple" class="escondido" aria-label="{{T:op_apple}}">
 <input type="radio" name="sistema" id="sis-android" class="escondido" aria-label="{{T:op_android}}">
 <input type="radio" name="sistema" id="sis-outro" class="escondido" aria-label="{{T:op_outro}}">
-<input type="radio" name="vista" id="vista-tema" class="escondido" aria-label="{{T:por_tema}}">
-<input type="radio" name="vista" id="vista-tipo" class="escondido" aria-label="{{T:por_tipo}}">
+<input type="radio" name="assinar" id="assinar-fechado" class="escondido" checked aria-label="{{T:fechar}}">
+<input type="radio" name="assinar" id="assinar-tema" class="escondido" aria-label="{{T:por_tema}}">
+<input type="radio" name="assinar" id="assinar-tipo" class="escondido" aria-label="{{T:por_tipo}}">
+<input type="radio" name="filtro" id="filtro-tema" class="escondido" checked aria-label="{{T:filtrar_tema}}">
+<input type="radio" name="filtro" id="filtro-tipo" class="escondido" aria-label="{{T:filtrar_tipo}}">
 
 <header class="topo">
   <div class="largura topo-grelha">
     <div class="marca">
-      <span class="logo-cm"><img src="{{LOGOTIPO}}" alt="Câmara Municipal da Póvoa de Varzim" width="90" height="65"></span>
+      <span class="logo-cm"><img src="{{LOGOTIPO}}" alt="Câmara Municipal da Póvoa de Varzim" width="297" height="110"></span>
       <div>
         <h1>{{T:h1_html}}</h1>
+        <p class="categoria">{{T:categoria}}</p>
         <p class="sub">{{T:sub_html}}</p>
       </div>
     </div>
@@ -440,15 +450,68 @@
     {{ACOES_GERAL}}
   </section>
 
+  <section class="proximos" aria-labelledby="t-proximos">
+    <h2 id="t-proximos">{{T:proximos_titulo}}</h2>
+    <p class="linha2">{{T:proximos_texto}}</p>
+
+    <div class="segmentos" role="group" aria-label="{{T:filtrar_tema}} / {{T:filtrar_tipo}}">
+      <label for="filtro-tema">{{T:filtrar_tema}}</label>
+      <label for="filtro-tipo">{{T:filtrar_tipo}}</label>
+    </div>
+
+    <div class="filtros" role="group" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
+      <div class="chips-temas" aria-label="{{T:por_tema}}">
+{{CHIPS_TEMAS_PROXIMOS}}
+      </div>
+      <div class="chips-tipos" aria-label="{{T:por_tipo}}">
+{{CHIPS_TIPOS_PROXIMOS}}
+      </div>
+    </div>
+
+    <div class="destaque" id="destaque-proximo" role="group" hidden aria-label="{{T:destaque_titulo}}">
+      <p class="destaque-rotulo">{{T:destaque_titulo}}</p>
+      <div class="destaque-cartao" aria-live="polite"></div>
+      <div class="destaque-controlos">
+        <button type="button" class="destaque-nav" data-dir="-1" aria-label="{{T:anterior}}">‹</button>
+        <button type="button" class="destaque-pausa" aria-pressed="false"
+          data-pausar="{{T:pausar}}" data-continuar="{{T:continuar}}">{{T:pausar}}</button>
+        <button type="button" class="destaque-nav" data-dir="1" aria-label="{{T:seguinte}}">›</button>
+        <span class="destaque-posicao" data-modelo="{{T:widget_posicao}}" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <input type="checkbox" id="modo-selecao" class="escondido">
+    <p class="controlo-selecao"><label for="modo-selecao" class="botao-secundario">{{T:selecionar_varios}}</label></p>
+
+    <div class="barra-selecao">
+      <label class="selecionar-todos"><input type="checkbox" id="proximos-todos">{{T:selecionar_todos}}</label>
+      <button type="button" class="botao" id="proximos-adicionar" disabled
+        data-rotulo-zero="{{T:adicionar_zero}}" data-rotulo-n="{{T:adicionar_n}}">{{T:adicionar_zero}}</button>
+    </div>
+
+    <ul class="lista-proximos">
+{{LISTA_PROXIMOS}}
+    </ul>
+    <p class="vazio-proximos">{{T:proximos_vazio}}</p>
+
+    <div class="confirmar" id="proximos-confirmar" hidden>
+      <p>{{T:confirmar_titulo}}</p>
+      <ol class="confirmar-lista"></ol>
+      <a class="confirmar-ics" href="#" download="eventos.ics">{{T:confirmar_ics}}</a>
+    </div>
+  </section>
+
   <section class="escolha" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
     <div class="segmentos" role="group" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
-      <label for="vista-tema">{{T:por_tema}}</label>
-      <label for="vista-tipo">{{T:por_tipo}}</label>
+      <label for="assinar-tema">{{T:por_tema}}</label>
+      <label for="assinar-tipo">{{T:por_tipo}}</label>
     </div>
 
     <p class="escolha-hint">{{T:escolha_hint}}</p>
 
     <div class="escolha-conteudo">
+      <p class="fechar-vista"><label for="assinar-fechado" class="botao-secundario botao-fechar"><span aria-hidden="true">×</span> {{T:fechar}}</label></p>
+
       <ul class="grelha painel-temas" aria-label="{{T:por_tema}}">
 {{LISTA_TEMAS}}
       </ul>
@@ -457,61 +520,6 @@
       </ul>
 
       <p class="aviso">{{T:aviso}}</p>
-    </div>
-  </section>
-
-  <section class="proximos" aria-labelledby="t-proximos">
-    <h2 id="t-proximos">{{T:proximos_titulo}}</h2>
-    <p class="linha2">{{T:proximos_texto}}</p>
-
-    <div class="segmentos" role="group" aria-label="{{T:filtrar_tema}} / {{T:filtrar_tipo}}">
-      <label for="vista-tema">{{T:filtrar_tema}}</label>
-      <label for="vista-tipo">{{T:filtrar_tipo}}</label>
-    </div>
-
-    <p class="proximos-hint">{{T:proximos_escolha}}</p>
-
-    <div class="proximos-conteudo">
-      <div class="filtros" role="group" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
-        <div class="chips-temas" aria-label="{{T:por_tema}}">
-{{CHIPS_TEMAS_PROXIMOS}}
-        </div>
-        <div class="chips-tipos" aria-label="{{T:por_tipo}}">
-{{CHIPS_TIPOS_PROXIMOS}}
-        </div>
-      </div>
-
-      <div class="destaque" id="destaque-proximo" role="group" hidden aria-label="{{T:destaque_titulo}}">
-        <p class="destaque-rotulo">{{T:destaque_titulo}}</p>
-        <div class="destaque-cartao" aria-live="polite"></div>
-        <div class="destaque-controlos">
-          <button type="button" class="destaque-nav" data-dir="-1" aria-label="{{T:anterior}}">‹</button>
-          <button type="button" class="destaque-pausa" aria-pressed="false"
-            data-pausar="{{T:pausar}}" data-continuar="{{T:continuar}}">{{T:pausar}}</button>
-          <button type="button" class="destaque-nav" data-dir="1" aria-label="{{T:seguinte}}">›</button>
-          <span class="destaque-posicao" data-modelo="{{T:widget_posicao}}" aria-hidden="true"></span>
-        </div>
-      </div>
-
-      <input type="checkbox" id="modo-selecao" class="escondido">
-      <p class="controlo-selecao"><label for="modo-selecao" class="botao-secundario">{{T:selecionar_varios}}</label></p>
-
-      <div class="barra-selecao">
-        <label class="selecionar-todos"><input type="checkbox" id="proximos-todos">{{T:selecionar_todos}}</label>
-        <button type="button" class="botao" id="proximos-adicionar" disabled
-          data-rotulo-zero="{{T:adicionar_zero}}" data-rotulo-n="{{T:adicionar_n}}">{{T:adicionar_zero}}</button>
-      </div>
-
-      <ul class="lista-proximos">
-{{LISTA_PROXIMOS}}
-      </ul>
-      <p class="vazio-proximos">{{T:proximos_vazio}}</p>
-
-      <div class="confirmar" id="proximos-confirmar" hidden>
-        <p>{{T:confirmar_titulo}}</p>
-        <ol class="confirmar-lista"></ol>
-        <a class="confirmar-ics" href="#" download="eventos.ics">{{T:confirmar_ics}}</a>
-      </div>
     </div>
   </section>
 
@@ -534,6 +542,7 @@
 <footer class="largura">
   <p>{{T:rodape_html}}</p>
   <p>{{T:rodape2}}</p>
+  <p>{{T:rodape3}}</p>
 </footer>
 
 <p class="apenas-leitor" aria-live="polite" id="estado"></p>
@@ -642,7 +651,7 @@
     var caixaTodos = document.getElementById('proximos-todos');
     var botaoAdicionar = document.getElementById('proximos-adicionar');
     var chips = secao.querySelectorAll('.chip-filtro');
-    var vistaTipo = document.getElementById('vista-tipo');
+    var vistaTipo = document.getElementById('filtro-tipo');
     var painel = document.getElementById('proximos-confirmar');
 
     // Destaque: pequeno quadro que mostra os eventos visíveis, um a um, a cada 5s.
@@ -779,7 +788,7 @@
     }
 
     for (var c = 0; c < chips.length; c++) chips[c].addEventListener('change', aplicarFiltro);
-    var vistas = document.querySelectorAll('input[name="vista"]');
+    var vistas = document.querySelectorAll('input[name="filtro"]');
     for (var v = 0; v < vistas.length; v++) vistas[v].addEventListener('change', aplicarFiltro);
     var sistemas = document.querySelectorAll('input[name="sistema"]');
     for (var s = 0; s < sistemas.length; s++) {

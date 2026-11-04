@@ -18,7 +18,7 @@
    "html_lang": "pt-PT",
    "titulo_pagina": "NEXO/Eventos · Agenda municipal da Póvoa de Varzim",
    "descricao_meta": "Subscreva a agenda municipal da Póvoa de Varzim no seu calendário: completa, por tema ou por tipo de evento.",
-   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Eventos",
+   "h1_html": "NEXO",
    "sub_html": "A <strong>agenda</strong> no <strong>seu calendário</strong>",
    "saltar": "Saltar para o conteúdo",
    "lingua": "Língua",
@@ -109,7 +109,9 @@
    "proximos_escolha": "Escolha «Por tema» ou «Por tipo» para ver os próximos eventos.",
    "escolha_hint": "Escolha «Subscrever por tema» ou «Subscrever por tipo» para ver as opções.",
    "destaque_titulo": "Em destaque",
-   "info_curta": "+ Info"
+   "info_curta": "+ Info",
+   "categoria": "SOCIEDADE - EVENTOS",
+   "rodape3": "Um projeto do DP-SIG (Departamento de Planeamento), na Plataforma de Gestão Urbana, para partilhar mais informação e ajudar a construir uma cidade mais informada."
   },
   "en": {
    "nome": "English",
@@ -117,7 +119,7 @@
    "html_lang": "en",
    "titulo_pagina": "NEXO/Events · Póvoa de Varzim municipal events",
    "descricao_meta": "Subscribe to Póvoa de Varzim municipal events in your calendar: all events, by theme or by type.",
-   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Events",
+   "h1_html": "NEXO",
    "sub_html": "The <strong>agenda</strong> in <strong>your calendar</strong>",
    "saltar": "Skip to content",
    "lingua": "Language",
@@ -286,7 +288,9 @@
    "proximos_escolha": "Choose “By theme” or “By type” to see the upcoming events.",
    "escolha_hint": "Choose “Subscribe by theme” or “Subscribe by type” to see the options.",
    "destaque_titulo": "Highlighted",
-   "info_curta": "+ Info"
+   "info_curta": "+ Info",
+   "categoria": "SOCIETY - EVENTS",
+   "rodape3": "A DP-SIG (Planning Department) project, part of the Urban Management Platform, to share more information and help build a better-informed city."
   },
   "es": {
    "nome": "Español",
@@ -294,7 +298,7 @@
    "html_lang": "es",
    "titulo_pagina": "NEXO/Eventos · Agenda municipal de Póvoa de Varzim",
    "descricao_meta": "Suscríbase a la agenda municipal de Póvoa de Varzim en su calendario: completa, por tema o por tipo de evento.",
-   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Eventos",
+   "h1_html": "NEXO",
    "sub_html": "La <strong>agenda</strong> en <strong>su calendario</strong>",
    "saltar": "Saltar al contenido",
    "lingua": "Idioma",
@@ -463,7 +467,9 @@
    "proximos_escolha": "Elija «Por tema» o «Por tipo» para ver los próximos eventos.",
    "escolha_hint": "Elija «Suscribirse por tema» o «Suscribirse por tipo» para ver las opciones.",
    "destaque_titulo": "Destacado",
-   "info_curta": "+ Info"
+   "info_curta": "+ Info",
+   "categoria": "SOCIEDAD - EVENTOS",
+   "rodape3": "Un proyecto del DP-SIG (Departamento de Planeamiento), dentro de la Plataforma de Gestión Urbana, para compartir más información y ayudar a construir una ciudad mejor informada."
   },
   "it": {
    "nome": "Italiano",
@@ -471,7 +477,7 @@
    "html_lang": "it",
    "titulo_pagina": "NEXO/Eventi · Agenda municipale di Póvoa de Varzim",
    "descricao_meta": "Iscriviti all'agenda municipale di Póvoa de Varzim nel tuo calendario: completa, per tema o per tipo di evento.",
-   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Eventi",
+   "h1_html": "NEXO",
    "sub_html": "L'<strong>agenda</strong> nel <strong>tuo calendario</strong>",
    "saltar": "Vai al contenuto",
    "lingua": "Lingua",
@@ -640,7 +646,9 @@
    "proximos_escolha": "Scegli «Per tema» o «Per tipo» per vedere i prossimi eventi.",
    "escolha_hint": "Scegli «Abbonati per tema» o «Abbonati per tipo» per vedere le opzioni.",
    "destaque_titulo": "In evidenza",
-   "info_curta": "+ Info"
+   "info_curta": "+ Info",
+   "categoria": "SOCIETÀ - EVENTI",
+   "rodape3": "Un progetto del DP-SIG (Dipartimento di Pianificazione), nella Piattaforma di Gestione Urbana, per condividere più informazioni e contribuire a una città più informata."
   },
   "fr": {
    "nome": "Français",
@@ -648,7 +656,7 @@
    "html_lang": "fr",
    "titulo_pagina": "NEXO/Événements · Agenda municipal de Póvoa de Varzim",
    "descricao_meta": "Abonnez-vous à l'agenda municipal de Póvoa de Varzim dans votre calendrier : complet, par thème ou par type d'événement.",
-   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Événements",
+   "h1_html": "NEXO",
    "sub_html": "L'<strong>agenda</strong> dans <strong>votre calendrier</strong>",
    "saltar": "Aller au contenu",
    "lingua": "Langue",
@@ -817,7 +825,9 @@
    "proximos_escolha": "Choisissez « Par thème » ou « Par type » pour voir les prochains événements.",
    "escolha_hint": "Choisissez « S'abonner par thème » ou « S'abonner par type » pour voir les options.",
    "destaque_titulo": "À la une",
-   "info_curta": "+ Infos"
+   "info_curta": "+ Infos",
+   "categoria": "SOCIÉTÉ - ÉVÉNEMENTS",
+   "rodape3": "Un projet du DP-SIG (Département de Planification), intégré à la Plateforme de Gestion Urbaine, pour partager plus d'informations et contribuer à une ville mieux informée."
   },
   "de": {
    "nome": "Deutsch",
@@ -825,7 +835,7 @@
    "html_lang": "de",
    "titulo_pagina": "NEXO/Veranstaltungen · Veranstaltungskalender von Póvoa de Varzim",
    "descricao_meta": "Abonnieren Sie den städtischen Veranstaltungskalender von Póvoa de Varzim in Ihrem Kalender: komplett, nach Thema oder nach Art.",
-   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Veranstaltungen",
+   "h1_html": "NEXO",
    "sub_html": "Die <strong>Termine</strong> in <strong>Ihrem Kalender</strong>",
    "saltar": "Zum Inhalt springen",
    "lingua": "Sprache",
@@ -994,7 +1004,9 @@
    "proximos_escolha": "Wählen Sie „Nach Thema“ oder „Nach Art“, um die kommenden Veranstaltungen zu sehen.",
    "escolha_hint": "Wählen Sie „Nach Thema abonnieren“ oder „Nach Art abonnieren“, um die Optionen zu sehen.",
    "destaque_titulo": "Im Fokus",
-   "info_curta": "+ Info"
+   "info_curta": "+ Info",
+   "categoria": "GESELLSCHAFT - VERANSTALTUNGEN",
+   "rodape3": "Ein Projekt der Abteilung Planung – GIS (DP-SIG), Teil der Plattform für Stadtmanagement, um mehr Informationen zu teilen und zu einer besser informierten Stadt beizutragen."
   },
   "zh": {
    "nome": "中文",
@@ -1002,7 +1014,7 @@
    "html_lang": "zh-Hans",
    "titulo_pagina": "NEXO/活动 · 波武阿-迪瓦尔津市政活动",
    "descricao_meta": "将波武阿-迪瓦尔津市政活动订阅到您的日历：全部活动、按主题或按类型。",
-   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>活动",
+   "h1_html": "NEXO",
    "sub_html": "<strong>活动</strong>尽在<strong>您的日历</strong>",
    "saltar": "跳到正文",
    "lingua": "语言",
@@ -1171,7 +1183,9 @@
    "proximos_escolha": "选择“按主题”或“按类型”即可查看近期活动。",
    "escolha_hint": "选择“按主题订阅”或“按类型订阅”即可查看选项。",
    "destaque_titulo": "精选",
-   "info_curta": "+ 详情"
+   "info_curta": "+ 详情",
+   "categoria": "社会 - 活动",
+   "rodape3": "规划部 - GIS(DP-SIG)的项目,属于城市管理平台的一部分,旨在分享更多信息,帮助建设信息更畅通的城市。"
   },
   "ja": {
    "nome": "日本語",
@@ -1179,7 +1193,7 @@
    "html_lang": "ja",
    "titulo_pagina": "NEXO/イベント · ポヴォア・デ・ヴァルジン市のイベント",
    "descricao_meta": "ポヴォア・デ・ヴァルジン市のイベントをお使いのカレンダーで購読：すべて、テーマ別、種類別。",
-   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>イベント",
+   "h1_html": "NEXO",
    "sub_html": "<strong>イベント</strong>を<strong>あなたのカレンダー</strong>に",
    "saltar": "本文へ移動",
    "lingua": "言語",
@@ -1348,7 +1362,9 @@
    "proximos_escolha": "「テーマ別」または「種類別」を選択すると、今後のイベントが表示されます。",
    "escolha_hint": "「テーマ別に登録」または「種類別に登録」を選択すると、選択肢が表示されます。",
    "destaque_titulo": "注目",
-   "info_curta": "+ 詳細"
+   "info_curta": "+ 詳細",
+   "categoria": "社会 - イベント",
+   "rodape3": "計画局-GIS(DP-SIG)によるプロジェクトで、都市管理プラットフォームの一部です。より多くの情報を共有し、情報の行き届いた街づくりに貢献することを目指しています。"
   },
   "nl": {
    "nome": "Nederlands",
@@ -1356,7 +1372,7 @@
    "html_lang": "nl",
    "titulo_pagina": "NEXO/Evenementen · Gemeentelijke evenementen van Póvoa de Varzim",
    "descricao_meta": "Abonneer u op de gemeentelijke evenementen van Póvoa de Varzim in uw agenda: alles, per thema of per soort.",
-   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Evenementen",
+   "h1_html": "NEXO",
    "sub_html": "De <strong>evenementen</strong> in <strong>uw agenda</strong>",
    "saltar": "Naar de inhoud",
    "lingua": "Taal",
@@ -1525,7 +1541,9 @@
    "proximos_escolha": "Kies ‘Op thema’ of ‘Op type’ om de aankomende evenementen te zien.",
    "escolha_hint": "Kies ‘Abonneren op thema’ of ‘Abonneren op type’ om de opties te zien.",
    "destaque_titulo": "Uitgelicht",
-   "info_curta": "+ Info"
+   "info_curta": "+ Info",
+   "categoria": "MAATSCHAPPIJ - EVENEMENTEN",
+   "rodape3": "Een project van de Afdeling Planning – GIS (DP-SIG), onderdeel van het Platform voor Stedelijk Beheer, om meer informatie te delen en bij te dragen aan een beter geïnformeerde stad."
   },
   "pl": {
    "nome": "Polski",
@@ -1533,7 +1551,7 @@
    "html_lang": "pl",
    "titulo_pagina": "NEXO/Wydarzenia · Wydarzenia miejskie w Póvoa de Varzim",
    "descricao_meta": "Subskrybuj wydarzenia miejskie Póvoa de Varzim w swoim kalendarzu: wszystkie, według tematu lub rodzaju.",
-   "h1_html": "NEXO<span class=\"barra-titulo\">/</span>Wydarzenia",
+   "h1_html": "NEXO",
    "sub_html": "<strong>Wydarzenia</strong> w <strong>Twoim kalendarzu</strong>",
    "saltar": "Przejdź do treści",
    "lingua": "Język",
@@ -1702,7 +1720,9 @@
    "proximos_escolha": "Wybierz „Według tematu” lub „Według typu”, aby zobaczyć najbliższe wydarzenia.",
    "escolha_hint": "Wybierz „Zapisz się według tematu” lub „Zapisz się według typu”, aby zobaczyć opcje.",
    "destaque_titulo": "Wyróżnione",
-   "info_curta": "+ Info"
+   "info_curta": "+ Info",
+   "categoria": "SPOŁECZEŃSTWO - WYDARZENIA",
+   "rodape3": "Projekt Departamentu Planowania – GIS (DP-SIG), w ramach Platformy Zarządzania Miejskiego, mający na celu dzielenie się większą ilością informacji i budowanie lepiej poinformowanego miasta."
   }
  }
 }
