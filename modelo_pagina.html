@@ -74,12 +74,9 @@
   .topo-grelha { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .9rem 1.2rem; }
   .marca { display: flex; align-items: center; gap: .7rem 1rem; min-width: 0; }
   .marca > div { min-width: 0; }
-  .logo-cm {
-    flex: none; display: flex; line-height: 0; background: #fff; border-radius: 10px;
-    padding: .4rem .55rem; box-shadow: 0 1px 4px rgba(0, 0, 0, .25);
-  }
-  .logo-cm img { display: block; height: 52px; width: auto; }
-  @media (max-width: 40rem) { .marca { gap: .6rem; } .logo-cm img { height: 40px; } .logo-cm { padding: .3rem .45rem; } }
+  .logo-cm { flex: none; display: flex; line-height: 0; }
+  .logo-cm img { display: block; height: 58px; width: auto; }
+  @media (max-width: 40rem) { .marca { gap: .6rem; } .logo-cm img { height: 46px; } }
   .topo h1 { margin: 0; font-size: clamp(1.7rem, 7vw, 2.7rem); overflow-wrap: anywhere; hyphens: auto; line-height: 1; font-weight: 700; letter-spacing: .01em; }
   /* Uma só cor de base (branco) com um único tom de destaque (dourado), sempre o mesmo nos dois */
   .topo h1 { color: #fff; }
@@ -351,6 +348,11 @@
 
   footer { border-top: 1px solid var(--linha); padding-top: 1rem; padding-bottom: max(2rem, env(safe-area-inset-bottom)); font-size: .92rem; color: var(--cinza); }
   footer p + p { margin-top: .4rem; }
+  .rodape-logo {
+    display: inline-flex; line-height: 0; background: #fff; border-radius: 8px;
+    padding: .3rem .5rem; margin-bottom: .7rem; box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+  }
+  .rodape-logo img { display: block; height: 34px; width: auto; }
 
   /* Embutido na PGU (?embed=1): sem cabeçalho grande nem rodapé */
   .embed .marca, .embed .onda, .embed footer { display: none; }
@@ -388,9 +390,9 @@
 <header class="topo">
   <div class="largura topo-grelha">
     <div class="marca">
-      <span class="logo-cm"><img src="{{LOGOTIPO}}" alt="Câmara Municipal da Póvoa de Varzim" width="297" height="110"></span>
+      <span class="logo-cm"><img src="{{LOGOTIPO}}" alt="{{T:h1_html}} — Centro de Inteligência Urbana, Póvoa de Varzim" width="780" height="260"></span>
       <div>
-        <h1>{{T:h1_html}}</h1>
+        <h1 class="apenas-leitor">{{T:h1_html}}</h1>
         <p class="categoria">{{T:categoria}}</p>
         <p class="sub">{{T:sub_html}}</p>
       </div>
@@ -540,6 +542,7 @@
 </main>
 
 <footer class="largura">
+  <p class="rodape-logo"><img src="{{LOGOTIPO_CM}}" alt="Câmara Municipal da Póvoa de Varzim" width="297" height="110"></p>
   <p>{{T:rodape_html}}</p>
   <p>{{T:rodape2}}</p>
   <p>{{T:rodape3}}</p>

@@ -71,6 +71,7 @@ PASTA_SCRIPT = Path(__file__).resolve().parent
 MODELO_PAGINA = PASTA_SCRIPT / "modelo_pagina.html"
 TRADUCOES = PASTA_SCRIPT / "traducoes.json"
 LOGOTIPO = PASTA_SCRIPT / "logotipo.png"
+LOGOTIPO_CM = PASTA_SCRIPT / "logotipo-cm.png"
 PASTA_FONTES = PASTA_SCRIPT / "fontes"
 
 NOME_GERAL = "Agenda Municipal da Póvoa de Varzim"
@@ -1064,10 +1065,10 @@ def lista_grupos(grupos, pasta, contagem, total, url_base, lingua, t):
     return "\n".join(linhas)
 
 
-def logotipo_data_uri():
-    if not LOGOTIPO.is_file():
+def logotipo_data_uri(caminho=LOGOTIPO):
+    if not caminho.is_file():
         return ""
-    return "data:image/png;base64," + base64.b64encode(LOGOTIPO.read_bytes()).decode()
+    return "data:image/png;base64," + base64.b64encode(caminho.read_bytes()).decode()
 
 
 def caminho_pagina(de, para):
@@ -1289,7 +1290,8 @@ def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None, proximos=Non
         "{{LINGUA}}": t["html_lang"],
         "{{CODIGO_LINGUA}}": lingua,
         "{{RAIZ}}": "" if lingua == "pt" else "../../",
-        "{{LOGOTIPO}}": logotipo_data_uri(),
+        "{{LOGOTIPO}}": logotipo_data_uri(LOGOTIPO),
+        "{{LOGOTIPO_CM}}": logotipo_data_uri(LOGOTIPO_CM),
         "{{BANDEIRA}}": bandeira(t["bandeira"]),
         "{{SELETOR_LINGUAS}}": seletor_linguas(lingua, trad),
         "{{SUGESTOES}}": sugestoes_linguas(lingua, trad),
