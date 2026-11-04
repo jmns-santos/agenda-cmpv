@@ -34,6 +34,7 @@
     --botao-texto: #ffffff;
     --foco: #e0a100;
     --sombra: 0 1px 2px rgba(15, 40, 55, .06), 0 4px 14px rgba(15, 40, 55, .06);
+    --titulo: #0a3a52;
     color-scheme: light dark;
   }
   @media (prefers-color-scheme: dark) {
@@ -47,6 +48,7 @@
       --mar-claro: #16323f;
       --botao: #22698f;
       --sombra: none;
+      --titulo: #9fd3ea;
     }
   }
 
@@ -70,18 +72,18 @@
 
   /* Topo: cor sólida (como o site institucional), não branco. O logótipo, que tem fundo
      próprio branco, fica num pequeno cartão branco para se destacar com nitidez. */
-  .topo { background: var(--mar-forte); color: #fff; padding-top: max(.9rem, env(safe-area-inset-top)); padding-bottom: .15rem; }
+  .topo { background: var(--mar-forte); color: #fff; padding-top: max(.9rem, env(safe-area-inset-top)); padding-bottom: 0; }
   .topo-grelha { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .9rem 1.2rem; }
-  .marca { display: flex; align-items: center; gap: .7rem 1rem; min-width: 0; }
+  .marca { display: flex; align-items: center; gap: .8rem 1.6rem; min-width: 0; }
   .marca > div { min-width: 0; }
-  .logo-cm { flex: none; display: flex; line-height: 0; }
-  .logo-cm img { display: block; height: 120px; width: auto; }
-  @media (max-width: 40rem) { .marca { gap: .5rem; flex-wrap: wrap; } .logo-cm img { height: 92px; } }
-  .topo h1 { margin: 0; font-size: clamp(1.7rem, 7vw, 2.7rem); overflow-wrap: anywhere; hyphens: auto; line-height: 1; font-weight: 700; letter-spacing: .01em; }
-  /* Uma só cor de base (branco) com um único tom de destaque (dourado), sempre o mesmo nos dois */
-  .topo h1 { color: #fff; }
-  .topo .categoria { margin: .2rem 0 0; color: #fff; font-size: clamp(1.25rem, 4.5vw, 1.8rem); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; line-height: 1.2; }
-  .topo .sub { margin-top: .35rem; color: #fff; font-size: clamp(1rem, 2.6vw, 1.15rem); line-height: 1.3; }
+  .logo-cm { flex: none; display: flex; line-height: 0; max-width: 100%; }
+  .logo-cm img { display: block; height: 132px; width: auto; max-width: 100%; }
+  @media (max-width: 40rem) {
+    .marca { flex-wrap: wrap; gap: .7rem; }
+    .logo-cm img { height: auto; width: min(100%, 19rem); }
+  }
+  .topo h1 { margin: 0; color: #fff; font-size: clamp(2.8rem, 11vw, 4.4rem); line-height: 1; font-weight: 700; letter-spacing: .005em; overflow-wrap: anywhere; }
+  .topo .sub { margin-top: .5rem; color: #fff; font-size: clamp(1.1rem, 3vw, 1.4rem); line-height: 1.3; }
   .topo .sub strong { font-weight: 700; color: var(--sol); }
   .onda { display: block; width: 100%; height: 18px; margin-top: .9rem; background: var(--mar-forte); }
   .onda path { fill: var(--fundo); }
@@ -113,7 +115,7 @@
   .letra button[data-letra="1"] { font-size: 1.2rem; }
   .linguas summary:hover, .letra button:hover { background: rgba(255, 255, 255, .22); }
 
-  .sugestao { background: var(--mar-claro); border-bottom: 1px solid var(--linha); }
+  .sugestao { background: var(--mar-claro); }
   .sugestao .largura { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding-top: .4rem; padding-bottom: .4rem; }
   .sugestao ul { margin: 0; padding: 0; list-style: none; }
   .sugestao li { display: none; }
@@ -131,40 +133,36 @@
   }
   .segmentos label:hover { color: var(--tinta); }
 
-  /* Calendário a usar */
-  .seletor { position: sticky; top: 0; z-index: 3; background: var(--fundo); padding: max(.6rem, env(safe-area-inset-top)) 0 .7rem; border-bottom: 1px solid var(--linha); }
-  .seletor .pergunta { font-size: 1.05rem; font-weight: 700; color: var(--tinta); margin: 0 0 .4rem; }
-  .seletor .segmentos { grid-auto-flow: row; grid-template-columns: repeat(5, 1fr); }
+  /* Tipo de calendário: dentro de "Subscrever agenda", serve também os botões "Adicionar" */
+  .seletor { margin-bottom: 1.2rem; }
+  .subtitulo-seccao { margin: 0 0 .5rem; font-size: .92rem; font-weight: 700; line-height: 1.25; letter-spacing: .05em; text-transform: uppercase; color: var(--titulo); }
+  .seletor .segmentos { grid-auto-flow: row; grid-template-columns: repeat(auto-fit, minmax(min(6.8rem, 100%), 1fr)); }
+  .seletor .segmentos label { padding-left: .3rem; padding-right: .3rem; }
   @media (max-width: 40rem) {
-    .seletor { position: static; }
     .seletor .segmentos { grid-template-columns: repeat(2, 1fr); }
     .seletor .segmentos label:last-child { grid-column: 1 / -1; }
   }
-  #sis-google:checked ~ .seletor label[for="sis-google"],
-  #sis-outlook:checked ~ .seletor label[for="sis-outlook"],
-  #sis-apple:checked ~ .seletor label[for="sis-apple"],
-  #sis-android:checked ~ .seletor label[for="sis-android"],
-  #sis-outro:checked ~ .seletor label[for="sis-outro"],
+  #sis-google:checked ~ main .seletor label[for="sis-google"],
+  #sis-outlook:checked ~ main .seletor label[for="sis-outlook"],
+  #sis-apple:checked ~ main .seletor label[for="sis-apple"],
+  #sis-android:checked ~ main .seletor label[for="sis-android"],
+  #sis-outro:checked ~ main .seletor label[for="sis-outro"],
   #assinar-tema:checked ~ main label[for="assinar-tema"],
-  #assinar-tipo:checked ~ main label[for="assinar-tipo"],
-  #filtro-tema:checked ~ main label[for="filtro-tema"],
-  #filtro-tipo:checked ~ main label[for="filtro-tipo"] { background: var(--botao); color: #fff; box-shadow: var(--sombra); }
-  #sis-google:focus-visible ~ .seletor label[for="sis-google"],
-  #sis-outlook:focus-visible ~ .seletor label[for="sis-outlook"],
-  #sis-apple:focus-visible ~ .seletor label[for="sis-apple"],
-  #sis-android:focus-visible ~ .seletor label[for="sis-android"],
-  #sis-outro:focus-visible ~ .seletor label[for="sis-outro"],
+  #assinar-tipo:checked ~ main label[for="assinar-tipo"] { background: var(--botao); color: #fff; box-shadow: var(--sombra); }
+  #sis-google:focus-visible ~ main .seletor label[for="sis-google"],
+  #sis-outlook:focus-visible ~ main .seletor label[for="sis-outlook"],
+  #sis-apple:focus-visible ~ main .seletor label[for="sis-apple"],
+  #sis-android:focus-visible ~ main .seletor label[for="sis-android"],
+  #sis-outro:focus-visible ~ main .seletor label[for="sis-outro"],
   #assinar-tema:focus-visible ~ main label[for="assinar-tema"],
-  #assinar-tipo:focus-visible ~ main label[for="assinar-tipo"],
-  #filtro-tema:focus-visible ~ main label[for="filtro-tema"],
-  #filtro-tipo:focus-visible ~ main label[for="filtro-tipo"] { outline: 3px solid var(--foco); outline-offset: 1px; }
+  #assinar-tipo:focus-visible ~ main label[for="assinar-tipo"] { outline: 3px solid var(--foco); outline-offset: 1px; }
   #assinar-fechado:focus-visible ~ main .botao-fechar { outline: 3px solid var(--foco); outline-offset: 1px; }
   .dica { display: none; margin-top: .45rem; font-size: .95rem; color: var(--cinza); }
-  #sis-google:checked ~ .seletor .dica-google,
-  #sis-outlook:checked ~ .seletor .dica-outlook,
-  #sis-apple:checked ~ .seletor .dica-apple,
-  #sis-android:checked ~ .seletor .dica-android,
-  #sis-outro:checked ~ .seletor .dica-outro { display: block; }
+  #sis-google:checked ~ main .seletor .dica-google,
+  #sis-outlook:checked ~ main .seletor .dica-outlook,
+  #sis-apple:checked ~ main .seletor .dica-apple,
+  #sis-android:checked ~ main .seletor .dica-android,
+  #sis-outro:checked ~ main .seletor .dica-outro { display: block; }
   /* Botões: só aparece o do calendário escolhido */
   .so-google, .so-outlook, .so-apple, .so-android, .so-outro { display: none !important; }
   #sis-google:checked ~ main .so-google,
@@ -197,9 +195,8 @@
   /* Títulos de secção: maiúsculas, à semelhança do site institucional */
   .titulo-seccao {
     margin: 0 0 .9rem; font-size: 1.05rem; font-weight: 700; line-height: 1.25;
-    text-transform: uppercase; letter-spacing: .04em; color: var(--mar-forte);
+    text-transform: uppercase; letter-spacing: .04em; color: var(--titulo);
   }
-  .seletor .pergunta { text-transform: uppercase; letter-spacing: .04em; }
 
   /* Subscrever agenda: cartão "Agenda completa" + escolha por tema/tipo, sem linha a separar */
   .subscrever > .segmentos { max-width: 30rem; }
@@ -248,42 +245,19 @@
 
   /* Proximos eventos: destaque rotativo, filtro, selecao multipla e adicionar ao calendario sem subscricao */
   .subscrever { margin-top: 1.4rem; }
-  .proximos { margin-top: 1.4rem; }
+  .proximos { margin-top: 1.8rem; padding-top: 1.6rem; border-top: 1px solid var(--linha); }
   @media (min-width: 64rem) {
-    .duas-colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.4rem; align-items: start; }
-    .subscrever, .proximos { margin-top: 1.4rem; }
+    .duas-colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; }
+    .subscrever { padding-right: 2.2rem; }
+    .proximos { margin-top: 1.4rem; padding-top: 0; border-top: 0; padding-left: 2.2rem; border-left: 1px solid var(--linha); min-width: 0; }
+    .subscrever { min-width: 0; }
   }
   .proximos .linha2 { color: var(--cinza); margin-top: .15rem; }
-  .proximos > .segmentos { max-width: 22rem; margin-top: .8rem; }
-
-  .filtros { display: none; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
-  .js .filtros { display: flex; }
-  .chips-temas, .chips-tipos { display: flex; flex-wrap: wrap; gap: .4rem; }
-  .chips-tipos { display: none; }
-  #filtro-tipo:checked ~ main .chips-temas { display: none; }
-  #filtro-tipo:checked ~ main .chips-tipos { display: flex; }
-
-  .lista-hint {
-    margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem;
-  }
-  .lista-conteudo { display: none; }
-  #filtro-tema:checked ~ main .lista-conteudo,
-  #filtro-tipo:checked ~ main .lista-conteudo { display: block; }
-  #filtro-tema:checked ~ main .lista-hint,
-  #filtro-tipo:checked ~ main .lista-hint { display: none; }
-  .chip-filtro + label {
-    display: inline-flex; align-items: center; min-height: 2.3rem; padding: .25rem .75rem;
-    border-radius: 999px; border: 1.5px solid var(--linha); background: var(--cartao);
-    font-size: .88rem; font-weight: 700; color: var(--cinza); cursor: pointer; user-select: none;
-  }
-  .chip-filtro:checked + label { background: var(--cor); border-color: var(--cor); color: #fff; }
-  .chip-filtro:focus-visible + label { outline: 3px solid var(--foco); outline-offset: 1px; }
 
   /* Destaque: quadro que vai mostrando os próximos eventos, um a um */
   .destaque { margin-top: .9rem; background: var(--mar-claro); border-radius: 12px; padding: .8rem .9rem; }
   .destaque-rotulo { margin: 0 0 .5rem; font-size: .85rem; font-weight: 700; color: var(--cinza); text-transform: uppercase; letter-spacing: .03em; }
   .destaque-cartao { transition: opacity .2s; border-left: 6px solid var(--ct); padding-left: .7rem; }
-  #filtro-tipo:checked ~ main .destaque-cartao { border-left-color: var(--cp); }
   .destaque-cartao.a-mudar { opacity: 0; }
   .destaque-controlos { display: flex; align-items: center; gap: .5rem; margin-top: .7rem; }
   .destaque-nav {
@@ -296,28 +270,81 @@
   }
   .destaque-posicao { font-size: .85rem; color: var(--cinza); font-variant-numeric: lining-nums tabular-nums; margin-left: auto; }
 
-  .controlos-proximos { margin-top: .9rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+  /* Pesquisa (com JS) e botão "Ver todos os eventos", lado a lado quando há espaço */
+  .barra-todos { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin-top: .9rem; }
+  .pesquisa-caixa {
+    display: none; flex: 1 1 15rem; min-width: 0; align-items: center;
+    background: var(--cartao); border: 1.5px solid var(--linha); border-radius: 999px;
+  }
+  .js .pesquisa-caixa { display: flex; }
+  .pesquisa-caixa:focus-within { border-color: var(--botao); box-shadow: 0 0 0 3px var(--mar-claro); }
+  .pesquisa-icone { flex: none; width: 1.15rem; height: 1.15rem; color: var(--cinza); margin-left: .85rem; }
+  .pesquisa-input {
+    flex: 1 1 auto; min-width: 0; min-height: 2.75rem; padding: .3rem .6rem; border: 0; background: transparent;
+    font: inherit; font-size: 1rem; color: var(--tinta);
+  }
+  .pesquisa-input:focus { outline: none; }
+  .pesquisa-input::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
+  .pesquisa-limpar {
+    flex: none; width: 2.1rem; height: 2.1rem; margin-right: .35rem; border-radius: 50%; border: 0;
+    background: var(--trilho); color: var(--tinta); cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .pesquisa-limpar svg { width: 1rem; height: 1rem; }
   .botao-secundario {
     display: inline-flex; align-items: center; gap: .4rem; min-height: 2.6rem; padding: .35rem .9rem;
     border-radius: 9px; border: 1.5px solid var(--linha); background: var(--cartao); color: var(--tinta);
     font: inherit; font-weight: 700; font-size: .95rem; cursor: pointer; user-select: none;
   }
-  #mostrar-todos:checked ~ .controlos-proximos .botao-mostrar { background: var(--botao); color: #fff; border-color: var(--botao); }
-  #mostrar-todos:checked ~ .controlos-proximos .botao-mostrar .chevron { color: #fff; }
-  #mostrar-todos:focus-visible ~ .controlos-proximos .botao-mostrar { outline: 3px solid var(--foco); outline-offset: 1px; }
-  #modo-selecao:checked ~ .controlos-proximos .botao-selecionar { background: var(--botao); color: #fff; border-color: var(--botao); }
-  #modo-selecao:checked ~ .controlos-proximos .botao-selecionar::after { content: " \2713"; }
-  #modo-selecao:focus-visible ~ .controlos-proximos .botao-selecionar { outline: 3px solid var(--foco); outline-offset: 1px; }
+  .botao-mostrar { flex: none; min-height: 2.75rem; }
+  .botao-mostrar .contagem-botao { font-weight: 400; }
+  #mostrar-todos:checked ~ .barra-todos .botao-mostrar { background: var(--botao); color: #fff; border-color: var(--botao); }
+  #mostrar-todos:checked ~ .barra-todos .botao-mostrar .chevron { color: #fff; }
+  #mostrar-todos:focus-visible ~ .barra-todos .botao-mostrar { outline: 3px solid var(--foco); outline-offset: 1px; }
 
-  /* A lista de eventos soltos só aparece ao "Mostrar todos" ou ao entrar em modo de seleção; permite recolher ao clicar de novo */
-  .lista-proximos { display: none; list-style: none; margin: .9rem 0 0; padding: 0; flex-direction: column; gap: .5rem; }
-  #mostrar-todos:checked ~ .lista-proximos,
-  #modo-selecao:checked ~ .lista-proximos { display: flex; }
+  /* "Ver todos os eventos": toda a agenda; abre e recolhe no mesmo botão */
+  .painel-todos { display: none; margin-top: .8rem; }
+  #mostrar-todos:checked ~ .painel-todos { display: block; }
+
+  /* Filtros (com JS): quando, tema e tipo, aplicáveis ao mesmo tempo */
+  .filtros { display: none; background: var(--cartao); border: 1px solid var(--linha); border-radius: 12px; padding: .1rem .9rem .85rem; }
+  .js .filtros { display: block; }
+  .filtro-grupo { margin-top: .7rem; }
+  .filtro-grupo-titulo { margin: 0 0 .35rem; font-size: .78rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--cinza); }
+  .chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .chip-filtro + label, .chip-quando + label {
+    display: inline-flex; align-items: center; min-height: 2.2rem; padding: .2rem .7rem;
+    border-radius: 999px; border: 1.5px solid var(--linha); background: var(--cartao);
+    font-size: .86rem; font-weight: 700; color: var(--cinza); cursor: pointer; user-select: none;
+  }
+  .chips .n { font-weight: 400; margin-left: .3rem; font-variant-numeric: lining-nums tabular-nums; }
+  .chips label.zero { opacity: .5; }
+  .chip-filtro:checked + label { background: var(--cor); border-color: var(--cor); color: #fff; }
+  .chip-quando:checked + label { background: var(--botao); border-color: var(--botao); color: #fff; }
+  .chip-filtro:focus-visible + label, .chip-quando:focus-visible + label { outline: 3px solid var(--foco); outline-offset: 1px; }
+  .datas { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .55rem; }
+  .datas label { display: flex; flex-direction: column; gap: .15rem; font-size: .82rem; font-weight: 700; color: var(--cinza); }
+  .datas input {
+    min-height: 2.5rem; padding: .25rem .5rem; border: 1.5px solid var(--linha); border-radius: 9px;
+    background: var(--fundo); color: var(--tinta); font: inherit; font-size: .95rem;
+  }
+
+  .controlos-lista { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .8rem; margin-top: .8rem; }
+  .contagem-lista { margin-right: auto; font-weight: 700; font-size: .95rem; font-variant-numeric: lining-nums tabular-nums; }
+  .botao-texto {
+    min-height: 2.4rem; padding: .3rem .2rem; border: 0; background: none; color: var(--tinta);
+    font: inherit; font-size: .92rem; font-weight: 700; text-decoration: underline; cursor: pointer;
+  }
+  .controlos-lista .botao-selecionar { display: none; }
+  .js .controlos-lista .botao-selecionar { display: inline-flex; }
+  #modo-selecao:checked ~ .controlos-lista .botao-selecionar { background: var(--botao); color: #fff; border-color: var(--botao); }
+  #modo-selecao:checked ~ .controlos-lista .botao-selecionar::after { content: " \2713"; }
+  #modo-selecao:focus-visible ~ .controlos-lista .botao-selecionar { outline: 3px solid var(--foco); outline-offset: 1px; }
+
+  .lista-proximos { list-style: none; margin: .7rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
   .item-proximo {
     display: flex; align-items: center; gap: .6rem; background: var(--cartao); border: 1px solid var(--linha);
     border-radius: 10px; padding: .55rem .7rem; border-left: 6px solid var(--ct);
   }
-  #filtro-tipo:checked ~ main .item-proximo { border-left-color: var(--cp); }
   .marcar-coluna { display: none; flex: none; }
   .js #modo-selecao:checked ~ .lista-proximos .marcar-coluna { display: flex; }
   .marcar-evento { width: 1.3rem; height: 1.3rem; flex: none; accent-color: var(--botao); }
@@ -327,7 +354,10 @@
   .meta-proximo { font-size: .85rem; color: var(--cinza); font-variant-numeric: lining-nums tabular-nums; }
   .etiquetas-proximo { display: flex; gap: .35rem; flex-wrap: wrap; margin-top: .1rem; }
   .etiqueta { font-size: .75rem; font-weight: 700; padding: .1rem .5rem; border-radius: 999px; background: var(--trilho); color: var(--cinza); }
-  .etiqueta-curso { background: var(--sol); color: #3b2a00; }
+  .etiqueta-curso, .etiqueta-hoje { background: var(--sol); color: #3b2a00; }
+  .etiqueta-dias { background: #d4eaf5; color: #0a3a52; }
+  @media (prefers-color-scheme: dark) { .etiqueta-dias { background: #1f4a5e; color: #e9f0f3; } }
+  .etiqueta-dias.etiqueta-hoje { background: var(--sol); color: #3b2a00; }
   .botao-info {
     flex: none; display: inline-flex; align-items: center; gap: .3rem;
     min-height: 2.4rem; padding: .35rem .65rem; border-radius: 999px; border: 1.5px solid var(--botao);
@@ -340,18 +370,16 @@
   .botao-adicionar-um span { display: none; }
   @media (min-width: 30rem) { .botao-adicionar-um span { display: inline; } }
 
-  .vazio-proximos { display: none; margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
-  #mostrar-todos:checked ~ .lista-proximos:empty + .vazio-proximos,
-  #modo-selecao:checked ~ .lista-proximos:empty + .vazio-proximos { display: block; }
+  .vazio-proximos, .sem-resultados { margin-top: .8rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
+  .vazio-proximos { display: none; }
+  .lista-proximos:empty + .vazio-proximos { display: block; }
 
   .barra-selecao { display: none; align-items: center; justify-content: space-between; gap: .6rem; margin-top: .8rem; flex-wrap: wrap; }
   .js #modo-selecao:checked ~ .barra-selecao { display: flex; }
   .selecionar-todos { display: flex; align-items: center; gap: .45rem; font-size: .92rem; font-weight: 700; cursor: pointer; }
   .selecionar-todos input { width: 1.2rem; height: 1.2rem; accent-color: var(--botao); }
   #proximos-adicionar:disabled { opacity: .5; cursor: not-allowed; }
-  .confirmar { display: none; margin-top: .8rem; padding: .8rem .9rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
-  #mostrar-todos:checked ~ .confirmar:not([hidden]),
-  #modo-selecao:checked ~ .confirmar:not([hidden]) { display: block; }
+  .confirmar { margin-top: .8rem; padding: .8rem .9rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
   .confirmar-lista { margin: .5rem 0; padding-left: 1.4rem; display: flex; flex-direction: column; gap: .35rem; }
   .confirmar-lista a { font-weight: 700; }
   .confirmar-lista li.feito a { color: var(--cinza); }
@@ -369,33 +397,37 @@
   }
   .chevron::before { content: "\25BD"; }
   [open] > summary > .chevron,
-  #mostrar-todos:checked ~ .controlos-proximos .botao-mostrar .chevron { transform: rotate(180deg); }
+  #mostrar-todos:checked ~ .barra-todos .botao-mostrar .chevron { transform: rotate(180deg); }
 
-  /* Ajuda: secção fechada por omissão, abre ao clicar no título */
-  .ajuda { margin-top: 2rem; }
-  .ajuda-grupo > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: .5rem; }
+  /* Ajuda: fechada por omissão; abre no (+) junto ao título, que passa a (−) */
+  .ajuda { margin-top: 2.2rem; }
+  .ajuda-grupo > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: .6rem; min-height: 2.75rem; border-radius: 8px; }
   .ajuda-grupo > summary::-webkit-details-marker { display: none; }
-  .ajuda-grupo > summary h2 { font-size: 1.25rem; margin: 0; }
-  .ajuda-grupo > summary .chevron { margin-left: auto; }
+  .ajuda-grupo > summary .titulo-seccao { margin: 0; }
   .ajuda-grupo > summary:focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; }
-  .ajuda-lista { margin-top: .4rem; }
-  details.item { border-bottom: 1px solid var(--linha); }
-  details.item:first-of-type { border-top: 1px solid var(--linha); }
+  .mais {
+    flex: none; display: inline-flex; align-items: center; justify-content: center; width: 1.75rem; height: 1.75rem;
+    border-radius: 50%; border: 2px solid currentColor; color: var(--titulo); font-size: 1.2rem; font-weight: 700; line-height: 1;
+  }
+  .mais::before { content: "+"; }
+  .ajuda-grupo[open] > summary .mais::before { content: "\2212"; }
+  .ajuda-grupo > summary:hover .mais { background: var(--mar-claro); }
+  .ajuda-lista { margin-top: .5rem; display: flex; flex-direction: column; gap: .45rem; }
+  details.item { background: var(--cartao); border-radius: 10px; padding: 0 .9rem; box-shadow: var(--sombra); }
   details.item summary {
-    list-style: none; cursor: pointer; padding: .75rem 0; font-weight: 700; font-size: 1.02rem; min-height: 2.75rem;
+    list-style: none; cursor: pointer; padding: .7rem 0; font-weight: 700; font-size: 1.02rem; min-height: 2.75rem;
     display: flex; align-items: center; gap: .5rem; justify-content: space-between;
   }
   details.item summary::-webkit-details-marker { display: none; }
   details.item > div { padding: 0 0 .85rem; }
   details.item p + p { margin-top: .5rem; }
 
-  footer { border-top: 1px solid var(--linha); padding-top: 1rem; padding-bottom: max(2rem, env(safe-area-inset-bottom)); font-size: .92rem; color: var(--cinza); }
+  footer { margin-top: 1.4rem; padding-top: 1rem; padding-bottom: max(2rem, env(safe-area-inset-bottom)); font-size: .92rem; color: var(--cinza); }
   footer p + p { margin-top: .4rem; }
 
   /* Embutido na PGU (?embed=1): sem cabeçalho grande nem rodapé */
   .embed .marca, .embed .onda, .embed footer { display: none; }
   .embed .topo { padding-top: .5rem; padding-bottom: .5rem; }
-  .embed .seletor { position: static; }
 
   @media (forced-colors: active) {
     .cartao, .completa, .item-proximo, .destaque-cartao { border-left-color: CanvasText; }
@@ -406,8 +438,8 @@
   }
   @media print {
     .seletor, .ferramentas, .acoes, .sugestao, .filtros, .barra-selecao, .marcar-coluna, .botao-adicionar-um,
-    .destaque, .controlos-proximos, .botao-info, .escolha-hint, .lista-hint { display: none !important; }
-    .lista-proximos { display: flex !important; }
+    .destaque, .barra-todos, .controlos-lista, .botao-info, .escolha-hint { display: none !important; }
+    .painel-todos { display: block !important; }
   }
 </style>
 </head>
@@ -423,17 +455,13 @@
 <input type="radio" name="assinar" id="assinar-fechado" class="escondido" checked aria-label="{{T:fechar}}">
 <input type="radio" name="assinar" id="assinar-tema" class="escondido" aria-label="{{T:por_tema}}">
 <input type="radio" name="assinar" id="assinar-tipo" class="escondido" aria-label="{{T:por_tipo}}">
-<input type="radio" name="filtro" id="filtro-fechado" class="escondido" checked aria-label="{{T:fechar}}">
-<input type="radio" name="filtro" id="filtro-tema" class="escondido" aria-label="{{T:filtrar_tema}}">
-<input type="radio" name="filtro" id="filtro-tipo" class="escondido" aria-label="{{T:filtrar_tipo}}">
 
 <header class="topo">
   <div class="largura topo-grelha">
     <div class="marca">
-      <span class="logo-cm"><img src="{{LOGOTIPO}}" alt="{{T:h1_html}} — Centro de Inteligência Urbana, Póvoa de Varzim" width="780" height="260"></span>
+      <span class="logo-cm"><img src="{{LOGOTIPO}}" alt="{{T:h1_html}} — Centro de Inteligência Urbana, Póvoa de Varzim" width="669" height="223"></span>
       <div>
-        <h1 class="apenas-leitor">{{T:h1_html}}</h1>
-        <p class="categoria">{{T:categoria}}</p>
+        <h1>{{T:categoria}}</h1>
         <p class="sub">{{T:sub_html}}</p>
       </div>
     </div>
@@ -464,29 +492,27 @@
   </div>
 </div>
 
-<div class="seletor" role="region" aria-labelledby="pergunta">
-  <div class="largura">
-    <p class="pergunta" id="pergunta">{{T:pergunta}}</p>
-    <div class="segmentos" role="group" aria-labelledby="pergunta">
-      <label for="sis-google">{{T:op_google}}</label>
-      <label for="sis-outlook">{{T:op_outlook}}</label>
-      <label for="sis-apple">{{T:op_apple}}</label>
-      <label for="sis-android">{{T:op_android}}</label>
-      <label for="sis-outro">{{T:op_outro}}</label>
-    </div>
-    <p class="dica dica-google">{{T:dica_google}}</p>
-    <p class="dica dica-outlook">{{T:dica_outlook}}</p>
-    <p class="dica dica-apple">{{T:dica_apple}}</p>
-    <p class="dica dica-android">{{T:dica_android}}</p>
-    <p class="dica dica-outro">{{T:dica_outro}}</p>
-  </div>
-</div>
-
 <main class="largura" id="conteudo" tabindex="-1">
 
   <div class="duas-colunas">
   <section class="subscrever" aria-labelledby="t-subscrever">
     <h2 id="t-subscrever" class="titulo-seccao">{{T:subscrever_titulo}}</h2>
+
+    <div class="seletor" role="group" aria-labelledby="pergunta">
+      <h3 class="subtitulo-seccao" id="pergunta">{{T:pergunta}}</h3>
+      <div class="segmentos">
+        <label for="sis-google">{{T:op_google}}</label>
+        <label for="sis-outlook">{{T:op_outlook}}</label>
+        <label for="sis-apple">{{T:op_apple}}</label>
+        <label for="sis-android">{{T:op_android}}</label>
+        <label for="sis-outro">{{T:op_outro}}</label>
+      </div>
+      <p class="dica dica-google">{{T:dica_google}}</p>
+      <p class="dica dica-outlook">{{T:dica_outlook}}</p>
+      <p class="dica dica-apple">{{T:dica_apple}}</p>
+      <p class="dica dica-android">{{T:dica_android}}</p>
+      <p class="dica dica-outro">{{T:dica_outro}}</p>
+    </div>
 
     <div class="completa">
       <div>
@@ -521,20 +547,6 @@
     <h2 id="t-proximos" class="titulo-seccao">{{T:proximos_titulo}}</h2>
     <p class="linha2">{{T:proximos_texto}}</p>
 
-    <div class="segmentos" role="group" aria-label="{{T:filtrar_tema}} / {{T:filtrar_tipo}}">
-      <label for="filtro-tema">{{T:filtrar_tema}}</label>
-      <label for="filtro-tipo">{{T:filtrar_tipo}}</label>
-    </div>
-
-    <div class="filtros" role="group" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
-      <div class="chips-temas" aria-label="{{T:por_tema}}">
-{{CHIPS_TEMAS_PROXIMOS}}
-      </div>
-      <div class="chips-tipos" aria-label="{{T:por_tipo}}">
-{{CHIPS_TIPOS_PROXIMOS}}
-      </div>
-    </div>
-
     <div class="destaque" id="destaque-proximo" role="group" hidden aria-label="{{T:destaque_titulo}}">
       <p class="destaque-rotulo">{{T:destaque_titulo}}</p>
       <div class="destaque-cartao" aria-live="polite"></div>
@@ -547,13 +559,55 @@
       </div>
     </div>
 
-    <p class="lista-hint">{{T:proximos_escolha}}</p>
+    <input type="checkbox" id="mostrar-todos" class="escondido" aria-controls="painel-todos">
+    <div class="barra-todos">
+      <div class="pesquisa-caixa" role="search">
+        <svg class="pesquisa-icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <label for="pesquisa" class="apenas-leitor">{{T:pesquisa_label}}</label>
+        <input type="search" id="pesquisa" class="pesquisa-input" placeholder="{{T:pesquisa_placeholder}}" autocomplete="off" enterkeyhint="search" aria-controls="lista-proximos">
+        <button type="button" id="pesquisa-limpar" class="pesquisa-limpar" hidden aria-label="{{T:pesquisa_limpar}}">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <label for="mostrar-todos" class="botao-secundario botao-mostrar">{{T:mostrar_todos}} <span class="contagem-botao">({{N_PROXIMOS}})</span> <span class="chevron" aria-hidden="true"></span></label>
+    </div>
 
-    <div class="lista-conteudo">
-      <input type="checkbox" id="mostrar-todos" class="escondido">
+    <div class="painel-todos" id="painel-todos">
+      <div class="filtros" role="group" aria-label="{{T:grupo_quando}} / {{T:grupo_tema}} / {{T:grupo_tipo}}">
+        <div class="filtro-grupo">
+          <p class="filtro-grupo-titulo" id="fg-quando">{{T:grupo_quando}}</p>
+          <div class="chips" role="group" aria-labelledby="fg-quando">
+            <input type="radio" name="quando" value="todos" id="quando-todos" class="escondido chip-quando" checked><label for="quando-todos">{{T:quando_todos}}<span class="n"></span></label>
+            <input type="radio" name="quando" value="hoje" id="quando-hoje" class="escondido chip-quando"><label for="quando-hoje">{{T:dias_hoje}}<span class="n"></span></label>
+            <input type="radio" name="quando" value="curso" id="quando-curso" class="escondido chip-quando"><label for="quando-curso">{{T:em_curso}}<span class="n"></span></label>
+            <input type="radio" name="quando" value="fds" id="quando-fds" class="escondido chip-quando"><label for="quando-fds">{{T:quando_fds}}<span class="n"></span></label>
+            <input type="radio" name="quando" value="semana" id="quando-semana" class="escondido chip-quando"><label for="quando-semana">{{T:quando_semana}}<span class="n"></span></label>
+            <input type="radio" name="quando" value="mes" id="quando-mes" class="escondido chip-quando"><label for="quando-mes">{{T:quando_mes}}<span class="n"></span></label>
+            <input type="radio" name="quando" value="datas" id="quando-datas" class="escondido chip-quando"><label for="quando-datas">{{T:quando_datas}}<span class="n"></span></label>
+          </div>
+          <div class="datas" id="datas" hidden>
+            <label>{{T:datas_de}}<input type="date" id="data-de"></label>
+            <label>{{T:datas_ate}}<input type="date" id="data-ate"></label>
+          </div>
+        </div>
+        <div class="filtro-grupo">
+          <p class="filtro-grupo-titulo" id="fg-tema">{{T:grupo_tema}}</p>
+          <div class="chips" role="group" aria-labelledby="fg-tema">
+{{CHIPS_TEMAS_PROXIMOS}}
+          </div>
+        </div>
+        <div class="filtro-grupo">
+          <p class="filtro-grupo-titulo" id="fg-tipo">{{T:grupo_tipo}}</p>
+          <div class="chips" role="group" aria-labelledby="fg-tipo">
+{{CHIPS_TIPOS_PROXIMOS}}
+          </div>
+        </div>
+      </div>
+
       <input type="checkbox" id="modo-selecao" class="escondido">
-      <div class="controlos-proximos">
-        <label for="mostrar-todos" class="botao-secundario botao-mostrar">{{T:mostrar_todos}} <span class="chevron" aria-hidden="true"></span></label>
+      <div class="controlos-lista">
+        <p class="contagem-lista" id="contagem-lista" aria-live="polite" data-um="{{T:evento_1}}" data-n="{{T:eventos_n}}"></p>
+        <button type="button" class="botao-texto" id="limpar-filtros" hidden>{{T:limpar_filtros}}</button>
         <label for="modo-selecao" class="botao-secundario botao-selecionar">{{T:selecionar_varios}}</label>
       </div>
 
@@ -563,10 +617,9 @@
           data-rotulo-zero="{{T:adicionar_zero}}" data-rotulo-n="{{T:adicionar_n}}">{{T:adicionar_zero}}</button>
       </div>
 
-      <ul class="lista-proximos">
-{{LISTA_PROXIMOS}}
-      </ul>
+      <ul class="lista-proximos" id="lista-proximos" data-prodid="{{PRODID}}" data-hoje="{{T:dias_hoje}}" data-amanha="{{T:dias_amanha}}" data-dias="{{T:dias_faltam}}" data-curso="{{T:em_curso}}">{{LISTA_PROXIMOS}}</ul>
       <p class="vazio-proximos">{{T:proximos_vazio}}</p>
+      <p class="sem-resultados" id="sem-resultados" hidden>{{T:pesquisa_vazio}}</p>
 
       <div class="confirmar" id="proximos-confirmar" hidden>
         <p>{{T:confirmar_titulo}}</p>
@@ -579,7 +632,7 @@
 
   <section class="ajuda" aria-labelledby="t-ajuda">
     <details class="ajuda-grupo">
-      <summary><h2 id="t-ajuda" class="titulo-seccao">{{T:ajuda}}</h2><span class="chevron" aria-hidden="true"></span></summary>
+      <summary><h2 id="t-ajuda" class="titulo-seccao">{{T:ajuda}}</h2><span class="mais" aria-hidden="true"></span></summary>
       <div class="ajuda-lista">
         <details class="item"><summary>{{T:h_google_t}}<span class="chevron" aria-hidden="true"></span></summary><div>{{T:h_google_html}}</div></details>
         <details class="item"><summary>{{T:h_outlook_t}}<span class="chevron" aria-hidden="true"></span></summary><div>{{T:h_outlook_html}}</div></details>
@@ -605,7 +658,6 @@
 
 <p class="apenas-leitor" aria-live="polite" id="estado"></p>
 
-<script type="application/json" id="dados-proximos">{{DADOS_PROXIMOS}}</script>
 
 <script>
 (function () {
@@ -693,26 +745,99 @@
     }
   });
 
-  // Proximos eventos: filtro por tema/tipo e adicionar um ou varios ao calendario, sem rede
-  // (os dados e o VEVENT de cada evento vem prontos do elemento #dados-proximos, servidos num
-  // <script type="application/json">, fora do script-src do CSP por nao ser JS executavel).
+  // Próximos eventos: "Em destaque", e "Ver todos os eventos" (toda a agenda) com pesquisa por palavras
+  // e filtros por data, tema e tipo, todos ao mesmo tempo; adicionar um ou vários ao calendário sem rede.
+  // O .ics de cada evento já vem na própria lista (link "Adicionar" de Apple/Outro): não há dados repetidos.
   (function () {
-    var dadosEl = document.getElementById('dados-proximos');
     var secao = document.querySelector('.proximos');
-    if (!dadosEl || !secao) return;
-    var dados;
-    try { dados = JSON.parse(dadosEl.textContent); } catch (e) { return; }
-    if (!dados || !dados.eventos || !dados.eventos.length) return;
-
-    var linhas = secao.querySelectorAll('.lista-proximos li[data-idx]');
-    var caixas = secao.querySelectorAll('.marcar-evento');
+    var listaEl = document.getElementById('lista-proximos');
+    if (!secao || !listaEl) return;
     var caixaTodos = document.getElementById('proximos-todos');
     var botaoAdicionar = document.getElementById('proximos-adicionar');
     var chips = secao.querySelectorAll('.chip-filtro');
-    var vistaTipo = document.getElementById('filtro-tipo');
+    var quandos = secao.querySelectorAll('input[name="quando"]');
+    var blocoDatas = document.getElementById('datas');
+    var dataDe = document.getElementById('data-de');
+    var dataAte = document.getElementById('data-ate');
+    var pesquisa = document.getElementById('pesquisa');
+    var limparPesquisa = document.getElementById('pesquisa-limpar');
+    var limparFiltros = document.getElementById('limpar-filtros');
+    var mostrarTodos = document.getElementById('mostrar-todos');
+    var contagem = document.getElementById('contagem-lista');
+    var semResultados = document.getElementById('sem-resultados');
     var painel = document.getElementById('proximos-confirmar');
+    var prodid = listaEl.getAttribute('data-prodid') || '';
 
-    // Destaque: pequeno quadro que mostra os eventos visíveis, um a um, a cada 5s.
+    // Datas como dias inteiros no fuso de Lisboa (o da agenda), seja qual for o fuso de quem consulta.
+    function doisDigitos(n) { return (n < 10 ? '0' : '') + n; }
+    function diaDeLisboa(data) {
+      try {
+        var partes = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Lisbon', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(data);
+        var m = {};
+        for (var i = 0; i < partes.length; i++) m[partes[i].type] = partes[i].value;
+        if (m.year && m.month && m.day) return m.year + '-' + m.month + '-' + m.day;
+      } catch (e) {}
+      return data.getFullYear() + '-' + doisDigitos(data.getMonth() + 1) + '-' + doisDigitos(data.getDate());
+    }
+    function paraDia(aaaammdd) {
+      var p = String(aaaammdd || '').split('-');
+      return p.length === 3 ? Date.UTC(+p[0], +p[1] - 1, +p[2]) / 86400000 : NaN;
+    }
+    var hoje = diaDeLisboa(new Date());
+    var hojeN = paraDia(hoje);
+
+    // Pesquisa sem maiúsculas nem acentos ("jogos do varzim", "Exposicao", "cinema").
+    function normalizar(texto) {
+      var t = String(texto || '').toLowerCase();
+      if (t.normalize) t = t.normalize('NFD').replace(/[̀-ͯ]/g, '');
+      return t;
+    }
+    function palavras(texto) {
+      var todas = normalizar(texto).split(/[\s,;]+/).filter(function (w) { return w; });
+      var fortes = todas.filter(function (w) { return !/^[a-z]{1,2}$/.test(w); });
+      return fortes.length ? fortes : todas; // "do", "de", "e"... não contam se houver mais palavras
+    }
+
+    var modeloHoje = listaEl.getAttribute('data-hoje') || '';
+    var modeloAmanha = listaEl.getAttribute('data-amanha') || '';
+    var modeloDias = listaEl.getAttribute('data-dias') || '';
+    var textoCurso = listaEl.getAttribute('data-curso') || '';
+
+    var itens = [];
+    var linhas = listaEl.querySelectorAll('li[data-idx]');
+    for (var i = 0; i < linhas.length; i++) {
+      var li = linhas[i];
+      var quando = li.querySelector('time');
+      var it = {
+        li: li,
+        caixa: li.querySelector('.marcar-evento'),
+        tema: li.getAttribute('data-tema'),
+        tipo: li.getAttribute('data-tipo'),
+        ini: Date.parse(quando ? quando.getAttribute('datetime') : '') || 0,
+        fim: Date.parse(li.getAttribute('data-fim') || '') || 0,
+        dIni: paraDia(li.getAttribute('data-dini')),
+        dFim: paraDia(li.getAttribute('data-dfim')),
+        busca: normalizar(li.getAttribute('data-busca')),
+        janela: li.hasAttribute('data-janela'),
+      };
+      if (isNaN(it.dIni)) it.dIni = hojeN;
+      if (isNaN(it.dFim)) it.dFim = it.dIni;
+      // A página é refeita de 4 em 4 horas: o que entretanto terminou sai já da lista.
+      if (it.fim && it.fim < Date.now()) { li.parentNode.removeChild(li); continue; }
+      // "Faltam x dias" certo para hoje (e não para a hora a que a página foi gerada).
+      var et = li.querySelector('.etiqueta-dias');
+      if (et) {
+        var falta = it.dIni - hojeN;
+        if (falta < 0) { et.className = 'etiqueta etiqueta-curso'; et.textContent = textoCurso; }
+        else {
+          et.className = 'etiqueta etiqueta-dias' + (falta === 0 ? ' etiqueta-hoje' : '');
+          et.textContent = falta === 0 ? modeloHoje : (falta === 1 ? modeloAmanha : modeloDias.replace('{n}', String(falta)));
+        }
+      }
+      itens.push(it);
+    }
+
+    // Destaque: os eventos dos próximos 30 dias, um a um, a cada 5 s (não depende dos filtros da lista).
     var destaque = document.getElementById('destaque-proximo');
     var destaqueCartao = destaque ? destaque.querySelector('.destaque-cartao') : null;
     var destaquePosicao = destaque ? destaque.querySelector('.destaque-posicao') : null;
@@ -720,42 +845,37 @@
     var destaqueIndice = 0;
     var destaqueTemporizador = null;
     var destaquePausado = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    var emDestaque = itens.filter(function (x) { return x.janela; });
+    if (!emDestaque.length) emDestaque = itens.slice(0, 30);
 
-    function destaqueVisiveis() {
-      var lista = [];
-      for (var i = 0; i < linhas.length; i++) { if (!linhas[i].hidden) lista.push(linhas[i]); }
-      return lista;
-    }
     function destaqueMostrar() {
       if (!destaque) return;
-      var visiveis = destaqueVisiveis();
-      if (!visiveis.length) { destaque.hidden = true; return; }
+      if (!emDestaque.length) { destaque.hidden = true; return; }
       destaque.hidden = false;
-      if (destaqueIndice >= visiveis.length) destaqueIndice = 0;
-      var linha = visiveis[destaqueIndice];
+      if (destaqueIndice >= emDestaque.length) destaqueIndice = 0;
+      var linha = emDestaque[destaqueIndice].li;
       if (destaqueCartao) {
-        // Clona a linha toda (menos a caixa de seleção): fica com o mesmo aspeto e os
-        // mesmos botões "+ Info" e "Adicionar" do evento na lista, não só o título e a data.
+        // Mesmo aspeto e mesmos botões ("+ Info", "Adicionar") do evento na lista.
         destaqueCartao.className = 'destaque-cartao ' + linha.className;
         var estilo = linha.getAttribute('style');
         if (estilo) destaqueCartao.setAttribute('style', estilo);
         destaqueCartao.innerHTML = linha.innerHTML;
         var marcar = destaqueCartao.querySelector('.marcar-coluna');
-        if (marcar) marcar.remove();
+        if (marcar) marcar.parentNode.removeChild(marcar);
+        var rotulo = destaqueCartao.querySelector('label[for]');
+        if (rotulo) rotulo.removeAttribute('for'); // clicar no destaque não marca nada na lista
       }
       if (destaquePosicao) {
         var modelo = destaquePosicao.getAttribute('data-modelo') || '';
-        destaquePosicao.textContent = modelo.replace('{atual}', String(destaqueIndice + 1)).replace('{total}', String(visiveis.length));
+        destaquePosicao.textContent = modelo.replace('{atual}', String(destaqueIndice + 1)).replace('{total}', String(emDestaque.length));
       }
     }
     function destaqueParar() { if (destaqueTemporizador) { clearInterval(destaqueTemporizador); destaqueTemporizador = null; } }
     function destaqueComecar() {
       destaqueParar();
-      if (destaquePausado) return;
+      if (destaquePausado || emDestaque.length < 2) return;
       destaqueTemporizador = setInterval(function () {
-        var visiveis = destaqueVisiveis();
-        if (!visiveis.length) return;
-        destaqueIndice = (destaqueIndice + 1) % visiveis.length;
+        destaqueIndice = (destaqueIndice + 1) % emDestaque.length;
         destaqueMostrar();
       }, 5000);
     }
@@ -763,10 +883,9 @@
       var botoesNav = destaque.querySelectorAll('.destaque-nav');
       for (var n = 0; n < botoesNav.length; n++) {
         botoesNav[n].addEventListener('click', function () {
-          var visiveis = destaqueVisiveis();
-          if (!visiveis.length) return;
+          if (!emDestaque.length) return;
           var dir = parseInt(this.getAttribute('data-dir'), 10);
-          destaqueIndice = (destaqueIndice + dir + visiveis.length) % visiveis.length;
+          destaqueIndice = (destaqueIndice + dir + emDestaque.length) % emDestaque.length;
           destaqueMostrar();
           destaqueComecar();
         });
@@ -797,96 +916,204 @@
       }
       return slugs;
     }
+    function quandoEscolhido() {
+      var marcado = secao.querySelector('input[name="quando"]:checked');
+      return marcado ? marcado.value : 'todos';
+    }
+    // Intervalo de dias [de, até] para cada opção de "Quando" (a semana acaba ao domingo).
+    function intervalo(q) {
+      var diaSemana = new Date(hojeN * 86400000).getUTCDay(); // 0 = domingo
+      if (q === 'hoje') return [hojeN, hojeN];
+      if (q === 'semana') return [hojeN, hojeN + (7 - diaSemana) % 7];
+      if (q === 'fds') return diaSemana === 0 ? [hojeN, hojeN] : [hojeN + 6 - diaSemana, hojeN + 7 - diaSemana];
+      if (q === 'mes') { var p = hoje.split('-'); return [hojeN, Date.UTC(+p[0], +p[1], 0) / 86400000]; }
+      if (q === 'datas') {
+        var de = dataDe && dataDe.value ? paraDia(dataDe.value) : -Infinity;
+        var ate = dataAte && dataAte.value ? paraDia(dataAte.value) : Infinity;
+        if (isNaN(de)) de = -Infinity;
+        if (isNaN(ate)) ate = Infinity;
+        return de > ate ? [ate, de] : [de, ate];
+      }
+      return null;
+    }
 
     function atualizarBotao() {
       if (painel) painel.hidden = true;
-      var n = 0;
-      for (var i = 0; i < caixas.length; i++) {
-        if (caixas[i].checked && !caixas[i].closest('li').hidden) n++;
+      var visiveis = 0, marcadas = 0;
+      for (var i = 0; i < itens.length; i++) {
+        if (itens[i].li.hidden) continue;
+        visiveis++;
+        if (itens[i].caixa && itens[i].caixa.checked) marcadas++;
       }
       if (botaoAdicionar) {
-        botaoAdicionar.disabled = n === 0;
-        botaoAdicionar.textContent = n === 0
+        botaoAdicionar.disabled = marcadas === 0;
+        botaoAdicionar.textContent = marcadas === 0
           ? botaoAdicionar.getAttribute('data-rotulo-zero')
-          : botaoAdicionar.getAttribute('data-rotulo-n').replace('{n}', n);
+          : botaoAdicionar.getAttribute('data-rotulo-n').replace('{n}', marcadas);
       }
       if (caixaTodos) {
-        var visiveis = 0, marcadas = 0;
-        for (var j = 0; j < linhas.length; j++) {
-          if (!linhas[j].hidden) {
-            visiveis++;
-            var c = linhas[j].querySelector('.marcar-evento');
-            if (c && c.checked) marcadas++;
-          }
-        }
         caixaTodos.checked = visiveis > 0 && marcadas === visiveis;
         caixaTodos.disabled = visiveis === 0;
       }
     }
 
-    function aplicarFiltro() {
-      // Só contam os filtros da vista ativa (tema ou tipo).
-      var porTipo = vistaTipo && vistaTipo.checked;
-      var temas = porTipo ? [] : chipsLigados('chip-tema');
-      var tipos = porTipo ? chipsLigados('chip-tipo') : [];
-      for (var i = 0; i < linhas.length; i++) {
-        var li = linhas[i];
-        var mostraTema = temas.length === 0 || temas.indexOf(li.getAttribute('data-tema')) >= 0;
-        var mostraTipo = tipos.length === 0 || tipos.indexOf(li.getAttribute('data-tipo')) >= 0;
-        li.hidden = !(mostraTema && mostraTipo);
-        if (li.hidden) {
-          var cx = li.querySelector('.marcar-evento');
-          if (cx) cx.checked = false;
-        }
-      }
-      atualizarBotao();
-      destaqueIndice = 0;
-      destaqueMostrar();
-      destaqueComecar();
+    function passaQuando(it, q, periodo, agora) {
+      if (q === 'curso') return it.ini <= agora && agora <= it.fim;
+      if (periodo) return it.dIni <= periodo[1] && it.dFim >= periodo[0];
+      return true;
+    }
+    function escreverNumero(rotulo, n, mostrar) {
+      if (!rotulo) return;
+      var alvo = rotulo.querySelector('.n');
+      if (alvo) alvo.textContent = mostrar ? '(' + n + ')' : '';
+      if (mostrar && !n) rotulo.classList.add('zero'); else rotulo.classList.remove('zero');
     }
 
+    function aplicarFiltro() {
+      var temas = chipsLigados('chip-tema');
+      var tipos = chipsLigados('chip-tipo');
+      var q = quandoEscolhido();
+      var periodos = {};
+      for (var o = 0; o < quandos.length; o++) periodos[quandos[o].value] = intervalo(quandos[o].value);
+      var periodo = periodos[q] || null;
+      var termos = palavras(pesquisa ? pesquisa.value : '');
+      var agora = Date.now();
+      var mostrados = 0;
+      // Cada número entre () conta o que se veria ao escolher essa opção, mantendo os outros filtros.
+      var porTema = {}, porTipo = {}, porQuando = {};
+      for (var i = 0; i < itens.length; i++) {
+        var it = itens[i];
+        var okTema = temas.length === 0 || temas.indexOf(it.tema) >= 0;
+        var okTipo = tipos.length === 0 || tipos.indexOf(it.tipo) >= 0;
+        var okQuando = passaQuando(it, q, periodo, agora);
+        var okTexto = true;
+        for (var w = 0; okTexto && w < termos.length; w++) okTexto = it.busca.indexOf(termos[w]) >= 0;
+        var ok = okTema && okTipo && okQuando && okTexto;
+        it.li.hidden = !ok;
+        if (!ok && it.caixa) it.caixa.checked = false;
+        if (ok) mostrados++;
+        if (okTipo && okQuando && okTexto) porTema[it.tema] = (porTema[it.tema] || 0) + 1;
+        if (okTema && okQuando && okTexto) porTipo[it.tipo] = (porTipo[it.tipo] || 0) + 1;
+        if (okTema && okTipo && okTexto) {
+          for (var k2 = 0; k2 < quandos.length; k2++) {
+            var v = quandos[k2].value;
+            if (passaQuando(it, v, periodos[v], agora)) porQuando[v] = (porQuando[v] || 0) + 1;
+          }
+        }
+      }
+      for (var c1 = 0; c1 < chips.length; c1++) {
+        var conta = chips[c1].classList.contains('chip-tema') ? porTema : porTipo;
+        escreverNumero(chips[c1].nextElementSibling, conta[chips[c1].getAttribute('data-slug')] || 0, true);
+      }
+      var datasDefinidas = !!((dataDe && dataDe.value) || (dataAte && dataAte.value));
+      for (var c2 = 0; c2 < quandos.length; c2++) {
+        var val = quandos[c2].value;
+        escreverNumero(quandos[c2].nextElementSibling, porQuando[val] || 0, val !== 'datas' || datasDefinidas);
+      }
+      if (contagem) {
+        contagem.hidden = !itens.length || mostrados === 0;
+        contagem.textContent = mostrados === 1
+          ? contagem.getAttribute('data-um')
+          : (contagem.getAttribute('data-n') || '').replace('{n}', String(mostrados));
+      }
+      if (semResultados) semResultados.hidden = !(itens.length && mostrados === 0);
+      if (blocoDatas) blocoDatas.hidden = q !== 'datas';
+      var temTexto = !!(pesquisa && pesquisa.value);
+      if (limparPesquisa) limparPesquisa.hidden = !temTexto;
+      if (limparFiltros) limparFiltros.hidden = !(temas.length || tipos.length || q !== 'todos' || temTexto);
+      atualizarBotao();
+    }
+
+    if (dataDe) dataDe.min = hoje;
+    if (dataAte) dataAte.min = hoje;
     for (var c = 0; c < chips.length; c++) chips[c].addEventListener('change', aplicarFiltro);
-    var vistas = document.querySelectorAll('input[name="filtro"]');
-    for (var v = 0; v < vistas.length; v++) vistas[v].addEventListener('change', aplicarFiltro);
+    for (var q = 0; q < quandos.length; q++) quandos[q].addEventListener('change', aplicarFiltro);
+    if (dataDe) dataDe.addEventListener('change', aplicarFiltro);
+    if (dataAte) dataAte.addEventListener('change', aplicarFiltro);
+    if (pesquisa) {
+      // Escrever na pesquisa abre logo "Ver todos os eventos" com o resultado.
+      pesquisa.addEventListener('input', function () {
+        if (pesquisa.value && mostrarTodos && !mostrarTodos.checked) mostrarTodos.checked = true;
+        aplicarFiltro();
+      });
+      pesquisa.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && pesquisa.value) { pesquisa.value = ''; aplicarFiltro(); }
+        else if (e.key === 'Enter') { e.preventDefault(); if (mostrarTodos) mostrarTodos.checked = true; aplicarFiltro(); }
+      });
+    }
+    if (limparPesquisa) {
+      limparPesquisa.addEventListener('click', function () {
+        pesquisa.value = '';
+        aplicarFiltro();
+        pesquisa.focus();
+      });
+    }
+    if (limparFiltros) {
+      limparFiltros.addEventListener('click', function () {
+        for (var i = 0; i < chips.length; i++) chips[i].checked = false;
+        var todosQ = document.getElementById('quando-todos');
+        if (todosQ) todosQ.checked = true;
+        if (dataDe) dataDe.value = '';
+        if (dataAte) dataAte.value = '';
+        if (pesquisa) pesquisa.value = '';
+        aplicarFiltro();
+      });
+    }
     var sistemas = document.querySelectorAll('input[name="sistema"]');
     for (var s = 0; s < sistemas.length; s++) {
       sistemas[s].addEventListener('change', function () { if (painel) painel.hidden = true; });
     }
-    for (var d = 0; d < caixas.length; d++) caixas[d].addEventListener('change', atualizarBotao);
+    for (var d = 0; d < itens.length; d++) if (itens[d].caixa) itens[d].caixa.addEventListener('change', atualizarBotao);
     if (caixaTodos) {
       caixaTodos.addEventListener('change', function () {
-        for (var i = 0; i < linhas.length; i++) {
-          if (!linhas[i].hidden) {
-            var cx = linhas[i].querySelector('.marcar-evento');
-            if (cx) cx.checked = caixaTodos.checked;
-          }
+        for (var i = 0; i < itens.length; i++) {
+          if (!itens[i].li.hidden && itens[i].caixa) itens[i].caixa.checked = caixaTodos.checked;
         }
         atualizarBotao();
       });
     }
+
+    // Dados de um evento lidos da própria linha: links do Google/Outlook e o VEVENT do .ics.
+    function dadosDe(li) {
+      var g = li.querySelector('a.so-google');
+      var o = li.querySelector('a.so-outlook');
+      var a = li.querySelector('a.so-apple');
+      var vevent = '';
+      if (a) {
+        var href = a.getAttribute('href') || '';
+        try {
+          var texto = decodeURIComponent(href.slice(href.indexOf(',') + 1));
+          var ini = texto.indexOf('BEGIN:VEVENT');
+          var fim = texto.lastIndexOf('END:VEVENT');
+          if (ini >= 0 && fim > ini) vevent = texto.slice(ini, fim + 'END:VEVENT'.length) + '\r\n';
+          if (!prodid) { var m = /PRODID:([^\r\n]+)/.exec(texto); if (m) prodid = m[1]; }
+        } catch (e) {}
+      }
+      return { google: g ? g.getAttribute('href') : '', outlook: o ? o.getAttribute('href') : '', vevent: vevent };
+    }
+
     if (botaoAdicionar) {
       botaoAdicionar.addEventListener('click', function () {
         var escolhidas = [];
-        for (var i = 0; i < linhas.length; i++) {
-          if (linhas[i].hidden) continue;
-          var cx = linhas[i].querySelector('.marcar-evento');
-          var ev = dados.eventos[parseInt(linhas[i].getAttribute('data-idx'), 10)];
-          if (cx && cx.checked && ev) escolhidas.push({ linha: linhas[i], ev: ev });
+        for (var i = 0; i < itens.length; i++) {
+          if (itens[i].li.hidden || !itens[i].caixa || !itens[i].caixa.checked) continue;
+          var ev = dadosDe(itens[i].li);
+          if (ev.vevent) escolhidas.push({ linha: itens[i].li, ev: ev });
         }
         if (!escolhidas.length) return;
-        var texto = 'BEGIN:VCALENDAR\r\nPRODID:' + dados.prodid + '\r\nVERSION:2.0\r\nCALSCALE:GREGORIAN\r\n';
+        var texto = 'BEGIN:VCALENDAR\r\nPRODID:' + prodid + '\r\nVERSION:2.0\r\nCALSCALE:GREGORIAN\r\n';
         for (var j = 0; j < escolhidas.length; j++) texto += escolhidas[j].ev.vevent;
         texto += 'END:VCALENDAR\r\n';
         var href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(texto);
         var sistema = (document.querySelector('input[name="sistema"]:checked') || {}).id || 'sis-outro';
         // Apple e "Outro": um único .ics com todos; o calendário pede confirmação e junta-os.
         if (sistema === 'sis-apple' || sistema === 'sis-outro' || !painel) {
-          var a = document.createElement('a');
-          a.href = href;
-          a.download = 'eventos.ics';
-          document.body.appendChild(a);
-          a.click();
-          a.remove();
+          var ligacaoIcs = document.createElement('a');
+          ligacaoIcs.href = href;
+          ligacaoIcs.download = 'eventos.ics';
+          document.body.appendChild(ligacaoIcs);
+          ligacaoIcs.click();
+          ligacaoIcs.parentNode.removeChild(ligacaoIcs);
           return;
         }
         // Google, Android e Outlook só aceitam um evento por link: lista para confirmar cada um.
@@ -894,17 +1121,17 @@
         var lista = painel.querySelector('.confirmar-lista');
         while (lista.firstChild) lista.removeChild(lista.firstChild);
         for (var k = 0; k < escolhidas.length; k++) {
-          var li = document.createElement('li');
+          var item = document.createElement('li');
           var ligacao = document.createElement('a');
           ligacao.href = escolhidas[k].ev[chave];
           ligacao.target = '_blank';
           ligacao.rel = 'noopener noreferrer';
           var tit = escolhidas[k].linha.querySelector('.titulo-proximo');
-          var quando = escolhidas[k].linha.querySelector('time');
-          ligacao.textContent = (tit ? tit.textContent : '') + (quando ? ' · ' + quando.textContent : '');
+          var dataEv = escolhidas[k].linha.querySelector('time');
+          ligacao.textContent = (tit ? tit.textContent : '') + (dataEv ? ' · ' + dataEv.textContent : '');
           ligacao.addEventListener('click', function () { this.parentNode.className = 'feito'; });
-          li.appendChild(ligacao);
-          lista.appendChild(li);
+          item.appendChild(ligacao);
+          lista.appendChild(item);
         }
         painel.querySelector('.confirmar-ics').href = href;
         painel.hidden = false;
@@ -913,6 +1140,8 @@
     }
 
     aplicarFiltro();
+    destaqueMostrar();
+    destaqueComecar();
   })();
 })();
 </script>

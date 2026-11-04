@@ -925,7 +925,8 @@ def construir_calendarios(itens, url_base, lingua="pt", t=None, classificados=No
     ficheiros = {pre + "agenda.ics": geral.to_ical()}
     for caminho, cal in grupos.items():
         ficheiros[caminho] = cal.to_ical()
-    proximos = eventos_proximos(lista_classificados, agora or hoje_utc(), t_ics, nomes, t)
+    agora = agora or hoje_utc()
+    proximos = eventos_proximos(lista_classificados, agora, t_ics, nomes, t)
     return ficheiros, contagem, proximos
 
 
@@ -1136,8 +1137,9 @@ def _links_adicionar(titulo, inicio, fim, dia_inteiro, local, descricao):
 
 
 def eventos_proximos(classificados, agora, t_ics, nomes, t=None):
-    """Eventos dos próximos JANELA_PROXIMOS_DIAS dias, já com o VEVENT pronto (mesma serialização
-    do resto do site) para a secção "Próximos eventos" montar o .ics de um ou vários sem rede."""
+    """Toda a agenda ainda por acabar ("Ver todos os eventos" e pesquisa), com o VEVENT já pronto
+    (mesma serialização do resto do site) para montar o .ics de um ou vários sem rede.
+    `janela` marca os dos próximos JANELA_PROXIMOS_DIAS dias, os que passam no "Em destaque"."""
     limite = agora + timedelta(days=JANELA_PROXIMOS_DIAS)
     resultado = []
     for item, tema, tipo in classificados:
@@ -1147,7 +1149,7 @@ def eventos_proximos(classificados, agora, t_ics, nomes, t=None):
         fim = parse_iso(item.get("end")) or (inicio + timedelta(hours=1))
         if fim < inicio:
             fim = inicio + timedelta(hours=1)
-        if fim < agora or inicio > limite:
+        if fim < agora:
             continue
         ev = criar_evento(item, tema, tipo, t_ics, nomes)
         if str(ev.get("status") or "") == "CANCELLED":
@@ -1167,6 +1169,8 @@ def eventos_proximos(classificados, agora, t_ics, nomes, t=None):
             # um evento que decorre hoje não precisa da etiqueta, a própria lista já o mostra
             # como de hoje. Sem isto, qualquer evento de hoje já a decorrer ficaria marcado.
             "emCurso": inicio.astimezone(LISBOA).date() < agora.astimezone(LISBOA).date() <= fim.astimezone(LISBOA).date(),
+            "janela": inicio <= limite,
+            "dias": max(0, (inicio.astimezone(LISBOA).date() - agora.astimezone(LISBOA).date()).days),
             "local": str(ev.get("location") or ""),
             "link": str(ev.get("url") or ""),
             "temaSlug": tema.slug, "temaNome": nome_grupo(tema, t)[0], "temaCor": tema.cor,
@@ -1181,18 +1185,32 @@ def _data_curta(dt):
     return dt.strftime("%d/%m/%Y %H:%M")
 
 
-def _chip_proximo(slug, nome, cor, classe):
+def _ultimo_dia(inicio, fim):
+    """Último dia (em Lisboa) em que o evento decorre; um fim às 00:00 conta para o dia anterior."""
+    fim_local = fim.astimezone(LISBOA)
+    if fim > inicio and fim_local.hour == 0 and fim_local.minute == 0:
+        fim_local -= timedelta(minutes=1)
+    return max(fim_local.date(), inicio.astimezone(LISBOA).date())
+
+
+def _chip_proximo(slug, nome, cor, classe, n=0):
     return (
         '<input type="checkbox" class="escondido chip-filtro {classe}" data-slug="{slug}" id="{classe}-{slug}">\n'
-        '<label for="{classe}-{slug}" style="--cor: {cor}">{nome}</label>'
-    ).format(classe=classe, slug=html.escape(slug, quote=True), cor=html.escape(cor, quote=True), nome=html.escape(nome))
+        '<label for="{classe}-{slug}" style="--cor: {cor}">{nome}<span class="n">({n})</span></label>'
+    ).format(classe=classe, slug=html.escape(slug, quote=True), cor=html.escape(cor, quote=True), nome=html.escape(nome), n=n)
 
 
 def secao_proximos(proximos, t, agora=None):
-    """Linhas da lista de "próximos eventos" + filtros (só os temas/tipos com eventos nos próximos dias)."""
+    """Linhas da lista "Ver todos os eventos" + filtros (só os temas/tipos com eventos na agenda)."""
     agora = agora or datetime.now(timezone.utc)
     linhas = []
     temas_vistos, tipos_vistos = {}, {}
+    n_temas, n_tipos = {}, {}
+    # Noutras línguas, a pesquisa aceita também os nomes em português (os títulos dos eventos vêm em português)
+    nomes_pt = {} if t.get("html_lang", "pt-PT").startswith("pt") else {
+        ("tema", g.slug): g.nome for g in TEMAS}
+    if nomes_pt:
+        nomes_pt.update({("tipo", g.slug): g.nome for g in TIPOS})
     for idx, p in enumerate(proximos):
         inicio = parse_iso(p["inicio"])
         if p.get("emCurso"):
@@ -1207,7 +1225,16 @@ def secao_proximos(proximos, t, agora=None):
                 quando = _data_curta(inicio).split(" ")[0] + " · " + t["proximos_dia_inteiro"]
             else:
                 quando = _data_curta(inicio)
-            etiqueta_curso = ""
+            # "Faltam x dias": calculado aqui e acertado no navegador (a página só é refeita de 4 em 4 h)
+            dias = p.get("dias", 0)
+            if dias == 0:
+                texto_dias = t["dias_hoje"]
+            elif dias == 1:
+                texto_dias = t["dias_amanha"]
+            else:
+                texto_dias = t["dias_faltam"].format(n=dias)
+            etiqueta_curso = '<span class="etiqueta etiqueta-dias{}">{}</span>'.format(
+                " etiqueta-hoje" if dias == 0 else "", html.escape(texto_dias))
         local = p["local"]
         link = p.get("link") or ""
         info_html = ""
@@ -1228,8 +1255,8 @@ def secao_proximos(proximos, t, agora=None):
         ).format(prodid=PRODID, vevent=p["vevent"])
         href = "data:text/calendar;charset=utf-8," + quote(ics_unico.encode("utf-8"))
         linhas.append((
-            '<li class="item-proximo" data-idx="{idx}" data-tema="{tema_slug}" data-tipo="{tipo_slug}" '
-            'style="--ct: {cor_tema}; --cp: {cor_tipo}">\n'
+            '<li class="item-proximo" data-idx="{idx}" data-tema="{tema_slug}" data-tipo="{tipo_slug}"{janela} '
+            'data-fim="{fim}" data-dini="{dini}" data-dfim="{dfim}" data-busca="{busca}" style="--ct: {cor_tema}; --cp: {cor_tipo}">\n'
             '  <span class="marcar-coluna">\n'
             '    <input type="checkbox" class="marcar-evento" id="proximo-{idx}" aria-label="{aria_marcar}">\n'
             '  </span>\n'
@@ -1246,6 +1273,13 @@ def secao_proximos(proximos, t, agora=None):
             '</li>'
         ).format(
             idx=idx,
+            janela=' data-janela="1"' if p.get("janela") else "",
+            fim=html.escape(p["fim"], quote=True),
+            dini=inicio.astimezone(LISBOA).date().isoformat(),
+            dfim=_ultimo_dia(inicio, parse_iso(p["fim"])).isoformat(),
+            busca=html.escape(" ".join(x for x in (
+                p["titulo"], local, p["temaNome"], p["tipoNome"], quando,
+                nomes_pt.get(("tema", p["temaSlug"]), ""), nomes_pt.get(("tipo", p["tipoSlug"]), "")) if x), quote=True),
             tema_slug=html.escape(p["temaSlug"], quote=True), tipo_slug=html.escape(p["tipoSlug"], quote=True),
             cor_tema=html.escape(p["temaCor"], quote=True), cor_tipo=html.escape(p["tipoCor"], quote=True),
             aria_marcar=html.escape("{}: {}".format(t["selecionar_evento"], p["titulo"]), quote=True),
@@ -1260,11 +1294,13 @@ def secao_proximos(proximos, t, agora=None):
         ))
         temas_vistos[p["temaSlug"]] = (p["temaNome"], p["temaCor"])
         tipos_vistos[p["tipoSlug"]] = (p["tipoNome"], p["tipoCor"])
+        n_temas[p["temaSlug"]] = n_temas.get(p["temaSlug"], 0) + 1
+        n_tipos[p["tipoSlug"]] = n_tipos.get(p["tipoSlug"], 0) + 1
     chips_temas = "\n".join(
-        _chip_proximo(g.slug, temas_vistos[g.slug][0], temas_vistos[g.slug][1], "chip-tema")
+        _chip_proximo(g.slug, temas_vistos[g.slug][0], temas_vistos[g.slug][1], "chip-tema", n_temas[g.slug])
         for g in TEMAS if g.slug in temas_vistos)
     chips_tipos = "\n".join(
-        _chip_proximo(g.slug, tipos_vistos[g.slug][0], tipos_vistos[g.slug][1], "chip-tipo")
+        _chip_proximo(g.slug, tipos_vistos[g.slug][0], tipos_vistos[g.slug][1], "chip-tipo", n_tipos[g.slug])
         for g in TIPOS if g.slug in tipos_vistos)
     return "\n".join(linhas), chips_temas, chips_tipos
 
@@ -1281,10 +1317,6 @@ def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None, proximos=Non
     pre = prefixo_lingua(lingua)
     proximos = proximos or []
     linhas_proximos, chips_temas, chips_tipos = secao_proximos(proximos, t, agora)
-    dados_proximos = json.dumps(
-        {"prodid": PRODID, "eventos": [{"vevent": p["vevent"], "google": p["google"], "outlook": p["outlook"]} for p in proximos]},
-        ensure_ascii=False, separators=(",", ":"),
-    ).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
     substituicoes = {
         "{{HASH_SCRIPT}}": hash_script,
         "{{LINGUA}}": t["html_lang"],
@@ -1301,7 +1333,8 @@ def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None, proximos=Non
         "{{LISTA_PROXIMOS}}": linhas_proximos,
         "{{CHIPS_TEMAS_PROXIMOS}}": chips_temas,
         "{{CHIPS_TIPOS_PROXIMOS}}": chips_tipos,
-        "{{DADOS_PROXIMOS}}": dados_proximos,
+        "{{PRODID}}": html.escape(PRODID, quote=True),
+        "{{N_PROXIMOS}}": str(len(proximos)),
         "{{ALTERNATIVAS}}": "\n".join(
             '<link rel="alternate" hreflang="{}" href="{}">'.format(
                 trad["linguas"][c]["html_lang"], html.escape(url_base + prefixo_lingua(c), quote=True))
