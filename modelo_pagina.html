@@ -16,8 +16,8 @@
 {{ALTERNATIVAS}}
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='5' width='26' height='24' rx='4' fill='%230f4c6b'/%3E%3Crect x='3' y='5' width='26' height='7' rx='3' fill='%230a3a52'/%3E%3Cpath d='M7 22c3-3 6-3 9 0s6 3 9 0' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
-  @font-face { font-family: "CMPV"; src: url("{{RAIZ}}fontes/cmpv-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-  @font-face { font-family: "CMPV"; src: url("{{RAIZ}}fontes/cmpv-bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: "Open Sans"; src: url("{{RAIZ}}fontes/open-sans-regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: "Open Sans"; src: url("{{RAIZ}}fontes/open-sans-bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 
   :root {
     --fundo: #f4f8fa;
@@ -55,7 +55,7 @@
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0; background: var(--fundo); color: var(--tinta);
-    font-family: "CMPV", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", "Hiragino Sans", "Yu Gothic", sans-serif;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", "Hiragino Sans", "Yu Gothic", sans-serif;
     font-size: 1.0625rem; line-height: 1.55; overflow-x: clip;
   }
   a { color: inherit; }
@@ -80,8 +80,8 @@
   .topo h1 { margin: 0; font-size: clamp(1.7rem, 7vw, 2.7rem); overflow-wrap: anywhere; hyphens: auto; line-height: 1; font-weight: 700; letter-spacing: .01em; }
   /* Uma só cor de base (branco) com um único tom de destaque (dourado), sempre o mesmo nos dois */
   .topo h1 { color: #fff; }
-  .topo .categoria { margin: .2rem 0 0; color: var(--sol); font-size: .85rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
-  .topo .sub { margin-top: .35rem; color: #fff; font-size: clamp(1.05rem, 3vw, 1.3rem); line-height: 1.3; }
+  .topo .categoria { margin: .2rem 0 0; color: #fff; font-size: clamp(1.25rem, 4.5vw, 1.8rem); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; line-height: 1.2; }
+  .topo .sub { margin-top: .35rem; color: #fff; font-size: clamp(1rem, 2.6vw, 1.15rem); line-height: 1.3; }
   .topo .sub strong { font-weight: 700; color: var(--sol); }
   .onda { display: block; width: 100%; height: 18px; margin-top: .9rem; background: var(--mar-forte); }
   .onda path { fill: var(--fundo); }
@@ -348,11 +348,6 @@
 
   footer { border-top: 1px solid var(--linha); padding-top: 1rem; padding-bottom: max(2rem, env(safe-area-inset-bottom)); font-size: .92rem; color: var(--cinza); }
   footer p + p { margin-top: .4rem; }
-  .rodape-logo {
-    display: inline-flex; line-height: 0; background: #fff; border-radius: 8px;
-    padding: .3rem .5rem; margin-bottom: .7rem; box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
-  }
-  .rodape-logo img { display: block; height: 34px; width: auto; }
 
   /* Embutido na PGU (?embed=1): sem cabeçalho grande nem rodapé */
   .embed .marca, .embed .onda, .embed footer { display: none; }
@@ -542,7 +537,6 @@
 </main>
 
 <footer class="largura">
-  <p class="rodape-logo"><img src="{{LOGOTIPO_CM}}" alt="Câmara Municipal da Póvoa de Varzim" width="297" height="110"></p>
   <p>{{T:rodape_html}}</p>
   <p>{{T:rodape2}}</p>
   <p>{{T:rodape3}}</p>
