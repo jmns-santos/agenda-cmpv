@@ -247,7 +247,20 @@
      "Celebrations and ceremonies",
      "Commemorative days, ceremonies, galas, tributes and formal sessions"
     ]
-   }
+   },
+   "adicionar_n": "Add {n} to calendar",
+   "adicionar_um": "Add",
+   "adicionar_zero": "Add to calendar",
+   "confirmar_ics": "Or download them all in one .ics file to import",
+   "confirmar_titulo": "Google and Outlook only accept one event at a time: tap each one to confirm it in your calendar.",
+   "filtrar_tema": "By theme",
+   "filtrar_tipo": "By type",
+   "proximos_dia_inteiro": "all day",
+   "proximos_texto": "Events in the next 30 days. Filter by theme or type and add one or several to your calendar, without subscribing to anything.",
+   "proximos_titulo": "Upcoming events",
+   "proximos_vazio": "No events in the next 30 days.",
+   "selecionar_evento": "Select",
+   "selecionar_todos": "Select all"
   },
   "es": {
    "nome": "Español",
@@ -398,7 +411,20 @@
      "Conmemoraciones y ceremonias",
      "Días conmemorativos, ceremonias, galas, homenajes y sesiones solemnes"
     ]
-   }
+   },
+   "adicionar_n": "Añadir {n} al calendario",
+   "adicionar_um": "Añadir",
+   "adicionar_zero": "Añadir al calendario",
+   "confirmar_ics": "O descárguelos todos en un archivo .ics para importarlos",
+   "confirmar_titulo": "Google y Outlook solo aceptan un evento cada vez: toque cada uno para confirmarlo en su calendario.",
+   "filtrar_tema": "Por tema",
+   "filtrar_tipo": "Por tipo",
+   "proximos_dia_inteiro": "todo el día",
+   "proximos_texto": "Los eventos de los próximos 30 días. Filtre por tema o por tipo y añada uno o varios a su calendario, sin suscribirse a nada.",
+   "proximos_titulo": "Próximos eventos",
+   "proximos_vazio": "No hay eventos en los próximos 30 días.",
+   "selecionar_evento": "Seleccionar",
+   "selecionar_todos": "Seleccionar todos"
   },
   "it": {
    "nome": "Italiano",
@@ -549,7 +575,20 @@
      "Ricorrenze e cerimonie",
      "Giornate commemorative, cerimonie, gala, omaggi e sedute solenni"
     ]
-   }
+   },
+   "adicionar_n": "Aggiungi {n} al calendario",
+   "adicionar_um": "Aggiungi",
+   "adicionar_zero": "Aggiungi al calendario",
+   "confirmar_ics": "Oppure scaricali tutti in un file .ics da importare",
+   "confirmar_titulo": "Google e Outlook accettano un solo evento alla volta: tocca ciascuno per confermarlo nel tuo calendario.",
+   "filtrar_tema": "Per tema",
+   "filtrar_tipo": "Per tipo",
+   "proximos_dia_inteiro": "tutto il giorno",
+   "proximos_texto": "Gli eventi dei prossimi 30 giorni. Filtra per tema o per tipo e aggiungine uno o più al tuo calendario, senza iscriverti a nulla.",
+   "proximos_titulo": "Prossimi eventi",
+   "proximos_vazio": "Nessun evento nei prossimi 30 giorni.",
+   "selecionar_evento": "Seleziona",
+   "selecionar_todos": "Seleziona tutti"
   },
   "fr": {
    "nome": "Français",
@@ -700,7 +739,20 @@
      "Commémorations et cérémonies",
      "Journées commémoratives, cérémonies, galas, hommages et séances solennelles"
     ]
-   }
+   },
+   "adicionar_n": "Ajouter {n} au calendrier",
+   "adicionar_um": "Ajouter",
+   "adicionar_zero": "Ajouter au calendrier",
+   "confirmar_ics": "Ou téléchargez-les tous dans un fichier .ics à importer",
+   "confirmar_titulo": "Google et Outlook n'acceptent qu'un événement à la fois : touchez chacun pour le confirmer dans votre calendrier.",
+   "filtrar_tema": "Par thème",
+   "filtrar_tipo": "Par type",
+   "proximos_dia_inteiro": "toute la journée",
+   "proximos_texto": "Les événements des 30 prochains jours. Filtrez par thème ou par type et ajoutez-en un ou plusieurs à votre calendrier, sans vous abonner à rien.",
+   "proximos_titulo": "Prochains événements",
+   "proximos_vazio": "Aucun événement dans les 30 prochains jours.",
+   "selecionar_evento": "Sélectionner",
+   "selecionar_todos": "Tout sélectionner"
   },
   "de": {
    "nome": "Deutsch",
@@ -851,7 +903,20 @@
      "Gedenktage und Zeremonien",
      "Gedenktage, Zeremonien, Galas, Ehrungen und Festsitzungen"
     ]
-   }
+   },
+   "adicionar_n": "{n} zum Kalender hinzufügen",
+   "adicionar_um": "Hinzufügen",
+   "adicionar_zero": "Zum Kalender hinzufügen",
+   "confirmar_ics": "Oder laden Sie alle als .ics-Datei zum Importieren herunter",
+   "confirmar_titulo": "Google und Outlook akzeptieren nur jeweils eine Veranstaltung: Tippen Sie auf jede einzelne, um sie in Ihrem Kalender zu bestätigen.",
+   "filtrar_tema": "Nach Thema",
+   "filtrar_tipo": "Nach Art",
+   "proximos_dia_inteiro": "ganztägig",
+   "proximos_texto": "Die Veranstaltungen der nächsten 30 Tage. Filtern Sie nach Thema oder Art und fügen Sie eine oder mehrere zu Ihrem Kalender hinzu, ohne etwas zu abonnieren.",
+   "proximos_titulo": "Nächste Veranstaltungen",
+   "proximos_vazio": "Keine Veranstaltungen in den nächsten 30 Tagen.",
+   "selecionar_evento": "Auswählen",
+   "selecionar_todos": "Alle auswählen"
   },
   "zh": {
    "nome": "中文",
@@ -1002,7 +1067,20 @@
      "纪念与典礼",
      "纪念日、典礼、晚会、致敬与正式会议"
     ]
-   }
+   },
+   "adicionar_n": "将 {n} 项添加到日历",
+   "adicionar_um": "添加",
+   "adicionar_zero": "添加到日历",
+   "confirmar_ics": "或将全部活动下载为 .ics 文件后导入",
+   "confirmar_titulo": "Google 和 Outlook 每次只能添加一项活动：请逐项点击，在您的日历中确认。",
+   "filtrar_tema": "按主题",
+   "filtrar_tipo": "按类型",
+   "proximos_dia_inteiro": "全天",
+   "proximos_texto": "未来 30 天的活动。可按主题或类型筛选，将一项或多项添加到您的日历，无需订阅。",
+   "proximos_titulo": "近期活动",
+   "proximos_vazio": "未来 30 天内没有活动。",
+   "selecionar_evento": "选择",
+   "selecionar_todos": "全选"
   },
   "ja": {
    "nome": "日本語",
@@ -1153,7 +1231,20 @@
      "記念行事・式典",
      "記念日、式典、ガラ、表彰、公式会議"
     ]
-   }
+   },
+   "adicionar_n": "{n} 件をカレンダーに追加",
+   "adicionar_um": "追加",
+   "adicionar_zero": "カレンダーに追加",
+   "confirmar_ics": "または、すべてを .ics ファイルとしてダウンロードして取り込む",
+   "confirmar_titulo": "Google と Outlook では一度に 1 件ずつしか追加できません。ひとつずつタップして、カレンダーで確認してください。",
+   "filtrar_tema": "テーマ別",
+   "filtrar_tipo": "種類別",
+   "proximos_dia_inteiro": "終日",
+   "proximos_texto": "今後 30 日間のイベントです。テーマまたは種類で絞り込み、1 件または複数をカレンダーに追加できます。購読は不要です。",
+   "proximos_titulo": "今後のイベント",
+   "proximos_vazio": "今後 30 日間のイベントはありません。",
+   "selecionar_evento": "選択",
+   "selecionar_todos": "すべて選択"
   },
   "nl": {
    "nome": "Nederlands",
@@ -1304,7 +1395,20 @@
      "Herdenkingen en ceremonies",
      "Herdenkingsdagen, ceremonies, gala's, eerbetonen en plechtige zittingen"
     ]
-   }
+   },
+   "adicionar_n": "{n} aan agenda toevoegen",
+   "adicionar_um": "Toevoegen",
+   "adicionar_zero": "Aan agenda toevoegen",
+   "confirmar_ics": "Of download ze allemaal als .ics-bestand om te importeren",
+   "confirmar_titulo": "Google en Outlook accepteren maar één evenement tegelijk: tik op elk evenement om het in uw agenda te bevestigen.",
+   "filtrar_tema": "Per thema",
+   "filtrar_tipo": "Per soort",
+   "proximos_dia_inteiro": "hele dag",
+   "proximos_texto": "De evenementen van de komende 30 dagen. Filter op thema of soort en voeg er één of meer toe aan uw agenda, zonder u ergens op te abonneren.",
+   "proximos_titulo": "Komende evenementen",
+   "proximos_vazio": "Geen evenementen in de komende 30 dagen.",
+   "selecionar_evento": "Selecteren",
+   "selecionar_todos": "Alles selecteren"
   },
   "pl": {
    "nome": "Polski",
@@ -1455,7 +1559,20 @@
      "Obchody i uroczystości",
      "Dni pamięci, uroczystości, gale, hołdy i uroczyste sesje"
     ]
-   }
+   },
+   "adicionar_n": "Dodaj {n} do kalendarza",
+   "adicionar_um": "Dodaj",
+   "adicionar_zero": "Dodaj do kalendarza",
+   "confirmar_ics": "Albo pobierz wszystkie w jednym pliku .ics, aby je zaimportować",
+   "confirmar_titulo": "Google i Outlook przyjmują tylko jedno wydarzenie naraz: dotknij każdego, aby potwierdzić je w swoim kalendarzu.",
+   "filtrar_tema": "Według tematu",
+   "filtrar_tipo": "Według rodzaju",
+   "proximos_dia_inteiro": "cały dzień",
+   "proximos_texto": "Wydarzenia z najbliższych 30 dni. Filtruj według tematu lub rodzaju i dodaj jedno lub kilka do swojego kalendarza, bez subskrybowania.",
+   "proximos_titulo": "Najbliższe wydarzenia",
+   "proximos_vazio": "Brak wydarzeń w ciągu najbliższych 30 dni.",
+   "selecionar_evento": "Zaznacz",
+   "selecionar_todos": "Zaznacz wszystko"
   }
  }
 }

@@ -55,7 +55,10 @@ FONTE_PAGINA = "https://www.cm-pvarzim.pt/eventos/"
 
 # Jogos do Varzim SC (fixtur.es, sempre atualizado). Fonte externa: se falhar,
 # a agenda publica-se sem os jogos, nunca o contrario (ver obter_jogos_varzim).
-FONTE_VARZIM_ICS = "http://ics.fixtur.es/v2/varzim.ics?e23e09232ebff109"
+FONTE_VARZIM_ICS = "https://ics.fixtur.es/v2/varzim.ics?e23e09232ebff109"
+# Só se o https falhar: o fixtur.es publica o endereço em http. Dos jogos só se
+# usam o adversário e a hora; o texto e o link publicados são sempre os nossos.
+FONTE_VARZIM_ICS_HTTP = "http://ics.fixtur.es/v2/varzim.ics?e23e09232ebff109"
 VARZIM_LINK = "https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/"
 
 # Endereço público onde os ficheiros ficam alojados (termina em "/").
@@ -703,12 +706,17 @@ def obter_jogos_varzim(sessao, hoje, horizonte):
     """Calendario de jogos do Varzim SC (fixtur.es). Fonte externa e
     independente da API da Camara: qualquer falha fica so em log -- a agenda
     publica-se na mesma, sem os jogos, nunca ao contrario."""
-    try:
-        resp = sessao.get(FONTE_VARZIM_ICS, timeout=20)
-        resp.raise_for_status()
-        calendario = Calendar.from_ical(resp.content)
-    except Exception as exc:
-        logging.warning("Jogos do Varzim indisponiveis, a agenda segue sem eles: %s", exc)
+    calendario = None
+    for url in (FONTE_VARZIM_ICS, FONTE_VARZIM_ICS_HTTP):
+        try:
+            resp = sessao.get(url, timeout=20)
+            resp.raise_for_status()
+            calendario = Calendar.from_ical(resp.content)
+            break
+        except Exception as exc:
+            logging.warning("Jogos do Varzim: falhou %s: %s", url.split("?")[0], exc)
+    if calendario is None:
+        logging.warning("Jogos do Varzim indisponiveis, a agenda segue sem eles.")
         return []
 
     itens = []
@@ -747,7 +755,9 @@ def obter_jogos_varzim(sessao, hoje, horizonte):
             "start": inicio.isoformat(),
             "end": fim.isoformat(),
             "location": limpar_texto(str(comp.get("location") or "")),
-            "description": limpar_texto(str(comp.get("description") or "")),
+            # O texto do fixtur.es é um pedido de donativos e links próprios:
+            # não se publica. Fica só "Mais informação" com o link do jogo.
+            "description": "",
             "url": VARZIM_LINK,
             "_link_direto": True,
             "_classificacao_fixa": ("desporto", "jogos-varzim"),
