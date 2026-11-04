@@ -61,7 +61,7 @@
   a { color: inherit; }
   :focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; }
   p { margin: 0; }
-  .largura { max-width: 62rem; margin: 0 auto; padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
+  .largura { max-width: 78rem; margin: 0 auto; padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
   .escondido { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
   .apenas-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .saltar { position: absolute; left: .5rem; top: -4rem; z-index: 10; background: var(--cartao); color: var(--tinta); padding: .6rem .9rem; border-radius: 8px; font-weight: 700; }
@@ -75,8 +75,8 @@
   .marca { display: flex; align-items: center; gap: .7rem 1rem; min-width: 0; }
   .marca > div { min-width: 0; }
   .logo-cm { flex: none; display: flex; line-height: 0; }
-  .logo-cm img { display: block; height: 74px; width: auto; }
-  @media (max-width: 40rem) { .marca { gap: .6rem; } .logo-cm img { height: 58px; } }
+  .logo-cm img { display: block; height: 120px; width: auto; }
+  @media (max-width: 40rem) { .marca { gap: .5rem; flex-wrap: wrap; } .logo-cm img { height: 92px; } }
   .topo h1 { margin: 0; font-size: clamp(1.7rem, 7vw, 2.7rem); overflow-wrap: anywhere; hyphens: auto; line-height: 1; font-weight: 700; letter-spacing: .01em; }
   /* Uma só cor de base (branco) com um único tom de destaque (dourado), sempre o mesmo nos dois */
   .topo h1 { color: #fff; }
@@ -194,20 +194,24 @@
 
   main { padding-top: 1.1rem; padding-bottom: 1.5rem; }
 
-  /* Agenda completa */
+  /* Títulos de secção: maiúsculas, à semelhança do site institucional */
+  .titulo-seccao {
+    margin: 0 0 .9rem; font-size: 1.05rem; font-weight: 700; line-height: 1.25;
+    text-transform: uppercase; letter-spacing: .04em; color: var(--mar-forte);
+  }
+  .seletor .pergunta { text-transform: uppercase; letter-spacing: .04em; }
+
+  /* Subscrever agenda: cartão "Agenda completa" + escolha por tema/tipo, sem linha a separar */
+  .subscrever > .segmentos { max-width: 30rem; }
+
   .completa {
     display: grid; grid-template-columns: 1fr minmax(min(12rem, 100%), 16rem); gap: .9rem 1.2rem; align-items: center;
     background: var(--cartao); border: 1px solid var(--linha); border-radius: 14px; padding: 1rem 1.1rem; box-shadow: var(--sombra);
-    border-left: 6px solid var(--mar);
+    border-left: 6px solid var(--mar); margin-bottom: 1.2rem;
   }
-  .completa h2 { margin: 0; font-size: 1.3rem; line-height: 1.25; }
+  .completa .opcao-titulo { margin: 0; font-size: 1.1rem; font-weight: 700; line-height: 1.25; }
   .completa .linha2 { color: var(--cinza); margin-top: .15rem; font-variant-numeric: lining-nums tabular-nums; }
   @media (max-width: 36rem) { .completa { grid-template-columns: 1fr; } }
-
-  /* Tema / tipo: só aparece depois de escolher "por tema" ou "por tipo" (mais compacto) */
-  .escolha { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
-  .escolha::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
-  .escolha > .segmentos { max-width: 30rem; }
 
   .escolha-hint {
     margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem;
@@ -243,15 +247,12 @@
   .aviso { margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
 
   /* Proximos eventos: destaque rotativo, filtro, selecao multipla e adicionar ao calendario sem subscricao */
-  .duas-colunas { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
-  .duas-colunas::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
-  .proximos { margin-top: 0; padding-top: 0; }
+  .subscrever { margin-top: 1.4rem; }
+  .proximos { margin-top: 1.4rem; }
   @media (min-width: 64rem) {
     .duas-colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.4rem; align-items: start; }
-    .escolha { margin-top: 0; padding-top: 0; }
-    .escolha::before { content: none; }
+    .subscrever, .proximos { margin-top: 1.4rem; }
   }
-  .proximos h2 { margin: 0; font-size: 1.3rem; line-height: 1.25; }
   .proximos .linha2 { color: var(--cinza); margin-top: .15rem; }
   .proximos > .segmentos { max-width: 22rem; margin-top: .8rem; }
 
@@ -295,17 +296,23 @@
   }
   .destaque-posicao { font-size: .85rem; color: var(--cinza); font-variant-numeric: lining-nums tabular-nums; margin-left: auto; }
 
-  .controlo-selecao { margin-top: .9rem; }
+  .controlos-proximos { margin-top: .9rem; display: flex; flex-wrap: wrap; gap: .5rem; }
   .botao-secundario {
     display: inline-flex; align-items: center; gap: .4rem; min-height: 2.6rem; padding: .35rem .9rem;
     border-radius: 9px; border: 1.5px solid var(--linha); background: var(--cartao); color: var(--tinta);
     font: inherit; font-weight: 700; font-size: .95rem; cursor: pointer; user-select: none;
   }
-  #modo-selecao:checked ~ .controlo-selecao .botao-secundario { background: var(--botao); color: #fff; border-color: var(--botao); }
-  #modo-selecao:checked ~ .controlo-selecao .botao-secundario::after { content: " \2713"; }
-  #modo-selecao:focus-visible ~ .controlo-selecao .botao-secundario { outline: 3px solid var(--foco); outline-offset: 1px; }
+  #mostrar-todos:checked ~ .controlos-proximos .botao-mostrar { background: var(--botao); color: #fff; border-color: var(--botao); }
+  #mostrar-todos:checked ~ .controlos-proximos .botao-mostrar .chevron { color: #fff; }
+  #mostrar-todos:focus-visible ~ .controlos-proximos .botao-mostrar { outline: 3px solid var(--foco); outline-offset: 1px; }
+  #modo-selecao:checked ~ .controlos-proximos .botao-selecionar { background: var(--botao); color: #fff; border-color: var(--botao); }
+  #modo-selecao:checked ~ .controlos-proximos .botao-selecionar::after { content: " \2713"; }
+  #modo-selecao:focus-visible ~ .controlos-proximos .botao-selecionar { outline: 3px solid var(--foco); outline-offset: 1px; }
 
-  .lista-proximos { list-style: none; margin: .9rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
+  /* A lista de eventos soltos só aparece ao "Mostrar todos" ou ao entrar em modo de seleção; permite recolher ao clicar de novo */
+  .lista-proximos { display: none; list-style: none; margin: .9rem 0 0; padding: 0; flex-direction: column; gap: .5rem; }
+  #mostrar-todos:checked ~ .lista-proximos,
+  #modo-selecao:checked ~ .lista-proximos { display: flex; }
   .item-proximo {
     display: flex; align-items: center; gap: .6rem; background: var(--cartao); border: 1px solid var(--linha);
     border-radius: 10px; padding: .55rem .7rem; border-left: 6px solid var(--ct);
@@ -334,14 +341,17 @@
   @media (min-width: 30rem) { .botao-adicionar-um span { display: inline; } }
 
   .vazio-proximos { display: none; margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
-  .lista-proximos:empty + .vazio-proximos { display: block; }
+  #mostrar-todos:checked ~ .lista-proximos:empty + .vazio-proximos,
+  #modo-selecao:checked ~ .lista-proximos:empty + .vazio-proximos { display: block; }
 
   .barra-selecao { display: none; align-items: center; justify-content: space-between; gap: .6rem; margin-top: .8rem; flex-wrap: wrap; }
   .js #modo-selecao:checked ~ .barra-selecao { display: flex; }
   .selecionar-todos { display: flex; align-items: center; gap: .45rem; font-size: .92rem; font-weight: 700; cursor: pointer; }
   .selecionar-todos input { width: 1.2rem; height: 1.2rem; accent-color: var(--botao); }
   #proximos-adicionar:disabled { opacity: .5; cursor: not-allowed; }
-  .confirmar { margin-top: .8rem; padding: .8rem .9rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
+  .confirmar { display: none; margin-top: .8rem; padding: .8rem .9rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
+  #mostrar-todos:checked ~ .confirmar:not([hidden]),
+  #modo-selecao:checked ~ .confirmar:not([hidden]) { display: block; }
   .confirmar-lista { margin: .5rem 0; padding-left: 1.4rem; display: flex; flex-direction: column; gap: .35rem; }
   .confirmar-lista a { font-weight: 700; }
   .confirmar-lista li.feito a { color: var(--cinza); }
@@ -352,12 +362,30 @@
     .item-proximo { flex-wrap: wrap; }
   }
 
-  /* Ajuda */
+  /* Indicador comum (▽) para tudo o que abre/fecha: roda ao abrir */
+  .chevron {
+    flex: none; display: inline-block; font-size: .8em; line-height: 1; color: var(--botao);
+    transition: transform .15s; transform: rotate(0deg);
+  }
+  .chevron::before { content: "\25BD"; }
+  [open] > summary > .chevron,
+  #mostrar-todos:checked ~ .controlos-proximos .botao-mostrar .chevron { transform: rotate(180deg); }
+
+  /* Ajuda: secção fechada por omissão, abre ao clicar no título */
   .ajuda { margin-top: 2rem; }
-  .ajuda h2 { font-size: 1.25rem; margin: 0 0 .4rem; }
+  .ajuda-grupo > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: .5rem; }
+  .ajuda-grupo > summary::-webkit-details-marker { display: none; }
+  .ajuda-grupo > summary h2 { font-size: 1.25rem; margin: 0; }
+  .ajuda-grupo > summary .chevron { margin-left: auto; }
+  .ajuda-grupo > summary:focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; }
+  .ajuda-lista { margin-top: .4rem; }
   details.item { border-bottom: 1px solid var(--linha); }
   details.item:first-of-type { border-top: 1px solid var(--linha); }
-  details.item summary { cursor: pointer; padding: .75rem 0; font-weight: 700; font-size: 1.02rem; min-height: 2.75rem; }
+  details.item summary {
+    list-style: none; cursor: pointer; padding: .75rem 0; font-weight: 700; font-size: 1.02rem; min-height: 2.75rem;
+    display: flex; align-items: center; gap: .5rem; justify-content: space-between;
+  }
+  details.item summary::-webkit-details-marker { display: none; }
   details.item > div { padding: 0 0 .85rem; }
   details.item p + p { margin-top: .5rem; }
 
@@ -378,7 +406,8 @@
   }
   @media print {
     .seletor, .ferramentas, .acoes, .sugestao, .filtros, .barra-selecao, .marcar-coluna, .botao-adicionar-um,
-    .destaque, .controlo-selecao, .botao-info, .escolha-hint, .proximos-hint { display: none !important; }
+    .destaque, .controlos-proximos, .botao-info, .escolha-hint, .lista-hint { display: none !important; }
+    .lista-proximos { display: flex !important; }
   }
 </style>
 </head>
@@ -455,17 +484,41 @@
 
 <main class="largura" id="conteudo" tabindex="-1">
 
-  <section class="completa" aria-labelledby="t-geral">
-    <div>
-      <h2 id="t-geral">{{T:completa_titulo}}</h2>
-      <p class="linha2">{{T:completa_texto}}</p>
+  <div class="duas-colunas">
+  <section class="subscrever" aria-labelledby="t-subscrever">
+    <h2 id="t-subscrever" class="titulo-seccao">{{T:subscrever_titulo}}</h2>
+
+    <div class="completa">
+      <div>
+        <p class="opcao-titulo">{{T:completa_titulo}}</p>
+        <p class="linha2">{{T:completa_texto}}</p>
+      </div>
+      {{ACOES_GERAL}}
     </div>
-    {{ACOES_GERAL}}
+
+    <div class="segmentos" role="group" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
+      <label for="assinar-tema">{{T:por_tema}}</label>
+      <label for="assinar-tipo">{{T:por_tipo}}</label>
+    </div>
+
+    <p class="escolha-hint">{{T:escolha_hint}}</p>
+
+    <div class="escolha-conteudo">
+      <p class="fechar-vista"><label for="assinar-fechado" class="botao-secundario botao-fechar"><span aria-hidden="true">×</span> {{T:fechar}}</label></p>
+
+      <ul class="grelha painel-temas" aria-label="{{T:por_tema}}">
+{{LISTA_TEMAS}}
+      </ul>
+      <ul class="grelha painel-tipos" aria-label="{{T:por_tipo}}">
+{{LISTA_TIPOS}}
+      </ul>
+
+      <p class="aviso">{{T:aviso}}</p>
+    </div>
   </section>
 
-  <div class="duas-colunas">
   <section class="proximos" aria-labelledby="t-proximos">
-    <h2 id="t-proximos">{{T:proximos_titulo}}</h2>
+    <h2 id="t-proximos" class="titulo-seccao">{{T:proximos_titulo}}</h2>
     <p class="linha2">{{T:proximos_texto}}</p>
 
     <div class="segmentos" role="group" aria-label="{{T:filtrar_tema}} / {{T:filtrar_tipo}}">
@@ -497,8 +550,12 @@
     <p class="lista-hint">{{T:proximos_escolha}}</p>
 
     <div class="lista-conteudo">
+      <input type="checkbox" id="mostrar-todos" class="escondido">
       <input type="checkbox" id="modo-selecao" class="escondido">
-      <p class="controlo-selecao"><label for="modo-selecao" class="botao-secundario">{{T:selecionar_varios}}</label></p>
+      <div class="controlos-proximos">
+        <label for="mostrar-todos" class="botao-secundario botao-mostrar">{{T:mostrar_todos}} <span class="chevron" aria-hidden="true"></span></label>
+        <label for="modo-selecao" class="botao-secundario botao-selecionar">{{T:selecionar_varios}}</label>
+      </div>
 
       <div class="barra-selecao">
         <label class="selecionar-todos"><input type="checkbox" id="proximos-todos">{{T:selecionar_todos}}</label>
@@ -518,42 +575,24 @@
       </div>
     </div>
   </section>
-
-  <section class="escolha" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
-    <div class="segmentos" role="group" aria-label="{{T:por_tema}} / {{T:por_tipo}}">
-      <label for="assinar-tema">{{T:por_tema}}</label>
-      <label for="assinar-tipo">{{T:por_tipo}}</label>
-    </div>
-
-    <p class="escolha-hint">{{T:escolha_hint}}</p>
-
-    <div class="escolha-conteudo">
-      <p class="fechar-vista"><label for="assinar-fechado" class="botao-secundario botao-fechar"><span aria-hidden="true">×</span> {{T:fechar}}</label></p>
-
-      <ul class="grelha painel-temas" aria-label="{{T:por_tema}}">
-{{LISTA_TEMAS}}
-      </ul>
-      <ul class="grelha painel-tipos" aria-label="{{T:por_tipo}}">
-{{LISTA_TIPOS}}
-      </ul>
-
-      <p class="aviso">{{T:aviso}}</p>
-    </div>
-  </section>
   </div>
 
   <section class="ajuda" aria-labelledby="t-ajuda">
-    <h2 id="t-ajuda">{{T:ajuda}}</h2>
-    <details class="item"><summary>{{T:h_google_t}}</summary><div>{{T:h_google_html}}</div></details>
-    <details class="item"><summary>{{T:h_outlook_t}}</summary><div>{{T:h_outlook_html}}</div></details>
-    <details class="item"><summary>{{T:h_apple_t}}</summary><div>{{T:h_apple_html}}</div></details>
-    <details class="item"><summary>{{T:h_android_t}}</summary><div>{{T:h_android_html}}</div></details>
-    <details class="item"><summary>{{T:h_outro_t}}</summary><div>{{T:h_outro_html}}</div></details>
-    <details class="item"><summary>{{T:h_bilhetes_t}}</summary><div>{{T:h_bilhetes_html}}</div></details>
-    <details class="item"><summary>{{T:h_tema_t}}</summary><div>{{T:h_tema_html}}</div></details>
-    <details class="item"><summary>{{T:h_lingua_t}}</summary><div>{{T:h_lingua_html}}</div></details>
-    <details class="item"><summary>{{T:h_freq_t}}</summary><div>{{T:h_freq_html}}</div></details>
-    <details class="item"><summary>{{T:h_sair_t}}</summary><div>{{T:h_sair_html}}</div></details>
+    <details class="ajuda-grupo">
+      <summary><h2 id="t-ajuda" class="titulo-seccao">{{T:ajuda}}</h2><span class="chevron" aria-hidden="true"></span></summary>
+      <div class="ajuda-lista">
+        <details class="item"><summary>{{T:h_google_t}}<span class="chevron" aria-hidden="true"></span></summary><div>{{T:h_google_html}}</div></details>
+        <details class="item"><summary>{{T:h_outlook_t}}<span class="chevron" aria-hidden="true"></span></summary><div>{{T:h_outlook_html}}</div></details>
+        <details class="item"><summary>{{T:h_apple_t}}<span class="chevron" aria-hidden="true"></span></summary><div>{{T:h_apple_html}}</div></details>
+        <details class="item"><summary>{{T:h_android_t}}<span class="chevron" aria-hidden="true"></span></summary><div>{{T:h_android_html}}</div></details>
+        <details class="item"><summary>{{T:h_outro_t}}<span class="chevron" aria-hidden="true"></span></summary><div>{{T:h_outro_html}}</div></details>
+        <details class="item"><summary>{{T:h_bilhetes_t}}<span class="chevron" aria-hidden="true"></span></summary><div>{{T:h_bilhetes_html}}</div></details>
+        <details class="item"><summary>{{T:h_tema_t}}<span class="chevron" aria-hidden="true"></span></summary><div>{{T:h_tema_html}}</div></details>
+        <details class="item"><summary>{{T:h_lingua_t}}<span class="chevron" aria-hidden="true"></span></summary><div>{{T:h_lingua_html}}</div></details>
+        <details class="item"><summary>{{T:h_freq_t}}<span class="chevron" aria-hidden="true"></span></summary><div>{{T:h_freq_html}}</div></details>
+        <details class="item"><summary>{{T:h_sair_t}}<span class="chevron" aria-hidden="true"></span></summary><div>{{T:h_sair_html}}</div></details>
+      </div>
+    </details>
   </section>
 
 </main>
