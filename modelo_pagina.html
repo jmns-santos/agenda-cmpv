@@ -75,8 +75,8 @@
   .marca { display: flex; align-items: center; gap: .7rem 1rem; min-width: 0; }
   .marca > div { min-width: 0; }
   .logo-cm { flex: none; display: flex; line-height: 0; }
-  .logo-cm img { display: block; height: 58px; width: auto; }
-  @media (max-width: 40rem) { .marca { gap: .6rem; } .logo-cm img { height: 46px; } }
+  .logo-cm img { display: block; height: 74px; width: auto; }
+  @media (max-width: 40rem) { .marca { gap: .6rem; } .logo-cm img { height: 58px; } }
   .topo h1 { margin: 0; font-size: clamp(1.7rem, 7vw, 2.7rem); overflow-wrap: anywhere; hyphens: auto; line-height: 1; font-weight: 700; letter-spacing: .01em; }
   /* Uma só cor de base (branco) com um único tom de destaque (dourado), sempre o mesmo nos dois */
   .topo h1 { color: #fff; }
@@ -243,8 +243,14 @@
   .aviso { margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
 
   /* Proximos eventos: destaque rotativo, filtro, selecao multipla e adicionar ao calendario sem subscricao */
-  .proximos { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
-  .proximos::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
+  .duas-colunas { margin-top: 1.2rem; padding-top: 1.2rem; position: relative; }
+  .duas-colunas::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px solid var(--linha); }
+  .proximos { margin-top: 0; padding-top: 0; }
+  @media (min-width: 64rem) {
+    .duas-colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.4rem; align-items: start; }
+    .escolha { margin-top: 0; padding-top: 0; }
+    .escolha::before { content: none; }
+  }
   .proximos h2 { margin: 0; font-size: 1.3rem; line-height: 1.25; }
   .proximos .linha2 { color: var(--cinza); margin-top: .15rem; }
   .proximos > .segmentos { max-width: 22rem; margin-top: .8rem; }
@@ -255,6 +261,15 @@
   .chips-tipos { display: none; }
   #filtro-tipo:checked ~ main .chips-temas { display: none; }
   #filtro-tipo:checked ~ main .chips-tipos { display: flex; }
+
+  .lista-hint {
+    margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem;
+  }
+  .lista-conteudo { display: none; }
+  #filtro-tema:checked ~ main .lista-conteudo,
+  #filtro-tipo:checked ~ main .lista-conteudo { display: block; }
+  #filtro-tema:checked ~ main .lista-hint,
+  #filtro-tipo:checked ~ main .lista-hint { display: none; }
   .chip-filtro + label {
     display: inline-flex; align-items: center; min-height: 2.3rem; padding: .25rem .75rem;
     border-radius: 999px; border: 1.5px solid var(--linha); background: var(--cartao);
@@ -379,7 +394,8 @@
 <input type="radio" name="assinar" id="assinar-fechado" class="escondido" checked aria-label="{{T:fechar}}">
 <input type="radio" name="assinar" id="assinar-tema" class="escondido" aria-label="{{T:por_tema}}">
 <input type="radio" name="assinar" id="assinar-tipo" class="escondido" aria-label="{{T:por_tipo}}">
-<input type="radio" name="filtro" id="filtro-tema" class="escondido" checked aria-label="{{T:filtrar_tema}}">
+<input type="radio" name="filtro" id="filtro-fechado" class="escondido" checked aria-label="{{T:fechar}}">
+<input type="radio" name="filtro" id="filtro-tema" class="escondido" aria-label="{{T:filtrar_tema}}">
 <input type="radio" name="filtro" id="filtro-tipo" class="escondido" aria-label="{{T:filtrar_tipo}}">
 
 <header class="topo">
@@ -447,6 +463,7 @@
     {{ACOES_GERAL}}
   </section>
 
+  <div class="duas-colunas">
   <section class="proximos" aria-labelledby="t-proximos">
     <h2 id="t-proximos">{{T:proximos_titulo}}</h2>
     <p class="linha2">{{T:proximos_texto}}</p>
@@ -477,24 +494,28 @@
       </div>
     </div>
 
-    <input type="checkbox" id="modo-selecao" class="escondido">
-    <p class="controlo-selecao"><label for="modo-selecao" class="botao-secundario">{{T:selecionar_varios}}</label></p>
+    <p class="lista-hint">{{T:proximos_escolha}}</p>
 
-    <div class="barra-selecao">
-      <label class="selecionar-todos"><input type="checkbox" id="proximos-todos">{{T:selecionar_todos}}</label>
-      <button type="button" class="botao" id="proximos-adicionar" disabled
-        data-rotulo-zero="{{T:adicionar_zero}}" data-rotulo-n="{{T:adicionar_n}}">{{T:adicionar_zero}}</button>
-    </div>
+    <div class="lista-conteudo">
+      <input type="checkbox" id="modo-selecao" class="escondido">
+      <p class="controlo-selecao"><label for="modo-selecao" class="botao-secundario">{{T:selecionar_varios}}</label></p>
 
-    <ul class="lista-proximos">
+      <div class="barra-selecao">
+        <label class="selecionar-todos"><input type="checkbox" id="proximos-todos">{{T:selecionar_todos}}</label>
+        <button type="button" class="botao" id="proximos-adicionar" disabled
+          data-rotulo-zero="{{T:adicionar_zero}}" data-rotulo-n="{{T:adicionar_n}}">{{T:adicionar_zero}}</button>
+      </div>
+
+      <ul class="lista-proximos">
 {{LISTA_PROXIMOS}}
-    </ul>
-    <p class="vazio-proximos">{{T:proximos_vazio}}</p>
+      </ul>
+      <p class="vazio-proximos">{{T:proximos_vazio}}</p>
 
-    <div class="confirmar" id="proximos-confirmar" hidden>
-      <p>{{T:confirmar_titulo}}</p>
-      <ol class="confirmar-lista"></ol>
-      <a class="confirmar-ics" href="#" download="eventos.ics">{{T:confirmar_ics}}</a>
+      <div class="confirmar" id="proximos-confirmar" hidden>
+        <p>{{T:confirmar_titulo}}</p>
+        <ol class="confirmar-lista"></ol>
+        <a class="confirmar-ics" href="#" download="eventos.ics">{{T:confirmar_ics}}</a>
+      </div>
     </div>
   </section>
 
@@ -519,6 +540,7 @@
       <p class="aviso">{{T:aviso}}</p>
     </div>
   </section>
+  </div>
 
   <section class="ajuda" aria-labelledby="t-ajuda">
     <h2 id="t-ajuda">{{T:ajuda}}</h2>
