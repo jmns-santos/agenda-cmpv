@@ -3,9 +3,10 @@ VERSION:2.0
 PRODID:-//Póvoa de Varzim//Agenda Municipal//PT
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALDESC:Calendario de jogos do Varzim SC.
-NAME:ポヴォア・デ・ヴァルジン：Jogos do Varzim
-X-WR-CALNAME:ポヴォア・デ・ヴァルジン：Jogos do Varzim
+X-WR-CALDESC:ヴァルジンSCの試合日程と結果.
+NAME:ポヴォア・デ・ヴァルジン：ヴァルジンの試合
+X-WR-CALNAME:ポヴォア・デ・ヴァルジン：ヴァルジンの試
+ 合
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/jogo
  s-varzim.ics
@@ -13,16 +14,169 @@ X-APPLE-CALENDAR-COLOR:#2e7d32
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Futebol - Varzim x Fafe
-DTSTART:20261108T150000Z
-DTEND:20261108T164500Z
-DTSTAMP:20261108T150000Z
-UID:varzim-Gk50SAL66H6NIIb0xqv6vy1wORGX9Iicu5Hk6hms@maak-agenda.nl@agenda.
+SUMMARY:Futebol - Trofense x Varzim (0-1)
+DTSTART:20260809T160000Z
+DTEND:20260809T174500Z
+DTSTAMP:20260810T193515Z
+UID:varzim-mvzKoLPHIm2kp46ZM8qZRZ63QEFxonbVpCyWglC6@maak-agenda.nl@agenda.
  cm-pvarzim.pt
-CATEGORIES:スポーツ,Jogos do Varzim
+CATEGORIES:スポーツ,ヴァルジンの試合
 DESCRIPTION:イベントのタイトルと説明は、市が公開して
  いるポルトガル語のままです。\n\n詳細: https://www.flashsco
  re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260810T193515Z
+TRANSP:TRANSPARENT
+URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Futebol - Varzim x AD Marco 09 (2-1)
+DTSTART:20260816T190000Z
+DTEND:20260816T204500Z
+DTSTAMP:20260817T031434Z
+UID:varzim-EguTQM7zhlRCYVifmVBglc9sbxsu6HLWwVCm7ort@maak-agenda.nl@agenda.
+ cm-pvarzim.pt
+CATEGORIES:スポーツ,ヴァルジンの試合
+DESCRIPTION:イベントのタイトルと説明は、市が公開して
+ いるポルトガル語のままです。\n\n詳細: https://www.flashsco
+ re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260817T031434Z
+TRANSP:TRANSPARENT
+URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Futebol - Paços de Ferreira x Varzim (1-4)
+DTSTART:20260822T193000Z
+DTEND:20260822T211500Z
+DTSTAMP:20260823T031502Z
+UID:varzim-rUpAyBWtYa5ChGiKcKD5113XgYqutdXD4LyAfmLi@maak-agenda.nl@agenda.
+ cm-pvarzim.pt
+CATEGORIES:スポーツ,ヴァルジンの試合
+DESCRIPTION:イベントのタイトルと説明は、市が公開して
+ いるポルトガル語のままです。\n\n詳細: https://www.flashsco
+ re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260823T031502Z
+TRANSP:TRANSPARENT
+URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Futebol - Varzim x Trofense (5-1) · Taça de Portugal
+DTSTART:20260829T160000Z
+DTEND:20260829T174500Z
+DTSTAMP:20260830T031121Z
+UID:varzim-b6S4usil1ywtlEBlTqDQo66K5fUQRr0viJqlgakw@maak-agenda.nl@agenda.
+ cm-pvarzim.pt
+CATEGORIES:スポーツ,ヴァルジンの試合
+DESCRIPTION:イベントのタイトルと説明は、市が公開して
+ いるポルトガル語のままです。\n\n詳細: https://www.flashsco
+ re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260830T031121Z
+LOCATION:Estádio do Varzim
+TRANSP:TRANSPARENT
+URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Futebol - Varzim x Paredes (0-1)
+DTSTART:20260905T173000Z
+DTEND:20260905T191500Z
+DTSTAMP:20260906T031547Z
+UID:varzim-lF5ROxxPOxB7DYCnvP92BvqJpOMy6qeVY96DVxMJ@maak-agenda.nl@agenda.
+ cm-pvarzim.pt
+CATEGORIES:スポーツ,ヴァルジンの試合
+DESCRIPTION:イベントのタイトルと説明は、市が公開して
+ いるポルトガル語のままです。\n\n詳細: https://www.flashsco
+ re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260906T031547Z
+TRANSP:TRANSPARENT
+URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Futebol - Varzim x Vianense (1-2)
+DTSTART:20260912T140000Z
+DTEND:20260912T154500Z
+DTSTAMP:20260913T031451Z
+UID:varzim-6ocVPeKFd5GYgmcdr7l5DY9PMgUon0URVyDsAvnp@maak-agenda.nl@agenda.
+ cm-pvarzim.pt
+CATEGORIES:スポーツ,ヴァルジンの試合
+DESCRIPTION:イベントのタイトルと説明は、市が公開して
+ いるポルトガル語のままです。\n\n詳細: https://www.flashsco
+ re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260913T031451Z
+TRANSP:TRANSPARENT
+URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Futebol - Vitória de Sernache x Varzim (2-1) · Taça de Portugal
+DTSTART:20260919T140000Z
+DTEND:20260919T154500Z
+DTSTAMP:20260920T031134Z
+UID:varzim-r95JPeei4BZ4N0tjHykS47gvbgZz6FZ1PTNQnh38@maak-agenda.nl@agenda.
+ cm-pvarzim.pt
+CATEGORIES:スポーツ,ヴァルジンの試合
+DESCRIPTION:イベントのタイトルと説明は、市が公開して
+ いるポルトガル語のままです。\n\n詳細: https://www.flashsco
+ re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260920T031134Z
+LOCATION:Estádio Municipal D. Nuno Álvares Pereira
+TRANSP:TRANSPARENT
+URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Futebol - São João Ver x Varzim (2-1)
+DTSTART:20261011T140000Z
+DTEND:20261011T154500Z
+DTSTAMP:20261012T031543Z
+UID:varzim-PUQ7qPEKcJvVTXIraTlhFxjJEyMttDcMcakU6nS2@maak-agenda.nl@agenda.
+ cm-pvarzim.pt
+CATEGORIES:スポーツ,ヴァルジンの試合
+DESCRIPTION:イベントのタイトルと説明は、市が公開して
+ いるポルトガル語のままです。\n\n詳細: https://www.flashsco
+ re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20261012T031543Z
+TRANSP:TRANSPARENT
+URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Futebol - Varzim x Vitória Guimarães II (2-4)
+DTSTART:20261025T180000Z
+DTEND:20261025T194500Z
+DTSTAMP:20261026T031519Z
+UID:varzim-FcIPFJ34UgknWESQHm6KcJr1S6LZ9yt8uoib46PE@maak-agenda.nl@agenda.
+ cm-pvarzim.pt
+CATEGORIES:スポーツ,ヴァルジンの試合
+DESCRIPTION:イベントのタイトルと説明は、市が公開して
+ いるポルトガル語のままです。\n\n詳細: https://www.flashsco
+ re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20261026T031519Z
+TRANSP:TRANSPARENT
+URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Futebol - Leça x Varzim (2-0)
+DTSTART:20261031T150000Z
+DTEND:20261031T164500Z
+DTSTAMP:20261101T031630Z
+UID:varzim-VfXZndpLDxe2kIFw927jClTBUcpk8KhzCQdfOSzL@maak-agenda.nl@agenda.
+ cm-pvarzim.pt
+CATEGORIES:スポーツ,ヴァルジンの試合
+DESCRIPTION:イベントのタイトルと説明は、市が公開して
+ いるポルトガル語のままです。\n\n詳細: https://www.flashsco
+ re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20261101T031630Z
+TRANSP:TRANSPARENT
+URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Futebol - Varzim x Fafe
+DTSTART:20261108T150000Z
+DTEND:20261108T164500Z
+DTSTAMP:20260810T193514Z
+UID:varzim-Gk50SAL66H6NIIb0xqv6vy1wORGX9Iicu5Hk6hms@maak-agenda.nl@agenda.
+ cm-pvarzim.pt
+CATEGORIES:スポーツ,ヴァルジンの試合
+DESCRIPTION:イベントのタイトルと説明は、市が公開して
+ いるポルトガル語のままです。\n\n詳細: https://www.flashsco
+ re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260810T193514Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
 END:VEVENT
@@ -30,13 +184,14 @@ BEGIN:VEVENT
 SUMMARY:Futebol - Varzim x Trofense
 DTSTART:20261128T150000Z
 DTEND:20261128T164500Z
-DTSTAMP:20261128T150000Z
+DTSTAMP:20260810T193513Z
 UID:varzim-YKovTRnDzEI9rGH05rgSKsWn52HdD7REOJh3ft0l@maak-agenda.nl@agenda.
  cm-pvarzim.pt
-CATEGORIES:スポーツ,Jogos do Varzim
+CATEGORIES:スポーツ,ヴァルジンの試合
 DESCRIPTION:イベントのタイトルと説明は、市が公開して
  いるポルトガル語のままです。\n\n詳細: https://www.flashsco
  re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260810T193513Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
 END:VEVENT
@@ -44,13 +199,14 @@ BEGIN:VEVENT
 SUMMARY:Futebol - AD Marco 09 x Varzim
 DTSTART:20261206T150000Z
 DTEND:20261206T164500Z
-DTSTAMP:20261206T150000Z
+DTSTAMP:20260810T193514Z
 UID:varzim-sNrk80fZeITrFGN37LVNqd3IwL2yYPyN6f9g2T7f@maak-agenda.nl@agenda.
  cm-pvarzim.pt
-CATEGORIES:スポーツ,Jogos do Varzim
+CATEGORIES:スポーツ,ヴァルジンの試合
 DESCRIPTION:イベントのタイトルと説明は、市が公開して
  いるポルトガル語のままです。\n\n詳細: https://www.flashsco
  re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260810T193514Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
 END:VEVENT
@@ -58,13 +214,14 @@ BEGIN:VEVENT
 SUMMARY:Futebol - Varzim x Paços de Ferreira
 DTSTART:20261213T150000Z
 DTEND:20261213T164500Z
-DTSTAMP:20261213T150000Z
+DTSTAMP:20260810T193512Z
 UID:varzim-AT3SyP2dURjqS0sT9RwO8cahrw0TCFSG5Kwl3aU2@maak-agenda.nl@agenda.
  cm-pvarzim.pt
-CATEGORIES:スポーツ,Jogos do Varzim
+CATEGORIES:スポーツ,ヴァルジンの試合
 DESCRIPTION:イベントのタイトルと説明は、市が公開して
  いるポルトガル語のままです。\n\n詳細: https://www.flashsco
  re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260810T193512Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
 END:VEVENT
@@ -72,13 +229,14 @@ BEGIN:VEVENT
 SUMMARY:Futebol - Paredes x Varzim
 DTSTART:20261220T150000Z
 DTEND:20261220T164500Z
-DTSTAMP:20261220T150000Z
+DTSTAMP:20260810T193512Z
 UID:varzim-yQffhwpp0VjIbZRGCIfMOaWAyCD3reNM02Nan6sv@maak-agenda.nl@agenda.
  cm-pvarzim.pt
-CATEGORIES:スポーツ,Jogos do Varzim
+CATEGORIES:スポーツ,ヴァルジンの試合
 DESCRIPTION:イベントのタイトルと説明は、市が公開して
  いるポルトガル語のままです。\n\n詳細: https://www.flashsco
  re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260810T193512Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
 END:VEVENT
@@ -86,13 +244,14 @@ BEGIN:VEVENT
 SUMMARY:Futebol - Vianense x Varzim
 DTSTART:20270103T150000Z
 DTEND:20270103T164500Z
-DTSTAMP:20270103T150000Z
+DTSTAMP:20260810T193512Z
 UID:varzim-ZmeQj3NOg2uP4lH0XtkawcRn5y1O7etMia5viXHK@maak-agenda.nl@agenda.
  cm-pvarzim.pt
-CATEGORIES:スポーツ,Jogos do Varzim
+CATEGORIES:スポーツ,ヴァルジンの試合
 DESCRIPTION:イベントのタイトルと説明は、市が公開して
  いるポルトガル語のままです。\n\n詳細: https://www.flashsco
  re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260810T193512Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
 END:VEVENT
@@ -100,13 +259,14 @@ BEGIN:VEVENT
 SUMMARY:Futebol - Varzim x São João Ver
 DTSTART:20270110T150000Z
 DTEND:20270110T164500Z
-DTSTAMP:20270110T150000Z
+DTSTAMP:20260810T193514Z
 UID:varzim-WyY3NFmumLNiZnvaaxPQTcovjK1aoYUnw2q1c8hO@maak-agenda.nl@agenda.
  cm-pvarzim.pt
-CATEGORIES:スポーツ,Jogos do Varzim
+CATEGORIES:スポーツ,ヴァルジンの試合
 DESCRIPTION:イベントのタイトルと説明は、市が公開して
  いるポルトガル語のままです。\n\n詳細: https://www.flashsco
  re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260810T193514Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
 END:VEVENT
@@ -114,13 +274,14 @@ BEGIN:VEVENT
 SUMMARY:Futebol - Vitória Guimarães II x Varzim
 DTSTART:20270117T150000Z
 DTEND:20270117T164500Z
-DTSTAMP:20270117T150000Z
+DTSTAMP:20260810T193514Z
 UID:varzim-A5vHblCvxenS5uEU6mEKno94Qtdd3PoouUyUIHyw@maak-agenda.nl@agenda.
  cm-pvarzim.pt
-CATEGORIES:スポーツ,Jogos do Varzim
+CATEGORIES:スポーツ,ヴァルジンの試合
 DESCRIPTION:イベントのタイトルと説明は、市が公開して
  いるポルトガル語のままです。\n\n詳細: https://www.flashsco
  re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260810T193514Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
 END:VEVENT
@@ -128,13 +289,14 @@ BEGIN:VEVENT
 SUMMARY:Futebol - Varzim x Leça
 DTSTART:20270124T150000Z
 DTEND:20270124T164500Z
-DTSTAMP:20270124T150000Z
+DTSTAMP:20260810T193514Z
 UID:varzim-34MKArW9d6QwjBjJH1DivxH1ttziFcvJgUmNvAi5@maak-agenda.nl@agenda.
  cm-pvarzim.pt
-CATEGORIES:スポーツ,Jogos do Varzim
+CATEGORIES:スポーツ,ヴァルジンの試合
 DESCRIPTION:イベントのタイトルと説明は、市が公開して
  いるポルトガル語のままです。\n\n詳細: https://www.flashsco
  re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260810T193514Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
 END:VEVENT
@@ -142,13 +304,14 @@ BEGIN:VEVENT
 SUMMARY:Futebol - Fafe x Varzim
 DTSTART:20270130T150000Z
 DTEND:20270130T164500Z
-DTSTAMP:20270130T150000Z
+DTSTAMP:20260810T193513Z
 UID:varzim-lpVJLoRsL2x2QOm1i5dXKZjtUhVBanT4Aq97ypgs@maak-agenda.nl@agenda.
  cm-pvarzim.pt
-CATEGORIES:スポーツ,Jogos do Varzim
+CATEGORIES:スポーツ,ヴァルジンの試合
 DESCRIPTION:イベントのタイトルと説明は、市が公開して
  いるポルトガル語のままです。\n\n詳細: https://www.flashsco
  re.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20260810T193513Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
 END:VEVENT
