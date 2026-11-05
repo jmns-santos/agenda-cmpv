@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-zoPeAqb7+xMLqfLHYWcOcdNFTCIW1P0p2VcL31sh8hA='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-sAXTdgN1fl3pIe4vZm9s/704JyRNBmLt7YhfSosJujk='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="将波武阿-迪瓦尔津市政活动订阅到您的日历：全部活动、按主题或按类型。">
 <meta name="theme-color" content="#0a3a52">
@@ -282,20 +282,22 @@
   /* Pesquisa (com JS) e botão "Ver todos os eventos", lado a lado quando há espaço */
   .barra-todos { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin-top: .9rem; }
   .pesquisa-caixa {
-    display: none; flex: 1 1 15rem; min-width: 0; align-items: center;
-    background: var(--cartao); border: 1.5px solid var(--linha); border-radius: 999px;
+    display: none; width: 100%; min-width: 0; align-items: center; margin-top: 1rem;
+    background: var(--cartao); border: 2px solid var(--botao); border-radius: 999px; box-shadow: var(--sombra);
   }
   .js .pesquisa-caixa { display: flex; }
-  .pesquisa-caixa:focus-within { border-color: var(--botao); box-shadow: 0 0 0 3px var(--mar-claro); }
-  .pesquisa-icone { flex: none; width: 1.15rem; height: 1.15rem; color: var(--cinza); margin-left: .85rem; }
+  .pesquisa-caixa:focus-within { box-shadow: 0 0 0 4px var(--mar-claro); }
+  .pesquisa-icone { flex: none; width: 1.35rem; height: 1.35rem; color: var(--botao); margin-left: 1rem; }
+  @media (prefers-color-scheme: dark) { .pesquisa-icone { color: var(--titulo); } }
   .pesquisa-input {
-    flex: 1 1 auto; min-width: 0; min-height: 2.75rem; padding: .3rem .6rem; border: 0; background: transparent;
-    font: inherit; font-size: 1rem; color: var(--tinta);
+    flex: 1 1 auto; min-width: 0; min-height: 3.3rem; padding: .35rem .7rem; border: 0; background: transparent;
+    font: inherit; font-size: 1.08rem; color: var(--tinta);
   }
+  .pesquisa-input::placeholder { color: var(--cinza); opacity: 1; }
   .pesquisa-input:focus { outline: none; }
   .pesquisa-input::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
   .pesquisa-limpar {
-    flex: none; width: 2.1rem; height: 2.1rem; margin-right: .35rem; border-radius: 50%; border: 0;
+    flex: none; width: 2.3rem; height: 2.3rem; margin-right: .5rem; border-radius: 50%; border: 0;
     background: var(--trilho); color: var(--tinta); cursor: pointer; display: flex; align-items: center; justify-content: center;
   }
   .pesquisa-limpar svg { width: 1rem; height: 1rem; }
@@ -315,8 +317,16 @@
   #mostrar-todos:checked ~ .painel-todos { display: block; }
 
   /* Filtros (com JS): quando, tema e tipo, aplicáveis ao mesmo tempo */
-  .filtros { display: none; background: var(--cartao); border: 1px solid var(--linha); border-radius: 12px; padding: .1rem .9rem .85rem; }
+  .filtros { display: none; background: var(--cartao); border: 1px solid var(--linha); border-radius: 12px; padding: 0 .9rem; }
   .js .filtros { display: block; }
+  .filtros[open] { padding-bottom: .85rem; }
+  .filtros > summary {
+    list-style: none; cursor: pointer; display: flex; align-items: center; gap: .45rem; min-height: 2.9rem;
+    font-weight: 700; font-size: .95rem;
+  }
+  .filtros > summary::-webkit-details-marker { display: none; }
+  .filtros > summary .chevron { margin-left: auto; }
+  .filtros-ativos { font-weight: 400; color: var(--cinza); }
   .filtro-grupo { margin-top: .7rem; }
   .filtro-grupo-titulo { margin: 0 0 .35rem; font-size: .78rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--cinza); }
   .chips { display: flex; flex-wrap: wrap; gap: .35rem; }
@@ -919,6 +929,15 @@
     <h2 id="t-proximos" class="titulo-seccao">近期活动</h2>
     <p class="linha2">城市里即将举行的活动。可按名称、主题、类型或地点搜索，查看所有活动，并将一项或多项添加到您的日历，无需订阅。</p>
 
+    <div class="pesquisa-caixa" role="search">
+      <svg class="pesquisa-icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <label for="pesquisa" class="apenas-leitor">搜索活动</label>
+      <input type="search" id="pesquisa" class="pesquisa-input" placeholder="搜索：名称、主题、类型或地点" autocomplete="off" enterkeyhint="search" aria-controls="lista-proximos">
+      <button type="button" id="pesquisa-limpar" class="pesquisa-limpar" hidden aria-label="清除搜索">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
     <div class="destaque" id="destaque-proximo" role="group" hidden aria-label="精选">
       <p class="destaque-rotulo">精选</p>
       <div class="destaque-cartao" aria-live="polite"></div>
@@ -933,19 +952,12 @@
 
     <input type="checkbox" id="mostrar-todos" class="escondido" aria-controls="painel-todos">
     <div class="barra-todos">
-      <div class="pesquisa-caixa" role="search">
-        <svg class="pesquisa-icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-        <label for="pesquisa" class="apenas-leitor">搜索活动</label>
-        <input type="search" id="pesquisa" class="pesquisa-input" placeholder="搜索：名称、主题、类型或地点" autocomplete="off" enterkeyhint="search" aria-controls="lista-proximos">
-        <button type="button" id="pesquisa-limpar" class="pesquisa-limpar" hidden aria-label="清除搜索">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-        </button>
-      </div>
       <label for="mostrar-todos" class="botao-secundario botao-mostrar">查看所有活动 <span class="contagem-botao">(69)</span> <span class="chevron" aria-hidden="true"></span></label>
     </div>
 
     <div class="painel-todos" id="painel-todos">
-      <div class="filtros" role="group" aria-label="时间 / 主题 / 类型">
+      <details class="filtros" id="filtros" open>
+        <summary><span>按日期、主题和类型筛选</span><span class="filtros-ativos" id="filtros-ativos"></span><span class="chevron" aria-hidden="true"></span></summary>
         <div class="filtro-grupo">
           <p class="filtro-grupo-titulo" id="fg-quando">时间</p>
           <div class="chips" role="group" aria-labelledby="fg-quando">
@@ -1006,7 +1018,7 @@
 <label for="chip-tipo-jogos-varzim" style="--cor: #2e7d32">瓦尔津比赛<span class="n">(10)</span></label>
           </div>
         </div>
-      </div>
+      </details>
 
       <input type="checkbox" id="modo-selecao" class="escondido">
       <div class="controlos-lista">
@@ -2217,9 +2229,11 @@
     var emDestaque = itens.filter(function (x) { return x.janela; });
     if (!emDestaque.length) emDestaque = itens.slice(0, 30);
 
+    // Enquanto se pesquisa, o destaque recolhe: os resultados aparecem logo por baixo da pesquisa.
+    var aPesquisar = false;
     function destaqueMostrar() {
       if (!destaque) return;
-      if (!emDestaque.length) { destaque.hidden = true; return; }
+      if (!emDestaque.length || aPesquisar) { destaque.hidden = true; return; }
       destaque.hidden = false;
       if (destaqueIndice >= emDestaque.length) destaqueIndice = 0;
       var linha = emDestaque[destaqueIndice].li;
@@ -2388,11 +2402,22 @@
       if (semResultados) semResultados.hidden = !(itens.length && mostrados === 0);
       if (blocoDatas) blocoDatas.hidden = q !== 'datas';
       var temTexto = !!(pesquisa && pesquisa.value);
+      if (temTexto !== aPesquisar) {
+        aPesquisar = temTexto;
+        if (aPesquisar) destaqueParar(); else destaqueComecar();
+        destaqueMostrar();
+      }
       if (limparPesquisa) limparPesquisa.hidden = !temTexto;
       if (limparFiltros) limparFiltros.hidden = !(temas.length || tipos.length || q !== 'todos' || temTexto);
+      var nAtivos = temas.length + tipos.length + (q !== 'todos' ? 1 : 0);
+      if (filtrosAtivos) filtrosAtivos.textContent = nAtivos ? '(' + nAtivos + ')' : '';
       atualizarBotao();
     }
 
+    // Telemóvel: filtros recolhidos, para os resultados da pesquisa aparecerem logo; no computador ficam abertos.
+    var blocoFiltros = document.getElementById('filtros');
+    var filtrosAtivos = document.getElementById('filtros-ativos');
+    if (blocoFiltros && window.matchMedia && window.matchMedia('(max-width: 40rem)').matches) blocoFiltros.open = false;
     if (dataDe) dataDe.min = hoje;
     if (dataAte) dataAte.min = hoje;
     for (var c = 0; c < chips.length; c++) chips[c].addEventListener('change', aplicarFiltro);
