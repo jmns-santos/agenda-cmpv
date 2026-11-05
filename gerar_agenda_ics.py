@@ -721,6 +721,15 @@ def obter_jogos_varzim(sessao, hoje, horizonte):
         return []
 
     itens = []
+    # Diagnóstico (temporário): como o fixtur.es escreve os jogos já realizados
+    passados = []
+    for comp in calendario.walk("VEVENT"):
+        ini_d = comp.get("dtstart")
+        if ini_d is not None and str(ini_d.dt)[:10] < hoje.date().isoformat():
+            passados.append((str(ini_d.dt), {k: str(comp.get(k))[:160] for k in comp.keys()}))
+    for data_jogo, campos in sorted(passados)[-4:]:
+        logging.info("Jogo passado %s: %r", data_jogo, campos)
+    logging.info("Jogos no feed: %d (já realizados: %d)", len(list(calendario.walk("VEVENT"))), len(passados))
     for comp in calendario.walk("VEVENT"):
         campo_inicio = comp.get("dtstart")
         inicio = campo_inicio.dt if campo_inicio else None
