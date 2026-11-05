@@ -60,6 +60,7 @@ FONTE_VARZIM_ICS = "https://ics.fixtur.es/v2/varzim.ics?e23e09232ebff109"
 # usam o adversário e a hora; o texto e o link publicados são sempre os nossos.
 FONTE_VARZIM_ICS_HTTP = "http://ics.fixtur.es/v2/varzim.ics?e23e09232ebff109"
 VARZIM_LINK = "https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/"
+DIAS_RESULTADOS_VARZIM = 365  # jogos já realizados que ficam (com resultado) no calendário do Varzim
 
 # Endereço público onde os ficheiros ficam alojados (termina em "/").
 URL_PUBLICA = "https://jmns-santos.github.io/agenda-cmpv/"
@@ -281,7 +282,7 @@ TIPOS = [
                    r"dia (?:mundial|internacional|nacional|europeu|municipal) ",
                    r"dia d[aoe]s? (?:pai|mae|crianca|mulher|agricultor|horticultor|europa|mar|cidade|municipio|avo|namorados)",
                    r"semana (?:europeia|nacional|mundial) "]),
-    Tema("jogos-varzim", "Jogos do Varzim", "Calendario de jogos do Varzim SC", [],
+    Tema("jogos-varzim", "Jogos do Varzim", "Calendário de jogos do Varzim SC, com os resultados", [],
          "#2e7d32", tema="desporto"),
 ]
 TIPO_PADRAO = TIPOS[6]                     # Oficinas e atividades
@@ -692,15 +693,29 @@ def obter_eventos(sessao, hoje, horizonte):
     return list(eventos.values())
 
 
+# Como o fixtur.es escreve os jogos: "Leça - Varzim", depois do jogo "Leça - Varzim (2-0)",
+# e nas taças com a competição entre []: "Vitória de Sernache - Varzim [TdP] (2-1)".
+JOGO_VARZIM_RE = re.compile(
+    r"^(?P<casa>.+?)\s+-\s+(?P<fora>.+?)(?:\s*\[(?P<comp>[^\]]+)\])?(?:\s*\((?P<g1>\d+)\s*-\s*(?P<g2>\d+)\))?\s*$")
+COMPETICOES_VARZIM = {"TdP": "Taça de Portugal", "TL": "Taça da Liga"}
+
+
 def titulo_jogo_varzim(resumo):
-    """'Varzim - Fafe' (como vem do fixtur.es) -> 'Futebol - Varzim x Fafe'."""
+    """'Leça - Varzim (2-0)' (como vem do fixtur.es) -> 'Futebol - Leça x Varzim (2-0)';
+    sem resultado (jogo por realizar) fica 'Futebol - Leça x Varzim'; '[TdP]' -> ' · Taça de Portugal'.
+    Um formato desconhecido passa como vem, para nunca se perder o resultado."""
     resumo = limpar_texto(resumo) or "Varzim SC"
     if resumo.lower().startswith("futebol"):
         return resumo
-    partes = [p.strip() for p in resumo.split(" - ")]
-    if len(partes) == 2 and all(partes):
-        return "Futebol - {} x {}".format(*partes)
-    return "Futebol - " + resumo
+    m = JOGO_VARZIM_RE.match(resumo)
+    if not m:
+        return "Futebol - " + resumo
+    titulo = "Futebol - {} x {}".format(m.group("casa"), m.group("fora"))
+    if m.group("g1") is not None:
+        titulo += " ({}-{})".format(m.group("g1"), m.group("g2"))
+    if m.group("comp"):
+        titulo += " · " + COMPETICOES_VARZIM.get(m.group("comp").strip(), m.group("comp").strip())
+    return titulo
 
 
 def obter_jogos_varzim(sessao, hoje, horizonte):
@@ -721,15 +736,6 @@ def obter_jogos_varzim(sessao, hoje, horizonte):
         return []
 
     itens = []
-    # Diagnóstico (temporário): como o fixtur.es escreve os jogos já realizados
-    passados = []
-    for comp in calendario.walk("VEVENT"):
-        ini_d = comp.get("dtstart")
-        if ini_d is not None and str(ini_d.dt)[:10] < hoje.date().isoformat():
-            passados.append((str(ini_d.dt), {k: str(comp.get(k))[:160] for k in comp.keys()}))
-    for data_jogo, campos in sorted(passados)[-4:]:
-        logging.info("Jogo passado %s: %r", data_jogo, campos)
-    logging.info("Jogos no feed: %d (já realizados: %d)", len(list(calendario.walk("VEVENT"))), len(passados))
     for comp in calendario.walk("VEVENT"):
         campo_inicio = comp.get("dtstart")
         inicio = campo_inicio.dt if campo_inicio else None
@@ -752,18 +758,27 @@ def obter_jogos_varzim(sessao, hoje, horizonte):
         else:
             fim = inicio + timedelta(hours=2)   # duracao habitual de um jogo
 
-        if fim < hoje or inicio > horizonte:
+        # Os jogos já realizados ficam (até um ano), com o resultado, mas só no
+        # calendário "Jogos do Varzim"; os outros calendários e a página só têm os por realizar.
+        if fim < hoje - timedelta(days=DIAS_RESULTADOS_VARZIM) or inicio > horizonte:
             continue
 
         uid = str(comp.get("uid") or "").strip()
         if not uid:
             continue
+        campo_mod = comp.get("last-modified")
+        modificado = campo_mod.dt if campo_mod else None
+        if isinstance(modificado, datetime) and modificado.tzinfo is None:
+            modificado = modificado.replace(tzinfo=timezone.utc)
 
         itens.append({
             "uid": "varzim-{}".format(uid),
             "title": titulo_jogo_varzim(str(comp.get("summary") or "")),
             "start": inicio.isoformat(),
             "end": fim.isoformat(),
+            # muda quando chega o resultado: as aplicações atualizam o evento que já têm
+            "modified": modificado.isoformat() if isinstance(modificado, datetime) else None,
+            "_ja_realizado": fim < hoje,
             "location": limpar_texto(str(comp.get("location") or "")),
             # O texto do fixtur.es é um pedido de donativos e links próprios:
             # não se publica. Fica só "Mais informação" com o link do jogo.
@@ -772,7 +787,10 @@ def obter_jogos_varzim(sessao, hoje, horizonte):
             "_link_direto": True,
             "_classificacao_fixa": ("desporto", "jogos-varzim"),
         })
-    logging.info("Jogos do Varzim: %s", len(itens))
+    realizados = [i for i in itens if i["_ja_realizado"]]
+    logging.info("Jogos do Varzim: %s por realizar, %s já realizados (%s com resultado)",
+                 len(itens) - len(realizados), len(realizados),
+                 sum(1 for i in realizados if re.search(r"\(\d+-\d+\)", i["title"])))
     return itens
 
 
@@ -923,6 +941,10 @@ def construir_calendarios(itens, url_base, lingua="pt", t=None, classificados=No
 
     lista_classificados = classificados if classificados is not None else classificar_todos(itens)
     for item, tema, tipo in lista_classificados:
+        if item.get("_ja_realizado"):
+            # Jogo do Varzim já realizado: fica só em "Jogos do Varzim", com o resultado no título
+            grupos["{}tipos/{}.ics".format(pre, tipo.slug)].add_component(criar_evento(item, tema, tipo, t_ics, nomes))
+            continue
         contagem["temas"][tema.slug] += 1
         contagem["tipos"][tipo.slug] += 1
         geral.add_component(criar_evento(item, tema, tipo, t_ics, nomes))
@@ -1152,6 +1174,8 @@ def eventos_proximos(classificados, agora, t_ics, nomes, t=None):
     limite = agora + timedelta(days=JANELA_PROXIMOS_DIAS)
     resultado = []
     for item, tema, tipo in classificados:
+        if item.get("_ja_realizado"):
+            continue
         inicio = parse_iso(item.get("start"))
         if inicio is None:
             continue
@@ -1392,6 +1416,7 @@ def gerar_saidas(itens, pasta, url_base):
     """Escreve os calendários e a página em todas as línguas. Devolve a contagem (igual em todas)."""
     trad = carregar_traducoes()
     classificados = classificar_todos(itens)
+    total = sum(1 for i in itens if not i.get("_ja_realizado"))  # a agenda: o que ainda vai acontecer
     # Momento real (não a meia-noite do dia): decide com precisão se um evento já
     # terminou, está em curso ou ainda vai começar, nos "próximos eventos".
     agora = datetime.now(timezone.utc)
@@ -1408,7 +1433,7 @@ def gerar_saidas(itens, pasta, url_base):
         t = trad["linguas"][lingua]
         ficheiros, contagem, proximos = construir_calendarios(
             itens, url_base, lingua, t if lingua != "pt" else None, classificados, agora)
-        ficheiros[prefixo_lingua(lingua) + "index.html"] = gerar_pagina(contagem, len(itens), url_base, lingua, trad, proximos, agora)
+        ficheiros[prefixo_lingua(lingua) + "index.html"] = gerar_pagina(contagem, total, url_base, lingua, trad, proximos, agora)
         for caminho, conteudo in ficheiros.items():
             escrever_atomico(conteudo, pasta / caminho)
         for sub in ("temas", "tipos"):

@@ -281,6 +281,10 @@
     "comemoracoes": [
      "Celebrations and ceremonies",
      "Commemorative days, ceremonies, galas, tributes and formal sessions"
+    ],
+    "jogos-varzim": [
+     "Varzim matches",
+     "Varzim SC fixtures, with results"
     ]
    },
    "adicionar_n": "Add {n} to calendar",
@@ -479,6 +483,10 @@
     "comemoracoes": [
      "Conmemoraciones y ceremonias",
      "Días conmemorativos, ceremonias, galas, homenajes y sesiones solemnes"
+    ],
+    "jogos-varzim": [
+     "Partidos del Varzim",
+     "Calendario de partidos del Varzim SC, con resultados"
     ]
    },
    "adicionar_n": "Añadir {n} al calendario",
@@ -677,6 +685,10 @@
     "comemoracoes": [
      "Ricorrenze e cerimonie",
      "Giornate commemorative, cerimonie, gala, omaggi e sedute solenni"
+    ],
+    "jogos-varzim": [
+     "Partite del Varzim",
+     "Calendario delle partite del Varzim SC, con i risultati"
     ]
    },
    "adicionar_n": "Aggiungi {n} al calendario",
@@ -875,6 +887,10 @@
     "comemoracoes": [
      "Commémorations et cérémonies",
      "Journées commémoratives, cérémonies, galas, hommages et séances solennelles"
+    ],
+    "jogos-varzim": [
+     "Matchs du Varzim",
+     "Calendrier des matchs du Varzim SC, avec les résultats"
     ]
    },
    "adicionar_n": "Ajouter {n} au calendrier",
@@ -1073,6 +1089,10 @@
     "comemoracoes": [
      "Gedenktage und Zeremonien",
      "Gedenktage, Zeremonien, Galas, Ehrungen und Festsitzungen"
+    ],
+    "jogos-varzim": [
+     "Spiele von Varzim",
+     "Spielplan des Varzim SC, mit Ergebnissen"
     ]
    },
    "adicionar_n": "{n} zum Kalender hinzufügen",
@@ -1271,6 +1291,10 @@
     "comemoracoes": [
      "纪念与典礼",
      "纪念日、典礼、晚会、致敬与正式会议"
+    ],
+    "jogos-varzim": [
+     "瓦尔津比赛",
+     "瓦尔津足球俱乐部赛程及比分"
     ]
    },
    "adicionar_n": "将 {n} 项添加到日历",
@@ -1469,6 +1493,10 @@
     "comemoracoes": [
      "記念行事・式典",
      "記念日、式典、ガラ、表彰、公式会議"
+    ],
+    "jogos-varzim": [
+     "ヴァルジンの試合",
+     "ヴァルジンSCの試合日程と結果"
     ]
    },
    "adicionar_n": "{n} 件をカレンダーに追加",
@@ -1667,6 +1695,10 @@
     "comemoracoes": [
      "Herdenkingen en ceremonies",
      "Herdenkingsdagen, ceremonies, gala's, eerbetonen en plechtige zittingen"
+    ],
+    "jogos-varzim": [
+     "Wedstrijden van Varzim",
+     "Wedstrijdkalender van Varzim SC, met uitslagen"
     ]
    },
    "adicionar_n": "{n} aan agenda toevoegen",
@@ -1865,6 +1897,10 @@
     "comemoracoes": [
      "Obchody i uroczystości",
      "Dni pamięci, uroczystości, gale, hołdy i uroczyste sesje"
+    ],
+    "jogos-varzim": [
+     "Mecze Varzim",
+     "Terminarz meczów Varzim SC z wynikami"
     ]
    },
    "adicionar_n": "Dodaj {n} do kalendarza",
