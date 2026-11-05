@@ -59,6 +59,27 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/acao-de-controlo-de-chorao-3/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:XII Capítulo de Entronização da Confraria dos Sabores Poveiros
+DTSTART:20261205T093000Z
+DTEND:20261205T160000Z
+DTSTAMP:20261105T114516Z
+UID:eGlpLWNhcGl0dWxvLWRlLWVudHJvbml6YWNhby1kYS1jb25mcmFyaWEtZG9zLXNhYm9yZX
+ MtcG92ZWlyb3N8MjAyNi0xMS0wNSAxMTo0NDoyNg==@agenda.cm-pvarzim.pt
+CATEGORIES:Turismo,Ações e campanhas
+DESCRIPTION:A Confraria dos Sabores Poveiros realiza\, no próximo dia 5 d
+ e dezembro\, o seu XII Capítulo de Entronização\, uma edição particul
+ armente especial\, que assinala também os 15 anos da fundação da instit
+ uição\, dedicada à valorização\, preservação e divulgação do patr
+ imónio gastronómico e cultural da Póvoa de Varzim.\n\nMais informação
+ : https://www.cm-pvarzim.pt/eventos/xii-capitulo-de-entronizacao-da-confra
+ ria-dos-sabores-poveiros/
+LAST-MODIFIED:20261105T114516Z
+LOCATION:Auditório Municipal | Casa da Juventude | Mapadi
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/xii-capitulo-de-entronizacao-da-conf
+ raria-dos-sabores-poveiros/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Rastreios Cardiovasculares Gratuitos
 DTSTART:20261219T090000Z
 DTEND:20261219T130000Z

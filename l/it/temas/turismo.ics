@@ -13,4 +13,26 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/it/temas/turi
 X-APPLE-CALENDAR-COLOR:#9e5d00
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:XII Capítulo de Entronização da Confraria dos Sabores Poveiros
+DTSTART:20261205T093000Z
+DTEND:20261205T160000Z
+DTSTAMP:20261105T114516Z
+UID:eGlpLWNhcGl0dWxvLWRlLWVudHJvbml6YWNhby1kYS1jb25mcmFyaWEtZG9zLXNhYm9yZX
+ MtcG92ZWlyb3N8MjAyNi0xMS0wNSAxMTo0NDoyNg==@agenda.cm-pvarzim.pt
+CATEGORIES:Turismo,Iniziative e campagne
+DESCRIPTION:A Confraria dos Sabores Poveiros realiza\, no próximo dia 5 d
+ e dezembro\, o seu XII Capítulo de Entronização\, uma edição particul
+ armente especial\, que assinala também os 15 anos da fundação da instit
+ uição\, dedicada à valorização\, preservação e divulgação do patr
+ imónio gastronómico e cultural da Póvoa de Varzim.\n\nTitolo e descrizi
+ one dell'evento in portoghese\, come pubblicati dal comune.\n\nMaggiori in
+ formazioni: https://www.cm-pvarzim.pt/eventos/xii-capitulo-de-entronizacao
+ -da-confraria-dos-sabores-poveiros/
+LAST-MODIFIED:20261105T114516Z
+LOCATION:Auditório Municipal | Casa da Juventude | Mapadi
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/xii-capitulo-de-entronizacao-da-conf
+ raria-dos-sabores-poveiros/
+END:VEVENT
 END:VCALENDAR
