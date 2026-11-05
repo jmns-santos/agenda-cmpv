@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-sAXTdgN1fl3pIe4vZm9s/704JyRNBmLt7YhfSosJujk='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-DfulDCgAcGdiYBJC2qpyqzBRX/o1OQMi90cPWDB2Nsk='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Subscribe to Póvoa de Varzim municipal events in your calendar: all events, by theme or by type.">
 <meta name="theme-color" content="#0a3a52">
@@ -264,7 +264,16 @@
   .proximos .linha2 { color: var(--cinza); margin-top: .15rem; }
 
   /* Destaque: quadro que vai mostrando os próximos eventos, um a um */
-  .destaque { margin-top: .9rem; background: var(--mar-claro); border-radius: 12px; padding: .8rem .9rem; }
+  .destaque { position: relative; overflow: hidden; margin-top: .9rem; background: var(--mar-claro); border-radius: 12px; padding: .8rem .9rem 1.05rem; }
+  /* Barra do tempo até ao evento seguinte (4 s); para com o rato por cima, com o teclado ou em "Pausar" */
+  .destaque-progresso { position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: rgba(10, 58, 82, .1); }
+  @media (prefers-color-scheme: dark) { .destaque-progresso { background: rgba(255, 255, 255, .1); } }
+  .destaque-progresso span {
+    display: block; width: 100%; height: 100%; background: var(--ct, var(--botao));
+    transform-origin: left center; transform: scaleX(0); animation: destaque-tempo 4s linear forwards;
+  }
+  .destaque.parado .destaque-progresso span { animation-play-state: paused; }
+  @keyframes destaque-tempo { from { transform: scaleX(0); } to { transform: scaleX(1); } }
   .destaque-rotulo { margin: 0 0 .5rem; font-size: .85rem; font-weight: 700; color: var(--cinza); text-transform: uppercase; letter-spacing: .03em; }
   .destaque-cartao { transition: opacity .2s; border-left: 6px solid var(--ct); padding-left: .7rem; }
   .destaque-cartao.a-mudar { opacity: 0; }
@@ -948,6 +957,7 @@
         <button type="button" class="destaque-nav" data-dir="1" aria-label="Next">›</button>
         <span class="destaque-posicao" data-modelo="{atual} of {total}" aria-hidden="true"></span>
       </div>
+      <div class="destaque-progresso" aria-hidden="true"><span></span></div>
     </div>
 
     <input type="checkbox" id="mostrar-todos" class="escondido" aria-controls="painel-todos">
@@ -1719,7 +1729,7 @@
   <a class="botao botao-adicionar-um so-outlook" href="https://outlook.office.com/calendar/0/deeplink/compose?path=/calendar/action/compose&amp;rru=addevent&amp;subject=Natal%20na%20Biblioteca&amp;startdt=2026-12-05&amp;enddt=2026-12-30&amp;allday=true&amp;location=Sala%20infantil%20e%20juvenil%20da%20Biblioteca%20Municipal&amp;body=A%20Magia%20do%20Natal%20chega%20%C3%A0%20Biblioteca%20Municipal%20Rocha%20Peixoto%20com%20um%20conjunto%20de%20atividades%20pensadas%20para%20encantar%2C%20estimular%20e%20criar%20mem%C3%B3rias%20que%20ficam%20para%20sempre.%0A%0ATickets%20and%20registration%20%28in%20Portuguese%29%3A%0AInscri%C3%A7%C3%B5es%20atrav%C3%A9s%20do%20email%20biblioteca%40cm-pvarzim.pt%20ou%2C%20em%20alternativa%2C%20do%20telefone%20252%20616%20000.%0A%0AEvent%20title%20and%20description%20in%20Portuguese%2C%20as%20published%20by%20the%20municipality.%0A%0AMore%20information%3A%20https%3A//www.cm-pvarzim.pt/eventos/natal-na-biblioteca/" target="_blank" rel="noopener noreferrer" aria-label="Add: Natal na Biblioteca (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg><span>Add</span></a>
   <a class="botao botao-adicionar-um so-apple so-outro" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0APRODID%3A-//P%C3%B3voa%20de%20Varzim//Agenda%20Municipal//PT%0D%0AVERSION%3A2.0%0D%0ACALSCALE%3AGREGORIAN%0D%0ABEGIN%3AVEVENT%0D%0ASUMMARY%3ANatal%20na%20Biblioteca%0D%0ADTSTART%3BVALUE%3DDATE%3A20261205%0D%0ADTEND%3BVALUE%3DDATE%3A20261230%0D%0ADTSTAMP%3A20261030T120803Z%0D%0AUID%3AbmF0YWwtbmEtYmlibGlvdGVjYXwyMDI2LTEwLTMwIDEyOjA3OjM0%40agenda.cm-pvarzim%0D%0A%20.pt%0D%0ACATEGORIES%3ACulture%2CFestivals%5C%2C%20fairs%20and%20markets%0D%0ADESCRIPTION%3AA%20Magia%20do%20Natal%20chega%20%C3%A0%20Biblioteca%20Municipal%20Rocha%20Peixoto%20c%0D%0A%20om%20um%20conjunto%20de%20atividades%20pensadas%20para%20encantar%5C%2C%20estimular%20e%20criar%20me%0D%0A%20m%C3%B3rias%20que%20ficam%20para%20sempre.%5Cn%5CnTickets%20and%20registration%20%28in%20Portuguese%29%0D%0A%20%3A%5CnInscri%C3%A7%C3%B5es%20atrav%C3%A9s%20do%20email%20biblioteca%40cm-pvarzim.pt%20ou%5C%2C%20em%20alterna%0D%0A%20tiva%5C%2C%20do%20telefone%20252%20616%20000.%5Cn%5CnEvent%20title%20and%20description%20in%20Portugue%0D%0A%20se%5C%2C%20as%20published%20by%20the%20municipality.%5Cn%5CnMore%20information%3A%20https%3A//www.cm%0D%0A%20-pvarzim.pt/eventos/natal-na-biblioteca/%0D%0ALAST-MODIFIED%3A20261030T120803Z%0D%0ALOCATION%3ASala%20infantil%20e%20juvenil%20da%20Biblioteca%20Municipal%0D%0ATRANSP%3ATRANSPARENT%0D%0AURL%3Ahttps%3A//www.cm-pvarzim.pt/eventos/natal-na-biblioteca/%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A" download="evento.ics" aria-label="Add: Natal na Biblioteca"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg><span>Add</span></a>
 </li>
-<li class="item-proximo" data-idx="49" data-tema="cultura" data-tipo="teatro" data-fim="2026-12-05T12:30:00+00:00" data-dini="2026-12-05" data-dfim="2026-12-05" data-busca="Teatro para bebés “A Árvore das Chupetas” Cine-Teatro Garrett Culture Theatre 05/12/2026 11:00 Cultura Teatro" style="--ct: #8e1b4f; --cp: #c2185b">
+<li class="item-proximo" data-idx="49" data-tema="cultura" data-tipo="teatro" data-janela="1" data-fim="2026-12-05T12:30:00+00:00" data-dini="2026-12-05" data-dfim="2026-12-05" data-busca="Teatro para bebés “A Árvore das Chupetas” Cine-Teatro Garrett Culture Theatre 05/12/2026 11:00 Cultura Teatro" style="--ct: #8e1b4f; --cp: #c2185b">
   <span class="marcar-coluna">
     <input type="checkbox" class="marcar-evento" id="proximo-49" aria-label="Select: Teatro para bebés “A Árvore das Chupetas”">
   </span>
@@ -2218,14 +2228,17 @@
       itens.push(it);
     }
 
-    // Destaque: os eventos dos próximos 30 dias, um a um, a cada 5 s (não depende dos filtros da lista).
+    // Destaque: os eventos dos próximos 30 dias, um a um, a cada 4 s (não depende dos filtros da lista).
+    // O tempo é a própria barra no fundo do quadro: quando enche, passa ao evento seguinte. Assim, ao parar
+    // (rato por cima, teclado, "Pausar", separador escondido) a barra fica onde está e retoma dali.
     var destaque = document.getElementById('destaque-proximo');
     var destaqueCartao = destaque ? destaque.querySelector('.destaque-cartao') : null;
     var destaquePosicao = destaque ? destaque.querySelector('.destaque-posicao') : null;
     var destaquePausa = destaque ? destaque.querySelector('.destaque-pausa') : null;
+    var barraTempo = destaque ? destaque.querySelector('.destaque-progresso span') : null;
     var destaqueIndice = 0;
-    var destaqueTemporizador = null;
     var destaquePausado = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    var paradoPeloRato = false, paradoPeloTeclado = false;
     var emDestaque = itens.filter(function (x) { return x.janela; });
     if (!emDestaque.length) emDestaque = itens.slice(0, 30);
 
@@ -2248,21 +2261,38 @@
         var rotulo = destaqueCartao.querySelector('label[for]');
         if (rotulo) rotulo.removeAttribute('for'); // clicar no destaque não marca nada na lista
       }
+      // a barra fica com a cor do tema do evento
+      var cor = linha.style.getPropertyValue('--ct');
+      if (cor) destaque.style.setProperty('--ct', cor);
       if (destaquePosicao) {
         var modelo = destaquePosicao.getAttribute('data-modelo') || '';
         destaquePosicao.textContent = modelo.replace('{atual}', String(destaqueIndice + 1)).replace('{total}', String(emDestaque.length));
       }
     }
-    function destaqueParar() { if (destaqueTemporizador) { clearInterval(destaqueTemporizador); destaqueTemporizador = null; } }
-    function destaqueComecar() {
+    function destaqueEstaParado() {
+      return destaquePausado || aPesquisar || paradoPeloRato || paradoPeloTeclado || document.hidden || emDestaque.length < 2;
+    }
+    function destaqueParar() {
+      if (!destaque) return;
+      if (destaqueEstaParado()) destaque.classList.add('parado'); else destaque.classList.remove('parado');
+    }
+    function destaqueComecar() { // recomeça a contagem dos 4 s do evento que está à vista
+      if (barraTempo) {
+        barraTempo.style.animation = 'none';
+        void barraTempo.offsetWidth;
+        barraTempo.style.animation = '';
+      }
       destaqueParar();
-      if (destaquePausado || emDestaque.length < 2) return;
-      destaqueTemporizador = setInterval(function () {
-        destaqueIndice = (destaqueIndice + 1) % emDestaque.length;
-        destaqueMostrar();
-      }, 5000);
     }
     if (destaque) {
+      if (barraTempo) {
+        barraTempo.addEventListener('animationend', function () {
+          if (destaqueEstaParado()) return;
+          destaqueIndice = (destaqueIndice + 1) % emDestaque.length;
+          destaqueMostrar();
+          destaqueComecar();
+        });
+      }
       var botoesNav = destaque.querySelectorAll('.destaque-nav');
       for (var n = 0; n < botoesNav.length; n++) {
         botoesNav[n].addEventListener('click', function () {
@@ -2274,22 +2304,32 @@
         });
       }
       if (destaquePausa) {
-        destaquePausa.addEventListener('click', function () {
-          destaquePausado = !destaquePausado;
+        var rotuloPausa = function () {
           destaquePausa.setAttribute('aria-pressed', String(destaquePausado));
           destaquePausa.textContent = destaquePausado
             ? destaquePausa.getAttribute('data-continuar')
             : destaquePausa.getAttribute('data-pausar');
-          if (destaquePausado) destaqueParar(); else destaqueComecar();
+        };
+        rotuloPausa(); // com "reduzir movimento" o quadro começa parado: o botão diz logo "Continuar"
+        destaquePausa.addEventListener('click', function () {
+          destaquePausado = !destaquePausado;
+          rotuloPausa();
+          destaqueParar();
         });
       }
-      destaque.addEventListener('mouseenter', destaqueParar);
-      destaque.addEventListener('mouseleave', function () { if (!destaquePausado) destaqueComecar(); });
-      destaque.addEventListener('focusin', destaqueParar);
-      destaque.addEventListener('focusout', function () { if (!destaquePausado) destaqueComecar(); });
-      document.addEventListener('visibilitychange', function () {
-        if (document.hidden) destaqueParar(); else if (!destaquePausado) destaqueComecar();
+      // Rato por cima: para (só rato; num ecrã tátil um toque não deixa o quadro parado).
+      destaque.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { paradoPeloRato = true; destaqueParar(); } });
+      destaque.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') { paradoPeloRato = false; destaqueParar(); } });
+      // Teclado: para enquanto o foco (visível) estiver dentro do quadro.
+      destaque.addEventListener('focusin', function (e) {
+        var teclado = true;
+        try { teclado = e.target.matches(':focus-visible'); } catch (err) {}
+        if (teclado) { paradoPeloTeclado = true; destaqueParar(); }
       });
+      destaque.addEventListener('focusout', function (e) {
+        if (!e.relatedTarget || !destaque.contains(e.relatedTarget)) { paradoPeloTeclado = false; destaqueParar(); }
+      });
+      document.addEventListener('visibilitychange', destaqueParar);
     }
 
     function chipsLigados(classe) {
