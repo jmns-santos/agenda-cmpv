@@ -166,6 +166,25 @@ URL:https://www.cm-pvarzim.pt/eventos/comunicacao-dicas-que-facilitam-a-re
  lacao/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Sessão com alunos "Gestão de emoções"
+DTSTART:20261125T133000Z
+DTEND:20261125T151500Z
+DTSTAMP:20261106T141438Z
+UID:c2Vzc2FvLWNvbS1hbHVub3MtZ2VzdGFvLWRlLWVtb2NvZXN8MjAyNi0xMS0wNiAxNDoxMz
+ o1OQ==@agenda.cm-pvarzim.pt
+CATEGORIES:Citoyenneté,Ateliers et activités
+DESCRIPTION:O Município da Póvoa de Varzim irá promover\, em parceria c
+ om a Escola Secundária Eça de Queirós\, uma sessão com pais/encarregad
+ os de educação\, intitulada "Gestão de emoções".\n\nTitre et descript
+ ion de l'événement en portugais\, tels que publiés par la municipalité
+ .\n\nPlus d'informations: https://www.cm-pvarzim.pt/eventos/sessao-com-alu
+ nos-gestao-de-emocoes/
+LAST-MODIFIED:20261106T141438Z
+LOCATION:Auditório da Escola Secundária Eça de Queirós
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sessao-com-alunos-gestao-de-emocoes/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"Ecrãs e videojogos: o que os pais têm mesmo que saber"
 DTSTART:20261203T184500Z
 DTEND:20261203T194500Z

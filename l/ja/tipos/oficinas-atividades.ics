@@ -160,6 +160,25 @@ URL:https://www.cm-pvarzim.pt/eventos/comunicacao-dicas-que-facilitam-a-re
  lacao/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Sessão com alunos "Gestão de emoções"
+DTSTART:20261125T133000Z
+DTEND:20261125T151500Z
+DTSTAMP:20261106T141438Z
+UID:c2Vzc2FvLWNvbS1hbHVub3MtZ2VzdGFvLWRlLWVtb2NvZXN8MjAyNi0xMS0wNiAxNDoxMz
+ o1OQ==@agenda.cm-pvarzim.pt
+CATEGORIES:市民生活,ワークショップ・アクティビティ
+DESCRIPTION:O Município da Póvoa de Varzim irá promover\, em parceria c
+ om a Escola Secundária Eça de Queirós\, uma sessão com pais/encarregad
+ os de educação\, intitulada "Gestão de emoções".\n\nイベントの
+ タイトルと説明は、市が公開しているポルトガル語の
+ ままです。\n\n詳細: https://www.cm-pvarzim.pt/eventos/sessao-com-al
+ unos-gestao-de-emocoes/
+LAST-MODIFIED:20261106T141438Z
+LOCATION:Auditório da Escola Secundária Eça de Queirós
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sessao-com-alunos-gestao-de-emocoes/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Convergências: Ciclo de conferências por Sylvio Lago
 DTSTART:20261125T180000Z
 DTEND:20261127T193000Z
