@@ -13,26 +13,6 @@ X-APPLE-CALENDAR-COLOR:#6a3fb5
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Cinema "A Saga de Anatahan"
-DTSTART:20261105T214500Z
-DTEND:20261105T234500Z
-DTSTAMP:20261021T081624Z
-UID:Y2luZW1hLWEtc2FnYS1kZS1hbmF0YWhhbnwyMDI2LTEwLTIxIDA4OjE2OjIz@agenda.cm
- -pvarzim.pt
-CATEGORIES:Kultura,Kino
-DESCRIPTION:No dia 5 de novembro\, às 21h45\, será exibido\, no Cine-Tea
- tro Garrett\, o filme "A Saga de Anatahan".\n\nBilety i zapisy (po portuga
- lsku):\nEntradas: Gratuitas\, no âmbito da comemoração do Dia Mundial d
- o Cinema\, mediante levantamento de convite no local\, até ao limite de l
- otação da sala.\n\nTytuł i opis wydarzenia po portugalsku\, tak jak opu
- blikowała je gmina.\n\nWięcej informacji: https://www.cm-pvarzim.pt/even
- tos/cinema-a-saga-de-anatahan/
-LAST-MODIFIED:20261021T081624Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-a-saga-de-anatahan/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Cinema "A Ilha Esquecida"
 DTSTART:20261108T153000Z
 DTEND:20261108T171500Z

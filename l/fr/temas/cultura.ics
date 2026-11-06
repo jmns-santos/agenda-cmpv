@@ -100,26 +100,6 @@ URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-onde-eu-esti
  ver/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cinema "A Saga de Anatahan"
-DTSTART:20261105T214500Z
-DTEND:20261105T234500Z
-DTSTAMP:20261021T081624Z
-UID:Y2luZW1hLWEtc2FnYS1kZS1hbmF0YWhhbnwyMDI2LTEwLTIxIDA4OjE2OjIz@agenda.cm
- -pvarzim.pt
-CATEGORIES:Culture,Cinéma
-DESCRIPTION:No dia 5 de novembro\, às 21h45\, será exibido\, no Cine-Tea
- tro Garrett\, o filme "A Saga de Anatahan".\n\nBillets et inscriptions (en
-  portugais) :\nEntradas: Gratuitas\, no âmbito da comemoração do Dia Mu
- ndial do Cinema\, mediante levantamento de convite no local\, até ao limi
- te de lotação da sala.\n\nTitre et description de l'événement en portu
- gais\, tels que publiés par la municipalité.\n\nPlus d'informations: htt
- ps://www.cm-pvarzim.pt/eventos/cinema-a-saga-de-anatahan/
-LAST-MODIFIED:20261021T081624Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-a-saga-de-anatahan/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:FIMPV+: Concerto de emmy Curl
 DTSTART:20261106T213000Z
 DTEND:20261106T233000Z

@@ -124,26 +124,6 @@ URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-onde-eu-esti
  ver/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cinema "A Saga de Anatahan"
-DTSTART:20261105T214500Z
-DTEND:20261105T234500Z
-DTSTAMP:20261021T081624Z
-UID:Y2luZW1hLWEtc2FnYS1kZS1hbmF0YWhhbnwyMDI2LTEwLTIxIDA4OjE2OjIz@agenda.cm
- -pvarzim.pt
-CATEGORIES:Culture,Cinema
-DESCRIPTION:No dia 5 de novembro\, às 21h45\, será exibido\, no Cine-Tea
- tro Garrett\, o filme "A Saga de Anatahan".\n\nTickets and registration (i
- n Portuguese):\nEntradas: Gratuitas\, no âmbito da comemoração do Dia M
- undial do Cinema\, mediante levantamento de convite no local\, até ao lim
- ite de lotação da sala.\n\nEvent title and description in Portuguese\, a
- s published by the municipality.\n\nMore information: https://www.cm-pvarz
- im.pt/eventos/cinema-a-saga-de-anatahan/
-LAST-MODIFIED:20261021T081624Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-a-saga-de-anatahan/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Curso de Paleografia
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261129
