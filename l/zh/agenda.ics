@@ -452,7 +452,7 @@ BEGIN:VEVENT
 SUMMARY:Lavorada Mensal
 DTSTART:20261114T143000Z
 DTEND:20261114T180000Z
-DTSTAMP:20261021T140720Z
+DTSTAMP:20261106T095555Z
 UID:bGF2b3JhZGEtbWVuc2FsLTN8MjAyNi0xMC0yMSAxNDowNzoxOA==@agenda.cm-pvarzim
  .pt
 CATEGORIES:文化,工作坊与活动
@@ -462,7 +462,7 @@ DESCRIPTION:Segundo sábado do mês é dia de Lavorada Mensal\, na Bibliot
  s dias de outono\, por entre castanhas e geropiga.\n\n活动标题和说
  明为葡萄牙语，与市政府发布的内容一致。\n\n更多信息:
   https://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
-LAST-MODIFIED:20261021T140720Z
+LAST-MODIFIED:20261106T095555Z
 LOCATION:Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
@@ -1235,6 +1235,29 @@ LOCATION:Arquivo Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/um-concerto-a-luz-da-historia-comemo
  racao-dos-25-anos-do-arquivo/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:"O impacto dos hábitos de sono no desenvolvimento\, na saúde e n
+ o sucesso escolar das crianças e jovens"
+DTSTART:20261210T181500Z
+DTEND:20261210T194500Z
+DTSTAMP:20261106T091151Z
+UID:by1pbXBhY3RvLWRvcy1oYWJpdG9zLWRlLXNvbm8tbm8tZGVzZW52b2x2aW1lbnRvLW5hLX
+ NhdWRlLWUtbm8tc3VjZXNzby1lc2NvbGFyLWRhcy1jcmlhbmNhcy1lLWpvdmVuc3wyMDI2LTEx
+ LTA2IDA5OjExOjEx@agenda.cm-pvarzim.pt
+CATEGORIES:公民生活,工作坊与活动
+DESCRIPTION:O Município da Póvoa de Varzim irá promover\, em parceria c
+ om o Agrupamento de Escolas de Rates\, uma sessão com pais/encarregados d
+ e educação\, intitulada "O impacto dos hábitos de sono no desenvolvimen
+ to\, na saúde e no sucesso escolar das crianças e jovens".\n\n活动标
+ 题和说明为葡萄牙语，与市政府发布的内容一致。\n\n更
+ 多信息: https://www.cm-pvarzim.pt/eventos/o-impacto-dos-habitos-de-sono
+ -no-desenvolvimento-na-saude-e-no-sucesso-escolar-das-criancas-e-jovens/
+LAST-MODIFIED:20261106T091151Z
+LOCATION:Auditório da Escola Básica de Rates
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/o-impacto-dos-habitos-de-sono-no-des
+ envolvimento-na-saude-e-no-sucesso-escolar-das-criancas-e-jovens/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:"Redes Sociais\, likes e influencers: como orientar os nossos filh
