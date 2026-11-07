@@ -149,25 +149,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:FIMPV+: Concerto de emmy Curl
-DTSTART:20261106T213000Z
-DTEND:20261106T233000Z
-DTSTAMP:20261030T101325Z
-UID:ZmltcHYtY29uY2VydG8tZGUtZW1teS1jdXJsfDIwMjYtMTAtMzAgMTA6MTM6MjQ=@agend
- a.cm-pvarzim.pt
-CATEGORIES:文化,コンサート
-DESCRIPTION:A programação do FIMPV+ prossegue no dia 6 de novembro\, às
-  21h30\, no Auditório Municipal da Póvoa de Varzim\, com um concerto de 
- emmy Curl\, uma das vozes mais singulares da música portuguesa contempor
- ânea.\n\nイベントのタイトルと説明は、市が公開してい
- るポルトガル語のままです。\n\n詳細: https://www.cm-pvarzim.
- pt/eventos/fimpv-concerto-de-emmy-curl/
-LAST-MODIFIED:20261030T101325Z
-LOCATION:Auditório Municipal
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/fimpv-concerto-de-emmy-curl/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Rastreios Cardiovasculares Gratuitos
 DTSTART:20261107T090000Z
 DTEND:20261107T130000Z
@@ -463,18 +444,17 @@ BEGIN:VEVENT
 SUMMARY:Lavorada Mensal
 DTSTART:20261114T143000Z
 DTEND:20261114T180000Z
-DTSTAMP:20261106T095555Z
+DTSTAMP:20261106T201140Z
 UID:bGF2b3JhZGEtbWVuc2FsLTN8MjAyNi0xMC0yMSAxNDowNzoxOA==@agenda.cm-pvarzim
  .pt
 CATEGORIES:文化,ワークショップ・アクティビティ
 DESCRIPTION:Segundo sábado do mês é dia de Lavorada Mensal\, na Bibliot
  eca Municipal Rocha Peixoto. Assim\, na tarde de 14 de novembro\, entre as
-  14h30 e as 18h00\, a Associação Lavorada ensina a fazer um xaile para o
- s dias de outono\, por entre castanhas e geropiga.\n\nイベントのタ
- イトルと説明は、市が公開しているポルトガル語のま
- まです。\n\n詳細: https://www.cm-pvarzim.pt/eventos/lavorada-mensal-
- 3/
-LAST-MODIFIED:20261106T095555Z
+  14h30 e as 18h00\, a Associação Lavorada realiza a sua atividade mensal
+  com castanhas e geropiga.\n\nイベントのタイトルと説明は、
+ 市が公開しているポルトガル語のままです。\n\n詳細: ht
+ tps://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
+LAST-MODIFIED:20261106T201140Z
 LOCATION:Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/lavorada-mensal-3/
