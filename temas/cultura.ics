@@ -114,51 +114,6 @@ URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olh
  o-a-cadeira-e-a-sereia-quatro-breves-historias/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Concerto de Amizade
-DTSTART:20261107T190000Z
-DTEND:20261107T203000Z
-DTSTAMP:20261020T110316Z
-UID:Y29uY2VydG8tZGUtYW1pemFkZXwyMDI2LTEwLTIwIDExOjAzOjE2@agenda.cm-pvarzim
- .pt
-CATEGORIES:Cultura,Concertos
-DESCRIPTION:No âmbito das relações de geminação existentes entre o Mu
- nicípio da Póvoa de Varzim e a cidade galega de A Guarda (Espanha)\, enc
- ontra-se programado um intercâmbio sociocultural que promete aproximar as
-  duas comunidades através da música e da arte.\n\nBilhetes e inscriçõe
- s:\nO evento dividir-se-á em duas datas e palcos distintos: 24 de outubro
-  – na Igreja de Santa Maria\, na cidade de A Guarda (Galiza\, Espanha)\,
-  às 20h00 (hora espanhola)\, e no dia 7 de novembro\, na Igreja da Miseri
- córdia\, na Póvoa de Varzim\, às 19h00\, com entrada livre.\n\nMais inf
- ormação: https://www.cm-pvarzim.pt/eventos/concerto-de-amizade/
-LAST-MODIFIED:20261020T110316Z
-LOCATION:Igreja da Misericórdia
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/concerto-de-amizade/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Teatro "Los Virtuosos"
-DTSTART:20261107T213000Z
-DTEND:20261107T230000Z
-DTSTAMP:20261020T092112Z
-UID:dGVhdHJvLWxvcy12aXJ0dW9zb3N8MjAyNi0xMC0yMCAwOToyMToxMQ==@agenda.cm-pva
- rzim.pt
-CATEGORIES:Cultura,Teatro
-DESCRIPTION:No âmbito da Temporada Teatral\, a Varazim Teatro apresenta\,
-  a 7 de novembro\, pelas 21h30\, a peça "Los Virtuosos" pelo Teatro del A
- stillero\, no Cine-Teatro Garrett.\n\nBilhetes e inscrições:\nAs entrada
- s custam 7€\, com desconto para estudantes\, reformados ou aposentados\,
-  menores de 30 anos e maiores de 65 anos\, desempregados\, pessoas com inc
- apacidade ou deficiência e surdos\, grupo de 8 pessoas ou mais\, família
- s numerosas (5 pessoas ou mais): 5€.\nPara sócios e portadores do Cart
- ão de Amigo da Varazim e Associados da Acapo: 3\,50€.\nOs bilhetes est
- ão à venda no Cine-Teatro Garrett\, BOL\, CTT\, FNAC\, WORTEN.\n\nMais i
- nformação: https://www.cm-pvarzim.pt/eventos/teatro-los-virtuosos/
-LAST-MODIFIED:20261020T092112Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/teatro-los-virtuosos/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Cinema "A Ilha Esquecida"
 DTSTART:20261108T153000Z
 DTEND:20261108T171500Z

@@ -14,30 +14,6 @@ X-APPLE-CALENDAR-COLOR:#d32f2f
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Concerto de Amizade
-DTSTART:20261107T190000Z
-DTEND:20261107T203000Z
-DTSTAMP:20261020T110316Z
-UID:Y29uY2VydG8tZGUtYW1pemFkZXwyMDI2LTEwLTIwIDExOjAzOjE2@agenda.cm-pvarzim
- .pt
-CATEGORIES:文化,コンサート
-DESCRIPTION:No âmbito das relações de geminação existentes entre o Mu
- nicípio da Póvoa de Varzim e a cidade galega de A Guarda (Espanha)\, enc
- ontra-se programado um intercâmbio sociocultural que promete aproximar as
-  duas comunidades através da música e da arte.\n\nチケット・申し
- 込み（ポルトガル語）：\nO evento dividir-se-á em duas datas e 
- palcos distintos: 24 de outubro – na Igreja de Santa Maria\, na cidade d
- e A Guarda (Galiza\, Espanha)\, às 20h00 (hora espanhola)\, e no dia 7 de
-  novembro\, na Igreja da Misericórdia\, na Póvoa de Varzim\, às 19h00\,
-  com entrada livre.\n\nイベントのタイトルと説明は、市が公
- 開しているポルトガル語のままです。\n\n詳細: https://www
- .cm-pvarzim.pt/eventos/concerto-de-amizade/
-LAST-MODIFIED:20261020T110316Z
-LOCATION:Igreja da Misericórdia
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/concerto-de-amizade/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:XIII Encontro de Música Coral da Póvoa de Varzim
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261207

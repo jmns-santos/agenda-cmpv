@@ -147,54 +147,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Rastreios Cardiovasculares Gratuitos
-DTSTART:20261107T090000Z
-DTEND:20261107T130000Z
-DTSTAMP:20261028T091521Z
-UID:cmFzdHJlaW9zLWNhcmRpb3Zhc2N1bGFyZXMtZ3JhdHVpdG9zfDIwMjYtMTAtMjggMDk6MT
- U6MjA=@agenda.cm-pvarzim.pt
-CATEGORIES:Bürgerschaft,Aktionen und Kampagnen
-DESCRIPTION:O Município da Póvoa de Varzim\, em parceria com os Novos Fi
- tados de Medicina da Universidade de Coimbra\, irá dinamizar rastreios ca
- rdiovasculares abertos a toda a comunidade\, no dia 7 de novembro\, entre 
- as 9h00 e as 13h00\, no Mercado Municipal.\n\nTickets und Anmeldung (auf P
- ortugiesisch):\nTrata-se de uma ação gratuita de prevenção e educaçã
- o para a saúde\, dirigida a visitantes\, comerciantes e população em ge
- ral\, que irá promover a medição da pressão arterial\, avaliação da 
- glicemia e cálculo do índice de massa corporal (IMC).\n\nTitel und Besch
- reibung der Veranstaltung auf Portugiesisch\, wie von der Stadt veröffent
- licht.\n\nWeitere Informationen: https://www.cm-pvarzim.pt/eventos/rastrei
- os-cardiovasculares-gratuitos/
-LAST-MODIFIED:20261028T091521Z
-LOCATION:Mercado Municipal
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/rastreios-cardiovasculares-gratuitos
- /
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ação de controlo de chorão
-DTSTART:20261107T100000Z
-DTEND:20261107T150000Z
-DTSTAMP:20261102T145835Z
-UID:YWNhby1kZS1jb250cm9sby1kZS1jaG9yYW8tM3wyMDI2LTExLTAyIDE0OjQ0OjU1@agend
- a.cm-pvarzim.pt
-CATEGORIES:Umwelt,Aktionen und Kampagnen
-DESCRIPTION:O Centro do Clima vai realizar\, no dia 7 de novembro\, uma no
- va ação de controlo do chorão-das-praias\, na zona do passadiço junto 
- ao Moinho de Aver-o-Mar\, perto da foz do rio Esteiro.\n\nTickets und Anme
- ldung (auf Portugiesisch):\nA participação é gratuita\, mas sujeita a i
- nscrição.\nAs inscrições podem ser feitas através do QR Code do carta
- z\, do formulário ou do e-mail geral@centrodoclima.pt.\nAnmeldung: https:
- //forms.gle/fV7Vp6VDHirYMyNS6\n\nTitel und Beschreibung der Veranstaltung 
- auf Portugiesisch\, wie von der Stadt veröffentlicht.\n\nWeitere Informat
- ionen: https://www.cm-pvarzim.pt/eventos/acao-de-controlo-de-chorao-3/
-LAST-MODIFIED:20261102T145835Z
-LOCATION:Zona do passadiço junto ao Moinho de Aver-o-Mar\, perto da foz d
- o rio Esteiro
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/acao-de-controlo-de-chorao-3/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Apresentação do livro "O chapéu\, o olho\, a cadeira e a sereia
  : quatro breves histórias"
 DTSTART:20261107T160000Z
@@ -216,55 +168,6 @@ LOCATION:Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olh
  o-a-cadeira-e-a-sereia-quatro-breves-historias/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Concerto de Amizade
-DTSTART:20261107T190000Z
-DTEND:20261107T203000Z
-DTSTAMP:20261020T110316Z
-UID:Y29uY2VydG8tZGUtYW1pemFkZXwyMDI2LTEwLTIwIDExOjAzOjE2@agenda.cm-pvarzim
- .pt
-CATEGORIES:Kultur,Konzerte
-DESCRIPTION:No âmbito das relações de geminação existentes entre o Mu
- nicípio da Póvoa de Varzim e a cidade galega de A Guarda (Espanha)\, enc
- ontra-se programado um intercâmbio sociocultural que promete aproximar as
-  duas comunidades através da música e da arte.\n\nTickets und Anmeldung 
- (auf Portugiesisch):\nO evento dividir-se-á em duas datas e palcos distin
- tos: 24 de outubro – na Igreja de Santa Maria\, na cidade de A Guarda (G
- aliza\, Espanha)\, às 20h00 (hora espanhola)\, e no dia 7 de novembro\, n
- a Igreja da Misericórdia\, na Póvoa de Varzim\, às 19h00\, com entrada 
- livre.\n\nTitel und Beschreibung der Veranstaltung auf Portugiesisch\, wie
-  von der Stadt veröffentlicht.\n\nWeitere Informationen: https://www.cm-p
- varzim.pt/eventos/concerto-de-amizade/
-LAST-MODIFIED:20261020T110316Z
-LOCATION:Igreja da Misericórdia
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/concerto-de-amizade/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Teatro "Los Virtuosos"
-DTSTART:20261107T213000Z
-DTEND:20261107T230000Z
-DTSTAMP:20261020T092112Z
-UID:dGVhdHJvLWxvcy12aXJ0dW9zb3N8MjAyNi0xMC0yMCAwOToyMToxMQ==@agenda.cm-pva
- rzim.pt
-CATEGORIES:Kultur,Theater
-DESCRIPTION:No âmbito da Temporada Teatral\, a Varazim Teatro apresenta\,
-  a 7 de novembro\, pelas 21h30\, a peça "Los Virtuosos" pelo Teatro del A
- stillero\, no Cine-Teatro Garrett.\n\nTickets und Anmeldung (auf Portugies
- isch):\nAs entradas custam 7€\, com desconto para estudantes\, reformado
- s ou aposentados\, menores de 30 anos e maiores de 65 anos\, desempregados
- \, pessoas com incapacidade ou deficiência e surdos\, grupo de 8 pessoas 
- ou mais\, famílias numerosas (5 pessoas ou mais): 5€.\nPara sócios e p
- ortadores do Cartão de Amigo da Varazim e Associados da Acapo: 3\,50€.
- \nOs bilhetes estão à venda no Cine-Teatro Garrett\, BOL\, CTT\, FNAC\, 
- WORTEN.\n\nTitel und Beschreibung der Veranstaltung auf Portugiesisch\, wi
- e von der Stadt veröffentlicht.\n\nWeitere Informationen: https://www.cm-
- pvarzim.pt/eventos/teatro-los-virtuosos/
-LAST-MODIFIED:20261020T092112Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/teatro-los-virtuosos/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Futebol - Varzim x Fafe

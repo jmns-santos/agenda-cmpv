@@ -144,53 +144,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Rastreios Cardiovasculares Gratuitos
-DTSTART:20261107T090000Z
-DTEND:20261107T130000Z
-DTSTAMP:20261028T091521Z
-UID:cmFzdHJlaW9zLWNhcmRpb3Zhc2N1bGFyZXMtZ3JhdHVpdG9zfDIwMjYtMTAtMjggMDk6MT
- U6MjA=@agenda.cm-pvarzim.pt
-CATEGORIES:公民生活,行动与公益活动
-DESCRIPTION:O Município da Póvoa de Varzim\, em parceria com os Novos Fi
- tados de Medicina da Universidade de Coimbra\, irá dinamizar rastreios ca
- rdiovasculares abertos a toda a comunidade\, no dia 7 de novembro\, entre 
- as 9h00 e as 13h00\, no Mercado Municipal.\n\n门票与报名（葡萄牙
- 语）：\nTrata-se de uma ação gratuita de prevenção e educação par
- a a saúde\, dirigida a visitantes\, comerciantes e população em geral\,
-  que irá promover a medição da pressão arterial\, avaliação da glice
- mia e cálculo do índice de massa corporal (IMC).\n\n活动标题和说
- 明为葡萄牙语，与市政府发布的内容一致。\n\n更多信息:
-  https://www.cm-pvarzim.pt/eventos/rastreios-cardiovasculares-gratuitos/
-LAST-MODIFIED:20261028T091521Z
-LOCATION:Mercado Municipal
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/rastreios-cardiovasculares-gratuitos
- /
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ação de controlo de chorão
-DTSTART:20261107T100000Z
-DTEND:20261107T150000Z
-DTSTAMP:20261102T145835Z
-UID:YWNhby1kZS1jb250cm9sby1kZS1jaG9yYW8tM3wyMDI2LTExLTAyIDE0OjQ0OjU1@agend
- a.cm-pvarzim.pt
-CATEGORIES:环境,行动与公益活动
-DESCRIPTION:O Centro do Clima vai realizar\, no dia 7 de novembro\, uma no
- va ação de controlo do chorão-das-praias\, na zona do passadiço junto 
- ao Moinho de Aver-o-Mar\, perto da foz do rio Esteiro.\n\n门票与报名
- （葡萄牙语）：\nA participação é gratuita\, mas sujeita a inscri
- ção.\nAs inscrições podem ser feitas através do QR Code do cartaz\, d
- o formulário ou do e-mail geral@centrodoclima.pt.\n报名: https://forms.
- gle/fV7Vp6VDHirYMyNS6\n\n活动标题和说明为葡萄牙语，与市政
- 府发布的内容一致。\n\n更多信息: https://www.cm-pvarzim.pt/eve
- ntos/acao-de-controlo-de-chorao-3/
-LAST-MODIFIED:20261102T145835Z
-LOCATION:Zona do passadiço junto ao Moinho de Aver-o-Mar\, perto da foz d
- o rio Esteiro
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/acao-de-controlo-de-chorao-3/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Apresentação do livro "O chapéu\, o olho\, a cadeira e a sereia
  : quatro breves histórias"
 DTSTART:20261107T160000Z
@@ -212,55 +165,6 @@ LOCATION:Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olh
  o-a-cadeira-e-a-sereia-quatro-breves-historias/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Concerto de Amizade
-DTSTART:20261107T190000Z
-DTEND:20261107T203000Z
-DTSTAMP:20261020T110316Z
-UID:Y29uY2VydG8tZGUtYW1pemFkZXwyMDI2LTEwLTIwIDExOjAzOjE2@agenda.cm-pvarzim
- .pt
-CATEGORIES:文化,音乐会
-DESCRIPTION:No âmbito das relações de geminação existentes entre o Mu
- nicípio da Póvoa de Varzim e a cidade galega de A Guarda (Espanha)\, enc
- ontra-se programado um intercâmbio sociocultural que promete aproximar as
-  duas comunidades através da música e da arte.\n\n门票与报名（葡
- 萄牙语）：\nO evento dividir-se-á em duas datas e palcos distintos: 
- 24 de outubro – na Igreja de Santa Maria\, na cidade de A Guarda (Galiza
- \, Espanha)\, às 20h00 (hora espanhola)\, e no dia 7 de novembro\, na Igr
- eja da Misericórdia\, na Póvoa de Varzim\, às 19h00\, com entrada livre
- .\n\n活动标题和说明为葡萄牙语，与市政府发布的内容一
- 致。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/concerto-de-amiz
- ade/
-LAST-MODIFIED:20261020T110316Z
-LOCATION:Igreja da Misericórdia
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/concerto-de-amizade/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Teatro "Los Virtuosos"
-DTSTART:20261107T213000Z
-DTEND:20261107T230000Z
-DTSTAMP:20261020T092112Z
-UID:dGVhdHJvLWxvcy12aXJ0dW9zb3N8MjAyNi0xMC0yMCAwOToyMToxMQ==@agenda.cm-pva
- rzim.pt
-CATEGORIES:文化,戏剧
-DESCRIPTION:No âmbito da Temporada Teatral\, a Varazim Teatro apresenta\,
-  a 7 de novembro\, pelas 21h30\, a peça "Los Virtuosos" pelo Teatro del A
- stillero\, no Cine-Teatro Garrett.\n\n门票与报名（葡萄牙语）：
- \nAs entradas custam 7€\, com desconto para estudantes\, reformados ou a
- posentados\, menores de 30 anos e maiores de 65 anos\, desempregados\, pes
- soas com incapacidade ou deficiência e surdos\, grupo de 8 pessoas ou mai
- s\, famílias numerosas (5 pessoas ou mais): 5€.\nPara sócios e portado
- res do Cartão de Amigo da Varazim e Associados da Acapo: 3\,50€.\nOs bi
- lhetes estão à venda no Cine-Teatro Garrett\, BOL\, CTT\, FNAC\, WORTEN.
- \n\n活动标题和说明为葡萄牙语，与市政府发布的内容一
- 致。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/teatro-los-virtu
- osos/
-LAST-MODIFIED:20261020T092112Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/teatro-los-virtuosos/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Futebol - Varzim x Fafe

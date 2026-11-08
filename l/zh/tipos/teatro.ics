@@ -13,31 +13,6 @@ X-APPLE-CALENDAR-COLOR:#c2185b
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Teatro "Los Virtuosos"
-DTSTART:20261107T213000Z
-DTEND:20261107T230000Z
-DTSTAMP:20261020T092112Z
-UID:dGVhdHJvLWxvcy12aXJ0dW9zb3N8MjAyNi0xMC0yMCAwOToyMToxMQ==@agenda.cm-pva
- rzim.pt
-CATEGORIES:文化,戏剧
-DESCRIPTION:No âmbito da Temporada Teatral\, a Varazim Teatro apresenta\,
-  a 7 de novembro\, pelas 21h30\, a peça "Los Virtuosos" pelo Teatro del A
- stillero\, no Cine-Teatro Garrett.\n\n门票与报名（葡萄牙语）：
- \nAs entradas custam 7€\, com desconto para estudantes\, reformados ou a
- posentados\, menores de 30 anos e maiores de 65 anos\, desempregados\, pes
- soas com incapacidade ou deficiência e surdos\, grupo de 8 pessoas ou mai
- s\, famílias numerosas (5 pessoas ou mais): 5€.\nPara sócios e portado
- res do Cartão de Amigo da Varazim e Associados da Acapo: 3\,50€.\nOs bi
- lhetes estão à venda no Cine-Teatro Garrett\, BOL\, CTT\, FNAC\, WORTEN.
- \n\n活动标题和说明为葡萄牙语，与市政府发布的内容一
- 致。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/teatro-los-virtu
- osos/
-LAST-MODIFIED:20261020T092112Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/teatro-los-virtuosos/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Teatro "Quando Menos se Espera"
 DTSTART:20261201T213000Z
 DTEND:20261202T233000Z

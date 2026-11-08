@@ -122,55 +122,6 @@ URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olh
  o-a-cadeira-e-a-sereia-quatro-breves-historias/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Concerto de Amizade
-DTSTART:20261107T190000Z
-DTEND:20261107T203000Z
-DTSTAMP:20261020T110316Z
-UID:Y29uY2VydG8tZGUtYW1pemFkZXwyMDI2LTEwLTIwIDExOjAzOjE2@agenda.cm-pvarzim
- .pt
-CATEGORIES:Cultuur,Concerten
-DESCRIPTION:No âmbito das relações de geminação existentes entre o Mu
- nicípio da Póvoa de Varzim e a cidade galega de A Guarda (Espanha)\, enc
- ontra-se programado um intercâmbio sociocultural que promete aproximar as
-  duas comunidades através da música e da arte.\n\nKaartjes en inschrijvi
- ng (in het Portugees):\nO evento dividir-se-á em duas datas e palcos dist
- intos: 24 de outubro – na Igreja de Santa Maria\, na cidade de A Guarda 
- (Galiza\, Espanha)\, às 20h00 (hora espanhola)\, e no dia 7 de novembro\,
-  na Igreja da Misericórdia\, na Póvoa de Varzim\, às 19h00\, com entrad
- a livre.\n\nTitel en beschrijving van het evenement in het Portugees\, zoa
- ls gepubliceerd door de gemeente.\n\nMeer informatie: https://www.cm-pvarz
- im.pt/eventos/concerto-de-amizade/
-LAST-MODIFIED:20261020T110316Z
-LOCATION:Igreja da Misericórdia
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/concerto-de-amizade/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Teatro "Los Virtuosos"
-DTSTART:20261107T213000Z
-DTEND:20261107T230000Z
-DTSTAMP:20261020T092112Z
-UID:dGVhdHJvLWxvcy12aXJ0dW9zb3N8MjAyNi0xMC0yMCAwOToyMToxMQ==@agenda.cm-pva
- rzim.pt
-CATEGORIES:Cultuur,Theater
-DESCRIPTION:No âmbito da Temporada Teatral\, a Varazim Teatro apresenta\,
-  a 7 de novembro\, pelas 21h30\, a peça "Los Virtuosos" pelo Teatro del A
- stillero\, no Cine-Teatro Garrett.\n\nKaartjes en inschrijving (in het Por
- tugees):\nAs entradas custam 7€\, com desconto para estudantes\, reforma
- dos ou aposentados\, menores de 30 anos e maiores de 65 anos\, desempregad
- os\, pessoas com incapacidade ou deficiência e surdos\, grupo de 8 pessoa
- s ou mais\, famílias numerosas (5 pessoas ou mais): 5€.\nPara sócios e
-  portadores do Cartão de Amigo da Varazim e Associados da Acapo: 3\,50€
- .\nOs bilhetes estão à venda no Cine-Teatro Garrett\, BOL\, CTT\, FNAC\,
-  WORTEN.\n\nTitel en beschrijving van het evenement in het Portugees\, zoa
- ls gepubliceerd door de gemeente.\n\nMeer informatie: https://www.cm-pvarz
- im.pt/eventos/teatro-los-virtuosos/
-LAST-MODIFIED:20261020T092112Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/teatro-los-virtuosos/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Cinema "A Ilha Esquecida"
 DTSTART:20261108T153000Z
 DTEND:20261108T171500Z
