@@ -121,45 +121,6 @@ URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olh
  o-a-cadeira-e-a-sereia-quatro-breves-historias/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cinema "A Ilha Esquecida"
-DTSTART:20261108T153000Z
-DTEND:20261108T171500Z
-DTSTAMP:20261105T095645Z
-UID:Y2luZW1hLWEtaWxoYS1lc3F1ZWNpZGF8MjAyNi0xMC0yMSAwODoxOTo0OQ==@agenda.cm
- -pvarzim.pt
-CATEGORIES:Cultura,Cinema
-DESCRIPTION:No dia 8 de novembro\, às 15h30\, será exibido\, no Cine-Tea
- tro Garrett\, o filme "A Ilha Esquecida" (versão portuguesa).\n\nBigliett
- i e iscrizioni (in portoghese):\nEntradas: Os bilhetes custam 3\,50€ e e
- stão à venda na BOL e no Cine-Teatro Garrett.\nBiglietti: https://www.bo
- l.pt/Projecto/EntidadesAderentes/3289-cine_teatro_garrett\n\nTitolo e desc
- rizione dell'evento in portoghese\, come pubblicati dal comune.\n\nMaggior
- i informazioni: https://www.cm-pvarzim.pt/eventos/cinema-a-ilha-esquecida/
-LAST-MODIFIED:20261105T095645Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-a-ilha-esquecida/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cinema "Verity"
-DTSTART:20261108T213000Z
-DTEND:20261108T231500Z
-DTSTAMP:20261021T082411Z
-UID:Y2luZW1hLXZlcml0eXwyMDI2LTEwLTIxIDA4OjIzOjI3@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Cinema
-DESCRIPTION:No dia 8 de novembro\, às 21h30\, será exibido\, no Cine-Tea
- tro Garrett\, o thriller psicológico "Verity".\n\nBiglietti e iscrizioni 
- (in portoghese):\nEntradas: Os bilhetes custam 3\,50€ e estão à venda 
- na BOL e no Cine-Teatro Garrett.\nBiglietti: https://www.bol.pt/Projecto/E
- ntidadesAderentes/3289-cine_teatro_garrett\n\nTitolo e descrizione dell'ev
- ento in portoghese\, come pubblicati dal comune.\n\nMaggiori informazioni:
-  https://www.cm-pvarzim.pt/eventos/cinema-verity/
-LAST-MODIFIED:20261021T082411Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-verity/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Cais de Leitura
 DTSTART:20261110T210000Z
 DTEND:20261110T224500Z
