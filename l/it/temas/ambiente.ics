@@ -12,4 +12,31 @@ SOURCE;VALUE=URI:https://jmns-santos.github.io/agenda-cmpv/l/it/temas/ambi
 X-APPLE-CALENDAR-COLOR:#004d40
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+SUMMARY:Sessão de esclarecimento online sobre energia
+DTSTART:20261113T153000Z
+DTEND:20261113T171500Z
+DTSTAMP:20261109T093737Z
+UID:c2Vzc2FvLWRlLWVzY2xhcmVjaW1lbnRvLW9ubGluZS1zb2JyZS1lbmVyZ2lhfDIwMjYtMT
+ EtMDkgMDk6Mzc6Mzc=@agenda.cm-pvarzim.pt
+CATEGORIES:Ambiente,Iniziative e campagne
+DESCRIPTION:No âmbito da atividade desenvolvida pelo Póvoa Energy Hub\, 
+ e procurando assegurar a complementaridade com as sessões já realizadas 
+ no Município da Póvoa de Varzim\, será promovida uma sessão de informa
+ ção e esclarecimento\, em formato online\, no próximo dia 13 de novembr
+ o\, às 15h30\, dedicada à mobilidade elétrica\, autoconsumo de energia 
+ solar\, armazenamento em baterias e comunidades de energia.\n\nBiglietti e
+  iscrizioni (in portoghese):\nA participação é gratuita\, mediante insc
+ rição prévia através do seguinte link: O futuro da sua energia.\nIscri
+ zione: https://events.teams.microsoft.com/event/646bbac7-dc56-4826-b188-85
+ 4f0de2c0b6@a74fce51-3f86-4eba-a739-e115e9c89d4b/registration\n\nTitolo e d
+ escrizione dell'evento in portoghese\, come pubblicati dal comune.\n\nMagg
+ iori informazioni: https://www.cm-pvarzim.pt/eventos/sessao-de-esclarecime
+ nto-online-sobre-energia/
+LAST-MODIFIED:20261109T093737Z
+LOCATION:online
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sessao-de-esclarecimento-online-sobr
+ e-energia/
+END:VEVENT
 END:VCALENDAR

@@ -51,6 +51,25 @@ URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-fotografia-onde-eu-esti
  ver/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Mostra de Fotografia da Biblioteca Municipal "ACERVO II"
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20261109T145604Z
+UID:bW9zdHJhLWRlLWZvdG9ncmFmaWEtZGEtYmlibGlvdGVjYS1tdW5pY2lwYWwtYWNlcnZvLW
+ lpfDIwMjYtMTEtMDkgMTQ6NTY6MDM=@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Exhibitions
+DESCRIPTION:Nos meses de novembro e dezembro\, o auditório da Biblioteca 
+ Municipal Rocha Peixoto acolhe a segunda mostra do Ciclo "ACERVO" da Bibli
+ oteca Municipal Rocha Peixoto.\n\nEvent title and description in Portugues
+ e\, as published by the municipality.\n\nMore information: https://www.cm-
+ pvarzim.pt/eventos/mostra-de-fotografia-da-biblioteca-municipal-acervo-ii/
+LAST-MODIFIED:20261109T145604Z
+LOCATION:Auditório da Biblioteca Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mostra-de-fotografia-da-biblioteca-m
+ unicipal-acervo-ii/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Exposição “25 anos & 25 documentos”
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20270130

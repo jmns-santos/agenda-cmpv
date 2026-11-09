@@ -92,6 +92,24 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/362315/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Artes e Ofícios: Encontro com Pedro Nuno Nero Luis
+DTSTART:20261116T100000Z
+DTEND:20261116T120000Z
+DTSTAMP:20261109T150538Z
+UID:YXJ0ZXMtZS1vZmljaW9zLWVuY29udHJvLWNvbS1wZWRyby1udW5vLW5lcm8tbHVpc3wyMD
+ I2LTExLTA5IDE1OjA0OjIx@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Oficinas e atividades
+DESCRIPTION:No dia 16 de novembro\, às 10h00\, terá lugar\, na Bibliotec
+ a Municipal\, uma sessão de Artes e Ofícios com o Capitão-de-Fragata Pe
+ dro Nuno Nero Luis.\n\nMais informação: https://www.cm-pvarzim.pt/evento
+ s/artes-e-oficios-encontro-com-pedro-nuno-nero-luis/
+LAST-MODIFIED:20261109T150538Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/artes-e-oficios-encontro-com-pedro-n
+ uno-nero-luis/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"Promover a autoestima: o sistema imunitário social"
 DTSTART:20261117T183000Z
 DTEND:20261117T200000Z

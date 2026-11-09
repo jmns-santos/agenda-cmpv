@@ -15,6 +15,33 @@ X-APPLE-CALENDAR-COLOR:#546e7a
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
+SUMMARY:Sessão de esclarecimento online sobre energia
+DTSTART:20261113T153000Z
+DTEND:20261113T171500Z
+DTSTAMP:20261109T093737Z
+UID:c2Vzc2FvLWRlLWVzY2xhcmVjaW1lbnRvLW9ubGluZS1zb2JyZS1lbmVyZ2lhfDIwMjYtMT
+ EtMDkgMDk6Mzc6Mzc=@agenda.cm-pvarzim.pt
+CATEGORIES:環境,取り組み・キャンペーン
+DESCRIPTION:No âmbito da atividade desenvolvida pelo Póvoa Energy Hub\, 
+ e procurando assegurar a complementaridade com as sessões já realizadas 
+ no Município da Póvoa de Varzim\, será promovida uma sessão de informa
+ ção e esclarecimento\, em formato online\, no próximo dia 13 de novembr
+ o\, às 15h30\, dedicada à mobilidade elétrica\, autoconsumo de energia 
+ solar\, armazenamento em baterias e comunidades de energia.\n\nチケッ
+ ト・申し込み（ポルトガル語）：\nA participação é gratuit
+ a\, mediante inscrição prévia através do seguinte link: O futuro da su
+ a energia.\n申し込み: https://events.teams.microsoft.com/event/646bbac
+ 7-dc56-4826-b188-854f0de2c0b6@a74fce51-3f86-4eba-a739-e115e9c89d4b/registr
+ ation\n\nイベントのタイトルと説明は、市が公開してい
+ るポルトガル語のままです。\n\n詳細: https://www.cm-pvarzim.
+ pt/eventos/sessao-de-esclarecimento-online-sobre-energia/
+LAST-MODIFIED:20261109T093737Z
+LOCATION:online
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/sessao-de-esclarecimento-online-sobr
+ e-energia/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:XII Capítulo de Entronização da Confraria dos Sabores Poveiros
 DTSTART:20261205T093000Z
 DTEND:20261205T160000Z

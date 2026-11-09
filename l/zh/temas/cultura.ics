@@ -120,6 +120,25 @@ URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olh
  o-a-cadeira-e-a-sereia-quatro-breves-historias/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Mostra de Fotografia da Biblioteca Municipal "ACERVO II"
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20261109T145604Z
+UID:bW9zdHJhLWRlLWZvdG9ncmFmaWEtZGEtYmlibGlvdGVjYS1tdW5pY2lwYWwtYWNlcnZvLW
+ lpfDIwMjYtMTEtMDkgMTQ6NTY6MDM=@agenda.cm-pvarzim.pt
+CATEGORIES:文化,展览
+DESCRIPTION:Nos meses de novembro e dezembro\, o auditório da Biblioteca 
+ Municipal Rocha Peixoto acolhe a segunda mostra do Ciclo "ACERVO" da Bibli
+ oteca Municipal Rocha Peixoto.\n\n活动标题和说明为葡萄牙语，
+ 与市政府发布的内容一致。\n\n更多信息: https://www.cm-pvarz
+ im.pt/eventos/mostra-de-fotografia-da-biblioteca-municipal-acervo-ii/
+LAST-MODIFIED:20261109T145604Z
+LOCATION:Auditório da Biblioteca Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mostra-de-fotografia-da-biblioteca-m
+ unicipal-acervo-ii/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cais de Leitura
 DTSTART:20261110T210000Z
 DTEND:20261110T224500Z
@@ -336,6 +355,25 @@ LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-
  de-lisboa-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Artes e Ofícios: Encontro com Pedro Nuno Nero Luis
+DTSTART:20261116T100000Z
+DTEND:20261116T120000Z
+DTSTAMP:20261109T150538Z
+UID:YXJ0ZXMtZS1vZmljaW9zLWVuY29udHJvLWNvbS1wZWRyby1udW5vLW5lcm8tbHVpc3wyMD
+ I2LTExLTA5IDE1OjA0OjIx@agenda.cm-pvarzim.pt
+CATEGORIES:文化,工作坊与活动
+DESCRIPTION:No dia 16 de novembro\, às 10h00\, terá lugar\, na Bibliotec
+ a Municipal\, uma sessão de Artes e Ofícios com o Capitão-de-Fragata Pe
+ dro Nuno Nero Luis.\n\n活动标题和说明为葡萄牙语，与市政府
+ 发布的内容一致。\n\n更多信息: https://www.cm-pvarzim.pt/evento
+ s/artes-e-oficios-encontro-com-pedro-nuno-nero-luis/
+LAST-MODIFIED:20261109T150538Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/artes-e-oficios-encontro-com-pedro-n
+ uno-nero-luis/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lançamento do livro “A Póvoa de Varzim na Belle Époque: panor
@@ -616,7 +654,7 @@ BEGIN:VEVENT
 SUMMARY:Póvoa de Varzim\, Cidade Natal
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20270110
-DTSTAMP:20261030T123603Z
+DTSTAMP:20261109T111800Z
 UID:cG92b2EtZGUtdmFyemltLWNpZGFkZS1uYXRhbHwyMDI2LTEwLTMwIDEyOjM2OjAy@agend
  a.cm-pvarzim.pt
 CATEGORIES:文化,节庆、集市与市场
@@ -627,7 +665,7 @@ DESCRIPTION:A magia da época mais bonita do ano está prestes a chegar. D
  活动标题和说明为葡萄牙语，与市政府发布的内容一致
  。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-cid
  ade-natal/
-LAST-MODIFIED:20261030T123603Z
+LAST-MODIFIED:20261109T111800Z
 LOCATION:Póvoa de Varzim
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-cidade-natal/
