@@ -190,24 +190,6 @@ URL:https://www.cm-pvarzim.pt/eventos/mostra-de-fotografia-da-biblioteca-m
  unicipal-acervo-ii/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cais de Leitura
-DTSTART:20261110T210000Z
-DTEND:20261110T224500Z
-DTSTAMP:20261021T135838Z
-UID:Y2Fpcy1kZS1sZWl0dXJhLTIxfDIwMjYtMTAtMjEgMTM6NTg6Mzc=@agenda.cm-pvarzim
- .pt
-CATEGORIES:Culture,Littérature
-DESCRIPTION:No âmbito da sua programação em ambiente digital\, a Biblio
- teca Municipal Rocha Peixoto volta a marcar encontro online para falar sob
- re livros\, no dia 10 de novembro\, às 21h00.\n\nTitre et description de 
- l'événement en portugais\, tels que publiés par la municipalité.\n\nPl
- us d'informations: https://www.cm-pvarzim.pt/eventos/cais-de-leitura-21/
-LAST-MODIFIED:20261021T135838Z
-LOCATION:online
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cais-de-leitura-21/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:"Métodos de estudo de aprendizagens ativas"
 DTSTART:20261112T173000Z
 DTEND:20261112T193000Z
@@ -1031,6 +1013,21 @@ URL:https://www.cm-pvarzim.pt/eventos/ecras-e-videojogos-o-que-os-pais-tem
  -mesmo-que-saber/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Futebol - AD Marco 09 x Varzim
+DTSTART:20261204T200000Z
+DTEND:20261204T214500Z
+DTSTAMP:20261111T031815Z
+UID:varzim-sNrk80fZeITrFGN37LVNqd3IwL2yYPyN6f9g2T7f@maak-agenda.nl@agenda.
+ cm-pvarzim.pt
+CATEGORIES:Sport,Matchs du Varzim
+DESCRIPTION:Titre et description de l'événement en portugais\, tels que 
+ publiés par la municipalité.\n\nPlus d'informations: https://www.flashsc
+ ore.pt/equipa/varzim/K8O5Kkl7/lista/
+LAST-MODIFIED:20261111T031815Z
+TRANSP:TRANSPARENT
+URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"Deixem o Pimba em Paz"
 DTSTART:20261204T213000Z
 DTEND:20261204T233000Z
@@ -1135,21 +1132,6 @@ LAST-MODIFIED:20261026T104129Z
 LOCATION:Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Futebol - AD Marco 09 x Varzim
-DTSTART:20261206T150000Z
-DTEND:20261206T164500Z
-DTSTAMP:20260810T193514Z
-UID:varzim-sNrk80fZeITrFGN37LVNqd3IwL2yYPyN6f9g2T7f@maak-agenda.nl@agenda.
- cm-pvarzim.pt
-CATEGORIES:Sport,Matchs du Varzim
-DESCRIPTION:Titre et description de l'événement en portugais\, tels que 
- publiés par la municipalité.\n\nPlus d'informations: https://www.flashsc
- ore.pt/equipa/varzim/K8O5Kkl7/lista/
-LAST-MODIFIED:20260810T193514Z
-TRANSP:TRANSPARENT
-URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Exposição “25 anos & 25 documentos”
