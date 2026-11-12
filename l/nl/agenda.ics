@@ -190,6 +190,25 @@ URL:https://www.cm-pvarzim.pt/eventos/mostra-de-fotografia-da-biblioteca-m
  unicipal-acervo-ii/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Orçamento Participativo Jovem 2027
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20270501
+DTSTAMP:20261112T120108Z
+UID:b3JjYW1lbnRvLXBhcnRpY2lwYXRpdm8tam92ZW0tMjAyN3wyMDI2LTExLTEyIDEyOjAxOj
+ A3@agenda.cm-pvarzim.pt
+CATEGORIES:Burgerschap,Workshops en activiteiten
+DESCRIPTION:O Município da Póvoa de Varzim\, através do Pelouro da Juve
+ ntude\, em parceria com o Conselho Municipal de Juventude\, volta a lança
+ r o Orçamento Participativo Jovem (OPJ).\n\nTitel en beschrijving van het
+  evenement in het Portugees\, zoals gepubliceerd door de gemeente.\n\nMeer
+  informatie: https://www.cm-pvarzim.pt/eventos/orcamento-participativo-jov
+ em-2027/
+LAST-MODIFIED:20261112T120108Z
+LOCATION:online
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/orcamento-participativo-jovem-2027/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"Métodos de estudo de aprendizagens ativas"
 DTSTART:20261112T173000Z
 DTEND:20261112T193000Z
@@ -1375,6 +1394,29 @@ LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-2359-falta-um-mi
  nuto-para-o-natal/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Oficina criativa “Árvore de Natal para decoração”
+DTSTART:20261217T183000Z
+DTEND:20261217T203000Z
+DTSTAMP:20261112T121039Z
+UID:b2ZpY2luYS1jcmlhdGl2YS1hcnZvcmUtZGUtbmF0YWwtcGFyYS1kZWNvcmFjYW98MjAyNi
+ 0xMS0xMiAxMjoxMDozOA==@agenda.cm-pvarzim.pt
+CATEGORIES:Milieu,Workshops en activiteiten
+DESCRIPTION:No dia 17 de dezembro\, entre as 18h30 e as 20h30\, o Arquivo 
+ Municipal irá levar a cabo a oficina criativa "Árvore de Natal para deco
+ ração".\n\nKaartjes en inschrijving (in het Portugees):\nInscrições po
+ r marcação e de acordo com a disponibilidade do Arquivo\, a partir do di
+ a 16 de novembro\, através do email arquivomunicipal@cm-pvarzim.pt ou do 
+ telefone 252 090 003.\n\nTitel en beschrijving van het evenement in het Po
+ rtugees\, zoals gepubliceerd door de gemeente.\n\nMeer informatie: https:/
+ /www.cm-pvarzim.pt/eventos/oficina-criativa-arvore-de-natal-para-decoracao
+ /
+LAST-MODIFIED:20261112T121039Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/oficina-criativa-arvore-de-natal-par
+ a-decoracao/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Rastreios Cardiovasculares Gratuitos

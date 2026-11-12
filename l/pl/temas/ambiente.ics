@@ -39,4 +39,26 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/sessao-de-esclarecimento-online-sobr
  e-energia/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Oficina criativa “Árvore de Natal para decoração”
+DTSTART:20261217T183000Z
+DTEND:20261217T203000Z
+DTSTAMP:20261112T121039Z
+UID:b2ZpY2luYS1jcmlhdGl2YS1hcnZvcmUtZGUtbmF0YWwtcGFyYS1kZWNvcmFjYW98MjAyNi
+ 0xMS0xMiAxMjoxMDozOA==@agenda.cm-pvarzim.pt
+CATEGORIES:Środowisko,Warsztaty i zajęcia
+DESCRIPTION:No dia 17 de dezembro\, entre as 18h30 e as 20h30\, o Arquivo 
+ Municipal irá levar a cabo a oficina criativa "Árvore de Natal para deco
+ ração".\n\nBilety i zapisy (po portugalsku):\nInscrições por marcaçã
+ o e de acordo com a disponibilidade do Arquivo\, a partir do dia 16 de nov
+ embro\, através do email arquivomunicipal@cm-pvarzim.pt ou do telefone 25
+ 2 090 003.\n\nTytuł i opis wydarzenia po portugalsku\, tak jak opublikowa
+ ła je gmina.\n\nWięcej informacji: https://www.cm-pvarzim.pt/eventos/ofi
+ cina-criativa-arvore-de-natal-para-decoracao/
+LAST-MODIFIED:20261112T121039Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/oficina-criativa-arvore-de-natal-par
+ a-decoracao/
+END:VEVENT
 END:VCALENDAR

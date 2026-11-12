@@ -39,6 +39,24 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Orçamento Participativo Jovem 2027
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20270501
+DTSTAMP:20261112T120108Z
+UID:b3JjYW1lbnRvLXBhcnRpY2lwYXRpdm8tam92ZW0tMjAyN3wyMDI2LTExLTEyIDEyOjAxOj
+ A3@agenda.cm-pvarzim.pt
+CATEGORIES:公民生活,工作坊与活动
+DESCRIPTION:O Município da Póvoa de Varzim\, através do Pelouro da Juve
+ ntude\, em parceria com o Conselho Municipal de Juventude\, volta a lança
+ r o Orçamento Participativo Jovem (OPJ).\n\n活动标题和说明为葡
+ 萄牙语，与市政府发布的内容一致。\n\n更多信息: https://
+ www.cm-pvarzim.pt/eventos/orcamento-participativo-jovem-2027/
+LAST-MODIFIED:20261112T120108Z
+LOCATION:online
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/orcamento-participativo-jovem-2027/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"Métodos de estudo de aprendizagens ativas"
 DTSTART:20261112T173000Z
 DTEND:20261112T193000Z
