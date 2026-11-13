@@ -75,11 +75,15 @@
   .topo { background: var(--mar-forte); color: #fff; padding-top: max(.9rem, env(safe-area-inset-top)); padding-bottom: 0; }
   .topo-grelha { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .9rem 1.2rem; }
   .marca { display: flex; align-items: center; gap: .8rem 1.6rem; min-width: 0; }
-  .marca > div { min-width: 0; }
+  /* O logótipo tem o emblema da Câmara por cima e "Póvoa de Varzim / Centro..." por baixo do "NEXO",
+     o que puxa o centro visual do "NEXO" para baixo do centro da caixa da imagem; o título "Eventos"
+     fica acima do centro da sua caixa por ter a legenda por baixo. Este ajuste alinha os dois ao centro. */
+  .marca > div { min-width: 0; transform: translateY(27px); }
   .logo-cm { flex: none; display: flex; line-height: 0; max-width: 100%; }
   .logo-cm img { display: block; height: 150px; width: auto; max-width: 100%; }
   @media (max-width: 40rem) {
     .marca { flex-wrap: wrap; gap: .7rem; }
+    .marca > div { transform: none; }
     .logo-cm img { height: auto; width: min(100%, 20rem); }
   }
   .topo h1 { margin: 0; color: #fff; font-size: clamp(2.8rem, 11vw, 4.4rem); line-height: 1; font-weight: 700; letter-spacing: .005em; overflow-wrap: anywhere; }
