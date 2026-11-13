@@ -60,6 +60,22 @@
       --titulo: #9fd3ea;
     }
   }
+  /* Embutido na PGU (?embed=1): tons escuros e acinzentados, próximos da própria PGU,
+     em vez do azul-petróleo da marca, para a página se integrar visualmente como mais um
+     separador. Aplica-se sempre no modo embebido, independentemente do tema do sistema. */
+  .embed {
+    --fundo: #1b1e20;
+    --cartao: #242729;
+    --tinta: #e8eaec;
+    --cinza: #9aa0a4;
+    --linha: #35393c;
+    --trilho: #2c2f31;
+    --mar-forte: #1f2224;
+    --mar-claro: #2c3133;
+    --botao: #3d6a82;
+    --sombra: none;
+    --titulo: #a9c3cf;
+  }
 
   *, *::before, *::after { box-sizing: border-box; }
   [hidden] { display: none !important; }
@@ -457,9 +473,15 @@
   footer { margin-top: 1.4rem; padding-top: 1rem; padding-bottom: max(2rem, env(safe-area-inset-bottom)); font-size: .92rem; color: var(--cinza); }
   footer p + p { margin-top: .4rem; }
 
-  /* Embutido na PGU (?embed=1): sem cabeçalho grande nem rodapé */
-  .embed .marca, .embed .onda, .embed footer { display: none; }
+  /* Embutido na PGU (?embed=1): sem título grande nem rodapé — o separador "Eventos" da própria
+     PGU já identifica a página; aqui fica só um logótipo pequeno, a frase da agenda e as
+     ferramentas de língua/acessibilidade. */
+  .embed .onda, .embed footer { display: none; }
   .embed .topo { padding-top: .5rem; padding-bottom: .5rem; }
+  .embed .topo h1 { display: none; }
+  .embed .marca > div { transform: none; }
+  .embed .sub { margin-top: 0; }
+  .embed .logo-cm img { height: 40px; }
 
   @media (forced-colors: active) {
     .cartao, .completa, .item-proximo, .destaque-cartao { border-left-color: CanvasText; }
