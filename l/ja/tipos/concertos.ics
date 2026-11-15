@@ -70,29 +70,6 @@ URL:https://www.cm-pvarzim.pt/eventos/xiii-encontro-de-musica-coral-da-pov
  oa-de-varzim/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Concerto Pedro Abrunhosa
-DTSTART:20261114T213000Z
-DTEND:20261114T230000Z
-DTSTAMP:20260807T152457Z
-UID:Y29uY2VydG8tcGVkcm8tYWJydW5ob3NhfDIwMjYtMDgtMDcgMTU6MjQ6NTc=@agenda.cm
- -pvarzim.pt
-CATEGORIES:文化,コンサート
-DESCRIPTION:No dia 14 de novembro\, às 21h30\, Pedro Abrunhosa vai atuar 
- no Póvoa Arena.\n\nチケット・申し込み（ポルトガル語）：
- \nOs bilhetes estão à venda na BOL e os preços variam entre os 40 e os 
- 20€: Plateia Central – 40\,00€ | Plateia Lateral – 35\,00€| Seto
- res 1\, 2\, 7 e 8 – Inferior- 35\,00€ | Setores 1\, 2\, 7 e 8 – Supe
- rior – 30\,00€ | Setores 3 e 6 – Inferior- 25\,00€\nチケット: 
- https://www.bol.pt/Comprar/Bilhetes/176846-pedro_abrunhosa-povoa_arena/\n
- \nイベントのタイトルと説明は、市が公開しているポル
- トガル語のままです。\n\n詳細: https://www.cm-pvarzim.pt/evento
- s/concerto-pedro-abrunhosa/
-LAST-MODIFIED:20260807T152457Z
-LOCATION:Póvoa Arena
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/concerto-pedro-abrunhosa/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Concerto Comentado
 DTSTART:20261119T183000Z
 DTEND:20261119T200000Z
