@@ -94,4 +94,46 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-adolescencia-sexo-e-morte-no-
  acampamento-miasma/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "The Hunger Games: Amanhecer na Ceifa"
+DTSTART:20261206T213000Z
+DTEND:20261206T230000Z
+DTSTAMP:20261116T152835Z
+UID:Y2luZW1hLXRoZS1odW5nZXItZ2FtZXMtYW1hbmhlY2VyLW5hLWNlaWZhfDIwMjYtMTEtMT
+ YgMTQ6NDM6NDg=@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Cinema
+DESCRIPTION:No dia 6 de dezembro\, às 21h30\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme "The Hunger Games: Amanhecer na Ceifa".\n\nTickets a
+ nd registration (in Portuguese):\nEntradas: Os bilhetes custam 3\,50€ e 
+ estão à venda na BOL e no Cine-Teatro Garrett.\nTickets: https://www.bol
+ .pt/Comprar/Bilhetes/189103-the_hunger_games_amanhecer_na_ceifa-cine_teatr
+ o_garrett/\n\nEvent title and description in Portuguese\, as published by 
+ the municipality.\n\nMore information: https://www.cm-pvarzim.pt/eventos/c
+ inema-the-hunger-games-amanhecer-na-ceifa/
+LAST-MODIFIED:20261116T152835Z
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-the-hunger-games-amanhecer-na
+ -ceifa/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "O Gato do Chapéu"
+DTSTART:20261217T143000Z
+DTEND:20261217T163000Z
+DTSTAMP:20261116T153632Z
+UID:Y2luZW1hLW8tZ2F0by1kby1jaGFwZXV8MjAyNi0xMS0xNiAxNTozNTo0OQ==@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Culture,Cinema
+DESCRIPTION:No dia 17 de dezembro\, às 14h30\, será exibido\, no Cine-Te
+ atro Garrett\, o filme "O Gato do Chapéu" (versão portuguesa).\n\nTicket
+ s and registration (in Portuguese):\nEntradas: Os bilhetes custam 3\,50€
+  e estão à venda na BOL e no Cine-Teatro Garrett.\nTickets: https://www.
+ bol.pt/Comprar/Bilhetes/189106-o_gato_do_chapeu-cine_teatro_garrett/\n\nEv
+ ent title and description in Portuguese\, as published by the municipality
+ .\n\nMore information: https://www.cm-pvarzim.pt/eventos/cinema-o-gato-do-
+ chapeu/
+LAST-MODIFIED:20261116T153632Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-o-gato-do-chapeu/
+END:VEVENT
 END:VCALENDAR

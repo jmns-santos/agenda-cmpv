@@ -903,43 +903,25 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Exposição “25 anos & 25 documentos”
-DTSTART;VALUE=DATE:20261207
-DTEND;VALUE=DATE:20270130
-DTSTAMP:20261028T093918Z
-UID:ZXhwb3NpY2FvLTI1LWFub3MtMjUtZG9jdW1lbnRvc3wyMDI2LTEwLTI4IDA5OjM5OjE3@a
- genda.cm-pvarzim.pt
-CATEGORIES:Kultur,Ausstellungen
-DESCRIPTION:De 7 de dezembro a 29 de janeiro de 2027\, o Arquivo Municipal
-  abre portas para a exposição "25 anos & 25 documentos".\n\nTitel und Be
- schreibung der Veranstaltung auf Portugiesisch\, wie von der Stadt veröff
- entlicht.\n\nWeitere Informationen: https://www.cm-pvarzim.pt/eventos/expo
- sicao-25-anos-25-documentos/
-LAST-MODIFIED:20261028T093918Z
-LOCATION:Arquivo Municipal
+SUMMARY:Cinema "The Hunger Games: Amanhecer na Ceifa"
+DTSTART:20261206T213000Z
+DTEND:20261206T230000Z
+DTSTAMP:20261116T152835Z
+UID:Y2luZW1hLXRoZS1odW5nZXItZ2FtZXMtYW1hbmhlY2VyLW5hLWNlaWZhfDIwMjYtMTEtMT
+ YgMTQ6NDM6NDg=@agenda.cm-pvarzim.pt
+CATEGORIES:Kultur,Kino
+DESCRIPTION:No dia 6 de dezembro\, às 21h30\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme "The Hunger Games: Amanhecer na Ceifa".\n\nTickets u
+ nd Anmeldung (auf Portugiesisch):\nEntradas: Os bilhetes custam 3\,50€ e
+  estão à venda na BOL e no Cine-Teatro Garrett.\nTickets: https://www.bo
+ l.pt/Comprar/Bilhetes/189103-the_hunger_games_amanhecer_na_ceifa-cine_teat
+ ro_garrett/\n\nTitel und Beschreibung der Veranstaltung auf Portugiesisch
+ \, wie von der Stadt veröffentlicht.\n\nWeitere Informationen: https://ww
+ w.cm-pvarzim.pt/eventos/cinema-the-hunger-games-amanhecer-na-ceifa/
+LAST-MODIFIED:20261116T152835Z
 TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/exposicao-25-anos-25-documentos/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:“Um concerto à Luz da História” – comemoração dos 25 ano
- s do Arquivo
-DTSTART:20261207T183000Z
-DTEND:20261207T203000Z
-DTSTAMP:20261028T093235Z
-UID:dW0tY29uY2VydG8tYS1sdXotZGEtaGlzdG9yaWEtY29tZW1vcmFjYW8tZG9zLTI1LWFub3
- MtZG8tYXJxdWl2b3wyMDI2LTEwLTI4IDA5OjMyOjM0@agenda.cm-pvarzim.pt
-CATEGORIES:Kultur,Konzerte
-DESCRIPTION:No dia 7 de dezembro\, às 18h30\, o Arquivo Municipal irá re
- ceber "um concerto à Luz da história"\, no âmbito da comemoração dos 
- 25 anos deste espaço cultural da cidade.\n\nTitel und Beschreibung der Ve
- ranstaltung auf Portugiesisch\, wie von der Stadt veröffentlicht.\n\nWeit
- ere Informationen: https://www.cm-pvarzim.pt/eventos/um-concerto-a-luz-da-
- historia-comemoracao-dos-25-anos-do-arquivo/
-LAST-MODIFIED:20261028T093235Z
-LOCATION:Arquivo Municipal
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/um-concerto-a-luz-da-historia-comemo
- racao-dos-25-anos-do-arquivo/
+URL:https://www.cm-pvarzim.pt/eventos/cinema-the-hunger-games-amanhecer-na
+ -ceifa/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:"O impacto dos hábitos de sono no desenvolvimento\, na saúde e n
@@ -1146,6 +1128,27 @@ URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-2359-falta-um-mi
  nuto-para-o-natal/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cinema "O Gato do Chapéu"
+DTSTART:20261217T143000Z
+DTEND:20261217T163000Z
+DTSTAMP:20261116T153632Z
+UID:Y2luZW1hLW8tZ2F0by1kby1jaGFwZXV8MjAyNi0xMS0xNiAxNTozNTo0OQ==@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Kultur,Kino
+DESCRIPTION:No dia 17 de dezembro\, às 14h30\, será exibido\, no Cine-Te
+ atro Garrett\, o filme "O Gato do Chapéu" (versão portuguesa).\n\nTicket
+ s und Anmeldung (auf Portugiesisch):\nEntradas: Os bilhetes custam 3\,50
+ € e estão à venda na BOL e no Cine-Teatro Garrett.\nTickets: https://w
+ ww.bol.pt/Comprar/Bilhetes/189106-o_gato_do_chapeu-cine_teatro_garrett/\n
+ \nTitel und Beschreibung der Veranstaltung auf Portugiesisch\, wie von der
+  Stadt veröffentlicht.\n\nWeitere Informationen: https://www.cm-pvarzim.p
+ t/eventos/cinema-o-gato-do-chapeu/
+LAST-MODIFIED:20261116T153632Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-o-gato-do-chapeu/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Oficina criativa “Árvore de Natal para decoração”
 DTSTART:20261217T183000Z
 DTEND:20261217T203000Z
@@ -1282,5 +1285,25 @@ DESCRIPTION:Titel und Beschreibung der Veranstaltung auf Portugiesisch\, w
 LAST-MODIFIED:20260810T193513Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Festa m80
+DTSTART:20270403T210000Z
+DTEND:20270403T223000Z
+DTSTAMP:20261116T142721Z
+UID:ZmVzdGEtbTgwfDIwMjYtMTEtMTYgMTQ6MjM6NTE=@agenda.cm-pvarzim.pt
+CATEGORIES:Kultur,Feste\, Messen und Märkte
+DESCRIPTION:A Festa m80 chega ao Póvoa Arena\, no dia 3 de abril de 2027
+ \, para uma noite que promete transformar os maiores êxitos da cultura po
+ p numa celebração coletiva.\n\nTickets und Anmeldung (auf Portugiesisch)
+ :\nO preço dos bilhetes varia entre 20 e 30€ e estão à venda na BOL.
+ \nTickets: https://www.bol.pt/Comprar/Bilhetes/188739-festa_m80-povoa_aren
+ a/\n\nTitel und Beschreibung der Veranstaltung auf Portugiesisch\, wie von
+  der Stadt veröffentlicht.\n\nWeitere Informationen: https://www.cm-pvarz
+ im.pt/eventos/festa-m80/
+LAST-MODIFIED:20261116T142721Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/festa-m80/
 END:VEVENT
 END:VCALENDAR

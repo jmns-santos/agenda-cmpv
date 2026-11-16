@@ -93,4 +93,24 @@ LOCATION:Sala infantil e juvenil da Biblioteca Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/natal-na-biblioteca/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Festa m80
+DTSTART:20270403T210000Z
+DTEND:20270403T223000Z
+DTSTAMP:20261116T142721Z
+UID:ZmVzdGEtbTgwfDIwMjYtMTEtMTYgMTQ6MjM6NTE=@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Feste\, fiere e mercati
+DESCRIPTION:A Festa m80 chega ao Póvoa Arena\, no dia 3 de abril de 2027
+ \, para uma noite que promete transformar os maiores êxitos da cultura po
+ p numa celebração coletiva.\n\nBiglietti e iscrizioni (in portoghese):\n
+ O preço dos bilhetes varia entre 20 e 30€ e estão à venda na BOL.\nBi
+ glietti: https://www.bol.pt/Comprar/Bilhetes/188739-festa_m80-povoa_arena/
+ \n\nTitolo e descrizione dell'evento in portoghese\, come pubblicati dal c
+ omune.\n\nMaggiori informazioni: https://www.cm-pvarzim.pt/eventos/festa-m
+ 80/
+LAST-MODIFIED:20261116T142721Z
+LOCATION:Póvoa Arena
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/festa-m80/
+END:VEVENT
 END:VCALENDAR
