@@ -39,25 +39,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Exposição de pintura "Gesto de esperança"
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261116
-DTSTAMP:20261022T081718Z
-UID:ZXhwb3NpY2FvLWRlLXBpbnR1cmEtZ2VzdG8tZGUtZXNwZXJhbmNhfDIwMjYtMTAtMjIgMD
- g6MTc6MTc=@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Mostre
-DESCRIPTION:O Posto de Turismo dos Torreões vai acolher\, de 22 de outubr
- o a 15 de novembro\, a exposição de pintura “Gesto de esperança”\, 
- de Paulo Silva.\n\nTitolo e descrizione dell'evento in portoghese\, come p
- ubblicati dal comune.\n\nMaggiori informazioni: https://www.cm-pvarzim.pt/
- eventos/exposicao-de-pintura-gesto-de-esperanca/
-LAST-MODIFIED:20261022T081718Z
-LOCATION:Posto de Turismo dos Torreões
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-pintura-gesto-de-espera
- nca/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:FIMPV+
 DTSTART;VALUE=DATE:20261024
 DTEND;VALUE=DATE:20270531
@@ -260,47 +241,6 @@ LOCATION:Póvoa de Varzim
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/xiii-encontro-de-musica-coral-da-pov
  oa-de-varzim/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:1.ª Jornada do 46.º Plano de Promoção de Atletismo
-DTSTART:20261115T093000Z
-DTEND:20261115T123000Z
-DTSTAMP:20261104T122913Z
-UID:MS1hLWpvcm5hZGEtZG8tNDYtby1wbGFuby1kZS1wcm9tb2Nhby1kZS1hdGxldGlzbW98Mj
- AyNi0xMS0wNCAxMjoyOToxMg==@agenda.cm-pvarzim.pt
-CATEGORIES:Sport,Gare sportive
-DESCRIPTION:No dia 15 de novembro\, às 9h30\, terá lugar a 1.ª jornada 
- do Plano de Promoção de Atletismo\, no Parque da Cidade.\n\nTitolo e des
- crizione dell'evento in portoghese\, come pubblicati dal comune.\n\nMaggio
- ri informazioni: https://www.cm-pvarzim.pt/eventos/1-a-jornada-do-46-o-pla
- no-de-promocao-de-atletismo/
-LAST-MODIFIED:20261104T122913Z
-LOCATION:Parque da Cidade
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/1-a-jornada-do-46-o-plano-de-promoca
- o-de-atletismo/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cinema "Santo António\, o Casamenteiro de Lisboa": nova sessão
-DTSTART:20261115T160000Z
-DTEND:20261115T180000Z
-DTSTAMP:20261029T103835Z
-UID:Y2luZW1hLXNhbnRvLWFudG9uaW8tby1jYXNhbWVudGVpcm8tZGUtbGlzYm9hLTJ8MjAyNi
- 0xMC0yMSAwODozMjo1NQ==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Cinema
-DESCRIPTION:No dia 15 de novembro\, às 16h00\, será exibida\, no Cine-Te
- atro Garrett\, nova sessão do filme "Santo António\, o Casamenteiro de L
- isboa".\n\nBiglietti e iscrizioni (in portoghese):\nEntradas: Os bilhetes 
- custam 3\,50€ e estão à venda na BOL e no Cine-Teatro Garrett.\nBiglie
- tti: https://www.bol.pt/Projecto/EntidadesAderentes/3289-cine_teatro_garre
- tt\n\nTitolo e descrizione dell'evento in portoghese\, come pubblicati dal
-  comune.\n\nMaggiori informazioni: https://www.cm-pvarzim.pt/eventos/cinem
- a-santo-antonio-o-casamenteiro-de-lisboa-2/
-LAST-MODIFIED:20261029T103835Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-
- de-lisboa-2/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Artes e Ofícios: Encontro com Pedro Nuno Nero Luis

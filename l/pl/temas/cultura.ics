@@ -13,25 +13,6 @@ X-APPLE-CALENDAR-COLOR:#8e1b4f
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Exposição de pintura "Gesto de esperança"
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261116
-DTSTAMP:20261022T081718Z
-UID:ZXhwb3NpY2FvLWRlLXBpbnR1cmEtZ2VzdG8tZGUtZXNwZXJhbmNhfDIwMjYtMTAtMjIgMD
- g6MTc6MTc=@agenda.cm-pvarzim.pt
-CATEGORIES:Kultura,Wystawy
-DESCRIPTION:O Posto de Turismo dos Torreões vai acolher\, de 22 de outubr
- o a 15 de novembro\, a exposição de pintura “Gesto de esperança”\, 
- de Paulo Silva.\n\nTytuł i opis wydarzenia po portugalsku\, tak jak opubl
- ikowała je gmina.\n\nWięcej informacji: https://www.cm-pvarzim.pt/evento
- s/exposicao-de-pintura-gesto-de-esperanca/
-LAST-MODIFIED:20261022T081718Z
-LOCATION:Posto de Turismo dos Torreões
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-pintura-gesto-de-espera
- nca/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:FIMPV+
 DTSTART;VALUE=DATE:20261024
 DTEND;VALUE=DATE:20270531
@@ -192,28 +173,6 @@ LOCATION:Póvoa de Varzim
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/xiii-encontro-de-musica-coral-da-pov
  oa-de-varzim/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cinema "Santo António\, o Casamenteiro de Lisboa": nova sessão
-DTSTART:20261115T160000Z
-DTEND:20261115T180000Z
-DTSTAMP:20261029T103835Z
-UID:Y2luZW1hLXNhbnRvLWFudG9uaW8tby1jYXNhbWVudGVpcm8tZGUtbGlzYm9hLTJ8MjAyNi
- 0xMC0yMSAwODozMjo1NQ==@agenda.cm-pvarzim.pt
-CATEGORIES:Kultura,Kino
-DESCRIPTION:No dia 15 de novembro\, às 16h00\, será exibida\, no Cine-Te
- atro Garrett\, nova sessão do filme "Santo António\, o Casamenteiro de L
- isboa".\n\nBilety i zapisy (po portugalsku):\nEntradas: Os bilhetes custam
-  3\,50€ e estão à venda na BOL e no Cine-Teatro Garrett.\nBilety: http
- s://www.bol.pt/Projecto/EntidadesAderentes/3289-cine_teatro_garrett\n\nTyt
- uł i opis wydarzenia po portugalsku\, tak jak opublikowała je gmina.\n\n
- Więcej informacji: https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio
- -o-casamenteiro-de-lisboa-2/
-LAST-MODIFIED:20261029T103835Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-santo-antonio-o-casamenteiro-
- de-lisboa-2/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Artes e Ofícios: Encontro com Pedro Nuno Nero Luis

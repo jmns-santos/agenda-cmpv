@@ -13,25 +13,6 @@ X-APPLE-CALENDAR-COLOR:#8a7300
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Exposição de pintura "Gesto de esperança"
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261116
-DTSTAMP:20261022T081718Z
-UID:ZXhwb3NpY2FvLWRlLXBpbnR1cmEtZ2VzdG8tZGUtZXNwZXJhbmNhfDIwMjYtMTAtMjIgMD
- g6MTc6MTc=@agenda.cm-pvarzim.pt
-CATEGORIES:文化,展览
-DESCRIPTION:O Posto de Turismo dos Torreões vai acolher\, de 22 de outubr
- o a 15 de novembro\, a exposição de pintura “Gesto de esperança”\, 
- de Paulo Silva.\n\n活动标题和说明为葡萄牙语，与市政府发
- 布的内容一致。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/e
- xposicao-de-pintura-gesto-de-esperanca/
-LAST-MODIFIED:20261022T081718Z
-LOCATION:Posto de Turismo dos Torreões
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/exposicao-de-pintura-gesto-de-espera
- nca/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Exposição de fotografia "Onde eu estiver"
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261129
