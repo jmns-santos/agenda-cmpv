@@ -441,7 +441,7 @@ BEGIN:VEVENT
 SUMMARY:Póvoa de Varzim\, Cidade Natal
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20270110
-DTSTAMP:20261111T100151Z
+DTSTAMP:20261117T163451Z
 UID:cG92b2EtZGUtdmFyemltLWNpZGFkZS1uYXRhbHwyMDI2LTEwLTMwIDEyOjM2OjAy@agend
  a.cm-pvarzim.pt
 CATEGORIES:Kultur,Feste\, Messen und Märkte
@@ -452,7 +452,7 @@ DESCRIPTION:A magia da época mais bonita do ano está prestes a chegar. D
  Titel und Beschreibung der Veranstaltung auf Portugiesisch\, wie von der S
  tadt veröffentlicht.\n\nWeitere Informationen: https://www.cm-pvarzim.pt/
  eventos/povoa-de-varzim-cidade-natal/
-LAST-MODIFIED:20261111T100151Z
+LAST-MODIFIED:20261117T163451Z
 LOCATION:Póvoa de Varzim
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-cidade-natal/
@@ -544,7 +544,7 @@ BEGIN:VEVENT
 SUMMARY:Natal na Biblioteca
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261230
-DTSTAMP:20261030T120803Z
+DTSTAMP:20261117T163619Z
 UID:bmF0YWwtbmEtYmlibGlvdGVjYXwyMDI2LTEwLTMwIDEyOjA3OjM0@agenda.cm-pvarzim
  .pt
 CATEGORIES:Kultur,Feste\, Messen und Märkte
@@ -555,7 +555,7 @@ DESCRIPTION:A Magia do Natal chega à Biblioteca Municipal Rocha Peixoto c
  ativa\, do telefone 252 616 000.\n\nTitel und Beschreibung der Veranstaltu
  ng auf Portugiesisch\, wie von der Stadt veröffentlicht.\n\nWeitere Infor
  mationen: https://www.cm-pvarzim.pt/eventos/natal-na-biblioteca/
-LAST-MODIFIED:20261030T120803Z
+LAST-MODIFIED:20261117T163619Z
 LOCATION:Sala infantil e juvenil da Biblioteca Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/natal-na-biblioteca/

@@ -362,6 +362,28 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/gala-do-desporto-4/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:"Vamos plantar um Bosque!"
+DTSTART:20261121T100000Z
+DTEND:20261121T114500Z
+DTSTAMP:20261117T140423Z
+UID:dmFtb3MtcGxhbnRhci11bS1ib3NxdWV8MjAyNi0xMS0xNyAxNDowNDoyMg==@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Środowisko,Akcje i kampanie
+DESCRIPTION:O Centro do Clima e o Município da Póvoa de Varzim pretendem
+  assinalar o Dia da Floresta Autóctone\, através de uma ação de planta
+ ção que tem como objetivo envolver a comunidade local na valorização d
+ o património natural e na promoção da biodiversidade.\n\nBilety i zapis
+ y (po portugalsku):\nA participação é gratuita\, mediante inscrição p
+ révia através do QR Code do cartaz ou do formulário aqui disponibilizad
+ o.\nZapisy: https://forms.gle/SbJ3qhHXfj9NKs6H6\n\nTytuł i opis wydarzeni
+ a po portugalsku\, tak jak opublikowała je gmina.\n\nWięcej informacji: 
+ https://www.cm-pvarzim.pt/eventos/vamos-plantar-um-bosque/
+LAST-MODIFIED:20261117T140423Z
+LOCATION:Junto à Via B
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/vamos-plantar-um-bosque/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Apresentação do livro "O extremo afiado do espelho"
 DTSTART:20261121T160000Z
 DTEND:20261121T180000Z
@@ -648,7 +670,7 @@ BEGIN:VEVENT
 SUMMARY:Póvoa de Varzim\, Cidade Natal
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20270110
-DTSTAMP:20261111T100151Z
+DTSTAMP:20261117T163451Z
 UID:cG92b2EtZGUtdmFyemltLWNpZGFkZS1uYXRhbHwyMDI2LTEwLTMwIDEyOjM2OjAy@agend
  a.cm-pvarzim.pt
 CATEGORIES:Kultura,Święta\, targi i jarmarki
@@ -659,7 +681,7 @@ DESCRIPTION:A magia da época mais bonita do ano está prestes a chegar. D
  Tytuł i opis wydarzenia po portugalsku\, tak jak opublikowała je gmina.
  \n\nWięcej informacji: https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-
  cidade-natal/
-LAST-MODIFIED:20261111T100151Z
+LAST-MODIFIED:20261117T163451Z
 LOCATION:Póvoa de Varzim
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-cidade-natal/
@@ -784,7 +806,7 @@ BEGIN:VEVENT
 SUMMARY:Natal na Biblioteca
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261230
-DTSTAMP:20261030T120803Z
+DTSTAMP:20261117T163619Z
 UID:bmF0YWwtbmEtYmlibGlvdGVjYXwyMDI2LTEwLTMwIDEyOjA3OjM0@agenda.cm-pvarzim
  .pt
 CATEGORIES:Kultura,Święta\, targi i jarmarki
@@ -795,7 +817,7 @@ DESCRIPTION:A Magia do Natal chega à Biblioteca Municipal Rocha Peixoto c
  o telefone 252 616 000.\n\nTytuł i opis wydarzenia po portugalsku\, tak j
  ak opublikowała je gmina.\n\nWięcej informacji: https://www.cm-pvarzim.p
  t/eventos/natal-na-biblioteca/
-LAST-MODIFIED:20261030T120803Z
+LAST-MODIFIED:20261117T163619Z
 LOCATION:Sala infantil e juvenil da Biblioteca Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/natal-na-biblioteca/

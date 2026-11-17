@@ -39,7 +39,7 @@ BEGIN:VEVENT
 SUMMARY:Póvoa de Varzim\, Cidade Natal
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20270110
-DTSTAMP:20261111T100151Z
+DTSTAMP:20261117T163451Z
 UID:cG92b2EtZGUtdmFyemltLWNpZGFkZS1uYXRhbHwyMDI2LTEwLTMwIDEyOjM2OjAy@agend
  a.cm-pvarzim.pt
 CATEGORIES:Cultuur,Feesten\, beurzen en markten
@@ -50,7 +50,7 @@ DESCRIPTION:A magia da época mais bonita do ano está prestes a chegar. D
  Titel en beschrijving van het evenement in het Portugees\, zoals gepublice
  erd door de gemeente.\n\nMeer informatie: https://www.cm-pvarzim.pt/evento
  s/povoa-de-varzim-cidade-natal/
-LAST-MODIFIED:20261111T100151Z
+LAST-MODIFIED:20261117T163451Z
 LOCATION:Póvoa de Varzim
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-cidade-natal/
@@ -78,7 +78,7 @@ BEGIN:VEVENT
 SUMMARY:Natal na Biblioteca
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261230
-DTSTAMP:20261030T120803Z
+DTSTAMP:20261117T163619Z
 UID:bmF0YWwtbmEtYmlibGlvdGVjYXwyMDI2LTEwLTMwIDEyOjA3OjM0@agenda.cm-pvarzim
  .pt
 CATEGORIES:Cultuur,Feesten\, beurzen en markten
@@ -89,7 +89,7 @@ DESCRIPTION:A Magia do Natal chega à Biblioteca Municipal Rocha Peixoto c
  rnativa\, do telefone 252 616 000.\n\nTitel en beschrijving van het evenem
  ent in het Portugees\, zoals gepubliceerd door de gemeente.\n\nMeer inform
  atie: https://www.cm-pvarzim.pt/eventos/natal-na-biblioteca/
-LAST-MODIFIED:20261030T120803Z
+LAST-MODIFIED:20261117T163619Z
 LOCATION:Sala infantil e juvenil da Biblioteca Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/natal-na-biblioteca/
