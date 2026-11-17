@@ -418,7 +418,7 @@ BEGIN:VEVENT
 SUMMARY:Póvoa Conto a Conto
 DTSTART:20261128T151500Z
 DTEND:20261128T170000Z
-DTSTAMP:20261026T103527Z
+DTSTAMP:20261117T104241Z
 UID:cG92b2EtY29udG8tYS1jb250by01fDIwMjYtMTAtMjYgMTA6MzU6MjY=@agenda.cm-pva
  rzim.pt
 CATEGORIES:文化,文学
@@ -432,7 +432,7 @@ DESCRIPTION:A Ethos\, Pathos\, Logos — Associação e a Biblioteca Munic
  \n\nイベントのタイトルと説明は、市が公開しているポ
  ルトガル語のままです。\n\n詳細: https://www.cm-pvarzim.pt/eve
  ntos/povoa-conto-a-conto-5/
-LAST-MODIFIED:20261026T103527Z
+LAST-MODIFIED:20261117T104241Z
 LOCATION:Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/povoa-conto-a-conto-5/
@@ -516,6 +516,29 @@ LAST-MODIFIED:20261029T101919Z
 LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/deixem-o-pimba-em-paz-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro "Nós"
+DTSTART:20261204T213000Z
+DTEND:20261205T233000Z
+DTSTAMP:20261117T111729Z
+UID:dGVhdHJvLW5vc3wyMDI2LTExLTE3IDExOjE3OjI4@agenda.cm-pvarzim.pt
+CATEGORIES:文化,演劇
+DESCRIPTION:Nos dias 4 e 5 de dezembro\, às 21h30\, será apresentada\, n
+ o Cine-Teatro Garrett\, a peça "Nós"\, pela Companhia Certa.\n\nチケ
+ ット・申し込み（ポルトガル語）：\nAs entradas custam 7€
+ \, com desconto para estudantes\, reformados ou aposentados\, menores de 3
+ 0 anos e maiores de 65 anos\, desempregados\, pessoas com incapacidade ou 
+ deficiência e surdos\, grupo de 8 pessoas ou mais\, famílias numerosas (
+ 5 pessoas ou mais): 5€.\nPara sócios e portadores do Cartão de Amigo d
+ a Varazim e Associados da Acapo: 3\,50€.\nOs bilhetes estão à venda no
+  Cine-Teatro Garrett\, BOL\, CTT\, FNAC\, WORTEN.\n\nイベントのタイ
+ トルと説明は、市が公開しているポルトガル語のまま
+ です。\n\n詳細: https://www.cm-pvarzim.pt/eventos/teatro-nos/
+LAST-MODIFIED:20261117T111729Z
+LOCATION:Cine-Teatro
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-nos/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Natal na Biblioteca
@@ -742,6 +765,25 @@ LAST-MODIFIED:20261116T153632Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-o-gato-do-chapeu/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Espetáculo de dança "Behind the Mirror"
+DTSTART:20261220T210000Z
+DTEND:20261220T224500Z
+DTSTAMP:20261117T110047Z
+UID:ZXNwZXRhY3Vsby1kZS1kYW5jYS1iZWhpbmQtdGhlLW1pcnJvcnwyMDI2LTExLTE3IDExOj
+ AwOjE4@agenda.cm-pvarzim.pt
+CATEGORIES:文化,ショー
+DESCRIPTION:A AM Dance Studio leva a cena "Behind the Mirror"\, no dia 20 
+ dezembro\, às 21h00\, no Pavilhão Municipal.\n\nイベントのタイト
+ ルと説明は、市が公開しているポルトガル語のままで
+ す。\n\n詳細: https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-be
+ hind-the-mirror/
+LAST-MODIFIED:20261117T110047Z
+LOCATION:Pavilhão Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-behind-the-mirro
+ r/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Festa m80

@@ -288,6 +288,43 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/sabados-a-jogar-na-biblioteca-20/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:"Dá-te Férias! Natal 2026"
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261223
+DTSTAMP:20261117T105125Z
+UID:ZGEtdGUtZmVyaWFzLW5hdGFsLTIwMjZ8MjAyNi0xMS0xNyAxMDo1MToyNA==@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Citoyenneté,Ateliers et activités
+DESCRIPTION:A Casa da Juventude preparou nova edição de Natal do program
+ a “Dá-te Férias!”\, destinado a jovens do concelho\, dos 8 aos 14 an
+ os\, entre os dias 16 e 22 de dezembro.\n\nBillets et inscriptions (en por
+ tugais) :\nPode consultar as normas da atividade e o programa pedagógico 
+ no portal municipal\, onde estão também disponíveis as fichas de inscri
+ ção para os escalões infantil e juvenil.\nOs interessados devem imprimi
+ r\, preencher e assinar as respetivas fichas e entregar as mesmas na Casa 
+ da Juventude entre os dias 23 e 27 de novembro\, apresentando-se com os do
+ cumentos solicitados\, para que a inscrição possa ser validada pelos ser
+ viços.\nDestinada exclusivamente aos residentes no concelho\, mediante ap
+ resentação do comprovativo de morada\, a inscrição deverá ser feita o
+ brigatoriamente por encarregado de educação\, ou terceiro devidamente id
+ entificado e autorizado\, e é condicional à análise dos serviços e à 
+ presença obrigatória do encarregado de educação…\nInscription: https
+ ://www.cm-pvarzim.pt/territorio/juventude/casa-da-juventude/atividade/prog
+ ramacao-de-ferias/da-te-ferias/da-te-ferias-natal-2026/normas-da-te-ferias
+ -2/\nInscription: https://www.cm-pvarzim.pt/territorio/juventude/casa-da-j
+ uventude/atividade/programacao-de-ferias/da-te-ferias/da-te-ferias-natal-2
+ 026/proj-pedagogico-da-teferias_cj/\nInscription: https://www.cm-pvarzim.p
+ t/territorio/juventude/casa-da-juventude/atividade/programacao-de-ferias/d
+ a-te-ferias/da-te-ferias-natal-2026/1-ficha-de-inscricao-infantil/\n\nTitr
+ e et description de l'événement en portugais\, tels que publiés par la 
+ municipalité.\n\nPlus d'informations: https://www.cm-pvarzim.pt/eventos/d
+ a-te-ferias-natal-2026/
+LAST-MODIFIED:20261117T105125Z
+LOCATION:Casa da Juventude
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/da-te-ferias-natal-2026/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Oficina criativa “Árvore de Natal para decoração”
 DTSTART:20261217T183000Z
 DTEND:20261217T203000Z

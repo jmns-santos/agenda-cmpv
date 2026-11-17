@@ -626,7 +626,7 @@ BEGIN:VEVENT
 SUMMARY:Póvoa Conto a Conto
 DTSTART:20261128T151500Z
 DTEND:20261128T170000Z
-DTSTAMP:20261026T103527Z
+DTSTAMP:20261117T104241Z
 UID:cG92b2EtY29udG8tYS1jb250by01fDIwMjYtMTAtMjYgMTA6MzU6MjY=@agenda.cm-pva
  rzim.pt
 CATEGORIES:Kultura,Literatura
@@ -639,7 +639,7 @@ DESCRIPTION:A Ethos\, Pathos\, Logos — Associação e a Biblioteca Munic
  616 000 ou presencialmente\, na Biblioteca Municipal.\n\nTytuł i opis wyd
  arzenia po portugalsku\, tak jak opublikowała je gmina.\n\nWięcej inform
  acji: https://www.cm-pvarzim.pt/eventos/povoa-conto-a-conto-5/
-LAST-MODIFIED:20261026T103527Z
+LAST-MODIFIED:20261117T104241Z
 LOCATION:Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/povoa-conto-a-conto-5/
@@ -756,6 +756,29 @@ LAST-MODIFIED:20261029T101919Z
 LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/deixem-o-pimba-em-paz-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teatro "Nós"
+DTSTART:20261204T213000Z
+DTEND:20261205T233000Z
+DTSTAMP:20261117T111729Z
+UID:dGVhdHJvLW5vc3wyMDI2LTExLTE3IDExOjE3OjI4@agenda.cm-pvarzim.pt
+CATEGORIES:Kultura,Teatr
+DESCRIPTION:Nos dias 4 e 5 de dezembro\, às 21h30\, será apresentada\, n
+ o Cine-Teatro Garrett\, a peça "Nós"\, pela Companhia Certa.\n\nBilety i
+  zapisy (po portugalsku):\nAs entradas custam 7€\, com desconto para est
+ udantes\, reformados ou aposentados\, menores de 30 anos e maiores de 65 a
+ nos\, desempregados\, pessoas com incapacidade ou deficiência e surdos\, 
+ grupo de 8 pessoas ou mais\, famílias numerosas (5 pessoas ou mais): 5€
+ .\nPara sócios e portadores do Cartão de Amigo da Varazim e Associados d
+ a Acapo: 3\,50€.\nOs bilhetes estão à venda no Cine-Teatro Garrett\, B
+ OL\, CTT\, FNAC\, WORTEN.\n\nTytuł i opis wydarzenia po portugalsku\, tak
+  jak opublikowała je gmina.\n\nWięcej informacji: https://www.cm-pvarzim
+ .pt/eventos/teatro-nos/
+LAST-MODIFIED:20261117T111729Z
+LOCATION:Cine-Teatro
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-nos/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Natal na Biblioteca
@@ -1026,6 +1049,42 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cais-de-leitura-22/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:"Dá-te Férias! Natal 2026"
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261223
+DTSTAMP:20261117T105125Z
+UID:ZGEtdGUtZmVyaWFzLW5hdGFsLTIwMjZ8MjAyNi0xMS0xNyAxMDo1MToyNA==@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Obywatelstwo,Warsztaty i zajęcia
+DESCRIPTION:A Casa da Juventude preparou nova edição de Natal do program
+ a “Dá-te Férias!”\, destinado a jovens do concelho\, dos 8 aos 14 an
+ os\, entre os dias 16 e 22 de dezembro.\n\nBilety i zapisy (po portugalsku
+ ):\nPode consultar as normas da atividade e o programa pedagógico no port
+ al municipal\, onde estão também disponíveis as fichas de inscrição p
+ ara os escalões infantil e juvenil.\nOs interessados devem imprimir\, pre
+ encher e assinar as respetivas fichas e entregar as mesmas na Casa da Juve
+ ntude entre os dias 23 e 27 de novembro\, apresentando-se com os documento
+ s solicitados\, para que a inscrição possa ser validada pelos serviços.
+ \nDestinada exclusivamente aos residentes no concelho\, mediante apresenta
+ ção do comprovativo de morada\, a inscrição deverá ser feita obrigato
+ riamente por encarregado de educação\, ou terceiro devidamente identific
+ ado e autorizado\, e é condicional à análise dos serviços e à presen
+ ça obrigatória do encarregado de educação…\nZapisy: https://www.cm-p
+ varzim.pt/territorio/juventude/casa-da-juventude/atividade/programacao-de-
+ ferias/da-te-ferias/da-te-ferias-natal-2026/normas-da-te-ferias-2/\nZapisy
+ : https://www.cm-pvarzim.pt/territorio/juventude/casa-da-juventude/ativida
+ de/programacao-de-ferias/da-te-ferias/da-te-ferias-natal-2026/proj-pedagog
+ ico-da-teferias_cj/\nZapisy: https://www.cm-pvarzim.pt/territorio/juventud
+ e/casa-da-juventude/atividade/programacao-de-ferias/da-te-ferias/da-te-fer
+ ias-natal-2026/1-ficha-de-inscricao-infantil/\n\nTytuł i opis wydarzenia 
+ po portugalsku\, tak jak opublikowała je gmina.\n\nWięcej informacji: ht
+ tps://www.cm-pvarzim.pt/eventos/da-te-ferias-natal-2026/
+LAST-MODIFIED:20261117T105125Z
+LOCATION:Casa da Juventude
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/da-te-ferias-natal-2026/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"No meu tempo dou-te um conto"
 DTSTART:20261216T100000Z
 DTEND:20261216T120000Z
@@ -1143,6 +1202,24 @@ DESCRIPTION:Tytuł i opis wydarzenia po portugalsku\, tak jak opublikował
 LAST-MODIFIED:20260810T193512Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Espetáculo de dança "Behind the Mirror"
+DTSTART:20261220T210000Z
+DTEND:20261220T224500Z
+DTSTAMP:20261117T110047Z
+UID:ZXNwZXRhY3Vsby1kZS1kYW5jYS1iZWhpbmQtdGhlLW1pcnJvcnwyMDI2LTExLTE3IDExOj
+ AwOjE4@agenda.cm-pvarzim.pt
+CATEGORIES:Kultura,Widowiska
+DESCRIPTION:A AM Dance Studio leva a cena "Behind the Mirror"\, no dia 20 
+ dezembro\, às 21h00\, no Pavilhão Municipal.\n\nTytuł i opis wydarzenia
+  po portugalsku\, tak jak opublikowała je gmina.\n\nWięcej informacji: h
+ ttps://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-behind-the-mirror/
+LAST-MODIFIED:20261117T110047Z
+LOCATION:Pavilhão Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-behind-the-mirro
+ r/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Futebol - Vianense x Varzim

@@ -68,4 +68,21 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-2359-falta-um-mi
  nuto-para-o-natal/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Espetáculo de dança "Behind the Mirror"
+DTSTART:20261220T210000Z
+DTEND:20261220T224500Z
+DTSTAMP:20261117T110047Z
+UID:ZXNwZXRhY3Vsby1kZS1kYW5jYS1iZWhpbmQtdGhlLW1pcnJvcnwyMDI2LTExLTE3IDExOj
+ AwOjE4@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Espetáculos
+DESCRIPTION:A AM Dance Studio leva a cena "Behind the Mirror"\, no dia 20 
+ dezembro\, às 21h00\, no Pavilhão Municipal.\n\nMais informação: https
+ ://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-behind-the-mirror/
+LAST-MODIFIED:20261117T110047Z
+LOCATION:Pavilhão Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-behind-the-mirro
+ r/
+END:VEVENT
 END:VCALENDAR

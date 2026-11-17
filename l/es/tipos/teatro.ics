@@ -35,6 +35,29 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/teatro-quando-menos-se-espera/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Teatro "Nós"
+DTSTART:20261204T213000Z
+DTEND:20261205T233000Z
+DTSTAMP:20261117T111729Z
+UID:dGVhdHJvLW5vc3wyMDI2LTExLTE3IDExOjE3OjI4@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Teatro
+DESCRIPTION:Nos dias 4 e 5 de dezembro\, às 21h30\, será apresentada\, n
+ o Cine-Teatro Garrett\, a peça "Nós"\, pela Companhia Certa.\n\nEntradas
+  e inscripciones (en portugués):\nAs entradas custam 7€\, com desconto 
+ para estudantes\, reformados ou aposentados\, menores de 30 anos e maiores
+  de 65 anos\, desempregados\, pessoas com incapacidade ou deficiência e s
+ urdos\, grupo de 8 pessoas ou mais\, famílias numerosas (5 pessoas ou mai
+ s): 5€.\nPara sócios e portadores do Cartão de Amigo da Varazim e Asso
+ ciados da Acapo: 3\,50€.\nOs bilhetes estão à venda no Cine-Teatro Gar
+ rett\, BOL\, CTT\, FNAC\, WORTEN.\n\nTítulo y descripción del evento en 
+ portugués\, tal como los publica el municipio.\n\nMás información: http
+ s://www.cm-pvarzim.pt/eventos/teatro-nos/
+LAST-MODIFIED:20261117T111729Z
+LOCATION:Cine-Teatro
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/teatro-nos/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Teatro para bebés “A Árvore das Chupetas”
 DTSTART:20261205T110000Z
 DTEND:20261205T123000Z
