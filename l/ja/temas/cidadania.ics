@@ -159,6 +159,24 @@ URL:https://www.cm-pvarzim.pt/eventos/ecras-e-videojogos-o-que-os-pais-tem
  -mesmo-que-saber/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Dia Internacional do Voluntariado
+DTSTART:20261205T183000Z
+DTEND:20261205T201500Z
+DTSTAMP:20261118T142052Z
+UID:ZGlhLWludGVybmFjaW9uYWwtZG8tdm9sdW50YXJpYWRvLTV8MjAyNi0xMS0xOCAxNDoyMD
+ o1MQ==@agenda.cm-pvarzim.pt
+CATEGORIES:市民生活,記念行事・式典
+DESCRIPTION:O Município da Póvoa de Varzim vai assinalar o Dia Internaci
+ onal do Voluntariado a 5 de dezembro com uma cerimónia\, às 18h30\, no D
+ iana Bar.\n\nイベントのタイトルと説明は、市が公開して
+ いるポルトガル語のままです。\n\n詳細: https://www.cm-pvarz
+ im.pt/eventos/dia-internacional-do-voluntariado-5/
+LAST-MODIFIED:20261118T142052Z
+LOCATION:Diana Bar
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/dia-internacional-do-voluntariado-5/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"O impacto dos hábitos de sono no desenvolvimento\, na saúde e n
  o sucesso escolar das crianças e jovens"
 DTSTART:20261210T181500Z

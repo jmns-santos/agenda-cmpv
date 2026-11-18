@@ -867,6 +867,24 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/historias-com-yoga/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Dia Internacional do Voluntariado
+DTSTART:20261205T183000Z
+DTEND:20261205T201500Z
+DTSTAMP:20261118T142052Z
+UID:ZGlhLWludGVybmFjaW9uYWwtZG8tdm9sdW50YXJpYWRvLTV8MjAyNi0xMS0xOCAxNDoyMD
+ o1MQ==@agenda.cm-pvarzim.pt
+CATEGORIES:公民生活,纪念与典礼
+DESCRIPTION:O Município da Póvoa de Varzim vai assinalar o Dia Internaci
+ onal do Voluntariado a 5 de dezembro com uma cerimónia\, às 18h30\, no D
+ iana Bar.\n\n活动标题和说明为葡萄牙语，与市政府发布的
+ 内容一致。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/dia-int
+ ernacional-do-voluntariado-5/
+LAST-MODIFIED:20261118T142052Z
+LOCATION:Diana Bar
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/dia-internacional-do-voluntariado-5/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cinema "The Hunger Games: Amanhecer na Ceifa"
 DTSTART:20261206T213000Z
 DTEND:20261206T230000Z
@@ -886,6 +904,25 @@ LAST-MODIFIED:20261116T152835Z
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-the-hunger-games-amanhecer-na
  -ceifa/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia da Camisola Poveira
+DTSTART:20261208T150000Z
+DTEND:20261208T183000Z
+DTSTAMP:20261118T141044Z
+UID:ZGlhLWRhLWNhbWlzb2xhLXBvdmVpcmEtM3wyMDI2LTExLTE4IDE0OjEwOjQ0@agenda.cm
+ -pvarzim.pt
+CATEGORIES:文化,表演
+DESCRIPTION:Em 2021\, o Município da Póvoa de Varzim instituiu 8 de deze
+ mbro como o Dia da Camisola Poveira. Desde então\, todos os poveiros são
+  convidados a vestir a sua Camisola e celebrar a nossa cultura e tradiçã
+ o.\n\n活动标题和说明为葡萄牙语，与市政府发布的内容
+ 一致。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/dia-da-camiso
+ la-poveira-3/
+LAST-MODIFIED:20261118T141044Z
+LOCATION:Partida: Praça do Almada
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/dia-da-camisola-poveira-3/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:"O impacto dos hábitos de sono no desenvolvimento\, na saúde e n

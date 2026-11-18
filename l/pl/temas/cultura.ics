@@ -613,6 +613,25 @@ URL:https://www.cm-pvarzim.pt/eventos/cinema-the-hunger-games-amanhecer-na
  -ceifa/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Dia da Camisola Poveira
+DTSTART:20261208T150000Z
+DTEND:20261208T183000Z
+DTSTAMP:20261118T141044Z
+UID:ZGlhLWRhLWNhbWlzb2xhLXBvdmVpcmEtM3wyMDI2LTExLTE4IDE0OjEwOjQ0@agenda.cm
+ -pvarzim.pt
+CATEGORIES:Kultura,Widowiska
+DESCRIPTION:Em 2021\, o Município da Póvoa de Varzim instituiu 8 de deze
+ mbro como o Dia da Camisola Poveira. Desde então\, todos os poveiros são
+  convidados a vestir a sua Camisola e celebrar a nossa cultura e tradiçã
+ o.\n\nTytuł i opis wydarzenia po portugalsku\, tak jak opublikowała je g
+ mina.\n\nWięcej informacji: https://www.cm-pvarzim.pt/eventos/dia-da-cami
+ sola-poveira-3/
+LAST-MODIFIED:20261118T141044Z
+LOCATION:Partida: Praça do Almada
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/dia-da-camisola-poveira-3/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Clube de Leituras Marítimas "Livros de Marear"
 DTSTART:20261212T150000Z
 DTEND:20261212T174500Z
