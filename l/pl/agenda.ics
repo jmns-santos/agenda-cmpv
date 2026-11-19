@@ -624,7 +624,7 @@ BEGIN:VEVENT
 SUMMARY:Póvoa de Varzim\, Cidade Natal
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20270110
-DTSTAMP:20261119T120620Z
+DTSTAMP:20261119T165206Z
 UID:cG92b2EtZGUtdmFyemltLWNpZGFkZS1uYXRhbHwyMDI2LTEwLTMwIDEyOjM2OjAy@agend
  a.cm-pvarzim.pt
 CATEGORIES:Kultura,Święta\, targi i jarmarki
@@ -635,7 +635,7 @@ DESCRIPTION:A magia da época mais bonita do ano está prestes a chegar. D
  Tytuł i opis wydarzenia po portugalsku\, tak jak opublikowała je gmina.
  \n\nWięcej informacji: https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-
  cidade-natal/
-LAST-MODIFIED:20261119T120620Z
+LAST-MODIFIED:20261119T165206Z
 LOCATION:Póvoa de Varzim
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-cidade-natal/
@@ -734,6 +734,27 @@ DESCRIPTION:Tytuł i opis wydarzenia po portugalsku\, tak jak opublikował
 LAST-MODIFIED:20261111T031815Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Comemorações do Dia Internacional da Pessoas com Deficiência
+DTSTART:20261204T210000Z
+DTEND:20261204T223000Z
+DTSTAMP:20261119T154809Z
+UID:Y29tZW1vcmFjb2VzLWRvLWRpYS1pbnRlcm5hY2lvbmFsLWRhLXBlc3NvYXMtY29tLWRlZm
+ ljaWVuY2lhfDIwMjYtMTEtMTkgMTU6NDg6MDg=@agenda.cm-pvarzim.pt
+CATEGORIES:Obywatelstwo,Obchody i uroczystości
+DESCRIPTION:O Município da Póvoa de Varzim associa-se à APIC – Associ
+ ação para a Promoção da Inclusão e Cultura na promoção de uma refle
+ xão sobre a autonomia\, a mobilidade e a inclusão das pessoas com defici
+ ência motora\, no dia 4 de dezembro\, às 21h00.\n\nTytuł i opis wydarze
+ nia po portugalsku\, tak jak opublikowała je gmina.\n\nWięcej informacji
+ : https://www.cm-pvarzim.pt/eventos/comemoracoes-do-dia-internacional-da-p
+ essoas-com-deficiencia/
+LAST-MODIFIED:20261119T154809Z
+LOCATION:Centro Ocupacional da Lapa
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/comemoracoes-do-dia-internacional-da
+ -pessoas-com-deficiencia/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:"Deixem o Pimba em Paz"

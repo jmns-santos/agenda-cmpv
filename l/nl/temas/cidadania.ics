@@ -179,6 +179,27 @@ URL:https://www.cm-pvarzim.pt/eventos/ecras-e-videojogos-o-que-os-pais-tem
  -mesmo-que-saber/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Comemorações do Dia Internacional da Pessoas com Deficiência
+DTSTART:20261204T210000Z
+DTEND:20261204T223000Z
+DTSTAMP:20261119T154809Z
+UID:Y29tZW1vcmFjb2VzLWRvLWRpYS1pbnRlcm5hY2lvbmFsLWRhLXBlc3NvYXMtY29tLWRlZm
+ ljaWVuY2lhfDIwMjYtMTEtMTkgMTU6NDg6MDg=@agenda.cm-pvarzim.pt
+CATEGORIES:Burgerschap,Herdenkingen en ceremonies
+DESCRIPTION:O Município da Póvoa de Varzim associa-se à APIC – Associ
+ ação para a Promoção da Inclusão e Cultura na promoção de uma refle
+ xão sobre a autonomia\, a mobilidade e a inclusão das pessoas com defici
+ ência motora\, no dia 4 de dezembro\, às 21h00.\n\nTitel en beschrijving
+  van het evenement in het Portugees\, zoals gepubliceerd door de gemeente.
+ \n\nMeer informatie: https://www.cm-pvarzim.pt/eventos/comemoracoes-do-dia
+ -internacional-da-pessoas-com-deficiencia/
+LAST-MODIFIED:20261119T154809Z
+LOCATION:Centro Ocupacional da Lapa
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/comemoracoes-do-dia-internacional-da
+ -pessoas-com-deficiencia/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Dia Internacional do Voluntariado
 DTSTART:20261205T183000Z
 DTEND:20261205T201500Z
