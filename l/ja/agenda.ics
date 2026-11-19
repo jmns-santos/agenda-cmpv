@@ -130,29 +130,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/curso-de-paleografia/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Apresentação do livro "O chapéu\, o olho\, a cadeira e a sereia
- : quatro breves histórias"
-DTSTART:20261107T160000Z
-DTEND:20261206T183000Z
-DTSTAMP:20261021T135603Z
-UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tY2hhcGV1LW8tb2xoby1hLWNhZGVpcmEtZS1hLX
- NlcmVpYS1xdWF0cm8tYnJldmVzLWhpc3Rvcmlhc3wyMDI2LTEwLTIxIDEzOjU2OjAy@agenda.
- cm-pvarzim.pt
-CATEGORIES:文化,文学
-DESCRIPTION:A Biblioteca Municipal Rocha Peixoto irá acolher\, no dia 7 d
- e novembro\, às 16h00\, a sessão de apresentação do livro O chapéu\, 
- o olho\, a cadeira e a sereia: quatro breves histórias\, da autoria de Ja
- imemorto.\n\nイベントのタイトルと説明は、市が公開して
- いるポルトガル語のままです。\n\n詳細: https://www.cm-pvarz
- im.pt/eventos/apresentacao-do-livro-o-chapeu-o-olho-a-cadeira-e-a-sereia-q
- uatro-breves-historias/
-LAST-MODIFIED:20261021T135603Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olh
- o-a-cadeira-e-a-sereia-quatro-breves-historias/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Mostra de Fotografia da Biblioteca Municipal "ACERVO II"
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20270101
@@ -497,6 +474,27 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-o-pecado-mora-em-cima/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Dia de Santa Cecília
+DTSTART:20261123T190000Z
+DTEND:20261123T210000Z
+DTSTAMP:20261119T103346Z
+UID:ZGlhLWRlLXNhbnRhLWNlY2lsaWEtMnwyMDI2LTExLTE5IDEwOjMzOjQ1@agenda.cm-pva
+ rzim.pt
+CATEGORIES:市民生活,記念行事・式典
+DESCRIPTION:A Escola de Música da Póvoa de Varzim convida a comunidade a
+  celebrar o Dia de Santa Cecília\, a 23 de novembro\, a partir das 19h00
+ \, para uma cerimónia especial que assinala o talento\, a dedicação e o
+  percurso dos alunos da instituição.\n\nチケット・申し込み（
+ ポルトガル語）：\nA entrada é livre\, sujeita à lotação da sal
+ a.\n\nイベントのタイトルと説明は、市が公開している
+ ポルトガル語のままです。\n\n詳細: https://www.cm-pvarzim.pt/
+ eventos/dia-de-santa-cecilia-2/
+LAST-MODIFIED:20261119T103346Z
+LOCATION:Auditório Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/dia-de-santa-cecilia-2/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"Comunicação: dicas que facilitam a relação"
 DTSTART:20261124T183000Z
 DTEND:20261124T200000Z
@@ -643,7 +641,7 @@ BEGIN:VEVENT
 SUMMARY:Póvoa de Varzim\, Cidade Natal
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20270110
-DTSTAMP:20261117T163451Z
+DTSTAMP:20261119T120620Z
 UID:cG92b2EtZGUtdmFyemltLWNpZGFkZS1uYXRhbHwyMDI2LTEwLTMwIDEyOjM2OjAy@agend
  a.cm-pvarzim.pt
 CATEGORIES:文化,祭り・フェア・市場
@@ -654,7 +652,7 @@ DESCRIPTION:A magia da época mais bonita do ano está prestes a chegar. D
  イベントのタイトルと説明は、市が公開しているポル
  トガル語のままです。\n\n詳細: https://www.cm-pvarzim.pt/evento
  s/povoa-de-varzim-cidade-natal/
-LAST-MODIFIED:20261117T163451Z
+LAST-MODIFIED:20261119T120620Z
 LOCATION:Póvoa de Varzim
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-cidade-natal/
@@ -677,6 +675,28 @@ LAST-MODIFIED:20261102T155051Z
 LOCATION:Fortaleza de Nossa Senhora da Conceição
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/festas-da-imaculada-conceicao/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Festival MARé
+DTSTART:20261129T210000Z
+DTEND:20261129T234500Z
+DTSTAMP:20261119T093120Z
+UID:ZmVzdGl2YWwtbWFyZS01fDIwMjYtMTEtMTkgMDk6MzE6MTk=@agenda.cm-pvarzim.pt
+CATEGORIES:文化,祭り・フェア・市場
+DESCRIPTION:O Cine-Teatro Garrett volta a acolher o Festival MARé\, no di
+ a 29 de novembro\, celebrando a diversidade cultural e a música global.\n
+ \nチケット・申し込み（ポルトガル語）：\nAs entradas têm
+  o custo de 10\,00€ para a Sala Principal\, 6\,00€ para o espetáculo 
+ no Café-Concerto e 15\,00€ para o passe geral de acesso a todos os conc
+ ertos.\nDevem ser adquiridas no Cine-Teatro Garrett ou na bilheteira onlin
+ e BOL.\nチケット: https://www.bol.pt/Comprar/Cartoes/6858-9797-0-festi
+ val_mare_passe_geral-banze/\n\nイベントのタイトルと説明は、
+ 市が公開しているポルトガル語のままです。\n\n詳細: ht
+ tps://www.cm-pvarzim.pt/eventos/festival-mare-5/
+LAST-MODIFIED:20261119T093120Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/festival-mare-5/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Teatro "Quando Menos se Espera"
@@ -885,7 +905,7 @@ BEGIN:VEVENT
 SUMMARY:Cinema "The Hunger Games: Amanhecer na Ceifa"
 DTSTART:20261206T213000Z
 DTEND:20261206T230000Z
-DTSTAMP:20261116T152835Z
+DTSTAMP:20261119T095332Z
 UID:Y2luZW1hLXRoZS1odW5nZXItZ2FtZXMtYW1hbmhlY2VyLW5hLWNlaWZhfDIwMjYtMTEtMT
  YgMTQ6NDM6NDg=@agenda.cm-pvarzim.pt
 CATEGORIES:文化,映画
@@ -898,7 +918,8 @@ DESCRIPTION:No dia 6 de dezembro\, às 21h30\, será exibido\, no Cine-Tea
  、市が公開しているポルトガル語のままです。\n\n詳細:
   https://www.cm-pvarzim.pt/eventos/cinema-the-hunger-games-amanhecer-na-ce
  ifa/
-LAST-MODIFIED:20261116T152835Z
+LAST-MODIFIED:20261119T095332Z
+LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-the-hunger-games-amanhecer-na
  -ceifa/

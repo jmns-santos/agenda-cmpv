@@ -13,29 +13,6 @@ X-APPLE-CALENDAR-COLOR:#795548
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Apresentação do livro "O chapéu\, o olho\, a cadeira e a sereia
- : quatro breves histórias"
-DTSTART:20261107T160000Z
-DTEND:20261206T183000Z
-DTSTAMP:20261021T135603Z
-UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tY2hhcGV1LW8tb2xoby1hLWNhZGVpcmEtZS1hLX
- NlcmVpYS1xdWF0cm8tYnJldmVzLWhpc3Rvcmlhc3wyMDI2LTEwLTIxIDEzOjU2OjAy@agenda.
- cm-pvarzim.pt
-CATEGORIES:Cultuur,Literatuur
-DESCRIPTION:A Biblioteca Municipal Rocha Peixoto irá acolher\, no dia 7 d
- e novembro\, às 16h00\, a sessão de apresentação do livro O chapéu\, 
- o olho\, a cadeira e a sereia: quatro breves histórias\, da autoria de Ja
- imemorto.\n\nTitel en beschrijving van het evenement in het Portugees\, zo
- als gepubliceerd door de gemeente.\n\nMeer informatie: https://www.cm-pvar
- zim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olho-a-cadeira-e-a-sereia-
- quatro-breves-historias/
-LAST-MODIFIED:20261021T135603Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-chapeu-o-olh
- o-a-cadeira-e-a-sereia-quatro-breves-historias/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Apresentação do livro "O extremo afiado do espelho"
 DTSTART:20261121T160000Z
 DTEND:20261121T180000Z

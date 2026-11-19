@@ -98,7 +98,7 @@ BEGIN:VEVENT
 SUMMARY:Cinema "The Hunger Games: Amanhecer na Ceifa"
 DTSTART:20261206T213000Z
 DTEND:20261206T230000Z
-DTSTAMP:20261116T152835Z
+DTSTAMP:20261119T095332Z
 UID:Y2luZW1hLXRoZS1odW5nZXItZ2FtZXMtYW1hbmhlY2VyLW5hLWNlaWZhfDIwMjYtMTEtMT
  YgMTQ6NDM6NDg=@agenda.cm-pvarzim.pt
 CATEGORIES:文化,电影
@@ -110,7 +110,8 @@ DESCRIPTION:No dia 6 de dezembro\, às 21h30\, será exibido\, no Cine-Tea
  ett/\n\n活动标题和说明为葡萄牙语，与市政府发布的内容
  一致。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/cinema-the-hu
  nger-games-amanhecer-na-ceifa/
-LAST-MODIFIED:20261116T152835Z
+LAST-MODIFIED:20261119T095332Z
+LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-the-hunger-games-amanhecer-na
  -ceifa/
