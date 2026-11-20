@@ -35,6 +35,43 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/vamos-plantar-um-bosque/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Repair Café
+DTSTART:20261128T100000Z
+DTEND:20261128T123000Z
+DTSTAMP:20261120T114111Z
+UID:cmVwYWlyLWNhZmUtMnwyMDI2LTExLTIwIDExOjM4OjM5@agenda.cm-pvarzim.pt
+CATEGORIES:环境,工作坊与活动
+DESCRIPTION:No âmbito da Semana Europeia da Prevenção de Resíduos\, o 
+ Mercado Municipal da Póvoa de Varzim associa-se à LIPOR na iniciativa Re
+ pair Café.\n\n活动标题和说明为葡萄牙语，与市政府发布
+ 的内容一致。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/repa
+ ir-cafe-2/
+LAST-MODIFIED:20261120T114111Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/repair-cafe-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Workshop de Alimentação Sustentável: Desperdício Zero
+DTSTART:20261128T100000Z
+DTEND:20261128T123000Z
+DTSTAMP:20261120T114510Z
+UID:d29ya3Nob3AtZGUtYWxpbWVudGFjYW8tc3VzdGVudGF2ZWwtZGVzcGVyZGljaW8temVyb3
+ wyMDI2LTExLTIwIDExOjQ1OjA5@agenda.cm-pvarzim.pt
+CATEGORIES:环境,工作坊与活动
+DESCRIPTION:No âmbito da Semana Europeia da Prevenção de Resíduos\, o 
+ Mercado Municipal da Póvoa de Varzim associa-se à LIPOR para uma manhã 
+ dedicada à sustentabilidade\, à reutilização e ao combate ao desperdí
+ cio.\n\n活动标题和说明为葡萄牙语，与市政府发布的内容
+ 一致。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/workshop-de-a
+ limentacao-sustentavel-desperdicio-zero/
+LAST-MODIFIED:20261120T114510Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/workshop-de-alimentacao-sustentavel-
+ desperdicio-zero/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Oficina criativa “Árvore de Natal para decoração”
 DTSTART:20261217T183000Z
 DTEND:20261217T203000Z

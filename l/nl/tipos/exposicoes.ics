@@ -53,4 +53,22 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/mostra-de-fotografia-da-biblioteca-m
  unicipal-acervo-ii/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Exposição “25 anos & 25 documentos”
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20270130
+DTSTAMP:20261120T145313Z
+UID:ZXhwb3NpY2FvLTI1LWFub3MtMjUtZG9jdW1lbnRvc3wyMDI2LTExLTIwIDE0OjUzOjEy@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultuur,Tentoonstellingen
+DESCRIPTION:De 16 de dezembro a 29 de janeiro de 2027\, o Arquivo Municipa
+ l apresenta a exposição "25 anos & 25 documentos.\n\nTitel en beschrijvi
+ ng van het evenement in het Portugees\, zoals gepubliceerd door de gemeent
+ e.\n\nMeer informatie: https://www.cm-pvarzim.pt/eventos/exposicao-25-anos
+ -25-documentos/
+LAST-MODIFIED:20261120T145313Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-25-anos-25-documentos/
+END:VEVENT
 END:VCALENDAR

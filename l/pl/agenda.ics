@@ -502,6 +502,43 @@ URL:https://www.cm-pvarzim.pt/eventos/cinema-adolescencia-sexo-e-morte-no-
  acampamento-miasma/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Repair Café
+DTSTART:20261128T100000Z
+DTEND:20261128T123000Z
+DTSTAMP:20261120T114111Z
+UID:cmVwYWlyLWNhZmUtMnwyMDI2LTExLTIwIDExOjM4OjM5@agenda.cm-pvarzim.pt
+CATEGORIES:Środowisko,Warsztaty i zajęcia
+DESCRIPTION:No âmbito da Semana Europeia da Prevenção de Resíduos\, o 
+ Mercado Municipal da Póvoa de Varzim associa-se à LIPOR na iniciativa Re
+ pair Café.\n\nTytuł i opis wydarzenia po portugalsku\, tak jak opublikow
+ ała je gmina.\n\nWięcej informacji: https://www.cm-pvarzim.pt/eventos/re
+ pair-cafe-2/
+LAST-MODIFIED:20261120T114111Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/repair-cafe-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Workshop de Alimentação Sustentável: Desperdício Zero
+DTSTART:20261128T100000Z
+DTEND:20261128T123000Z
+DTSTAMP:20261120T114510Z
+UID:d29ya3Nob3AtZGUtYWxpbWVudGFjYW8tc3VzdGVudGF2ZWwtZGVzcGVyZGljaW8temVyb3
+ wyMDI2LTExLTIwIDExOjQ1OjA5@agenda.cm-pvarzim.pt
+CATEGORIES:Środowisko,Warsztaty i zajęcia
+DESCRIPTION:No âmbito da Semana Europeia da Prevenção de Resíduos\, o 
+ Mercado Municipal da Póvoa de Varzim associa-se à LIPOR para uma manhã 
+ dedicada à sustentabilidade\, à reutilização e ao combate ao desperdí
+ cio.\n\nTytuł i opis wydarzenia po portugalsku\, tak jak opublikowała je
+  gmina.\n\nWięcej informacji: https://www.cm-pvarzim.pt/eventos/workshop-
+ de-alimentacao-sustentavel-desperdicio-zero/
+LAST-MODIFIED:20261120T114510Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/workshop-de-alimentacao-sustentavel-
+ desperdicio-zero/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Ciclo Lavorada Gente: "Um prefácio à Camisola Poveira: Represent
  ação das camisolas no século XIX"
 DTSTART:20261128T150000Z
@@ -565,7 +602,7 @@ BEGIN:VEVENT
 SUMMARY:Póvoa de Varzim\, Cidade Natal
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20270110
-DTSTAMP:20261119T165206Z
+DTSTAMP:20261120T152240Z
 UID:cG92b2EtZGUtdmFyemltLWNpZGFkZS1uYXRhbHwyMDI2LTEwLTMwIDEyOjM2OjAy@agend
  a.cm-pvarzim.pt
 CATEGORIES:Kultura,Święta\, targi i jarmarki
@@ -576,7 +613,7 @@ DESCRIPTION:A magia da época mais bonita do ano está prestes a chegar. D
  Tytuł i opis wydarzenia po portugalsku\, tak jak opublikowała je gmina.
  \n\nWięcej informacji: https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-
  cidade-natal/
-LAST-MODIFIED:20261119T165206Z
+LAST-MODIFIED:20261120T152240Z
 LOCATION:Póvoa de Varzim
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/povoa-de-varzim-cidade-natal/
@@ -721,7 +758,7 @@ BEGIN:VEVENT
 SUMMARY:Teatro "Nós"
 DTSTART:20261204T213000Z
 DTEND:20261205T233000Z
-DTSTAMP:20261117T111729Z
+DTSTAMP:20261120T154203Z
 UID:dGVhdHJvLW5vc3wyMDI2LTExLTE3IDExOjE3OjI4@agenda.cm-pvarzim.pt
 CATEGORIES:Kultura,Teatr
 DESCRIPTION:Nos dias 4 e 5 de dezembro\, às 21h30\, será apresentada\, n
@@ -735,7 +772,7 @@ DESCRIPTION:Nos dias 4 e 5 de dezembro\, às 21h30\, será apresentada\, n
  OL\, CTT\, FNAC\, WORTEN.\n\nTytuł i opis wydarzenia po portugalsku\, tak
   jak opublikowała je gmina.\n\nWięcej informacji: https://www.cm-pvarzim
  .pt/eventos/teatro-nos/
-LAST-MODIFIED:20261117T111729Z
+LAST-MODIFIED:20261120T154203Z
 LOCATION:Cine-Teatro
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/teatro-nos/
@@ -781,6 +818,24 @@ LOCATION:Auditório Municipal | Casa da Juventude | Mapadi
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/xii-capitulo-de-entronizacao-da-conf
  raria-dos-sabores-poveiros/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mercado Vivo com Animadixie
+DTSTART:20261205T100000Z
+DTEND:20261205T130000Z
+DTSTAMP:20261120T124237Z
+UID:bWVyY2Fkby12aXZvLWNvbS1hbmltYWRpeGllfDIwMjYtMTEtMjAgMTI6NDI6MzY=@agend
+ a.cm-pvarzim.pt
+CATEGORIES:Kultura,Święta\, targi i jarmarki
+DESCRIPTION:O Mercado Municipal da Póvoa de Varzim recebe\, na manhã de 
+ 5 de dezembro\, o grupo AnimaDixie\, num espetáculo musical itinerante es
+ pecialmente concebido para celebrar a época natalícia.\n\nTytuł i opis 
+ wydarzenia po portugalsku\, tak jak opublikowała je gmina.\n\nWięcej inf
+ ormacji: https://www.cm-pvarzim.pt/eventos/mercado-vivo-com-animadixie/
+LAST-MODIFIED:20261120T124237Z
+LOCATION:Mercado Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/mercado-vivo-com-animadixie/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Teatro para bebés “A Árvore das Chupetas”
@@ -1083,6 +1138,23 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/da-te-ferias-natal-2026/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Exposição “25 anos & 25 documentos”
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20270130
+DTSTAMP:20261120T145313Z
+UID:ZXhwb3NpY2FvLTI1LWFub3MtMjUtZG9jdW1lbnRvc3wyMDI2LTExLTIwIDE0OjUzOjEy@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Kultura,Wystawy
+DESCRIPTION:De 16 de dezembro a 29 de janeiro de 2027\, o Arquivo Municipa
+ l apresenta a exposição "25 anos & 25 documentos.\n\nTytuł i opis wydar
+ zenia po portugalsku\, tak jak opublikowała je gmina.\n\nWięcej informac
+ ji: https://www.cm-pvarzim.pt/eventos/exposicao-25-anos-25-documentos/
+LAST-MODIFIED:20261120T145313Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/exposicao-25-anos-25-documentos/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"No meu tempo dou-te um conto"
 DTSTART:20261216T100000Z
 DTEND:20261216T120000Z
@@ -1100,6 +1172,25 @@ LAST-MODIFIED:20261026T104709Z
 LOCATION:Biblioteca Municipal Rocha Peixoto
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/no-meu-tempo-dou-te-um-conto-25/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:“Um concerto à Luz da História”
+DTSTART:20261216T183000Z
+DTEND:20261216T203000Z
+DTSTAMP:20261120T145217Z
+UID:dW0tY29uY2VydG8tYS1sdXotZGEtaGlzdG9yaWF8MjAyNi0xMS0yMCAxNDo0ODowMA==@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Kultura,Koncerty
+DESCRIPTION:No dia 16 de dezembro\, às 18h30\, o Arquivo Municipal recebe
+  um concerto de comemoração dos 25 anos do espaço.\n\nBilety i zapisy (
+ po portugalsku):\nA entrada é livre a todos os interessados.\n\nTytuł i 
+ opis wydarzenia po portugalsku\, tak jak opublikowała je gmina.\n\nWięce
+ j informacji: https://www.cm-pvarzim.pt/eventos/um-concerto-a-luz-da-histo
+ ria/
+LAST-MODIFIED:20261120T145217Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/um-concerto-a-luz-da-historia/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Espetáculo de dança “23:59 (falta um minuto para o Natal)”
@@ -1200,6 +1291,30 @@ DESCRIPTION:Tytuł i opis wydarzenia po portugalsku\, tak jak opublikował
 LAST-MODIFIED:20260810T193512Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto de Gala da Associação da Banda Musical da Póvoa de Var
+ zim
+DTSTART:20261220T180000Z
+DTEND:20261220T194500Z
+DTSTAMP:20261120T123624Z
+UID:Y29uY2VydG8tZGUtZ2FsYS1kYS1hc3NvY2lhY2FvLWRhLWJhbmRhLW11c2ljYWwtZGEtcG
+ 92b2EtZGUtdmFyemltfDIwMjYtMTEtMjAgMTI6MzY6MjM=@agenda.cm-pvarzim.pt
+CATEGORIES:Kultura,Koncerty
+DESCRIPTION:A magia do Natal ganha som ao final da tarde de domingo\, 20 d
+ e dezembro\, a partir das 18h00\, com um grandioso Concerto de Gala da Ass
+ ociação da Banda Musical da Póvoa de Varzim.\n\nBilety i zapisy (po por
+ tugalsku):\nOs bilhetes têm o custo de 5\,00€ para público em geral e 
+ 3\,50 para sócios da Banda Musical\, e devem ser adquiridos na bilheteira
+  do Cine-Teatro Garrett.\n\nTytuł i opis wydarzenia po portugalsku\, tak 
+ jak opublikowała je gmina.\n\nWięcej informacji: https://www.cm-pvarzim.
+ pt/eventos/concerto-de-gala-da-associacao-da-banda-musical-da-povoa-de-var
+ zim/
+LAST-MODIFIED:20261120T123624Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-de-gala-da-associacao-da-ba
+ nda-musical-da-povoa-de-varzim/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Espetáculo de dança "Behind the Mirror"

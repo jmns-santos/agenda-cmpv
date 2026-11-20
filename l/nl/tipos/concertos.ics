@@ -88,4 +88,47 @@ LOCATION:Póvoa Arena
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/deixem-o-pimba-em-paz-2/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:“Um concerto à Luz da História”
+DTSTART:20261216T183000Z
+DTEND:20261216T203000Z
+DTSTAMP:20261120T145217Z
+UID:dW0tY29uY2VydG8tYS1sdXotZGEtaGlzdG9yaWF8MjAyNi0xMS0yMCAxNDo0ODowMA==@a
+ genda.cm-pvarzim.pt
+CATEGORIES:Cultuur,Concerten
+DESCRIPTION:No dia 16 de dezembro\, às 18h30\, o Arquivo Municipal recebe
+  um concerto de comemoração dos 25 anos do espaço.\n\nKaartjes en insch
+ rijving (in het Portugees):\nA entrada é livre a todos os interessados.\n
+ \nTitel en beschrijving van het evenement in het Portugees\, zoals gepubli
+ ceerd door de gemeente.\n\nMeer informatie: https://www.cm-pvarzim.pt/even
+ tos/um-concerto-a-luz-da-historia/
+LAST-MODIFIED:20261120T145217Z
+LOCATION:Arquivo Municipal
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/um-concerto-a-luz-da-historia/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Concerto de Gala da Associação da Banda Musical da Póvoa de Var
+ zim
+DTSTART:20261220T180000Z
+DTEND:20261220T194500Z
+DTSTAMP:20261120T123624Z
+UID:Y29uY2VydG8tZGUtZ2FsYS1kYS1hc3NvY2lhY2FvLWRhLWJhbmRhLW11c2ljYWwtZGEtcG
+ 92b2EtZGUtdmFyemltfDIwMjYtMTEtMjAgMTI6MzY6MjM=@agenda.cm-pvarzim.pt
+CATEGORIES:Cultuur,Concerten
+DESCRIPTION:A magia do Natal ganha som ao final da tarde de domingo\, 20 d
+ e dezembro\, a partir das 18h00\, com um grandioso Concerto de Gala da Ass
+ ociação da Banda Musical da Póvoa de Varzim.\n\nKaartjes en inschrijvin
+ g (in het Portugees):\nOs bilhetes têm o custo de 5\,00€ para público 
+ em geral e 3\,50 para sócios da Banda Musical\, e devem ser adquiridos na
+  bilheteira do Cine-Teatro Garrett.\n\nTitel en beschrijving van het evene
+ ment in het Portugees\, zoals gepubliceerd door de gemeente.\n\nMeer infor
+ matie: https://www.cm-pvarzim.pt/eventos/concerto-de-gala-da-associacao-da
+ -banda-musical-da-povoa-de-varzim/
+LAST-MODIFIED:20261120T123624Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/concerto-de-gala-da-associacao-da-ba
+ nda-musical-da-povoa-de-varzim/
+END:VEVENT
 END:VCALENDAR
