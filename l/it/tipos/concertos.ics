@@ -68,25 +68,6 @@ URL:https://www.cm-pvarzim.pt/eventos/xiii-encontro-de-musica-coral-da-pov
  oa-de-varzim/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Concerto Comentado
-DTSTART:20261119T183000Z
-DTEND:20261119T200000Z
-DTSTAMP:20261020T110828Z
-UID:Y29uY2VydG8tY29tZW50YWRvfDIwMjYtMTAtMjAgMTE6MDg6Mjc=@agenda.cm-pvarzim
- .pt
-CATEGORIES:Cultura,Concerti
-DESCRIPTION:A Escola de Música da Póvoa de Varzim convida a comunidade a
-  assistir ao Concerto Comentado – Itinerários Internacionais do Repert
- ório Violetístico\, que terá lugar no dia 19 de novembro\, às 18h30\, 
- no Auditório Municipal.\n\nTitolo e descrizione dell'evento in portoghese
- \, come pubblicati dal comune.\n\nMaggiori informazioni: https://www.cm-pv
- arzim.pt/eventos/concerto-comentado/
-LAST-MODIFIED:20261020T110828Z
-LOCATION:Auditório Municipal
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/concerto-comentado/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:"Deixem o Pimba em Paz"
 DTSTART:20261204T213000Z
 DTEND:20261204T233000Z

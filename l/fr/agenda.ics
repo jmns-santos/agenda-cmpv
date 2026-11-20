@@ -223,66 +223,6 @@ URL:https://www.cm-pvarzim.pt/eventos/xiii-encontro-de-musica-coral-da-pov
  oa-de-varzim/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:"Rotinas\, regras e limites (sem quebrar a relação)"
-DTSTART:20261119T181500Z
-DTEND:20261119T194500Z
-DTSTAMP:20261105T145440Z
-UID:cm90aW5hcy1yZWdyYXMtZS1saW1pdGVzLXNlbS1xdWVicmFyLWEtcmVsYWNhby0yfDIwMj
- YtMTEtMDUgMTQ6NTQ6MTc=@agenda.cm-pvarzim.pt
-CATEGORIES:Citoyenneté,Ateliers et activités
-DESCRIPTION:O Município da Póvoa de Varzim irá promover\, em parceria c
- om o Agrupamento de Escolas de Rates\, uma sessão com pais/encarregados d
- e educação\, intitulada "Rotinas\, regras e limites (sem quebrar a rela
- ção)".\n\nTitre et description de l'événement en portugais\, tels que 
- publiés par la municipalité.\n\nPlus d'informations: https://www.cm-pvar
- zim.pt/eventos/rotinas-regras-e-limites-sem-quebrar-a-relacao-2/
-LAST-MODIFIED:20261105T145440Z
-LOCATION:Auditório da Escola Básica de Rates
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/rotinas-regras-e-limites-sem-quebrar
- -a-relacao-2/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Concerto Comentado
-DTSTART:20261119T183000Z
-DTEND:20261119T200000Z
-DTSTAMP:20261020T110828Z
-UID:Y29uY2VydG8tY29tZW50YWRvfDIwMjYtMTAtMjAgMTE6MDg6Mjc=@agenda.cm-pvarzim
- .pt
-CATEGORIES:Culture,Concerts
-DESCRIPTION:A Escola de Música da Póvoa de Varzim convida a comunidade a
-  assistir ao Concerto Comentado – Itinerários Internacionais do Repert
- ório Violetístico\, que terá lugar no dia 19 de novembro\, às 18h30\, 
- no Auditório Municipal.\n\nTitre et description de l'événement en portu
- gais\, tels que publiés par la municipalité.\n\nPlus d'informations: htt
- ps://www.cm-pvarzim.pt/eventos/concerto-comentado/
-LAST-MODIFIED:20261020T110828Z
-LOCATION:Auditório Municipal
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/concerto-comentado/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cinema "A Amiga Silenciosa"
-DTSTART:20261119T214500Z
-DTEND:20261119T233000Z
-DTSTAMP:20261021T083711Z
-UID:Y2luZW1hLWEtYW1pZ2Etc2lsZW5jaW9zYXwyMDI2LTEwLTIxIDA4OjM2OjUx@agenda.cm
- -pvarzim.pt
-CATEGORIES:Culture,Cinéma
-DESCRIPTION:No dia 19 de novembro\, às 21h45\, será exibido\, no Cine-Te
- atro Garrett\, o filme "A Amiga Silenciosa".\n\nBillets et inscriptions (e
- n portugais) :\nEntradas: 4\,00€ (não sócio) 0€ (sócio).\nDesconto 
- para menores de 23 anos: 2€ cada (*até à menor idade estabelecida em c
- ada filme) | Bilhetes à venda no Cine-Teatro Garrett.\n\nTitre et descrip
- tion de l'événement en portugais\, tels que publiés par la municipalit
- é.\n\nPlus d'informations: https://www.cm-pvarzim.pt/eventos/cinema-a-ami
- ga-silenciosa/
-LAST-MODIFIED:20261021T083711Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-a-amiga-silenciosa/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Gala do Desporto
 DTSTART:20261120T213000Z
 DTEND:20261120T231500Z
