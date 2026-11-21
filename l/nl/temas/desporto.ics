@@ -13,26 +13,6 @@ X-APPLE-CALENDAR-COLOR:#1b5e20
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Gala do Desporto
-DTSTART:20261120T213000Z
-DTEND:20261120T231500Z
-DTSTAMP:20261023T105742Z
-UID:Z2FsYS1kby1kZXNwb3J0by00fDIwMjYtMTAtMjMgMTA6NTc6NDE=@agenda.cm-pvarzim
- .pt
-CATEGORIES:Sport,Herdenkingen en ceremonies
-DESCRIPTION:No dia 20 de novembro\, a Câmara Municipal da Póvoa de Varzi
- m vai realizar mais uma edição da Gala do Desporto\, no Póvoa Arena.\n
- \nKaartjes en inschrijving (in het Portugees):\nA entrada no evento é liv
- re\, mas sujeita a reserva (através do 915 150 275) e levantamento do bil
- hete.\n\nTitel en beschrijving van het evenement in het Portugees\, zoals 
- gepubliceerd door de gemeente.\n\nMeer informatie: https://www.cm-pvarzim.
- pt/eventos/gala-do-desporto-4/
-LAST-MODIFIED:20261023T105742Z
-LOCATION:Póvoa Arena
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/gala-do-desporto-4/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:2.ª Jornada do 46.º Plano de Promoção de Atletismo
 DTSTART:20261122T093000Z
 DTEND:20261122T123000Z
