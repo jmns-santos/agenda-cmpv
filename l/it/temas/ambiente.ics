@@ -13,29 +13,6 @@ X-APPLE-CALENDAR-COLOR:#004d40
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:"Vamos plantar um Bosque!"
-DTSTART:20261121T100000Z
-DTEND:20261121T114500Z
-DTSTAMP:20261117T140423Z
-UID:dmFtb3MtcGxhbnRhci11bS1ib3NxdWV8MjAyNi0xMS0xNyAxNDowNDoyMg==@agenda.cm
- -pvarzim.pt
-CATEGORIES:Ambiente,Iniziative e campagne
-DESCRIPTION:O Centro do Clima e o Município da Póvoa de Varzim pretendem
-  assinalar o Dia da Floresta Autóctone\, através de uma ação de planta
- ção que tem como objetivo envolver a comunidade local na valorização d
- o património natural e na promoção da biodiversidade.\n\nBiglietti e is
- crizioni (in portoghese):\nA participação é gratuita\, mediante inscri
- ção prévia através do QR Code do cartaz ou do formulário aqui disponi
- bilizado.\nIscrizione: https://forms.gle/SbJ3qhHXfj9NKs6H6\n\nTitolo e des
- crizione dell'evento in portoghese\, come pubblicati dal comune.\n\nMaggio
- ri informazioni: https://www.cm-pvarzim.pt/eventos/vamos-plantar-um-bosque
- /
-LAST-MODIFIED:20261117T140423Z
-LOCATION:Junto à Via B
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/vamos-plantar-um-bosque/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Repair Café
 DTSTART:20261128T100000Z
 DTEND:20261128T123000Z

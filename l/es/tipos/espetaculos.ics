@@ -14,26 +14,6 @@ X-APPLE-CALENDAR-COLOR:#e07b00
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Espetáculo de dança "AmarAmália"
-DTSTART:20261121T210000Z
-DTEND:20261121T230000Z
-DTSTAMP:20261023T152912Z
-UID:ZXNwZXRhY3Vsby1kZS1kYW5jYS1hbWFyYW1hbGlhfDIwMjYtMTAtMjMgMTU6Mjk6MTE=@a
- genda.cm-pvarzim.pt
-CATEGORIES:Cultura,Espectáculos
-DESCRIPTION:No dia 21 de novembro\, às 21h00\, sobe ao palco do Cine-Teat
- ro Garrett\, o espetáculo "AmarAmália"\, pela Companhia Portuguesa de Ba
- ilado Contemporâneo.\n\nEntradas e inscripciones (en portugués):\nOs bil
- hetes custam 20\,00€ (Plateia) e 15\,00€ (Camarotes/ Balcão).\n\nTít
- ulo y descripción del evento en portugués\, tal como los publica el muni
- cipio.\n\nMás información: https://www.cm-pvarzim.pt/eventos/espetaculo-
- de-danca-amaramalia/
-LAST-MODIFIED:20261023T152912Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-amaramalia/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Dia da Camisola Poveira
 DTSTART:20261208T150000Z
 DTEND:20261208T183000Z

@@ -13,47 +13,6 @@ X-APPLE-CALENDAR-COLOR:#795548
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Apresentação do livro "O extremo afiado do espelho"
-DTSTART:20261121T160000Z
-DTEND:20261121T180000Z
-DTSTAMP:20261023T091258Z
-UID:YXByZXNlbnRhY2FvLWRvLWxpdnJvLW8tZXh0cmVtby1hZmlhZG8tZG8tZXNwZWxob3wyMD
- I2LTEwLTIzIDA5OjEyOjU3@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Literatura
-DESCRIPTION:A Biblioteca Municipal Rocha Peixoto irá acolher\, no dia 21 
- de novembro\, a partir das 16h00\, a sessão de apresentação do livro "O
-  extremo afiado do espelho"\, de Mário Amazan. A apresentação da obra s
- erá feita pelo escritor Vítor da Rocha.\n\nMais informação: https://ww
- w.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-extremo-afiado-do-espelho/
-LAST-MODIFIED:20261023T091258Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/apresentacao-do-livro-o-extremo-afia
- do-do-espelho/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sessão de leitura "A ovelhinha que veio para jantar"
-DTSTART:20261121T160000Z
-DTEND:20261121T174500Z
-DTSTAMP:20261022T085515Z
-UID:c2Vzc2FvLWRlLWxlaXR1cmEtYS1vdmVsaGluaGEtcXVlLXZlaW8tcGFyYS1qYW50YXJ8Mj
- AyNi0xMC0yMiAwODo1NToxNA==@agenda.cm-pvarzim.pt
-CATEGORIES:Cultura,Literatura
-DESCRIPTION:No dia 21 de novembro\, às 16h00\, a Biblioteca Municipal ir
- á promover a sessão de leitura para pais e bebés "A ovelhinha que veio 
- para jantar"\, dinamizada por Ana Sofia Maia.\n\nBilhetes e inscrições:
- \nAs inscrições para esta atividade\, destinada a bebés entre os 12 e 4
- 8 meses\, são gratuitas\, mas obrigatórias\, através do email bibliotec
- a@cm-pvarzim.pt\, do telefone 252 616 000\, ou\, em alternativa\, presenci
- almente\, na Biblioteca Municipal.\n\nMais informação: https://www.cm-pv
- arzim.pt/eventos/sessao-de-leitura-a-ovelhinha-que-veio-para-jantar/
-LAST-MODIFIED:20261022T085515Z
-LOCATION:Biblioteca Municipal Rocha Peixoto
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/sessao-de-leitura-a-ovelhinha-que-ve
- io-para-jantar/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Póvoa Conto a Conto
 DTSTART:20261128T151500Z
 DTEND:20261128T170000Z
