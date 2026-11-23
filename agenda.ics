@@ -208,62 +208,6 @@ URL:https://www.cm-pvarzim.pt/eventos/xiii-encontro-de-musica-coral-da-pov
  oa-de-varzim/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:2.ª Jornada do 46.º Plano de Promoção de Atletismo
-DTSTART:20261122T093000Z
-DTEND:20261122T123000Z
-DTSTAMP:20261104T123741Z
-UID:Mi1hLWpvcm5hZGEtZG8tNDYtby1wbGFuby1kZS1wcm9tb2Nhby1kZS1hdGxldGlzbW98Mj
- AyNi0xMS0wNCAxMjozNzo0MA==@agenda.cm-pvarzim.pt
-CATEGORIES:Desporto,Provas desportivas
-DESCRIPTION:No dia 22 de novembro\, às 9h30\, terá lugar\, nas ruas de B
- alasar\, a 2.ª jornada do Plano de Promoção de Atletismo.\n\nMais infor
- mação: https://www.cm-pvarzim.pt/eventos/2-a-jornada-do-46-o-plano-de-pr
- omocao-de-atletismo/
-LAST-MODIFIED:20261104T123741Z
-LOCATION:Arruamentos de Balasar
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/2-a-jornada-do-46-o-plano-de-promoca
- o-de-atletismo/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cinema "Trapalhões"
-DTSTART:20261122T153000Z
-DTEND:20261122T174500Z
-DTSTAMP:20261027T091431Z
-UID:Y2luZW1hLXRyYXBhbGhvZXN8MjAyNi0xMC0yMSAwODo0MzoxNA==@agenda.cm-pvarzim
- .pt
-CATEGORIES:Cultura,Cinema
-DESCRIPTION:No dia 22 de novembro\, às 15h30\, será exibido\, no Cine-Te
- atro Garrett\, o filme "Trapalhões" (versão portuguesa).\n\nBilhetes e i
- nscrições:\nEntradas: Os bilhetes custam 3\,50€ e estão à venda na B
- OL e no Cine-Teatro Garrett.\nBilhetes: https://www.bol.pt/Projecto/Entida
- desAderentes/3289-cine_teatro_garrett\n\nMais informação: https://www.cm
- -pvarzim.pt/eventos/cinema-trapalhoes/
-LAST-MODIFIED:20261027T091431Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-trapalhoes/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cinema "O Pecado Mora em Cima"
-DTSTART:20261122T213000Z
-DTEND:20261122T231500Z
-DTSTAMP:20261021T084500Z
-UID:Y2luZW1hLW8tcGVjYWRvLW1vcmEtZW0tY2ltYXwyMDI2LTEwLTIxIDA4OjQ0OjM5@agend
- a.cm-pvarzim.pt
-CATEGORIES:Cultura,Cinema
-DESCRIPTION:No dia 22 de novembro\, às 21h30\, será exibido\, no Cine-Te
- atro Garrett\, o filme "O Pecado Mora em Cima".\n\nBilhetes e inscrições
- :\nEntradas: Os bilhetes custam 3\,50€ e estão à venda na BOL e no Cin
- e-Teatro Garrett.\nBilhetes: https://www.bol.pt/Projecto/EntidadesAderente
- s/3289-cine_teatro_garrett\n\nMais informação: https://www.cm-pvarzim.pt
- /eventos/cinema-o-pecado-mora-em-cima/
-LAST-MODIFIED:20261021T084500Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-o-pecado-mora-em-cima/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Dia de Santa Cecília
 DTSTART:20261123T190000Z
 DTEND:20261123T210000Z

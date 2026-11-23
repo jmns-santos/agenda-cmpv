@@ -13,24 +13,6 @@ X-APPLE-CALENDAR-COLOR:#1b5e20
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:2.ª Jornada do 46.º Plano de Promoção de Atletismo
-DTSTART:20261122T093000Z
-DTEND:20261122T123000Z
-DTSTAMP:20261104T123741Z
-UID:Mi1hLWpvcm5hZGEtZG8tNDYtby1wbGFuby1kZS1wcm9tb2Nhby1kZS1hdGxldGlzbW98Mj
- AyNi0xMS0wNCAxMjozNzo0MA==@agenda.cm-pvarzim.pt
-CATEGORIES:Desporto,Provas desportivas
-DESCRIPTION:No dia 22 de novembro\, às 9h30\, terá lugar\, nas ruas de B
- alasar\, a 2.ª jornada do Plano de Promoção de Atletismo.\n\nMais infor
- mação: https://www.cm-pvarzim.pt/eventos/2-a-jornada-do-46-o-plano-de-pr
- omocao-de-atletismo/
-LAST-MODIFIED:20261104T123741Z
-LOCATION:Arruamentos de Balasar
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/2-a-jornada-do-46-o-plano-de-promoca
- o-de-atletismo/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Futebol - Varzim x Trofense
 DTSTART:20261128T150000Z
 DTEND:20261128T164500Z

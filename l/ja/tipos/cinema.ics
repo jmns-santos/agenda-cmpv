@@ -13,48 +13,6 @@ X-APPLE-CALENDAR-COLOR:#6a3fb5
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Cinema "Trapalhões"
-DTSTART:20261122T153000Z
-DTEND:20261122T174500Z
-DTSTAMP:20261027T091431Z
-UID:Y2luZW1hLXRyYXBhbGhvZXN8MjAyNi0xMC0yMSAwODo0MzoxNA==@agenda.cm-pvarzim
- .pt
-CATEGORIES:文化,映画
-DESCRIPTION:No dia 22 de novembro\, às 15h30\, será exibido\, no Cine-Te
- atro Garrett\, o filme "Trapalhões" (versão portuguesa).\n\nチケット
- ・申し込み（ポルトガル語）：\nEntradas: Os bilhetes custam 3
- \,50€ e estão à venda na BOL e no Cine-Teatro Garrett.\nチケット: 
- https://www.bol.pt/Projecto/EntidadesAderentes/3289-cine_teatro_garrett\n
- \nイベントのタイトルと説明は、市が公開しているポル
- トガル語のままです。\n\n詳細: https://www.cm-pvarzim.pt/evento
- s/cinema-trapalhoes/
-LAST-MODIFIED:20261027T091431Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-trapalhoes/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cinema "O Pecado Mora em Cima"
-DTSTART:20261122T213000Z
-DTEND:20261122T231500Z
-DTSTAMP:20261021T084500Z
-UID:Y2luZW1hLW8tcGVjYWRvLW1vcmEtZW0tY2ltYXwyMDI2LTEwLTIxIDA4OjQ0OjM5@agend
- a.cm-pvarzim.pt
-CATEGORIES:文化,映画
-DESCRIPTION:No dia 22 de novembro\, às 21h30\, será exibido\, no Cine-Te
- atro Garrett\, o filme "O Pecado Mora em Cima".\n\nチケット・申し
- 込み（ポルトガル語）：\nEntradas: Os bilhetes custam 3\,50€ e
-  estão à venda na BOL e no Cine-Teatro Garrett.\nチケット: https://w
- ww.bol.pt/Projecto/EntidadesAderentes/3289-cine_teatro_garrett\n\nイベ
- ントのタイトルと説明は、市が公開しているポルトガ
- ル語のままです。\n\n詳細: https://www.cm-pvarzim.pt/eventos/cine
- ma-o-pecado-mora-em-cima/
-LAST-MODIFIED:20261021T084500Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-o-pecado-mora-em-cima/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Cinema "Adolescência\, Sexo e Morte no Acampamento Miasma"
 DTSTART:20261126T214500Z
 DTEND:20261126T233000Z
