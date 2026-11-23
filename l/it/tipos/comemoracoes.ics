@@ -62,7 +62,7 @@ BEGIN:VEVENT
 SUMMARY:Comemorações do Dia Internacional da Pessoas com Deficiência
 DTSTART:20261204T210000Z
 DTEND:20261204T223000Z
-DTSTAMP:20261119T154809Z
+DTSTAMP:20261123T152756Z
 UID:Y29tZW1vcmFjb2VzLWRvLWRpYS1pbnRlcm5hY2lvbmFsLWRhLXBlc3NvYXMtY29tLWRlZm
  ljaWVuY2lhfDIwMjYtMTEtMTkgMTU6NDg6MDg=@agenda.cm-pvarzim.pt
 CATEGORIES:Cittadinanza,Ricorrenze e cerimonie
@@ -73,7 +73,7 @@ DESCRIPTION:O Município da Póvoa de Varzim associa-se à APIC – Associ
  dell'evento in portoghese\, come pubblicati dal comune.\n\nMaggiori inform
  azioni: https://www.cm-pvarzim.pt/eventos/comemoracoes-do-dia-internaciona
  l-da-pessoas-com-deficiencia/
-LAST-MODIFIED:20261119T154809Z
+LAST-MODIFIED:20261123T152756Z
 LOCATION:Centro Ocupacional da Lapa
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/comemoracoes-do-dia-internacional-da
@@ -96,5 +96,27 @@ LAST-MODIFIED:20261118T142052Z
 LOCATION:Diana Bar
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/dia-internacional-do-voluntariado-5/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Gala 40.º Aniversário da Juvenorte
+DTSTART:20261213T154500Z
+DTEND:20261213T183000Z
+DTSTAMP:20261123T121501Z
+UID:Z2FsYS00MC1vLWFuaXZlcnNhcmlvLWRhLWp1dmVub3J0ZXwyMDI2LTExLTIzIDEyOjE1Oj
+ Aw@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Ricorrenze e cerimonie
+DESCRIPTION:No dia 13 de dezembro\, a Juvenorte vai realizar uma Gala come
+ morativa do seu 40.º aniversário no Cine-Teatro Garrett.\n\nBiglietti e 
+ iscrizioni (in portoghese):\nEntrada mediante aquisição prévia de bilhe
+ te que tem o custo de 10€ (adulto) e 7\,5€ (criança – dos 6 aos 12 
+ anos).\nOs interessados podem fazer reserva de bilhete através do 252 020
+  119\, sendo que têm 72 horas para fazer o levantamento na bilheteira do 
+ Cine-Teatro Garrett.\n\nTitolo e descrizione dell'evento in portoghese\, c
+ ome pubblicati dal comune.\n\nMaggiori informazioni: https://www.cm-pvarzi
+ m.pt/eventos/gala-40-o-aniversario-da-juvenorte/
+LAST-MODIFIED:20261123T121501Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/gala-40-o-aniversario-da-juvenorte/
 END:VEVENT
 END:VCALENDAR

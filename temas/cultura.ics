@@ -518,6 +518,27 @@ URL:https://www.cm-pvarzim.pt/eventos/musical-capuchinho-vermelho-o-musica
  l/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Gala 40.º Aniversário da Juvenorte
+DTSTART:20261213T154500Z
+DTEND:20261213T183000Z
+DTSTAMP:20261123T121501Z
+UID:Z2FsYS00MC1vLWFuaXZlcnNhcmlvLWRhLWp1dmVub3J0ZXwyMDI2LTExLTIzIDEyOjE1Oj
+ Aw@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Comemorações e cerimónias
+DESCRIPTION:No dia 13 de dezembro\, a Juvenorte vai realizar uma Gala come
+ morativa do seu 40.º aniversário no Cine-Teatro Garrett.\n\nBilhetes e i
+ nscrições:\nEntrada mediante aquisição prévia de bilhete que tem o cu
+ sto de 10€ (adulto) e 7\,5€ (criança – dos 6 aos 12 anos).\nOs inte
+ ressados podem fazer reserva de bilhete através do 252 020 119\, sendo qu
+ e têm 72 horas para fazer o levantamento na bilheteira do Cine-Teatro Gar
+ rett.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/gala-40-o-an
+ iversario-da-juvenorte/
+LAST-MODIFIED:20261123T121501Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/gala-40-o-aniversario-da-juvenorte/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cais de Leitura
 DTSTART:20261215T210000Z
 DTEND:20261215T233000Z

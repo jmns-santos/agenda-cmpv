@@ -51,6 +51,24 @@ URL:https://www.cm-pvarzim.pt/eventos/mostra-de-fotografia-da-biblioteca-m
  unicipal-acervo-ii/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Encontro pela Paz
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20270110
+DTSTAMP:20261123T114239Z
+UID:ZW5jb250cm8tcGVsYS1wYXotNHwyMDI2LTExLTIzIDExOjQyOjM5@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Obywatelstwo,Wystawy
+DESCRIPTION:Na celebração dos 28 anos do evento\, o Encontro pela Paz es
+ tá de volta à Póvoa de Varzim\, entre os dias 10 de dezembro e 9 de jan
+ eiro de 2027.\n\nTytuł i opis wydarzenia po portugalsku\, tak jak opublik
+ owała je gmina.\n\nWięcej informacji: https://www.cm-pvarzim.pt/eventos/
+ encontro-pela-paz-4/
+LAST-MODIFIED:20261123T114239Z
+LOCATION:Pavilhão Municipal\, Museu Municipal e Cais da Paz
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/encontro-pela-paz-4/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Exposição “25 anos & 25 documentos”
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20270130

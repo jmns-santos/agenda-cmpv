@@ -543,7 +543,7 @@ BEGIN:VEVENT
 SUMMARY:Comemorações do Dia Internacional da Pessoas com Deficiência
 DTSTART:20261204T210000Z
 DTEND:20261204T223000Z
-DTSTAMP:20261119T154809Z
+DTSTAMP:20261123T152756Z
 UID:Y29tZW1vcmFjb2VzLWRvLWRpYS1pbnRlcm5hY2lvbmFsLWRhLXBlc3NvYXMtY29tLWRlZm
  ljaWVuY2lhfDIwMjYtMTEtMTkgMTU6NDg6MDg=@agenda.cm-pvarzim.pt
 CATEGORIES:Citoyenneté,Commémorations et cérémonies
@@ -554,7 +554,7 @@ DESCRIPTION:O Município da Póvoa de Varzim associa-se à APIC – Associ
  de l'événement en portugais\, tels que publiés par la municipalité.\n
  \nPlus d'informations: https://www.cm-pvarzim.pt/eventos/comemoracoes-do-d
  ia-internacional-da-pessoas-com-deficiencia/
-LAST-MODIFIED:20261119T154809Z
+LAST-MODIFIED:20261123T152756Z
 LOCATION:Centro Ocupacional da Lapa
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/comemoracoes-do-dia-internacional-da
@@ -768,6 +768,24 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/dia-da-camisola-poveira-3/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Encontro pela Paz
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20270110
+DTSTAMP:20261123T114239Z
+UID:ZW5jb250cm8tcGVsYS1wYXotNHwyMDI2LTExLTIzIDExOjQyOjM5@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Citoyenneté,Expositions
+DESCRIPTION:Na celebração dos 28 anos do evento\, o Encontro pela Paz es
+ tá de volta à Póvoa de Varzim\, entre os dias 10 de dezembro e 9 de jan
+ eiro de 2027.\n\nTitre et description de l'événement en portugais\, tels
+  que publiés par la municipalité.\n\nPlus d'informations: https://www.cm
+ -pvarzim.pt/eventos/encontro-pela-paz-4/
+LAST-MODIFIED:20261123T114239Z
+LOCATION:Pavilhão Municipal\, Museu Municipal e Cais da Paz
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/encontro-pela-paz-4/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:"O impacto dos hábitos de sono no desenvolvimento\, na saúde e n
  o sucesso escolar das crianças e jovens"
 DTSTART:20261210T181500Z
@@ -912,6 +930,28 @@ DESCRIPTION:Titre et description de l'événement en portugais\, tels que
 LAST-MODIFIED:20261114T031514Z
 TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Gala 40.º Aniversário da Juvenorte
+DTSTART:20261213T154500Z
+DTEND:20261213T183000Z
+DTSTAMP:20261123T121501Z
+UID:Z2FsYS00MC1vLWFuaXZlcnNhcmlvLWRhLWp1dmVub3J0ZXwyMDI2LTExLTIzIDEyOjE1Oj
+ Aw@agenda.cm-pvarzim.pt
+CATEGORIES:Culture,Commémorations et cérémonies
+DESCRIPTION:No dia 13 de dezembro\, a Juvenorte vai realizar uma Gala come
+ morativa do seu 40.º aniversário no Cine-Teatro Garrett.\n\nBillets et i
+ nscriptions (en portugais) :\nEntrada mediante aquisição prévia de bilh
+ ete que tem o custo de 10€ (adulto) e 7\,5€ (criança – dos 6 aos 12
+  anos).\nOs interessados podem fazer reserva de bilhete através do 252 02
+ 0 119\, sendo que têm 72 horas para fazer o levantamento na bilheteira do
+  Cine-Teatro Garrett.\n\nTitre et description de l'événement en portugai
+ s\, tels que publiés par la municipalité.\n\nPlus d'informations: https:
+ //www.cm-pvarzim.pt/eventos/gala-40-o-aniversario-da-juvenorte/
+LAST-MODIFIED:20261123T121501Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/gala-40-o-aniversario-da-juvenorte/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cais de Leitura

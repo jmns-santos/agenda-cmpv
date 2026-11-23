@@ -143,7 +143,7 @@ BEGIN:VEVENT
 SUMMARY:Comemorações do Dia Internacional da Pessoas com Deficiência
 DTSTART:20261204T210000Z
 DTEND:20261204T223000Z
-DTSTAMP:20261119T154809Z
+DTSTAMP:20261123T152756Z
 UID:Y29tZW1vcmFjb2VzLWRvLWRpYS1pbnRlcm5hY2lvbmFsLWRhLXBlc3NvYXMtY29tLWRlZm
  ljaWVuY2lhfDIwMjYtMTEtMTkgMTU6NDg6MDg=@agenda.cm-pvarzim.pt
 CATEGORIES:Citoyenneté,Commémorations et cérémonies
@@ -154,7 +154,7 @@ DESCRIPTION:O Município da Póvoa de Varzim associa-se à APIC – Associ
  de l'événement en portugais\, tels que publiés par la municipalité.\n
  \nPlus d'informations: https://www.cm-pvarzim.pt/eventos/comemoracoes-do-d
  ia-internacional-da-pessoas-com-deficiencia/
-LAST-MODIFIED:20261119T154809Z
+LAST-MODIFIED:20261123T152756Z
 LOCATION:Centro Ocupacional da Lapa
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/comemoracoes-do-dia-internacional-da
@@ -177,6 +177,24 @@ LAST-MODIFIED:20261118T142052Z
 LOCATION:Diana Bar
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/dia-internacional-do-voluntariado-5/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Encontro pela Paz
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20270110
+DTSTAMP:20261123T114239Z
+UID:ZW5jb250cm8tcGVsYS1wYXotNHwyMDI2LTExLTIzIDExOjQyOjM5@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Citoyenneté,Expositions
+DESCRIPTION:Na celebração dos 28 anos do evento\, o Encontro pela Paz es
+ tá de volta à Póvoa de Varzim\, entre os dias 10 de dezembro e 9 de jan
+ eiro de 2027.\n\nTitre et description de l'événement en portugais\, tels
+  que publiés par la municipalité.\n\nPlus d'informations: https://www.cm
+ -pvarzim.pt/eventos/encontro-pela-paz-4/
+LAST-MODIFIED:20261123T114239Z
+LOCATION:Pavilhão Municipal\, Museu Municipal e Cais da Paz
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/encontro-pela-paz-4/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:"O impacto dos hábitos de sono no desenvolvimento\, na saúde e n
