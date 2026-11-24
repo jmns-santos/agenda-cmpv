@@ -35,6 +35,50 @@ URL:https://www.cm-pvarzim.pt/eventos/cinema-adolescencia-sexo-e-morte-no-
  acampamento-miasma/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cinema "EPiC: Elvis Presley in Concert"
+DTSTART:20261203T214500Z
+DTEND:20261203T233000Z
+DTSTAMP:20261124T092918Z
+UID:Y2luZW1hLWVwaWMtZWx2aXMtcHJlc2xleS1pbi1jb25jZXJ0fDIwMjYtMTEtMjQgMDk6Mj
+ k6MTc=@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Cine
+DESCRIPTION:No dia 3 de dezembro\, às 21h45\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme "EPiC: Elvis Presley in Concert".\n\nEntradas e insc
+ ripciones (en portugués):\nEntradas: 4\,00€ (não sócio) 0€ (sócio)
+ .\nDesconto para menores de 23 anos: 2€ cada (*até à menor idade estab
+ elecida em cada filme) | Bilhetes à venda no Cine-Teatro Garrett.\n\nTít
+ ulo y descripción del evento en portugués\, tal como los publica el muni
+ cipio.\n\nMás información: https://www.cm-pvarzim.pt/eventos/cinema-epic
+ -elvis-presley-in-concert/
+LAST-MODIFIED:20261124T092918Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-epic-elvis-presley-in-concert
+ /
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Viana: A Lenda dos Corações de Ouro"
+DTSTART:20261206T153000Z
+DTEND:20261206T171500Z
+DTSTAMP:20261124T093229Z
+UID:Y2luZW1hLXZpYW5hLWEtbGVuZGEtZG9zLWNvcmFjb2VzLWRlLW91cm98MjAyNi0xMS0yNC
+ AwOTozMjoxMw==@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Cine
+DESCRIPTION:No dia 6 de dezembro\, às 15h30\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme "Viana: A Lenda dos Corações de Ouro".\n\nEntradas
+  e inscripciones (en portugués):\nEntradas: 4\,00€ (não sócio) 0€ (
+ sócio).\nDesconto para menores de 23 anos: 2€ cada (*até à menor idad
+ e estabelecida em cada filme) | Bilhetes à venda no Cine-Teatro Garrett.
+ \n\nTítulo y descripción del evento en portugués\, tal como los publica
+  el municipio.\n\nMás información: https://www.cm-pvarzim.pt/eventos/cin
+ ema-viana-a-lenda-dos-coracoes-de-ouro/
+LAST-MODIFIED:20261124T093229Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-viana-a-lenda-dos-coracoes-de
+ -ouro/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cinema "The Hunger Games: Amanhecer na Ceifa"
 DTSTART:20261206T213000Z
 DTEND:20261206T230000Z
@@ -57,6 +101,26 @@ URL:https://www.cm-pvarzim.pt/eventos/cinema-the-hunger-games-amanhecer-na
  -ceifa/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cinema "A Bola Negra"
+DTSTART:20261210T214500Z
+DTEND:20261210T233000Z
+DTSTAMP:20261124T093553Z
+UID:Y2luZW1hLWEtYm9sYS1uZWdyYXwyMDI2LTExLTI0IDA5OjM1OjMz@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura,Cine
+DESCRIPTION:No dia 10 de dezembro\, às 21h45\, será exibido\, no Cine-Te
+ atro Garrett\, o filme "A Bola Negra".\n\nEntradas e inscripciones (en por
+ tugués):\nEntradas: 4\,00€ (não sócio) 0€ (sócio).\nDesconto para 
+ menores de 23 anos: 2€ cada (*até à menor idade estabelecida em cada f
+ ilme) | Bilhetes à venda no Cine-Teatro Garrett.\n\nTítulo y descripció
+ n del evento en portugués\, tal como los publica el municipio.\n\nMás in
+ formación: https://www.cm-pvarzim.pt/eventos/cinema-a-bola-negra/
+LAST-MODIFIED:20261124T093553Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-a-bola-negra/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cinema "O Gato do Chapéu"
 DTSTART:20261217T143000Z
 DTEND:20261217T163000Z
@@ -76,5 +140,46 @@ LAST-MODIFIED:20261116T153632Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-o-gato-do-chapeu/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Natal Amargo"
+DTSTART:20261217T214500Z
+DTEND:20261217T233000Z
+DTSTAMP:20261124T093830Z
+UID:Y2luZW1hLW5hdGFsLWFtYXJnb3wyMDI2LTExLTI0IDA5OjM4OjMw@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cultura,Cine
+DESCRIPTION:No dia 17 de dezembro\, às 21h45\, será exibido\, no Cine-Te
+ atro Garrett\, o filme "Natal Amargo".\n\nEntradas e inscripciones (en por
+ tugués):\nEntradas: 4\,00€ (não sócio) 0€ (sócio).\nDesconto para 
+ menores de 23 anos: 2€ cada (*até à menor idade estabelecida em cada f
+ ilme) | Bilhetes à venda no Cine-Teatro Garrett.\n\nTítulo y descripció
+ n del evento en portugués\, tal como los publica el municipio.\n\nMás in
+ formación: https://www.cm-pvarzim.pt/eventos/cinema-natal-amargo/
+LAST-MODIFIED:20261124T093830Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-natal-amargo/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Coyote Vs. Acme"
+DTSTART:20261230T180000Z
+DTEND:20261230T224500Z
+DTSTAMP:20261124T094213Z
+UID:Y2luZW1hLWNveW90ZS12cy1hY21lfDIwMjYtMTEtMjQgMDk6NDI6MTM=@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Cultura,Cine
+DESCRIPTION:No dia 30 de dezembro\, às 18h00 (versão portuguesa) e às 2
+ 1h45 (versão original)\, será exibido\, no Cine-Teatro Garrett\, o filme
+  "Coyote Vs. Acme".\n\nEntradas e inscripciones (en portugués):\nEntradas
+ : 4\,00€ (não sócio) 0€ (sócio).\nDesconto para menores de 23 anos:
+  2€ cada (*até à menor idade estabelecida em cada filme) | Bilhetes à
+  venda no Cine-Teatro Garrett.\n\nTítulo y descripción del evento en por
+ tugués\, tal como los publica el municipio.\n\nMás información: https:/
+ /www.cm-pvarzim.pt/eventos/cinema-coyote-vs-acme/
+LAST-MODIFIED:20261124T094213Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-coyote-vs-acme/
 END:VEVENT
 END:VCALENDAR

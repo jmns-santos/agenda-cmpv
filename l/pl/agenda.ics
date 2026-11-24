@@ -494,6 +494,28 @@ URL:https://www.cm-pvarzim.pt/eventos/ecras-e-videojogos-o-que-os-pais-tem
  -mesmo-que-saber/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cinema "EPiC: Elvis Presley in Concert"
+DTSTART:20261203T214500Z
+DTEND:20261203T233000Z
+DTSTAMP:20261124T092918Z
+UID:Y2luZW1hLWVwaWMtZWx2aXMtcHJlc2xleS1pbi1jb25jZXJ0fDIwMjYtMTEtMjQgMDk6Mj
+ k6MTc=@agenda.cm-pvarzim.pt
+CATEGORIES:Kultura,Kino
+DESCRIPTION:No dia 3 de dezembro\, às 21h45\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme "EPiC: Elvis Presley in Concert".\n\nBilety i zapisy
+  (po portugalsku):\nEntradas: 4\,00€ (não sócio) 0€ (sócio).\nDesco
+ nto para menores de 23 anos: 2€ cada (*até à menor idade estabelecida 
+ em cada filme) | Bilhetes à venda no Cine-Teatro Garrett.\n\nTytuł i opi
+ s wydarzenia po portugalsku\, tak jak opublikowała je gmina.\n\nWięcej i
+ nformacji: https://www.cm-pvarzim.pt/eventos/cinema-epic-elvis-presley-in-
+ concert/
+LAST-MODIFIED:20261124T092918Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-epic-elvis-presley-in-concert
+ /
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Futebol - AD Marco 09 x Varzim
 DTSTART:20261204T200000Z
 DTEND:20261204T214500Z
@@ -694,6 +716,28 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/dia-internacional-do-voluntariado-5/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cinema "Viana: A Lenda dos Corações de Ouro"
+DTSTART:20261206T153000Z
+DTEND:20261206T171500Z
+DTSTAMP:20261124T093229Z
+UID:Y2luZW1hLXZpYW5hLWEtbGVuZGEtZG9zLWNvcmFjb2VzLWRlLW91cm98MjAyNi0xMS0yNC
+ AwOTozMjoxMw==@agenda.cm-pvarzim.pt
+CATEGORIES:Kultura,Kino
+DESCRIPTION:No dia 6 de dezembro\, às 15h30\, será exibido\, no Cine-Tea
+ tro Garrett\, o filme "Viana: A Lenda dos Corações de Ouro".\n\nBilety i
+  zapisy (po portugalsku):\nEntradas: 4\,00€ (não sócio) 0€ (sócio).
+ \nDesconto para menores de 23 anos: 2€ cada (*até à menor idade estabe
+ lecida em cada filme) | Bilhetes à venda no Cine-Teatro Garrett.\n\nTytu
+ ł i opis wydarzenia po portugalsku\, tak jak opublikowała je gmina.\n\nW
+ ięcej informacji: https://www.cm-pvarzim.pt/eventos/cinema-viana-a-lenda-
+ dos-coracoes-de-ouro/
+LAST-MODIFIED:20261124T093229Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-viana-a-lenda-dos-coracoes-de
+ -ouro/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Cinema "The Hunger Games: Amanhecer na Ceifa"
 DTSTART:20261206T213000Z
 DTEND:20261206T230000Z
@@ -796,6 +840,26 @@ LOCATION:online
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/redes-sociais-likes-e-influencers-co
  mo-orientar-os-nossos-filhos/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "A Bola Negra"
+DTSTART:20261210T214500Z
+DTEND:20261210T233000Z
+DTSTAMP:20261124T093553Z
+UID:Y2luZW1hLWEtYm9sYS1uZWdyYXwyMDI2LTExLTI0IDA5OjM1OjMz@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Kultura,Kino
+DESCRIPTION:No dia 10 de dezembro\, às 21h45\, será exibido\, no Cine-Te
+ atro Garrett\, o filme "A Bola Negra".\n\nBilety i zapisy (po portugalsku)
+ :\nEntradas: 4\,00€ (não sócio) 0€ (sócio).\nDesconto para menores 
+ de 23 anos: 2€ cada (*até à menor idade estabelecida em cada filme) | 
+ Bilhetes à venda no Cine-Teatro Garrett.\n\nTytuł i opis wydarzenia po p
+ ortugalsku\, tak jak opublikowała je gmina.\n\nWięcej informacji: https:
+ //www.cm-pvarzim.pt/eventos/cinema-a-bola-negra/
+LAST-MODIFIED:20261124T093553Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-a-bola-negra/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Oficina de Cozinha Botânica: "Preparar o Natal"
@@ -1089,6 +1153,26 @@ URL:https://www.cm-pvarzim.pt/eventos/oficina-criativa-arvore-de-natal-par
  a-decoracao/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cinema "Natal Amargo"
+DTSTART:20261217T214500Z
+DTEND:20261217T233000Z
+DTSTAMP:20261124T093830Z
+UID:Y2luZW1hLW5hdGFsLWFtYXJnb3wyMDI2LTExLTI0IDA5OjM4OjMw@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Kultura,Kino
+DESCRIPTION:No dia 17 de dezembro\, às 21h45\, será exibido\, no Cine-Te
+ atro Garrett\, o filme "Natal Amargo".\n\nBilety i zapisy (po portugalsku)
+ :\nEntradas: 4\,00€ (não sócio) 0€ (sócio).\nDesconto para menores 
+ de 23 anos: 2€ cada (*até à menor idade estabelecida em cada filme) | 
+ Bilhetes à venda no Cine-Teatro Garrett.\n\nTytuł i opis wydarzenia po p
+ ortugalsku\, tak jak opublikowała je gmina.\n\nWięcej informacji: https:
+ //www.cm-pvarzim.pt/eventos/cinema-natal-amargo/
+LAST-MODIFIED:20261124T093830Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-natal-amargo/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Rastreios Cardiovasculares Gratuitos
 DTSTART:20261219T090000Z
 DTEND:20261219T130000Z
@@ -1168,6 +1252,27 @@ LOCATION:Pavilhão Municipal
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/espetaculo-de-danca-behind-the-mirro
  r/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cinema "Coyote Vs. Acme"
+DTSTART:20261230T180000Z
+DTEND:20261230T224500Z
+DTSTAMP:20261124T094213Z
+UID:Y2luZW1hLWNveW90ZS12cy1hY21lfDIwMjYtMTEtMjQgMDk6NDI6MTM=@agenda.cm-pva
+ rzim.pt
+CATEGORIES:Kultura,Kino
+DESCRIPTION:No dia 30 de dezembro\, às 18h00 (versão portuguesa) e às 2
+ 1h45 (versão original)\, será exibido\, no Cine-Teatro Garrett\, o filme
+  "Coyote Vs. Acme".\n\nBilety i zapisy (po portugalsku):\nEntradas: 4\,00
+ € (não sócio) 0€ (sócio).\nDesconto para menores de 23 anos: 2€ c
+ ada (*até à menor idade estabelecida em cada filme) | Bilhetes à venda 
+ no Cine-Teatro Garrett.\n\nTytuł i opis wydarzenia po portugalsku\, tak j
+ ak opublikowała je gmina.\n\nWięcej informacji: https://www.cm-pvarzim.p
+ t/eventos/cinema-coyote-vs-acme/
+LAST-MODIFIED:20261124T094213Z
+LOCATION:Cine-Teatro Garrett
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/cinema-coyote-vs-acme/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Futebol - Vianense x Varzim
