@@ -689,16 +689,16 @@ BEGIN:VEVENT
 SUMMARY:Dia Internacional do Voluntariado
 DTSTART:20261205T183000Z
 DTEND:20261205T201500Z
-DTSTAMP:20261118T142052Z
+DTSTAMP:20261125T120829Z
 UID:ZGlhLWludGVybmFjaW9uYWwtZG8tdm9sdW50YXJpYWRvLTV8MjAyNi0xMS0xOCAxNDoyMD
  o1MQ==@agenda.cm-pvarzim.pt
 CATEGORIES:Cittadinanza,Ricorrenze e cerimonie
 DESCRIPTION:O Município da Póvoa de Varzim vai assinalar o Dia Internaci
- onal do Voluntariado a 5 de dezembro com uma cerimónia\, às 18h30\, no D
- iana Bar.\n\nTitolo e descrizione dell'evento in portoghese\, come pubblic
- ati dal comune.\n\nMaggiori informazioni: https://www.cm-pvarzim.pt/evento
- s/dia-internacional-do-voluntariado-5/
-LAST-MODIFIED:20261118T142052Z
+ onal do Voluntariado a 5 de dezembro com uma cerimónia\, às 15h30\, no A
+ uditório Municipal.\n\nTitolo e descrizione dell'evento in portoghese\, c
+ ome pubblicati dal comune.\n\nMaggiori informazioni: https://www.cm-pvarzi
+ m.pt/eventos/dia-internacional-do-voluntariado-5/
+LAST-MODIFIED:20261125T120829Z
 LOCATION:Diana Bar
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/dia-internacional-do-voluntariado-5/
@@ -1149,7 +1149,7 @@ BEGIN:VEVENT
 SUMMARY:Cinema "Natal Amargo"
 DTSTART:20261217T214500Z
 DTEND:20261217T233000Z
-DTSTAMP:20261124T093830Z
+DTSTAMP:20261125T102859Z
 UID:Y2luZW1hLW5hdGFsLWFtYXJnb3wyMDI2LTExLTI0IDA5OjM4OjMw@agenda.cm-pvarzim
  .pt
 CATEGORIES:Cultura,Cinema
@@ -1160,7 +1160,7 @@ DESCRIPTION:No dia 17 de dezembro\, às 21h45\, será exibido\, no Cine-Te
  me) | Bilhetes à venda no Cine-Teatro Garrett.\n\nTitolo e descrizione de
  ll'evento in portoghese\, come pubblicati dal comune.\n\nMaggiori informaz
  ioni: https://www.cm-pvarzim.pt/eventos/cinema-natal-amargo/
-LAST-MODIFIED:20261124T093830Z
+LAST-MODIFIED:20261125T102859Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-natal-amargo/
@@ -1252,7 +1252,7 @@ BEGIN:VEVENT
 SUMMARY:Cinema "Coyote Vs. Acme"
 DTSTART:20261230T180000Z
 DTEND:20261230T224500Z
-DTSTAMP:20261124T094213Z
+DTSTAMP:20261125T102337Z
 UID:Y2luZW1hLWNveW90ZS12cy1hY21lfDIwMjYtMTEtMjQgMDk6NDI6MTM=@agenda.cm-pva
  rzim.pt
 CATEGORIES:Cultura,Cinema
@@ -1264,7 +1264,7 @@ DESCRIPTION:No dia 30 de dezembro\, às 18h00 (versão portuguesa) e às 2
  enda no Cine-Teatro Garrett.\n\nTitolo e descrizione dell'evento in portog
  hese\, come pubblicati dal comune.\n\nMaggiori informazioni: https://www.c
  m-pvarzim.pt/eventos/cinema-coyote-vs-acme/
-LAST-MODIFIED:20261124T094213Z
+LAST-MODIFIED:20261125T102337Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-coyote-vs-acme/

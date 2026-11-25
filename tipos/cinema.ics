@@ -137,7 +137,7 @@ BEGIN:VEVENT
 SUMMARY:Cinema "Natal Amargo"
 DTSTART:20261217T214500Z
 DTEND:20261217T233000Z
-DTSTAMP:20261124T093830Z
+DTSTAMP:20261125T102859Z
 UID:Y2luZW1hLW5hdGFsLWFtYXJnb3wyMDI2LTExLTI0IDA5OjM4OjMw@agenda.cm-pvarzim
  .pt
 CATEGORIES:Cultura,Cinema
@@ -147,7 +147,7 @@ DESCRIPTION:No dia 17 de dezembro\, às 21h45\, será exibido\, no Cine-Te
  s: 2€ cada (*até à menor idade estabelecida em cada filme) | Bilhetes 
  à venda no Cine-Teatro Garrett.\n\nMais informação: https://www.cm-pvar
  zim.pt/eventos/cinema-natal-amargo/
-LAST-MODIFIED:20261124T093830Z
+LAST-MODIFIED:20261125T102859Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-natal-amargo/
@@ -156,7 +156,7 @@ BEGIN:VEVENT
 SUMMARY:Cinema "Coyote Vs. Acme"
 DTSTART:20261230T180000Z
 DTEND:20261230T224500Z
-DTSTAMP:20261124T094213Z
+DTSTAMP:20261125T102337Z
 UID:Y2luZW1hLWNveW90ZS12cy1hY21lfDIwMjYtMTEtMjQgMDk6NDI6MTM=@agenda.cm-pva
  rzim.pt
 CATEGORIES:Cultura,Cinema
@@ -167,7 +167,7 @@ DESCRIPTION:No dia 30 de dezembro\, às 18h00 (versão portuguesa) e às 2
   à menor idade estabelecida em cada filme) | Bilhetes à venda no Cine-Te
  atro Garrett.\n\nMais informação: https://www.cm-pvarzim.pt/eventos/cine
  ma-coyote-vs-acme/
-LAST-MODIFIED:20261124T094213Z
+LAST-MODIFIED:20261125T102337Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-coyote-vs-acme/

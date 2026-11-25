@@ -763,7 +763,7 @@ BEGIN:VEVENT
 SUMMARY:Cinema "Natal Amargo"
 DTSTART:20261217T214500Z
 DTEND:20261217T233000Z
-DTSTAMP:20261124T093830Z
+DTSTAMP:20261125T102859Z
 UID:Y2luZW1hLW5hdGFsLWFtYXJnb3wyMDI2LTExLTI0IDA5OjM4OjMw@agenda.cm-pvarzim
  .pt
 CATEGORIES:文化,映画
@@ -775,7 +775,7 @@ DESCRIPTION:No dia 17 de dezembro\, às 21h45\, será exibido\, no Cine-Te
  ベントのタイトルと説明は、市が公開しているポルト
  ガル語のままです。\n\n詳細: https://www.cm-pvarzim.pt/eventos/c
  inema-natal-amargo/
-LAST-MODIFIED:20261124T093830Z
+LAST-MODIFIED:20261125T102859Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-natal-amargo/
@@ -827,7 +827,7 @@ BEGIN:VEVENT
 SUMMARY:Cinema "Coyote Vs. Acme"
 DTSTART:20261230T180000Z
 DTEND:20261230T224500Z
-DTSTAMP:20261124T094213Z
+DTSTAMP:20261125T102337Z
 UID:Y2luZW1hLWNveW90ZS12cy1hY21lfDIwMjYtMTEtMjQgMDk6NDI6MTM=@agenda.cm-pva
  rzim.pt
 CATEGORIES:文化,映画
@@ -839,7 +839,7 @@ DESCRIPTION:No dia 30 de dezembro\, às 18h00 (versão portuguesa) e às 2
  | Bilhetes à venda no Cine-Teatro Garrett.\n\nイベントのタイトル
  と説明は、市が公開しているポルトガル語のままです
  。\n\n詳細: https://www.cm-pvarzim.pt/eventos/cinema-coyote-vs-acme/
-LAST-MODIFIED:20261124T094213Z
+LAST-MODIFIED:20261125T102337Z
 LOCATION:Cine-Teatro Garrett
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/cinema-coyote-vs-acme/
