@@ -60,26 +60,6 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/orcamento-participativo-jovem-2027/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:"Comunicação: dicas que facilitam a relação"
-DTSTART:20261124T183000Z
-DTEND:20261124T200000Z
-DTSTAMP:20261105T145845Z
-UID:Y29tdW5pY2FjYW8tZGljYXMtcXVlLWZhY2lsaXRhbS1hLXJlbGFjYW98MjAyNi0xMS0wNS
- AxNDo1ODoxOA==@agenda.cm-pvarzim.pt
-CATEGORIES:市民生活,ワークショップ・アクティビティ
-DESCRIPTION:O Município da Póvoa de Varzim irá promover\, em parceria c
- om a Escola Secundária Eça de Queirós\, uma sessão com pais/encarregad
- os de educação\, intitulada "Comunicação: dicas que facilitam a relaç
- ão".\n\nイベントのタイトルと説明は、市が公開してい
- るポルトガル語のままです。\n\n詳細: https://www.cm-pvarzim.
- pt/eventos/comunicacao-dicas-que-facilitam-a-relacao/
-LAST-MODIFIED:20261105T145845Z
-LOCATION:Auditório da Escola Secundária Eça de Queirós
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/comunicacao-dicas-que-facilitam-a-re
- lacao/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Sessão com alunos "Gestão de emoções"
 DTSTART:20261125T133000Z
 DTEND:20261125T151500Z
