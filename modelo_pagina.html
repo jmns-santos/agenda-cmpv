@@ -91,16 +91,9 @@
   .topo { background: var(--mar-forte); color: #fff; padding-top: max(.9rem, env(safe-area-inset-top)); padding-bottom: 0; }
   .topo-grelha { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .9rem 1.2rem; }
   .marca { display: flex; align-items: center; gap: .8rem 1.6rem; min-width: 0; }
-  /* O logótipo tem o emblema da Câmara por cima e "Póvoa de Varzim / Centro..." por baixo do "NEXO",
-     o que puxa o centro visual do "NEXO" para baixo do centro da caixa da imagem; o título "Eventos"
-     fica acima do centro da sua caixa por ter a legenda por baixo. Este ajuste alinha os dois ao centro. */
-  .marca > div { min-width: 0; transform: translateY(27px); }
-  .logo-cm { flex: none; display: flex; line-height: 0; max-width: 100%; }
-  .logo-cm img { display: block; height: 150px; width: auto; max-width: 100%; }
+  .marca > div { min-width: 0; }
   @media (max-width: 40rem) {
     .marca { flex-wrap: wrap; gap: .7rem; }
-    .marca > div { transform: none; }
-    .logo-cm img { height: auto; width: min(100%, 20rem); }
   }
   .topo h1 { margin: 0; color: #fff; font-size: clamp(2.8rem, 11vw, 4.4rem); line-height: 1; font-weight: 700; letter-spacing: .005em; overflow-wrap: anywhere; }
   .topo .sub { margin-top: .5rem; color: #fff; font-size: clamp(1.1rem, 3vw, 1.4rem); line-height: 1.3; }
@@ -465,14 +458,16 @@
   footer p + p { margin-top: .4rem; }
 
   /* Embutido na PGU (?embed=1): sem título grande nem rodapé — o separador "Eventos" da própria
-     PGU já identifica a página; aqui fica só um logótipo pequeno, a frase da agenda e as
-     ferramentas de língua/acessibilidade. */
+     PGU já identifica a página; aqui fica só a frase da agenda e as ferramentas de
+     língua/acessibilidade. */
   .embed .onda, .embed footer { display: none; }
   .embed .topo { padding-top: .5rem; padding-bottom: .5rem; }
   .embed .topo h1 { display: none; }
-  .embed .marca > div { transform: none; }
   .embed .sub { margin-top: 0; }
-  .embed .logo-cm img { height: 40px; }
+  @media (max-width: 40rem) {
+    .embed .topo-grelha { gap: .5rem .8rem; }
+    .embed .marca, .embed .ferramentas { flex: 1 1 auto; }
+  }
 
   @media (forced-colors: active) {
     .cartao, .completa, .item-proximo, .destaque-cartao { border-left-color: CanvasText; }
@@ -504,7 +499,6 @@
 <header class="topo">
   <div class="largura topo-grelha">
     <div class="marca">
-      <span class="logo-cm"><img src="{{LOGOTIPO}}" alt="{{T:h1_html}} — Póvoa de Varzim, Centro de Inteligência Urbana · Câmara Municipal da Póvoa de Varzim" width="640" height="363"></span>
       <div>
         <h1>{{T:categoria}}</h1>
         <p class="sub">{{T:sub_html}}</p>
