@@ -111,7 +111,12 @@
   }
   .painel h3{font-family:var(--script);font-weight:700;font-size:24px;line-height:1.1;margin:0;}
   .painel h3 .resto{font-family:var(--texto);font-weight:400;font-size:18px;}
-  .painel .local{color:var(--dourado);font-size:17px;margin:0;}
+  .painel .local{color:var(--dourado);font-size:17px;margin:12px 0 0;}
+  .estado-agora{display:flex;align-items:center;gap:9px;margin:0;padding:10px 14px;border-radius:12px;font-size:16.5px;font-weight:700;border:1.5px solid rgba(238,214,126,.5);color:var(--dourado);}
+  .estado-agora .luz{width:12px;height:12px;margin-top:0;}
+  .estado-agora.aberto{background:var(--dourado);color:var(--vermelho-fundo);border-color:var(--dourado);}
+  .estado-agora.aberto .luz{border-color:var(--vermelho-fundo);}
+  .estado-agora.fechado,.estado-agora.indef{opacity:.85;}
   .painel .desc{margin:8px 0 0;font-size:16px;}
   .linha{margin:8px 0 0;font-size:16px;line-height:1.3;}
   .painel > :first-child{margin-top:0;}
@@ -557,7 +562,8 @@
       var r = e.regras[i], on = hojeIdx.indexOf(i)>=0;
       return '<li class="'+(on?"hoje":"")+(r.nota?" nota":"")+'">'+txtRegra(r.txt)+(on?'<span class="tag-hoje">hoje</span>':'')+'</li>';
     }
-    var h = "";
+    var st = estado(e, now);
+    var h = '<p class="estado-agora '+st.cls+'"><span class="luz '+st.cls+'"></span><span>'+esc(st.txt)+'</span></p>';
     if(e.local) h += '<p class="local">'+esc(e.resto ? e.resto.replace(/^ - /,"")+", "+e.local : e.local)+'</p>';
     if(e.linhas){
       e.linhas.forEach(function(l){
