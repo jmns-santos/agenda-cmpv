@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Cidade Natal '26 — Póvoa de Varzim</title>
-<meta name="description" content="Programa do Cidade Natal '26 na Póvoa de Varzim, de 29 de novembro a 9 de janeiro, com o que está a decorrer em tempo real.">
+<meta name="description" content="Programa do Cidade Natal '26 na Póvoa de Varzim, de 29 de novembro a 9 de janeiro, dia a dia, com os horários de funcionamento por local.">
 <meta name="theme-color" content="#c5262e">
 <link rel="icon" type="image/png" href="img/floco.png">
 <style>
@@ -22,6 +22,7 @@
     --branco:#ffffff;
     --script:"Lobster Two",Georgia,serif;
     --texto:"CMPV","Segoe UI",sans-serif;
+    --nav-h:58px;
   }
   *{box-sizing:border-box;}
   html{-webkit-text-size-adjust:100%;}
@@ -40,10 +41,30 @@
   .decor .qd{position:absolute;border-radius:3px;}
   .decor img{position:absolute;height:auto;}
 
+  /* ---------- Navegação ---------- */
+  .nav{
+    position:sticky;top:0;z-index:20;
+    display:grid;grid-template-columns:1fr 1fr;gap:8px;
+    padding:8px 14px;background:rgba(197,38,46,.96);
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(238,214,126,.5);
+  }
+  .nav button{
+    min-height:42px;padding:4px 8px;border-radius:10px;cursor:pointer;
+    background:transparent;border:1.5px solid rgba(238,214,126,.55);
+    font-family:var(--texto);font-size:14.5px;line-height:1.1;color:var(--dourado);
+  }
+    .nav button[aria-selected="true"]{background:var(--dourado);color:var(--vermelho-fundo);border-color:var(--dourado);}
+
   main{position:relative;z-index:1;padding:0 20px;}
-  section{scroll-margin-top:14px;padding-top:22px;}
+  section{scroll-margin-top:calc(var(--nav-h) + 8px);padding-top:22px;}
   .sec-titulo{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:30px;line-height:1.1;margin:0 0 6px;}
   .teste{display:inline-block;font-size:13px;background:var(--dourado);color:var(--vermelho-fundo);border-radius:6px;padding:3px 8px;font-weight:700;}
+
+  /* ---------- Vistas ---------- */
+  .vista[hidden]{display:none;}
+  .vista.entrar{animation:entrar .32s ease-out;}
+  @keyframes entrar{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
 
   /* Faixa no topo do programa */
   .faixa{margin:4px 0 22px;padding:12px 16px;border-radius:16px;border:1.5px solid rgba(238,214,126,.55);}
@@ -63,25 +84,56 @@
   .curso .c-det{display:block;font-size:15px;line-height:1.25;}
   #faixa.ativa .seguir{padding-top:8px;border-top:1px solid rgba(143,22,34,.35);}
 
-  @keyframes pulso{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.35;transform:scale(.7);}}
-  .rot{color:var(--dourado);}
+  /* ---------- Horários de Funcionamento ---------- */
+  .espacos{display:grid;grid-template-columns:1fr;gap:8px;margin:2px 0 0;}
+  .espaco{
+    text-align:left;cursor:pointer;padding:10px 11px 10px;border-radius:12px;
+    background:transparent;border:1.5px solid rgba(238,214,126,.55);
+    display:flex;flex-direction:column;gap:3px;
+  }
+  .espaco .nome{font-family:var(--script);font-weight:700;font-size:17.5px;line-height:1.1;color:var(--branco);}
+  .espaco .est{display:flex;gap:6px;align-items:flex-start;font-size:14px;line-height:1.2;color:var(--dourado);}
+  .espaco[aria-selected="true"]{background:var(--dourado);border-color:var(--dourado);}
+  .espaco[aria-selected="true"] .nome{color:var(--vermelho-fundo);}
+  .espaco[aria-selected="true"] .est{color:var(--vermelho-fundo);}
 
-  /* ---------- Programa (como no cartaz) ---------- */
-  .bloco{margin:0 0 24px;scroll-margin-top:calc(var(--nav-h) + 8px);}
-  .bloco:first-of-type{margin-top:10px;}
-  .data{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:22px;line-height:1.15;margin:0;}
-  .sep{font-family:var(--texto);font-weight:400;margin:0 .1em;}
-  .bloco .local{color:var(--dourado);font-size:17.5px;margin:0;line-height:1.2;}
-  .titulo{font-family:var(--script);font-weight:700;color:var(--branco);font-size:21px;line-height:1.15;margin:2px 0 1px;}
-  .titulo .resto{font-family:var(--texto);font-weight:400;font-size:17.5px;}
-  .bloco .desc{margin:0;font-size:16px;line-height:1.25;text-align:justify;}
-  .flocos{list-style:none;margin:1px 0 2px;padding:0;}
-  .flocos li{position:relative;padding-left:23px;font-size:16px;line-height:1.3;}
-  .flocos li::before{content:"";position:absolute;left:1px;top:.2em;width:16px;height:16px;background:url("img/marcador.png") center/contain no-repeat;}
-  .espetaculos{list-style:none;margin:4px 0 0;padding:0;}
-  .espetaculos li{margin:0 0 8px;font-size:16px;line-height:1.25;}
-  .espetaculos .data-esp{font-family:var(--script);font-weight:700;font-size:19px;position:relative;padding-left:22px;}
-  .espetaculos .data-esp::before{content:"";position:absolute;left:0;top:.12em;width:17px;height:17px;background:url("img/marcador.png") center/contain no-repeat;}
+  .luz{width:9px;height:9px;border-radius:50%;flex:0 0 auto;margin-top:.28em;border:1.5px solid currentColor;}
+  .luz.aberto{background:currentColor;animation:pulso 1.8s ease-in-out infinite;}
+  .luz.hoje{background:transparent;}
+  .luz.fechado{background:transparent;opacity:.6;border-style:dashed;}
+  .luz.indef{background:transparent;opacity:.6;}
+  .luz.neutro{display:none;}
+  @keyframes pulso{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.35;transform:scale(.7);}}
+
+  .painel{
+    margin:12px 0 0;padding:16px 16px 14px;border-radius:18px;
+    background:transparent;border:1.5px solid rgba(238,214,126,.55);
+  }
+  .painel h3{font-family:var(--script);font-weight:700;font-size:24px;line-height:1.1;margin:0;}
+  .painel h3 .resto{font-family:var(--texto);font-weight:400;font-size:18px;}
+  .painel .local{color:var(--dourado);font-size:17px;margin:0;}
+  .painel .desc{margin:8px 0 0;font-size:16px;}
+  .linha{margin:8px 0 0;font-size:16px;line-height:1.3;}
+  .painel > :first-child{margin-top:0;}
+  .rot{color:var(--dourado);}
+  .regras{list-style:none;margin:8px 0 0;padding:0;}
+  .regras li{position:relative;padding:5px 8px 5px 30px;margin:0 -8px;border-radius:8px;font-size:16px;line-height:1.3;}
+  .regras li::before{content:"";position:absolute;left:8px;top:.5em;width:16px;height:16px;background:url("img/marcador.png") center/contain no-repeat;}
+  .regras li.hoje{background:rgba(238,214,126,.18);box-shadow:inset 3px 0 0 var(--dourado);}
+  .regras li.nota{color:rgba(255,255,255,.92);font-style:italic;}
+  .tag-hoje{display:inline-block;margin-left:6px;font-size:13px;font-weight:700;color:var(--vermelho-fundo);background:var(--dourado);border-radius:999px;padding:1px 8px;font-style:normal;}
+  .linha.hoje{background:rgba(238,214,126,.18);box-shadow:inset 3px 0 0 var(--dourado);border-radius:8px;padding:5px 8px;margin-left:-8px;margin-right:-8px;}
+
+  /* ---------- Programa, organizado por dias ---------- */
+  .dia{margin:0 0 28px;}
+  .dia:first-of-type{margin-top:10px;}
+  .data-dia{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:25px;line-height:1.15;margin:0 0 10px;padding-bottom:4px;border-bottom:1.5px solid rgba(238,214,126,.35);}
+  .item{margin:0 0 16px;scroll-margin-top:calc(var(--nav-h) + 8px);}
+  .item:last-child{margin-bottom:0;}
+  .item .local{color:var(--dourado);font-size:16.5px;margin:0;line-height:1.2;}
+  .item .titulo{font-family:var(--script);font-weight:700;color:var(--branco);font-size:20px;line-height:1.2;margin:1px 0 1px;}
+  .item .titulo .resto{font-family:var(--texto);font-weight:400;font-style:italic;font-size:16.5px;}
+  .item .desc{margin:2px 0 0;font-size:15.5px;line-height:1.25;text-align:justify;}
   .passado-p{opacity:.5;}
   .destaque{animation:destaque 1.6s ease-out 1;}
   @keyframes destaque{0%{background:rgba(238,214,126,.35);}100%{background:transparent;}}
@@ -90,7 +142,7 @@
   .rodape{display:block;width:100%;height:auto;position:relative;z-index:1;margin-top:12px;
     -webkit-mask-image:linear-gradient(to top,#000 78%,transparent 100%);mask-image:linear-gradient(to top,#000 78%,transparent 100%);}
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-  @media (prefers-reduced-motion:reduce){.faixa-tit .pulso{animation:none;}.destaque{animation:none;}html{scroll-behavior:auto;}}
+  @media (prefers-reduced-motion:reduce){.luz.aberto,.faixa-tit .pulso{animation:none;}.vista.entrar{animation:none;}.destaque{animation:none;}html{scroll-behavior:auto;}}
 </style>
 </head>
 <body>
@@ -100,107 +152,158 @@
   <img class="cabecalho" src="img/cabecalho.webp" width="1400" height="951"
        alt="Câmara Municipal da Póvoa de Varzim. É bom viver aqui! Póvoa de Varzim, Cidade Natal '26, 29 novembro a 9 janeiro">
 
+  <nav class="nav" role="tablist" aria-label="Escolha o que ver" id="nav">
+    <button type="button" role="tab" id="tab-programa" aria-controls="v-programa" aria-selected="true" data-vista="programa">Programa</button>
+    <button type="button" role="tab" id="tab-horario" aria-controls="v-horario" aria-selected="false" tabindex="-1" data-vista="horario">Horários de Funcionamento</button>
+  </nav>
+
   <main>
     <h1 class="sr">Cidade Natal '26, Póvoa de Varzim</h1>
 
-    <!-- ================= PROGRAMA (texto do cartaz) ================= -->
-    <section id="v-programa">
+    <!-- ================= PROGRAMA, DIA A DIA ================= -->
+    <section id="v-programa" class="vista" role="tabpanel" aria-labelledby="tab-programa">
+      <h2 class="sr" id="t-programa">Programa</h2>
       <div id="faixa"></div>
 
-      <article class="bloco" id="p-abertura" data-id="abertura">
-        <p class="data">29 novembro <span class="sep">|</span> 17h30</p>
-        <p class="local">Praça do Almada</p>
-        <h3 class="titulo">Espetáculo de abertura</h3>
-        <p class="desc">Fogo de artifício; abertura oficial das iluminações decorativas e da grande Árvore de Natal; atuações artísticas e musicais pela Academia Gimnoarte, Coro Go Gospel e Coro Feliz Natal</p>
+      <article class="dia">
+        <p class="data-dia">29 novembro</p>
+
+        <div class="item" id="p-abertura" data-id="abertura">
+          <p class="local">Praça do Almada</p>
+          <h3 class="titulo">Espetáculo de abertura</h3>
+          <p class="desc">Fogo de artifício; abertura oficial das iluminações decorativas e da grande Árvore de Natal; atuações artísticas e musicais pela Academia Gimnoarte, Coro Go Gospel e Coro Feliz Natal</p>
+        </div>
+
+        <div class="item" id="p-aldeia" data-id="aldeia">
+          <p class="local">Praça do Almada</p>
+          <h3 class="titulo">Aldeia Encantada de Natal</h3>
+          <p class="desc">Stands de artesanato, food-trucks, mini roda e um comboio de trilho.</p>
+        </div>
+
+        <div class="item" id="p-casa" data-id="casa">
+          <p class="local">Avenida Mousinho de Albuquerque</p>
+          <h3 class="titulo">Casa de Natal <span class="resto">- Palacete Villa Georgette</span></h3>
+        </div>
+
+        <div class="item" id="p-gelo" data-id="gelo">
+          <p class="local">Auditório da Lota</p>
+          <h3 class="titulo">Magia no Gelo</h3>
+          <p class="desc">Pista de gelo e Rampa de gelo</p>
+        </div>
+
+        <div class="item" id="p-roda" data-id="roda">
+          <p class="local">Junto à Fortaleza de Nossa Senhora da Conceição</p>
+          <h3 class="titulo">Roda Gigante</h3>
+        </div>
+
+        <div class="item" id="p-presepio" data-id="presepio">
+          <p class="local">Traseiras da Igreja da Senhora das Dores</p>
+          <h3 class="titulo">Recanto do Presépio</h3>
+          <p class="desc">Espaço acolhedor com decoração temática, um imponente pinheiro natural iluminado, artesanato e gastronomia</p>
+        </div>
+
+        <div class="item" id="p-arena" data-id="arena">
+          <p class="local">Exterior do Póvoa Arena</p>
+          <h3 class="titulo">Arena de Natal</h3>
+          <p class="desc">Decoração a rigor e petiscos</p>
+        </div>
+
+        <div class="item" id="p-circo" data-id="circo">
+          <p class="local">Parque da Cidade</p>
+          <h3 class="titulo">Circo Golden Show</h3>
+        </div>
       </article>
 
-      <article class="bloco" id="p-aldeia" data-id="aldeia">
-        <p class="data">29 novembro a 9 janeiro</p>
-        <p class="local">Praça do Almada</p>
-        <ul class="flocos">
-          <li>Segunda a sexta-feira <span class="sep">|</span> 12h00 às 20h00</li>
-          <li>Sábados <span class="sep">|</span> 10h00 às 22h00</li>
-          <li>Domingos <span class="sep">|</span> 11h00 às 20h00</li>
-          <li>24 e 31 dezembro <span class="sep">|</span> 11h00 às 16h00</li>
-          <li>25 dezembro e 1 janeiro - encerrado</li>
-        </ul>
-        <h3 class="titulo">Aldeia Encantada de Natal</h3>
-        <p class="desc">Stands de artesanato, food-trucks, mini roda e um comboio de trilho.</p>
-        <p class="desc">Espetáculos com animação diária:</p>
-        <ul class="espetaculos">
-          <li id="p-e1205" data-id="e1205"><span class="data-esp">5 dezembro <span class="sep">|</span> 17h30:</span><br>Teatro Musical <i>Príncipe Procura-se!</i></li>
-          <li id="p-e1206" data-id="e1206"><span class="data-esp">6 dezembro <span class="sep">|</span> 17h30:</span><br>Medley <i>Bluey e Bingo: aventura de Natal</i></li>
-          <li id="p-e1213" data-id="e1213"><span class="data-esp">13 dezembro <span class="sep">|</span> 17h30:</span><br>Teatro Musical <i>A Grande Festa do Pai Natal</i></li>
-          <li id="p-e1219" data-id="e1219"><span class="data-esp">19 dezembro <span class="sep">|</span> 17h30:</span><br>Teatro Musical <i>Rodolfo e o Ritmo de Natal</i></li>
-          <li id="p-e1220" data-id="e1220"><span class="data-esp">20 dezembro <span class="sep">|</span> 17h30:</span><br>Medley <i>Christmas Dance Party</i></li>
-          <li id="p-e1226" data-id="e1226"><span class="data-esp">26 dezembro <span class="sep">|</span> 17h30:</span><br>Medley <i>Patrulha Pata: Missão de Natal</i></li>
-          <li id="p-e1227" data-id="e1227"><span class="data-esp">27 dezembro <span class="sep">|</span> 17h30:</span><br>Teatro Musical <i>Embrulhados</i></li>
-          <li id="p-e0102" data-id="e0102"><span class="data-esp">2 janeiro <span class="sep">|</span> 17h30:</span><br>Medley <i>A Magia de Natal</i></li>
-        </ul>
+      <article class="dia">
+        <p class="data-dia">5 dezembro</p>
+        <div class="item" id="p-e1205" data-id="e1205">
+          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <h3 class="titulo">Teatro Musical <span class="resto">Príncipe Procura-se!</span></h3>
+        </div>
       </article>
 
-      <article class="bloco" id="p-casa" data-id="casa">
-        <p class="local">Avenida Mousinho de Albuquerque</p>
-        <h3 class="titulo">Casa de Natal <span class="resto">- Palacete Villa Georgette</span></h3>
-        <ul class="flocos">
-          <li>Segunda a sexta-feira <span class="sep">|</span> 17h00 às 21h00</li>
-          <li>Sábado e domingo <span class="sep">|</span> 10h00 às 22h00</li>
-        </ul>
+      <article class="dia">
+        <p class="data-dia">6 dezembro</p>
+        <div class="item" id="p-e1206" data-id="e1206">
+          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <h3 class="titulo">Medley <span class="resto">Bluey e Bingo: aventura de Natal</span></h3>
+        </div>
       </article>
 
-      <article class="bloco" id="p-gelo" data-id="gelo">
-        <p class="local">Auditório da Lota</p>
-        <h3 class="titulo">Magia no Gelo</h3>
-        <p class="desc">Pista de gelo e Rampa de gelo</p>
+      <article class="dia">
+        <p class="data-dia">12 dezembro</p>
+        <div class="item" id="p-drones" data-id="drones">
+          <p class="local">Alto Martim Vaz</p>
+          <h3 class="titulo">Espetáculo de drones</h3>
+        </div>
       </article>
 
-      <article class="bloco" id="p-roda" data-id="roda">
-        <p class="local">Junto à Fortaleza de Nossa Senhora da Conceição</p>
-        <h3 class="titulo">Roda Gigante</h3>
+      <article class="dia">
+        <p class="data-dia">13 dezembro</p>
+        <div class="item" id="p-rabanada" data-id="rabanada">
+          <p class="local">Posto de Turismo</p>
+          <h3 class="titulo">Festa da Rabanada</h3>
+        </div>
+        <div class="item" id="p-desfile" data-id="desfile">
+          <p class="local">Concentração e saída do Alto Martim Vaz</p>
+          <h3 class="titulo">Desfile de Pais Natal</h3>
+        </div>
+        <div class="item" id="p-e1213" data-id="e1213">
+          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <h3 class="titulo">Teatro Musical <span class="resto">A Grande Festa do Pai Natal</span></h3>
+        </div>
       </article>
 
-      <article class="bloco" id="p-presepio" data-id="presepio">
-        <p class="local">Traseiras da Igreja da Senhora das Dores</p>
-        <h3 class="titulo">Recanto do Presépio</h3>
-        <p class="desc">Espaço acolhedor com decoração temática, um imponente pinheiro natural iluminado, artesanato e gastronomia</p>
+      <article class="dia">
+        <p class="data-dia">19 dezembro</p>
+        <div class="item" id="p-e1219" data-id="e1219">
+          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <h3 class="titulo">Teatro Musical <span class="resto">Rodolfo e o Ritmo de Natal</span></h3>
+        </div>
       </article>
 
-      <article class="bloco" id="p-arena" data-id="arena">
-        <p class="local">Exterior do Póvoa Arena</p>
-        <h3 class="titulo">Arena de Natal</h3>
-        <p class="desc">Decoração a rigor e petiscos</p>
+      <article class="dia">
+        <p class="data-dia">20 dezembro</p>
+        <div class="item" id="p-e1220" data-id="e1220">
+          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <h3 class="titulo">Medley <span class="resto">Christmas Dance Party</span></h3>
+        </div>
       </article>
 
-      <article class="bloco" id="p-circo" data-id="circo">
-        <p class="data">29 novembro a 3 janeiro</p>
-        <p class="local">Parque da Cidade</p>
-        <h3 class="titulo">Circo Golden Show</h3>
-        <ul class="flocos">
-          <li>Sexta-feira e sábado <span class="sep">|</span> 16h00 e 21h00</li>
-          <li>Domingos e feriados às 16h00.</li>
-        </ul>
+      <article class="dia">
+        <p class="data-dia">26 dezembro</p>
+        <div class="item" id="p-e1226" data-id="e1226">
+          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <h3 class="titulo">Medley <span class="resto">Patrulha Pata: Missão de Natal</span></h3>
+        </div>
       </article>
 
-      <article class="bloco" id="p-drones" data-id="drones">
-        <p class="data">12 dezembro <span class="sep">|</span> 18h30</p>
-        <p class="local">Alto Martim Vaz</p>
-        <h3 class="titulo">Espetáculo de drones</h3>
+      <article class="dia">
+        <p class="data-dia">27 dezembro</p>
+        <div class="item" id="p-e1227" data-id="e1227">
+          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <h3 class="titulo">Teatro Musical <span class="resto">Embrulhados</span></h3>
+        </div>
       </article>
 
-      <article class="bloco" id="p-rabanada" data-id="rabanada">
-        <p class="data">13 dezembro <span class="sep">|</span> 15h00</p>
-        <p class="local">Posto de Turismo</p>
-        <h3 class="titulo">Festa da Rabanada</h3>
-      </article>
-
-      <article class="bloco" id="p-desfile" data-id="desfile">
-        <p class="data">13 dezembro <span class="sep">|</span> 15h30</p>
-        <p class="local">Concentração e saída do Alto Martim Vaz</p>
-        <h3 class="titulo">Desfile de Pais Natal</h3>
+      <article class="dia">
+        <p class="data-dia">2 janeiro</p>
+        <div class="item" id="p-e0102" data-id="e0102">
+          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <h3 class="titulo">Medley <span class="resto">A Magia de Natal</span></h3>
+        </div>
       </article>
 
       <p class="encerramento" id="p-iluminacoes">Iluminações decorativas por toda a cidade e instalações artísticas espalhadas por locais emblemáticos</p>
     </section>
+
+    <!-- ================= HORÁRIOS DE FUNCIONAMENTO ================= -->
+    <section id="v-horario" class="vista" role="tabpanel" aria-labelledby="tab-horario" hidden>
+      <h2 class="sr" id="t-horario">Horários de Funcionamento</h2>
+      <div class="espacos" role="tablist" aria-label="Escolha o espaço" id="espacos"></div>
+      <div class="painel" role="tabpanel" id="painel" aria-live="polite"></div>
+    </section>
+
   </main>
 
   <img class="rodape" src="img/rodape.webp" width="1400" height="348" alt="">
@@ -224,16 +327,23 @@
   function util(ds){ return ds>=1 && ds<=5; }
 
   var ESPACOS = [
-    { id:"mercados", periodo:[P0,P1],
+    { id:"mercados", nome:"Mercados de Natal", titulo:"Mercados de Natal’2026", periodo:[P0,P1], alvo:null,
       regras:[
         { txt:"segunda a sexta-feira, das 12h00 às 20h00", h:[720,1200], ap:function(dk,ds){ return util(ds) && !fer(dk) && !esp(dk); } },
         { txt:"sábados, das 10h00 às 22h00", h:[600,1320], ap:function(dk,ds){ return ds===6 && !esp(dk); } },
         { txt:"domingos e feriados, das 11h00 às 20h00", h:[660,1200], ap:function(dk,ds){ return (ds===0 || fer(dk)) && !esp(dk); } },
-        { txt:"dias 24 e 31 de dezembro, das 11h00 às 16h00", h:[660,960], ap:function(dk){ return e2431(dk); } },
-        { txt:"dias 25 de dezembro e 1 de janeiro", fecha:true, ap:function(dk){ return e251(dk); } }
+        { rot:"Dias Especiais", txt:"dias 24 e 31 de dezembro, das 11h00 às 16h00", h:[660,960], ap:function(dk){ return e2431(dk); } },
+        { rot:"Encerrado", txt:"dias 25 de dezembro e 1 de janeiro", fecha:true, ap:function(dk){ return e251(dk); } }
+      ],
+      linhas:[
+        { rot:"Locais", txt:"Praça do Almada, Largo Rua Sra. do Monte e Praça Exterior do Póvoa Arena" },
+        { rot:"Período de Atividade", txt:"de 29 de novembro de 2026 a 9 janeiro de 2027" },
+        { rot:"Horários", lista:[0,1,2] },
+        { regra:3 },
+        { regra:4 }
       ]
     },
-    { id:"casa", periodo:[P0,P1],
+    { id:"casa", nome:"Casa de Natal", titulo:"Casa de Natal", resto:" - Palacete Villa Georgette", local:"Avenida Mousinho de Albuquerque", periodo:[P0,P1], alvo:"casa",
       // O cartaz não indica horário próprio para 24, 25 e 31 de dezembro e 1 de janeiro.
       indef:esp,
       regras:[
@@ -241,7 +351,8 @@
         { txt:"Sábado e domingo | 10h00 às 22h00", h:[600,1320], ap:function(dk,ds){ return (ds===0 || ds===6) && !esp(dk); } }
       ]
     },
-    { id:"circo", periodo:[P0,"2027-01-03"], sessoes:true,
+    { id:"circo", nome:"Circo Golden Show", titulo:"Circo Golden Show", local:"Parque da Cidade", periodo:[P0,"2027-01-03"], sessoes:true, alvo:"circo",
+      periodoTxt:"29 novembro a 3 janeiro",
       regras:[
         { txt:"Sexta-feira e sábado | 16h00 e 21h00", s:[960,1260], ap:function(dk,ds){ return ds===5 || ds===6; } },
         { txt:"Domingos e feriados às 16h00.", s:[960], ap:function(dk,ds){ return ds===0 || fer(dk); } }
@@ -268,9 +379,7 @@
 
   /* ============================ DATAS ============================ */
   var DIAS = ["domingo","segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sábado"];
-  var DIAS_C = ["dom","seg","ter","qua","qui","sex","sáb"];
   var MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
-  var MESES_C = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
   function pad(n){ return (n<10?"0":"")+n; }
   function fmtH(m){ return Math.floor(m/60)+"h"+pad(m%60); }
   function dataDe(dk){ var p=dk.split("-"); return new Date(Date.UTC(+p[0],+p[1]-1,+p[2])); }
@@ -280,6 +389,13 @@
   function dow(dk){ return dataDe(dk).getUTCDay(); }
   function cap(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
   function fmtDia(dk,semana){ var d=dataDe(dk); return (semana?cap(DIAS[d.getUTCDay()])+", ":"")+d.getUTCDate()+" de "+MESES[d.getUTCMonth()]; }
+  function quandoRel(dk, hoje){
+    var n = difDias(hoje, dk);
+    if(n===0) return "hoje";
+    if(n===1) return "amanhã";
+    if(n>1 && n<7) return DIAS[dow(dk)];
+    return "a "+fmtDia(dk,false);
+  }
   function falta(min){
     if(min<60) return "daqui a "+min+" min";
     var h=Math.floor(min/60), r=min%60;
@@ -320,12 +436,105 @@
     return { tipo:"aberto", h:r.h, idx:idx };
   }
 
+  // Próxima abertura / sessão depois do momento "now"
+  function proxima(e, now){
+    var dk = now.dk < e.periodo[0] ? e.periodo[0] : now.dk;
+    for(var k=0; k<60 && dk<=e.periodo[1]; k++, dk=somaDias(dk,1)){
+      var d = diaEspaco(e, dk), mesmoDia = dk===now.dk;
+      if(d.tipo==="aberto" && (!mesmoDia || d.h[0]>now.m)) return quandoRel(dk, now.dk)+" às "+fmtH(d.h[0]);
+      if(d.tipo==="sessoes"){
+        for(var j=0;j<d.s.length;j++) if(!mesmoDia || d.s[j]>now.m) return quandoRel(dk, now.dk)+" às "+fmtH(d.s[j]);
+      }
+    }
+    return null;
+  }
+
+  function estado(e, now){
+    var d = diaEspaco(e, now.dk), n;
+    if(d.tipo==="fora"){
+      if(now.dk < e.periodo[0]){ n = proxima(e, now); return { cls:"fechado", txt:(e.sessoes?"Primeira sessão ":"Abre ")+n }; }
+      return { cls:"fechado", txt:"Terminou a "+fmtDia(e.periodo[1],false) };
+    }
+    if(d.tipo==="indef") return { cls:"indef", txt:"Horário de hoje por confirmar" };
+    if(d.tipo==="encerrado"){ n = proxima(e, now); return { cls:"fechado", txt:"Encerrado hoje"+(n?". Abre "+n:"") }; }
+    if(d.tipo==="aberto"){
+      if(now.m>=d.h[0] && now.m<d.h[1]) return { cls:"aberto", txt:"Aberto agora, até às "+fmtH(d.h[1]) };
+      if(now.m<d.h[0]) return { cls:"hoje", txt:"Abre hoje às "+fmtH(d.h[0]) };
+      n = proxima(e, now); return { cls:"fechado", txt:"Fechado"+(n?". Abre "+n:"") };
+    }
+    // Circo (sessões)
+    var futuras = (d.s||[]).filter(function(m){ return m>now.m; });
+    var incFut = (d.inc||[]).filter(function(m){ return m>now.m; });
+    var notaInc = incFut.length ? " ("+incFut.map(fmtH).join(", ")+" por confirmar)" : "";
+    if(futuras.length) return { cls:"hoje", txt:"Sessão hoje às "+futuras.map(fmtH).join(" e às ")+notaInc };
+    if(incFut.length) return { cls:"indef", txt:"Sessão das "+incFut.map(fmtH).join(", ")+" por confirmar" };
+    n = proxima(e, now);
+    return { cls:"fechado", txt:(d.tipo==="sem" ? "Sem sessões hoje" : "Sem mais sessões hoje")+(n?". Próxima "+n:"") };
+  }
+
+  /* ============================ ESTADO ============================ */
+  var sel = { espaco:"mercados" };
   var NOW = agoraLisboa();
 
   function esc(s){ return String(s).replace(/[&<>"]/g,function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+  function txtRegra(t){ return esc(t).replace(/ \| /g,' <span class="sep">|</span> '); }
+
+  /* ---------- Horários de Funcionamento ---------- */
+  function desenharHorario(){
+    var now = NOW;
+    var cont = document.getElementById("espacos"), html = "";
+    ESPACOS.forEach(function(e){
+      var st = estado(e, now), on = sel.espaco===e.id;
+      html += '<button type="button" role="tab" class="espaco" id="tab-'+e.id+'" aria-controls="painel" aria-selected="'+on+'" tabindex="'+(on?0:-1)+'" data-espaco="'+e.id+'">'
+           +  '<span class="nome">'+esc(e.nome)+'</span>'
+           +  '<span class="est"><span class="luz '+st.cls+'"></span><span>'+esc(st.txt)+'</span></span></button>';
+    });
+    cont.innerHTML = html;
+    desenharPainel();
+  }
+
+  function desenharPainel(){
+    var e = espaco(sel.espaco), now = NOW, d = diaEspaco(e, now.dk);
+    var hojeIdx = d.idx || [];
+    function li(i){
+      var r = e.regras[i], on = hojeIdx.indexOf(i)>=0;
+      return '<li class="'+(on?"hoje":"")+(r.nota?" nota":"")+'">'+txtRegra(r.txt)+(on?'<span class="tag-hoje">hoje</span>':'')+'</li>';
+    }
+    var h = "";
+    if(e.local) h += '<p class="local">'+esc(e.resto ? e.resto.replace(/^ - /,"")+", "+e.local : e.local)+'</p>';
+    if(e.linhas){
+      e.linhas.forEach(function(l){
+        if(l.lista){ h += '<p class="linha"><span class="rot">'+esc(l.rot)+':</span></p><ul class="regras">'+l.lista.map(li).join("")+'</ul>'; }
+        else if(l.regra!==undefined){
+          var r = e.regras[l.regra], on = hojeIdx.indexOf(l.regra)>=0;
+          h += '<p class="linha'+(on?" hoje":"")+'"><span class="rot">'+esc(r.rot)+':</span> '+esc(r.txt)+(on?'<span class="tag-hoje">hoje</span>':'')+'</p>';
+        }
+        else h += '<p class="linha"><span class="rot">'+esc(l.rot)+':</span> '+esc(l.txt)+'</p>';
+      });
+    } else {
+      if(e.periodoTxt) h += '<p class="linha"><span class="rot">Período:</span> '+esc(e.periodoTxt)+'</p>';
+      h += '<ul class="regras">'+e.regras.map(function(r,i){ return li(i); }).join("")+'</ul>';
+      if(e.desc) h += '<p class="desc">'+esc(e.desc)+'</p>';
+    }
+    var p = document.getElementById("painel");
+    p.innerHTML = h;
+    p.setAttribute("aria-labelledby","tab-"+e.id);
+  }
+
+  document.getElementById("espacos").addEventListener("click", function(ev){
+    var b = ev.target.closest("[data-espaco]"); if(!b) return;
+    sel.espaco = b.getAttribute("data-espaco"); desenharHorario();
+    var nb = document.getElementById("tab-"+sel.espaco); if(nb) nb.focus();
+  });
+  document.getElementById("espacos").addEventListener("keydown", function(ev){
+    var i = ESPACOS.map(function(e){return e.id;}).indexOf(sel.espaco), n = ESPACOS.length;
+    if(ev.key==="ArrowRight"||ev.key==="ArrowDown") i=(i+1)%n; else if(ev.key==="ArrowLeft"||ev.key==="ArrowUp") i=(i-1+n)%n; else return;
+    ev.preventDefault(); sel.espaco = ESPACOS[i].id; desenharHorario(); document.getElementById("tab-"+sel.espaco).focus();
+  });
 
   function irPara(id){
     var el = document.getElementById("p-"+id); if(!el) return;
+    mostrar("programa", { semScroll:true, semAnimacao:true });
     el.scrollIntoView({ behavior:"smooth", block:"start" });
     el.classList.remove("destaque"); void el.offsetWidth; el.classList.add("destaque");
   }
@@ -338,6 +547,39 @@
       if(el) el.classList.toggle("passado-p", e.d < now.dk);
     });
   }
+
+  /* ---------- Vistas (Programa / Horários de Funcionamento) ---------- */
+  var VISTAS = ["programa","horario"], vista = "programa";
+  var emIframe = window.parent !== window;
+  function vistaDoHash(){ var h = location.hash.slice(1); return VISTAS.indexOf(h)>=0 ? h : null; }
+  function mostrar(v, opc){
+    opc = opc || {};
+    if(VISTAS.indexOf(v)<0) v = "programa";
+    var mudou = v!==vista; vista = v;
+    VISTAS.forEach(function(x){
+      var tab = document.getElementById("tab-"+x), pan = document.getElementById("v-"+x), on = x===v;
+      tab.setAttribute("aria-selected", on ? "true" : "false"); tab.tabIndex = on ? 0 : -1;
+      pan.hidden = !on;
+      if(on && mudou && !opc.semAnimacao){ pan.classList.remove("entrar"); void pan.offsetWidth; pan.classList.add("entrar"); }
+    });
+    if(!opc.semHash && !lerSimulacao()){
+      try{ history.replaceState(null, "", v==="programa" ? location.pathname+location.search : "#"+v); }catch(e){}
+    }
+    if(mudou && !opc.semScroll && !emIframe){
+      var topo = document.getElementById("nav").offsetTop;
+      if(window.scrollY > topo) window.scrollTo({ top:topo, behavior:"smooth" });
+    }
+    decorar(); avisarAltura();
+  }
+  document.getElementById("nav").addEventListener("click", function(ev){
+    var b = ev.target.closest("[data-vista]"); if(b) mostrar(b.getAttribute("data-vista"));
+  });
+  document.getElementById("nav").addEventListener("keydown", function(ev){
+    var i = VISTAS.indexOf(vista);
+    var n = VISTAS.length;
+    if(ev.key==="ArrowRight") i=(i+1)%n; else if(ev.key==="ArrowLeft") i=(i+n-1)%n; else return;
+    ev.preventDefault(); mostrar(VISTAS[i]); document.getElementById("tab-"+VISTAS[i]).focus();
+  });
 
   /* ---------- Faixa no topo do programa: "Em curso" e "A seguir", em tempo real ---------- */
   // O cartaz só indica a hora de início dos espetáculos. Depois de começar, cada um
@@ -414,7 +656,8 @@
   document.getElementById("faixa").addEventListener("click", function(ev){
     var b = ev.target.closest("[data-ir]"); if(!b) return;
     var alvo = b.getAttribute("data-ir");
-    irPara(alvo==="mercados" ? "aldeia" : alvo);
+    if(alvo==="mercados"){ sel.espaco = "mercados"; desenharHorario(); mostrar("horario"); }
+    else irPara(alvo);
   });
 
   /* ---------- Decoração ---------- */
@@ -451,13 +694,18 @@
   /* ---------- Atualização ---------- */
   function atualizar(){
     NOW = agoraLisboa();
-    desenharFaixa(); desenharSelos();
+    desenharFaixa(); desenharHorario(); desenharSelos();
     avisarAltura();
   }
   atualizar();
+  mostrar(vistaDoHash() || "programa", { semAnimacao:true, semHash:true, semScroll:true });
   window.addEventListener("load", function(){ decorar(); avisarAltura(); });
   var rt; window.addEventListener("resize", function(){ clearTimeout(rt); rt = setTimeout(decorar, 200); });
-  window.addEventListener("hashchange", atualizar);
+  window.addEventListener("hashchange", function(){
+    var v = vistaDoHash();
+    if(v){ mostrar(v, { semHash:true }); return; }
+    atualizar();
+  });
   document.addEventListener("visibilitychange", function(){ if(!document.hidden) atualizar(); });
   // Atualiza no início de cada minuto (hora de Lisboa)
   setTimeout(function(){ atualizar(); setInterval(atualizar, 60000); }, (61 - new Date().getSeconds()) * 1000);
