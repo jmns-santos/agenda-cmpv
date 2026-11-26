@@ -44,7 +44,7 @@
   /* ---------- Navegação ---------- */
   .nav{
     position:sticky;top:0;z-index:20;
-    display:grid;grid-template-columns:1.55fr 1fr 1fr;gap:6px;
+    display:grid;grid-template-columns:1fr 1fr 1.55fr;gap:6px;
     padding:8px 14px;background:rgba(143,22,34,.92);
     -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
     border-bottom:1px solid rgba(238,214,126,.35);
@@ -54,8 +54,7 @@
     background:transparent;border:1.5px solid rgba(238,214,126,.55);
     font-family:var(--texto);font-size:14.5px;line-height:1.1;color:var(--dourado);
   }
-  .nav button.principal{font-weight:700;}
-  .nav button[aria-current="true"]{background:var(--dourado);color:var(--vermelho-fundo);border-color:var(--dourado);}
+    .nav button[aria-selected="true"]{background:var(--dourado);color:var(--vermelho-fundo);border-color:var(--dourado);}
 
   main{position:relative;z-index:1;padding:0 20px;}
   section{scroll-margin-top:calc(var(--nav-h) + 8px);padding-top:22px;}
@@ -65,6 +64,24 @@
   .aviso-periodo{margin:0 0 12px;font-size:16px;}
   .aviso-periodo b{font-family:var(--script);color:var(--dourado);font-size:21px;font-weight:700;}
   .teste{display:inline-block;font-size:13px;background:var(--dourado);color:var(--vermelho-fundo);border-radius:6px;padding:3px 8px;margin:0 0 8px;font-weight:700;}
+
+  /* ---------- Vistas ---------- */
+  .vista[hidden]{display:none;}
+  .vista.entrar{animation:entrar .32s ease-out;}
+  @keyframes entrar{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+  #teste{display:block;position:relative;z-index:1;padding:12px 20px 0;}
+  #teste:empty{display:none;}
+
+  /* Faixa "agora" no topo do programa */
+  .faixa{margin:2px 0 22px;padding:12px 14px;border-radius:14px;border:1.5px solid rgba(238,214,126,.7);background:rgba(109,15,25,.35);}
+  .faixa p{margin:0;font-size:16px;line-height:1.3;}
+  .faixa .relogio{margin-bottom:6px;}
+  .faixa .relogio .ponto{animation:pulso 1.8s ease-in-out infinite;}
+  .faixa p + p{margin-top:4px;}
+  .faixa b{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:19px;}
+  .faixa .acoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+  .faixa .acoes button{cursor:pointer;border-radius:999px;padding:7px 13px;font-size:15px;border:1.5px solid var(--dourado);background:transparent;color:var(--dourado);}
+  .faixa .acoes button.forte{background:var(--dourado);color:var(--vermelho-fundo);}
 
   /* ---------- Horário de funcionamento ---------- */
   .espacos{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0 0;}
@@ -219,7 +236,7 @@
   .rodape{display:block;width:100%;height:auto;position:relative;z-index:1;margin-top:12px;
     -webkit-mask-image:linear-gradient(to top,#000 78%,transparent 100%);mask-image:linear-gradient(to top,#000 78%,transparent 100%);}
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-  @media (prefers-reduced-motion:reduce){.luz.aberto{animation:none;}.destaque{animation:none;}html{scroll-behavior:auto;}}
+  @media (prefers-reduced-motion:reduce){.luz.aberto,.faixa .relogio .ponto{animation:none;}.vista.entrar{animation:none;}.destaque{animation:none;}html{scroll-behavior:auto;}}
 </style>
 </head>
 <body>
@@ -229,41 +246,20 @@
   <img class="cabecalho" src="img/cabecalho.webp" width="1400" height="951"
        alt="Câmara Municipal da Póvoa de Varzim. É bom viver aqui! Póvoa de Varzim, Cidade Natal '26, 29 novembro a 9 janeiro">
 
-  <nav class="nav" aria-label="Secções">
-    <button type="button" class="principal" data-ir="horario">Horário de funcionamento</button>
-    <button type="button" data-ir="dia-a-dia">Dia a dia</button>
-    <button type="button" data-ir="programa">Programa</button>
+  <nav class="nav" role="tablist" aria-label="Escolha o que ver" id="nav">
+    <button type="button" role="tab" id="tab-programa" aria-controls="v-programa" aria-selected="true" data-vista="programa">Programa</button>
+    <button type="button" role="tab" id="tab-dia-a-dia" aria-controls="v-dia-a-dia" aria-selected="false" tabindex="-1" data-vista="dia-a-dia">Dia a dia</button>
+    <button type="button" role="tab" id="tab-horario" aria-controls="v-horario" aria-selected="false" tabindex="-1" data-vista="horario">Horário de funcionamento</button>
   </nav>
 
+  <span id="teste"></span>
   <main>
     <h1 class="sr">Cidade Natal '26, Póvoa de Varzim</h1>
 
-    <!-- ================= HORÁRIO DE FUNCIONAMENTO ================= -->
-    <section id="horario" aria-labelledby="t-horario">
-      <span id="teste"></span>
-      <p class="relogio"><span class="ponto"></span><span id="relogio">&nbsp;</span></p>
-      <p class="aviso-periodo" id="aviso-periodo" hidden></p>
-      <h2 class="sec-titulo" id="t-horario">Horário de funcionamento:</h2>
-      <p class="linha" id="nota-inicio" hidden>Os horários entram em funcionamento a partir de 29 de novembro, data de início do Cidade Natal’26.</p>
-      <div class="espacos" role="tablist" aria-label="Escolha o espaço" id="espacos"></div>
-      <div class="painel" role="tabpanel" id="painel" aria-live="polite"></div>
-    </section>
-
-    <!-- ================= DIA A DIA ================= -->
-    <section id="dia-a-dia" aria-labelledby="t-dia">
-      <h2 class="sec-titulo" id="t-dia">Dia a dia</h2>
-      <div id="proximo"></div>
-      <div class="fita-wrap">
-        <button type="button" class="seta" id="ant" aria-label="Dia anterior">‹</button>
-        <div class="fita" id="fita" role="tablist" aria-label="Escolha o dia"></div>
-        <button type="button" class="seta" id="seg" aria-label="Dia seguinte">›</button>
-      </div>
-      <div id="dia" aria-live="polite"></div>
-    </section>
-
     <!-- ================= PROGRAMA (texto do cartaz) ================= -->
-    <section id="programa" aria-labelledby="t-programa">
-      <h2 class="sec-titulo" id="t-programa">Programa</h2>
+    <section id="v-programa" class="vista" role="tabpanel" aria-labelledby="tab-programa">
+      <h2 class="sr" id="t-programa">Programa</h2>
+      <div id="faixa"></div>
 
       <article class="bloco" id="p-abertura" data-id="abertura">
         <p class="data">29 novembro <span class="sep">|</span> 17h30</p>
@@ -359,6 +355,28 @@
 
       <p class="encerramento" id="p-iluminacoes">Iluminações decorativas por toda a cidade e instalações artísticas espalhadas por locais emblemáticos</p>
     </section>
+    <!-- ================= DIA A DIA ================= -->
+    <section id="v-dia-a-dia" class="vista" role="tabpanel" aria-labelledby="tab-dia-a-dia" hidden>
+      <h2 class="sr" id="t-dia">Dia a dia</h2>
+      <div id="proximo"></div>
+      <div class="fita-wrap">
+        <button type="button" class="seta" id="ant" aria-label="Dia anterior">‹</button>
+        <div class="fita" id="fita" role="tablist" aria-label="Escolha o dia"></div>
+        <button type="button" class="seta" id="seg" aria-label="Dia seguinte">›</button>
+      </div>
+      <div id="dia" aria-live="polite"></div>
+    </section>
+
+    <!-- ================= HORÁRIO DE FUNCIONAMENTO ================= -->
+    <section id="v-horario" class="vista" role="tabpanel" aria-labelledby="tab-horario" hidden>
+      <p class="relogio"><span class="ponto"></span><span id="relogio">&nbsp;</span></p>
+      <p class="aviso-periodo" id="aviso-periodo" hidden></p>
+      <h2 class="sec-titulo" id="t-horario">Horário de funcionamento:</h2>
+      <p class="linha" id="nota-inicio" hidden>Os horários entram em funcionamento a partir de 29 de novembro, data de início do Cidade Natal’26.</p>
+      <div class="espacos" role="tablist" aria-label="Escolha o espaço" id="espacos"></div>
+      <div class="painel" role="tabpanel" id="painel" aria-live="polite"></div>
+    </section>
+
   </main>
 
   <img class="rodape" src="img/rodape.webp" width="1400" height="348" alt="">
@@ -733,11 +751,7 @@
   }
 
   function desenharProximo(){
-    var now = NOW, nowAbs = difDias(P0, now.dk)*1440 + now.m, prox = null;
-    for(var i=0;i<EVENTOS.length;i++){
-      var e = EVENTOS[i], abs = difDias(P0, e.d)*1440 + e.m;
-      if(abs>nowAbs && (!prox || abs<prox.abs)) prox = { e:e, abs:abs };
-    }
+    var now = NOW, nowAbs = difDias(P0, now.dk)*1440 + now.m, prox = proximoEvento(now);
     var box = document.getElementById("proximo");
     if(!prox){ box.innerHTML = ""; return; }
     var e = prox.e, n = difDias(now.dk, e.d);
@@ -773,6 +787,7 @@
   });
   function irPara(id){
     var el = document.getElementById("p-"+id); if(!el) return;
+    mostrar("programa", { semScroll:true, semAnimacao:true });
     el.scrollIntoView({ behavior:"smooth", block:"start" });
     el.classList.remove("destaque"); void el.offsetWidth; el.classList.add("destaque");
   }
@@ -780,15 +795,15 @@
   /* ---------- Selos no programa ---------- */
   function desenharSelos(){
     var now = NOW;
-    Array.prototype.forEach.call(document.querySelectorAll("#programa .selo"), function(s){ s.parentNode.removeChild(s); });
-    Array.prototype.forEach.call(document.querySelectorAll("#programa .passado-p"), function(s){ s.classList.remove("passado-p"); });
+    Array.prototype.forEach.call(document.querySelectorAll("#v-programa .selo"), function(s){ s.parentNode.removeChild(s); });
+    Array.prototype.forEach.call(document.querySelectorAll("#v-programa .passado-p"), function(s){ s.classList.remove("passado-p"); });
     function selo(id, cls, txt){
-      var el = document.querySelector('#programa [data-id="'+id+'"]'); if(!el) return;
+      var el = document.querySelector('#v-programa [data-id="'+id+'"]'); if(!el) return;
       var alvo = el.querySelector(".titulo") || el.querySelector(".data-esp") || el;
       var s = document.createElement("span"); s.className = "selo "+cls; s.textContent = txt; alvo.appendChild(s);
     }
     EVENTOS.forEach(function(e){
-      var el = document.querySelector('#programa [data-id="'+e.id+'"]');
+      var el = document.querySelector('#v-programa [data-id="'+e.id+'"]');
       if(e.d<now.dk || (e.d===now.dk && e.m<=now.m)) { if(el && e.d<now.dk) el.classList.add("passado-p"); }
       if(e.d===now.dk) selo(e.id, e.m>now.m?"hoje":"fechado", e.m>now.m ? "Hoje às "+fmtH(e.m) : "Começou às "+fmtH(e.m));
     });
@@ -800,18 +815,81 @@
     });
   }
 
-  /* ---------- Navegação ---------- */
-  var navBtns = document.querySelectorAll(".nav [data-ir]");
-  Array.prototype.forEach.call(navBtns, function(b){
-    b.addEventListener("click", function(){ document.getElementById(b.getAttribute("data-ir")).scrollIntoView({ behavior:"smooth", block:"start" }); });
-  });
-  function marcarNav(){
-    var y = window.scrollY + window.innerHeight*0.33, atual = null;
-    ["horario","dia-a-dia","programa"].forEach(function(id){ var s = document.getElementById(id); if(s.getBoundingClientRect().top + window.scrollY <= y) atual = id; });
-    if(!atual) atual = "horario";
-    Array.prototype.forEach.call(navBtns, function(b){ b.setAttribute("aria-current", b.getAttribute("data-ir")===atual ? "true" : "false"); });
+  /* ---------- Vistas (Programa / Dia a dia / Horário de funcionamento) ---------- */
+  var VISTAS = ["programa","dia-a-dia","horario"], vista = "programa";
+  var emIframe = window.parent !== window;
+  function vistaDoHash(){ var h = location.hash.slice(1); return VISTAS.indexOf(h)>=0 ? h : null; }
+  function mostrar(v, opc){
+    opc = opc || {};
+    if(VISTAS.indexOf(v)<0) v = "programa";
+    var mudou = v!==vista; vista = v;
+    VISTAS.forEach(function(x){
+      var tab = document.getElementById("tab-"+x), pan = document.getElementById("v-"+x), on = x===v;
+      tab.setAttribute("aria-selected", on ? "true" : "false"); tab.tabIndex = on ? 0 : -1;
+      pan.hidden = !on;
+      if(on && mudou && !opc.semAnimacao){ pan.classList.remove("entrar"); void pan.offsetWidth; pan.classList.add("entrar"); }
+    });
+    if(v==="dia-a-dia") centrarDia(false);
+    if(!opc.semHash && !lerSimulacao()){
+      try{ history.replaceState(null, "", v==="programa" ? location.pathname+location.search : "#"+v); }catch(e){}
+    }
+    if(mudou && !opc.semScroll && !emIframe){
+      var topo = document.getElementById("nav").offsetTop;
+      if(window.scrollY > topo) window.scrollTo({ top:topo, behavior:"smooth" });
+    }
+    decorar(); avisarAltura();
   }
-  window.addEventListener("scroll", marcarNav, { passive:true });
+  document.getElementById("nav").addEventListener("click", function(ev){
+    var b = ev.target.closest("[data-vista]"); if(b) mostrar(b.getAttribute("data-vista"));
+  });
+  document.getElementById("nav").addEventListener("keydown", function(ev){
+    var i = VISTAS.indexOf(vista);
+    if(ev.key==="ArrowRight") i=(i+1)%3; else if(ev.key==="ArrowLeft") i=(i+2)%3; else return;
+    ev.preventDefault(); mostrar(VISTAS[i]); document.getElementById("tab-"+VISTAS[i]).focus();
+  });
+  document.getElementById("faixa").addEventListener("click", function(ev){
+    var b = ev.target.closest("[data-abrir]"); if(!b) return;
+    var v = b.getAttribute("data-abrir"), d = b.getAttribute("data-dia");
+    mostrar(v);
+    if(d) escolherDia(d, false);
+  });
+
+  /* ---------- Faixa "agora" no topo do programa ---------- */
+  function proximoEvento(now){
+    var nowAbs = difDias(P0, now.dk)*1440 + now.m, prox = null;
+    EVENTOS.forEach(function(e){ var abs = difDias(P0, e.d)*1440 + e.m; if(abs>nowAbs && (!prox || abs<prox.abs)) prox = { e:e, abs:abs, falta:abs-nowAbs }; });
+    return prox;
+  }
+  function desenharFaixa(){
+    var now = NOW, acoes = "";
+    var h = '<p class="relogio"><span class="ponto"></span><span>Agora: '+esc(fmtDia(now.dk,true))+', '+fmtH(now.m)+'</span></p>';
+    if(now.dk < P0){
+      var n = difDias(now.dk, P0);
+      h += '<p>'+(n===1 ? 'O Cidade Natal’26 começa <b>amanhã</b>.' : 'Faltam <b>'+n+' dias</b> para o Cidade Natal’26.')+'</p>';
+      h += '<p>Os horários entram em funcionamento a 29 de novembro.</p>';
+      acoes = '<button type="button" class="forte" data-abrir="dia-a-dia" data-dia="'+P0+'">Ver o primeiro dia</button>';
+    } else if(now.dk > P1){
+      h += '<p>O Cidade Natal’26 decorreu de 29 de novembro a 9 de janeiro.</p>';
+      acoes = '<button type="button" class="forte" data-abrir="dia-a-dia">Ver dia a dia</button>';
+    } else {
+      var abertos = ["mercados","aldeia","casa"].filter(function(id){ return estado(espaco(id), now).cls==="aberto"; }).map(function(id){ return espaco(id).nome; });
+      if(abertos.length){
+        var lista = abertos.length>1 ? abertos.slice(0,-1).join(", ")+" e "+abertos[abertos.length-1] : abertos[0];
+        h += '<p><span class="rot">Aberto agora:</span> '+esc(lista)+'.</p>';
+      } else {
+        h += '<p>Neste momento, os espaços com horário estão fechados.</p>';
+      }
+      var pr = proximoEvento(now);
+      if(pr){
+        var e = pr.e, dd = difDias(now.dk, e.d);
+        var quando = dd===0 ? "hoje às "+fmtH(e.m)+", "+falta(pr.falta) : dd===1 ? "amanhã às "+fmtH(e.m) : fmtDia(e.d,true)+", às "+fmtH(e.m);
+        h += '<p><span class="rot">A seguir:</span> '+e.tit+', '+esc(quando)+'.</p>';
+      }
+      acoes = '<button type="button" class="forte" data-abrir="dia-a-dia" data-dia="'+now.dk+'">Ver o dia de hoje</button>';
+    }
+    acoes += '<button type="button" data-abrir="horario">Horário de funcionamento</button>';
+    document.getElementById("faixa").innerHTML = '<div class="faixa">'+h+'<div class="acoes">'+acoes+'</div></div>';
+  }
 
   /* ---------- Decoração ---------- */
   function aleatorio(seed){ return function(){ seed|=0; seed=seed+0x6D2B79F5|0; var t=Math.imul(seed^seed>>>15,1|seed); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
@@ -849,14 +927,19 @@
     var antes = NOW.dk;
     NOW = agoraLisboa();
     if(inicial || (sel.seguirHoje && NOW.dk!==antes)) sel.dia = diaPadrao();
-    desenharHorario(); desenharFita(); desenharDia(); desenharProximo(); desenharSelos(); marcarNav();
+    desenharFaixa(); desenharHorario(); desenharFita(); desenharDia(); desenharProximo(); desenharSelos();
     if(inicial || NOW.dk!==antes) centrarDia(false);
     avisarAltura();
   }
   atualizar(true);
+  mostrar(vistaDoHash() || "programa", { semAnimacao:true, semHash:true, semScroll:true });
   window.addEventListener("load", function(){ decorar(); centrarDia(false); avisarAltura(); });
   var rt; window.addEventListener("resize", function(){ clearTimeout(rt); rt = setTimeout(function(){ decorar(); centrarDia(false); }, 200); });
-  window.addEventListener("hashchange", function(){ sel.seguirHoje = true; atualizar(true); });
+  window.addEventListener("hashchange", function(){
+    var v = vistaDoHash();
+    if(v){ mostrar(v, { semHash:true }); return; }
+    sel.seguirHoje = true; atualizar(true);
+  });
   document.addEventListener("visibilitychange", function(){ if(!document.hidden) atualizar(false); });
   setInterval(function(){ atualizar(false); }, 30000);
 })();
