@@ -131,7 +131,9 @@
   .item{margin:0 0 16px;scroll-margin-top:calc(var(--nav-h) + 8px);}
   .item:last-child{margin-bottom:0;}
   .item .hora{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:19px;line-height:1.15;margin:0;}
+  .item .hora::before{content:"🕒 ";}
   .item .local{color:var(--dourado);font-size:16.5px;margin:0;line-height:1.2;}
+  .item .local::before{content:"📍 ";}
   .item .titulo{font-family:var(--script);font-weight:700;color:var(--branco);font-size:20px;line-height:1.2;margin:1px 0 1px;}
   .item .titulo .resto{font-family:var(--texto);font-weight:400;font-style:italic;font-size:16.5px;}
   .item .desc{margin:2px 0 0;font-size:15.5px;line-height:1.25;text-align:justify;}
