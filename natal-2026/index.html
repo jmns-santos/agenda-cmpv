@@ -44,7 +44,7 @@
   /* ---------- Navegação ---------- */
   .nav{
     position:sticky;top:0;z-index:20;
-    display:grid;grid-template-columns:1fr 1fr 1.55fr;gap:6px;
+    display:grid;grid-template-columns:1fr 1fr;gap:8px;
     padding:8px 14px;background:rgba(197,38,46,.96);
     -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
     border-bottom:1px solid rgba(238,214,126,.5);
@@ -59,8 +59,6 @@
   main{position:relative;z-index:1;padding:0 20px;}
   section{scroll-margin-top:calc(var(--nav-h) + 8px);padding-top:22px;}
   .sec-titulo{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:30px;line-height:1.1;margin:0 0 6px;}
-  .relogio{display:flex;align-items:center;gap:8px;font-size:15.5px;color:var(--branco);margin:0 0 4px;}
-  .relogio .ponto{width:8px;height:8px;border-radius:50%;background:var(--dourado);flex:0 0 auto;}
   .teste{display:inline-block;font-size:13px;background:var(--dourado);color:var(--vermelho-fundo);border-radius:6px;padding:3px 8px;margin:0 0 8px;font-weight:700;}
 
   /* ---------- Vistas ---------- */
@@ -70,18 +68,23 @@
   #teste{display:block;position:relative;z-index:1;padding:12px 20px 0;}
   #teste:empty{display:none;}
 
-  /* Faixa "agora" no topo do programa */
-  .faixa{margin:2px 0 22px;padding:12px 14px;border-radius:14px;border:1.5px solid rgba(238,214,126,.55);background:transparent;}
+  /* Faixa no topo do programa */
+  .faixa{margin:4px 0 22px;padding:12px 16px;border-radius:16px;border:1.5px solid rgba(238,214,126,.55);}
   .faixa p{margin:0;font-size:16px;line-height:1.3;}
-  .faixa .relogio{margin-bottom:6px;}
-  .faixa .relogio .ponto{animation:pulso 1.8s ease-in-out infinite;}
-  .faixa p + p{margin-top:4px;}
-  .faixa b{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:19px;}
-  .faixa .estados{list-style:none;margin:6px 0 0;padding:0;}
-  .faixa .estados li{display:flex;gap:8px;align-items:flex-start;font-size:16px;line-height:1.3;margin:0 0 3px;color:var(--branco);}
-  .faixa .estados .luz{color:var(--dourado);}
-  .faixa .estados .nm{color:var(--dourado);}
-  .faixa .seguir{margin-top:8px !important;}
+  .faixa .contagem b{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:21px;}
+  .faixa .seguir{cursor:pointer;}
+  #faixa.ativa .faixa{background:var(--dourado);border-color:var(--dourado);color:var(--vermelho-fundo);padding:14px 16px;}
+  #faixa.ativa .rot{color:var(--vermelho-fundo);font-weight:700;}
+  .faixa-tit{display:flex;align-items:center;gap:9px;font-family:var(--script);font-weight:700;font-size:27px !important;line-height:1.1 !important;}
+  .faixa-tit .pulso{width:11px;height:11px;border-radius:50%;background:var(--vermelho-fundo);animation:pulso 1.6s ease-in-out infinite;}
+  .faixa-tit .hora{margin-left:auto;font-family:var(--texto);font-weight:700;font-size:16px;}
+  .curso{list-style:none;margin:8px 0 10px;padding:0;}
+  .curso li{padding:7px 0;border-top:1px solid rgba(143,22,34,.25);cursor:pointer;}
+  .curso li:first-child{border-top:0;padding-top:2px;}
+  .curso .c-tit{display:block;font-family:var(--script);font-weight:700;font-size:20px;line-height:1.15;}
+  .curso .c-tit i{font-family:var(--texto);font-weight:400;}
+  .curso .c-det{display:block;font-size:15px;line-height:1.25;}
+  #faixa.ativa .seguir{padding-top:8px;border-top:1px solid rgba(143,22,34,.35);}
 
   /* ---------- Horário de funcionamento ---------- */
   .espacos{display:grid;grid-template-columns:1fr;gap:8px;margin:2px 0 0;}
@@ -123,68 +126,6 @@
   .tag-hoje{display:inline-block;margin-left:6px;font-size:13px;font-weight:700;color:var(--vermelho-fundo);background:var(--dourado);border-radius:999px;padding:1px 8px;font-style:normal;}
   .linha.hoje{background:rgba(238,214,126,.18);box-shadow:inset 3px 0 0 var(--dourado);border-radius:8px;padding:5px 8px;margin-left:-8px;margin-right:-8px;}
 
-  /* ---------- Dia a dia ---------- */
-  .fita-wrap{display:flex;align-items:center;gap:4px;margin:4px -20px 0;padding:0 4px;}
-  .seta{flex:0 0 32px;height:64px;border-radius:10px;border:0;background:transparent;color:var(--dourado);font-size:28px;line-height:1;cursor:pointer;}
-  .seta:disabled{opacity:.3;cursor:default;}
-  .fita{
-    flex:1;display:flex;gap:6px;overflow-x:auto;scroll-snap-type:x mandatory;min-width:0;
-    padding:6px 2px 8px;scrollbar-width:none;
-  }
-  .fita::-webkit-scrollbar{display:none;}
-  .dia{
-    flex:0 0 52px;scroll-snap-align:center;cursor:pointer;
-    display:flex;flex-direction:column;align-items:center;gap:1px;
-    padding:6px 0 6px;border-radius:12px;border:1.5px solid rgba(238,214,126,.55);
-    background:transparent;
-  }
-  .dia .sem{font-size:12.5px;line-height:1;color:var(--dourado);}
-  .dia .num{font-family:var(--script);font-weight:700;font-size:22px;line-height:1.05;}
-  .dia .mes{font-size:12px;line-height:1;opacity:.85;}
-  .dia .marcas{display:flex;gap:3px;height:6px;margin-top:3px;}
-  .dia .marcas i{width:5px;height:5px;border-radius:50%;background:var(--dourado);}
-  .dia.e-hoje{border-color:var(--branco);border-width:2px;}
-  .dia.passado{opacity:.55;}
-  .dia[aria-selected="true"]{background:var(--dourado);border-color:var(--dourado);color:var(--vermelho-fundo);opacity:1;}
-  .dia[aria-selected="true"] .sem{color:var(--vermelho-fundo);}
-  .dia[aria-selected="true"] .marcas i{background:var(--vermelho-fundo);}
-
-  .dia-cab{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;margin:12px 0 2px;}
-  .dia-cab h3{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:25px;line-height:1.1;margin:0;}
-  .etq{font-size:13.5px;border:1px solid var(--dourado);color:var(--dourado);border-radius:999px;padding:1px 9px;}
-  .etq.forte{background:var(--dourado);color:var(--vermelho-fundo);}
-
-  /* Linha do tempo */
-  .tempo{position:relative;margin:10px 0 4px;padding:0 0 22px;}
-  .tempo.com-agora{padding-top:26px;}
-  .t-linha{margin:0 0 12px;}
-  .t-nome{font-size:14.5px;margin:0 0 4px;display:flex;justify-content:space-between;gap:8px;}
-  .t-nome .info{color:var(--dourado);white-space:nowrap;}
-  .t-pista{position:relative;height:24px;border-radius:12px;background:rgba(255,255,255,.13);}
-  .t-barra{position:absolute;top:0;bottom:0;border-radius:12px;background:linear-gradient(90deg,#f3e19a,#e4c464);}
-  .t-vazio{font-size:14px;color:rgba(255,255,255,.85);padding:3px 12px;line-height:18px;}
-  .t-eixo{position:absolute;left:0;right:0;bottom:0;height:18px;}
-  .t-eixo span{position:absolute;transform:translateX(-50%);font-size:12.5px;color:rgba(255,255,255,.8);}
-  .t-eixo span:first-child{transform:none;}
-  .t-eixo span:last-child{transform:translateX(-100%);}
-  .t-agora{position:absolute;top:0;bottom:18px;width:0;border-left:2px solid var(--branco);z-index:2;}
-  .t-agora span{position:absolute;top:0;left:-1px;transform:translateX(-50%);font-size:12.5px;background:var(--branco);color:var(--vermelho-fundo);border-radius:4px;padding:0 5px;white-space:nowrap;font-weight:700;}
-  .t-agora.ini span{transform:none;left:-2px;}
-  .t-agora.dir span{transform:translateX(-100%);left:1px;}
-
-  .eventos{list-style:none;margin:8px 0 0;padding:0;}
-  .eventos li{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:10px 0;border-top:1px solid rgba(255,255,255,.2);cursor:pointer;}
-  .eventos li:first-child{border-top:0;}
-  .eventos .hora{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:21px;line-height:1.1;}
-  .eventos .tit{font-family:var(--script);font-weight:700;font-size:19px;line-height:1.15;display:block;}
-  .eventos .tit i{font-family:var(--texto);font-weight:400;}
-  .eventos .onde{display:block;color:var(--dourado);font-size:15px;line-height:1.25;}
-  .eventos .est{display:inline-block;margin-top:4px;font-size:13.5px;border-radius:999px;padding:1px 9px;}
-  .eventos .est.futuro{background:var(--dourado);color:var(--vermelho-fundo);font-weight:700;}
-  .eventos .est.comecou{border:1px solid rgba(255,255,255,.7);}
-  .eventos .est.incerto{border:1px dashed var(--dourado);color:var(--dourado);}
-  .eventos li.passado{opacity:.5;}
-  .sem-eventos{font-size:16px;margin:8px 0 0;}
   /* ---------- Programa (como no cartaz) ---------- */
   .bloco{margin:0 0 24px;scroll-margin-top:calc(var(--nav-h) + 8px);}
   .bloco:first-of-type{margin-top:10px;}
@@ -209,7 +150,7 @@
   .rodape{display:block;width:100%;height:auto;position:relative;z-index:1;margin-top:12px;
     -webkit-mask-image:linear-gradient(to top,#000 78%,transparent 100%);mask-image:linear-gradient(to top,#000 78%,transparent 100%);}
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-  @media (prefers-reduced-motion:reduce){.luz.aberto,.faixa .relogio .ponto{animation:none;}.vista.entrar{animation:none;}.destaque{animation:none;}html{scroll-behavior:auto;}}
+  @media (prefers-reduced-motion:reduce){.luz.aberto,.faixa-tit .pulso{animation:none;}.vista.entrar{animation:none;}.destaque{animation:none;}html{scroll-behavior:auto;}}
 </style>
 </head>
 <body>
@@ -221,7 +162,6 @@
 
   <nav class="nav" role="tablist" aria-label="Escolha o que ver" id="nav">
     <button type="button" role="tab" id="tab-programa" aria-controls="v-programa" aria-selected="true" data-vista="programa">Programa</button>
-    <button type="button" role="tab" id="tab-dia-a-dia" aria-controls="v-dia-a-dia" aria-selected="false" tabindex="-1" data-vista="dia-a-dia">Dia a dia</button>
     <button type="button" role="tab" id="tab-horario" aria-controls="v-horario" aria-selected="false" tabindex="-1" data-vista="horario">Horário de funcionamento</button>
   </nav>
 
@@ -328,17 +268,6 @@
 
       <p class="encerramento" id="p-iluminacoes">Iluminações decorativas por toda a cidade e instalações artísticas espalhadas por locais emblemáticos</p>
     </section>
-    <!-- ================= DIA A DIA ================= -->
-    <section id="v-dia-a-dia" class="vista" role="tabpanel" aria-labelledby="tab-dia-a-dia" hidden>
-      <h2 class="sr" id="t-dia">Dia a dia</h2>
-      <div class="fita-wrap">
-        <button type="button" class="seta" id="ant" aria-label="Dia anterior">‹</button>
-        <div class="fita" id="fita" role="tablist" aria-label="Escolha o dia"></div>
-        <button type="button" class="seta" id="seg" aria-label="Dia seguinte">›</button>
-      </div>
-      <div id="dia" aria-live="polite"></div>
-    </section>
-
     <!-- ================= HORÁRIO DE FUNCIONAMENTO ================= -->
     <section id="v-horario" class="vista" role="tabpanel" aria-labelledby="tab-horario" hidden>
       <h2 class="sr" id="t-horario">Horário de funcionamento</h2>
@@ -541,7 +470,7 @@
   }
 
   /* ============================ ESTADO ============================ */
-  var sel = { espaco:"mercados", dia:null, seguirHoje:true };
+  var sel = { espaco:"mercados" };
   var NOW = agoraLisboa();
 
   function esc(s){ return String(s).replace(/[&<>"]/g,function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
@@ -602,112 +531,6 @@
     ev.preventDefault(); sel.espaco = vis[i].id; desenharHorario(); document.getElementById("tab-"+sel.espaco).focus();
   });
 
-  /* ---------- Dia a dia ---------- */
-  var TODOS_DIAS = (function(){ var a=[], dk=P0; while(dk<=P1){ a.push(dk); dk=somaDias(dk,1); } return a; })();
-  function eventosDe(dk){ return EVENTOS.filter(function(e){ return e.d===dk; }); }
-  function diaPadrao(){ return NOW.dk<P0 ? P0 : NOW.dk>P1 ? P1 : NOW.dk; }
-
-  function desenharFita(){
-    var f = document.getElementById("fita"), html = "";
-    TODOS_DIAS.forEach(function(dk){
-      var d = dataDe(dk), n = eventosDe(dk).length, on = dk===sel.dia;
-      var cls = "dia"+(dk===NOW.dk?" e-hoje":"")+(dk<NOW.dk?" passado":"");
-      var rotulo = fmtDia(dk,true)+(dk===NOW.dk?", hoje":"")+(n?", "+n+(n>1?" eventos":" evento"):"")+(fer(dk)?", feriado":"");
-      html += '<button type="button" role="tab" class="'+cls+'" aria-selected="'+on+'" tabindex="'+(on?0:-1)+'" data-dia="'+dk+'" aria-label="'+esc(rotulo)+'">'
-           +  '<span class="sem">'+(dk===NOW.dk?"hoje":DIAS_C[d.getUTCDay()])+'</span>'
-           +  '<span class="num">'+d.getUTCDate()+'</span>'
-           +  '<span class="mes">'+MESES_C[d.getUTCMonth()]+'</span>'
-           +  '<span class="marcas">'+new Array(Math.min(n,3)+1).join("<i></i>")+'</span></button>';
-    });
-    f.innerHTML = html;
-    document.getElementById("ant").disabled = sel.dia<=P0;
-    document.getElementById("seg").disabled = sel.dia>=P1;
-  }
-  function centrarDia(suave){
-    var f = document.getElementById("fita"), b = f.querySelector('[data-dia="'+sel.dia+'"]'); if(!b) return;
-    var alvo = b.offsetLeft - f.offsetLeft - f.clientWidth/2 + b.offsetWidth/2;
-    if(f.scrollTo) f.scrollTo({ left:alvo, behavior:suave?"smooth":"auto" }); else f.scrollLeft = alvo;
-  }
-
-  var T0 = 600, T1 = 1320; // eixo: 10h00 a 22h00
-  function pct(m){ return Math.max(0, Math.min(100, (m-T0)/(T1-T0)*100)); }
-
-  function desenharDia(){
-    var dk = sel.dia, now = NOW, html = "";
-    var etqs = [];
-    if(fer(dk)) etqs.push('<span class="etq">Feriado</span>');
-    html += '<div class="dia-cab"><h3>'+esc(cap(fmtDia(dk,true)))+'</h3>'+etqs.join("")+'</div>';
-
-    // Linha do tempo
-    var linhas = "";
-    var mer = diaEspaco(espaco("mercados"), dk);
-    linhas += linhaBarra("Mercados de Natal", mer, "Encerrados neste dia");
-    linhas += linhaBarra("Casa de Natal", diaEspaco(espaco("casa"), dk), "");
-    var evs = eventosDe(dk);
-    var agora = "";
-    if(dk===now.dk && now.m>=T0 && now.m<=T1){
-      agora = '<div class="t-agora'+(pct(now.m)>85?" dir":pct(now.m)<15?" ini":"")+'" style="left:'+pct(now.m)+'%"><span>agora '+fmtH(now.m)+'</span></div>';
-    }
-    var eixo = '<div class="t-eixo">';
-    for(var m=T0; m<=T1; m+=120) eixo += '<span style="left:'+pct(m)+'%">'+(m/60)+'h</span>';
-    eixo += '</div>';
-    html += '<div class="tempo'+(agora?" com-agora":"")+'" aria-hidden="true">'+linhas+agora+eixo+'</div>';
-
-    // Lista do dia (eventos + sessões do circo)
-    var ci = diaEspaco(espaco("circo"), dk);
-    var itens = evs.map(function(e){ return { m:e.m, tit:e.tit, loc:e.loc, alvo:e.id }; });
-    if(ci.tipo==="sessoes"){
-      ci.s.forEach(function(m){ itens.push({ m:m, tit:"Circo Golden Show", loc:"Parque da Cidade", alvo:"circo" }); });
-      ci.inc.forEach(function(m){ itens.push({ m:m, tit:"Circo Golden Show", loc:"Parque da Cidade", alvo:"circo", incerto:true }); });
-    }
-    itens.sort(function(a,b){ return a.m-b.m; });
-    if(itens.length){
-      html += '<ul class="eventos">';
-      itens.forEach(function(it){
-        var est = "", passado = dk<now.dk;
-        if(it.incerto) est = '<span class="est incerto">Sessão por confirmar</span>';
-        else if(dk===now.dk){
-          if(it.m>now.m) est = '<span class="est futuro">'+cap(falta(it.m-now.m))+'</span>';
-          else { est = '<span class="est comecou">Começou às '+fmtH(it.m)+'</span>'; passado = true; }
-        }
-        html += '<li class="'+(passado?"passado":"")+'" data-alvo="'+it.alvo+'"><span class="hora">'+fmtH(it.m)+'</span><span><span class="tit">'+it.tit+'</span><span class="onde">'+esc(it.loc)+'</span>'+est+'</span></li>';
-      });
-      html += '</ul>';
-    } else {
-      html += '<p class="sem-eventos">Sem espetáculos neste dia.</p>';
-    }
-
-    document.getElementById("dia").innerHTML = html;
-  }
-  function linhaBarra(nome, d, txtFechado){
-    var info, corpo;
-    if(d.tipo==="aberto"){ info = fmtH(d.h[0])+" às "+fmtH(d.h[1]); corpo = '<span class="t-barra" style="left:'+pct(d.h[0])+'%;width:'+(pct(d.h[1])-pct(d.h[0]))+'%"></span>'; }
-    else if(d.tipo==="encerrado"){ info = ""; corpo = '<span class="t-vazio">'+esc(txtFechado)+'</span>'; }
-    else if(d.tipo==="indef"){ info = ""; corpo = '<span class="t-vazio">Horário deste dia por confirmar</span>'; }
-    else return "";
-    return '<div class="t-linha"><p class="t-nome"><span>'+esc(nome)+'</span><span class="info">'+esc(info)+'</span></p><div class="t-pista">'+corpo+'</div></div>';
-  }
-
-  function escolherDia(dk, suave){
-    if(dk<P0 || dk>P1) return;
-    sel.dia = dk; sel.seguirHoje = (dk===diaPadrao());
-    desenharFita(); desenharDia(); centrarDia(suave);
-  }
-  document.getElementById("fita").addEventListener("click", function(ev){
-    var b = ev.target.closest("[data-dia]"); if(!b) return; escolherDia(b.getAttribute("data-dia"), true);
-    var nb = document.querySelector('#fita [data-dia="'+sel.dia+'"]'); if(nb) nb.focus({preventScroll:true});
-  });
-  document.getElementById("fita").addEventListener("keydown", function(ev){
-    if(ev.key==="ArrowRight") escolherDia(somaDias(sel.dia,1), true);
-    else if(ev.key==="ArrowLeft") escolherDia(somaDias(sel.dia,-1), true);
-    else return;
-    ev.preventDefault(); var nb = document.querySelector('#fita [data-dia="'+sel.dia+'"]'); if(nb) nb.focus({preventScroll:true});
-  });
-  document.getElementById("ant").addEventListener("click", function(){ escolherDia(somaDias(sel.dia,-1), true); });
-  document.getElementById("seg").addEventListener("click", function(){ escolherDia(somaDias(sel.dia,1), true); });
-  document.getElementById("dia").addEventListener("click", function(ev){
-    var li = ev.target.closest("[data-alvo]"); if(!li) return; irPara(li.getAttribute("data-alvo"));
-  });
   function irPara(id){
     var el = document.getElementById("p-"+id); if(!el) return;
     mostrar("programa", { semScroll:true, semAnimacao:true });
@@ -724,8 +547,8 @@
     });
   }
 
-  /* ---------- Vistas (Programa / Dia a dia / Horário de funcionamento) ---------- */
-  var VISTAS = ["programa","dia-a-dia","horario"], vista = "programa";
+  /* ---------- Vistas (Programa / Horário de funcionamento) ---------- */
+  var VISTAS = ["programa","horario"], vista = "programa";
   var emIframe = window.parent !== window;
   function vistaDoHash(){ var h = location.hash.slice(1); return VISTAS.indexOf(h)>=0 ? h : null; }
   function mostrar(v, opc){
@@ -738,7 +561,6 @@
       pan.hidden = !on;
       if(on && mudou && !opc.semAnimacao){ pan.classList.remove("entrar"); void pan.offsetWidth; pan.classList.add("entrar"); }
     });
-    if(v==="dia-a-dia") centrarDia(false);
     if(!opc.semHash && !lerSimulacao()){
       try{ history.replaceState(null, "", v==="programa" ? location.pathname+location.search : "#"+v); }catch(e){}
     }
@@ -753,39 +575,87 @@
   });
   document.getElementById("nav").addEventListener("keydown", function(ev){
     var i = VISTAS.indexOf(vista);
-    if(ev.key==="ArrowRight") i=(i+1)%3; else if(ev.key==="ArrowLeft") i=(i+2)%3; else return;
+    var n = VISTAS.length;
+    if(ev.key==="ArrowRight") i=(i+1)%n; else if(ev.key==="ArrowLeft") i=(i+n-1)%n; else return;
     ev.preventDefault(); mostrar(VISTAS[i]); document.getElementById("tab-"+VISTAS[i]).focus();
   });
 
-  /* ---------- Faixa "agora" no topo do programa ---------- */
-  function proximoEvento(now){
-    var nowAbs = difDias(P0, now.dk)*1440 + now.m, prox = null;
-    EVENTOS.forEach(function(e){ var abs = difDias(P0, e.d)*1440 + e.m; if(abs>nowAbs && (!prox || abs<prox.abs)) prox = { e:e, abs:abs, falta:abs-nowAbs }; });
-    return prox;
+  /* ---------- Faixa no topo do programa: "Em curso" e "A seguir", em tempo real ---------- */
+  // O cartaz só indica a hora de início dos espetáculos. Depois de começar, cada um
+  // aparece em "Em curso" durante este número de minutos.
+  var JANELA_EM_CURSO = 60;
+  var COM_HORARIO = [ ["mercados","Mercados de Natal","abrem"], ["casa","Casa de Natal","abre"] ];
+
+  function itensDoDia(dk){
+    var it = EVENTOS.filter(function(e){ return e.d===dk; }).map(function(e){ return { m:e.m, tit:e.tit, loc:e.loc, alvo:e.id }; });
+    var ci = diaEspaco(espaco("circo"), dk);
+    if(ci.tipo==="sessoes") ci.s.forEach(function(m){ it.push({ m:m, tit:"Circo Golden Show", loc:"Parque da Cidade", alvo:"circo" }); });
+    return it.sort(function(a,b){ return a.m-b.m; });
   }
-  function desenharFaixa(){
-    var now = NOW;
-    var h = '<p class="relogio"><span><span class="rot">Agora:</span> '+esc(fmtDia(now.dk,true))+', '+fmtH(now.m)+'</span></p>';
-    if(now.dk < P0){
-      var n = difDias(now.dk, P0);
-      h += '<p>'+(n===1 ? 'O Cidade Natal’26 começa <b>amanhã</b>.' : 'Faltam <b>'+n+' dias</b> para o Cidade Natal’26.')+'</p>';
-    } else if(now.dk > P1){
-      h += '<p>O Cidade Natal’26 decorreu de 29 de novembro a 9 de janeiro.</p>';
-    } else {
-      var linhas = ["mercados","casa","circo"].map(function(id){
-        var e = espaco(id), st = estado(e, now);
-        return '<li><span class="luz '+st.cls+'"></span><span><span class="nm">'+esc(e.nome)+':</span> '+esc(st.txt.charAt(0).toLowerCase()+st.txt.slice(1))+'</span></li>';
+  function proximoItem(now){
+    var dk = now.dk < P0 ? P0 : now.dk;
+    for(var k=0; k<50 && dk<=P1; k++, dk=somaDias(dk,1)){
+      var cand = [];
+      COM_HORARIO.forEach(function(c){
+        var d = diaEspaco(espaco(c[0]), dk);
+        if(d.tipo==="aberto") cand.push({ m:d.h[0], tit:c[1], verbo:c[2], alvo:c[0], abre:true });
       });
-      h += '<ul class="estados">'+linhas.join("")+'</ul>';
-      var pr = proximoEvento(now);
-      if(pr){
-        var e = pr.e, dd = difDias(now.dk, e.d);
-        var quando = dd===0 ? "hoje às "+fmtH(e.m)+", "+falta(pr.falta) : dd===1 ? "amanhã às "+fmtH(e.m) : fmtDia(e.d,true)+", às "+fmtH(e.m);
-        h += '<p class="seguir"><span class="rot">A seguir:</span> '+e.tit+', '+esc(quando)+'.</p>';
+      itensDoDia(dk).forEach(function(i){ cand.push(i); });
+      cand = cand.filter(function(c){ return dk>now.dk || c.m>now.m; }).sort(function(a,b){ return a.m-b.m; });
+      if(cand.length){
+        var primeiro = cand[0], mesmos = cand.filter(function(c){ return c.m===primeiro.m && c.abre===primeiro.abre; });
+        return { dk:dk, m:primeiro.m, itens: primeiro.abre ? mesmos : [primeiro] };
       }
     }
-    document.getElementById("faixa").innerHTML = '<div class="faixa">'+h+'</div>';
+    return null;
   }
+  function quandoTxt(dk, m, now){
+    var dd = difDias(now.dk, dk);
+    if(dd===0){ var f = m-now.m; return "hoje às "+fmtH(m)+" ("+falta(f)+")"; }
+    if(dd===1) return "amanhã às "+fmtH(m);
+    return fmtDia(dk,true)+", às "+fmtH(m);
+  }
+  function desenharFaixa(){
+    var now = NOW, h = "", ativa = false;
+    if(now.dk < P0){
+      var n = difDias(now.dk, P0);
+      h = '<p class="contagem">'+(n===1 ? 'O Cidade Natal’26 começa <b>amanhã</b>.' : 'Faltam <b>'+n+' dias</b> para o Cidade Natal’26.')+'</p>';
+    } else if(now.dk > P1){
+      h = '<p class="contagem">O Cidade Natal’26 terminou a 9 de janeiro.</p>';
+    } else {
+      var curso = [];
+      COM_HORARIO.forEach(function(c){
+        var d = diaEspaco(espaco(c[0]), now.dk);
+        if(d.tipo==="aberto" && now.m>=d.h[0] && now.m<d.h[1]) curso.push({ tit:c[1], det:"até às "+fmtH(d.h[1]), alvo:c[0] });
+      });
+      itensDoDia(now.dk).forEach(function(i){
+        if(now.m>=i.m && now.m<i.m+JANELA_EM_CURSO) curso.push({ tit:i.tit, det:"começou às "+fmtH(i.m)+", "+i.loc, alvo:i.alvo });
+      });
+      if(curso.length){
+        ativa = true;
+        h += '<p class="faixa-tit"><span class="pulso"></span>Em curso<span class="hora">'+fmtH(now.m)+'</span></p><ul class="curso">'
+          +  curso.map(function(c){ return '<li data-ir="'+c.alvo+'"><span class="c-tit">'+c.tit+'</span><span class="c-det">'+esc(c.det)+'</span></li>'; }).join("")
+          +  '</ul>';
+      }
+      var px = proximoItem(now);
+      if(px){
+        var nomes = px.itens.map(function(i){ return i.tit; });
+        var oque = px.itens[0].abre
+          ? (nomes.length>1 ? nomes.join(" e ")+" abrem" : nomes[0]+" "+px.itens[0].verbo)+" "+quandoTxt(px.dk, px.m, now)
+          : nomes[0]+", "+quandoTxt(px.dk, px.m, now);
+        h += '<p class="seguir" data-ir="'+px.itens[0].alvo+'"><span class="rot">A seguir:</span> '+oque+'.</p>';
+      }
+    }
+    var box = document.getElementById("faixa");
+    box.className = ativa ? "ativa" : "";
+    box.innerHTML = '<div class="faixa">'+h+'</div>';
+  }
+  document.getElementById("faixa").addEventListener("click", function(ev){
+    var b = ev.target.closest("[data-ir]"); if(!b) return;
+    var alvo = b.getAttribute("data-ir");
+    if(alvo==="mercados"){ sel.espaco = "mercados"; desenharHorario(); mostrar("horario"); }
+    else irPara(alvo);
+  });
 
   /* ---------- Decoração ---------- */
   function aleatorio(seed){ return function(){ seed|=0; seed=seed+0x6D2B79F5|0; var t=Math.imul(seed^seed>>>15,1|seed); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
@@ -822,22 +692,21 @@
   function atualizar(inicial){
     var antes = NOW.dk;
     NOW = agoraLisboa();
-    if(inicial || (sel.seguirHoje && NOW.dk!==antes)) sel.dia = diaPadrao();
-    desenharFaixa(); desenharHorario(); desenharFita(); desenharDia(); desenharSelos();
-    if(inicial || NOW.dk!==antes) centrarDia(false);
+    desenharFaixa(); desenharHorario(); desenharSelos();
     avisarAltura();
   }
   atualizar(true);
   mostrar(vistaDoHash() || "programa", { semAnimacao:true, semHash:true, semScroll:true });
-  window.addEventListener("load", function(){ decorar(); centrarDia(false); avisarAltura(); });
-  var rt; window.addEventListener("resize", function(){ clearTimeout(rt); rt = setTimeout(function(){ decorar(); centrarDia(false); }, 200); });
+  window.addEventListener("load", function(){ decorar(); avisarAltura(); });
+  var rt; window.addEventListener("resize", function(){ clearTimeout(rt); rt = setTimeout(decorar, 200); });
   window.addEventListener("hashchange", function(){
     var v = vistaDoHash();
     if(v){ mostrar(v, { semHash:true }); return; }
-    sel.seguirHoje = true; atualizar(true);
+    atualizar(true);
   });
   document.addEventListener("visibilitychange", function(){ if(!document.hidden) atualizar(false); });
-  setInterval(function(){ atualizar(false); }, 30000);
+  // Atualiza no início de cada minuto (hora de Lisboa)
+  setTimeout(function(){ atualizar(false); setInterval(function(){ atualizar(false); }, 60000); }, (61 - new Date().getSeconds()) * 1000);
 })();
 </script>
 </body>
