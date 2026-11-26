@@ -128,16 +128,20 @@
   .dia{margin:0 0 28px;}
   .dia:first-of-type{margin-top:10px;}
   .data-dia{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:25px;line-height:1.15;margin:0 0 10px;padding-bottom:4px;border-bottom:1.5px solid rgba(238,214,126,.35);}
-  .item{margin:0 0 16px;scroll-margin-top:calc(var(--nav-h) + 8px);}
+  .local-grupo{margin:0 0 16px;}
+  .local-grupo:last-child{margin-bottom:0;}
+  .local-nome{color:var(--dourado);font-size:16.5px;margin:0 0 6px;line-height:1.2;display:flex;align-items:flex-start;gap:6px;font-weight:600;}
+  .local-nome .resto{font-weight:400;}
+  .local-nome::before{content:"";flex:0 0 auto;width:13px;height:13px;margin-top:3px;background:currentColor;
+    -webkit-mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>') center/contain no-repeat;
+    mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>') center/contain no-repeat;}
+  .item{margin:0 0 10px;padding-left:19px;scroll-margin-top:calc(var(--nav-h) + 8px);}
   .item:last-child{margin-bottom:0;}
-  .item .hora{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:19px;line-height:1.15;margin:0;display:flex;align-items:center;gap:6px;}
+  .local-grupo .item + .item{margin-top:14px;padding-top:10px;border-top:1px dashed rgba(238,214,126,.25);}
+  .item .hora{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:19px;line-height:1.15;margin:0 0 1px;display:flex;align-items:center;gap:6px;}
   .item .hora::before{content:"";flex:0 0 auto;width:15px;height:15px;background:currentColor;
     -webkit-mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="black" stroke-width="2.2"/><path d="M12 7v5l4 2" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>') center/contain no-repeat;
     mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="black" stroke-width="2.2"/><path d="M12 7v5l4 2" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>') center/contain no-repeat;}
-  .item .local{color:var(--dourado);font-size:16.5px;margin:0;line-height:1.2;display:flex;align-items:flex-start;gap:6px;}
-  .item .local::before{content:"";flex:0 0 auto;width:13px;height:13px;margin-top:3px;background:currentColor;
-    -webkit-mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>') center/contain no-repeat;
-    mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>') center/contain no-repeat;}
   .item .titulo{font-family:var(--script);font-weight:700;color:var(--branco);font-size:20px;line-height:1.2;margin:1px 0 1px;}
   .item .titulo .resto{font-family:var(--texto);font-weight:400;font-style:italic;font-size:16.5px;}
   .item .desc{margin:2px 0 0;font-size:15.5px;line-height:1.25;text-align:justify;}
@@ -175,141 +179,175 @@
       <article class="dia">
         <p class="data-dia">29 novembro - Domingo</p>
 
-        <div class="item" id="p-abertura" data-id="abertura">
-          <p class="hora">17h30</p>
-          <p class="local">Praça do Almada</p>
-          <h3 class="titulo">Espetáculo de abertura</h3>
-          <p class="desc">Fogo de artifício; abertura oficial das iluminações decorativas e da grande Árvore de Natal; atuações artísticas e musicais pela Academia Gimnoarte, Coro Go Gospel e Coro Feliz Natal</p>
+        <div class="local-grupo">
+          <p class="local-nome">Praça do Almada</p>
+          <div class="item" id="p-abertura" data-id="abertura">
+            <p class="hora">17h30</p>
+            <h3 class="titulo">Espetáculo de abertura</h3>
+            <p class="desc">Fogo de artifício; abertura oficial das iluminações decorativas e da grande Árvore de Natal; atuações artísticas e musicais pela Academia Gimnoarte, Coro Go Gospel e Coro Feliz Natal</p>
+          </div>
+          <div class="item" id="p-aldeia" data-id="aldeia">
+            <h3 class="titulo">Aldeia Encantada de Natal</h3>
+            <p class="desc">Stands de artesanato, food-trucks, mini roda e um comboio de trilho.</p>
+          </div>
         </div>
 
-        <div class="item" id="p-aldeia" data-id="aldeia">
-          <p class="local">Praça do Almada</p>
-          <h3 class="titulo">Aldeia Encantada de Natal</h3>
-          <p class="desc">Stands de artesanato, food-trucks, mini roda e um comboio de trilho.</p>
+        <div class="local-grupo">
+          <p class="local-nome">Avenida Mousinho de Albuquerque</p>
+          <div class="item" id="p-casa" data-id="casa">
+            <h3 class="titulo">Casa de Natal <span class="resto">- Palacete Villa Georgette</span></h3>
+          </div>
         </div>
 
-        <div class="item" id="p-casa" data-id="casa">
-          <p class="local">Avenida Mousinho de Albuquerque</p>
-          <h3 class="titulo">Casa de Natal <span class="resto">- Palacete Villa Georgette</span></h3>
+        <div class="local-grupo">
+          <p class="local-nome">Auditório da Lota</p>
+          <div class="item" id="p-gelo" data-id="gelo">
+            <h3 class="titulo">Magia no Gelo</h3>
+            <p class="desc">Pista de gelo e Rampa de gelo</p>
+          </div>
         </div>
 
-        <div class="item" id="p-gelo" data-id="gelo">
-          <p class="local">Auditório da Lota</p>
-          <h3 class="titulo">Magia no Gelo</h3>
-          <p class="desc">Pista de gelo e Rampa de gelo</p>
+        <div class="local-grupo">
+          <p class="local-nome">Junto à Fortaleza de Nossa Senhora da Conceição</p>
+          <div class="item" id="p-roda" data-id="roda">
+            <h3 class="titulo">Roda Gigante</h3>
+          </div>
         </div>
 
-        <div class="item" id="p-roda" data-id="roda">
-          <p class="local">Junto à Fortaleza de Nossa Senhora da Conceição</p>
-          <h3 class="titulo">Roda Gigante</h3>
+        <div class="local-grupo">
+          <p class="local-nome">Traseiras da Igreja da Senhora das Dores</p>
+          <div class="item" id="p-presepio" data-id="presepio">
+            <h3 class="titulo">Recanto do Presépio</h3>
+            <p class="desc">Espaço acolhedor com decoração temática, um imponente pinheiro natural iluminado, artesanato e gastronomia</p>
+          </div>
         </div>
 
-        <div class="item" id="p-presepio" data-id="presepio">
-          <p class="local">Traseiras da Igreja da Senhora das Dores</p>
-          <h3 class="titulo">Recanto do Presépio</h3>
-          <p class="desc">Espaço acolhedor com decoração temática, um imponente pinheiro natural iluminado, artesanato e gastronomia</p>
+        <div class="local-grupo">
+          <p class="local-nome">Exterior do Póvoa Arena</p>
+          <div class="item" id="p-arena" data-id="arena">
+            <h3 class="titulo">Arena de Natal</h3>
+            <p class="desc">Decoração a rigor e petiscos</p>
+          </div>
         </div>
 
-        <div class="item" id="p-arena" data-id="arena">
-          <p class="local">Exterior do Póvoa Arena</p>
-          <h3 class="titulo">Arena de Natal</h3>
-          <p class="desc">Decoração a rigor e petiscos</p>
-        </div>
-
-        <div class="item" id="p-circo" data-id="circo">
-          <p class="local">Parque da Cidade</p>
-          <h3 class="titulo">Circo Golden Show</h3>
+        <div class="local-grupo">
+          <p class="local-nome">Parque da Cidade</p>
+          <div class="item" id="p-circo" data-id="circo">
+            <h3 class="titulo">Circo Golden Show</h3>
+          </div>
         </div>
       </article>
 
       <article class="dia">
         <p class="data-dia">5 dezembro - Sábado</p>
-        <div class="item" id="p-e1205" data-id="e1205">
-          <p class="hora">17h30</p>
-          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
-          <h3 class="titulo">Teatro Musical <span class="resto">Príncipe Procura-se!</span></h3>
+        <div class="local-grupo">
+          <p class="local-nome">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <div class="item" id="p-e1205" data-id="e1205">
+            <p class="hora">17h30</p>
+            <h3 class="titulo">Teatro Musical <span class="resto">Príncipe Procura-se!</span></h3>
+          </div>
         </div>
       </article>
 
       <article class="dia">
         <p class="data-dia">6 dezembro - Domingo</p>
-        <div class="item" id="p-e1206" data-id="e1206">
-          <p class="hora">17h30</p>
-          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
-          <h3 class="titulo">Medley <span class="resto">Bluey e Bingo: aventura de Natal</span></h3>
+        <div class="local-grupo">
+          <p class="local-nome">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <div class="item" id="p-e1206" data-id="e1206">
+            <p class="hora">17h30</p>
+            <h3 class="titulo">Medley <span class="resto">Bluey e Bingo: aventura de Natal</span></h3>
+          </div>
         </div>
       </article>
 
       <article class="dia">
         <p class="data-dia">12 dezembro - Sábado</p>
-        <div class="item" id="p-drones" data-id="drones">
-          <p class="hora">18h30</p>
-          <p class="local">Alto Martim Vaz</p>
-          <h3 class="titulo">Espetáculo de drones</h3>
+        <div class="local-grupo">
+          <p class="local-nome">Alto Martim Vaz</p>
+          <div class="item" id="p-drones" data-id="drones">
+            <p class="hora">18h30</p>
+            <h3 class="titulo">Espetáculo de drones</h3>
+          </div>
         </div>
       </article>
 
       <article class="dia">
         <p class="data-dia">13 dezembro - Domingo</p>
-        <div class="item" id="p-rabanada" data-id="rabanada">
-          <p class="hora">15h00</p>
-          <p class="local">Posto de Turismo</p>
-          <h3 class="titulo">Festa da Rabanada</h3>
+        <div class="local-grupo">
+          <p class="local-nome">Posto de Turismo</p>
+          <div class="item" id="p-rabanada" data-id="rabanada">
+            <p class="hora">15h00</p>
+            <h3 class="titulo">Festa da Rabanada</h3>
+          </div>
         </div>
-        <div class="item" id="p-desfile" data-id="desfile">
-          <p class="hora">15h30</p>
-          <p class="local">Concentração e saída do Alto Martim Vaz</p>
-          <h3 class="titulo">Desfile de Pais Natal</h3>
+        <div class="local-grupo">
+          <p class="local-nome">Concentração e saída do Alto Martim Vaz</p>
+          <div class="item" id="p-desfile" data-id="desfile">
+            <p class="hora">15h30</p>
+            <h3 class="titulo">Desfile de Pais Natal</h3>
+          </div>
         </div>
-        <div class="item" id="p-e1213" data-id="e1213">
-          <p class="hora">17h30</p>
-          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
-          <h3 class="titulo">Teatro Musical <span class="resto">A Grande Festa do Pai Natal</span></h3>
+        <div class="local-grupo">
+          <p class="local-nome">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <div class="item" id="p-e1213" data-id="e1213">
+            <p class="hora">17h30</p>
+            <h3 class="titulo">Teatro Musical <span class="resto">A Grande Festa do Pai Natal</span></h3>
+          </div>
         </div>
       </article>
 
       <article class="dia">
         <p class="data-dia">19 dezembro - Sábado</p>
-        <div class="item" id="p-e1219" data-id="e1219">
-          <p class="hora">17h30</p>
-          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
-          <h3 class="titulo">Teatro Musical <span class="resto">Rodolfo e o Ritmo de Natal</span></h3>
+        <div class="local-grupo">
+          <p class="local-nome">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <div class="item" id="p-e1219" data-id="e1219">
+            <p class="hora">17h30</p>
+            <h3 class="titulo">Teatro Musical <span class="resto">Rodolfo e o Ritmo de Natal</span></h3>
+          </div>
         </div>
       </article>
 
       <article class="dia">
         <p class="data-dia">20 dezembro - Domingo</p>
-        <div class="item" id="p-e1220" data-id="e1220">
-          <p class="hora">17h30</p>
-          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
-          <h3 class="titulo">Medley <span class="resto">Christmas Dance Party</span></h3>
+        <div class="local-grupo">
+          <p class="local-nome">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <div class="item" id="p-e1220" data-id="e1220">
+            <p class="hora">17h30</p>
+            <h3 class="titulo">Medley <span class="resto">Christmas Dance Party</span></h3>
+          </div>
         </div>
       </article>
 
       <article class="dia">
         <p class="data-dia">26 dezembro - Sábado</p>
-        <div class="item" id="p-e1226" data-id="e1226">
-          <p class="hora">17h30</p>
-          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
-          <h3 class="titulo">Medley <span class="resto">Patrulha Pata: Missão de Natal</span></h3>
+        <div class="local-grupo">
+          <p class="local-nome">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <div class="item" id="p-e1226" data-id="e1226">
+            <p class="hora">17h30</p>
+            <h3 class="titulo">Medley <span class="resto">Patrulha Pata: Missão de Natal</span></h3>
+          </div>
         </div>
       </article>
 
       <article class="dia">
         <p class="data-dia">27 dezembro - Domingo</p>
-        <div class="item" id="p-e1227" data-id="e1227">
-          <p class="hora">17h30</p>
-          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
-          <h3 class="titulo">Teatro Musical <span class="resto">Embrulhados</span></h3>
+        <div class="local-grupo">
+          <p class="local-nome">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <div class="item" id="p-e1227" data-id="e1227">
+            <p class="hora">17h30</p>
+            <h3 class="titulo">Teatro Musical <span class="resto">Embrulhados</span></h3>
+          </div>
         </div>
       </article>
 
       <article class="dia">
         <p class="data-dia">2 janeiro - Sábado</p>
-        <div class="item" id="p-e0102" data-id="e0102">
-          <p class="hora">17h30</p>
-          <p class="local">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
-          <h3 class="titulo">Medley <span class="resto">A Magia de Natal</span></h3>
+        <div class="local-grupo">
+          <p class="local-nome">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></p>
+          <div class="item" id="p-e0102" data-id="e0102">
+            <p class="hora">17h30</p>
+            <h3 class="titulo">Medley <span class="resto">A Magia de Natal</span></h3>
+          </div>
         </div>
       </article>
 
