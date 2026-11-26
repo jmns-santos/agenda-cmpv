@@ -38,10 +38,31 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/dia-nacional-do-mar-4/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Comemorações do Dia Internacional da Pessoas com Deficiência
+SUMMARY:35 anos da Biblioteca Municipal Rocha Peixoto
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261205
+DTSTAMP:20261126T121131Z
+UID:MzUtYW5vcy1kYS1iaWJsaW90ZWNhLW11bmljaXBhbC1yb2NoYS1wZWl4b3RvfDIwMjYtMT
+ EtMjYgMTI6MDk6MjY=@agenda.cm-pvarzim.pt
+CATEGORIES:Cultura,Conmemoraciones y ceremonias
+DESCRIPTION:A Biblioteca Municipal Rocha Peixoto assinala\, no próximo di
+ a 30 de novembro\, o 35.º aniversário do atual edifício. Para assinalar
+  a data\, foi preparado um programa que convida a comunidade a viajar\, a 
+ escrever e a descobrir o que se esconde por detrás das estantes.\n\nTítu
+ lo y descripción del evento en portugués\, tal como los publica el munic
+ ipio.\n\nMás información: https://www.cm-pvarzim.pt/eventos/35-anos-da-b
+ iblioteca-municipal-rocha-peixoto/
+LAST-MODIFIED:20261126T121131Z
+LOCATION:Biblioteca Municipal Rocha Peixoto
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/35-anos-da-biblioteca-municipal-roch
+ a-peixoto/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Comemorações do Dia Internacional da Pessoa com Deficiência
 DTSTART:20261204T210000Z
 DTEND:20261204T223000Z
-DTSTAMP:20261123T152756Z
+DTSTAMP:20261126T092820Z
 UID:Y29tZW1vcmFjb2VzLWRvLWRpYS1pbnRlcm5hY2lvbmFsLWRhLXBlc3NvYXMtY29tLWRlZm
  ljaWVuY2lhfDIwMjYtMTEtMTkgMTU6NDg6MDg=@agenda.cm-pvarzim.pt
 CATEGORIES:Ciudadanía,Conmemoraciones y ceremonias
@@ -52,7 +73,7 @@ DESCRIPTION:O Município da Póvoa de Varzim associa-se à APIC – Associ
  n del evento en portugués\, tal como los publica el municipio.\n\nMás in
  formación: https://www.cm-pvarzim.pt/eventos/comemoracoes-do-dia-internac
  ional-da-pessoas-com-deficiencia/
-LAST-MODIFIED:20261123T152756Z
+LAST-MODIFIED:20261126T092820Z
 LOCATION:Centro Ocupacional da Lapa
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/comemoracoes-do-dia-internacional-da

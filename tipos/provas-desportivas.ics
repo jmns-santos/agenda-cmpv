@@ -37,4 +37,44 @@ LOCATION:Escolas do concelho\, Diana Bar\, Póvoa Arena\, Parque da Cidade
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/projeto-escola-da-minha-vida-3/
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Corta-mato escolar
+DTSTART:20261211T093000Z
+DTEND:20261211T111500Z
+DTSTAMP:20261126T102052Z
+UID:Y29ydGEtbWF0by1lc2NvbGFyfDIwMjYtMTEtMjYgMTA6MjA6NTE=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Cidadania,Provas desportivas
+DESCRIPTION:O Parque da Cidade volta a receber o tradicional corta-mato es
+ colar no dia 11 de dezembro\, a partir das 9h30.\n\nMais informação: htt
+ ps://www.cm-pvarzim.pt/eventos/corta-mato-escolar/
+LAST-MODIFIED:20261126T102052Z
+LOCATION:Parque da Cidade
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/corta-mato-escolar/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:IX Corrida dos Reis
+DTSTART:20270109T183000Z
+DTEND:20270109T201500Z
+DTSTAMP:20261126T121403Z
+UID:aXgtY29ycmlkYS1kb3MtcmVpc3wyMDI2LTExLTI2IDEyOjE0OjAy@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Desporto,Provas desportivas
+DESCRIPTION:O arranque desportivo do novo ano na Póvoa de Varzim já tem 
+ data marcada\, a 9 de janeiro\, às 18h30\, com a realização da nona edi
+ ção da tradicional Corrida dos Reis.\n\nBilhetes e inscrições:\nAs ins
+ crições já se encontram abertas\, decorrendo em formato online através
+  da plataforma da organização\, com participação limitada a um máximo
+  de 2.500 atletas.\nO custo da inscrição será de 14\,00€ até 21 de d
+ ezembro\, 16\,00€ até 3 de janeiro\, 18\,00€ até 7 de janeiro e 20\,
+ 00€ se for efetuada nos dias 8 e 9 de janeiro (na Praça do Almada até 
+ às 16h00).\nInscrição: https://stopandgo.net/events/corrida-de-reis-202
+ 7\n\nMais informação: https://www.cm-pvarzim.pt/eventos/ix-corrida-dos-r
+ eis/
+LAST-MODIFIED:20261126T121403Z
+LOCATION:Partida na Praça do Almada
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/ix-corrida-dos-reis/
+END:VEVENT
 END:VCALENDAR

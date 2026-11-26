@@ -88,6 +88,31 @@ TRANSP:TRANSPARENT
 URL:https://www.flashscore.pt/equipa/varzim/K8O5Kkl7/lista/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:IX Corrida dos Reis
+DTSTART:20270109T183000Z
+DTEND:20270109T201500Z
+DTSTAMP:20261126T121403Z
+UID:aXgtY29ycmlkYS1kb3MtcmVpc3wyMDI2LTExLTI2IDEyOjE0OjAy@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Sport,Sportevenementen
+DESCRIPTION:O arranque desportivo do novo ano na Póvoa de Varzim já tem 
+ data marcada\, a 9 de janeiro\, às 18h30\, com a realização da nona edi
+ ção da tradicional Corrida dos Reis.\n\nKaartjes en inschrijving (in het
+  Portugees):\nAs inscrições já se encontram abertas\, decorrendo em for
+ mato online através da plataforma da organização\, com participação l
+ imitada a um máximo de 2.500 atletas.\nO custo da inscrição será de 14
+ \,00€ até 21 de dezembro\, 16\,00€ até 3 de janeiro\, 18\,00€ até
+  7 de janeiro e 20\,00€ se for efetuada nos dias 8 e 9 de janeiro (na Pr
+ aça do Almada até às 16h00).\nInschrijving: https://stopandgo.net/event
+ s/corrida-de-reis-2027\n\nTitel en beschrijving van het evenement in het P
+ ortugees\, zoals gepubliceerd door de gemeente.\n\nMeer informatie: https:
+ //www.cm-pvarzim.pt/eventos/ix-corrida-dos-reis/
+LAST-MODIFIED:20261126T121403Z
+LOCATION:Partida na Praça do Almada
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/ix-corrida-dos-reis/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Futebol - Varzim x São João Ver
 DTSTART:20270110T150000Z
 DTEND:20270110T164500Z

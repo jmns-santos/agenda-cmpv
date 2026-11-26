@@ -137,6 +137,23 @@ TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/mercado-vivo-com-animadixie/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Festa da Rabanada
+DTSTART:20261213T150000Z
+DTEND:20261213T190000Z
+DTSTAMP:20261126T130132Z
+UID:ZmVzdGEtZGEtcmFiYW5hZGF8MjAyNi0xMS0yNiAxMzowMTozMQ==@agenda.cm-pvarzim
+ .pt
+CATEGORIES:Culture,Fêtes\, foires et marchés
+DESCRIPTION:A doçura tradicional da Póvoa de Varzim está de regresso co
+ m a 2.ª edição da Festa da Rabanada Poveira.\n\nTitre et description de
+  l'événement en portugais\, tels que publiés par la municipalité.\n\nP
+ lus d'informations: https://www.cm-pvarzim.pt/eventos/festa-da-rabanada/
+LAST-MODIFIED:20261126T130132Z
+LOCATION:Posto de Turismo dos Torreões
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/festa-da-rabanada/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Festa m80
 DTSTART:20270403T210000Z
 DTEND:20270403T223000Z

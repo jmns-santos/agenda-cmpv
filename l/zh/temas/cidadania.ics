@@ -77,10 +77,10 @@ URL:https://www.cm-pvarzim.pt/eventos/ecras-e-videojogos-o-que-os-pais-tem
  -mesmo-que-saber/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Comemorações do Dia Internacional da Pessoas com Deficiência
+SUMMARY:Comemorações do Dia Internacional da Pessoa com Deficiência
 DTSTART:20261204T210000Z
 DTEND:20261204T223000Z
-DTSTAMP:20261123T152756Z
+DTSTAMP:20261126T092820Z
 UID:Y29tZW1vcmFjb2VzLWRvLWRpYS1pbnRlcm5hY2lvbmFsLWRhLXBlc3NvYXMtY29tLWRlZm
  ljaWVuY2lhfDIwMjYtMTEtMTkgMTU6NDg6MDg=@agenda.cm-pvarzim.pt
 CATEGORIES:公民生活,纪念与典礼
@@ -91,7 +91,7 @@ DESCRIPTION:O Município da Póvoa de Varzim associa-se à APIC – Associ
  为葡萄牙语，与市政府发布的内容一致。\n\n更多信息: ht
  tps://www.cm-pvarzim.pt/eventos/comemoracoes-do-dia-internacional-da-pesso
  as-com-deficiencia/
-LAST-MODIFIED:20261123T152756Z
+LAST-MODIFIED:20261126T092820Z
 LOCATION:Centro Ocupacional da Lapa
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/comemoracoes-do-dia-internacional-da
@@ -177,6 +177,23 @@ LOCATION:online
 TRANSP:TRANSPARENT
 URL:https://www.cm-pvarzim.pt/eventos/redes-sociais-likes-e-influencers-co
  mo-orientar-os-nossos-filhos/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Corta-mato escolar
+DTSTART:20261211T093000Z
+DTEND:20261211T111500Z
+DTSTAMP:20261126T102052Z
+UID:Y29ydGEtbWF0by1lc2NvbGFyfDIwMjYtMTEtMjYgMTA6MjA6NTE=@agenda.cm-pvarzim
+ .pt
+CATEGORIES:公民生活,体育赛事
+DESCRIPTION:O Parque da Cidade volta a receber o tradicional corta-mato es
+ colar no dia 11 de dezembro\, a partir das 9h30.\n\n活动标题和说明
+ 为葡萄牙语，与市政府发布的内容一致。\n\n更多信息: ht
+ tps://www.cm-pvarzim.pt/eventos/corta-mato-escolar/
+LAST-MODIFIED:20261126T102052Z
+LOCATION:Parque da Cidade
+TRANSP:TRANSPARENT
+URL:https://www.cm-pvarzim.pt/eventos/corta-mato-escolar/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Oficina de Cozinha Botânica: "Preparar o Natal"
