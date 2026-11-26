@@ -244,6 +244,7 @@
       <p class="relogio"><span class="ponto"></span><span id="relogio">&nbsp;</span></p>
       <p class="aviso-periodo" id="aviso-periodo" hidden></p>
       <h2 class="sec-titulo" id="t-horario">Horário de funcionamento:</h2>
+      <p class="linha" id="nota-inicio" hidden>Os horários entram em funcionamento a partir de 29 de novembro, data de início do Cidade Natal’26.</p>
       <div class="espacos" role="tablist" aria-label="Escolha o espaço" id="espacos"></div>
       <div class="painel" role="tabpanel" id="painel" aria-live="polite"></div>
     </section>
@@ -409,7 +410,7 @@
         { txt:"Feriados de 1 e 8 de dezembro | 11h00 às 20h00, como nos Mercados de Natal", nota:true, h:[660,1200], ap:function(dk){ return dk==="2026-12-01" || dk==="2026-12-08"; } }
       ]
     },
-    { id:"casa", nome:"Casa de Natal", titulo:"Casa de Natal", resto:" - Palacete Villa Georgette", local:"Avenida Mousinho de Albuquerque", periodo:[P0,P1], semPeriodo:true, alvo:"casa",
+    { id:"casa", nome:"Casa de Natal", titulo:"Casa de Natal", resto:" - Palacete Villa Georgette", local:"Avenida Mousinho de Albuquerque", periodo:[P0,P1], alvo:"casa",
       // O cartaz não indica horário próprio para 24, 25 e 31 de dezembro e 1 de janeiro.
       indef:esp,
       regras:[
@@ -573,6 +574,7 @@
       av.textContent = "O Cidade Natal’26 decorreu de 29 de novembro a 9 de janeiro.";
       av.hidden = false;
     } else av.hidden = true;
+    document.getElementById("nota-inicio").hidden = !(now.dk < P0);
 
     var cont = document.getElementById("espacos"), html = "";
     ESPACOS.forEach(function(e){
