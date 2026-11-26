@@ -36,6 +36,13 @@
     padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);
   }
   .cabecalho{display:block;width:100%;height:auto;position:relative;z-index:1;}
+  .cabecalho-esbater{width:100%;height:32px;position:relative;z-index:1;overflow:hidden;}
+  .cabecalho-esbater::before{content:"";position:absolute;inset:-12px;
+    background-image:url("img/cabecalho.webp");background-repeat:no-repeat;
+    background-position:bottom center;background-size:100% auto;
+    filter:blur(9px);transform:scale(1.04);}
+  .cabecalho-esbater::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(to bottom, rgba(195,40,48,0) 0%, var(--vermelho) 80%);}
   .decor{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
   .decor .bk{position:absolute;border-radius:50%;}
   .decor .qd{position:absolute;border-radius:3px;}
@@ -111,7 +118,10 @@
   }
   .painel h3{font-family:var(--script);font-weight:700;font-size:24px;line-height:1.1;margin:0;}
   .painel h3 .resto{font-family:var(--texto);font-weight:400;font-size:18px;}
-  .painel .local{color:var(--dourado);font-size:17px;margin:12px 0 0;}
+  .painel .local{color:var(--dourado);font-size:17px;margin:12px 0 0;display:flex;align-items:flex-start;gap:7px;}
+  .painel .local::before{content:"";flex:0 0 auto;width:14px;height:14px;margin-top:4px;background:currentColor;
+    -webkit-mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>') center/contain no-repeat;
+    mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>') center/contain no-repeat;}
   .estado-agora{display:flex;align-items:center;gap:9px;margin:0;padding:10px 14px;border-radius:12px;font-size:16.5px;font-weight:700;border:1.5px solid rgba(238,214,126,.5);color:var(--dourado);}
   .estado-agora .luz{width:12px;height:12px;margin-top:0;}
   .estado-agora.aberto{background:var(--dourado);color:var(--vermelho-fundo);border-color:var(--dourado);}
@@ -123,7 +133,9 @@
   .rot{color:var(--dourado);}
   .regras{list-style:none;margin:8px 0 0;padding:0;}
   .regras li{position:relative;padding:5px 8px 5px 30px;margin:0 -8px;border-radius:8px;font-size:16px;line-height:1.3;}
-  .regras li::before{content:"";position:absolute;left:8px;top:.5em;width:16px;height:16px;background:url("img/marcador.png") center/contain no-repeat;}
+  .regras li::before{content:"";position:absolute;left:8px;top:.6em;width:14px;height:14px;background:currentColor;
+    -webkit-mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="black" stroke-width="2.2"/><path d="M12 7v5l4 2" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>') center/contain no-repeat;
+    mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="black" stroke-width="2.2"/><path d="M12 7v5l4 2" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>') center/contain no-repeat;}
   .regras li.hoje{background:rgba(238,214,126,.18);box-shadow:inset 3px 0 0 var(--dourado);}
   .regras li.nota{color:rgba(255,255,255,.92);font-style:italic;}
   .tag-hoje{display:inline-block;margin-left:6px;font-size:13px;font-weight:700;color:var(--vermelho-fundo);background:var(--dourado);border-radius:999px;padding:1px 8px;font-style:normal;}
@@ -167,6 +179,7 @@
 
   <img class="cabecalho" src="img/cabecalho.webp" width="1400" height="951"
        alt="Câmara Municipal da Póvoa de Varzim. É bom viver aqui! Póvoa de Varzim, Cidade Natal '26, 29 novembro a 9 janeiro">
+  <div class="cabecalho-esbater" aria-hidden="true"></div>
 
   <nav class="nav" role="tablist" aria-label="Escolha o que ver" id="nav">
     <button type="button" role="tab" id="tab-programa" aria-controls="v-programa" aria-selected="true" data-vista="programa">Programa</button>
