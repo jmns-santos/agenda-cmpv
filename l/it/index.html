@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-Y3aEG4Txuz188wsUX7WxgtNCAoHyTE9y5mBM07nLkHo='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-hiqi+vZFRf8SU0kyFrwPDIZa4XQ5wntLwaOH5tmHCvU='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Iscriviti all&#x27;agenda municipale di Póvoa de Varzim nel tuo calendario: completa, per tema o per tipo di evento.">
 <meta name="theme-color" content="#0a3a52">
@@ -2346,15 +2346,10 @@
     gravar('nexo-eventos-lingua', atual);
   });
 
-  // Calendário de quem consulta (serve "Adicionar" e "Subscrever"): o escolhido da última vez;
-  // à primeira visita, um palpite pelo aparelho (iPhone/iPad -> Apple, Android -> Android, resto -> Google).
+  // Calendário de quem consulta (serve "Adicionar" e "Subscrever"): Google por omissão, em qualquer
+  // aparelho ("Adicionar" abre logo o evento no Google Calendar); outro só se a pessoa o escolher no topo.
   var radiosSistema = document.querySelectorAll('input[name="sistema"]');
   var sistemaGuardado = ler('nexo-eventos-sistema');
-  if (!sistemaGuardado) {
-    var ua = navigator.userAgent || '';
-    if (/Android/i.test(ua)) sistemaGuardado = 'sis-android';
-    else if (/iPhone|iPad|iPod/i.test(ua)) sistemaGuardado = 'sis-apple';
-  }
   var sistemaInicial = sistemaGuardado ? document.getElementById(sistemaGuardado) : null;
   if (sistemaInicial && sistemaInicial.name === 'sistema') sistemaInicial.checked = true;
   var menuSistema = document.querySelector('.sistema-menu');
