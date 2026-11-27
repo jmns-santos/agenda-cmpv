@@ -1003,15 +1003,10 @@
     gravar('nexo-eventos-lingua', atual);
   });
 
-  // Calendário de quem consulta (serve "Adicionar" e "Subscrever"): o escolhido da última vez;
-  // à primeira visita, um palpite pelo aparelho (iPhone/iPad -> Apple, Android -> Android, resto -> Google).
+  // Calendário de quem consulta (serve "Adicionar" e "Subscrever"): Google por omissão, em qualquer
+  // aparelho ("Adicionar" abre logo o evento no Google Calendar); outro só se a pessoa o escolher no topo.
   var radiosSistema = document.querySelectorAll('input[name="sistema"]');
   var sistemaGuardado = ler('nexo-eventos-sistema');
-  if (!sistemaGuardado) {
-    var ua = navigator.userAgent || '';
-    if (/Android/i.test(ua)) sistemaGuardado = 'sis-android';
-    else if (/iPhone|iPad|iPod/i.test(ua)) sistemaGuardado = 'sis-apple';
-  }
   var sistemaInicial = sistemaGuardado ? document.getElementById(sistemaGuardado) : null;
   if (sistemaInicial && sistemaInicial.name === 'sistema') sistemaInicial.checked = true;
   var menuSistema = document.querySelector('.sistema-menu');
