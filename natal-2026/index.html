@@ -175,6 +175,7 @@
   @media (min-width:640px){
     .pagina{max-width:640px;box-shadow:0 0 60px rgba(0,0,0,.35);}
   }
+  html.embed .pagina{box-shadow:none;max-width:100%;}
   @media (min-width:860px){
     .pagina{max-width:900px;}
     main{padding:0 36px;}
@@ -403,6 +404,9 @@
 <script>
 (function(){
   "use strict";
+
+  // Embutido noutra página (ex. PGU), tal como na agenda de eventos: ?embed=1 tira sombra/moldura.
+  if (/[?&]embed=1\b/.test(location.search)) document.documentElement.className += " embed";
 
   /* =====================================================================
      DADOS — transcritos do cartaz oficial (PDF) e do texto
