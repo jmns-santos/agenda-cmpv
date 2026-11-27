@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-DfulDCgAcGdiYBJC2qpyqzBRX/o1OQMi90cPWDB2Nsk='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-Y3aEG4Txuz188wsUX7WxgtNCAoHyTE9y5mBM07nLkHo='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="ポヴォア・デ・ヴァルジン市のイベントをお使いのカレンダーで購読：すべて、テーマ別、種類別。">
 <meta name="theme-color" content="#0a3a52">
@@ -60,26 +60,32 @@
       --titulo: #9fd3ea;
     }
   }
-  /* Embutido na PGU (?embed=1): tons escuros e acinzentados, próximos da própria PGU,
-     em vez do azul-petróleo da marca, para a página se integrar visualmente como mais um
+  /* Embutido na PGU (?embed=1): cinzento neutro da própria PGU (#282828) como base de tudo
+     (fundo, cabeçalho, barra de deslocamento), para a página se integrar como mais um
      separador. Aplica-se sempre no modo embebido, independentemente do tema do sistema. */
   .embed {
-    --fundo: #1b1e20;
-    --cartao: #242729;
-    --tinta: #e8eaec;
-    --cinza: #9aa0a4;
-    --linha: #35393c;
-    --trilho: #2c2f31;
-    --mar-forte: #1f2224;
-    --mar-claro: #2c3133;
+    --fundo: #282828;
+    --cartao: #323232;
+    --tinta: #ececec;
+    --cinza: #a8a8a8;
+    --linha: #424242;
+    --trilho: #353535;
+    --mar-forte: #282828;
+    --mar-claro: #303030;
     --botao: #3d6a82;
     --sombra: none;
-    --titulo: #a9c3cf;
+    --titulo: #b4c9d3;
+    --foco: #f0b429;
+    color-scheme: dark;
   }
 
   *, *::before, *::after { box-sizing: border-box; }
   [hidden] { display: none !important; }
-  html { -webkit-text-size-adjust: 100%; }
+  html { -webkit-text-size-adjust: 100%; scrollbar-color: #4d4d4d #282828; }
+  ::-webkit-scrollbar { width: 14px; height: 14px; }
+  ::-webkit-scrollbar-track { background: #282828; }
+  ::-webkit-scrollbar-thumb { background: #4d4d4d; border-radius: 7px; border: 3px solid #282828; }
+  ::-webkit-scrollbar-thumb:hover { background: #5e5e5e; }
   body {
     margin: 0; background: var(--fundo); color: var(--tinta);
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", "Hiragino Sans", "Yu Gothic", sans-serif;
@@ -105,28 +111,49 @@
     .marca { flex-wrap: wrap; gap: .7rem; }
   }
   .topo h1 { margin: 0; color: #fff; font-size: clamp(2.8rem, 11vw, 4.4rem); line-height: 1; font-weight: 700; letter-spacing: .005em; overflow-wrap: anywhere; }
-  .topo .sub { margin-top: .5rem; color: #fff; font-size: clamp(1.1rem, 3vw, 1.4rem); line-height: 1.3; }
-  .topo .sub strong { font-weight: 700; color: var(--sol); }
   .onda { display: block; width: 100%; height: 18px; margin-top: .9rem; background: var(--mar-forte); }
   .onda path { fill: var(--fundo); }
   @media (prefers-color-scheme: dark) { .onda path { fill: rgba(255, 255, 255, .1); } }
 
   .ferramentas { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-left: auto; }
-  .linguas { position: relative; }
-  .linguas summary {
+  .linguas, .sistema-menu { position: relative; }
+  .linguas summary, .sistema-menu summary {
     list-style: none; display: flex; align-items: center; gap: .45rem; cursor: pointer;
     min-height: 2.75rem; padding: .3rem .75rem; border: 1.5px solid rgba(255, 255, 255, .6); border-radius: 9px;
     font-weight: 700; font-size: .95rem; color: #fff; background: rgba(255, 255, 255, .12);
   }
-  .linguas summary::-webkit-details-marker { display: none; }
-  .linguas summary::after { content: ""; width: .45em; height: .45em; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); margin-left: .15rem; }
-  .linguas ul {
+  .linguas summary::-webkit-details-marker, .sistema-menu summary::-webkit-details-marker { display: none; }
+  .linguas summary::after, .sistema-menu summary::after { content: ""; width: .45em; height: .45em; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); margin-left: .15rem; }
+  .linguas ul, .sistema-menu .menu {
     position: absolute; right: 0; top: calc(100% + .35rem); z-index: 20; min-width: 12rem; margin: 0; padding: .35rem; list-style: none;
     background: var(--cartao); color: var(--tinta); border: 1px solid var(--linha); border-radius: 10px; box-shadow: 0 8px 28px rgba(0, 0, 0, .2);
   }
   .linguas li a { display: flex; align-items: center; gap: .6rem; min-height: 2.75rem; padding: .3rem .6rem; border-radius: 7px; text-decoration: none; font-size: 1rem; }
   .linguas li a:hover { background: var(--mar-claro); }
   .linguas li a[aria-current] { font-weight: 700; background: var(--mar-claro); }
+  /* Calendário de quem consulta (Google, Outlook...): escolha única para "Adicionar" e "Subscrever" */
+  .sistema-menu summary svg { width: 1.15em; height: 1.15em; flex: none; }
+  .sistema-menu .menu { display: flex; flex-direction: column; min-width: 13.5rem; }
+  .sistema-menu .menu-titulo { margin: .2rem .6rem .35rem; font-size: .75rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--cinza); }
+  .sistema-menu .menu label { display: flex; align-items: center; gap: .55rem; min-height: 2.6rem; padding: .3rem .6rem; border-radius: 7px; cursor: pointer; font-size: 1rem; }
+  .sistema-menu .menu label::before { content: ""; width: .95rem; height: .95rem; flex: none; border-radius: 50%; border: 2px solid var(--linha); }
+  .sistema-menu .menu label:hover { background: var(--mar-claro); }
+  #sis-google:checked ~ header label[for="sis-google"],
+  #sis-outlook:checked ~ header label[for="sis-outlook"],
+  #sis-apple:checked ~ header label[for="sis-apple"],
+  #sis-android:checked ~ header label[for="sis-android"],
+  #sis-outro:checked ~ header label[for="sis-outro"] { font-weight: 700; background: var(--mar-claro); }
+  #sis-google:checked ~ header label[for="sis-google"]::before,
+  #sis-outlook:checked ~ header label[for="sis-outlook"]::before,
+  #sis-apple:checked ~ header label[for="sis-apple"]::before,
+  #sis-android:checked ~ header label[for="sis-android"]::before,
+  #sis-outro:checked ~ header label[for="sis-outro"]::before { border-color: var(--botao); background: radial-gradient(circle, var(--botao) 0 45%, transparent 50%); }
+  .sistema-nome { display: none; }
+  #sis-google:checked ~ header .sistema-nome.n-google,
+  #sis-outlook:checked ~ header .sistema-nome.n-outlook,
+  #sis-apple:checked ~ header .sistema-nome.n-apple,
+  #sis-android:checked ~ header .sistema-nome.n-android,
+  #sis-outro:checked ~ header .sistema-nome.n-outro { display: inline; }
   .letra { display: none; gap: .25rem; }
   .js .letra { display: flex; }
   .letra button {
@@ -232,14 +259,9 @@
   .completa .linha2 { color: var(--cinza); margin-top: .15rem; font-variant-numeric: lining-nums tabular-nums; }
   @media (max-width: 36rem) { .completa { grid-template-columns: 1fr; } }
 
-  .escolha-hint {
-    margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem;
-  }
   .escolha-conteudo { display: none; }
   #assinar-tema:checked ~ main .escolha-conteudo,
   #assinar-tipo:checked ~ main .escolha-conteudo { display: block; }
-  #assinar-tema:checked ~ main .escolha-hint,
-  #assinar-tipo:checked ~ main .escolha-hint { display: none; }
   .fechar-vista { margin: 0 0 .9rem; }
 
   .grelha { list-style: none; margin: .9rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(16.5rem, 100%), 1fr)); gap: .7rem; }
@@ -266,15 +288,58 @@
   .aviso { margin-top: .9rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
 
   /* Proximos eventos: destaque rotativo, filtro, selecao multipla e adicionar ao calendario sem subscricao */
-  .subscrever { margin-top: 1.4rem; }
-  .proximos { margin-top: 1.8rem; padding-top: 1.6rem; border-top: 1px solid var(--linha); }
-  @media (min-width: 64rem) {
-    .duas-colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; }
-    .subscrever { padding-right: 2.2rem; }
-    .proximos { margin-top: 1.4rem; padding-top: 0; border-top: 0; padding-left: 2.2rem; border-left: 1px solid var(--linha); min-width: 0; }
-    .subscrever { min-width: 0; }
-  }
+  /* Ordem: próximos eventos primeiro (destaque, calendário, lista); a subscrição vem depois. */
+  .proximos { margin-top: .4rem; min-width: 0; }
+  .proximos-topo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1.4rem; }
+  .proximos-topo .titulo-seccao { margin: 0; }
+  .proximos-topo .pesquisa-caixa { margin-top: 0; flex: 1 1 22rem; max-width: 36rem; }
+  @media (max-width: 40rem) { .proximos-topo .pesquisa-caixa { max-width: none; } }
   .proximos .linha2 { color: var(--cinza); margin-top: .15rem; }
+
+  .subscrever { margin-top: 2.2rem; padding-top: 1.6rem; border-top: 1px solid var(--linha); min-width: 0; }
+  .titulo-icone { display: flex; align-items: center; gap: .6rem; }
+  .titulo-icone .icone-seccao {
+    flex: none; display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem;
+    border-radius: 50%; background: var(--botao); color: #fff;
+  }
+  .titulo-icone .icone-seccao svg { width: 1.15rem; height: 1.15rem; }
+  .subscrever-grelha { display: grid; gap: 0 2.4rem; }
+  .subscrever-grelha > div { min-width: 0; }
+  @media (min-width: 64rem) { .subscrever-grelha { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+  .completa .icone-completa {
+    display: none; flex: none; width: 2.9rem; height: 2.9rem; border-radius: 12px; align-items: center; justify-content: center;
+    background: var(--mar-claro); color: var(--titulo); border: 1px solid var(--linha);
+  }
+  .completa .icone-completa svg { width: 1.5rem; height: 1.5rem; }
+  .completa-texto { display: flex; align-items: center; gap: .85rem; min-width: 0; }
+  @media (min-width: 30rem) { .completa .icone-completa { display: inline-flex; } }
+  /* Subscrever por tema / por tipo: dois cartões grandes, bem à vista, com exemplos do que contêm */
+  .escolhas-assinar { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr)); gap: .6rem; }
+  .escolha-cartao {
+    display: flex; align-items: center; gap: .85rem; min-height: 4.6rem; padding: .8rem 1rem;
+    background: var(--cartao); color: var(--tinta); border: 1.5px solid var(--linha); border-left: 6px solid var(--botao);
+    border-radius: 14px; box-shadow: var(--sombra); cursor: pointer; user-select: none;
+    transition: border-color .15s, background-color .15s;
+  }
+  .escolha-cartao:hover { border-color: var(--botao); }
+  .escolha-icone {
+    flex: none; display: inline-flex; align-items: center; justify-content: center; width: 2.9rem; height: 2.9rem;
+    border-radius: 12px; background: var(--mar-claro); color: var(--titulo); border: 1px solid var(--linha);
+  }
+  .escolha-icone svg { width: 1.5rem; height: 1.5rem; }
+  .escolha-texto { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: .15rem; }
+  .escolha-titulo { font-size: 1.08rem; font-weight: 700; line-height: 1.25; }
+  .escolha-exemplos { font-size: .86rem; line-height: 1.3; color: var(--cinza); }
+  .escolha-cartao .chevron { margin-left: auto; }
+  #assinar-tema:checked ~ main .escolha-cartao[for="assinar-tema"],
+  #assinar-tipo:checked ~ main .escolha-cartao[for="assinar-tipo"] { border-color: var(--botao); }
+  #assinar-tema:checked ~ main .escolha-cartao[for="assinar-tema"] .escolha-icone,
+  #assinar-tipo:checked ~ main .escolha-cartao[for="assinar-tipo"] .escolha-icone { background: rgba(255, 255, 255, .16); border-color: transparent; color: #fff; }
+  #assinar-tema:checked ~ main .escolha-cartao[for="assinar-tema"] .escolha-exemplos,
+  #assinar-tipo:checked ~ main .escolha-cartao[for="assinar-tipo"] .escolha-exemplos,
+  #assinar-tema:checked ~ main .escolha-cartao[for="assinar-tema"] .chevron,
+  #assinar-tipo:checked ~ main .escolha-cartao[for="assinar-tipo"] .chevron { color: rgba(255, 255, 255, .88); }
+  .escolha-conteudo { margin-top: .9rem; }
 
   /* Destaque: quadro que vai mostrando os próximos eventos, um a um */
   .destaque { position: relative; overflow: hidden; margin-top: .9rem; background: var(--mar-claro); border-radius: 12px; padding: .8rem .9rem 1.05rem; }
@@ -287,7 +352,38 @@
   }
   .destaque.parado .destaque-progresso span { animation-play-state: paused; }
   @keyframes destaque-tempo { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-  .destaque-rotulo { margin: 0 0 .5rem; font-size: .85rem; font-weight: 700; color: var(--cinza); text-transform: uppercase; letter-spacing: .03em; }
+  .destaque-rotulo { margin: 0; font-size: .85rem; font-weight: 700; color: var(--cinza); text-transform: uppercase; letter-spacing: .03em; }
+  .destaque-cabeca { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .45rem 1rem; margin-bottom: .6rem; }
+  /* Filtrar (seleção rápida): os tipos mais frequentes no que está a decorrer e vem aí */
+  .filtro-rapido { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem; min-width: 0; }
+  .filtro-rapido-rotulo { display: inline-flex; align-items: center; gap: .3rem; margin-right: .15rem; font-size: .78rem; font-weight: 700; color: var(--cinza); }
+  .filtro-rapido-rotulo svg { width: .95rem; height: .95rem; }
+  .chip-rapido {
+    display: inline-flex; align-items: center; gap: .35rem; min-height: 1.95rem; padding: .1rem .6rem .1rem .5rem;
+    border-radius: 999px; border: 1px solid var(--linha); background: var(--cartao); color: var(--tinta);
+    font: inherit; font-size: .78rem; font-weight: 700; line-height: 1.1; cursor: pointer; user-select: none;
+    transition: background-color .12s, border-color .12s, color .12s;
+  }
+  .chip-rapido .ponto { width: .55rem; height: .55rem; border-radius: 50%; background: var(--cor, var(--cinza)); flex: none; }
+  .chip-rapido .n { font-weight: 400; color: var(--cinza); font-variant-numeric: lining-nums tabular-nums; }
+  .chip-rapido:hover { border-color: var(--cor, var(--cinza)); }
+  .chip-rapido[aria-pressed="true"] { background: var(--cor, var(--botao)); border-color: var(--cor, var(--botao)); color: #fff; }
+  .chip-rapido[aria-pressed="true"] .ponto { background: #fff; }
+  .chip-rapido[aria-pressed="true"] .n { color: rgba(255, 255, 255, .85); }
+  .chip-rapido.chip-mais { border-style: dashed; color: var(--cinza); padding-left: .6rem; }
+  .destaque-vazio { padding: .6rem 0 .2rem; color: var(--cinza); font-size: .95rem; }
+  /* Telemóvel: o "Filtrar" numa só linha que desliza para o lado, para não empurrar o evento para baixo */
+  @media (max-width: 40rem) {
+    .destaque-cabeca { flex-direction: column; align-items: stretch; }
+    .filtro-rapido {
+      flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+      margin: 0 -.9rem; padding: .1rem .9rem .15rem;
+      -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2rem), transparent);
+      mask-image: linear-gradient(to right, #000 calc(100% - 2rem), transparent);
+    }
+    .filtro-rapido::-webkit-scrollbar { display: none; }
+    .filtro-rapido > * { flex: none; white-space: nowrap; }
+  }
   .destaque-cartao { transition: opacity .2s; border-left: 6px solid var(--ct); padding-left: .7rem; }
   .destaque-cartao.a-mudar { opacity: 0; }
   .destaque-controlos { display: flex; align-items: center; gap: .5rem; margin-top: .7rem; }
@@ -328,15 +424,97 @@
     border-radius: 9px; border: 1.5px solid var(--linha); background: var(--cartao); color: var(--tinta);
     font: inherit; font-weight: 700; font-size: .95rem; cursor: pointer; user-select: none;
   }
-  .botao-mostrar { flex: none; min-height: 2.75rem; }
+  .botao-mostrar { flex: 1 1 14rem; justify-content: center; min-height: 2.9rem; }
+  .botao-mostrar svg { width: 1.2em; height: 1.2em; flex: none; color: var(--titulo); }
   .botao-mostrar .contagem-botao { font-weight: 400; }
-  #mostrar-todos:checked ~ .barra-todos .botao-mostrar { background: var(--botao); color: #fff; border-color: var(--botao); }
-  #mostrar-todos:checked ~ .barra-todos .botao-mostrar .chevron { color: #fff; }
-  #mostrar-todos:focus-visible ~ .barra-todos .botao-mostrar { outline: 3px solid var(--foco); outline-offset: 1px; }
+  #mostrar-todos:checked ~ .barra-todos .botao-lista { background: var(--botao); color: #fff; border-color: var(--botao); }
+  #mostrar-todos:checked ~ .barra-todos .botao-lista .chevron, #mostrar-todos:checked ~ .barra-todos .botao-lista svg { color: #fff; }
+  #mostrar-todos:focus-visible ~ .barra-todos .botao-lista { outline: 3px solid var(--foco); outline-offset: 1px; }
+  @media (min-width: 40rem) { .botao-mostrar { flex: 0 1 auto; } }
 
   /* "Ver todos os eventos": toda a agenda; abre e recolhe no mesmo botão */
   .painel-todos { display: none; margin-top: .8rem; }
   #mostrar-todos:checked ~ .painel-todos { display: block; }
+
+  /* Calendário (sempre à vista, antes do destaque): o mês com os dias; ao escolher um dia, os eventos
+     desse dia, cada um com "Adicionar". Precisa de JS: sem ele fica a lista ("Ver todos os eventos"). */
+  .barra-calendario { display: flex; margin-top: 1rem; }
+  .botao-calendario { display: none; }
+  .js .botao-calendario { display: inline-flex; }
+  #mostrar-calendario:checked ~ .barra-calendario .botao-calendario { background: var(--botao); color: #fff; border-color: var(--botao); }
+  #mostrar-calendario:checked ~ .barra-calendario .botao-calendario svg,
+  #mostrar-calendario:checked ~ .barra-calendario .botao-calendario .chevron { color: #fff; }
+  #mostrar-calendario:focus-visible ~ .barra-calendario .botao-calendario { outline: 3px solid var(--foco); outline-offset: 1px; }
+  .calendario-bloco { display: none; margin-top: .8rem; }
+  .js #mostrar-calendario:checked ~ .calendario-bloco { display: block; }
+  /* Eventos do dia escolhido: hora, título (com link para mais informação) e local; o "+" adiciona ao
+     calendário de quem consulta (o escolhido no topo: Google, Outlook, iPhone...). */
+  .cal-lista-dia { list-style: none; margin: .65rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .45rem; }
+  .cal-item {
+    display: flex; align-items: center; gap: .75rem; padding: .55rem .55rem .55rem .8rem;
+    background: var(--cartao); border: 1px solid var(--linha); border-left: 5px solid var(--ct, var(--linha)); border-radius: 10px;
+  }
+  .cal-hora { flex: none; width: 3.4rem; font-weight: 700; font-size: .9rem; line-height: 1.2; color: var(--titulo); font-variant-numeric: lining-nums tabular-nums; overflow-wrap: anywhere; }
+  .cal-info { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: .1rem; }
+  .cal-titulo { font-weight: 700; font-size: .97rem; line-height: 1.3; overflow-wrap: anywhere; text-decoration: none; }
+  a.cal-titulo:hover { text-decoration: underline; }
+  .cal-local { font-size: .84rem; line-height: 1.3; color: var(--cinza); }
+  .cal-add {
+    flex: none; width: 2.75rem; height: 2.75rem; border-radius: 50%; align-items: center; justify-content: center;
+    background: var(--botao); color: #fff; text-decoration: none; transition: transform .12s, background-color .15s;
+  }
+  .cal-add svg { width: 1.35rem; height: 1.35rem; }
+  .cal-add:hover { filter: brightness(1.15); }
+  .cal-add:active { transform: scale(.92); }
+  .cal-add.feito { background: #2f7d52; }
+  .cal-ver-curso { margin-top: .5rem; text-align: left; }
+  .cal { display: grid; gap: 1rem 1.6rem; }
+  @media (min-width: 56rem) { .cal { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); align-items: start; } }
+  .cal-mes-bloco { background: var(--cartao); border: 1px solid var(--linha); border-radius: 14px; padding: .7rem .7rem .8rem; box-shadow: var(--sombra); }
+  .cal-cabeca { display: flex; align-items: center; gap: .4rem; margin-bottom: .55rem; }
+  .cal-mes { flex: 1 1 auto; margin: 0; text-align: center; font-size: 1.12rem; font-weight: 700; line-height: 1.2; }
+  .cal-nav {
+    flex: none; width: 2.6rem; height: 2.6rem; border-radius: 50%; border: 1.5px solid var(--linha);
+    background: var(--fundo); color: var(--tinta); font-size: 1.25rem; line-height: 1; cursor: pointer;
+  }
+  .cal-nav:hover:not(:disabled) { border-color: var(--botao); }
+  .cal-nav:disabled { opacity: .35; cursor: default; }
+  .cal-ir-hoje {
+    flex: none; min-height: 2.3rem; padding: 0 .75rem; border-radius: 999px; border: 1.5px solid var(--linha);
+    background: var(--fundo); color: var(--tinta); font: inherit; font-weight: 700; font-size: .82rem; cursor: pointer;
+  }
+  .cal-semana, .cal-dias { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 3px; }
+  .cal-semana span { padding: .2rem 0 .35rem; text-align: center; font-size: .74rem; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; color: var(--cinza); }
+  .cal-dia-b {
+    position: relative; display: flex; flex-direction: column; align-items: stretch; gap: 2px; min-width: 0;
+    min-height: 3.1rem; padding: .25rem .25rem .3rem; border-radius: 8px; border: 1.5px solid transparent;
+    background: var(--fundo); color: var(--tinta); font: inherit; text-align: left; cursor: pointer; overflow: hidden;
+  }
+  .cal-dia-b:hover { border-color: var(--linha); }
+  .cal-dia-b .num { font-size: .86rem; font-weight: 700; line-height: 1.2; font-variant-numeric: lining-nums tabular-nums; padding-left: .15rem; }
+  .cal-dia-b.fora { visibility: hidden; }
+  .cal-dia-b.passado { opacity: .45; }
+  .cal-dia-b.hoje .num { display: inline-flex; align-items: center; justify-content: center; align-self: flex-start; min-width: 1.6rem; height: 1.6rem; padding: 0 .2rem; border-radius: 999px; background: var(--sol); color: #3b2a00; }
+  .cal-dia-b[aria-pressed="true"] { border-color: var(--botao); background: var(--mar-claro); box-shadow: inset 0 0 0 1px var(--botao); }
+  .cal-marcas { display: flex; flex-wrap: wrap; gap: 3px; padding-left: .15rem; }
+  .cal-ev { display: block; width: .5rem; height: .5rem; border-radius: 50%; background: var(--ct); flex: none; }
+  .cal-ev-t { display: none; }
+  .cal-mais { font-size: .68rem; font-weight: 700; color: var(--cinza); line-height: .5rem; }
+  @media (min-width: 46rem) {
+    .cal-dia-b { min-height: 5.2rem; }
+    .cal-marcas { flex-direction: column; flex-wrap: nowrap; padding-left: 0; }
+    .cal-ev {
+      width: auto; height: auto; border-radius: 4px; padding: 1px 4px; background: color-mix(in srgb, var(--ct) 22%, transparent);
+      border-left: 3px solid var(--ct); font-size: .7rem; line-height: 1.25; font-weight: 700; color: var(--tinta);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .cal-ev-t { display: inline; }
+    .cal-mais { line-height: 1.2; padding-left: 4px; }
+  }
+  .cal-dia-titulo { margin: 0 0 .1rem; font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+  .cal-dia-conta { margin: 0; font-size: .88rem; color: var(--cinza); }
+  .js .destaque-cartao .info-proximo { cursor: default; }
+  .cal-vazio { margin-top: .7rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
 
   /* Filtros (com JS): quando, tema e tipo, aplicáveis ao mesmo tempo */
   .filtros { display: none; background: var(--cartao); border: 1px solid var(--linha); border-radius: 12px; padding: 0 .9rem; }
@@ -438,7 +616,10 @@
   }
   .chevron::before { content: "\25BD"; }
   [open] > summary > .chevron,
-  #mostrar-todos:checked ~ .barra-todos .botao-mostrar .chevron { transform: rotate(180deg); }
+  #mostrar-todos:checked ~ .barra-todos .botao-lista .chevron,
+  #mostrar-calendario:checked ~ .barra-calendario .botao-calendario .chevron,
+  #assinar-tema:checked ~ main label[for="assinar-tema"] .chevron,
+  #assinar-tipo:checked ~ main label[for="assinar-tipo"] .chevron { transform: rotate(180deg); }
 
   /* Ajuda: fechada por omissão; abre no (+) junto ao título, que passa a (−) */
   .ajuda { margin-top: 2.2rem; }
@@ -469,25 +650,36 @@
   /* Embutido na PGU (?embed=1): sem título grande nem rodapé — o separador "Eventos" da própria
      PGU já identifica a página; aqui fica só a frase da agenda e as ferramentas de
      língua/acessibilidade. */
-  .embed .onda, .embed footer { display: none; }
-  .embed .topo { padding-top: .5rem; padding-bottom: .5rem; }
-  .embed .topo h1 { display: none; }
-  .embed .sub { margin-top: 0; }
+  .embed .onda, .embed footer, .embed .marca { display: none; }
+  .embed .topo { padding-top: .6rem; padding-bottom: .6rem; border-bottom: 1px solid var(--linha); }
+  .embed .linguas summary, .embed .sistema-menu summary, .embed .letra button { border-color: var(--linha); background: var(--cartao); color: var(--tinta); }
+  .embed .linguas summary:hover, .embed .sistema-menu summary:hover, .embed .letra button:hover { background: var(--trilho); }
+  .embed .sugestao { background: var(--cartao); border-bottom: 1px solid var(--linha); }
+  .embed .destaque { border: 1px solid var(--linha); }
+  .embed .botao:hover { background: #4a7d98; }
   @media (max-width: 40rem) {
-    .embed .topo-grelha { gap: .5rem .8rem; }
-    .embed .marca, .embed .ferramentas { flex: 1 1 auto; }
+    .embed .ferramentas { flex: 1 1 auto; justify-content: flex-end; }
+  }
+  /* Ecrã estreito: os botões do topo numa só linha (a língua fica só com a bandeira) */
+  @media (max-width: 30rem) {
+    .ferramentas { gap: .35rem; }
+    .linguas summary > span:not(.apenas-leitor) { display: none; }
+    .linguas summary, .sistema-menu summary { padding-left: .6rem; padding-right: .6rem; }
+    .letra button { min-width: 2.6rem; }
   }
 
   @media (forced-colors: active) {
     .cartao, .completa, .item-proximo, .destaque-cartao { border-left-color: CanvasText; }
     .barra span { background: CanvasText; }
+    .cal-ev, .chip-rapido .ponto { background: CanvasText; }
+    .cal-dia-b[aria-pressed="true"], .chip-rapido[aria-pressed="true"] { outline: 2px solid Highlight; }
   }
   @media (prefers-reduced-motion: reduce) {
     .destaque-cartao { transition: none; }
   }
   @media print {
     .seletor, .ferramentas, .acoes, .sugestao, .filtros, .barra-selecao, .marcar-coluna, .botao-adicionar-um,
-    .destaque, .barra-todos, .controlos-lista, .botao-info, .escolha-hint { display: none !important; }
+    .destaque, .barra-todos, .controlos-lista, .botao-info, .escolhas-assinar, .calendario-bloco, .barra-calendario { display: none !important; }
     .painel-todos { display: block !important; }
   }
 </style>
@@ -510,10 +702,20 @@
     <div class="marca">
       <div>
         <h1>イベント</h1>
-        <p class="sub"><strong>街のイベント予定</strong>を<strong>あなたのカレンダー</strong>に</p>
       </div>
     </div>
     <div class="ferramentas">
+      <details class="sistema-menu">
+        <summary><span class="apenas-leitor">お使いのカレンダー: </span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg><span class="sistema-nome n-google">Google</span><span class="sistema-nome n-outlook">Outlook</span><span class="sistema-nome n-apple">iPhone・iPad・Mac</span><span class="sistema-nome n-android">Android</span><span class="sistema-nome n-outro">その他</span></summary>
+        <div class="menu" role="group" aria-label="お使いのカレンダー">
+          <p class="menu-titulo">お使いのカレンダー</p>
+          <label for="sis-google">Google</label>
+          <label for="sis-outlook">Outlook</label>
+          <label for="sis-apple">iPhone・iPad・Mac</label>
+          <label for="sis-android">Android</label>
+          <label for="sis-outro">その他</label>
+        </div>
+      </details>
       <details class="linguas">
         <summary><span class="apenas-leitor">言語: </span><svg class="bandeira" viewBox="0 0 30 20" aria-hidden="true" focusable="false"><rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/></svg><span>日本語</span></summary>
         <ul>
@@ -559,417 +761,55 @@
 
 <main class="largura" id="conteudo" tabindex="-1">
 
-  <div class="duas-colunas">
-  <section class="subscrever" aria-labelledby="t-subscrever">
-    <h2 id="t-subscrever" class="titulo-seccao">予定を購読</h2>
-
-    <div class="seletor" role="group" aria-labelledby="pergunta">
-      <h3 class="subtitulo-seccao" id="pergunta">カレンダーの種類</h3>
-      <div class="segmentos">
-        <label for="sis-google">Google</label>
-        <label for="sis-outlook">Outlook</label>
-        <label for="sis-apple">iPhone・iPad・Mac</label>
-        <label for="sis-android">Android</label>
-        <label for="sis-outro">その他</label>
-      </div>
-      <p class="dica dica-google">Google アカウントで Google カレンダーが開き、確認を求められます。</p>
-      <p class="dica dica-outlook">Web 版 Outlook（Microsoft 365 アカウント）が開き、確認を求められます。</p>
-      <p class="dica dica-apple">「カレンダー」アプリが開きます。iPhone・iPad・Mac 本体でご利用ください。</p>
-      <p class="dica dica-android">カレンダーは Google アカウントに追加され、Google カレンダーと Samsung カレンダーに表示されます。</p>
-      <p class="dica dica-outro">リンクをコピーし、アプリで「URL からカレンダーを購読」として追加してください。</p>
-    </div>
-
-    <div class="completa">
-      <div>
-        <p class="opcao-titulo">すべてのイベント</p>
-        <p class="linha2">すべてのイベントを 1 つのカレンダーに（67 件のイベント）。</p>
-      </div>
-      <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Fagenda.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: すべてのイベント (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Fagenda.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: すべてのイベント (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/agenda.ics" target="_top" aria-label="購読する: すべてのイベント (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/agenda.ics" aria-label="リンクをコピー: すべてのイベント"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/agenda.ics" aria-label="リンクをコピー: すべてのイベント">
-  </div>
-</div>
-    </div>
-
-    <div class="segmentos" role="group" aria-label="テーマ別に購読 / 種類別に購読">
-      <label for="assinar-tema">テーマ別に購読</label>
-      <label for="assinar-tipo">種類別に購読</label>
-    </div>
-
-    <p class="escolha-hint">「テーマ別に登録」または「種類別に登録」を選択すると、選択肢が表示されます。</p>
-
-    <div class="escolha-conteudo">
-      <p class="fechar-vista"><label for="assinar-fechado" class="botao-secundario botao-fechar"><span aria-hidden="true">×</span> 閉じる</label></p>
-
-      <ul class="grelha painel-temas" aria-label="テーマ別に購読">
-<li class="cartao" style="--cor: #8e1b4f; --pct: 59.7%">
-  <h3>文化</h3>
-  <p class="resumo">音楽、映画、演劇、展覧会、本、文化遺産</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">40 件のイベント <small>· 全体の 60%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fcultura.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 文化 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fcultura.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 文化 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/cultura.ics" target="_top" aria-label="購読する: 文化 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/cultura.ics" aria-label="リンクをコピー: 文化"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/cultura.ics" aria-label="リンクをコピー: 文化">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #1b5e20; --pct: 14.9%">
-  <h3>スポーツ</h3>
-  <p class="resumo">競技、大会、運動</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">10 件のイベント <small>· 全体の 15%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fdesporto.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: スポーツ (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fdesporto.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: スポーツ (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/desporto.ics" target="_top" aria-label="購読する: スポーツ (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/desporto.ics" aria-label="リンクをコピー: スポーツ"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/desporto.ics" aria-label="リンクをコピー: スポーツ">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #004d40; --pct: 4.5%">
-  <h3>環境</h3>
-  <p class="resumo">自然、気候、エネルギー、水、ごみ、リサイクル</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">3 件のイベント <small>· 全体の 4%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fambiente.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 環境 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fambiente.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 環境 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/ambiente.ics" target="_top" aria-label="購読する: 環境 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/ambiente.ics" aria-label="リンクをコピー: 環境"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/ambiente.ics" aria-label="リンクをコピー: 環境">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao vazio" style="--cor: #1565c0; --pct: 0.0%">
-  <h3>移動・交通</h3>
-  <p class="resumo">公共交通、自転車、徒歩、交通安全</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">現在イベントはありません</p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fmobilidade-transportes.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 移動・交通 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fmobilidade-transportes.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 移動・交通 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/mobilidade-transportes.ics" target="_top" aria-label="購読する: 移動・交通 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/mobilidade-transportes.ics" aria-label="リンクをコピー: 移動・交通"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/mobilidade-transportes.ics" aria-label="リンクをコピー: 移動・交通">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #9e5d00; --pct: 1.5%">
-  <h3>観光</h3>
-  <p class="resumo">観光、食、ワイン、工芸、ポヴォアの魅力発信</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">1 件のイベント <small>· 全体の 1%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fturismo.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 観光 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fturismo.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 観光 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/turismo.ics" target="_top" aria-label="購読する: 観光 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/turismo.ics" aria-label="リンクをコピー: 観光"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/turismo.ics" aria-label="リンクをコピー: 観光">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #3e2723; --pct: 1.5%">
-  <h3>経済</h3>
-  <p class="resumo">商業、企業、雇用、研修、市場</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">1 件のイベント <small>· 全体の 1%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Feconomia.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 経済 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Feconomia.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 経済 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/economia.ics" target="_top" aria-label="購読する: 経済 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/economia.ics" aria-label="リンクをコピー: 経済"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/economia.ics" aria-label="リンクをコピー: 経済">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #1a237e; --pct: 17.9%">
-  <h3>市民生活</h3>
-  <p class="resumo">健康、教育、家族、若者、インクルージョン、市政</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">12 件のイベント <small>· 全体の 18%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fcidadania.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 市民生活 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fcidadania.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 市民生活 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/cidadania.ics" target="_top" aria-label="購読する: 市民生活 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/cidadania.ics" aria-label="リンクをコピー: 市民生活"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/cidadania.ics" aria-label="リンクをコピー: 市民生活">
-  </div>
-</div>
-  </div>
-</li>
-      </ul>
-      <ul class="grelha painel-tipos" aria-label="種類別に購読">
-<li class="cartao" style="--cor: #d32f2f; --pct: 6.0%">
-  <h3>コンサート</h3>
-  <p class="resumo">コンサート、リサイタル、合唱、バンド、ライブ音楽</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">4 件のイベント <small>· 全体の 6%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fconcertos.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: コンサート (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fconcertos.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: コンサート (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/concertos.ics" target="_top" aria-label="購読する: コンサート (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/concertos.ics" aria-label="リンクをコピー: コンサート"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/concertos.ics" aria-label="リンクをコピー: コンサート">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #6a3fb5; --pct: 10.4%">
-  <h3>映画</h3>
-  <p class="resumo">映画上映、映画、ドキュメンタリー</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">7 件のイベント <small>· 全体の 10%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fcinema.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 映画 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fcinema.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 映画 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/cinema.ics" target="_top" aria-label="購読する: 映画 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/cinema.ics" aria-label="リンクをコピー: 映画"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/cinema.ics" aria-label="リンクをコピー: 映画">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #c2185b; --pct: 4.5%">
-  <h3>演劇</h3>
-  <p class="resumo">演劇、大道演劇、人形劇、朗読劇</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">3 件のイベント <small>· 全体の 4%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fteatro.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 演劇 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fteatro.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 演劇 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/teatro.ics" target="_top" aria-label="購読する: 演劇 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/teatro.ics" aria-label="リンクをコピー: 演劇"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/teatro.ics" aria-label="リンクをコピー: 演劇">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #e07b00; --pct: 6.0%">
-  <h3>ショー</h3>
-  <p class="resumo">ダンス、サーカス、マジック、お笑い、ミュージカル、大道芸</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">4 件のイベント <small>· 全体の 6%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fespetaculos.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: ショー (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fespetaculos.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: ショー (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/espetaculos.ics" target="_top" aria-label="購読する: ショー (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/espetaculos.ics" aria-label="リンクをコピー: ショー"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/espetaculos.ics" aria-label="リンクをコピー: ショー">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #8a7300; --pct: 6.0%">
-  <h3>展覧会</h3>
-  <p class="resumo">美術、写真、歴史、文化遺産の展覧会</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">4 件のイベント <small>· 全体の 6%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fexposicoes.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 展覧会 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fexposicoes.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 展覧会 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/exposicoes.ics" target="_top" aria-label="購読する: 展覧会 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/exposicoes.ics" aria-label="リンクをコピー: 展覧会"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/exposicoes.ics" aria-label="リンクをコピー: 展覧会">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #795548; --pct: 7.5%">
-  <h3>文学</h3>
-  <p class="resumo">本、読書、詩、お話</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">5 件のイベント <small>· 全体の 7%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fliteratura.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 文学 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fliteratura.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 文学 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/literatura.ics" target="_top" aria-label="購読する: 文学 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/literatura.ics" aria-label="リンクをコピー: 文学"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/literatura.ics" aria-label="リンクをコピー: 文学">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #00897b; --pct: 19.4%">
-  <h3>ワークショップ・アクティビティ</h3>
-  <p class="resumo">ワークショップ、講座、講演、ゲーム、全年齢向けアクティビティ</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">13 件のイベント <small>· 全体の 19%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Foficinas-atividades.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: ワークショップ・アクティビティ (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Foficinas-atividades.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: ワークショップ・アクティビティ (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/oficinas-atividades.ics" target="_top" aria-label="購読する: ワークショップ・アクティビティ (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/oficinas-atividades.ics" aria-label="リンクをコピー: ワークショップ・アクティビティ"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/oficinas-atividades.ics" aria-label="リンクをコピー: ワークショップ・アクティビティ">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #388e3c; --pct: 4.5%">
-  <h3>スポーツイベント</h3>
-  <p class="resumo">大会、ランニング、ウォーキング、試合、公開練習</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">3 件のイベント <small>· 全体の 4%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fprovas-desportivas.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: スポーツイベント (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fprovas-desportivas.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: スポーツイベント (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/provas-desportivas.ics" target="_top" aria-label="購読する: スポーツイベント (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/provas-desportivas.ics" aria-label="リンクをコピー: スポーツイベント"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/provas-desportivas.ics" aria-label="リンクをコピー: スポーツイベント">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #f4511e; --pct: 11.9%">
-  <h3>祭り・フェア・市場</h3>
-  <p class="resumo">郷土の祭り、フェスティバル、フェア、市場、グルメ</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">8 件のイベント <small>· 全体の 12%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Ffestas-feiras.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 祭り・フェア・市場 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Ffestas-feiras.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 祭り・フェア・市場 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/festas-feiras.ics" target="_top" aria-label="購読する: 祭り・フェア・市場 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/festas-feiras.ics" aria-label="リンクをコピー: 祭り・フェア・市場"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/festas-feiras.ics" aria-label="リンクをコピー: 祭り・フェア・市場">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao vazio" style="--cor: #0288d1; --pct: 0.0%">
-  <h3>見学・散策</h3>
-  <p class="resumo">ガイドツアー、ルート、散策、遊歩道</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">現在イベントはありません</p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fvisitas-passeios.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 見学・散策 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fvisitas-passeios.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 見学・散策 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/visitas-passeios.ics" target="_top" aria-label="購読する: 見学・散策 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/visitas-passeios.ics" aria-label="リンクをコピー: 見学・散策"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/visitas-passeios.ics" aria-label="リンクをコピー: 見学・散策">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #546e7a; --pct: 3.0%">
-  <h3>取り組み・キャンペーン</h3>
-  <p class="resumo">啓発、健康診断、回収、清掃、チャリティー</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">2 件のイベント <small>· 全体の 3%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Facoes-campanhas.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 取り組み・キャンペーン (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Facoes-campanhas.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 取り組み・キャンペーン (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/acoes-campanhas.ics" target="_top" aria-label="購読する: 取り組み・キャンペーン (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/acoes-campanhas.ics" aria-label="リンクをコピー: 取り組み・キャンペーン"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/acoes-campanhas.ics" aria-label="リンクをコピー: 取り組み・キャンペーン">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #9c27b0; --pct: 7.5%">
-  <h3>記念行事・式典</h3>
-  <p class="resumo">記念日、式典、ガラ、表彰、公式会議</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">5 件のイベント <small>· 全体の 7%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fcomemoracoes.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 記念行事・式典 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fcomemoracoes.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 記念行事・式典 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/comemoracoes.ics" target="_top" aria-label="購読する: 記念行事・式典 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/comemoracoes.ics" aria-label="リンクをコピー: 記念行事・式典"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/comemoracoes.ics" aria-label="リンクをコピー: 記念行事・式典">
-  </div>
-</div>
-  </div>
-</li>
-<li class="cartao" style="--cor: #2e7d32; --pct: 13.4%">
-  <h3>ヴァルジンの試合</h3>
-  <p class="resumo">ヴァルジンSCの試合日程と結果</p>
-  <span class="barra" aria-hidden="true"><span></span></span>
-  <div class="rodape">
-    <p class="valor">9 件のイベント <small>· 全体の 13%</small></p>
-    <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fjogos-varzim.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: ヴァルジンの試合 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fjogos-varzim.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: ヴァルジンの試合 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/jogos-varzim.ics" target="_top" aria-label="購読する: ヴァルジンの試合 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>購読する</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/jogos-varzim.ics" aria-label="リンクをコピー: ヴァルジンの試合"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/jogos-varzim.ics" aria-label="リンクをコピー: ヴァルジンの試合">
-  </div>
-</div>
-  </div>
-</li>
-      </ul>
-
-      <p class="aviso">テーマと種類を同時に購読すると、同じイベントが重複して表示されます。どちらか一方をお選びください。</p>
-    </div>
-  </section>
-
   <section class="proximos" aria-labelledby="t-proximos">
-    <h2 id="t-proximos" class="titulo-seccao">今後のイベント</h2>
-    <p class="linha2">市内でこれから開かれるイベントです。名前・テーマ・種類・場所で検索し、すべてのイベントを見て、1 件または複数をカレンダーに追加できます。購読は不要です。</p>
+    <div class="proximos-topo">
+      <h2 id="t-proximos" class="titulo-seccao">今後のイベント</h2>
+      <div class="pesquisa-caixa" role="search">
+        <svg class="pesquisa-icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <label for="pesquisa" class="apenas-leitor">イベントを検索</label>
+        <input type="search" id="pesquisa" class="pesquisa-input" placeholder="検索：名前・テーマ・種類・場所" autocomplete="off" enterkeyhint="search" aria-controls="lista-proximos">
+        <button type="button" id="pesquisa-limpar" class="pesquisa-limpar" hidden aria-label="検索をクリア">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
 
-    <div class="pesquisa-caixa" role="search">
-      <svg class="pesquisa-icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-      <label for="pesquisa" class="apenas-leitor">イベントを検索</label>
-      <input type="search" id="pesquisa" class="pesquisa-input" placeholder="検索：名前・テーマ・種類・場所" autocomplete="off" enterkeyhint="search" aria-controls="lista-proximos">
-      <button type="button" id="pesquisa-limpar" class="pesquisa-limpar" hidden aria-label="検索をクリア">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
+    <input type="checkbox" id="mostrar-calendario" class="escondido" aria-controls="calendario-bloco">
+    <div class="barra-calendario">
+      <label for="mostrar-calendario" class="botao-secundario botao-mostrar botao-calendario"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="M7.5 14h.01M12 14h.01M16.5 14h.01M7.5 17.5h.01M12 17.5h.01" stroke-width="2.8"/></svg>カレンダー <span class="chevron" aria-hidden="true"></span></label>
+    </div>
+    <div class="calendario-bloco" id="calendario-bloco">
+      <div class="cal" id="calendario" data-um="1 件のイベント" data-n="{n} 件のイベント" data-ver-curso="開催中のイベントも見る（{n}）" data-adicionar="追加">
+        <div class="cal-mes-bloco">
+          <div class="cal-cabeca">
+            <button type="button" class="cal-nav" data-dir="-1" aria-label="前の月">‹</button>
+            <h3 class="cal-mes" id="cal-mes"></h3>
+            <button type="button" class="cal-nav" data-dir="1" aria-label="次の月">›</button>
+            <button type="button" class="cal-ir-hoje">今日</button>
+          </div>
+          <div class="cal-semana" aria-hidden="true"></div>
+          <div class="cal-dias" role="group" aria-labelledby="cal-mes"></div>
+        </div>
+        <div class="cal-dia" aria-live="polite">
+          <h3 class="cal-dia-titulo"></h3>
+          <p class="cal-dia-conta"></p>
+          <ul class="cal-lista-dia"></ul>
+          <p class="cal-vazio" hidden>この日に始まるイベントはありません。</p>
+          <button type="button" class="botao-texto cal-ver-curso" hidden></button>
+        </div>
+      </div>
     </div>
 
     <div class="destaque" id="destaque-proximo" role="group" hidden aria-label="注目">
-      <p class="destaque-rotulo">注目</p>
+      <div class="destaque-cabeca">
+        <p class="destaque-rotulo">注目</p>
+        <div class="filtro-rapido" id="filtro-rapido" role="group" aria-label="絞り込み" hidden
+          data-todos="すべて" data-mais="その他の条件">
+          <span class="filtro-rapido-rotulo"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg>絞り込み</span>
+        </div>
+      </div>
       <div class="destaque-cartao" aria-live="polite"></div>
+      <p class="destaque-vazio" hidden>この条件に該当する注目イベントはありません。</p>
       <div class="destaque-controlos">
         <button type="button" class="destaque-nav" data-dir="-1" aria-label="前へ">‹</button>
         <button type="button" class="destaque-pausa" aria-pressed="false"
@@ -982,7 +822,7 @@
 
     <input type="checkbox" id="mostrar-todos" class="escondido" aria-controls="painel-todos">
     <div class="barra-todos">
-      <label for="mostrar-todos" class="botao-secundario botao-mostrar">すべてのイベントを見る <span class="contagem-botao">(67)</span> <span class="chevron" aria-hidden="true"></span></label>
+      <label for="mostrar-todos" class="botao-secundario botao-mostrar botao-lista"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01" stroke-width="3"/></svg>すべてのイベントを見る <span class="contagem-botao">(67)</span> <span class="chevron" aria-hidden="true"></span></label>
     </div>
 
     <div class="painel-todos" id="painel-todos">
@@ -2013,7 +1853,416 @@
       </div>
     </div>
   </section>
+
+  <section class="subscrever" aria-labelledby="t-subscrever">
+    <h2 id="t-subscrever" class="titulo-seccao titulo-icone"><span class="icone-seccao" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>予定を購読</h2>
+
+    <div class="subscrever-grelha">
+      <div>
+        <div class="seletor" role="group" aria-labelledby="pergunta">
+          <h3 class="subtitulo-seccao" id="pergunta">カレンダーの種類</h3>
+          <div class="segmentos">
+            <label for="sis-google">Google</label>
+            <label for="sis-outlook">Outlook</label>
+            <label for="sis-apple">iPhone・iPad・Mac</label>
+            <label for="sis-android">Android</label>
+            <label for="sis-outro">その他</label>
+          </div>
+          <p class="dica dica-google">Google アカウントで Google カレンダーが開き、確認を求められます。</p>
+          <p class="dica dica-outlook">Web 版 Outlook（Microsoft 365 アカウント）が開き、確認を求められます。</p>
+          <p class="dica dica-apple">「カレンダー」アプリが開きます。iPhone・iPad・Mac 本体でご利用ください。</p>
+          <p class="dica dica-android">カレンダーは Google アカウントに追加され、Google カレンダーと Samsung カレンダーに表示されます。</p>
+          <p class="dica dica-outro">リンクをコピーし、アプリで「URL からカレンダーを購読」として追加してください。</p>
+        </div>
+
+        <div class="completa">
+          <div class="completa-texto">
+            <span class="icone-completa" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="M12 13v5M9.5 15.5h5"/></svg></span>
+            <div>
+              <p class="opcao-titulo">すべてのイベント</p>
+              <p class="linha2">すべてのイベントを 1 つのカレンダーに（67 件のイベント）。</p>
+            </div>
+          </div>
+          <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Fagenda.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: すべてのイベント (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Fagenda.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: すべてのイベント (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/agenda.ics" target="_top" aria-label="購読する: すべてのイベント (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/agenda.ics" aria-label="リンクをコピー: すべてのイベント"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/agenda.ics" aria-label="リンクをコピー: すべてのイベント">
   </div>
+</div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="subtitulo-seccao">テーマ / 種類</h3>
+        <div class="escolhas-assinar" role="group" aria-label="テーマ別に購読 / 種類別に購読">
+          <label for="assinar-tema" class="escolha-cartao">
+            <span class="escolha-icone" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><path d="M7.5 7.5h.01" stroke-width="3"/></svg></span>
+            <span class="escolha-texto"><span class="escolha-titulo">テーマ別に購読</span><span class="escolha-exemplos" data-grelha="painel-temas"></span></span>
+            <span class="chevron" aria-hidden="true"></span>
+          </label>
+          <label for="assinar-tipo" class="escolha-cartao">
+            <span class="escolha-icone" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg></span>
+            <span class="escolha-texto"><span class="escolha-titulo">種類別に購読</span><span class="escolha-exemplos" data-grelha="painel-tipos"></span></span>
+            <span class="chevron" aria-hidden="true"></span>
+          </label>
+        </div>
+
+        <div class="escolha-conteudo">
+          <p class="fechar-vista"><label for="assinar-fechado" class="botao-secundario botao-fechar"><span aria-hidden="true">×</span> 閉じる</label></p>
+
+          <ul class="grelha painel-temas" aria-label="テーマ別に購読">
+<li class="cartao" style="--cor: #8e1b4f; --pct: 59.7%">
+  <h3>文化</h3>
+  <p class="resumo">音楽、映画、演劇、展覧会、本、文化遺産</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">40 件のイベント <small>· 全体の 60%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fcultura.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 文化 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fcultura.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 文化 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/cultura.ics" target="_top" aria-label="購読する: 文化 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/cultura.ics" aria-label="リンクをコピー: 文化"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/cultura.ics" aria-label="リンクをコピー: 文化">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #1b5e20; --pct: 14.9%">
+  <h3>スポーツ</h3>
+  <p class="resumo">競技、大会、運動</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">10 件のイベント <small>· 全体の 15%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fdesporto.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: スポーツ (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fdesporto.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: スポーツ (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/desporto.ics" target="_top" aria-label="購読する: スポーツ (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/desporto.ics" aria-label="リンクをコピー: スポーツ"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/desporto.ics" aria-label="リンクをコピー: スポーツ">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #004d40; --pct: 4.5%">
+  <h3>環境</h3>
+  <p class="resumo">自然、気候、エネルギー、水、ごみ、リサイクル</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">3 件のイベント <small>· 全体の 4%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fambiente.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 環境 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fambiente.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 環境 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/ambiente.ics" target="_top" aria-label="購読する: 環境 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/ambiente.ics" aria-label="リンクをコピー: 環境"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/ambiente.ics" aria-label="リンクをコピー: 環境">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao vazio" style="--cor: #1565c0; --pct: 0.0%">
+  <h3>移動・交通</h3>
+  <p class="resumo">公共交通、自転車、徒歩、交通安全</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">現在イベントはありません</p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fmobilidade-transportes.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 移動・交通 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fmobilidade-transportes.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 移動・交通 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/mobilidade-transportes.ics" target="_top" aria-label="購読する: 移動・交通 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/mobilidade-transportes.ics" aria-label="リンクをコピー: 移動・交通"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/mobilidade-transportes.ics" aria-label="リンクをコピー: 移動・交通">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #9e5d00; --pct: 1.5%">
+  <h3>観光</h3>
+  <p class="resumo">観光、食、ワイン、工芸、ポヴォアの魅力発信</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">1 件のイベント <small>· 全体の 1%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fturismo.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 観光 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fturismo.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 観光 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/turismo.ics" target="_top" aria-label="購読する: 観光 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/turismo.ics" aria-label="リンクをコピー: 観光"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/turismo.ics" aria-label="リンクをコピー: 観光">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #3e2723; --pct: 1.5%">
+  <h3>経済</h3>
+  <p class="resumo">商業、企業、雇用、研修、市場</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">1 件のイベント <small>· 全体の 1%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Feconomia.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 経済 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Feconomia.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 経済 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/economia.ics" target="_top" aria-label="購読する: 経済 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/economia.ics" aria-label="リンクをコピー: 経済"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/economia.ics" aria-label="リンクをコピー: 経済">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #1a237e; --pct: 17.9%">
+  <h3>市民生活</h3>
+  <p class="resumo">健康、教育、家族、若者、インクルージョン、市政</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">12 件のイベント <small>· 全体の 18%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fcidadania.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 市民生活 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftemas%2Fcidadania.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 市民生活 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/temas/cidadania.ics" target="_top" aria-label="購読する: 市民生活 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/cidadania.ics" aria-label="リンクをコピー: 市民生活"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/temas/cidadania.ics" aria-label="リンクをコピー: 市民生活">
+  </div>
+</div>
+  </div>
+</li>
+          </ul>
+          <ul class="grelha painel-tipos" aria-label="種類別に購読">
+<li class="cartao" style="--cor: #d32f2f; --pct: 6.0%">
+  <h3>コンサート</h3>
+  <p class="resumo">コンサート、リサイタル、合唱、バンド、ライブ音楽</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">4 件のイベント <small>· 全体の 6%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fconcertos.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: コンサート (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fconcertos.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: コンサート (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/concertos.ics" target="_top" aria-label="購読する: コンサート (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/concertos.ics" aria-label="リンクをコピー: コンサート"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/concertos.ics" aria-label="リンクをコピー: コンサート">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #6a3fb5; --pct: 10.4%">
+  <h3>映画</h3>
+  <p class="resumo">映画上映、映画、ドキュメンタリー</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">7 件のイベント <small>· 全体の 10%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fcinema.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 映画 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fcinema.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 映画 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/cinema.ics" target="_top" aria-label="購読する: 映画 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/cinema.ics" aria-label="リンクをコピー: 映画"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/cinema.ics" aria-label="リンクをコピー: 映画">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #c2185b; --pct: 4.5%">
+  <h3>演劇</h3>
+  <p class="resumo">演劇、大道演劇、人形劇、朗読劇</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">3 件のイベント <small>· 全体の 4%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fteatro.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 演劇 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fteatro.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 演劇 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/teatro.ics" target="_top" aria-label="購読する: 演劇 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/teatro.ics" aria-label="リンクをコピー: 演劇"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/teatro.ics" aria-label="リンクをコピー: 演劇">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #e07b00; --pct: 6.0%">
+  <h3>ショー</h3>
+  <p class="resumo">ダンス、サーカス、マジック、お笑い、ミュージカル、大道芸</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">4 件のイベント <small>· 全体の 6%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fespetaculos.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: ショー (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fespetaculos.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: ショー (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/espetaculos.ics" target="_top" aria-label="購読する: ショー (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/espetaculos.ics" aria-label="リンクをコピー: ショー"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/espetaculos.ics" aria-label="リンクをコピー: ショー">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #8a7300; --pct: 6.0%">
+  <h3>展覧会</h3>
+  <p class="resumo">美術、写真、歴史、文化遺産の展覧会</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">4 件のイベント <small>· 全体の 6%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fexposicoes.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 展覧会 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fexposicoes.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 展覧会 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/exposicoes.ics" target="_top" aria-label="購読する: 展覧会 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/exposicoes.ics" aria-label="リンクをコピー: 展覧会"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/exposicoes.ics" aria-label="リンクをコピー: 展覧会">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #795548; --pct: 7.5%">
+  <h3>文学</h3>
+  <p class="resumo">本、読書、詩、お話</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">5 件のイベント <small>· 全体の 7%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fliteratura.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 文学 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fliteratura.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 文学 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/literatura.ics" target="_top" aria-label="購読する: 文学 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/literatura.ics" aria-label="リンクをコピー: 文学"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/literatura.ics" aria-label="リンクをコピー: 文学">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #00897b; --pct: 19.4%">
+  <h3>ワークショップ・アクティビティ</h3>
+  <p class="resumo">ワークショップ、講座、講演、ゲーム、全年齢向けアクティビティ</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">13 件のイベント <small>· 全体の 19%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Foficinas-atividades.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: ワークショップ・アクティビティ (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Foficinas-atividades.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: ワークショップ・アクティビティ (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/oficinas-atividades.ics" target="_top" aria-label="購読する: ワークショップ・アクティビティ (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/oficinas-atividades.ics" aria-label="リンクをコピー: ワークショップ・アクティビティ"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/oficinas-atividades.ics" aria-label="リンクをコピー: ワークショップ・アクティビティ">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #388e3c; --pct: 4.5%">
+  <h3>スポーツイベント</h3>
+  <p class="resumo">大会、ランニング、ウォーキング、試合、公開練習</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">3 件のイベント <small>· 全体の 4%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fprovas-desportivas.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: スポーツイベント (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fprovas-desportivas.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: スポーツイベント (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/provas-desportivas.ics" target="_top" aria-label="購読する: スポーツイベント (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/provas-desportivas.ics" aria-label="リンクをコピー: スポーツイベント"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/provas-desportivas.ics" aria-label="リンクをコピー: スポーツイベント">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #f4511e; --pct: 11.9%">
+  <h3>祭り・フェア・市場</h3>
+  <p class="resumo">郷土の祭り、フェスティバル、フェア、市場、グルメ</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">8 件のイベント <small>· 全体の 12%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Ffestas-feiras.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 祭り・フェア・市場 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Ffestas-feiras.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 祭り・フェア・市場 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/festas-feiras.ics" target="_top" aria-label="購読する: 祭り・フェア・市場 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/festas-feiras.ics" aria-label="リンクをコピー: 祭り・フェア・市場"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/festas-feiras.ics" aria-label="リンクをコピー: 祭り・フェア・市場">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao vazio" style="--cor: #0288d1; --pct: 0.0%">
+  <h3>見学・散策</h3>
+  <p class="resumo">ガイドツアー、ルート、散策、遊歩道</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">現在イベントはありません</p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fvisitas-passeios.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 見学・散策 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fvisitas-passeios.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 見学・散策 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/visitas-passeios.ics" target="_top" aria-label="購読する: 見学・散策 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/visitas-passeios.ics" aria-label="リンクをコピー: 見学・散策"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/visitas-passeios.ics" aria-label="リンクをコピー: 見学・散策">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #546e7a; --pct: 3.0%">
+  <h3>取り組み・キャンペーン</h3>
+  <p class="resumo">啓発、健康診断、回収、清掃、チャリティー</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">2 件のイベント <small>· 全体の 3%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Facoes-campanhas.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 取り組み・キャンペーン (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Facoes-campanhas.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 取り組み・キャンペーン (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/acoes-campanhas.ics" target="_top" aria-label="購読する: 取り組み・キャンペーン (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/acoes-campanhas.ics" aria-label="リンクをコピー: 取り組み・キャンペーン"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/acoes-campanhas.ics" aria-label="リンクをコピー: 取り組み・キャンペーン">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #9c27b0; --pct: 7.5%">
+  <h3>記念行事・式典</h3>
+  <p class="resumo">記念日、式典、ガラ、表彰、公式会議</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">5 件のイベント <small>· 全体の 7%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fcomemoracoes.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 記念行事・式典 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fcomemoracoes.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: 記念行事・式典 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/comemoracoes.ics" target="_top" aria-label="購読する: 記念行事・式典 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/comemoracoes.ics" aria-label="リンクをコピー: 記念行事・式典"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/comemoracoes.ics" aria-label="リンクをコピー: 記念行事・式典">
+  </div>
+</div>
+  </div>
+</li>
+<li class="cartao" style="--cor: #2e7d32; --pct: 13.4%">
+  <h3>ヴァルジンの試合</h3>
+  <p class="resumo">ヴァルジンSCの試合日程と結果</p>
+  <span class="barra" aria-hidden="true"><span></span></span>
+  <div class="rodape">
+    <p class="valor">9 件のイベント <small>· 全体の 13%</small></p>
+    <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fjogos-varzim.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: ヴァルジンの試合 (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fja%2Ftipos%2Fjogos-varzim.ics" target="_blank" rel="noopener noreferrer" aria-label="購読する: ヴァルジンの試合 (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/jogos-varzim.ics" target="_top" aria-label="購読する: ヴァルジンの試合 (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>購読する</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/jogos-varzim.ics" aria-label="リンクをコピー: ヴァルジンの試合"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>リンクをコピー</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/ja/tipos/jogos-varzim.ics" aria-label="リンクをコピー: ヴァルジンの試合">
+  </div>
+</div>
+  </div>
+</li>
+          </ul>
+
+          <p class="aviso">テーマと種類を同時に購読すると、同じイベントが重複して表示されます。どちらか一方をお選びください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="ajuda" aria-labelledby="t-ajuda">
     <details class="ajuda-grupo">
@@ -2097,11 +2346,35 @@
     gravar('nexo-eventos-lingua', atual);
   });
 
-  // Fechar o menu de línguas ao clicar fora ou com Esc.
-  var menu = document.querySelector('.linguas');
-  document.addEventListener('click', function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+  // Calendário de quem consulta (serve "Adicionar" e "Subscrever"): o escolhido da última vez;
+  // à primeira visita, um palpite pelo aparelho (iPhone/iPad -> Apple, Android -> Android, resto -> Google).
+  var radiosSistema = document.querySelectorAll('input[name="sistema"]');
+  var sistemaGuardado = ler('nexo-eventos-sistema');
+  if (!sistemaGuardado) {
+    var ua = navigator.userAgent || '';
+    if (/Android/i.test(ua)) sistemaGuardado = 'sis-android';
+    else if (/iPhone|iPad|iPod/i.test(ua)) sistemaGuardado = 'sis-apple';
+  }
+  var sistemaInicial = sistemaGuardado ? document.getElementById(sistemaGuardado) : null;
+  if (sistemaInicial && sistemaInicial.name === 'sistema') sistemaInicial.checked = true;
+  var menuSistema = document.querySelector('.sistema-menu');
+  for (var r = 0; r < radiosSistema.length; r++) {
+    radiosSistema[r].addEventListener('change', function () {
+      gravar('nexo-eventos-sistema', this.id);
+      if (menuSistema && menuSistema.open) menuSistema.open = false;
+    });
+  }
+
+  // Fechar os menus (língua, calendário) ao clicar fora ou com Esc.
+  var menus = document.querySelectorAll('.linguas, .sistema-menu');
+  document.addEventListener('click', function (e) {
+    for (var i = 0; i < menus.length; i++) if (menus[i].open && !menus[i].contains(e.target)) menus[i].open = false;
+  });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); }
+    if (e.key !== 'Escape') return;
+    for (var i = 0; i < menus.length; i++) {
+      if (menus[i].open) { menus[i].open = false; menus[i].querySelector('summary').focus(); }
+    }
   });
 
   // Copiar link.
@@ -2219,29 +2492,59 @@
           et.textContent = falta === 0 ? modeloHoje : (falta === 1 ? modeloAmanha : modeloDias.replace('{n}', String(falta)));
         }
       }
+      it.ct = (li.style.getPropertyValue('--ct') || '').trim();
+      var titEl = li.querySelector('.titulo-proximo');
+      it.titulo = titEl ? titEl.textContent : '';
+      it.okCal = true;
       itens.push(it);
     }
 
-    // Destaque: os eventos dos próximos 30 dias, um a um, a cada 4 s (não depende dos filtros da lista).
+    // Destaque: os eventos dos próximos 30 dias, um a um, a cada 4 s. Segue o tema e o tipo escolhidos
+    // ("Filtrar" no próprio quadro ou nos filtros da lista), mas não a data nem a pesquisa.
     // O tempo é a própria barra no fundo do quadro: quando enche, passa ao evento seguinte. Assim, ao parar
     // (rato por cima, teclado, "Pausar", separador escondido) a barra fica onde está e retoma dali.
     var destaque = document.getElementById('destaque-proximo');
     var destaqueCartao = destaque ? destaque.querySelector('.destaque-cartao') : null;
     var destaquePosicao = destaque ? destaque.querySelector('.destaque-posicao') : null;
     var destaquePausa = destaque ? destaque.querySelector('.destaque-pausa') : null;
-    var barraTempo = destaque ? destaque.querySelector('.destaque-progresso span') : null;
+    var destaqueVazio = destaque ? destaque.querySelector('.destaque-vazio') : null;
+    var destaqueControlos = destaque ? destaque.querySelector('.destaque-controlos') : null;
+    var destaqueBarra = destaque ? destaque.querySelector('.destaque-progresso') : null;
+    var barraTempo = destaqueBarra ? destaqueBarra.querySelector('span') : null;
     var destaqueIndice = 0;
     var destaquePausado = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
     var paradoPeloRato = false, paradoPeloTeclado = false;
-    var emDestaque = itens.filter(function (x) { return x.janela; });
-    if (!emDestaque.length) emDestaque = itens.slice(0, 30);
+    var janelaDestaque = itens.filter(function (x) { return x.janela; });
+    if (!janelaDestaque.length) janelaDestaque = itens.slice(0, 30);
+    var emDestaque = janelaDestaque.slice();
+    var chaveDestaque = '';
+    // Devolve true se o conjunto mudou (o quadro passa então a mostrar o mesmo evento, se ainda lá estiver).
+    function filtrarDestaque(temas, tipos) {
+      var chave = temas.join(',') + '|' + tipos.join(',');
+      if (chave === chaveDestaque) return false;
+      chaveDestaque = chave;
+      var atual = emDestaque[destaqueIndice];
+      emDestaque = janelaDestaque.filter(function (x) {
+        return (!temas.length || temas.indexOf(x.tema) >= 0) && (!tipos.length || tipos.indexOf(x.tipo) >= 0);
+      });
+      var pos = atual ? emDestaque.indexOf(atual) : -1;
+      destaqueIndice = pos >= 0 ? pos : 0;
+      return true;
+    }
 
     // Enquanto se pesquisa, o destaque recolhe: os resultados aparecem logo por baixo da pesquisa.
     var aPesquisar = false;
     function destaqueMostrar() {
       if (!destaque) return;
-      if (!emDestaque.length || aPesquisar) { destaque.hidden = true; return; }
+      if (!janelaDestaque.length || aPesquisar) { destaque.hidden = true; return; }
       destaque.hidden = false;
+      // Sem eventos para o filtro: o quadro fica (com o "Filtrar", para se poder mudar) e diz porquê.
+      var semNada = !emDestaque.length;
+      if (destaqueCartao) destaqueCartao.hidden = semNada;
+      if (destaqueVazio) destaqueVazio.hidden = !semNada;
+      if (destaqueControlos) destaqueControlos.hidden = semNada;
+      if (destaqueBarra) destaqueBarra.hidden = semNada;
+      if (semNada) return;
       if (destaqueIndice >= emDestaque.length) destaqueIndice = 0;
       var linha = emDestaque[destaqueIndice].li;
       if (destaqueCartao) {
@@ -2405,6 +2708,7 @@
         var okQuando = passaQuando(it, q, periodo, agora);
         var okTexto = true;
         for (var w = 0; okTexto && w < termos.length; w++) okTexto = it.busca.indexOf(termos[w]) >= 0;
+        it.okCal = okTema && okTipo && okTexto; // o calendário segue tema, tipo e pesquisa (as datas são as dele)
         var ok = okTema && okTipo && okQuando && okTexto;
         it.li.hidden = !ok;
         if (!ok && it.caixa) it.caixa.checked = false;
@@ -2436,11 +2740,17 @@
       if (semResultados) semResultados.hidden = !(itens.length && mostrados === 0);
       if (blocoDatas) blocoDatas.hidden = q !== 'datas';
       var temTexto = !!(pesquisa && pesquisa.value);
+      var destaqueMudou = filtrarDestaque(temas, tipos);
       if (temTexto !== aPesquisar) {
         aPesquisar = temTexto;
         if (aPesquisar) destaqueParar(); else destaqueComecar();
         destaqueMostrar();
+      } else if (destaqueMudou) {
+        destaqueMostrar();
+        destaqueComecar();
       }
+      sincronizarRapidos(tipos);
+      if (mostrarCal && mostrarCal.checked) desenharCalendario();
       if (limparPesquisa) limparPesquisa.hidden = !temTexto;
       if (limparFiltros) limparFiltros.hidden = !(temas.length || tipos.length || q !== 'todos' || temTexto);
       var nAtivos = temas.length + tipos.length + (q !== 'todos' ? 1 : 0);
@@ -2461,12 +2771,12 @@
     if (pesquisa) {
       // Escrever na pesquisa abre logo "Ver todos os eventos" com o resultado.
       pesquisa.addEventListener('input', function () {
-        if (pesquisa.value && mostrarTodos && !mostrarTodos.checked) mostrarTodos.checked = true;
+        if (pesquisa.value && mostrarTodos && !mostrarTodos.checked) abrirLista();
         aplicarFiltro();
       });
       pesquisa.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && pesquisa.value) { pesquisa.value = ''; aplicarFiltro(); }
-        else if (e.key === 'Enter') { e.preventDefault(); if (mostrarTodos) mostrarTodos.checked = true; aplicarFiltro(); }
+        else if (e.key === 'Enter') { e.preventDefault(); abrirLista(); aplicarFiltro(); }
       });
     }
     if (limparPesquisa) {
@@ -2567,10 +2877,328 @@
       });
     }
 
+    function abrirLista() { if (mostrarTodos) mostrarTodos.checked = true; }
+    var mostrarCal = document.getElementById('mostrar-calendario');
+    if (mostrarCal) mostrarCal.addEventListener('change', function () { if (mostrarCal.checked) desenharCalendario(); });
+
+    // Filtrar (no quadro "Em destaque"): os tipos mais frequentes no que está a decorrer e vem aí,
+    // em botões pequenos de ligar/desligar. São os mesmos filtros da lista: escolher aqui é o mesmo
+    // que escolher lá, e o destaque, a lista e o calendário mudam juntos.
+    var filtroRapido = document.getElementById('filtro-rapido');
+    var rapidos = [];
+    function chipDoTipo(slug) {
+      for (var i = 0; i < chips.length; i++) {
+        if (chips[i].classList.contains('chip-tipo') && chips[i].getAttribute('data-slug') === slug) return chips[i];
+      }
+      return null;
+    }
+    function novoRapido(slug, nome, cor, n) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip-rapido';
+      b.setAttribute('aria-pressed', 'false');
+      if (cor) b.style.setProperty('--cor', cor);
+      if (slug) { var ponto = document.createElement('span'); ponto.className = 'ponto'; b.appendChild(ponto); }
+      b.appendChild(document.createTextNode(nome));
+      if (n) { var num = document.createElement('span'); num.className = 'n'; num.textContent = String(n); b.appendChild(num); }
+      filtroRapido.appendChild(b);
+      rapidos.push({ botao: b, slug: slug });
+      return b;
+    }
+    function sincronizarRapidos(tipos) {
+      for (var i = 0; i < rapidos.length; i++) {
+        var r = rapidos[i];
+        if (r.slug === undefined) continue;
+        r.botao.setAttribute('aria-pressed', String(r.slug ? tipos.indexOf(r.slug) >= 0 : tipos.length === 0));
+      }
+    }
+    if (filtroRapido) {
+      var porTipoJanela = {};
+      for (var pj = 0; pj < janelaDestaque.length; pj++) porTipoJanela[janelaDestaque[pj].tipo] = (porTipoJanela[janelaDestaque[pj].tipo] || 0) + 1;
+      var ordemTipos = [];
+      for (var oc = 0; oc < chips.length; oc++) if (chips[oc].classList.contains('chip-tipo')) ordemTipos.push(chips[oc].getAttribute('data-slug'));
+      var maisComuns = Object.keys(porTipoJanela).filter(function (s) { return chipDoTipo(s); }).sort(function (a, b) {
+        return (porTipoJanela[b] - porTipoJanela[a]) || (ordemTipos.indexOf(a) - ordemTipos.indexOf(b));
+      }).slice(0, 5);
+      if (maisComuns.length >= 2) {
+        novoRapido('', filtroRapido.getAttribute('data-todos') || '', '', 0).addEventListener('click', function () {
+          for (var i = 0; i < chips.length; i++) if (chips[i].classList.contains('chip-tipo')) chips[i].checked = false;
+          aplicarFiltro();
+        });
+        maisComuns.forEach(function (slug) {
+          var caixa = chipDoTipo(slug);
+          var rotulo = caixa.nextElementSibling;
+          var nome = rotulo && rotulo.firstChild ? String(rotulo.firstChild.nodeValue || '').trim() : slug;
+          var cor = rotulo ? rotulo.style.getPropertyValue('--cor').trim() : '';
+          novoRapido(slug, nome, cor, porTipoJanela[slug]).addEventListener('click', function () {
+            caixa.checked = !caixa.checked;
+            aplicarFiltro();
+          });
+        });
+        // "Mais filtros": abre a lista com todos os filtros (datas, temas, todos os tipos).
+        var botaoMais = novoRapido(undefined, filtroRapido.getAttribute('data-mais') || '', '', 0);
+        botaoMais.classList.add('chip-mais');
+        botaoMais.removeAttribute('aria-pressed');
+        botaoMais.addEventListener('click', function () {
+          abrirLista();
+          if (blocoFiltros) {
+            blocoFiltros.open = true;
+            blocoFiltros.scrollIntoView({ block: 'start' });
+            var sumario = blocoFiltros.querySelector('summary');
+            if (sumario) sumario.focus({ preventScroll: true });
+          }
+        });
+        filtroRapido.hidden = false;
+      }
+    }
+
+    // Calendário (abre no botão "Calendário"): o mês, com os eventos no dia em que começam, cada um uma só
+    // vez. Ao escolher um dia, os eventos desse dia, cada um com "+" para o adicionar ao calendário. Os de
+    // vários dias já começados (exposições...) não se repetem dia a dia: há um atalho para os ver na lista.
+    // Abre no primeiro dia, de hoje em diante, em que começa algum evento (hoje fica sempre assinalado).
+    var calEl = document.getElementById('calendario');
+    var lingua = raiz.getAttribute('lang') || 'pt-PT';
+    function mesDe(n) { var d = new Date(n * 86400000); return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), 1) / 86400000; }
+    function mesMais(m, k) { var d = new Date(m * 86400000); return Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + k, 1) / 86400000; }
+    function diasNoMes(m) { var d = new Date(m * 86400000); return new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 0)).getUTCDate(); }
+    function formatar(opcoes, n) {
+      opcoes.timeZone = 'UTC';
+      try { return new Intl.DateTimeFormat(lingua, opcoes).format(new Date(n * 86400000)); }
+      catch (e) { return new Date(n * 86400000).toISOString().slice(0, 10); }
+    }
+    function maiuscula(t) { return t ? t.charAt(0).toLocaleUpperCase(lingua) + t.slice(1) : t; }
+    function textoContagem(n) {
+      return n === 1 ? (calEl.getAttribute('data-um') || '1') : (calEl.getAttribute('data-n') || '{n}').replace('{n}', String(n));
+    }
+    var cal = null;
+    if (calEl) {
+      var ultimo = hojeN;
+      for (var u = 0; u < itens.length; u++) ultimo = Math.max(ultimo, itens[u].dIni);
+      cal = {
+        min: mesDe(hojeN),
+        max: Math.min(mesDe(ultimo), mesMais(mesDe(hojeN), 12)),
+        mes: mesDe(hojeN),
+        sel: hojeN,
+        titulo: calEl.querySelector('.cal-mes'),
+        semana: calEl.querySelector('.cal-semana'),
+        dias: calEl.querySelector('.cal-dias'),
+        anterior: calEl.querySelector('.cal-nav[data-dir="-1"]'),
+        seguinte: calEl.querySelector('.cal-nav[data-dir="1"]'),
+        irHoje: calEl.querySelector('.cal-ir-hoje'),
+        diaTitulo: calEl.querySelector('.cal-dia-titulo'),
+        diaConta: calEl.querySelector('.cal-dia-conta'),
+        listaDia: calEl.querySelector('.cal-lista-dia'),
+        verCurso: calEl.querySelector('.cal-ver-curso'),
+        vazio: calEl.querySelector('.cal-vazio')
+      };
+      for (var pd = 0; pd < itens.length; pd++) {
+        var di = itens[pd].dIni;
+        if (di >= hojeN && di < cal.min + diasNoMes(cal.min) && (cal.sel === hojeN ? !temInicio(hojeN) : di < cal.sel)) cal.sel = di;
+      }
+      // Dias da semana na língua da página, a começar à segunda-feira (5 jan 2026 foi uma segunda).
+      var segunda = Date.UTC(2026, 0, 5) / 86400000;
+      for (var sd = 0; sd < 7; sd++) {
+        var cab = document.createElement('span');
+        cab.textContent = formatar({ weekday: 'short' }, segunda + sd).replace(/\.$/, '');
+        if (cab.textContent.length > 4) cab.textContent = cab.textContent.slice(0, 3); // "segunda" -> "seg"
+        cal.semana.appendChild(cab);
+      }
+    }
+    function temInicio(n) {
+      for (var i = 0; i < itens.length; i++) if (itens[i].dIni === n) return true;
+      return false;
+    }
+    function eventosDoDia(n) {
+      var doDia = [], curso = [];
+      for (var i = 0; i < itens.length; i++) {
+        var it = itens[i];
+        if (!it.okCal) continue;
+        if (it.dIni === n) doDia.push(it);
+        else if (it.dIni < n && it.dFim >= n) curso.push(it);
+      }
+      doDia.sort(function (a, b) { return a.ini - b.ini; });
+      return { doDia: doDia, curso: curso };
+    }
+    function desenharCalendario() {
+      if (!cal) return;
+      if (cal.mes < cal.min) cal.mes = cal.min;
+      if (cal.mes > cal.max) cal.mes = cal.max;
+      var n0 = cal.mes, total = diasNoMes(n0);
+      if (cal.sel < n0 || cal.sel >= n0 + total) cal.sel = (hojeN >= n0 && hojeN < n0 + total) ? hojeN : n0;
+      cal.titulo.textContent = maiuscula(formatar({ month: 'long', year: 'numeric' }, n0));
+      cal.anterior.disabled = n0 <= cal.min;
+      cal.seguinte.disabled = n0 >= cal.max;
+      while (cal.dias.firstChild) cal.dias.removeChild(cal.dias.firstChild);
+      var vazios = (new Date(n0 * 86400000).getUTCDay() + 6) % 7;
+      for (var v = 0; v < vazios; v++) {
+        var buraco = document.createElement('span');
+        buraco.className = 'cal-dia-b fora';
+        buraco.setAttribute('aria-hidden', 'true');
+        cal.dias.appendChild(buraco);
+      }
+      for (var k = 0; k < total; k++) {
+        var n = n0 + k, ev = eventosDoDia(n);
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'cal-dia-b' + (n < hojeN ? ' passado' : '') + (n === hojeN ? ' hoje' : '');
+        b.setAttribute('data-dia', String(n));
+        b.setAttribute('aria-pressed', String(n === cal.sel));
+        b.tabIndex = n === cal.sel ? 0 : -1;
+        var nTotal = ev.doDia.length;
+        b.setAttribute('aria-label', maiuscula(formatar({ weekday: 'long', day: 'numeric', month: 'long' }, n)) +
+          (nTotal ? ': ' + textoContagem(nTotal) : ''));
+        var num = document.createElement('span');
+        num.className = 'num';
+        num.textContent = String(k + 1);
+        b.appendChild(num);
+        if (ev.doDia.length) {
+          var marcas = document.createElement('span');
+          marcas.className = 'cal-marcas';
+          marcas.setAttribute('aria-hidden', 'true');
+          var mostrar = ev.doDia.length > 3 ? 2 : ev.doDia.length;
+          for (var e = 0; e < mostrar; e++) {
+            var pilula = document.createElement('span');
+            pilula.className = 'cal-ev';
+            if (ev.doDia[e].ct) pilula.style.setProperty('--ct', ev.doDia[e].ct);
+            pilula.title = ev.doDia[e].titulo;
+            var tx = document.createElement('span');
+            tx.className = 'cal-ev-t';
+            tx.textContent = ev.doDia[e].titulo;
+            pilula.appendChild(tx);
+            marcas.appendChild(pilula);
+          }
+          if (ev.doDia.length > mostrar) {
+            var mais = document.createElement('span');
+            mais.className = 'cal-mais';
+            mais.textContent = '+' + (ev.doDia.length - mostrar);
+            marcas.appendChild(mais);
+          }
+          b.appendChild(marcas);
+        }
+        cal.dias.appendChild(b);
+      }
+      desenharDia();
+    }
+    var ICONE_MAIS = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>';
+    var ICONE_FEITO = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+    // Linha curta de um evento no calendário. Os links do "+" são os do próprio evento na lista
+    // (Google/Android, Outlook, .ics para iPhone e "Outro"): só aparece o do calendário escolhido.
+    function linhaCalendario(it) {
+      var li = document.createElement('li');
+      li.className = 'cal-item';
+      if (it.ct) li.style.setProperty('--ct', it.ct);
+      var tempo = it.li.querySelector('time');
+      var textoTempo = tempo ? tempo.textContent : '';
+      var hm = /\b\d{1,2}:\d{2}\b/.exec(textoTempo);
+      var hora = document.createElement('span');
+      hora.className = 'cal-hora';
+      hora.textContent = hm ? hm[0] : (textoTempo.split('·')[1] || '').trim();
+      li.appendChild(hora);
+      var info = document.createElement('span');
+      info.className = 'cal-info';
+      var maisInfo = it.li.querySelector('a.botao-info');
+      var titulo = document.createElement(maisInfo ? 'a' : 'span');
+      titulo.className = 'cal-titulo';
+      titulo.textContent = it.titulo;
+      if (maisInfo) { titulo.href = maisInfo.href; titulo.target = '_blank'; titulo.rel = 'noopener noreferrer'; }
+      info.appendChild(titulo);
+      var meta = it.li.querySelector('.meta-proximo');
+      var local = meta ? meta.textContent.replace(textoTempo, '').replace(/^\s*·\s*/, '').trim() : '';
+      if (local) {
+        var sitio = document.createElement('span');
+        sitio.className = 'cal-local';
+        sitio.textContent = local;
+        info.appendChild(sitio);
+      }
+      li.appendChild(info);
+      var links = it.li.querySelectorAll('a.botao-adicionar-um');
+      for (var i = 0; i < links.length; i++) {
+        var mais = links[i].cloneNode(false); // href, download, aria-label: tudo igual ao "Adicionar" da lista
+        mais.className = 'cal-add ' + links[i].className.split(/\s+/).filter(function (c) { return c.indexOf('so-') === 0; }).join(' ');
+        mais.title = calEl.getAttribute('data-adicionar') || '';
+        mais.innerHTML = ICONE_MAIS;
+        mais.addEventListener('click', function () { this.classList.add('feito'); this.innerHTML = ICONE_FEITO; });
+        li.appendChild(mais);
+      }
+      return li;
+    }
+    function desenharDia() {
+      if (!cal) return;
+      var ev = eventosDoDia(cal.sel), n = ev.doDia.length;
+      cal.diaTitulo.textContent = maiuscula(formatar({ weekday: 'long', day: 'numeric', month: 'long' }, cal.sel));
+      cal.diaConta.textContent = n ? textoContagem(n) : '';
+      while (cal.listaDia.firstChild) cal.listaDia.removeChild(cal.listaDia.firstChild);
+      for (var i = 0; i < n; i++) cal.listaDia.appendChild(linhaCalendario(ev.doDia[i]));
+      cal.vazio.hidden = n > 0;
+      cal.verCurso.hidden = !ev.curso.length;
+      cal.verCurso.textContent = (calEl.getAttribute('data-ver-curso') || '{n}').replace('{n}', String(ev.curso.length));
+    }
+    function escolherDia(n, focar) {
+      if (!cal) return;
+      var m = mesDe(n);
+      if (m < cal.min || m > cal.max) return;
+      cal.sel = n;
+      if (m !== cal.mes) { cal.mes = m; desenharCalendario(); }
+      else {
+        var botoes = cal.dias.querySelectorAll('button[data-dia]');
+        for (var i = 0; i < botoes.length; i++) {
+          var esteDia = +botoes[i].getAttribute('data-dia') === n;
+          botoes[i].setAttribute('aria-pressed', String(esteDia));
+          botoes[i].tabIndex = esteDia ? 0 : -1;
+        }
+        desenharDia();
+      }
+      if (focar) {
+        var alvo = cal.dias.querySelector('button[data-dia="' + n + '"]');
+        if (alvo) alvo.focus();
+      }
+    }
+    if (cal) {
+      cal.dias.addEventListener('click', function (e) {
+        var b = e.target.closest ? e.target.closest('button[data-dia]') : null;
+        if (b) escolherDia(+b.getAttribute('data-dia'), false);
+      });
+      // Teclado: setas mudam de dia (e de mês, nos extremos); Page Up/Down mudam de mês.
+      cal.dias.addEventListener('keydown', function (e) {
+        var passo = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -7, ArrowDown: 7 }[e.key];
+        if (passo) { e.preventDefault(); escolherDia(cal.sel + passo, true); return; }
+        if (e.key === 'PageUp' || e.key === 'PageDown') {
+          e.preventDefault();
+          var m = mesMais(cal.mes, e.key === 'PageUp' ? -1 : 1);
+          if (m >= cal.min && m <= cal.max) escolherDia(m, true);
+        }
+      });
+      cal.anterior.addEventListener('click', function () { cal.mes = mesMais(cal.mes, -1); desenharCalendario(); });
+      cal.seguinte.addEventListener('click', function () { cal.mes = mesMais(cal.mes, 1); desenharCalendario(); });
+      cal.irHoje.addEventListener('click', function () { escolherDia(hojeN, true); });
+      // Atalho para os eventos já em curso nesse dia: a lista, filtrada por essa data (sem os repetir aqui).
+      cal.verCurso.addEventListener('click', function () {
+        var qDatas = document.getElementById('quando-datas');
+        if (!qDatas || !dataDe || !dataAte) return;
+        var iso = new Date(cal.sel * 86400000).toISOString().slice(0, 10);
+        qDatas.checked = true;
+        dataDe.value = iso;
+        dataAte.value = iso;
+        abrirLista();
+        aplicarFiltro();
+        var painelTodos = document.getElementById('painel-todos');
+        if (painelTodos) painelTodos.scrollIntoView({ block: 'start' });
+      });
+    }
+
     aplicarFiltro();
     destaqueMostrar();
     destaqueComecar();
   })();
+
+  // "Subscrever por tema" / "por tipo": alguns exemplos por baixo do título (os nomes dos próprios cartões).
+  var exemplos = document.querySelectorAll('.escolha-exemplos[data-grelha]');
+  for (var x = 0; x < exemplos.length; x++) {
+    var nomes = document.querySelectorAll('.' + exemplos[x].getAttribute('data-grelha') + ' .cartao:not(.vazio) h3');
+    var lista = [];
+    for (var y = 0; y < nomes.length && y < 3; y++) lista.push(nomes[y].textContent);
+    if (lista.length) exemplos[x].textContent = lista.join(', ') + (nomes.length > 3 ? '…' : '');
+  }
 })();
 </script>
 </body>
