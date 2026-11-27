@@ -268,7 +268,7 @@
         <div class="local-grupo">
           <p class="local-nome">Avenida Mouzinho de Albuquerque</p>
           <div class="item" id="p-casa" data-id="casa">
-            <h3 class="titulo">Casa de Natal <span class="resto">- Palacete Villa Georgette</span></h3>
+            <h3 class="titulo">Casa do Pai Natal <span class="resto">- Palacete Villa Georgette</span></h3>
           </div>
         </div>
 
@@ -364,7 +364,7 @@
           <p class="local-nome"><span class="txt">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></span></p>
           <div class="item" id="p-e1213" data-id="e1213">
             <p class="hora">17h30</p>
-            <h3 class="titulo">Teatro Musical <span class="resto">A Grande Festa do Pai Natal</span></h3>
+            <h3 class="titulo">Medley <span class="resto">A Grande Festa do Pai Natal</span></h3>
           </div>
         </div>
       </article>
@@ -375,7 +375,7 @@
           <p class="local-nome"><span class="txt">Praça do Almada <span class="resto">— Aldeia Encantada de Natal</span></span></p>
           <div class="item" id="p-e1219" data-id="e1219">
             <p class="hora">17h30</p>
-            <h3 class="titulo">Teatro Musical <span class="resto">Rodolfo e o Ritmo de Natal</span></h3>
+            <h3 class="titulo">Medley <span class="resto">Rodolfo e o Ritmo de Natal</span></h3>
           </div>
         </div>
       </article>
@@ -476,7 +476,7 @@
         { regra:4 }
       ]
     },
-    { id:"casa", nome:"Casa de Natal", titulo:"Casa de Natal", resto:" - Palacete Villa Georgette", local:"Avenida Mouzinho de Albuquerque", periodo:[P0,P1], alvo:"casa",
+    { id:"casa", nome:"Casa do Pai Natal", titulo:"Casa do Pai Natal", resto:" - Palacete Villa Georgette", local:"Avenida Mouzinho de Albuquerque", periodo:[P0,P1], alvo:"casa",
       // O cartaz não indica horário próprio para 24, 25 e 31 de dezembro e 1 de janeiro.
       indef:esp,
       regras:[
@@ -502,8 +502,8 @@
     { id:"drones", d:"2026-12-12", m:1110, tit:"Espetáculo de drones", loc:"Alto Martim Vaz, frente ao Clube Desportivo da Póvoa" },
     { id:"rabanada", d:"2026-12-13", m:900, tit:"Festa da Rabanada", loc:"Posto de Turismo" },
     { id:"desfile", d:"2026-12-13", m:930, tit:"Desfile de Pais Natal", loc:"Concentração e saída do Alto Martim Vaz, frente ao Clube Desportivo da Póvoa" },
-    { id:"e1213", d:"2026-12-13", m:1050, tit:"Teatro Musical <i>A Grande Festa do Pai Natal</i>", loc:ALDEIA },
-    { id:"e1219", d:"2026-12-19", m:1050, tit:"Teatro Musical <i>Rodolfo e o Ritmo de Natal</i>", loc:ALDEIA },
+    { id:"e1213", d:"2026-12-13", m:1050, tit:"Medley <i>A Grande Festa do Pai Natal</i>", loc:ALDEIA },
+    { id:"e1219", d:"2026-12-19", m:1050, tit:"Medley <i>Rodolfo e o Ritmo de Natal</i>", loc:ALDEIA },
     { id:"e1220", d:"2026-12-20", m:1050, tit:"Medley <i>Christmas Dance Party</i>", loc:ALDEIA },
     { id:"e1226", d:"2026-12-26", m:1050, tit:"Medley <i>Patrulha Pata: Missão de Natal</i>", loc:ALDEIA },
     { id:"e1227", d:"2026-12-27", m:1050, tit:"Teatro Musical <i>Embrulhados</i>", loc:ALDEIA },
@@ -719,7 +719,7 @@
   // O cartaz só indica a hora de início dos espetáculos. Depois de começar, cada um
   // aparece em "Em curso" durante este número de minutos.
   var JANELA_EM_CURSO = 60;
-  var COM_HORARIO = [ ["mercados","Mercados de Natal","abrem"], ["casa","Casa de Natal","abre"] ];
+  var COM_HORARIO = [ ["mercados","Mercados de Natal","abrem"], ["casa","Casa do Pai Natal","abre"] ];
 
   function itensDoDia(dk){
     var it = EVENTOS.filter(function(e){ return e.d===dk; }).map(function(e){ return { m:e.m, tit:e.tit, loc:e.loc, alvo:e.id }; });
