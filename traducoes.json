@@ -131,7 +131,17 @@
    "destaque_titulo": "Em destaque",
    "info_curta": "+ Info",
    "categoria": "Eventos",
-   "rodape3": "Um projeto do DP-SIG (Secção de Inteligência Urbana), na Plataforma de Gestão Urbana, para partilhar mais informação e ajudar a construir uma cidade mais informada."
+   "rodape3": "Um projeto do DP-SIG (Secção de Inteligência Urbana), na Plataforma de Gestão Urbana, para partilhar mais informação e ajudar a construir uma cidade mais informada.",
+   "sistema_rotulo": "O seu calendário",
+   "filtrar": "Filtrar",
+   "filtrar_todos": "Todos",
+   "mais_filtros": "Mais filtros",
+   "destaque_vazio": "Nenhum evento em destaque com este filtro.",
+   "cal_mes_anterior": "Mês anterior",
+   "cal_mes_seguinte": "Mês seguinte",
+   "cal_sem_eventos": "Nenhum evento começa neste dia.",
+   "calendario_titulo": "Calendário",
+   "cal_ver_curso": "Ver também os eventos em curso ({n})"
   },
   "en": {
    "nome": "English",
@@ -334,7 +344,17 @@
    "destaque_titulo": "Highlighted",
    "info_curta": "+ Info",
    "categoria": "Events",
-   "rodape3": "A DP-SIG (Urban Intelligence Section) project, part of the Urban Management Platform, to share more information and help build a better-informed city."
+   "rodape3": "A DP-SIG (Urban Intelligence Section) project, part of the Urban Management Platform, to share more information and help build a better-informed city.",
+   "sistema_rotulo": "Your calendar",
+   "filtrar": "Filter",
+   "filtrar_todos": "All",
+   "mais_filtros": "More filters",
+   "destaque_vazio": "No featured events for this filter.",
+   "cal_mes_anterior": "Previous month",
+   "cal_mes_seguinte": "Next month",
+   "cal_sem_eventos": "No events start on this day.",
+   "calendario_titulo": "Calendar",
+   "cal_ver_curso": "Also see ongoing events ({n})"
   },
   "es": {
    "nome": "Español",
@@ -537,7 +557,17 @@
    "destaque_titulo": "Destacado",
    "info_curta": "+ Info",
    "categoria": "Eventos",
-   "rodape3": "Un proyecto del DP-SIG (Sección de Inteligencia Urbana), dentro de la Plataforma de Gestión Urbana, para compartir más información y ayudar a construir una ciudad mejor informada."
+   "rodape3": "Un proyecto del DP-SIG (Sección de Inteligencia Urbana), dentro de la Plataforma de Gestión Urbana, para compartir más información y ayudar a construir una ciudad mejor informada.",
+   "sistema_rotulo": "Su calendario",
+   "filtrar": "Filtrar",
+   "filtrar_todos": "Todos",
+   "mais_filtros": "Más filtros",
+   "destaque_vazio": "No hay eventos destacados con este filtro.",
+   "cal_mes_anterior": "Mes anterior",
+   "cal_mes_seguinte": "Mes siguiente",
+   "cal_sem_eventos": "Ningún evento empieza este día.",
+   "calendario_titulo": "Calendario",
+   "cal_ver_curso": "Ver también los eventos en curso ({n})"
   },
   "it": {
    "nome": "Italiano",
@@ -740,7 +770,17 @@
    "destaque_titulo": "In evidenza",
    "info_curta": "+ Info",
    "categoria": "Eventi",
-   "rodape3": "Un progetto del DP-SIG (Sezione Intelligenza Urbana), nella Piattaforma di Gestione Urbana, per condividere più informazioni e contribuire a una città più informata."
+   "rodape3": "Un progetto del DP-SIG (Sezione Intelligenza Urbana), nella Piattaforma di Gestione Urbana, per condividere più informazioni e contribuire a una città più informata.",
+   "sistema_rotulo": "Il tuo calendario",
+   "filtrar": "Filtra",
+   "filtrar_todos": "Tutti",
+   "mais_filtros": "Altri filtri",
+   "destaque_vazio": "Nessun evento in evidenza con questo filtro.",
+   "cal_mes_anterior": "Mese precedente",
+   "cal_mes_seguinte": "Mese successivo",
+   "cal_sem_eventos": "Nessun evento inizia in questo giorno.",
+   "calendario_titulo": "Calendario",
+   "cal_ver_curso": "Vedi anche gli eventi in corso ({n})"
   },
   "fr": {
    "nome": "Français",
@@ -943,7 +983,17 @@
    "destaque_titulo": "À la une",
    "info_curta": "+ Infos",
    "categoria": "Événements",
-   "rodape3": "Un projet du DP-SIG (Section Intelligence Urbaine), intégré à la Plateforme de Gestion Urbaine, pour partager plus d'informations et contribuer à une ville mieux informée."
+   "rodape3": "Un projet du DP-SIG (Section Intelligence Urbaine), intégré à la Plateforme de Gestion Urbaine, pour partager plus d'informations et contribuer à une ville mieux informée.",
+   "sistema_rotulo": "Votre calendrier",
+   "filtrar": "Filtrer",
+   "filtrar_todos": "Tous",
+   "mais_filtros": "Plus de filtres",
+   "destaque_vazio": "Aucun événement à la une avec ce filtre.",
+   "cal_mes_anterior": "Mois précédent",
+   "cal_mes_seguinte": "Mois suivant",
+   "cal_sem_eventos": "Aucun événement ne commence ce jour-là.",
+   "calendario_titulo": "Calendrier",
+   "cal_ver_curso": "Voir aussi les événements en cours ({n})"
   },
   "de": {
    "nome": "Deutsch",
@@ -1146,7 +1196,17 @@
    "destaque_titulo": "Im Fokus",
    "info_curta": "+ Info",
    "categoria": "Veranstaltungen",
-   "rodape3": "Ein Projekt von DP-SIG (Abteilung Stadtintelligenz), Teil der Plattform für Stadtmanagement, um mehr Informationen zu teilen und zu einer besser informierten Stadt beizutragen."
+   "rodape3": "Ein Projekt von DP-SIG (Abteilung Stadtintelligenz), Teil der Plattform für Stadtmanagement, um mehr Informationen zu teilen und zu einer besser informierten Stadt beizutragen.",
+   "sistema_rotulo": "Ihr Kalender",
+   "filtrar": "Filtern",
+   "filtrar_todos": "Alle",
+   "mais_filtros": "Weitere Filter",
+   "destaque_vazio": "Keine hervorgehobenen Veranstaltungen für diesen Filter.",
+   "cal_mes_anterior": "Vorheriger Monat",
+   "cal_mes_seguinte": "Nächster Monat",
+   "cal_sem_eventos": "An diesem Tag beginnt keine Veranstaltung.",
+   "calendario_titulo": "Kalender",
+   "cal_ver_curso": "Auch laufende Veranstaltungen ansehen ({n})"
   },
   "zh": {
    "nome": "中文",
@@ -1349,7 +1409,17 @@
    "destaque_titulo": "精选",
    "info_curta": "+ 详情",
    "categoria": "活动",
-   "rodape3": "DP-SIG(城市智慧科)的项目,属于城市管理平台的一部分,旨在分享更多信息,帮助建设信息更畅通的城市。"
+   "rodape3": "DP-SIG(城市智慧科)的项目,属于城市管理平台的一部分,旨在分享更多信息,帮助建设信息更畅通的城市。",
+   "sistema_rotulo": "您的日历",
+   "filtrar": "筛选",
+   "filtrar_todos": "全部",
+   "mais_filtros": "更多筛选",
+   "destaque_vazio": "此筛选条件下没有精选活动。",
+   "cal_mes_anterior": "上个月",
+   "cal_mes_seguinte": "下个月",
+   "cal_sem_eventos": "当天没有开始的活动。",
+   "calendario_titulo": "日历",
+   "cal_ver_curso": "另请查看进行中的活动（{n}）"
   },
   "ja": {
    "nome": "日本語",
@@ -1552,7 +1622,17 @@
    "destaque_titulo": "注目",
    "info_curta": "+ 詳細",
    "categoria": "イベント",
-   "rodape3": "DP-SIG(都市インテリジェンス課)によるプロジェクトで、都市管理プラットフォームの一部です。より多くの情報を共有し、情報の行き届いた街づくりに貢献することを目指しています。"
+   "rodape3": "DP-SIG(都市インテリジェンス課)によるプロジェクトで、都市管理プラットフォームの一部です。より多くの情報を共有し、情報の行き届いた街づくりに貢献することを目指しています。",
+   "sistema_rotulo": "お使いのカレンダー",
+   "filtrar": "絞り込み",
+   "filtrar_todos": "すべて",
+   "mais_filtros": "その他の条件",
+   "destaque_vazio": "この条件に該当する注目イベントはありません。",
+   "cal_mes_anterior": "前の月",
+   "cal_mes_seguinte": "次の月",
+   "cal_sem_eventos": "この日に始まるイベントはありません。",
+   "calendario_titulo": "カレンダー",
+   "cal_ver_curso": "開催中のイベントも見る（{n}）"
   },
   "nl": {
    "nome": "Nederlands",
@@ -1755,7 +1835,17 @@
    "destaque_titulo": "Uitgelicht",
    "info_curta": "+ Info",
    "categoria": "Evenementen",
-   "rodape3": "Een project van DP-SIG (Sectie Stedelijke Intelligentie), onderdeel van het Platform voor Stedelijk Beheer, om meer informatie te delen en bij te dragen aan een beter geïnformeerde stad."
+   "rodape3": "Een project van DP-SIG (Sectie Stedelijke Intelligentie), onderdeel van het Platform voor Stedelijk Beheer, om meer informatie te delen en bij te dragen aan een beter geïnformeerde stad.",
+   "sistema_rotulo": "Uw agenda",
+   "filtrar": "Filteren",
+   "filtrar_todos": "Alle",
+   "mais_filtros": "Meer filters",
+   "destaque_vazio": "Geen uitgelichte evenementen voor dit filter.",
+   "cal_mes_anterior": "Vorige maand",
+   "cal_mes_seguinte": "Volgende maand",
+   "cal_sem_eventos": "Op deze dag begint geen evenement.",
+   "calendario_titulo": "Kalender",
+   "cal_ver_curso": "Bekijk ook lopende evenementen ({n})"
   },
   "pl": {
    "nome": "Polski",
@@ -1958,7 +2048,17 @@
    "destaque_titulo": "Wyróżnione",
    "info_curta": "+ Info",
    "categoria": "Wydarzenia",
-   "rodape3": "Projekt DP-SIG (Sekcja Inteligencji Miejskiej), w ramach Platformy Zarządzania Miejskiego, mający na celu dzielenie się większą ilością informacji i budowanie lepiej poinformowanego miasta."
+   "rodape3": "Projekt DP-SIG (Sekcja Inteligencji Miejskiej), w ramach Platformy Zarządzania Miejskiego, mający na celu dzielenie się większą ilością informacji i budowanie lepiej poinformowanego miasta.",
+   "sistema_rotulo": "Twój kalendarz",
+   "filtrar": "Filtruj",
+   "filtrar_todos": "Wszystkie",
+   "mais_filtros": "Więcej filtrów",
+   "destaque_vazio": "Brak wyróżnionych wydarzeń dla tego filtra.",
+   "cal_mes_anterior": "Poprzedni miesiąc",
+   "cal_mes_seguinte": "Następny miesiąc",
+   "cal_sem_eventos": "Tego dnia nie zaczyna się żadne wydarzenie.",
+   "calendario_titulo": "Kalendarz",
+   "cal_ver_curso": "Zobacz też trwające wydarzenia ({n})"
   }
  }
 }

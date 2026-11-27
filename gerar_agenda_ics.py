@@ -988,6 +988,12 @@ ICONE_CALENDARIO = (
     'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">'
     '<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 13v5M9.5 15.5h5"/></svg>'
 )
+# Subscrever (receber sempre os eventos novos): um "+" num círculo, diferente do "Adicionar" de um evento.
+ICONE_SUBSCREVER = (
+    '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" '
+    'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">'
+    '<circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>'
+)
 ICONE_COPIAR = (
     '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" '
     'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">'
@@ -1062,7 +1068,7 @@ def bloco_subscricao(url_base, caminho, rotulo, t):
         '    <input type="text" readonly value="{https}" aria-label="{aria_copiar}">\n'
         '  </div>\n'
         '</div>'
-    ).format(i=ICONE_CALENDARIO, c=ICONE_COPIAR, sub=sub, aria=aria, aria_copiar=aria_copiar,
+    ).format(i=ICONE_SUBSCREVER, c=ICONE_COPIAR, sub=sub, aria=aria, aria_copiar=aria_copiar,
              copiar=html.escape(t["copiar"]), **l)
 
 
