@@ -170,6 +170,23 @@
     -webkit-mask-image:linear-gradient(to top,#000 78%,transparent 100%);mask-image:linear-gradient(to top,#000 78%,transparent 100%);}
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
   @media (prefers-reduced-motion:reduce){.luz.aberto,.faixa-tit .pulso{animation:none;}.vista.entrar{animation:none;}.destaque{animation:none;}html{scroll-behavior:auto;}}
+
+  /* ---------- Responsivo: tablet / desktop / embed ---------- */
+  @media (min-width:640px){
+    .pagina{max-width:640px;box-shadow:0 0 60px rgba(0,0,0,.35);}
+  }
+  @media (min-width:860px){
+    .pagina{max-width:900px;}
+    main{padding:0 36px;}
+    .sec-titulo{font-size:34px;}
+    #v-programa{column-count:2;column-gap:44px;}
+    #v-programa #faixa{column-span:all;-webkit-column-span:all;margin-bottom:10px;}
+    #v-programa .dia{break-inside:avoid;-webkit-column-break-inside:avoid;}
+  }
+  @media (min-width:1180px){
+    .pagina{max-width:1180px;}
+    #v-programa{column-count:3;}
+  }
 </style>
 </head>
 <body>
