@@ -1350,14 +1350,15 @@ def gerar_pagina(contagem, total, url_base, lingua="pt", trad=None, proximos=Non
     t.update(trad["linguas"][lingua])  # chaves novas ainda sem tradução ficam em português, nunca falham
     modelo = MODELO_PAGINA.read_text(encoding="utf-8")
 
-    script = re.search(r"<script>(.*?)</script>", modelo, re.S)
-    hash_script = base64.b64encode(hashlib.sha256(script.group(1).encode("utf-8")).digest()).decode() if script else ""
+    # Um hash por cada <script> do modelo (o pequeno do <head> e o principal): a CSP só deixa correr esses.
+    hashes = " ".join("'sha256-{}'".format(base64.b64encode(hashlib.sha256(c.encode("utf-8")).digest()).decode())
+                      for c in re.findall(r"<script>(.*?)</script>", modelo, re.S))
 
     pre = prefixo_lingua(lingua)
     proximos = proximos or []
     linhas_proximos, chips_temas, chips_tipos = secao_proximos(proximos, t, agora)
     substituicoes = {
-        "{{HASH_SCRIPT}}": hash_script,
+        "{{HASH_SCRIPTS}}": hashes,
         "{{LINGUA}}": t["html_lang"],
         "{{CODIGO_LINGUA}}": lingua,
         "{{RAIZ}}": "" if lingua == "pt" else "../../",

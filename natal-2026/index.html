@@ -18,6 +18,7 @@
     --vermelho-fundo:#8f1622;
     --vinho:#6d0f19;
     --dourado:#eed67e;
+    --dourado-claro:#f7e5ab;
     --ouro-escuro:#c9a64a;
     --branco:#ffffff;
     --script:"Lobster Two",Georgia,serif;
@@ -67,10 +68,11 @@
     -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
     border-bottom:1px solid rgba(238,214,126,.5);
   }
+  .separadores{display:contents;}
   .nav button{
     min-height:42px;padding:4px 8px;border-radius:10px;cursor:pointer;
     background:transparent;border:1.5px solid rgba(238,214,126,.55);
-    font-family:var(--texto);font-size:14.5px;line-height:1.1;color:var(--dourado);
+    font-family:var(--texto);font-size:14.5px;line-height:1.1;color:#fff;
   }
     .nav button[aria-selected="true"]{background:var(--dourado);color:var(--vermelho-fundo);border-color:var(--dourado);}
 
@@ -110,7 +112,7 @@
     display:flex;flex-direction:column;gap:3px;
   }
   .espaco .nome{font-family:var(--script);font-weight:700;font-size:17.5px;line-height:1.1;color:var(--branco);}
-  .espaco .est{display:flex;gap:6px;align-items:flex-start;font-size:14px;line-height:1.2;color:var(--dourado);}
+  .espaco .est{display:flex;gap:6px;align-items:flex-start;font-size:14px;line-height:1.2;color:var(--dourado-claro);}
   .espaco[aria-selected="true"]{background:var(--dourado);border-color:var(--dourado);}
   .espaco[aria-selected="true"] .nome{color:var(--vermelho-fundo);}
   .espaco[aria-selected="true"] .est{color:var(--vermelho-fundo);}
@@ -129,19 +131,19 @@
   }
   .painel h3{font-family:var(--script);font-weight:700;font-size:24px;line-height:1.1;margin:0;}
   .painel h3 .resto{font-family:var(--texto);font-weight:400;font-size:18px;}
-  .painel .local{color:var(--dourado);font-size:17px;margin:12px 0 0;display:flex;align-items:flex-start;gap:7px;}
+  .painel .local{color:var(--dourado-claro);font-size:17px;margin:12px 0 0;display:flex;align-items:flex-start;gap:7px;}
   .painel .local::before{content:"";flex:0 0 auto;width:14px;height:14px;margin-top:4px;background:currentColor;
     -webkit-mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>') center/contain no-repeat;
     mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>') center/contain no-repeat;}
-  .estado-agora{display:flex;align-items:center;gap:9px;margin:0;padding:10px 14px;border-radius:12px;font-size:16.5px;font-weight:700;border:1.5px solid rgba(238,214,126,.5);color:var(--dourado);}
+  .estado-agora{display:flex;align-items:center;gap:9px;margin:0;padding:10px 14px;border-radius:12px;font-size:16.5px;font-weight:700;border:1.5px solid rgba(238,214,126,.5);color:var(--dourado-claro);}
   .estado-agora .luz{width:12px;height:12px;margin-top:0;}
   .estado-agora.aberto{background:var(--dourado);color:var(--vermelho-fundo);border-color:var(--dourado);}
   .estado-agora.aberto .luz{border-color:var(--vermelho-fundo);}
-  .estado-agora.fechado,.estado-agora.indef{opacity:.85;}
+  .estado-agora.fechado,.estado-agora.indef{border-style:dashed;}
   .painel .desc{margin:8px 0 0;font-size:16px;}
   .linha{margin:8px 0 0;font-size:16px;line-height:1.3;}
   .painel > :first-child{margin-top:0;}
-  .rot{color:var(--dourado);}
+  .rot{color:var(--dourado-claro);}
   .regras{list-style:none;margin:8px 0 0;padding:0;}
   .regras li{position:relative;padding:5px 8px 5px 30px;margin:0 -8px;border-radius:8px;font-size:16px;line-height:1.3;}
   .regras li::before{content:"";position:absolute;left:8px;top:.6em;width:14px;height:14px;background:currentColor;
@@ -158,8 +160,10 @@
   .data-dia{font-family:var(--script);font-weight:700;color:var(--dourado);font-size:25px;line-height:1.15;margin:0 0 10px;padding-bottom:4px;border-bottom:1.5px solid rgba(238,214,126,.35);}
   .local-grupo{margin:0 0 16px;}
   .local-grupo:last-child{margin-bottom:0;}
-  .local-nome{color:var(--dourado);font-size:16.5px;margin:0 0 6px;line-height:1.2;display:flex;align-items:flex-start;gap:6px;font-weight:600;}
-  .local-nome .resto{font-weight:400;}
+  /* Locais: o dourado do cartaz (#f3d993), em negrito e a 19px para ler bem sobre o vermelho (contraste
+     WCAG de texto grande); o complemento, mais fino, num dourado mais claro (contraste 4,5:1). */
+  .local-nome{color:#f3d993;font-size:19px;margin:0 0 6px;line-height:1.2;display:flex;align-items:flex-start;gap:6px;font-weight:700;}
+  .local-nome .resto{font-weight:400;color:#f7e5ab;}
   .local-nome::before{content:"";flex:0 0 auto;width:13px;height:13px;margin-top:3px;background:currentColor;
     -webkit-mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>') center/contain no-repeat;
     mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>') center/contain no-repeat;}
@@ -176,7 +180,7 @@
   .passado-p{opacity:.5;}
   .destaque{animation:destaque 1.6s ease-out 1;}
   @keyframes destaque{0%{background:rgba(238,214,126,.35);}100%{background:transparent;}}
-  .encerramento{font-size:17.5px;line-height:1.3;color:var(--dourado);text-align:justify;margin:6px 0 0;}
+  .encerramento{font-size:17.5px;line-height:1.3;color:var(--dourado-claro);text-align:justify;margin:6px 0 0;}
 
   .rodape{display:block;width:100%;height:auto;position:relative;z-index:1;margin-top:12px;
     -webkit-mask-image:linear-gradient(to top,#000 78%,transparent 100%);mask-image:linear-gradient(to top,#000 78%,transparent 100%);}
@@ -216,15 +220,17 @@
 <div class="pagina" id="pagina">
   <div class="decor" id="decor" aria-hidden="true"></div>
 
-  <div class="cabecalho-caixa">
+  <header class="cabecalho-caixa">
     <img class="cabecalho" src="img/cabecalho.webp" width="1400" height="951"
          alt="Câmara Municipal da Póvoa de Varzim. É bom viver aqui! Póvoa de Varzim, Cidade Natal '26, 29 novembro a 9 janeiro">
     <div class="cabecalho-esbater" aria-hidden="true"></div>
-  </div>
+  </header>
 
-  <nav class="nav" role="tablist" aria-label="Escolha o que ver" id="nav">
+  <nav class="nav" aria-label="Programa e horários" id="nav">
+    <div class="separadores" role="tablist" aria-label="Escolha o que ver">
     <button type="button" role="tab" id="tab-programa" aria-controls="v-programa" aria-selected="true" data-vista="programa">Programa</button>
     <button type="button" role="tab" id="tab-horario" aria-controls="v-horario" aria-selected="false" tabindex="-1" data-vista="horario">Horários de Funcionamento</button>
+    </div>
   </nav>
 
   <main>
