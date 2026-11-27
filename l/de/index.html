@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-hiqi+vZFRf8SU0kyFrwPDIZa4XQ5wntLwaOH5tmHCvU='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-mN/W9ZOsLoJLsx4Jl5a8IfPlBNFBscn3vOVpeAuvaUE='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="Abonnieren Sie den städtischen Veranstaltungskalender von Póvoa de Varzim in Ihrem Kalender: komplett, nach Thema oder nach Art.">
 <meta name="theme-color" content="#0a3a52">
@@ -116,45 +116,21 @@
   @media (prefers-color-scheme: dark) { .onda path { fill: rgba(255, 255, 255, .1); } }
 
   .ferramentas { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-left: auto; }
-  .linguas, .sistema-menu { position: relative; }
-  .linguas summary, .sistema-menu summary {
+  .linguas { position: relative; }
+  .linguas summary {
     list-style: none; display: flex; align-items: center; gap: .45rem; cursor: pointer;
     min-height: 2.75rem; padding: .3rem .75rem; border: 1.5px solid rgba(255, 255, 255, .6); border-radius: 9px;
     font-weight: 700; font-size: .95rem; color: #fff; background: rgba(255, 255, 255, .12);
   }
-  .linguas summary::-webkit-details-marker, .sistema-menu summary::-webkit-details-marker { display: none; }
-  .linguas summary::after, .sistema-menu summary::after { content: ""; width: .45em; height: .45em; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); margin-left: .15rem; }
-  .linguas ul, .sistema-menu .menu {
+  .linguas summary::-webkit-details-marker { display: none; }
+  .linguas summary::after { content: ""; width: .45em; height: .45em; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); margin-left: .15rem; }
+  .linguas ul {
     position: absolute; right: 0; top: calc(100% + .35rem); z-index: 20; min-width: 12rem; margin: 0; padding: .35rem; list-style: none;
     background: var(--cartao); color: var(--tinta); border: 1px solid var(--linha); border-radius: 10px; box-shadow: 0 8px 28px rgba(0, 0, 0, .2);
   }
   .linguas li a { display: flex; align-items: center; gap: .6rem; min-height: 2.75rem; padding: .3rem .6rem; border-radius: 7px; text-decoration: none; font-size: 1rem; }
   .linguas li a:hover { background: var(--mar-claro); }
   .linguas li a[aria-current] { font-weight: 700; background: var(--mar-claro); }
-  /* Calendário de quem consulta (Google, Outlook...): escolha única para "Adicionar" e "Subscrever" */
-  .sistema-menu summary svg { width: 1.15em; height: 1.15em; flex: none; }
-  .sistema-menu .menu { display: flex; flex-direction: column; min-width: 13.5rem; }
-  .sistema-menu .menu-titulo { margin: .2rem .6rem .35rem; font-size: .75rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--cinza); }
-  .sistema-menu .menu label { display: flex; align-items: center; gap: .55rem; min-height: 2.6rem; padding: .3rem .6rem; border-radius: 7px; cursor: pointer; font-size: 1rem; }
-  .sistema-menu .menu label::before { content: ""; width: .95rem; height: .95rem; flex: none; border-radius: 50%; border: 2px solid var(--linha); }
-  .sistema-menu .menu label:hover { background: var(--mar-claro); }
-  #sis-google:checked ~ header label[for="sis-google"],
-  #sis-outlook:checked ~ header label[for="sis-outlook"],
-  #sis-apple:checked ~ header label[for="sis-apple"],
-  #sis-android:checked ~ header label[for="sis-android"],
-  #sis-outro:checked ~ header label[for="sis-outro"] { font-weight: 700; background: var(--mar-claro); }
-  #sis-google:checked ~ header label[for="sis-google"]::before,
-  #sis-outlook:checked ~ header label[for="sis-outlook"]::before,
-  #sis-apple:checked ~ header label[for="sis-apple"]::before,
-  #sis-android:checked ~ header label[for="sis-android"]::before,
-  #sis-outro:checked ~ header label[for="sis-outro"]::before { border-color: var(--botao); background: radial-gradient(circle, var(--botao) 0 45%, transparent 50%); }
-  .sistema-nome { display: none; }
-  .sistema-nome .curto { display: none; }
-  #sis-google:checked ~ header .sistema-nome.n-google,
-  #sis-outlook:checked ~ header .sistema-nome.n-outlook,
-  #sis-apple:checked ~ header .sistema-nome.n-apple,
-  #sis-android:checked ~ header .sistema-nome.n-android,
-  #sis-outro:checked ~ header .sistema-nome.n-outro { display: inline; }
   .letra { display: none; gap: .25rem; }
   .js .letra { display: flex; }
   .letra button {
@@ -304,9 +280,9 @@
     border-radius: 50%; background: var(--botao); color: #fff;
   }
   .titulo-icone .icone-seccao svg { width: 1.15rem; height: 1.15rem; }
-  .subscrever-grelha { display: grid; gap: 0 2.4rem; }
-  .subscrever-grelha > div { min-width: 0; }
-  @media (min-width: 64rem) { .subscrever-grelha { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+  .subscrever-pilha { display: flex; flex-direction: column; gap: 1.3rem; }
+  .subscrever-pilha > * { margin-top: 0; margin-bottom: 0; }
+  .subscrever-pilha .seletor { max-width: 46rem; }
   .completa .icone-completa {
     display: none; flex: none; width: 2.9rem; height: 2.9rem; border-radius: 12px; align-items: center; justify-content: center;
     background: var(--mar-claro); color: var(--titulo); border: 1px solid var(--linha);
@@ -340,7 +316,7 @@
   #assinar-tipo:checked ~ main .escolha-cartao[for="assinar-tipo"] .escolha-exemplos,
   #assinar-tema:checked ~ main .escolha-cartao[for="assinar-tema"] .chevron,
   #assinar-tipo:checked ~ main .escolha-cartao[for="assinar-tipo"] .chevron { color: rgba(255, 255, 255, .88); }
-  .escolha-conteudo { margin-top: .9rem; }
+  .escolha-conteudo { margin-top: 1rem; }
 
   /* Destaque: quadro que vai mostrando os próximos eventos, um a um */
   .destaque { position: relative; overflow: hidden; margin-top: .9rem; background: var(--mar-claro); border-radius: 12px; padding: .8rem .9rem 1.05rem; }
@@ -355,36 +331,7 @@
   @keyframes destaque-tempo { from { transform: scaleX(0); } to { transform: scaleX(1); } }
   .destaque-rotulo { margin: 0; font-size: .85rem; font-weight: 700; color: var(--cinza); text-transform: uppercase; letter-spacing: .03em; }
   .destaque-cabeca { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .45rem 1rem; margin-bottom: .6rem; }
-  /* Filtrar (seleção rápida): os tipos mais frequentes no que está a decorrer e vem aí */
-  .filtro-rapido { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem; min-width: 0; }
-  .filtro-rapido-rotulo { display: inline-flex; align-items: center; gap: .3rem; margin-right: .15rem; font-size: .78rem; font-weight: 700; color: var(--cinza); }
-  .filtro-rapido-rotulo svg { width: .95rem; height: .95rem; }
-  .chip-rapido {
-    display: inline-flex; align-items: center; gap: .35rem; min-height: 1.95rem; padding: .1rem .6rem .1rem .5rem;
-    border-radius: 999px; border: 1px solid var(--linha); background: var(--cartao); color: var(--tinta);
-    font: inherit; font-size: .78rem; font-weight: 700; line-height: 1.1; cursor: pointer; user-select: none;
-    transition: background-color .12s, border-color .12s, color .12s;
-  }
-  .chip-rapido .ponto { width: .55rem; height: .55rem; border-radius: 50%; background: var(--cor, var(--cinza)); flex: none; }
-  .chip-rapido .n { font-weight: 400; color: var(--cinza); font-variant-numeric: lining-nums tabular-nums; }
-  .chip-rapido:hover { border-color: var(--cor, var(--cinza)); }
-  .chip-rapido[aria-pressed="true"] { background: var(--cor, var(--botao)); border-color: var(--cor, var(--botao)); color: #fff; }
-  .chip-rapido[aria-pressed="true"] .ponto { background: #fff; }
-  .chip-rapido[aria-pressed="true"] .n { color: rgba(255, 255, 255, .85); }
-  .chip-rapido.chip-mais { border-style: dashed; color: var(--cinza); padding-left: .6rem; }
   .destaque-vazio { padding: .6rem 0 .2rem; color: var(--cinza); font-size: .95rem; }
-  /* Telemóvel: o "Filtrar" numa só linha que desliza para o lado, para não empurrar o evento para baixo */
-  @media (max-width: 40rem) {
-    .destaque-cabeca { flex-direction: column; align-items: stretch; }
-    .filtro-rapido {
-      flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
-      margin: 0 -.9rem; padding: .1rem .9rem .15rem;
-      -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2rem), transparent);
-      mask-image: linear-gradient(to right, #000 calc(100% - 2rem), transparent);
-    }
-    .filtro-rapido::-webkit-scrollbar { display: none; }
-    .filtro-rapido > * { flex: none; white-space: nowrap; }
-  }
   .destaque-cartao { transition: opacity .2s; border-left: 6px solid var(--ct); padding-left: .7rem; }
   .destaque-cartao.a-mudar { opacity: 0; }
   .destaque-controlos { display: flex; align-items: center; gap: .5rem; margin-top: .7rem; }
@@ -439,18 +386,74 @@
 
   /* Calendário (sempre à vista, antes do destaque): o mês com os dias; ao escolher um dia, os eventos
      desse dia, cada um com "Adicionar". Precisa de JS: sem ele fica a lista ("Ver todos os eventos"). */
-  .barra-calendario { display: flex; margin-top: 1rem; }
+  .barra-calendario { position: relative; display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
   .botao-calendario { display: none; }
   .js .botao-calendario { display: inline-flex; }
   #mostrar-calendario:checked ~ .barra-calendario .botao-calendario { background: var(--botao); color: #fff; border-color: var(--botao); }
   #mostrar-calendario:checked ~ .barra-calendario .botao-calendario svg,
   #mostrar-calendario:checked ~ .barra-calendario .botao-calendario .chevron { color: #fff; }
   #mostrar-calendario:focus-visible ~ .barra-calendario .botao-calendario { outline: 3px solid var(--foco); outline-offset: 1px; }
+  /* Filtrar por tipo (ao lado de "Calendário"): um toque escolhe o tipo; muda o calendário, o destaque e a lista */
+  .filtro-tipo { display: flex; flex: 1 1 0; min-width: 0; }
+  @media (min-width: 40rem) { .filtro-tipo { flex: 0 1 auto; } }
+  /* Telemóvel: "Calendário" e "Filtrar por tipo" lado a lado, para ocupar menos altura */
+  @media (max-width: 40rem) {
+    .barra-calendario .botao-calendario { flex: 1 1 0; min-width: 0; }
+    .barra-calendario .botao-mostrar { padding-left: .55rem; padding-right: .55rem; font-size: .9rem; gap: .35rem; }
+    .filtro-tipo-rotulo { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+    .filtro-tipo > summary > svg { display: none; }
+  }
+  .filtro-tipo > summary { list-style: none; width: 100%; justify-content: center; }
+  .filtro-tipo > summary::-webkit-details-marker { display: none; }
+  .filtro-tipo.ativo > summary { border-color: var(--cor-filtro, var(--botao)); }
+  .filtro-tipo-ponto { display: none; width: .7rem; height: .7rem; border-radius: 50%; background: var(--cor-filtro, var(--botao)); flex: none; }
+  .filtro-tipo.ativo .filtro-tipo-ponto { display: inline-block; }
+  .filtro-tipo.ativo > summary > svg { display: none; }
+  .filtro-tipo-painel {
+    position: absolute; left: 0; top: calc(100% + .4rem); z-index: 15; width: min(36rem, 100%);
+    padding: .8rem .9rem .9rem; background: var(--cartao); border: 1px solid var(--linha); border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .28);
+  }
+  .filtro-rapido { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .chip-rapido {
+    display: inline-flex; align-items: center; gap: .4rem; min-height: 2.35rem; padding: .2rem .8rem .2rem .65rem;
+    border-radius: 999px; border: 1.5px solid var(--linha); background: var(--fundo); color: var(--tinta);
+    font: inherit; font-size: .88rem; font-weight: 700; line-height: 1.15; cursor: pointer; user-select: none; text-align: left;
+    transition: background-color .12s, border-color .12s, color .12s;
+  }
+  .chip-rapido .ponto { width: .6rem; height: .6rem; border-radius: 50%; background: var(--cor, var(--cinza)); flex: none; }
+  .chip-rapido .n { font-weight: 400; color: var(--cinza); font-variant-numeric: lining-nums tabular-nums; }
+  .chip-rapido:hover { border-color: var(--cor, var(--cinza)); }
+  .chip-rapido[aria-pressed="true"] { background: var(--cor, var(--botao)); border-color: var(--cor, var(--botao)); color: #fff; }
+  .chip-rapido[aria-pressed="true"] .ponto { background: #fff; }
+  .chip-rapido[aria-pressed="true"] .n { color: rgba(255, 255, 255, .85); }
+  .chip-rapido.chip-mais { border-style: dashed; color: var(--cinza); }
   .calendario-bloco { display: none; margin-top: .8rem; }
   .js #mostrar-calendario:checked ~ .calendario-bloco { display: block; }
+  /* Ao clicar num dia, os eventos desse dia abrem logo ali, por baixo da semana, com "+" em cada um */
+  .cal-pop {
+    grid-column: 1 / -1; position: relative; margin: .35rem 0 .45rem; padding: .7rem .7rem .75rem;
+    background: var(--mar-claro); border: 1.5px solid var(--botao); border-radius: 12px;
+    animation: cal-abrir .16s ease-out;
+  }
+  .cal-pop::before {
+    content: ""; position: absolute; top: -8px; left: calc((100% * (var(--col, 0) + .5) / 7) - 7px);
+    width: 12px; height: 12px; background: var(--mar-claro); border-left: 1.5px solid var(--botao); border-top: 1.5px solid var(--botao);
+    transform: rotate(45deg);
+  }
+  @keyframes cal-abrir { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .cal-pop { animation: none; } }
+  .cal-pop-cabeca { display: flex; align-items: center; gap: .6rem; }
+  .cal-pop-cabeca .cal-dia-titulo { margin: 0; min-width: 0; font-size: 1rem; font-weight: 700; line-height: 1.3; }
+  .cal-pop-cabeca .cal-dia-conta { flex: none; font-size: .85rem; color: var(--cinza); white-space: nowrap; }
+  .cal-fechar {
+    margin-left: auto; width: 2.3rem; height: 2.3rem; border-radius: 50%; border: 1.5px solid var(--linha);
+    background: var(--cartao); color: var(--tinta); font-size: 1.2rem; line-height: 1; cursor: pointer;
+  }
+  .cal-pop .cal-vazio { margin-top: .5rem; padding: 0; background: none; color: var(--cinza); }
   /* Eventos do dia escolhido: hora, título (com link para mais informação) e local; o "+" adiciona ao
      calendário de quem consulta (o escolhido no topo: Google, Outlook, iPhone...). */
-  .cal-lista-dia { list-style: none; margin: .65rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .45rem; }
+  .cal-lista-dia { list-style: none; margin: .55rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .45rem; }
   .cal-item {
     display: flex; align-items: center; gap: .75rem; padding: .55rem .55rem .55rem .8rem;
     background: var(--cartao); border: 1px solid var(--linha); border-left: 5px solid var(--ct, var(--linha)); border-radius: 10px;
@@ -469,8 +472,6 @@
   .cal-add:active { transform: scale(.92); }
   .cal-add.feito { background: #2f7d52; }
   .cal-ver-curso { margin-top: .5rem; text-align: left; }
-  .cal { display: grid; gap: 1rem 1.6rem; }
-  @media (min-width: 56rem) { .cal { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); align-items: start; } }
   .cal-mes-bloco { background: var(--cartao); border: 1px solid var(--linha); border-radius: 14px; padding: .7rem .7rem .8rem; box-shadow: var(--sombra); }
   .cal-cabeca { display: flex; align-items: center; gap: .4rem; margin-bottom: .55rem; }
   .cal-mes { flex: 1 1 auto; margin: 0; text-align: center; font-size: 1.12rem; font-weight: 700; line-height: 1.2; }
@@ -502,7 +503,7 @@
   .cal-ev-t { display: none; }
   .cal-mais { font-size: .68rem; font-weight: 700; color: var(--cinza); line-height: .5rem; }
   @media (min-width: 46rem) {
-    .cal-dia-b { min-height: 5.2rem; }
+    .cal-dia-b { min-height: 4.6rem; }
     .cal-marcas { flex-direction: column; flex-wrap: nowrap; padding-left: 0; }
     .cal-ev {
       width: auto; height: auto; border-radius: 4px; padding: 1px 4px; background: color-mix(in srgb, var(--ct) 22%, transparent);
@@ -512,8 +513,6 @@
     .cal-ev-t { display: inline; }
     .cal-mais { line-height: 1.2; padding-left: 4px; }
   }
-  .cal-dia-titulo { margin: 0 0 .1rem; font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
-  .cal-dia-conta { margin: 0; font-size: .88rem; color: var(--cinza); }
   .js .destaque-cartao .info-proximo { cursor: default; }
   .cal-vazio { margin-top: .7rem; padding: .7rem .85rem; border-radius: 10px; background: var(--mar-claro); font-size: .95rem; }
 
@@ -653,24 +652,22 @@
      língua/acessibilidade. */
   .embed .onda, .embed footer, .embed .marca { display: none; }
   .embed .topo { padding-top: .6rem; padding-bottom: .6rem; border-bottom: 1px solid var(--linha); }
-  .embed .linguas summary, .embed .sistema-menu summary, .embed .letra button { border-color: var(--linha); background: var(--cartao); color: var(--tinta); }
-  .embed .linguas summary:hover, .embed .sistema-menu summary:hover, .embed .letra button:hover { background: var(--trilho); }
+  .embed .linguas summary, .embed .letra button { border-color: var(--linha); background: var(--cartao); color: var(--tinta); }
+  .embed .linguas summary:hover, .embed .letra button:hover { background: var(--trilho); }
   .embed .sugestao { background: var(--cartao); border-bottom: 1px solid var(--linha); }
   .embed .destaque { border: 1px solid var(--linha); }
   .embed .botao:hover { background: #4a7d98; }
   @media (max-width: 40rem) {
     .embed .ferramentas { flex: 1 1 auto; justify-content: flex-end; }
   }
-  /* Telemóvel: calendário, língua e tamanho da letra numa só linha baixa, a ocupar o mínimo da página
-     (a língua fica só com a bandeira; "iPhone, iPad ou Mac" passa a "Apple"). */
+  /* Telemóvel: língua e tamanho da letra numa só linha baixa, a ocupar o mínimo da página
+     (a língua fica só com a bandeira). */
   @media (max-width: 40rem) {
     .topo-grelha { gap: .5rem; }
     .ferramentas { flex-wrap: nowrap; gap: .3rem; }
     .linguas summary > span:not(.apenas-leitor) { display: none; }
-    .linguas summary, .sistema-menu summary { min-height: 2.35rem; padding: .15rem .5rem; gap: .3rem; font-size: .88rem; border-radius: 8px; }
-    .linguas summary::after, .sistema-menu summary::after { width: .38em; height: .38em; margin-left: .05rem; }
-    .sistema-nome .longo { display: none; }
-    .sistema-nome .curto { display: inline; }
+    .linguas summary { min-height: 2.35rem; padding: .15rem .5rem; gap: .3rem; font-size: .88rem; border-radius: 8px; }
+    .linguas summary::after { width: .38em; height: .38em; margin-left: .05rem; }
     .letra { gap: .2rem; }
     .letra button { min-width: 2.35rem; min-height: 2.35rem; padding: 0 .3rem; font-size: .9rem; border-radius: 8px; }
     .letra button[data-letra="1"] { font-size: 1.02rem; }
@@ -680,7 +677,7 @@
   @media (forced-colors: active) {
     .cartao, .completa, .item-proximo, .destaque-cartao { border-left-color: CanvasText; }
     .barra span { background: CanvasText; }
-    .cal-ev, .chip-rapido .ponto { background: CanvasText; }
+    .cal-ev, .chip-rapido .ponto, .filtro-tipo-ponto { background: CanvasText; }
     .cal-dia-b[aria-pressed="true"], .chip-rapido[aria-pressed="true"] { outline: 2px solid Highlight; }
   }
   @media (prefers-reduced-motion: reduce) {
@@ -714,17 +711,6 @@
       </div>
     </div>
     <div class="ferramentas">
-      <details class="sistema-menu">
-        <summary><span class="apenas-leitor">Ihr Kalender: </span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg><span class="sistema-nome n-google">Google</span><span class="sistema-nome n-outlook">Outlook</span><span class="sistema-nome n-apple"><span class="longo">iPhone, iPad oder Mac</span><span class="curto">Apple</span></span><span class="sistema-nome n-android">Android</span><span class="sistema-nome n-outro">Andere</span></summary>
-        <div class="menu" role="group" aria-label="Ihr Kalender">
-          <p class="menu-titulo">Ihr Kalender</p>
-          <label for="sis-google">Google</label>
-          <label for="sis-outlook">Outlook</label>
-          <label for="sis-apple">iPhone, iPad oder Mac</label>
-          <label for="sis-android">Android</label>
-          <label for="sis-outro">Andere</label>
-        </div>
-      </details>
       <details class="linguas">
         <summary><span class="apenas-leitor">Sprache: </span><svg class="bandeira" viewBox="0 0 30 20" aria-hidden="true" focusable="false"><rect width="30" height="20" fill="#ffce00"/><rect width="30" height="6.67" fill="#000"/><rect y="6.67" width="30" height="6.67" fill="#dd0000"/></svg><span>Deutsch</span></summary>
         <ul>
@@ -786,6 +772,13 @@
     <input type="checkbox" id="mostrar-calendario" class="escondido" aria-controls="calendario-bloco">
     <div class="barra-calendario">
       <label for="mostrar-calendario" class="botao-secundario botao-mostrar botao-calendario"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="M7.5 14h.01M12 14h.01M16.5 14h.01M7.5 17.5h.01M12 17.5h.01" stroke-width="2.8"/></svg>Kalender <span class="chevron" aria-hidden="true"></span></label>
+      <details class="filtro-tipo" id="filtro-tipo" hidden>
+        <summary class="botao-secundario botao-mostrar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg><span class="filtro-tipo-ponto" aria-hidden="true"></span><span class="filtro-tipo-rotulo" data-todos="Nach Art filtern" data-n="{n} Arten">Nach Art filtern</span> <span class="chevron" aria-hidden="true"></span></summary>
+        <div class="filtro-tipo-painel">
+          <p class="filtro-grupo-titulo" id="fg-rapido">Nach Art filtern</p>
+          <div class="filtro-rapido" id="filtro-rapido" role="group" aria-labelledby="fg-rapido" data-todos="Alle" data-mais="Weitere Filter"></div>
+        </div>
+      </details>
     </div>
     <div class="calendario-bloco" id="calendario-bloco">
       <div class="cal" id="calendario" data-um="1 Veranstaltung" data-n="{n} Veranstaltungen" data-ver-curso="Auch laufende Veranstaltungen ansehen ({n})" data-adicionar="Hinzufügen">
@@ -799,9 +792,12 @@
           <div class="cal-semana" aria-hidden="true"></div>
           <div class="cal-dias" role="group" aria-labelledby="cal-mes"></div>
         </div>
-        <div class="cal-dia" aria-live="polite">
-          <h3 class="cal-dia-titulo"></h3>
-          <p class="cal-dia-conta"></p>
+        <div class="cal-pop" role="region" aria-labelledby="cal-dia-titulo" hidden>
+          <div class="cal-pop-cabeca">
+            <h4 class="cal-dia-titulo" id="cal-dia-titulo"></h4>
+            <span class="cal-dia-conta"></span>
+            <button type="button" class="cal-fechar" aria-label="Schließen">×</button>
+          </div>
           <ul class="cal-lista-dia"></ul>
           <p class="cal-vazio" hidden>An diesem Tag beginnt keine Veranstaltung.</p>
           <button type="button" class="botao-texto cal-ver-curso" hidden></button>
@@ -812,10 +808,6 @@
     <div class="destaque" id="destaque-proximo" role="group" hidden aria-label="Im Fokus">
       <div class="destaque-cabeca">
         <p class="destaque-rotulo">Im Fokus</p>
-        <div class="filtro-rapido" id="filtro-rapido" role="group" aria-label="Filtern" hidden
-          data-todos="Alle" data-mais="Weitere Filter">
-          <span class="filtro-rapido-rotulo"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Filtern</span>
-        </div>
       </div>
       <div class="destaque-cartao" aria-live="polite"></div>
       <p class="destaque-vazio" hidden>Keine hervorgehobenen Veranstaltungen für diesen Filter.</p>
@@ -1866,8 +1858,7 @@
   <section class="subscrever" aria-labelledby="t-subscrever">
     <h2 id="t-subscrever" class="titulo-seccao titulo-icone"><span class="icone-seccao" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>Kalender abonnieren</h2>
 
-    <div class="subscrever-grelha">
-      <div>
+    <div class="subscrever-pilha">
         <div class="seletor" role="group" aria-labelledby="pergunta">
           <h3 class="subtitulo-seccao" id="pergunta">Kalendertyp</h3>
           <div class="segmentos">
@@ -1884,37 +1875,17 @@
           <p class="dica dica-outro">Kopieren Sie den Link und fügen Sie ihn in Ihrer App als Kalender per URL (Abonnement) hinzu.</p>
         </div>
 
-        <div class="completa">
-          <div class="completa-texto">
-            <span class="icone-completa" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="M12 13v5M9.5 15.5h5"/></svg></span>
-            <div>
-              <p class="opcao-titulo">Alle Veranstaltungen</p>
-              <p class="linha2">Alle Veranstaltungen in einem Kalender (67 Veranstaltungen).</p>
-            </div>
-          </div>
-          <div class="acoes">
-  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fde%2Fagenda.ics" target="_blank" rel="noopener noreferrer" aria-label="Abonnieren: Alle Veranstaltungen (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>Abonnieren</a>
-  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fde%2Fagenda.ics" target="_blank" rel="noopener noreferrer" aria-label="Abonnieren: Alle Veranstaltungen (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>Abonnieren</a>
-  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/de/agenda.ics" target="_top" aria-label="Abonnieren: Alle Veranstaltungen (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>Abonnieren</a>
-  <div class="copiar so-outro">
-    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/de/agenda.ics" aria-label="Link kopieren: Alle Veranstaltungen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Link kopieren</button>
-    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/de/agenda.ics" aria-label="Link kopieren: Alle Veranstaltungen">
-  </div>
-</div>
-        </div>
-      </div>
-
-      <div>
-        <h3 class="subtitulo-seccao">Thema / Art</h3>
-        <div class="escolhas-assinar" role="group" aria-label="Nach Thema abonnieren / Nach Art abonnieren">
-          <label for="assinar-tema" class="escolha-cartao">
-            <span class="escolha-icone" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><path d="M7.5 7.5h.01" stroke-width="3"/></svg></span>
-            <span class="escolha-texto"><span class="escolha-titulo">Nach Thema abonnieren</span><span class="escolha-exemplos" data-grelha="painel-temas"></span></span>
-            <span class="chevron" aria-hidden="true"></span>
-          </label>
+        <div class="subscrever-escolhas">
+        <h3 class="subtitulo-seccao">Art / Thema</h3>
+        <div class="escolhas-assinar" role="group" aria-label="Nach Art abonnieren / Nach Thema abonnieren">
           <label for="assinar-tipo" class="escolha-cartao">
             <span class="escolha-icone" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg></span>
             <span class="escolha-texto"><span class="escolha-titulo">Nach Art abonnieren</span><span class="escolha-exemplos" data-grelha="painel-tipos"></span></span>
+            <span class="chevron" aria-hidden="true"></span>
+          </label>
+          <label for="assinar-tema" class="escolha-cartao">
+            <span class="escolha-icone" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><path d="M7.5 7.5h.01" stroke-width="3"/></svg></span>
+            <span class="escolha-texto"><span class="escolha-titulo">Nach Thema abonnieren</span><span class="escolha-exemplos" data-grelha="painel-temas"></span></span>
             <span class="chevron" aria-hidden="true"></span>
           </label>
         </div>
@@ -2269,7 +2240,26 @@
 
           <p class="aviso">Abonnieren Sie nicht gleichzeitig Themen und Arten, sonst erhalten Sie Veranstaltungen doppelt.</p>
         </div>
-      </div>
+        </div>
+
+        <div class="completa">
+          <div class="completa-texto">
+            <span class="icone-completa" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="M12 13v5M9.5 15.5h5"/></svg></span>
+            <div>
+              <p class="opcao-titulo">Alle Veranstaltungen</p>
+              <p class="linha2">Alle Veranstaltungen in einem Kalender (67 Veranstaltungen).</p>
+            </div>
+          </div>
+          <div class="acoes">
+  <a class="botao so-google so-android" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fde%2Fagenda.ics" target="_blank" rel="noopener noreferrer" aria-label="Abonnieren: Alle Veranstaltungen (Google)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>Abonnieren</a>
+  <a class="botao so-outlook" href="https://outlook.office.com/calendar/0/addfromweb?url=webcal%3A%2F%2Fjmns-santos.github.io%2Fagenda-cmpv%2Fl%2Fde%2Fagenda.ics" target="_blank" rel="noopener noreferrer" aria-label="Abonnieren: Alle Veranstaltungen (Outlook)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>Abonnieren</a>
+  <a class="botao so-apple" href="webcal://jmns-santos.github.io/agenda-cmpv/l/de/agenda.ics" target="_top" aria-label="Abonnieren: Alle Veranstaltungen (iPhone, iPad, Mac)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>Abonnieren</a>
+  <div class="copiar so-outro">
+    <button type="button" class="botao botao-copiar" data-link="https://jmns-santos.github.io/agenda-cmpv/l/de/agenda.ics" aria-label="Link kopieren: Alle Veranstaltungen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Link kopieren</button>
+    <input type="text" readonly value="https://jmns-santos.github.io/agenda-cmpv/l/de/agenda.ics" aria-label="Link kopieren: Alle Veranstaltungen">
+  </div>
+</div>
+        </div>
     </div>
   </section>
 
@@ -2361,16 +2351,14 @@
   var sistemaGuardado = ler('nexo-eventos-sistema');
   var sistemaInicial = sistemaGuardado ? document.getElementById(sistemaGuardado) : null;
   if (sistemaInicial && sistemaInicial.name === 'sistema') sistemaInicial.checked = true;
-  var menuSistema = document.querySelector('.sistema-menu');
   for (var r = 0; r < radiosSistema.length; r++) {
     radiosSistema[r].addEventListener('change', function () {
       gravar('nexo-eventos-sistema', this.id);
-      if (menuSistema && menuSistema.open) menuSistema.open = false;
     });
   }
 
-  // Fechar os menus (língua, calendário) ao clicar fora ou com Esc.
-  var menus = document.querySelectorAll('.linguas, .sistema-menu');
+  // Fechar o menu de línguas ao clicar fora ou com Esc.
+  var menus = document.querySelectorAll('.linguas');
   document.addEventListener('click', function (e) {
     for (var i = 0; i < menus.length; i++) if (menus[i].open && !menus[i].contains(e.target)) menus[i].open = false;
   });
@@ -2885,16 +2873,26 @@
     var mostrarCal = document.getElementById('mostrar-calendario');
     if (mostrarCal) mostrarCal.addEventListener('change', function () { if (mostrarCal.checked) desenharCalendario(); });
 
-    // Filtrar (no quadro "Em destaque"): os tipos mais frequentes no que está a decorrer e vem aí,
-    // em botões pequenos de ligar/desligar. São os mesmos filtros da lista: escolher aqui é o mesmo
-    // que escolher lá, e o destaque, a lista e o calendário mudam juntos.
+    // Filtrar por tipo (menu ao lado de "Calendário"): todos os tipos com eventos, dos mais frequentes para
+    // os menos. Um toque escolhe esse tipo (e fecha o menu); tocar outra vez no mesmo tira o filtro.
+    // São os mesmos filtros da lista: o calendário, o destaque e a lista mudam juntos.
+    var filtroTipo = document.getElementById('filtro-tipo');
     var filtroRapido = document.getElementById('filtro-rapido');
+    var filtroRotulo = filtroTipo ? filtroTipo.querySelector('.filtro-tipo-rotulo') : null;
     var rapidos = [];
     function chipDoTipo(slug) {
       for (var i = 0; i < chips.length; i++) {
         if (chips[i].classList.contains('chip-tipo') && chips[i].getAttribute('data-slug') === slug) return chips[i];
       }
       return null;
+    }
+    function nomeDoTipo(slug) {
+      var caixa = chipDoTipo(slug), rotulo = caixa ? caixa.nextElementSibling : null;
+      return rotulo && rotulo.firstChild ? String(rotulo.firstChild.nodeValue || '').trim() : slug;
+    }
+    function corDoTipo(slug) {
+      var caixa = chipDoTipo(slug), rotulo = caixa ? caixa.nextElementSibling : null;
+      return rotulo ? rotulo.style.getPropertyValue('--cor').trim() : '';
     }
     function novoRapido(slug, nome, cor, n) {
       var b = document.createElement('button');
@@ -2915,35 +2913,45 @@
         if (r.slug === undefined) continue;
         r.botao.setAttribute('aria-pressed', String(r.slug ? tipos.indexOf(r.slug) >= 0 : tipos.length === 0));
       }
+      if (!filtroTipo || !filtroRotulo) return;
+      // O botão diz o que está escolhido: "Filtrar por tipo", o nome do tipo (com a cor) ou "2 tipos".
+      filtroTipo.classList.toggle('ativo', tipos.length > 0);
+      if (tipos.length === 1) {
+        filtroRotulo.textContent = nomeDoTipo(tipos[0]);
+        filtroTipo.style.setProperty('--cor-filtro', corDoTipo(tipos[0]) || 'var(--botao)');
+      } else {
+        filtroRotulo.textContent = tipos.length
+          ? (filtroRotulo.getAttribute('data-n') || '{n}').replace('{n}', String(tipos.length))
+          : filtroRotulo.getAttribute('data-todos') || '';
+        filtroTipo.style.removeProperty('--cor-filtro');
+      }
     }
-    if (filtroRapido) {
-      var porTipoJanela = {};
-      for (var pj = 0; pj < janelaDestaque.length; pj++) porTipoJanela[janelaDestaque[pj].tipo] = (porTipoJanela[janelaDestaque[pj].tipo] || 0) + 1;
+    function escolherTipo(slug) {
+      var ja = slug && chipDoTipo(slug) && chipDoTipo(slug).checked && chipsLigados('chip-tipo').length === 1;
+      for (var i = 0; i < chips.length; i++) if (chips[i].classList.contains('chip-tipo')) chips[i].checked = false;
+      if (slug && !ja) chipDoTipo(slug).checked = true;
+      aplicarFiltro();
+      if (filtroTipo) filtroTipo.open = false;
+    }
+    if (filtroTipo && filtroRapido) {
+      var porTipo = {};
+      for (var pj = 0; pj < itens.length; pj++) porTipo[itens[pj].tipo] = (porTipo[itens[pj].tipo] || 0) + 1;
       var ordemTipos = [];
       for (var oc = 0; oc < chips.length; oc++) if (chips[oc].classList.contains('chip-tipo')) ordemTipos.push(chips[oc].getAttribute('data-slug'));
-      var maisComuns = Object.keys(porTipoJanela).filter(function (s) { return chipDoTipo(s); }).sort(function (a, b) {
-        return (porTipoJanela[b] - porTipoJanela[a]) || (ordemTipos.indexOf(a) - ordemTipos.indexOf(b));
-      }).slice(0, 5);
-      if (maisComuns.length >= 2) {
-        novoRapido('', filtroRapido.getAttribute('data-todos') || '', '', 0).addEventListener('click', function () {
-          for (var i = 0; i < chips.length; i++) if (chips[i].classList.contains('chip-tipo')) chips[i].checked = false;
-          aplicarFiltro();
+      var tiposComEventos = Object.keys(porTipo).filter(function (s) { return chipDoTipo(s); }).sort(function (a, b) {
+        return (porTipo[b] - porTipo[a]) || (ordemTipos.indexOf(a) - ordemTipos.indexOf(b));
+      });
+      if (tiposComEventos.length >= 2) {
+        novoRapido('', filtroRapido.getAttribute('data-todos') || '', '', itens.length).addEventListener('click', function () { escolherTipo(''); });
+        tiposComEventos.forEach(function (slug) {
+          novoRapido(slug, nomeDoTipo(slug), corDoTipo(slug), porTipo[slug]).addEventListener('click', function () { escolherTipo(slug); });
         });
-        maisComuns.forEach(function (slug) {
-          var caixa = chipDoTipo(slug);
-          var rotulo = caixa.nextElementSibling;
-          var nome = rotulo && rotulo.firstChild ? String(rotulo.firstChild.nodeValue || '').trim() : slug;
-          var cor = rotulo ? rotulo.style.getPropertyValue('--cor').trim() : '';
-          novoRapido(slug, nome, cor, porTipoJanela[slug]).addEventListener('click', function () {
-            caixa.checked = !caixa.checked;
-            aplicarFiltro();
-          });
-        });
-        // "Mais filtros": abre a lista com todos os filtros (datas, temas, todos os tipos).
+        // "Mais filtros": abre a lista com todos os filtros (datas, temas, vários tipos).
         var botaoMais = novoRapido(undefined, filtroRapido.getAttribute('data-mais') || '', '', 0);
         botaoMais.classList.add('chip-mais');
         botaoMais.removeAttribute('aria-pressed');
         botaoMais.addEventListener('click', function () {
+          filtroTipo.open = false;
           abrirLista();
           if (blocoFiltros) {
             blocoFiltros.open = true;
@@ -2952,14 +2960,20 @@
             if (sumario) sumario.focus({ preventScroll: true });
           }
         });
-        filtroRapido.hidden = false;
+        filtroTipo.hidden = false;
+        // Fechar o menu ao tocar fora ou com Esc.
+        document.addEventListener('click', function (e) { if (filtroTipo.open && !filtroTipo.contains(e.target)) filtroTipo.open = false; });
+        filtroTipo.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && filtroTipo.open) { filtroTipo.open = false; filtroTipo.querySelector('summary').focus(); }
+        });
       }
     }
 
     // Calendário (abre no botão "Calendário"): o mês, com os eventos no dia em que começam, cada um uma só
-    // vez. Ao escolher um dia, os eventos desse dia, cada um com "+" para o adicionar ao calendário. Os de
-    // vários dias já começados (exposições...) não se repetem dia a dia: há um atalho para os ver na lista.
-    // Abre no primeiro dia, de hoje em diante, em que começa algum evento (hoje fica sempre assinalado).
+    // vez. Ao tocar num dia, os eventos desse dia abrem logo ali, por baixo dessa semana, cada um com "+"
+    // para o adicionar ao calendário; tocar outra vez no dia (ou no ×) fecha. Os de vários dias já
+    // começados (exposições...) não se repetem dia a dia: há um atalho para os ver na lista.
+    // Abre já com o primeiro dia, de hoje em diante, em que começa algum evento (hoje fica assinalado).
     var calEl = document.getElementById('calendario');
     var lingua = raiz.getAttribute('lang') || 'pt-PT';
     function mesDe(n) { var d = new Date(n * 86400000); return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), 1) / 86400000; }
@@ -2993,7 +3007,10 @@
         diaConta: calEl.querySelector('.cal-dia-conta'),
         listaDia: calEl.querySelector('.cal-lista-dia'),
         verCurso: calEl.querySelector('.cal-ver-curso'),
-        vazio: calEl.querySelector('.cal-vazio')
+        vazio: calEl.querySelector('.cal-vazio'),
+        pop: calEl.querySelector('.cal-pop'),
+        fechar: calEl.querySelector('.cal-fechar'),
+        aberto: true
       };
       for (var pd = 0; pd < itens.length; pd++) {
         var di = itens[pd].dIni;
@@ -3046,7 +3063,7 @@
         b.type = 'button';
         b.className = 'cal-dia-b' + (n < hojeN ? ' passado' : '') + (n === hojeN ? ' hoje' : '');
         b.setAttribute('data-dia', String(n));
-        b.setAttribute('aria-pressed', String(n === cal.sel));
+        b.setAttribute('aria-pressed', String(cal.aberto && n === cal.sel));
         b.tabIndex = n === cal.sel ? 0 : -1;
         var nTotal = ev.doDia.length;
         b.setAttribute('aria-label', maiuscula(formatar({ weekday: 'long', day: 'numeric', month: 'long' }, n)) +
@@ -3081,6 +3098,21 @@
         }
         cal.dias.appendChild(b);
       }
+      colocarPainel();
+    }
+    // Põe o painel do dia logo a seguir à semana do dia escolhido (a seta aponta para esse dia).
+    function colocarPainel() {
+      if (!cal || !cal.pop) return;
+      if (!cal.aberto) { cal.pop.hidden = true; return; }
+      var celulas = [];
+      for (var c = cal.dias.firstChild; c; c = c.nextSibling) if (c !== cal.pop) celulas.push(c);
+      var botao = cal.dias.querySelector('button[data-dia="' + cal.sel + '"]');
+      var pos = celulas.indexOf(botao);
+      if (pos < 0) { cal.pop.hidden = true; return; }
+      var fimSemana = Math.min(pos - pos % 7 + 6, celulas.length - 1);
+      cal.dias.insertBefore(cal.pop, celulas[fimSemana].nextSibling);
+      cal.pop.style.setProperty('--col', String(pos % 7));
+      cal.pop.hidden = false;
       desenharDia();
     }
     var ICONE_MAIS = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>';
@@ -3137,30 +3169,37 @@
       cal.verCurso.hidden = !ev.curso.length;
       cal.verCurso.textContent = (calEl.getAttribute('data-ver-curso') || '{n}').replace('{n}', String(ev.curso.length));
     }
-    function escolherDia(n, focar) {
+    // aberto: true abre o painel desse dia; false fecha-o; undefined mantém como está (setas do teclado).
+    function escolherDia(n, focar, aberto) {
       if (!cal) return;
       var m = mesDe(n);
       if (m < cal.min || m > cal.max) return;
       cal.sel = n;
+      if (aberto !== undefined) cal.aberto = aberto;
       if (m !== cal.mes) { cal.mes = m; desenharCalendario(); }
       else {
         var botoes = cal.dias.querySelectorAll('button[data-dia]');
         for (var i = 0; i < botoes.length; i++) {
           var esteDia = +botoes[i].getAttribute('data-dia') === n;
-          botoes[i].setAttribute('aria-pressed', String(esteDia));
+          botoes[i].setAttribute('aria-pressed', String(cal.aberto && esteDia));
           botoes[i].tabIndex = esteDia ? 0 : -1;
         }
-        desenharDia();
+        colocarPainel();
       }
-      if (focar) {
-        var alvo = cal.dias.querySelector('button[data-dia="' + n + '"]');
-        if (alvo) alvo.focus();
-      }
+      var alvo = cal.dias.querySelector('button[data-dia="' + n + '"]');
+      if (focar && alvo) alvo.focus();
+      if (cal.aberto && !cal.pop.hidden && cal.pop.scrollIntoView) cal.pop.scrollIntoView({ block: 'nearest' });
     }
     if (cal) {
       cal.dias.addEventListener('click', function (e) {
         var b = e.target.closest ? e.target.closest('button[data-dia]') : null;
-        if (b) escolherDia(+b.getAttribute('data-dia'), false);
+        if (!b) return;
+        var n = +b.getAttribute('data-dia');
+        escolherDia(n, false, !(cal.aberto && n === cal.sel)); // tocar outra vez no mesmo dia fecha
+      });
+      cal.fechar.addEventListener('click', function () { escolherDia(cal.sel, true, false); });
+      calEl.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && cal.aberto) { e.stopPropagation(); escolherDia(cal.sel, true, false); }
       });
       // Teclado: setas mudam de dia (e de mês, nos extremos); Page Up/Down mudam de mês.
       cal.dias.addEventListener('keydown', function (e) {
@@ -3174,7 +3213,7 @@
       });
       cal.anterior.addEventListener('click', function () { cal.mes = mesMais(cal.mes, -1); desenharCalendario(); });
       cal.seguinte.addEventListener('click', function () { cal.mes = mesMais(cal.mes, 1); desenharCalendario(); });
-      cal.irHoje.addEventListener('click', function () { escolherDia(hojeN, true); });
+      cal.irHoje.addEventListener('click', function () { escolherDia(hojeN, true, true); });
       // Atalho para os eventos já em curso nesse dia: a lista, filtrada por essa data (sem os repetir aqui).
       cal.verCurso.addEventListener('click', function () {
         var qDatas = document.getElementById('quando-datas');
