@@ -60,7 +60,7 @@
    "adicionar_um": "Adicionar",
    "selecionar_evento": "Selecionar",
    "filtrar_tema": "Por tema",
-   "filtrar_tipo": "Por tipo",
+   "filtrar_tipo": "Filtrar por tipo",
    "confirmar_titulo": "O Google e o Outlook só aceitam um evento de cada vez: toque em cada um para o confirmar no seu calendário.",
    "confirmar_ics": "Ou descarregue todos num ficheiro .ics para importar",
    "ajuda": "Ajuda",
@@ -132,8 +132,6 @@
    "info_curta": "+ Info",
    "categoria": "Eventos",
    "rodape3": "Um projeto do DP-SIG (Secção de Inteligência Urbana), na Plataforma de Gestão Urbana, para partilhar mais informação e ajudar a construir uma cidade mais informada.",
-   "sistema_rotulo": "O seu calendário",
-   "filtrar": "Filtrar",
    "filtrar_todos": "Todos",
    "mais_filtros": "Mais filtros",
    "destaque_vazio": "Nenhum evento em destaque com este filtro.",
@@ -141,7 +139,8 @@
    "cal_mes_seguinte": "Mês seguinte",
    "cal_sem_eventos": "Nenhum evento começa neste dia.",
    "calendario_titulo": "Calendário",
-   "cal_ver_curso": "Ver também os eventos em curso ({n})"
+   "cal_ver_curso": "Ver também os eventos em curso ({n})",
+   "tipos_n": "{n} tipos"
   },
   "en": {
    "nome": "English",
@@ -304,7 +303,7 @@
    "confirmar_ics": "Or download them all in one .ics file to import",
    "confirmar_titulo": "Google and Outlook only accept one event at a time: tap each one to confirm it in your calendar.",
    "filtrar_tema": "By theme",
-   "filtrar_tipo": "By type",
+   "filtrar_tipo": "Filter by type",
    "proximos_dia_inteiro": "all day",
    "proximos_texto": "What's coming up in the city. Search by name, theme, type or place, see all events and add one or several to your calendar, without subscribing to anything.",
    "proximos_titulo": "Upcoming events",
@@ -345,8 +344,6 @@
    "info_curta": "+ Info",
    "categoria": "Events",
    "rodape3": "A DP-SIG (Urban Intelligence Section) project, part of the Urban Management Platform, to share more information and help build a better-informed city.",
-   "sistema_rotulo": "Your calendar",
-   "filtrar": "Filter",
    "filtrar_todos": "All",
    "mais_filtros": "More filters",
    "destaque_vazio": "No featured events for this filter.",
@@ -354,7 +351,8 @@
    "cal_mes_seguinte": "Next month",
    "cal_sem_eventos": "No events start on this day.",
    "calendario_titulo": "Calendar",
-   "cal_ver_curso": "Also see ongoing events ({n})"
+   "cal_ver_curso": "Also see ongoing events ({n})",
+   "tipos_n": "{n} types"
   },
   "es": {
    "nome": "Español",
@@ -517,7 +515,7 @@
    "confirmar_ics": "O descárguelos todos en un archivo .ics para importarlos",
    "confirmar_titulo": "Google y Outlook solo aceptan un evento cada vez: toque cada uno para confirmarlo en su calendario.",
    "filtrar_tema": "Por tema",
-   "filtrar_tipo": "Por tipo",
+   "filtrar_tipo": "Filtrar por tipo",
    "proximos_dia_inteiro": "todo el día",
    "proximos_texto": "Lo que viene en la ciudad. Busque por nombre, tema, tipo o lugar, vea todos los eventos y añada uno o varios a su calendario, sin suscribirse a nada.",
    "proximos_titulo": "Próximos eventos",
@@ -558,8 +556,6 @@
    "info_curta": "+ Info",
    "categoria": "Eventos",
    "rodape3": "Un proyecto del DP-SIG (Sección de Inteligencia Urbana), dentro de la Plataforma de Gestión Urbana, para compartir más información y ayudar a construir una ciudad mejor informada.",
-   "sistema_rotulo": "Su calendario",
-   "filtrar": "Filtrar",
    "filtrar_todos": "Todos",
    "mais_filtros": "Más filtros",
    "destaque_vazio": "No hay eventos destacados con este filtro.",
@@ -567,7 +563,8 @@
    "cal_mes_seguinte": "Mes siguiente",
    "cal_sem_eventos": "Ningún evento empieza este día.",
    "calendario_titulo": "Calendario",
-   "cal_ver_curso": "Ver también los eventos en curso ({n})"
+   "cal_ver_curso": "Ver también los eventos en curso ({n})",
+   "tipos_n": "{n} tipos"
   },
   "it": {
    "nome": "Italiano",
@@ -730,7 +727,7 @@
    "confirmar_ics": "Oppure scaricali tutti in un file .ics da importare",
    "confirmar_titulo": "Google e Outlook accettano un solo evento alla volta: tocca ciascuno per confermarlo nel tuo calendario.",
    "filtrar_tema": "Per tema",
-   "filtrar_tipo": "Per tipo",
+   "filtrar_tipo": "Filtra per tipo",
    "proximos_dia_inteiro": "tutto il giorno",
    "proximos_texto": "Cosa succede in città. Cerca per nome, tema, tipo o luogo, vedi tutti gli eventi e aggiungine uno o più al tuo calendario, senza iscriverti a nulla.",
    "proximos_titulo": "Prossimi eventi",
@@ -771,8 +768,6 @@
    "info_curta": "+ Info",
    "categoria": "Eventi",
    "rodape3": "Un progetto del DP-SIG (Sezione Intelligenza Urbana), nella Piattaforma di Gestione Urbana, per condividere più informazioni e contribuire a una città più informata.",
-   "sistema_rotulo": "Il tuo calendario",
-   "filtrar": "Filtra",
    "filtrar_todos": "Tutti",
    "mais_filtros": "Altri filtri",
    "destaque_vazio": "Nessun evento in evidenza con questo filtro.",
@@ -780,7 +775,8 @@
    "cal_mes_seguinte": "Mese successivo",
    "cal_sem_eventos": "Nessun evento inizia in questo giorno.",
    "calendario_titulo": "Calendario",
-   "cal_ver_curso": "Vedi anche gli eventi in corso ({n})"
+   "cal_ver_curso": "Vedi anche gli eventi in corso ({n})",
+   "tipos_n": "{n} tipi"
   },
   "fr": {
    "nome": "Français",
@@ -943,7 +939,7 @@
    "confirmar_ics": "Ou téléchargez-les tous dans un fichier .ics à importer",
    "confirmar_titulo": "Google et Outlook n'acceptent qu'un événement à la fois : touchez chacun pour le confirmer dans votre calendrier.",
    "filtrar_tema": "Par thème",
-   "filtrar_tipo": "Par type",
+   "filtrar_tipo": "Filtrer par type",
    "proximos_dia_inteiro": "toute la journée",
    "proximos_texto": "Ce qui arrive en ville. Recherchez par nom, thème, type ou lieu, voyez tous les événements et ajoutez-en un ou plusieurs à votre calendrier, sans vous abonner à rien.",
    "proximos_titulo": "Prochains événements",
@@ -984,8 +980,6 @@
    "info_curta": "+ Infos",
    "categoria": "Événements",
    "rodape3": "Un projet du DP-SIG (Section Intelligence Urbaine), intégré à la Plateforme de Gestion Urbaine, pour partager plus d'informations et contribuer à une ville mieux informée.",
-   "sistema_rotulo": "Votre calendrier",
-   "filtrar": "Filtrer",
    "filtrar_todos": "Tous",
    "mais_filtros": "Plus de filtres",
    "destaque_vazio": "Aucun événement à la une avec ce filtre.",
@@ -993,7 +987,8 @@
    "cal_mes_seguinte": "Mois suivant",
    "cal_sem_eventos": "Aucun événement ne commence ce jour-là.",
    "calendario_titulo": "Calendrier",
-   "cal_ver_curso": "Voir aussi les événements en cours ({n})"
+   "cal_ver_curso": "Voir aussi les événements en cours ({n})",
+   "tipos_n": "{n} types"
   },
   "de": {
    "nome": "Deutsch",
@@ -1156,7 +1151,7 @@
    "confirmar_ics": "Oder laden Sie alle als .ics-Datei zum Importieren herunter",
    "confirmar_titulo": "Google und Outlook akzeptieren nur jeweils eine Veranstaltung: Tippen Sie auf jede einzelne, um sie in Ihrem Kalender zu bestätigen.",
    "filtrar_tema": "Nach Thema",
-   "filtrar_tipo": "Nach Art",
+   "filtrar_tipo": "Nach Art filtern",
    "proximos_dia_inteiro": "ganztägig",
    "proximos_texto": "Was in der Stadt ansteht. Suchen Sie nach Name, Thema, Art oder Ort, sehen Sie alle Veranstaltungen und fügen Sie eine oder mehrere zu Ihrem Kalender hinzu, ohne etwas zu abonnieren.",
    "proximos_titulo": "Nächste Veranstaltungen",
@@ -1197,8 +1192,6 @@
    "info_curta": "+ Info",
    "categoria": "Veranstaltungen",
    "rodape3": "Ein Projekt von DP-SIG (Abteilung Stadtintelligenz), Teil der Plattform für Stadtmanagement, um mehr Informationen zu teilen und zu einer besser informierten Stadt beizutragen.",
-   "sistema_rotulo": "Ihr Kalender",
-   "filtrar": "Filtern",
    "filtrar_todos": "Alle",
    "mais_filtros": "Weitere Filter",
    "destaque_vazio": "Keine hervorgehobenen Veranstaltungen für diesen Filter.",
@@ -1206,7 +1199,8 @@
    "cal_mes_seguinte": "Nächster Monat",
    "cal_sem_eventos": "An diesem Tag beginnt keine Veranstaltung.",
    "calendario_titulo": "Kalender",
-   "cal_ver_curso": "Auch laufende Veranstaltungen ansehen ({n})"
+   "cal_ver_curso": "Auch laufende Veranstaltungen ansehen ({n})",
+   "tipos_n": "{n} Arten"
   },
   "zh": {
    "nome": "中文",
@@ -1369,7 +1363,7 @@
    "confirmar_ics": "或将全部活动下载为 .ics 文件后导入",
    "confirmar_titulo": "Google 和 Outlook 每次只能添加一项活动：请逐项点击，在您的日历中确认。",
    "filtrar_tema": "按主题",
-   "filtrar_tipo": "按类型",
+   "filtrar_tipo": "按类型筛选",
    "proximos_dia_inteiro": "全天",
    "proximos_texto": "城市里即将举行的活动。可按名称、主题、类型或地点搜索，查看所有活动，并将一项或多项添加到您的日历，无需订阅。",
    "proximos_titulo": "近期活动",
@@ -1410,8 +1404,6 @@
    "info_curta": "+ 详情",
    "categoria": "活动",
    "rodape3": "DP-SIG(城市智慧科)的项目,属于城市管理平台的一部分,旨在分享更多信息,帮助建设信息更畅通的城市。",
-   "sistema_rotulo": "您的日历",
-   "filtrar": "筛选",
    "filtrar_todos": "全部",
    "mais_filtros": "更多筛选",
    "destaque_vazio": "此筛选条件下没有精选活动。",
@@ -1419,7 +1411,8 @@
    "cal_mes_seguinte": "下个月",
    "cal_sem_eventos": "当天没有开始的活动。",
    "calendario_titulo": "日历",
-   "cal_ver_curso": "另请查看进行中的活动（{n}）"
+   "cal_ver_curso": "另请查看进行中的活动（{n}）",
+   "tipos_n": "{n} 种类型"
   },
   "ja": {
    "nome": "日本語",
@@ -1582,7 +1575,7 @@
    "confirmar_ics": "または、すべてを .ics ファイルとしてダウンロードして取り込む",
    "confirmar_titulo": "Google と Outlook では一度に 1 件ずつしか追加できません。ひとつずつタップして、カレンダーで確認してください。",
    "filtrar_tema": "テーマ別",
-   "filtrar_tipo": "種類別",
+   "filtrar_tipo": "種類で絞り込み",
    "proximos_dia_inteiro": "終日",
    "proximos_texto": "市内でこれから開かれるイベントです。名前・テーマ・種類・場所で検索し、すべてのイベントを見て、1 件または複数をカレンダーに追加できます。購読は不要です。",
    "proximos_titulo": "今後のイベント",
@@ -1623,8 +1616,6 @@
    "info_curta": "+ 詳細",
    "categoria": "イベント",
    "rodape3": "DP-SIG(都市インテリジェンス課)によるプロジェクトで、都市管理プラットフォームの一部です。より多くの情報を共有し、情報の行き届いた街づくりに貢献することを目指しています。",
-   "sistema_rotulo": "お使いのカレンダー",
-   "filtrar": "絞り込み",
    "filtrar_todos": "すべて",
    "mais_filtros": "その他の条件",
    "destaque_vazio": "この条件に該当する注目イベントはありません。",
@@ -1632,7 +1623,8 @@
    "cal_mes_seguinte": "次の月",
    "cal_sem_eventos": "この日に始まるイベントはありません。",
    "calendario_titulo": "カレンダー",
-   "cal_ver_curso": "開催中のイベントも見る（{n}）"
+   "cal_ver_curso": "開催中のイベントも見る（{n}）",
+   "tipos_n": "{n} 種類"
   },
   "nl": {
    "nome": "Nederlands",
@@ -1795,7 +1787,7 @@
    "confirmar_ics": "Of download ze allemaal als .ics-bestand om te importeren",
    "confirmar_titulo": "Google en Outlook accepteren maar één evenement tegelijk: tik op elk evenement om het in uw agenda te bevestigen.",
    "filtrar_tema": "Per thema",
-   "filtrar_tipo": "Per soort",
+   "filtrar_tipo": "Filteren op soort",
    "proximos_dia_inteiro": "hele dag",
    "proximos_texto": "Wat er in de stad op het programma staat. Zoek op naam, thema, soort of plaats, bekijk alle evenementen en voeg er één of meer toe aan uw agenda, zonder u ergens op te abonneren.",
    "proximos_titulo": "Komende evenementen",
@@ -1836,8 +1828,6 @@
    "info_curta": "+ Info",
    "categoria": "Evenementen",
    "rodape3": "Een project van DP-SIG (Sectie Stedelijke Intelligentie), onderdeel van het Platform voor Stedelijk Beheer, om meer informatie te delen en bij te dragen aan een beter geïnformeerde stad.",
-   "sistema_rotulo": "Uw agenda",
-   "filtrar": "Filteren",
    "filtrar_todos": "Alle",
    "mais_filtros": "Meer filters",
    "destaque_vazio": "Geen uitgelichte evenementen voor dit filter.",
@@ -1845,7 +1835,8 @@
    "cal_mes_seguinte": "Volgende maand",
    "cal_sem_eventos": "Op deze dag begint geen evenement.",
    "calendario_titulo": "Kalender",
-   "cal_ver_curso": "Bekijk ook lopende evenementen ({n})"
+   "cal_ver_curso": "Bekijk ook lopende evenementen ({n})",
+   "tipos_n": "{n} soorten"
   },
   "pl": {
    "nome": "Polski",
@@ -2008,7 +1999,7 @@
    "confirmar_ics": "Albo pobierz wszystkie w jednym pliku .ics, aby je zaimportować",
    "confirmar_titulo": "Google i Outlook przyjmują tylko jedno wydarzenie naraz: dotknij każdego, aby potwierdzić je w swoim kalendarzu.",
    "filtrar_tema": "Według tematu",
-   "filtrar_tipo": "Według rodzaju",
+   "filtrar_tipo": "Filtruj według typu",
    "proximos_dia_inteiro": "cały dzień",
    "proximos_texto": "Co dzieje się w mieście. Szukaj według nazwy, tematu, rodzaju lub miejsca, zobacz wszystkie wydarzenia i dodaj jedno lub kilka do swojego kalendarza, bez subskrybowania.",
    "proximos_titulo": "Najbliższe wydarzenia",
@@ -2049,8 +2040,6 @@
    "info_curta": "+ Info",
    "categoria": "Wydarzenia",
    "rodape3": "Projekt DP-SIG (Sekcja Inteligencji Miejskiej), w ramach Platformy Zarządzania Miejskiego, mający na celu dzielenie się większą ilością informacji i budowanie lepiej poinformowanego miasta.",
-   "sistema_rotulo": "Twój kalendarz",
-   "filtrar": "Filtruj",
    "filtrar_todos": "Wszystkie",
    "mais_filtros": "Więcej filtrów",
    "destaque_vazio": "Brak wyróżnionych wydarzeń dla tego filtra.",
@@ -2058,7 +2047,8 @@
    "cal_mes_seguinte": "Następny miesiąc",
    "cal_sem_eventos": "Tego dnia nie zaczyna się żadne wydarzenie.",
    "calendario_titulo": "Kalendarz",
-   "cal_ver_curso": "Zobacz też trwające wydarzenia ({n})"
+   "cal_ver_curso": "Zobacz też trwające wydarzenia ({n})",
+   "tipos_n": "Typy: {n}"
   }
  }
 }
