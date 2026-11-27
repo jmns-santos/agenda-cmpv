@@ -140,6 +140,7 @@
   #sis-android:checked ~ header label[for="sis-android"]::before,
   #sis-outro:checked ~ header label[for="sis-outro"]::before { border-color: var(--botao); background: radial-gradient(circle, var(--botao) 0 45%, transparent 50%); }
   .sistema-nome { display: none; }
+  .sistema-nome .curto { display: none; }
   #sis-google:checked ~ header .sistema-nome.n-google,
   #sis-outlook:checked ~ header .sistema-nome.n-outlook,
   #sis-apple:checked ~ header .sistema-nome.n-apple,
@@ -651,12 +652,20 @@
   @media (max-width: 40rem) {
     .embed .ferramentas { flex: 1 1 auto; justify-content: flex-end; }
   }
-  /* Ecrã estreito: os botões do topo numa só linha (a língua fica só com a bandeira) */
-  @media (max-width: 30rem) {
-    .ferramentas { gap: .35rem; }
+  /* Telemóvel: calendário, língua e tamanho da letra numa só linha baixa, a ocupar o mínimo da página
+     (a língua fica só com a bandeira; "iPhone, iPad ou Mac" passa a "Apple"). */
+  @media (max-width: 40rem) {
+    .topo-grelha { gap: .5rem; }
+    .ferramentas { flex-wrap: nowrap; gap: .3rem; }
     .linguas summary > span:not(.apenas-leitor) { display: none; }
-    .linguas summary, .sistema-menu summary { padding-left: .6rem; padding-right: .6rem; }
-    .letra button { min-width: 2.6rem; }
+    .linguas summary, .sistema-menu summary { min-height: 2.35rem; padding: .15rem .5rem; gap: .3rem; font-size: .88rem; border-radius: 8px; }
+    .linguas summary::after, .sistema-menu summary::after { width: .38em; height: .38em; margin-left: .05rem; }
+    .sistema-nome .longo { display: none; }
+    .sistema-nome .curto { display: inline; }
+    .letra { gap: .2rem; }
+    .letra button { min-width: 2.35rem; min-height: 2.35rem; padding: 0 .3rem; font-size: .9rem; border-radius: 8px; }
+    .letra button[data-letra="1"] { font-size: 1.02rem; }
+    .embed .topo { padding-top: .4rem; padding-bottom: .4rem; }
   }
 
   @media (forced-colors: active) {
@@ -697,7 +706,7 @@
     </div>
     <div class="ferramentas">
       <details class="sistema-menu">
-        <summary><span class="apenas-leitor">{{T:sistema_rotulo}}: </span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg><span class="sistema-nome n-google">{{T:op_google}}</span><span class="sistema-nome n-outlook">{{T:op_outlook}}</span><span class="sistema-nome n-apple">{{T:op_apple}}</span><span class="sistema-nome n-android">{{T:op_android}}</span><span class="sistema-nome n-outro">{{T:op_outro}}</span></summary>
+        <summary><span class="apenas-leitor">{{T:sistema_rotulo}}: </span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg><span class="sistema-nome n-google">{{T:op_google}}</span><span class="sistema-nome n-outlook">{{T:op_outlook}}</span><span class="sistema-nome n-apple"><span class="longo">{{T:op_apple}}</span><span class="curto">Apple</span></span><span class="sistema-nome n-android">{{T:op_android}}</span><span class="sistema-nome n-outro">{{T:op_outro}}</span></summary>
         <div class="menu" role="group" aria-label="{{T:sistema_rotulo}}">
           <p class="menu-titulo">{{T:sistema_rotulo}}</p>
           <label for="sis-google">{{T:op_google}}</label>
