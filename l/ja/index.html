@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-mN/W9ZOsLoJLsx4Jl5a8IfPlBNFBscn3vOVpeAuvaUE='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-UTB+6FJlKxIA8cw8AOeC4TSzJEW1CHACQUI1oLKM/OU='; img-src data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="ポヴォア・デ・ヴァルジン市のイベントをお使いのカレンダーで購読：すべて、テーマ別、種類別。">
 <meta name="theme-color" content="#0a3a52">
@@ -269,8 +269,10 @@
   .proximos { margin-top: .4rem; min-width: 0; }
   .proximos-topo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1.4rem; }
   .proximos-topo .titulo-seccao { margin: 0; }
-  .proximos-topo .pesquisa-caixa { margin-top: 0; flex: 1 1 22rem; max-width: 36rem; }
-  @media (max-width: 40rem) { .proximos-topo .pesquisa-caixa { max-width: none; } }
+  /* "Ver todos os eventos" e a pesquisa juntos, por baixo do calendário e do destaque */
+  .barra-todos .pesquisa-caixa { margin-top: 0; flex: 1 1 20rem; max-width: 36rem; border-width: 1.5px; }
+  .barra-todos .pesquisa-input { min-height: 2.8rem; font-size: 1rem; }
+  @media (max-width: 40rem) { .barra-todos .pesquisa-caixa { max-width: none; } }
   .proximos .linha2 { color: var(--cinza); margin-top: .15rem; }
 
   .subscrever { margin-top: 2.2rem; padding-top: 1.6rem; border-top: 1px solid var(--linha); min-width: 0; }
@@ -759,14 +761,6 @@
   <section class="proximos" aria-labelledby="t-proximos">
     <div class="proximos-topo">
       <h2 id="t-proximos" class="titulo-seccao">今後のイベント</h2>
-      <div class="pesquisa-caixa" role="search">
-        <svg class="pesquisa-icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-        <label for="pesquisa" class="apenas-leitor">イベントを検索</label>
-        <input type="search" id="pesquisa" class="pesquisa-input" placeholder="検索：名前・テーマ・種類・場所" autocomplete="off" enterkeyhint="search" aria-controls="lista-proximos">
-        <button type="button" id="pesquisa-limpar" class="pesquisa-limpar" hidden aria-label="検索をクリア">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-        </button>
-      </div>
     </div>
 
     <input type="checkbox" id="mostrar-calendario" class="escondido" aria-controls="calendario-bloco">
@@ -824,6 +818,14 @@
     <input type="checkbox" id="mostrar-todos" class="escondido" aria-controls="painel-todos">
     <div class="barra-todos">
       <label for="mostrar-todos" class="botao-secundario botao-mostrar botao-lista"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01" stroke-width="3"/></svg>すべてのイベントを見る <span class="contagem-botao">(67)</span> <span class="chevron" aria-hidden="true"></span></label>
+      <div class="pesquisa-caixa" role="search">
+        <svg class="pesquisa-icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <label for="pesquisa" class="apenas-leitor">イベントを検索</label>
+        <input type="search" id="pesquisa" class="pesquisa-input" placeholder="検索：名前・テーマ・種類・場所" autocomplete="off" enterkeyhint="search" aria-controls="lista-proximos">
+        <button type="button" id="pesquisa-limpar" class="pesquisa-limpar" hidden aria-label="検索をクリア">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
     </div>
 
     <div class="painel-todos" id="painel-todos">
@@ -2524,11 +2526,11 @@
       return true;
     }
 
-    // Enquanto se pesquisa, o destaque recolhe: os resultados aparecem logo por baixo da pesquisa.
+    // Enquanto se pesquisa, o destaque fica parado (a pesquisa e os resultados estão por baixo dele).
     var aPesquisar = false;
     function destaqueMostrar() {
       if (!destaque) return;
-      if (!janelaDestaque.length || aPesquisar) { destaque.hidden = true; return; }
+      if (!janelaDestaque.length) { destaque.hidden = true; return; }
       destaque.hidden = false;
       // Sem eventos para o filtro: o quadro fica (com o "Filtrar", para se poder mudar) e diz porquê.
       var semNada = !emDestaque.length;
