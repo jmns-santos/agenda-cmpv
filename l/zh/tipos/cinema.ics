@@ -13,28 +13,6 @@ X-APPLE-CALENDAR-COLOR:#6a3fb5
 X-PUBLISHED-TTL:PT4H
 X-WR-TIMEZONE:Europe/Lisbon
 BEGIN:VEVENT
-SUMMARY:Cinema "Adolescência\, Sexo e Morte no Acampamento Miasma"
-DTSTART:20261126T214500Z
-DTEND:20261126T233000Z
-DTSTAMP:20261027T091334Z
-UID:Y2luZW1hLWFkb2xlc2NlbmNpYS1zZXhvLWUtbW9ydGUtbm8tYWNhbXBhbWVudG8tbWlhc2
- 1hfDIwMjYtMTAtMjEgMDg6NDg6MTU=@agenda.cm-pvarzim.pt
-CATEGORIES:文化,电影
-DESCRIPTION:No dia 26 de novembro\, às 21h45\, será exibido\, no Cine-Te
- atro Garrett\, o filme "Adolescência\, Sexo e Morte no Acampamento Miasma
- ".\n\n门票与报名（葡萄牙语）：\nEntradas: 4\,00€ (não sóci
- o) 0€ (sócio).\nDesconto para menores de 23 anos: 2€ cada (*até à m
- enor idade estabelecida em cada filme) | Bilhetes à venda no Cine-Teatro 
- Garrett.\n\n活动标题和说明为葡萄牙语，与市政府发布的
- 内容一致。\n\n更多信息: https://www.cm-pvarzim.pt/eventos/cinema-
- adolescencia-sexo-e-morte-no-acampamento-miasma/
-LAST-MODIFIED:20261027T091334Z
-LOCATION:Cine-Teatro Garrett
-TRANSP:TRANSPARENT
-URL:https://www.cm-pvarzim.pt/eventos/cinema-adolescencia-sexo-e-morte-no-
- acampamento-miasma/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Cinema "EPiC: Elvis Presley in Concert"
 DTSTART:20261203T214500Z
 DTEND:20261203T233000Z
